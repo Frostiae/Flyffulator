@@ -52,6 +52,9 @@ var expoptions = {
       color:  '#7279AA'
     }
   },
+  tooltip: {
+    followCursor: true
+  },
   fill: {
     opacity: 0.85,
     type: ['gradient'],
@@ -132,6 +135,9 @@ var exphpoptions = {
   },
   markers: {
     colors: '#008ffb'
+  },
+  tooltip: {
+    followCursor: true
   },
   title: {
     text: "EXP:Health Ratio",
@@ -280,6 +286,7 @@ var hitperleveloptions = {
   },
   tooltip: {
     shared: false,
+    followCursor: true,
     x: {}
   },
   legend: {

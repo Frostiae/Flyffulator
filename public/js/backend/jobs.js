@@ -411,7 +411,7 @@ export class Billposter extends Assist {
 
 export class Ringmaster extends Assist {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
-        img = img || "woodensword.png";
+        img = img || "lgstick.png";
         armor = armor || Utils.get_armor_by_name("Rimyth Set");
         weapon = weapon || Utils.get_item_by_name("Legendary Golden Stick");
         constants = constants || {
@@ -459,7 +459,7 @@ export class Ringmaster extends Assist {
 
 export class Acrobat extends Vagrant {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
-        img = img || "woodensword.png";
+        img = img || "layeredbow.png";
         armor = armor || Utils.get_armor_by_name("Cruiser Set");
         weapon = weapon || Utils.get_item_by_name("Layered Bow");
         constants = constants || {
@@ -508,7 +508,7 @@ export class Acrobat extends Vagrant {
 
 export class Jester extends Acrobat {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
-        img = img || "woodensword.png";
+        img = img || "lgyoyo.png";
         armor = armor || Utils.get_armor_by_name("Neis Set");
         weapon = weapon || Utils.get_item_by_name("Legendary Golden Yo-Yo");
         constants = constants || {
@@ -557,7 +557,7 @@ export class Jester extends Acrobat {
 
 export class Ranger extends Acrobat {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
-        img = img || "woodensword.png";
+        img = img || "lgbow.png";
         armor = armor || Utils.get_armor_by_name("Tyrent Set");
         weapon = weapon || Utils.get_item_by_name("Legendary Golden Bow");
         constants = constants || {
@@ -606,7 +606,7 @@ export class Ranger extends Acrobat {
 
 export class Magician extends Vagrant {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
-        img = img || "woodensword.png";
+        img = img || "opelwand.png";
         armor = armor || Utils.get_armor_by_name("Teba Set");
         weapon = weapon || Utils.get_item_by_name("Opel Wand");
         constants = constants || {
@@ -654,7 +654,7 @@ export class Magician extends Vagrant {
 
 export class Psykeeper extends Magician {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
-        img = img || "woodensword.png";
+        img = img || "lgwand.png";
         armor = armor || Utils.get_armor_by_name("Mekatro Set");
         weapon = weapon || Utils.get_item_by_name("Legendary Golden Wand");
         constants = constants || {
@@ -702,7 +702,7 @@ export class Psykeeper extends Magician {
 
 export class Elementor extends Magician {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
-        img = img || "woodensword.png";
+        img = img || "lgstaff.png";
         armor = armor || Utils.get_armor_by_name("Shabel Set");
         weapon = weapon || Utils.get_item_by_name("Legendary Golden Staff");
         constants = constants || {
@@ -798,7 +798,7 @@ export class Mercenary extends Vagrant {
 
 export class Blade extends Mercenary {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
-        img = img || "woodensword.png";
+        img = img || "lgaxe.png";
         armor = armor || Utils.get_armor_by_name("Hanes Set");
         weapon = weapon || Utils.get_item_by_name("Legendary Golden Axe");
         constants = constants || {
@@ -846,9 +846,9 @@ export class Blade extends Mercenary {
 
 export class Knight extends Mercenary {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
-        img = img || "woodensword.png";
-        armor = armor || Utils.get_armor_by_name("Ectro Set");
-        weapon = weapon || Utils.get_item_by_name("Legendary Golden Sword");
+        img = img || "lgswt.png";
+        armor = armor || Utils.get_armor_by_name("Extro Set");
+        weapon = weapon || Utils.get_item_by_name("Legendary Golden Big Sword");
         constants = constants || {
             'weapon': 'axe',
             'skills': ['Pain Dealer', 'Power Stomp', 'Earth Divider'],

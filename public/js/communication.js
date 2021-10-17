@@ -224,9 +224,9 @@ function update_radar_chart(str, sta, dex, int) {
     // TODO: This is temporary... make it better!
 
     let radaroptions = radarchart.opts;
-    radaroptions.series[0].data[3] = sta * 2;           // Defensive
-    radaroptions.series[0].data[0] = (str * dex) / 10;  // Auto attack
-    radaroptions.series[0].data[2] = (str * int) / 10;  // Skill
+    radaroptions.series[0].data[3] = sta * 2 < 100 ? sta * 2 : 100;           // Defensive
+    radaroptions.series[0].data[0] = (str * dex) / 10 < 100 ? (str * dex) / 10 : 100;  // Auto attack
+    radaroptions.series[0].data[2] = (str * int) / 10 < 100 ? (str * int) / 10 : 100;  // Skill
 
     radarchart.updateOptions(radaroptions);
 }
