@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flyffulator</title>
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" href="images/chrsysscrrestat.png">
+
+    <script>
+        window.Promise ||
+          document.write(
+            '<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><\/script>'
+          )
+        window.Promise ||
+          document.write(
+            '<script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20171210/classList.min.js"><\/script>'
+          )
+        window.Promise ||
+          document.write(
+            '<script src="https://cdn.jsdelivr.net/npm/findindex_polyfill_mdn"><\/script>'
+          )
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body id="body">
+  <div class="tooltip">
+    <h5>info</h5>
+  </div>
+
+  <img src="images/radial.png" id="bg-radial">
+  <div class="mainpage">
+      <div class="sidepanel">
+          <div class="panelcontent">
+              <div class="char">
+                  <h3>Your character</h3>
+                  <div class="stats">
+                      <div class="titles">
+                          <h5>Class</h5>
+                          <h5>Level</h5>
+                          <h5>STR</h5>
+                          <h5>STA</h5>
+                          <h5>DEX</h5>
+                          <h5>INT</h5>
+                          <h5>Assist buffs</h5>
+                      </div>
+                      <div class="values">
+                          <span class="value">
+                              <select name="class" id="job">
+                                  <option value="Vagrant">Vagrant</option>
+                                  <option value="Assist">Assist</option>
+                                  <option value="Billposter">Billposter</option>
+                                  <option value="Ringmaster">Ringmaster</option>
+                                  <option value="Acrobat">Acrobat</option>
+                                  <option value="Jester">Jester</option>
+                                  <option value="Ranger">Ranger</option>
+                                  <option value="Magician">Magician</option>
+                                  <option value="Psykeeper">Psykeeper</option>
+                                  <option value="Elementor">Elementor</option>
+                                  <option value="Mercenary">Mercenary</option>
+                                  <option value="Blade">Blade</option>
+                                  <option value="Knight">Knight</option>
+                              </select>
+                          </span>
+    
+                          <span class="value">
+                            <button class="btn-plus" id="minusLevel">-</button>
+                            <input class="charinput" type="text" id="level" value="15"/>
+                            <button class="btn-plus" id="plusLevel">+</button>
+                          </span>
+    
+                          <span class="value">
+                            <button class="btn-plus" id="minusSTR">-</button>
+                            <input class="charinput" type="text" id="STR" value="15"/>
+                            <button class="btn-plus" id="plusSTR">+</button>
+                          </span>
+    
+                          <span class="value">
+                            <button class="btn-plus" id="minusSTA">-</button>
+                            <input class="charinput" type="text" id="STA" value="15"/>
+                            <button class="btn-plus" id="plusSTA">+</button>
+                          </span>
+    
+                          <span class="value">
+                            <button class="btn-plus" id="minusDEX">-</button>
+                            <input class="charinput" type="text" id="DEX" value="15"/>
+                            <button class="btn-plus" id="plusDEX">+</button>
+                          </span>
+    
+                          <span class="value">
+                            <button class="btn-plus" id="minusINT">-</button>
+                            <input class="charinput" type="text" id="INT" value="15"/>
+                            <button class="btn-plus" id="plusINT">+</button>
+                          </span>
+
+                          <label for="buffs"></label>
+                          <input id="buffs" type="checkbox">
+                      </div>
+                  </div>
+
+                  <h3>Equipment</h3>
+                  <div class="stats">
+                    <div class="titles">
+                      <h5>Armor set</h5>
+                      <h5>Weapon</h5>
+                    </div>
+                    <div class="values">
+                      <p id="setarmor">None</p>
+                      <p id="setweapon">None</p>
+                    </div>
+                  </div>
+                  <h5>These values cannot be changed on the web version of this calculator. If you would like to experiment with specific equipment, there will be an executable desktop application soon.</h5>
+              </div>
+    
+          </div>
+      </div>
+    
+      <div class="content">
+          <div class="basestats">
+            <img id="weaponimg" src="images/woodensword.png">
+              <div class="generalstats">
+                <div id="radarchart"></div>
+
+              </div>
+          </div>
+          <div class="extensivestats">
+              <h3>Leveling</h3>
+              <div class="extensiverow">
+                  <div class="extensivebasic">
+                    <h3>Experience/Kill</h3>
+                    <p id="expperkill">N/A</p>
+                    <h5 id="expperkillname">at N/A</h5>
+                  </div>
+
+                  <div class="extensivechart">
+                    <p id="info">How many kills it would take to gain one level at each of these monsters at your current level.</p>
+                    <img class="info-tooltip" src='images/Icons/info.png'>
+                    <div id="chart"></div>
+                  </div>
+
+                  <div class="extensivechart">
+                    <p id="info">A showcase of the EXP:Health ratio of the monsters around your level.</p>
+                    <img class="info-tooltip" src='images/Icons/info.png'>
+                    <div id="exphpchart"></div>
+                </div>
+              </div>
+
+              <div class="extensiverow">
+                <div class="extensivechart" id="big">
+                  <p id="info">How many hits (auto-attack or skill, if applicable) it would take to gain one level at each of these monsters at your current level and power.<br>
+                     The damage used in this calculation takes into consideration your hit rate, critical chance, and more to give an accurate result.</p>
+                  <img class="info-tooltip" src='images/Icons/info.png' style="margin-right: 90px; margin-top: 12px">
+                  <div id="hitsperlevelchart"></div>
+                </div>
+              </div>
+
+              <h3>Damage</h3>
+              <div class="extensiverow">
+                <div class="extensivebasic" id="skill0box">
+                    <h3>Average AA</h3>
+                    <p id="info">This is some random garbage info lmao cuz u know yea yea whatever who gives a fuck you idiot</p>
+                    <img class="info-tooltip" src='images/Icons/info.png'>
+                    <p id="averageaa">N/A</p>
+                    <h5>against a Training Dummy</h5>
+                </div>
+
+                <div class="extensivebasic" id="skill1box">
+                    <h3 id="skill1">Skill Damage</h3>
+                    <p id="skill1dmg">N/A</p>
+                    <h5>approximate</h5>
+                </div>
+                <div class="extensivebasic" id="skill2box">
+                    <h3 id="skill2">N/A</h3>
+                    <p id="skill2dmg">N/A</p>
+                    <h5>approximate</h5>
+                </div>
+                <div class="extensivebasic" id="skill3box">
+                  <h3 id="skill3">N/A</h3>
+                  <p id="skill3dmg">N/A</p>
+                  <h5>approximate</h5>
+                </div>
+            </div>
+            <div class="footer">
+              <h5>Flyff simulator built specifically for <a href='https://flyff-api.sniegu.fr/'>Project M</a> by Frostiae#2809</h5>
+            </div>
+          </div>
+      </div>
+    
+      <div class="rightpanel">
+          <div class="panelcontent" id="outputstats">
+              <h5>Max Health</h5>
+              <p id="health">N/A</p>
+              <h5>Max MP</h5>
+              <p id="mp">N/A</p>
+              <h5>Max FP</h5>
+              <p id="fp">N/A</p>
+              <h5>Speed</h5>
+              <p>100%</p>
+              <hr>
+              <h5>Attack</h5>
+              <p id="attack">N/A</p>
+              <h5>Attack Speed</h5>
+              <p id="attackspeed">N/A</p>
+              <h5>Hit Rate</h5>
+              <p id="hitrate">N/A</p>
+              <h5>Critical Chance</h5>
+              <p id="crit">N/A</p>
+              <hr>
+              <h5>Defense</h5>
+              <p id="defense">N/A</p>
+              <h5>Parry</h5>
+              <p id="parry">N/A</p>
+              <h5>Melee Block</h5>
+              <p>N/A</p>
+              <h5>Ranged Block</h5>
+              <p>N/A</p>
+          </div>
+      </div>
+  </div>
+
+  <script type="module" src="/js/index.js"></script>
+  <script type="module" src="/js/charts.js"></script>
+
+
+</body>
+</html>

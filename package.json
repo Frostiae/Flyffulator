@@ -1,0 +1,14 @@
+{
+  "name": "flyffulator",
+  "version": "1.0.0",
+  "description": "Flyff Extensive Calculator",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Frostiae",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

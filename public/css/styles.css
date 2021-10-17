@@ -1,0 +1,416 @@
+body, html {
+    background-color: #252849;
+    font-family: Roboto;
+}
+
+img#bg-radial {
+    width: 550px;
+    display: block;
+    margin-right: 50%;
+    margin-left: 20%;
+    margin-top: -120px;
+    opacity: 0.8;
+}
+
+img#char-image {
+    width: 450px;
+    display: block;
+    margin-right: 50%;
+    margin-left: 19%;
+}
+
+.mainpage {
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    justify-content: space-between;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #7279AA;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+h5 {
+    margin: 3px;
+}
+
+p {
+    color: #DADEEF;
+    margin: 3px;
+}
+
+hr {
+    border-color: #7279AA;
+}
+
+a {
+    color: #DADEEF;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+#radarchart {
+    width: 400px;
+}
+
+.sidepanel {
+    width: 25%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #1F2342;
+    left: 0;
+    top: 0;
+    border-radius: 0px 15px 15px 0px;
+    min-width: 250px;
+    max-width: 330px;
+    overflow-y: auto;
+}
+
+.rightpanel {
+    width: 25%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #1F2342;
+    right: 0;
+    top: 0;
+    border-radius: 15px 0px 0px 15px;
+    min-width: 200px;
+    max-width: 290px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.extensivestats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin: 30px;
+    margin-top: -20px;
+    padding-bottom: 20px;
+}
+
+.footer {
+    margin-top: 50px;
+    padding-bottom: 10px;
+}
+
+p#setweapon, p#setarmor {
+    font-family: Roboto;
+    font-size: 13px;
+    margin: 4px;
+    opacity: 0.5;
+}
+
+.extensivestats .extensiverow {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.extensivestats .extensiverow .extensivebasic {
+    display: flex;
+    flex-direction: column;
+    background-color: #2E325C;
+    width: 200px;
+    height: 180px;
+    border-radius: 20px;
+    box-shadow: #0000001e 0px 5px 5px;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+
+.extensivestats .extensiverow .extensivechart {
+    background-color: #2E325C;
+    height: 180px;
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: #0000001e 0px 5px 5px;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+
+.extensivestats .extensiverow .extensivechart#big {
+    background-color: #2E325C;
+    height: 400px;
+    width: 820px;
+    border-radius: 20px;
+    box-shadow: #0000001e 0px 5px 5px;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+
+.extensivestats .extensiverow .extensivechart:hover {
+    box-shadow: #0000001e 0px 10px 20px;
+    transition: 0.3s;
+}
+
+.extensivestats .extensiverow .extensivechart#big:hover {
+    box-shadow: #0000001e 0px 10px 20px;
+    transition: 0.3s;
+}
+
+.extensivestats .extensiverow .extensivebasic p {
+    font-size: 35px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.extensivestats .extensiverow .extensivebasic h3 {
+    margin-left: 20px;
+}
+
+.extensivestats .extensiverow .extensivebasic h5 {
+    margin-left: 20px;
+}
+
+.extensivestats .extensiverow .extensivebasic:hover {
+    box-shadow: #0000001e 0px 10px 20px;
+    transition: 0.3s;
+    width: 205px;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.content .basestats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.basestats img {
+    width: 313px;
+    height: 313px;
+}
+
+.basestats .generalstats {
+    display: flex;
+    flex-direction: column;
+}
+
+.basestats .generalstats p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.panelcontent {
+    margin: 20px;
+}
+
+.panelcontent .char .stats {
+    display: flex;
+    flex-direction: row;
+    background-color: #2E325C;
+    border-radius: 15px;
+    width: 100%;
+    min-height: 20px;
+    box-shadow: #0000001e 0px 5px 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.stats .titles {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: right;
+}
+
+.stats .values {
+    display: flex;
+    flex-direction: column;
+}
+
+.stats .values .value {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#chart, #exphpchart {
+    margin-left: -21px;
+    margin-top: -45px;
+}
+
+#hitsperlevelchart {
+    margin-left: -10px;
+    margin-top: -10px;
+}
+
+.stats .values .value h5 {
+    color: #DADEEF;
+}
+
+.panelcontent .char .stats#hidden {
+    display: none;
+}
+
+.btn-opponent {
+    color: #7279AA;
+    font-weight: bolder;
+    font-size: 18px;
+    background-color: #2E325C;
+    border-radius: 15px;
+    border: 0px;
+    width: 100%;
+    box-shadow: #0000000d 0px 5px 5px;
+    transition: 0.3s;
+}
+
+.btn-opponent:hover {
+    box-shadow: #0000001e 0px 10px 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+.btn-plus {
+    color: #7279AA;
+    font-weight: bolder;
+    font-size: 13px;
+    background: none;
+    border-radius: 15px;
+    border: 1px solid #5975cf31;
+    transition: 0.3s;
+}
+
+.btn-plus:hover {
+    border: 1px solid #5975cf;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.307);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-plus:active {
+    background-color: white;
+}
+
+button#equipset {
+    padding: 0;
+    background: none;
+    border-radius: 15px;
+    border: none;
+    transition: 0.3s;
+}
+
+button#equipset:hover {
+    background-color: #1F2342;
+    opacity: 0.5;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #DADEEF;
+    border-radius: 10px;
+    width: 275px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.407);
+    color: #5975cf;
+    padding: 15px;
+    z-index: 99;
+}
+
+p#info {
+    display: none;
+}
+
+.info-tooltip {
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    margin-top: 22px;
+    transition: 0.3s;
+    border-radius: 15px;
+    width: 22px;
+    opacity: 0.8;
+    z-index: 99;
+}
+
+.info-tooltip:hover {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.307);
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+button#equipset img {
+    width: 20px;
+}
+
+select {
+    background: none;
+    color: #DADEEF;
+    margin: 3px;
+    font-weight: 500;
+    border: 1px solid #5975cf00;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.sidepanel select {
+    width: 100%;
+}
+
+select:hover {
+    border: 1px solid #5975cf;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.307);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+select:active {
+    background-color: white;
+}
+
+input[type=text] {
+    background: none;
+    border:none;
+    width: 50px;
+    text-align: center;
+    color: #DADEEF;
+    font-weight: 500;
+    font-family: Roboto;
+    margin: 2px;
+}
+
+option {
+    color: black;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1F2342;
+    border-radius: 15px;
+    border: 3px solid #252849;
+    margin: 10px;
+}
