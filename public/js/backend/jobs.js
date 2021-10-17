@@ -122,11 +122,14 @@ export class Vagrant {
         pn_max += plus;
         pn_min += plus;
 
+        let crit_min_factor = 1.4 + (this.weapon_param('criticaldamage') / 100) + (this.armor_param('criticaldamage') / 100);
+        let crit_max_factor = 2.0 + (this.weapon_param('criticaldamage') / 100) + (this.armor_param('criticaldamage') / 100);
+        
         // This is probably an incorrect formula. I am trying to get the 
         // average daamge while also taking critical chance into account.
         // project M values for critical multipliers might be different.
-        pn_min += pn_min * ((this.critical_chance / 100) * 1.4);
-        pn_max += pn_max * ((this.critical_chance / 100) * 2.0);
+        pn_min += pn_min * ((this.critical_chance / 100) * crit_min_factor);
+        pn_max += pn_max * ((this.critical_chance / 100) * crit_max_factor);
 
         let final = (pn_min + pn_max) / 2;
         final *= this.#damage_multiplier();

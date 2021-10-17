@@ -128,9 +128,6 @@ function update_exp_charts(monsters, level) {
                 best = [monster.name.en, expReward]
 
             killreq.push(parseFloat(100 / expReward).toFixed(2));
-            // Experience / Health... someone come up with a better way to get 
-            // an exp:hp ratio because exp values are like 0.0025 and hp is like
-            // 48000, but it varies so much as the levels get higher.
             expperhp.push(parseFloat((expReward / monster.hp) * 100000 || 0).toFixed(3));
             names.push('Level ' + monster.level + ': ' + monster.name.en);
         }
