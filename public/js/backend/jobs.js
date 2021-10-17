@@ -110,6 +110,8 @@ export class Vagrant {
 
     get average_aa() {
         // TODO: This is too inaccurate sometimes, check with wooden sword level 15 no stats
+        // TODO: Blade offhand behaviour
+        // TODO: Swordcross
         var pn_min = 3 * 2;
         var pn_max = 4 * 2;
 
@@ -135,8 +137,7 @@ export class Vagrant {
         final *= this.#damage_multiplier();
 
 
-        return (pn_min + pn_max) / 2;
-
+        return final;
         // CMover::GetAtkMultiplier
     }
 
@@ -190,8 +191,6 @@ export class Vagrant {
     }
 
     skill_dmg(skill) {
-        // Spirit bomb is in CMover::GetDamageMultiplier
-        // CMover::PostAsal
         const params = skill.levels.at(-1);
         let weapon_min = 3;
         let weapon_max = 4;
@@ -220,9 +219,12 @@ export class Vagrant {
         const level = skill.levels.length;
         const base = refer_stat * params.scalingParameters[0].scale;
         const power_min = ((weapon_min + (params.minAttack + 0) * 5 + base - 20) * (16 + level) / 13);
-        const power_max = ((weapon_max + (params.maxAttack + 0) * 5 + base - 20) * (16 + level) / 13)
-    
-        return (power_min + power_max) / 2;
+        const power_max = ((weapon_max + (params.maxAttack + 0) * 5 + base - 20) * (16 + level) / 13);
+        let final = (power_min + power_max) / 2;
+        
+        // Maybe add a defines file and avoid string comparison
+        if (skill.name.en == "Asalraalaikum") { final += (((this.str / 10) * level) * (5 + this.mp / 10) + 150); }
+        return final;
     }
 
     weapon_attack() {
