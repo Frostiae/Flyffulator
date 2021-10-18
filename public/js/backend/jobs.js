@@ -103,7 +103,7 @@ export class Vagrant {
         pn_max += plus;
 
         let final = (pn_min + pn_max) / 2;
-        final *= this.#damage_multiplier()
+        final *= this.damage_multiplier()
         
         return final;
     }
@@ -134,7 +134,7 @@ export class Vagrant {
         pn_max += pn_max * ((this.critical_chance / 100) * crit_max_factor);
 
         let final = (pn_min + pn_max) / 2;
-        final *= this.#damage_multiplier();
+        final *= this.damage_multiplier();
 
 
         return final;
@@ -165,7 +165,7 @@ export class Vagrant {
             let info = Utils.get_skill_by_name(skill);
             if (info) {
                 let damage = this.skill_dmg(info);
-                damage *= this.#damage_multiplier(info);
+                damage *= this.damage_multiplier(info);
                 res[info.name.en] = damage;
             }
         });
@@ -173,7 +173,7 @@ export class Vagrant {
         return res;
     }
 
-    #damage_multiplier(skill=null) {
+    damage_multiplier(skill=null) {
         let factor = 1.0;
 
         if (skill) {
