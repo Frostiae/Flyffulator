@@ -74,8 +74,10 @@ export class Vagrant {
 
         let final = fspeed * 100 / 2;
         final = this.assist_buffs ? final + 23 : final;
+
+        const weapon_bonus = this.weapon_param('attackspeed');
+        final += this instanceof Blade ? weapon_bonus * 2 : weapon_bonus;
         final += this.armor_param('attackspeed');
-        final += this.weapon_param('attackspeed');
         return Math.floor(final);
     }
 
@@ -84,14 +86,16 @@ export class Vagrant {
         chance = Math.floor(chance * this.constants.critical);
         chance = chance >= 100 ? 100 : chance;
         chance = chance < 0 ? 0 : chance;
-        chance += this.weapon_param('criticalchance');
+
+        const weapon_bonus = this.weapon_param('criticalchance');
+        chance += this instanceof Blade ? weapon_bonus * 2 : weapon_bonus;
         chance += this.armor_param('criticalchance');
         return chance;
     }
 
     get attack() {
-        var pn_min = 3 * 2;
-        var pn_max = 4 * 2;
+        let pn_min = 3 * 2;
+        let pn_max = 4 * 2;
 
         if (this.weapon) {
             pn_min = this.weapon.minAttack * 2;
@@ -99,20 +103,26 @@ export class Vagrant {
         }
 
         let plus = this.weapon_attack();
-        pn_max += plus;
+        pn_min += plus;
         pn_max += plus;
 
         let final = (pn_min + pn_max) / 2;
-        final *= this.damage_multiplier()
+        final *= this.damage_multiplier();
         
         return final;
+    }
+
+    get critical_damage() {
+        const weapon_bonus = this.weapon_param('criticaldamage');
+        const armor_bonus = this.armor_param('criticaldamage');
+        return this instanceof Blade ? weapon_bonus * 2 + armor_bonus : weapon_bonus + armor_bonus;
     }
 
     get average_aa() {
         // TODO: Blade offhand behaviour
         // TODO: Swordcross
-        var pn_min = 3 * 2;
-        var pn_max = 4 * 2;
+        let pn_min = 3 * 2;
+        let pn_max = 4 * 2;
 
         if (this.weapon) {
             pn_min = this.weapon.minAttack * 2;
@@ -123,26 +133,33 @@ export class Vagrant {
         pn_max += plus;
         pn_min += plus;
 
-        let crit_min_factor = 1.4 + (this.weapon_param('criticaldamage') / 100) + (this.armor_param('criticaldamage') / 100);
-        let crit_max_factor = 2.0 + (this.weapon_param('criticaldamage') / 100) + (this.armor_param('criticaldamage') / 100);
-        
         // This is probably an incorrect formula. I am trying to get the 
         // average damage while also taking critical chance into account.
         // project M values for critical multipliers might be different.
-        pn_min += pn_min * ((this.critical_chance / 100) * crit_min_factor);
-        pn_max += pn_max * ((this.critical_chance / 100) * crit_max_factor);
+        const crit_min_factor = 1.4 + this.critical_damage / 100;
+        const crit_max_factor = 2.0 + this.critical_damage / 100;
+        const crit_avg_factor = (crit_min_factor + crit_max_factor) / 2;
+        
+        let avg = (pn_min + pn_max) / 2;
+        avg += avg * ((this.critical_chance / 100) * crit_avg_factor);
+        avg *= this.damage_multiplier();
 
-        let final = (pn_min + pn_max) / 2;
-        final *= this.damage_multiplier();
+        if (this instanceof Blade) {
+            // Mainhand damage does (normal damage * 0.75) + normal damage. 
+            // Divide by 2 because this is the average and we are only getting mainhand
+            // damage in 50% of our hits.
+            avg += (avg * 0.75) / 2;
+        }
 
-        return final;
+        return avg;
         // CMover::GetAtkMultiplier
     }
 
     get hitrate() {
         let hit = this.dex / 4;
+        const weapon_bonus = this.weapon_param('hitrate');
+        hit += this instanceof Blade ? weapon_bonus * 2 : weapon_bonus;
         hit += this.armor_param('hitrate');
-        hit += this.weapon_param('hitrate');
         return this.assist_buffs ? hit + 26 : hit;
     }
 
@@ -182,7 +199,8 @@ export class Vagrant {
             }
         }
 
-        factor += this.weapon_param('attack') / 100;
+        const weapon_bonus = this.weapon_param('attack') / 100;
+        factor += this instanceof Blade ? weapon_bonus * 2 : weapon_bonus;
         factor += this.armor_param('attack') / 100;
 
         return factor;
@@ -288,6 +306,12 @@ export class Vagrant {
             this.dex -= 20;
             this.int -= 20;
         }
+
+        // TODO: We need to account for base stats gained from equipment here as well,
+        // or add some way to display them. It would probably be worth it to refactor
+        // the stat calculation process so each time we update, it calculates the stats
+        // all over again so we can get accurate numbers and somehow find a way to
+        // display this on the front end.
 
         return this;
     }
