@@ -54,7 +54,7 @@ export class Vagrant {
     }
 
     get aspd() {
-        const weapon_aspd = 0.085; // TODO: Get this value from the weapon
+        const weapon_aspd = Utils.get_weapon_speed(this.weapon);
         let a = Math.floor(this.constants.attackSpeed + (weapon_aspd * (4.0 * this.dex + this.level / 8.0)) - 3.0);
         if (a >= 187.5) a = Math.floor(187.5);
 

@@ -20,6 +20,25 @@ class Utils {
     static get_armor_by_name(name) { return this.sets.find(set => set.name.en == name); }
     static get_skill_by_name(name) { return this.skills.find(skill => skill.name.en == name); }
 
+    static get_weapon_speed(weapon) {
+        if (!weapon) return 0;
+        switch (weapon.attackSpeed) {
+            case 'veryslow':
+                return 0.035;
+            case 'slow':
+                return 0.050;
+            case 'normal':
+                return 0.070;
+            case 'fast':
+                return 0.080;
+            case 'veryfast':
+                return 0.17;    // This is the very upper bound of 'veryfast', might be better at a lower value
+            default:
+                return 0.085;
+        }
+    }
+
+
     update_job(job) {
         // Someone tell me how to call a constructor by its name in JS...
         if (this.character.constructor.name != job) {
