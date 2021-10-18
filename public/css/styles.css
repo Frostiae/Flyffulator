@@ -236,6 +236,7 @@ p#setweapon, p#setarmor {
     flex-direction: column;
     width: 50%;
     text-align: right;
+    justify-content: space-between;
 }
 
 .stats .values {
@@ -294,6 +295,7 @@ p#setweapon, p#setarmor {
     border-radius: 15px;
     border: 1px solid #5975cf31;
     transition: 0.3s;
+    margin: 0;
 }
 
 .btn-plus:hover {
@@ -402,6 +404,10 @@ input[type=text] {
     font-weight: 500;
     font-family: 'Roboto';
     margin: 2px;
+}
+
+input[type=checkbox]#buffs {
+    align-self: center;
 }
 
 option {
