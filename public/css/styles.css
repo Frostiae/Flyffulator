@@ -246,6 +246,14 @@ ul {
     justify-content: space-between;
 }
 
+.stats#changelog {
+    display: block;
+}
+
+.stats#changelog li {
+    margin-bottom: 5px;
+}
+
 .stats#changelog h5 {
     margin-left: 10px;
     margin-right: 10px;
