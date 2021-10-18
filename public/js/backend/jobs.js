@@ -191,7 +191,7 @@ export class Vagrant {
     }
 
     skill_dmg(skill) {
-        const params = skill.levels.at(-1);
+        const params = skill.levels.slice(-1)[0];       // Cannot use at() because of Safari compatibility
         let weapon_min = 3;
         let weapon_max = 4;
 
