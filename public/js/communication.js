@@ -219,8 +219,11 @@ function update_basics(character) {
     setweapon.innerText = character.weapon ? character.weapon.name.en : 'None';
     setarmor.innerText = character.armor ? character.armor.name.en : 'None';
 
+    // Remaining stat points
     let points_rem = character.level * 2 - 2;
     points_rem -= (character.str + character.sta + character.dex + character.int) - 60;
+    if (assistbuffs.checked) { points_rem += 90; }
+    
     if (points_rem < 0) {
         statpoints.style.color = '#c95042';
     } else {

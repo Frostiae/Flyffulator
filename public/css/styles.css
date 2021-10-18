@@ -386,6 +386,7 @@ p#statpoints {
     margin: 2px;
     text-align: center;
     color: #c8e3f5;
+    font-weight: bold;
 }
 
 select:active {
