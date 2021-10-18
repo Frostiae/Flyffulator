@@ -29,6 +29,7 @@ Flyffulator is a [website](https://flyffulator.com/) for [Flyff Project M](https
 - [ ] Equipment bonus calculation.
 - [ ] Skill customization. (Desktop app, probably)
 - [ ] Equipment customization. (Desktop app, probably)
+- [ ] Mobile browser support.
 
 <p align="center">
   <img src="https://i.imgur.com/BYrX9u1.png" alt="flyffulator" width=75%>
