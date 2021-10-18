@@ -31,6 +31,7 @@ const skill3dmg = document.getElementById('skill3dmg');
 const assistbuffs = document.getElementById('buffs');
 const setweapon = document.getElementById('setweapon');
 const setarmor = document.getElementById('setarmor');
+const statpoints = document.getElementById('statpoints');
 
 var activeSkill = document.getElementById('skill0box');
 activeSkill.style.boxShadow = '#ffffff1e 0px 0px 20px';
@@ -215,6 +216,15 @@ function update_basics(character) {
     avgaa.innerText = character.average_aa.toFixed(0) - 20;
     setweapon.innerText = character.weapon ? character.weapon.name.en : 'None';
     setarmor.innerText = character.armor ? character.armor.name.en : 'None';
+
+    let points_rem = character.level * 2 - 2;
+    points_rem -= (character.str + character.sta + character.dex + character.int) - 60;
+    if (points_rem < 0) {
+        statpoints.style.color = '#c95042';
+    } else {
+        statpoints.style.color = '#c8e3f5';
+    }
+    statpoints.innerText = points_rem;
 }
 
 function update_radar_chart(str, sta, dex, int) {

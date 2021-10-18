@@ -381,6 +381,13 @@ select:hover {
     cursor: pointer;
 }
 
+p#statpoints {
+    font-size: 13px;
+    margin: 2px;
+    text-align: center;
+    color: #c8e3f5;
+}
+
 select:active {
     background-color: white;
 }
