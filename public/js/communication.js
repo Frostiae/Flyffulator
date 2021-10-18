@@ -93,9 +93,8 @@ function update_hits_per_level(monsters, level) {
             hitsperkill = hitsperkill < 1 ? 1 : hitsperkill
             const killsperlevel = Math.ceil(parseFloat(100 / expReward));
 
-            hitreq.push((hitsperkill * killsperlevel).toFixed(0));
-            names.push('level ' + monster.level + ': ' + monster.name.en);
-
+            hitreq = [...hitreq, (hitsperkill * killsperlevel).toFixed(0)];
+            names = [...names, 'level ' + monster.level + ': ' + monster.name.en];
         }
     });
 
@@ -129,9 +128,9 @@ function update_exp_charts(monsters, level) {
                 best = [monster.name.en, expReward];
 
             if (expReward > 0) {
-                killreq.push(parseFloat(100 / expReward).toFixed(2));
-                expperhp.push(parseFloat((expReward / monster.hp) * 100000 || 0).toFixed(3));
-                names.push('Level ' + monster.level + ': ' + monster.name.en);
+                killreq = [...killreq, parseFloat(100 / expReward).toFixed(2)];
+                expperhp = [...expperhp, parseFloat((expReward / monster.hp) * 100000 || 0).toFixed(3)];
+                names = [...names, 'Level ' + monster.level + ': ' + monster.name.en];
             }
         }
     });
@@ -234,11 +233,10 @@ function update_basics(character) {
 
 function update_radar_chart(character) {
     // TODO: This is temporary... make it better!
-
     let radaroptions = radarchart.opts;
-    radaroptions.series[0].data[3] = character.sta * 2 < 100 ? character.sta * 2 : 100;           // Defensive
-    radaroptions.series[0].data[0] = (character.str * character.dex) / 10 < 100 ? (character.str * character.dex) / 10 : 100;  // Auto attack
-    radaroptions.series[0].data[2] = (character.str * character.int) / 10 < 100 ? (character.str * character.int) / 10 : 100;  // Skill
+    radaroptions.series[0].data[3] = character.sta * 2 < 100 ? character.sta * 2 : 100;                                         // Defensive
+    radaroptions.series[0].data[0] = (character.str * character.dex) / 10 < 100 ? (character.str * character.dex) / 10 : 100;   // Auto attack
+    radaroptions.series[0].data[2] = (character.str * character.int) / 10 < 100 ? (character.str * character.int) / 10 : 100;   // Skill
 
     radarchart.updateOptions(radaroptions);
 }

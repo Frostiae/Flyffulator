@@ -40,7 +40,7 @@ class Utils {
 
 
     update_job(job) {
-        // Someone tell me how to call a constructor by its name in JS...
+        // TODO: Use a builder or factory design pattern here instead to clean up
         if (this.character.constructor.name != job) {
             switch (job) {
                 case 'Vagrant':

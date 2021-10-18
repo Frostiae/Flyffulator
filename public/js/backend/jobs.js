@@ -109,7 +109,6 @@ export class Vagrant {
     }
 
     get average_aa() {
-        // TODO: This is too inaccurate sometimes, check with wooden sword level 15 no stats
         // TODO: Blade offhand behaviour
         // TODO: Swordcross
         var pn_min = 3 * 2;
@@ -128,14 +127,13 @@ export class Vagrant {
         let crit_max_factor = 2.0 + (this.weapon_param('criticaldamage') / 100) + (this.armor_param('criticaldamage') / 100);
         
         // This is probably an incorrect formula. I am trying to get the 
-        // average daamge while also taking critical chance into account.
+        // average damage while also taking critical chance into account.
         // project M values for critical multipliers might be different.
         pn_min += pn_min * ((this.critical_chance / 100) * crit_min_factor);
         pn_max += pn_max * ((this.critical_chance / 100) * crit_max_factor);
 
         let final = (pn_min + pn_max) / 2;
         final *= this.damage_multiplier();
-
 
         return final;
         // CMover::GetAtkMultiplier
