@@ -1,6 +1,6 @@
 body, html {
     background-color: #252849;
-    font-family: Roboto;
+    font-family: 'Roboto';
 }
 
 img#bg-radial {
@@ -109,7 +109,7 @@ a:hover {
 }
 
 p#setweapon, p#setarmor {
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 13px;
     margin: 4px;
     opacity: 0.5;
@@ -400,7 +400,7 @@ input[type=text] {
     text-align: center;
     color: #DADEEF;
     font-weight: 500;
-    font-family: Roboto;
+    font-family: 'Roboto';
     margin: 2px;
 }
 
