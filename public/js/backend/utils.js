@@ -72,7 +72,7 @@ class Utils {
         let ignore_ranks = ['super', 'boss', 'giant'];
         
         let index = this.monsters.findIndex(monster => monster.level >= level + 1)
-        if (index === null) {
+        if (index === null || index < 0) {
             return []
         }
 

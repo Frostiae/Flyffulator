@@ -126,11 +126,13 @@ function update_exp_charts(monsters, level) {
 
             const expReward = get_exp_reward(monster, level);
             if (best == null || expReward > best[1])
-                best = [monster.name.en, expReward]
+                best = [monster.name.en, expReward];
 
-            killreq.push(parseFloat(100 / expReward).toFixed(2));
-            expperhp.push(parseFloat((expReward / monster.hp) * 100000 || 0).toFixed(3));
-            names.push('Level ' + monster.level + ': ' + monster.name.en);
+            if (expReward > 0) {
+                killreq.push(parseFloat(100 / expReward).toFixed(2));
+                expperhp.push(parseFloat((expReward / monster.hp) * 100000 || 0).toFixed(3));
+                names.push('Level ' + monster.level + ': ' + monster.name.en);
+            }
         }
     });
 
