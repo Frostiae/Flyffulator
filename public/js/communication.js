@@ -75,7 +75,7 @@ function update_output(job, str, sta, dex, int, level) {
         update_hits_per_level(monsters, level);
     }
 
-    update_radar_chart(str, sta, dex, int);
+    update_radar_chart(character);
 }
 
 function update_hits_per_level(monsters, level) {
@@ -232,13 +232,13 @@ function update_basics(character) {
     statpoints.innerText = points_rem;
 }
 
-function update_radar_chart(str, sta, dex, int) {
+function update_radar_chart(character) {
     // TODO: This is temporary... make it better!
 
     let radaroptions = radarchart.opts;
-    radaroptions.series[0].data[3] = sta * 2 < 100 ? sta * 2 : 100;           // Defensive
-    radaroptions.series[0].data[0] = (str * dex) / 10 < 100 ? (str * dex) / 10 : 100;  // Auto attack
-    radaroptions.series[0].data[2] = (str * int) / 10 < 100 ? (str * int) / 10 : 100;  // Skill
+    radaroptions.series[0].data[3] = character.sta * 2 < 100 ? character.sta * 2 : 100;           // Defensive
+    radaroptions.series[0].data[0] = (character.str * character.dex) / 10 < 100 ? (character.str * character.dex) / 10 : 100;  // Auto attack
+    radaroptions.series[0].data[2] = (character.str * character.int) / 10 < 100 ? (character.str * character.int) / 10 : 100;  // Skill
 
     radarchart.updateOptions(radaroptions);
 }
