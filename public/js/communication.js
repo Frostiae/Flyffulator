@@ -18,6 +18,7 @@ const expperkill = document.getElementById('expperkill');
 const expperkillname = document.getElementById('expperkillname');
 const avgaa = document.getElementById('averageaa');
 const crit = document.getElementById('crit');
+const adoch = document.getElementById('adoch');
 const hitrate = document.getElementById('hitrate');
 const parry = document.getElementById('parry');
 const defense = document.getElementById('defense');
@@ -213,6 +214,7 @@ function update_basics(character) {
     parry.innerText = character.parry + '%';
     hitrate.innerText = character.hitrate + '%';
     crit.innerText = character.critical_chance + '%';
+    adoch.innerText = character.critical_damage > 0 ? character.critical_damage + '%' : 'N/A';
     attackspeed.innerText = character.aspd + '%';
     avgaa.innerText = character.average_aa.toFixed(0) - 20;
     setweapon.innerText = character.weapon ? character.weapon.name.en : 'None';
