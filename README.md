@@ -22,7 +22,8 @@ Flyffulator is a [website](https://flyffulator.com/) for [Flyff Project M](https
   - [x] Take level difference damage reduction into account.
   - [x] Take level difference experience reduction into account.
   - [ ] Take hit-rate into account.
-- [x] Relevant skills damage calculations.
+- [x] Relevant skills' damage calculations.
+- [x] General stat calculations.
 - [x] Assist buffs calculation.
 - [ ] Class-specific buffs calculation and option.
 - [ ] Equipment bonus calculation.
