@@ -807,7 +807,7 @@ export class Blade extends Mercenary {
         armor = armor || Utils.get_armor_by_name("Hanes Set");
         weapon = weapon || Utils.get_item_by_name("Legendary Golden Axe");
         constants = constants || {
-            'weapon': 'sword',
+            'weapon': 'axe',
             'skills': ['Blade Dance', 'Hawk Attack', 'Cross Strike'],
             'attackSpeed': 90.0,
             'HP': 1.5,

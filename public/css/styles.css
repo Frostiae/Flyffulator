@@ -231,12 +231,24 @@ p#setweapon, p#setarmor {
     padding-bottom: 10px;
 }
 
+ul {
+    font-family: 'Roboto';
+    font-size: 13px;
+    color: #7279AA;
+    font-weight: 500;
+}
+
 .stats .titles {
     display: flex;
     flex-direction: column;
     width: 50%;
     text-align: right;
     justify-content: space-between;
+}
+
+.stats#changelog h5 {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .stats .values {
