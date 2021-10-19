@@ -150,7 +150,7 @@ export class Vagrant {
         const crit_min_factor = 1.4 + this.critical_damage / 100;
         const crit_max_factor = 2.0 + this.critical_damage / 100;
         const crit_avg_factor = (crit_min_factor + crit_max_factor) / 2;
-        const avg_crit = avg * crit_avg_factor;
+        const avg_crit = avg_normal * crit_avg_factor;
 
         const final = ((avg_crit - avg_normal) * this.critical_chance / 100) + avg_normal;
         return final < avg_normal ? avg_normal : final;   // we wont hit below our normal, non-crit hit
