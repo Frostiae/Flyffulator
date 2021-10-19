@@ -32,7 +32,7 @@ Flyffulator is a [website](https://flyffulator.com/) for [Flyff Project M](https
 - [ ] Mobile browser support.
 
 <p align="center">
-  <img src="https://i.imgur.com/BYrX9u1.png" alt="flyffulator" width=75%>
+  <img src="https://i.imgur.com/aQ5Kjcf.png" alt="flyffulator" width=75%>
 </p>
 
 This project originally used [Pyff](https://github.com/Frostiae/Pyff), a python wrapper for the [Project M API](https://flyff-api.sniegu.fr/). The library used for rendering the all the charts is [ApexCharts](https://apexcharts.com/). 
