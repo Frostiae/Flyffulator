@@ -129,7 +129,6 @@ export class Vagrant {
     }
 
     get average_aa() {
-        // TODO: Blade offhand behaviour
         // TODO: Swordcross
         let pn_min = 3 * 2;
         let pn_max = 4 * 2;
@@ -143,25 +142,18 @@ export class Vagrant {
         pn_max += plus;
         pn_min += plus;
 
-        // This is probably an incorrect formula. I am trying to get the 
-        // average damage while also taking critical chance into account.
-        // project M values for critical multipliers might be different.
+
+        let avg = (pn_min + pn_max) / 2;
+        avg *= this.damage_multiplier();
+        if (this instanceof Blade) { avg += (avg * 0.75) / 2; }
+
         const crit_min_factor = 1.4 + this.critical_damage / 100;
         const crit_max_factor = 2.0 + this.critical_damage / 100;
         const crit_avg_factor = (crit_min_factor + crit_max_factor) / 2;
-        
-        let avg = (pn_min + pn_max) / 2;
-        avg += avg * ((this.critical_chance / 100) * crit_avg_factor);
-        avg *= this.damage_multiplier();
+        const avg_crit = avg * crit_avg_factor;
 
-        if (this instanceof Blade) {
-            // Mainhand damage does (normal damage * 0.75) + normal damage. 
-            // Divide by 2 because this is the average and we are only getting mainhand
-            // damage in 50% of our hits.
-            avg += (avg * 0.75) / 2;
-        }
-
-        return avg;
+        const final = ((avg_crit - avg) * this.critical_chance / 100) + avg;
+        return final < avg ? avg : final;   // we wont hit below our normal, non-crit hit
         // CMover::GetAtkMultiplier
     }
 
@@ -205,6 +197,13 @@ export class Vagrant {
             points += this.bonus_dex + this.bonus_int + this.bonus_sta + this.bonus_str;
         }
         return points;
+    }
+
+    ttk_monster(monster) {
+        let damage = 1;
+        // Auto attack
+        damage = this.average_aa;
+
     }
 
     damage_multiplier(skill=null) {
