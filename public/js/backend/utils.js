@@ -5,7 +5,7 @@ import { itemsjson } from "../../flyff/items.js";
 import { skillsjson } from "../../flyff/skills.js";
 import { monstersjson } from "../../flyff/monsters.js";
 
-class Utils {
+export class Utils {
     constructor() {
         this.character = new Vagrant();
         this.monsters = monstersjson;
@@ -40,50 +40,7 @@ class Utils {
 
 
     update_job(job) {
-        // TODO: Use a builder or factory design pattern here instead to clean up
-        if (this.character.constructor.name != job) {
-            switch (job) {
-                case 'Vagrant':
-                    this.character = new Vagrant();
-                    break;
-                case 'Assist':
-                    this.character = new Assist();
-                    break;
-                case 'Billposter':
-                    this.character = new Billposter();
-                    break;
-                case 'Ringmaster':
-                    this.character = new Ringmaster();
-                    break;
-                case 'Acrobat':
-                    this.character = new Acrobat();
-                    break;
-                case 'Jester':
-                    this.character = new Jester();
-                    break;
-                case 'Ranger':
-                    this.character = new Ranger();
-                    break;
-                case 'Magician':
-                    this.character = new Magician();
-                    break;
-                case 'Psykeeper':
-                    this.character = new Psykeeper();
-                    break;
-                case 'Elementor':
-                    this.character = new Elementor();
-                    break;
-                case 'Mercenary':
-                    this.character = new Mercenary();
-                    break;
-                case 'Blade':
-                    this.character = new Blade();
-                    break;
-                case 'Knight':
-                    this.character = new Knight();
-                    break;
-            }
-        }
+        if (this.character.constructor.name != job) { this.character = JobFactory.createJob(job); }
     }
 
     get_monsters_at_level(level, skill=null) {
@@ -91,9 +48,7 @@ class Utils {
         let ignore_ranks = ['super', 'boss', 'giant'];
         
         let index = this.monsters.findIndex(monster => monster.level >= level + 1)
-        if (index === null || index < 0) {
-            return []
-        }
+        if (index === null || index < 0) { return [] }
 
         let res = this.monsters.slice(Math.max(index - 10, 0), Math.min(index + 20, this.monsters.length))
         res = res.filter(function(monster) {
@@ -108,4 +63,22 @@ class Utils {
     }
 }
 
-export { Utils }
+class JobFactory {
+    static createJob(job) {
+        switch (job) {
+            case 'Vagrant': return new Vagrant();
+            case 'Assist': return new Assist();
+            case 'Billposter': return new Billposter();
+            case 'Ringmaster': return new Ringmaster();
+            case 'Acrobat': return new Acrobat();
+            case 'Jester': return new Jester();
+            case 'Ranger': return new Ranger();
+            case 'Magician': return new Magician();
+            case 'Psykeeper': return new Psykeeper();
+            case 'Elementor': return new Elementor();
+            case 'Mercenary': return new Mercenary();
+            case 'Blade': return new Blade();
+            case 'Knight': return new Knight();
+        }
+    }
+}
