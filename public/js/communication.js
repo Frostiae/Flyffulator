@@ -61,16 +61,17 @@ skills.forEach(skill => {
     });
 });
 
-function update_output(job, str, sta, dex, int, level) {
+export function update_output(job, str, sta, dex, int, level, assistint) {
     utils.update_job(job);
-    const character = utils.character.update_stats(str, sta, int, dex, level, assistbuffs.checked);
+    const character = utils.character.update_stats(str, sta, int, dex, level, assistbuffs.checked, assistint);
     
     update_basics(character);
     update_skills(character);
     
     let skill_index = skills.indexOf(activeSkill);
-    if (skill_index >= 3) skill_index = null;
+    if (skill_index >= 3) skill_index = null;   // Auto attack
     const monsters = utils.get_monsters_at_level(level, skill_index);
+
     if (monsters && monsters.length > 0) {
         update_exp_charts(monsters, level);
         update_hits_per_level(monsters, level);
@@ -80,8 +81,8 @@ function update_output(job, str, sta, dex, int, level) {
 }
 
 function update_hits_per_level(monsters, level) {
-    var hitreq = []
-    var names = []
+    let hitreq = []
+    let names = []
 
     monsters.forEach(monster => {
         const expReward = get_exp_reward(monster, level);
@@ -116,17 +117,21 @@ function update_hits_per_level(monsters, level) {
 }
 
 function update_exp_charts(monsters, level) {
-    var killreq = []
-    var expperhp = []
-    var names = []
+    let killreq = []
+    let expperhp = []
+    let names = []
 
-    var best = null
+    let best = null
     monsters.forEach(monster => {
         if (monster.experience > 0) {
 
             const expReward = get_exp_reward(monster, level);
-            if (best == null || expReward > best[1])
-                best = [monster.name.en, expReward];
+            if (best == null || expReward > best.reward) {
+                best = {
+                    name: monster.name.en,
+                    reward: expReward
+                };
+            }
 
             if (expReward > 0) {
                 killreq = [...killreq, parseFloat(100 / expReward).toFixed(2)];
@@ -136,8 +141,8 @@ function update_exp_charts(monsters, level) {
         }
     });
 
-    expperkill.innerText = best[1].toFixed(3) + '%';
-    expperkillname.innerText = 'at ' + best[0] + ' (best value)';
+    expperkill.innerText = best.reward.toFixed(3) + '%';
+    expperkillname.innerText = 'at ' + best.name + ' (best value)';
 
     // Average kill per level for each monster
     const killsum = killreq.reduce((a, b) => parseFloat(a) + parseFloat(b), 0);
@@ -202,14 +207,14 @@ function update_skills(character) {
 
 function update_basics(character) {
     weaponimg.src = 'images/' + character.weapon_img;
-    STR.value = character.str;
-    STA.value = character.sta;
-    INT.value = character.int;
-    DEX.value = character.dex;
+    STR.value = character.str.toFixed(0);
+    STA.value = character.sta.toFixed(0);
+    INT.value = character.int.toFixed(0);
+    DEX.value = character.dex.toFixed(0);
     health.innerText = character.health;
     mp.innerText = character.mp;
     fp.innerText = character.fp;
-    attack.innerText = character.attack;
+    attack.innerText = character.attack.toFixed(0);
     defense.innerText = character.defense;
     parry.innerText = character.parry + '%';
     hitrate.innerText = character.hitrate + '%';
@@ -219,18 +224,7 @@ function update_basics(character) {
     avgaa.innerText = character.average_aa.toFixed(0) - 20;
     setweapon.innerText = character.weapon ? character.weapon.name.en : 'None';
     setarmor.innerText = character.armor ? character.armor.name.en : 'None';
-
-    // Remaining stat points
-    let points_rem = character.level * 2 - 2;
-    points_rem -= (character.str + character.sta + character.dex + character.int) - 60;
-    if (assistbuffs.checked) { points_rem += 90; }
-    
-    if (points_rem < 0) {
-        statpoints.style.color = '#c95042';
-    } else {
-        statpoints.style.color = '#c8e3f5';
-    }
-    statpoints.innerText = points_rem;
+    statpoints.innerText = character.remaining_points.toFixed(0);
 }
 
 function update_radar_chart(character) {
@@ -249,11 +243,9 @@ function get_exp_reward(monster, level) {
             // Value is the experience we get at the same level
             let index = monster.experienceTable.indexOf(value);
             let levelDifference = monster.level - level;
-            var newIndex = index - levelDifference < 0 ? 0 : index - levelDifference;
+            let newIndex = index - levelDifference < 0 ? 0 : index - levelDifference;
             
             return monster.experienceTable[newIndex];
         }
     }
 }
-
-export { update_output }

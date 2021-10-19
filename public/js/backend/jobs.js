@@ -30,6 +30,16 @@ export class Vagrant {
         this.int = parseInt(int);
         this.dex = parseInt(dex);
         this.level = parseInt(level);
+
+        this.base_str = 0;
+        this.base_sta = 0;
+        this.base_int = 0;
+        this.base_dex = 0;
+
+        this.bonus_str = 0;
+        this.bonus_sta = 0;
+        this.bonus_int = 0;
+        this.bonus_dex = 0;
     }
 
     get health() {
@@ -188,6 +198,15 @@ export class Vagrant {
         return res;
     }
 
+    get remaining_points() {
+        let points = this.level * 2 - 2;
+        points -= (this.str + this.sta + this.dex + this.int) - 60;
+        if (this.assist_buffs) {
+            points += this.bonus_dex + this.bonus_int + this.bonus_sta + this.bonus_str;
+        }
+        return points;
+    }
+
     damage_multiplier(skill=null) {
         let factor = 1.0;
 
@@ -256,8 +275,8 @@ export class Vagrant {
                 return Math.floor(((this.str - 10) * this.constants[weapon]) + ((this.level * 1.2)));
             case 'wand':
                 return Math.floor((this.int - 10) * this.constants[weapon] + this.level * 1.2);
-            case 'bow': // Pretty sure this is incorrect for project M
-                return Math.floor(((this.dex - 14) * (this.constants[weapon] + 0.2) + (this.level * 1.3) * 0.7));
+            case 'bow': //  This is definitely incorrect for project M
+                return Math.floor(((this.dex - 14) * this.constants[weapon] + (this.level * 1.3) * 0.7));
             default:
                 return Math.floor(((this.str - 12) * this.constants[weapon]) + ((this.level * 1.1)));
         }
@@ -286,32 +305,41 @@ export class Vagrant {
         return add;
     }
 
-    update_stats(str, sta, int, dex, level, assist_buffs) {
-        this.str = parseInt(str);
-        this.sta = parseInt(sta);
-        this.int = parseInt(int);
-        this.dex = parseInt(dex);
-        this.level = parseInt(level);
-        
-        if (assist_buffs && !this.assist_buffs) {
-            this.assist_buffs = true;
-            this.str += 20;
-            this.sta += 30;
-            this.dex += 20;
-            this.int += 20;
-        } else if (!assist_buffs && this.assist_buffs) {
-            this.assist_buffs = false;
-            this.str -= 20;
-            this.sta -= 30;
-            this.dex -= 20;
-            this.int -= 20;
-        }
+    apply_assist_buffs(assist_int) {
+        assist_int = assist_int > 500 ? 500 : assist_int;
+        this.bonus_str = 20 + (assist_int / 25);
+        this.bonus_sta = 30 + (assist_int / 25);
+        this.bonus_dex = 20 + (assist_int / 25);
+        this.bonus_int = 20 + (assist_int / 25);
+    }
 
-        // TODO: We need to account for base stats gained from equipment here as well,
-        // or add some way to display them. It would probably be worth it to refactor
-        // the stat calculation process so each time we update, it calculates the stats
-        // all over again so we can get accurate numbers and somehow find a way to
-        // display this on the front end.
+    update_stats(str, sta, int, dex, level, assist_buffs, assist_int) {
+        this.apply_assist_buffs(assist_int);
+        
+        this.level = parseInt(level);
+        this.base_str = parseInt(str);
+        this.base_sta = parseInt(sta);
+        this.base_int = parseInt(int);
+        this.base_dex = parseInt(dex);
+
+        if (assist_buffs && !this.assist_buffs) {
+            this.str = this.base_str + this.bonus_str;
+            this.sta = this.base_sta + this.bonus_sta;
+            this.int = this.base_int + this.bonus_int;
+            this.dex = this.base_dex + this.bonus_dex;
+            this.assist_buffs = true;
+        } else if (!assist_buffs && this.assist_buffs) {
+            this.str = this.base_str - this.bonus_str;
+            this.sta = this.base_sta - this.bonus_sta;
+            this.int = this.base_int - this.bonus_int;
+            this.dex = this.base_dex - this.bonus_dex;
+            this.assist_buffs = false;
+        } else {
+            this.str = this.base_str;
+            this.sta = this.base_sta;
+            this.int = this.base_int;
+            this.dex = this.base_dex;
+        }
 
         return this;
     }

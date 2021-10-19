@@ -1,5 +1,5 @@
-import { jobsjson } from "../../flyff/jobs.js";
 import { Vagrant, Assist, Billposter, Ringmaster, Acrobat, Jester, Ranger, Magician, Psykeeper, Elementor, Mercenary, Blade, Knight } from "./jobs.js";
+import { jobsjson } from "../../flyff/jobs.js";
 import { setsjson } from "../../flyff/sets.js";
 import { itemsjson } from "../../flyff/items.js";
 import { skillsjson } from "../../flyff/skills.js";

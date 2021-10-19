@@ -18,7 +18,7 @@ const STR = document.getElementById('STR');
 const STA = document.getElementById('STA');
 const DEX = document.getElementById('DEX');
 const INT = document.getElementById('INT');
-const preset = document.getElementById('preset');
+const assistint = document.getElementById('assistint');
 const assist_buffs = document.getElementById('buffs');
 const tooltips = document.getElementsByClassName('info-tooltip');
 const activeTooltip = document.getElementsByClassName('tooltip')[0];
@@ -29,7 +29,7 @@ STR.addEventListener("change", update_stats);
 STA.addEventListener("change", update_stats);
 DEX.addEventListener("change", update_stats);
 INT.addEventListener("change", update_stats);
-assist_buffs.addEventListener("change", update_stats)
+assist_buffs.addEventListener("change", update_stats);
 
 const tooltips_arr = Array.prototype.slice.call(tooltips);
 tooltips_arr.forEach(tooltip => {
@@ -130,5 +130,5 @@ function minusINT() {
 }
 
 function update_stats() {
-    update_output(job.value, STR.value, STA.value, DEX.value, INT.value, level.value);
+    update_output(job.value, STR.value, STA.value, DEX.value, INT.value, level.value, assistint.value);
 }
