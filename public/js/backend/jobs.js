@@ -143,17 +143,17 @@ export class Vagrant {
         pn_min += plus;
 
 
-        let avg = (pn_min + pn_max) / 2;
-        avg *= this.damage_multiplier();
-        if (this instanceof Blade) { avg += (avg * 0.75) / 2; }
+        let avg_normal = (pn_min + pn_max) / 2;
+        avg_normal *= this.damage_multiplier();
+        if (this instanceof Blade) { avg_normal += (avg_normal * 0.75) / 2; }
 
         const crit_min_factor = 1.4 + this.critical_damage / 100;
         const crit_max_factor = 2.0 + this.critical_damage / 100;
         const crit_avg_factor = (crit_min_factor + crit_max_factor) / 2;
         const avg_crit = avg * crit_avg_factor;
 
-        const final = ((avg_crit - avg) * this.critical_chance / 100) + avg;
-        return final < avg ? avg : final;   // we wont hit below our normal, non-crit hit
+        const final = ((avg_crit - avg_normal) * this.critical_chance / 100) + avg_normal;
+        return final < avg_normal ? avg_normal : final;   // we wont hit below our normal, non-crit hit
         // CMover::GetAtkMultiplier
     }
 
@@ -203,7 +203,7 @@ export class Vagrant {
         let damage = 1;
         // Auto attack
         damage = this.average_aa;
-
+        // TODO
     }
 
     damage_multiplier(skill=null) {
