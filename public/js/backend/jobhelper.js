@@ -20,6 +20,11 @@ export class Mover {
         this.applyAssistBuffs(assistBuffs);
         this.skillsDamage = this.averageSkillDmg();
 
+        this.str = this.str < 15 ? 15 : this.str;
+        this.sta = this.sta < 15 ? 15 : this.sta;
+        this.dex = this.dex < 15 ? 15 : this.dex;
+        this.int = this.int < 15 ? 15 : this.int;
+
         return this;
     }
 
