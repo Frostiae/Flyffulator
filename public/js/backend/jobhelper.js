@@ -1,60 +1,63 @@
 import { Vagrant, Assist, Billposter, Ringmaster, Acrobat, Jester, Ranger, Magician, Psykeeper, Elementor, Mercenary, Blade, Knight } from "./jobs.js";
-
+import { Utils } from "./utils.js";
 /**
  * The mover class is the base of all characters. Acts as a helper class for a lot of functions.
  */
 export class Mover {
     update_stats(str, sta, int, dex, level, assist_buffs, assist_int) {
-        this.apply_assist_buffs(assist_int);
-        
         this.level = parseInt(level);
-        this.base_str = parseInt(str);
-        this.base_sta = parseInt(sta);
-        this.base_int = parseInt(int);
-        this.base_dex = parseInt(dex);
-
-        if (assist_buffs && !this.assist_buffs) {
-            this.str = this.base_str + this.bonus_str;
-            this.sta = this.base_sta + this.bonus_sta;
-            this.int = this.base_int + this.bonus_int;
-            this.dex = this.base_dex + this.bonus_dex;
-            this.assist_buffs = true;
-        } else if (!assist_buffs && this.assist_buffs) {
-            this.str = this.base_str - this.bonus_str;
-            this.sta = this.base_sta - this.bonus_sta;
-            this.int = this.base_int - this.bonus_int;
-            this.dex = this.base_dex - this.bonus_dex;
-            this.assist_buffs = false;
-        } else {
-            this.str = this.base_str;
-            this.sta = this.base_sta;
-            this.int = this.base_int;
-            this.dex = this.base_dex;
-        }
-
+        this.str = parseInt(str);
+        this.sta = parseInt(sta);
+        this.int = parseInt(int);
+        this.dex = parseInt(dex);
+        this.assist_int = assist_int;
+        
+        this.apply_assist_buffs(assist_buffs);
         this.skills_damage = this.average_skill_dmg();
 
         return this;
     }
 
-    apply_assist_buffs(assist_int, enabled) {
+    apply_assist_buffs(enabled) {
         // TODO: Finish this
-        if (enabled) {
+        if (enabled && !this.assist_buffs) {                // Add buffs
             this.active_buffs = [
                 Utils.get_skill_by_name('Cannon Ball'),
                 Utils.get_skill_by_name('Beef Up'),
                 Utils.get_skill_by_name('Heap Up'),
                 Utils.get_skill_by_name('Mental Sign'),
-                Utils.get_skill_by_name('Cannon Ball'),
-            ]
+                Utils.get_skill_by_name('Patience'),
+                Utils.get_skill_by_name('Haste'),
+                Utils.get_skill_by_name('Cat\'s Reflex'),
+                Utils.get_skill_by_name('Accuracy')
+            ];
+
+            this.str += this.buff_param('str', this.assist_int);
+            this.sta += this.buff_param('sta', this.assist_int);
+            this.int += this.buff_param('int', this.assist_int);
+            this.dex += this.buff_param('dex', this.assist_int);
+            this.assist_buffs = true;
+        } else if (!enabled && this.assist_buffs) {         // Remove buffs
+            this.assist_buffs = false;
+            this.str -= this.buff_param('str', this.assist_int);
+            this.sta -= this.buff_param('sta', this.assist_int);
+            this.int -= this.buff_param('int', this.assist_int);
+            this.dex -= this.buff_param('dex', this.assist_int);
+
+            this.active_buffs = [];
         }
+    }
 
-
-        assist_int = assist_int > 500 ? 500 : assist_int;
-        this.bonus_str = 20 + (assist_int / 25);
-        this.bonus_sta = 30 + (assist_int / 25);
-        this.bonus_dex = 20 + (assist_int / 25);
-        this.bonus_int = 20 + (assist_int / 25);
+    get remaining_points() {
+        let points = this.level * 2 - 2;
+        points -= (this.str + this.sta + this.dex + this.int) - 60;     // Don't count the base 15
+        if (this.assist_buffs && this.active_buffs.length) {
+            points += this.buff_param('dex', this.assist_int) + 
+                      this.buff_param('sta', this.assist_int) + 
+                      this.buff_param('str', this.assist_int) + 
+                      this.buff_param('int', this.assist_int);
+        }
+        return points;
     }
 
     weapon_attack() {
@@ -97,6 +100,22 @@ export class Mover {
                 }
             });
         }
+        return add;
+    }
+
+    buff_param(param) {
+        var add = 0;
+        this.active_buffs.forEach(buff => {
+            let level = buff.levels.slice(-1)[0];
+            let abilities = level.abilities;
+            abilities.forEach(ability => {
+                if (ability.parameter == param) {
+                    let extra = level.scalingParameters[1].scale * this.assist_int;
+                    extra = extra > level.scalingParameters[1].maximum ? level.scalingParameters[1].maximum : extra;
+                    add += ability.add + extra;
+                }
+            });
+        });
         return add;
     }
 

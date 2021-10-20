@@ -12,9 +12,9 @@ export class Vagrant extends Mover {
             'skills': [Utils.get_skill_by_name("Clean Hit"), 
                        Utils.get_skill_by_name("Flurry"), 
                        Utils.get_skill_by_name("Over Cutter")],
-            'weapon': 'sword',  // Change this to weaponType when we have weapon integration
+            'weapon': 'sword',
             'attackSpeed': 75.0,
-            'hps': 4,
+            'hps': 4,           // TODO: change these to frames instead and calculate hits/sec using them for more accuracy
             'HP': 0.9,
             'MP': 0.3,
             'FP': 0.3,
@@ -38,23 +38,15 @@ export class Vagrant extends Mover {
         this.level = parseInt(level);
 
         this.active_buffs = [];
-
-        this.base_str = 0;
-        this.base_sta = 0;
-        this.base_int = 0;
-        this.base_dex = 0;
-
-        this.bonus_str = 0;
-        this.bonus_sta = 0;
-        this.bonus_int = 0;
-        this.bonus_dex = 0;
+        this.assist_int = 300;  // How much int the assist buffing you has
     }
 
     get health() {
         let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.1125 + this.level * (this.level + 1) * this.sta * 0.00225);
         health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
         health += health * this.weapon_param('maxhp') / 100;
-        return this.assist_buffs ? Math.floor(health * 1.15) : health;
+        health += health * this.buff_param('maxhp') / 100;
+        return Math.floor(health);
     }
 
     get fp() {
@@ -91,11 +83,11 @@ export class Vagrant extends Mover {
         fspeed = fspeed < 2.0 ? fspeed : 2.0;
 
         let final = fspeed * 100 / 2;
-        final = this.assist_buffs ? final + 23 : final;
 
         const weapon_bonus = this.weapon_param('attackspeed');
         final += this instanceof Blade ? weapon_bonus * 2 : weapon_bonus;
         final += this.armor_param('attackspeed');
+        final += this.buff_param('attackspeed');
 
         final = final > 100 ? 100 : final;
         return Math.floor(final);
@@ -110,6 +102,7 @@ export class Vagrant extends Mover {
         const weapon_bonus = this.weapon_param('criticalchance');
         chance += this instanceof Blade ? weapon_bonus * 2 : weapon_bonus;
         chance += this.armor_param('criticalchance');
+        chance += this.buff_param('criticalchance');
         return chance > 100 ? 100 : chance;
     }
 
@@ -128,6 +121,8 @@ export class Vagrant extends Mover {
 
         let final = (pn_min + pn_max) / 2;
         final *= this.damage_multiplier();
+
+        // Gear and buff params
         
         return final;
     }
@@ -172,7 +167,8 @@ export class Vagrant extends Mover {
         const weapon_bonus = this.weapon_param('hitrate');
         hit += this instanceof Blade ? weapon_bonus * 2 : weapon_bonus;
         hit += this.armor_param('hitrate');
-        return this.assist_buffs ? hit + 26 : hit;
+        hit += this.buff_param('hitrate');
+        return hit;
     }
 
     get parry() {
@@ -183,17 +179,8 @@ export class Vagrant extends Mover {
         let defense = Math.floor(((((this.level * 2) + (this.sta / 2)) / 2.8) - 4) + ((this.sta - 14) * this.constants.Def));
         defense += this.armor_param('def');
         defense += this.weapon_param('def');
+        defense += this.buff_param('def');
         return defense;
-    }
-
-    
-    get remaining_points() {
-        let points = this.level * 2 - 2;
-        points -= (this.str + this.sta + this.dex + this.int) - 60;
-        if (this.assist_buffs) {
-            points += this.bonus_dex + this.bonus_int + this.bonus_sta + this.bonus_str;
-        }
-        return points;
     }
 }
 
@@ -231,7 +218,8 @@ export class Assist extends Vagrant {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.175+this.level*(this.level+1)*this.sta*0.0035);
         health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
         health += health * this.weapon_param('maxhp') / 100;
-        return this.assist_buffs ? Math.floor(health * 1.15) : health;
+        health += health * this.buff_param('maxhp') / 100;
+        return Math.floor(health);
     }
 
     get fp() {
@@ -282,7 +270,8 @@ export class Billposter extends Assist {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.225+this.level*(this.level+1)*this.sta*0.0045);
         health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
         health += health * this.weapon_param('maxhp') / 100;
-        return this.assist_buffs ? Math.floor(health * 1.15) : health;
+        health += health * this.buff_param('maxhp') / 100;
+        return Math.floor(health);
     }
 
     get fp() {
@@ -331,7 +320,8 @@ export class Ringmaster extends Assist {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.2+this.level*(this.level+1)*this.sta*0.004);
         health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
         health += health * this.weapon_param('maxhp') / 100;
-        return this.assist_buffs ? Math.floor(health * 1.15) : health;
+        health += health * this.buff_param('maxhp') / 100;
+        return Math.floor(health);
     }
 
     get fp() {
@@ -383,7 +373,8 @@ export class Acrobat extends Vagrant {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.175+this.level*(this.level+1)*this.sta*0.0035);
         health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
         health += health * this.weapon_param('maxhp') / 100;
-        return this.assist_buffs ? Math.floor(health * 1.15) : health;
+        health += health * this.buff_param('maxhp') / 100;
+        return Math.floor(health);
     }
 
     get fp() {
@@ -435,7 +426,8 @@ export class Jester extends Acrobat {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.1875+this.level*(this.level+1)*this.sta*0.00375);
         health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
         health += health * this.weapon_param('maxhp') / 100;
-        return this.assist_buffs ? Math.floor(health * 1.15) : health;
+        health += health * this.buff_param('maxhp') / 100;
+        return Math.floor(health);
     }
 
     get fp() {
@@ -487,7 +479,8 @@ export class Ranger extends Acrobat {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.2+this.level*(this.level+1)*this.sta*0.004);
         health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
         health += health * this.weapon_param('maxhp') / 100;
-        return this.assist_buffs ? Math.floor(health * 1.15) : health;
+        health += health * this.buff_param('maxhp') / 100;
+        return Math.floor(health);
     }
 
     get fp() {
@@ -538,7 +531,8 @@ export class Magician extends Vagrant {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.175+this.level*(this.level+1)*this.sta*0.0035);
         health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
         health += health * this.weapon_param('maxhp') / 100;
-        return this.assist_buffs ? Math.floor(health * 1.15) : health;
+        health += health * this.buff_param('maxhp') / 100;
+        return Math.floor(health);
     }
 
     get fp() {
@@ -589,7 +583,8 @@ export class Psykeeper extends Magician {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.1875+this.level*(this.level+1)*this.sta*0.00375);
         health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
         health += health * this.weapon_param('maxhp') / 100;
-        return this.assist_buffs ? Math.floor(health * 1.15) : health;
+        health += health * this.buff_param('maxhp') / 100;
+        return Math.floor(health);
     }
 
     get fp() {
@@ -640,7 +635,8 @@ export class Elementor extends Magician {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.1875+this.level*(this.level+1)*this.sta*0.00375);
         health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
         health += health * this.weapon_param('maxhp') / 100;
-        return this.assist_buffs ? Math.floor(health * 1.15) : health;
+        health += health * this.buff_param('maxhp') / 100;
+        return Math.floor(health);
     }
 
     get fp() {
@@ -691,7 +687,8 @@ export class Mercenary extends Vagrant {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.1875+this.level*(this.level+1)*this.sta*0.00375);
         health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
         health += health * this.weapon_param('maxhp') / 100;
-        return this.assist_buffs ? Math.floor(health * 1.15) : health;
+        health += health * this.buff_param('maxhp') / 100;
+        return Math.floor(health);
     }
 
     get fp() {
@@ -742,7 +739,8 @@ export class Blade extends Mercenary {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.1875+this.level*(this.level+1)*this.sta*0.00375);
         health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
         health += health * this.weapon_param('maxhp') / 100;
-        return this.assist_buffs ? Math.floor(health * 1.15) : health;
+        health += health * this.buff_param('maxhp') / 100;
+        return Math.floor(health);
     }
 
     get fp() {
@@ -793,7 +791,8 @@ export class Knight extends Mercenary {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.25+this.level*(this.level+1)*this.sta*0.005);
         health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
         health += health * this.weapon_param('maxhp') / 100;
-        return this.assist_buffs ? Math.floor(health * 1.15) : health;
+        health += health * this.buff_param('maxhp') / 100;
+        return Math.floor(health);
     }
 
     get fp() {
