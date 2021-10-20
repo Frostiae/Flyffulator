@@ -16,11 +16,11 @@ export class Utils {
     static jobs = jobsjson;
     static sets = setsjson;
 
-    static get_item_by_name(name) { return this.items.find(item => item.name.en == name); }
-    static get_armor_by_name(name) { return this.sets.find(set => set.name.en == name); }
-    static get_skill_by_name(name) { return this.skills.find(skill => skill.name.en == name); }
+    static getItemByName(name) { return this.items.find(item => item.name.en == name); }
+    static getArmorByName(name) { return this.sets.find(set => set.name.en == name); }
+    static getSkillByName(name) { return this.skills.find(skill => skill.name.en == name); }
 
-    static get_weapon_speed(weapon) {
+    static getWeaponSpeed(weapon) {
         if (!weapon) return 0;
         switch (weapon.attackSpeed) {
             case 'veryslow':
@@ -39,24 +39,24 @@ export class Utils {
     }
 
 
-    update_job(job) {
+    updateJob(job) {
         if (this.character.constructor.name != job) { this.character = JobFactory.createJob(job); }
     }
 
-    get_monsters_at_level(level, skill=null) {
+    getMonstersAtLevel(level, skill=null) {
         level = parseInt(level);
-        let ignore_ranks = ['super', 'boss', 'giant'];
+        let ignoreRanks = ['super', 'boss', 'giant'];
         
         let index = this.monsters.findIndex(monster => monster.level >= level + 1)
         if (index === null || index < 0) { return [] }
 
         let res = this.monsters.slice(Math.max(index - 10, 0), Math.min(index + 20, this.monsters.length))
         res = res.filter(function(monster) {
-            return !ignore_ranks.includes(monster.rank) && monster.experience > 0 && !monster.name.en.includes("Criminal");
+            return !ignoreRanks.includes(monster.rank) && monster.experience > 0 && !monster.name.en.includes("Criminal");
         });
 
         res.forEach(monster => {
-            monster.player_damage = this.character.get_damage_against(monster, skill);
+            monster.player_damage = this.character.getDamageAgainst(monster, skill);
         });
 
         return res;

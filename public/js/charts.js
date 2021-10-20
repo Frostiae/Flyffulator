@@ -1,4 +1,4 @@
-var expoptions = {
+var expOptions = {
   series: [{
     name: 'Kills Required',
     data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43]
@@ -96,7 +96,7 @@ var expoptions = {
   }
 };
 
-var exphpoptions = {
+var expHPOptions = {
   series: [{
     name: 'exp:hp Ratio',
     data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43]
@@ -195,7 +195,7 @@ var exphpoptions = {
   }
 };
 
-var hitperleveloptions = {
+var hitsPerLevelOptions = {
   series: [{
     name: 'Hits per level',
     data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43]
@@ -294,7 +294,7 @@ var hitperleveloptions = {
   }
 };
 
-var radaroptions = {
+var radarOptions = {
   series: [{
   name: 'Ability',
   data: [80, 10, 30, 40, 74],
@@ -374,14 +374,14 @@ var radaroptions = {
   }
 };
 
-var exphpchart = new ApexCharts(document.querySelector("#exphpchart"), exphpoptions);
-var expchart = new ApexCharts(document.querySelector("#chart"), expoptions);
-var hitsperlevelchart = new ApexCharts(document.querySelector("#hitsperlevelchart"), hitperleveloptions);
-var radarchart = new ApexCharts(document.querySelector("#radarchart"), radaroptions);
+var expHPChart = new ApexCharts(document.querySelector("#expHPChart"), expHPOptions);
+var expChart = new ApexCharts(document.querySelector("#chart"), expOptions);
+var hitsPerLevelChart = new ApexCharts(document.querySelector("#hitsPerLevelChart"), hitsPerLevelOptions);
+var radarchart = new ApexCharts(document.querySelector("#radarchart"), radarOptions);
 
 radarchart.render();
-expchart.render();
-exphpchart.render();
-hitsperlevelchart.render();
+expChart.render();
+expHPChart.render();
+hitsPerLevelChart.render();
 
-export { expchart, exphpchart, radarchart, hitsperlevelchart }
+export { expChart, expHPChart, radarchart, hitsPerLevelChart }

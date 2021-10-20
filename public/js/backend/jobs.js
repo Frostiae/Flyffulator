@@ -6,12 +6,12 @@ export class Vagrant extends Mover {
         super();
         this.weapon_img = img || "woodensword.png";
         this.armor = armor || null;
-        this.weapon = weapon || Utils.get_item_by_name("Wooden Sword");
-        this.assist_buffs = false;
+        this.weapon = weapon || Utils.getItemByName("Wooden Sword");
+        this.assistBuffs = false;
         this.constants = constants || {
-            'skills': [Utils.get_skill_by_name("Clean Hit"), 
-                       Utils.get_skill_by_name("Flurry"), 
-                       Utils.get_skill_by_name("Over Cutter")],
+            'skills': [Utils.getSkillByName("Clean Hit"), 
+                       Utils.getSkillByName("Flurry"), 
+                       Utils.getSkillByName("Over Cutter")],
             'weapon': 'sword',
             'attackSpeed': 75.0,
             'hps': 4,           // TODO: change these to frames instead and calculate hits/sec using them for more accuracy
@@ -29,7 +29,7 @@ export class Vagrant extends Mover {
             'wand': 6.0,
             'yoyo': 4.2
         };
-        this.skills_damage = {};
+        this.skillsDamage = {};
 
         this.str = parseInt(str);
         this.sta = parseInt(sta);
@@ -37,35 +37,35 @@ export class Vagrant extends Mover {
         this.dex = parseInt(dex);
         this.level = parseInt(level);
 
-        this.active_buffs = [];
-        this.assist_int = 300;  // How much int the assist buffing you has
+        this.activeBuffs = [];
+        this.assistInt = 300;  // How much int the assist buffing you has
     }
 
     get health() {
         let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.1125 + this.level * (this.level + 1) * this.sta * 0.00225);
-        health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
-        health += health * this.weapon_param('maxhp') / 100;
-        health += health * this.buff_param('maxhp') / 100;
+        health += health * this.armorParam('maxhp') / 100;   // TODO: This could be flat HP        
+        health += health * this.weaponParam('maxhp') / 100;
+        health += health * this.buffParam('maxhp') / 100;
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level*0.6+this.sta*2.1);
-        fp += fp * this.armor_param('maxfp') / 100
-        fp += fp * this.weapon_param('maxfp') / 100
+        fp += fp * this.armorParam('maxfp') / 100
+        fp += fp * this.weaponParam('maxfp') / 100
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22+this.level*0.6+this.int*2.7);
-        mp += mp * this.armor_param('maxmp') / 100
-        mp += mp * this.weapon_param('maxmp') / 100
+        mp += mp * this.armorParam('maxmp') / 100
+        mp += mp * this.weaponParam('maxmp') / 100
         return mp
     }
 
     get aspd() {
-        const weapon_aspd = Utils.get_weapon_speed(this.weapon);
-        let a = Math.floor(this.constants.attackSpeed + (weapon_aspd * (4.0 * this.dex + this.level / 8.0)) - 3.0);
+        const weaponAspd = Utils.getWeaponSpeed(this.weapon);
+        let a = Math.floor(this.constants.attackSpeed + (weaponAspd * (4.0 * this.dex + this.level / 8.0)) - 3.0);
         if (a >= 187.5) a = Math.floor(187.5);
 
         const index = Math.floor(Math.min(Math.max(a / 10, 0), 17));
@@ -76,98 +76,98 @@ export class Vagrant extends Mover {
             1.30, 1.38, 1.50
         ];
 
-        const plus_value = arr[index];
-        let fspeed = ((50.0 / (200.0 - a)) / 2.0) + plus_value;
+        const plusValue = arr[index];
+        let fspeed = ((50.0 / (200.0 - a)) / 2.0) + plusValue;
 
         fspeed = fspeed > 0.1 ? fspeed : 0.1;
         fspeed = fspeed < 2.0 ? fspeed : 2.0;
 
         let final = fspeed * 100 / 2;
 
-        const weapon_bonus = this.weapon_param('attackspeed');
-        final += this instanceof Blade ? weapon_bonus * 2 : weapon_bonus;
-        final += this.armor_param('attackspeed');
-        final += this.buff_param('attackspeed');
+        const weaponBonus = this.weaponParam('attackspeed');
+        final += this instanceof Blade ? weaponBonus * 2 : weaponBonus;
+        final += this.armorParam('attackspeed');
+        final += this.buffParam('attackspeed');
 
         final = final > 100 ? 100 : final;
         return Math.floor(final);
     }
 
-    get critical_chance() {
+    get criticalChance() {
         let chance = this.dex / 10;
         chance = Math.floor(chance * this.constants.critical);
         chance = chance >= 100 ? 100 : chance;
         chance = chance < 0 ? 0 : chance;
 
-        const weapon_bonus = this.weapon_param('criticalchance');
-        chance += this instanceof Blade ? weapon_bonus * 2 : weapon_bonus;
-        chance += this.armor_param('criticalchance');
-        chance += this.buff_param('criticalchance');
+        const weaponBonus = this.weaponParam('criticalchance');
+        chance += this instanceof Blade ? weaponBonus * 2 : weaponBonus;
+        chance += this.armorParam('criticalchance');
+        chance += this.buffParam('criticalchance');
         return chance > 100 ? 100 : chance;
     }
 
     get attack() {
-        let pn_min = 3 * 2;
-        let pn_max = 4 * 2;
+        let pnMin = 3 * 2;
+        let pnMax = 4 * 2;
 
         if (this.weapon) {
-            pn_min = this.weapon.minAttack * 2;
-            pn_max = this.weapon.maxAttack * 2;
+            pnMin = this.weapon.minAttack * 2;
+            pnMax = this.weapon.maxAttack * 2;
         }
 
-        let plus = this.weapon_attack();
-        pn_min += plus;
-        pn_max += plus;
+        let plus = this.weaponAttack();
+        pnMin += plus;
+        pnMax += plus;
 
-        let final = (pn_min + pn_max) / 2;
-        final *= this.damage_multiplier();
+        let final = (pnMin + pnMax) / 2;
+        final *= this.damageMultiplier();
 
         // Gear and buff params
         
         return final;
     }
 
-    get critical_damage() {
-        const weapon_bonus = this.weapon_param('criticaldamage');
-        const armor_bonus = this.armor_param('criticaldamage');
-        return this instanceof Blade ? weapon_bonus * 2 + armor_bonus : weapon_bonus + armor_bonus;
+    get criticalDamage() {
+        const weaponBonus = this.weaponParam('criticaldamage');
+        const armorBonus = this.armorParam('criticaldamage');
+        return this instanceof Blade ? weaponBonus * 2 + armorBonus : weaponBonus + armorBonus;
     }
 
-    get average_aa() {
+    get averageAA() {
         // TODO: Swordcross
-        let pn_min = 3 * 2;
-        let pn_max = 4 * 2;
+        let pnMin = 3 * 2;
+        let pnMax = 4 * 2;
 
         if (this.weapon) {
-            pn_min = this.weapon.minAttack * 2;
-            pn_max = this.weapon.maxAttack * 2;
+            pnMin = this.weapon.minAttack * 2;
+            pnMax = this.weapon.maxAttack * 2;
         }
         
-        const plus = this.weapon_attack();
-        pn_max += plus;
-        pn_min += plus;
+        const plus = this.weaponAttack();
+        pnMax += plus;
+        pnMin += plus;
 
 
-        let avg_normal = (pn_min + pn_max) / 2;
-        avg_normal *= this.damage_multiplier();
-        if (this instanceof Blade) { avg_normal += (avg_normal * 0.75) / 2; }
+        let avgNormal = (pnMin + pnMax) / 2;
+        avgNormal *= this.damageMultiplier();
+        if (this instanceof Blade) { avgNormal += (avgNormal * 0.75) / 2; }
 
-        const crit_min_factor = 1.4 + this.critical_damage / 100;
-        const crit_max_factor = 2.0 + this.critical_damage / 100;
-        const crit_avg_factor = (crit_min_factor + crit_max_factor) / 2;
-        const avg_crit = avg_normal * crit_avg_factor;
+        const critMinFactor = 1.4 + this.criticalDamage / 100;
+        const critMaxFactor = 2.0 + this.criticalDamage / 100;
+        const critAvgFactor = (critMinFactor + critMaxFactor) / 2;
+        const avgCrit = avgNormal * critAvgFactor;
 
-        const final = ((avg_crit - avg_normal) * this.critical_chance / 100) + avg_normal;
-        return final < avg_normal ? avg_normal : final;   // we wont hit below our normal, non-crit hit
+        const final = ((avgCrit - avgNormal) * this.criticalChance / 100) + avgNormal;
+        return final < avgNormal ? avgNormal : final;   // we wont hit below our normal, non-crit hit
         // CMover::GetAtkMultiplier
     }
 
     get hitrate() {
         let hit = this.dex / 4;
-        const weapon_bonus = this.weapon_param('hitrate');
-        hit += this instanceof Blade ? weapon_bonus * 2 : weapon_bonus;
-        hit += this.armor_param('hitrate');
-        hit += this.buff_param('hitrate');
+        const weaponBonus = this.weaponParam('hitrate');
+        hit += this instanceof Blade ? weaponBonus * 2 : weaponBonus;
+        hit += this.armorParam('hitrate');
+        hit += this.buffParam('hitrate');
         return hit;
     }
 
@@ -177,9 +177,9 @@ export class Vagrant extends Mover {
 
     get defense() {
         let defense = Math.floor(((((this.level * 2) + (this.sta / 2)) / 2.8) - 4) + ((this.sta - 14) * this.constants.Def));
-        defense += this.armor_param('def');
-        defense += this.weapon_param('def');
-        defense += this.buff_param('def');
+        defense += this.armorParam('def');
+        defense += this.weaponParam('def');
+        defense += this.buffParam('def');
         return defense;
     }
 }
@@ -188,13 +188,13 @@ export class Vagrant extends Mover {
 export class Assist extends Vagrant {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
         img = img || "overamknuckle.png";
-        armor = armor || Utils.get_armor_by_name("Sayram Set");
-        weapon = weapon || Utils.get_item_by_name("Paipol Knuckle");
+        armor = armor || Utils.getArmorByName("Sayram Set");
+        weapon = weapon || Utils.getItemByName("Paipol Knuckle");
         constants = constants || {
             'weapon': 'knuckle',
-            'skills': [Utils.get_skill_by_name("Power First"), 
-                       Utils.get_skill_by_name("Temping Hole"), 
-                       Utils.get_skill_by_name("Burst Crack")],
+            'skills': [Utils.getSkillByName("Power First"), 
+                       Utils.getSkillByName("Temping Hole"), 
+                       Utils.getSkillByName("Burst Crack")],
             'attackSpeed': 75.0,  // Might be 70
             'HP': 1.4,
             'hps': 4,
@@ -216,23 +216,23 @@ export class Assist extends Vagrant {
 
     get health() {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.175+this.level*(this.level+1)*this.sta*0.0035);
-        health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
-        health += health * this.weapon_param('maxhp') / 100;
-        health += health * this.buff_param('maxhp') / 100;
+        health += health * this.armorParam('maxhp') / 100;   // TODO: This could be flat HP        
+        health += health * this.weaponParam('maxhp') / 100;
+        health += health * this.buffParam('maxhp') / 100;
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level*1.2+this.sta*4.2);
-        fp += fp * this.armor_param('maxfp') / 100
-        fp += fp * this.weapon_param('maxfp') / 100
+        fp += fp * this.armorParam('maxfp') / 100
+        fp += fp * this.weaponParam('maxfp') / 100
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22+this.level*2.6+this.int*11.7);
-        mp += mp * this.armor_param('maxmp') / 100
-        mp += mp * this.weapon_param('maxmp') / 100
+        mp += mp * this.armorParam('maxmp') / 100
+        mp += mp * this.weaponParam('maxmp') / 100
         return mp
     }
 }
@@ -240,13 +240,13 @@ export class Assist extends Vagrant {
 export class Billposter extends Assist {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
         img = img || "bloodyknuckle.png";
-        armor = armor || Utils.get_armor_by_name("Rody Set");
-        weapon = weapon || Utils.get_item_by_name("Legendary Golden Gloves");
+        armor = armor || Utils.getArmorByName("Rody Set");
+        weapon = weapon || Utils.getItemByName("Legendary Golden Gloves");
         constants = constants || {
             'weapon': 'knuckle',
-            'skills': [Utils.get_skill_by_name("Bgvur Tialbold"), 
-                       Utils.get_skill_by_name("Blood Fist"), 
-                       Utils.get_skill_by_name("Asalraalaikum")],
+            'skills': [Utils.getSkillByName("Bgvur Tialbold"), 
+                       Utils.getSkillByName("Blood Fist"), 
+                       Utils.getSkillByName("Asalraalaikum")],
             'attackSpeed': 85.0,
             'hps': 4,
             'HP': 1.8,
@@ -268,23 +268,23 @@ export class Billposter extends Assist {
 
     get health() {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.225+this.level*(this.level+1)*this.sta*0.0045);
-        health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
-        health += health * this.weapon_param('maxhp') / 100;
-        health += health * this.buff_param('maxhp') / 100;
+        health += health * this.armorParam('maxhp') / 100;   // TODO: This could be flat HP        
+        health += health * this.weaponParam('maxhp') / 100;
+        health += health * this.buffParam('maxhp') / 100;
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level*2.2+this.sta*7.7);
-        fp += fp * this.armor_param('maxfp') / 100
-        fp += fp * this.weapon_param('maxfp') / 100
+        fp += fp * this.armorParam('maxfp') / 100
+        fp += fp * this.weaponParam('maxfp') / 100
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22+this.level*1.8+this.int*8.1);
-        mp += mp * this.armor_param('maxmp') / 100
-        mp += mp * this.weapon_param('maxmp') / 100
+        mp += mp * this.armorParam('maxmp') / 100
+        mp += mp * this.weaponParam('maxmp') / 100
         return mp
     }
 }
@@ -292,11 +292,11 @@ export class Billposter extends Assist {
 export class Ringmaster extends Assist {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
         img = img || "lgstick.png";
-        armor = armor || Utils.get_armor_by_name("Rimyth Set");
-        weapon = weapon || Utils.get_item_by_name("Legendary Golden Stick");
+        armor = armor || Utils.getArmorByName("Rimyth Set");
+        weapon = weapon || Utils.getItemByName("Legendary Golden Stick");
         constants = constants || {
             'weapon': 'stick',
-            'skills': [Utils.get_skill_by_name('Merkaba Hanzelrusha')],
+            'skills': [Utils.getSkillByName('Merkaba Hanzelrusha')],
             'attackSpeed': 75.0,
             'hps': 3,
             'HP': 1.6,
@@ -318,23 +318,23 @@ export class Ringmaster extends Assist {
 
     get health() {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.2+this.level*(this.level+1)*this.sta*0.004);
-        health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
-        health += health * this.weapon_param('maxhp') / 100;
-        health += health * this.buff_param('maxhp') / 100;
+        health += health * this.armorParam('maxhp') / 100;   // TODO: This could be flat HP        
+        health += health * this.weaponParam('maxhp') / 100;
+        health += health * this.buffParam('maxhp') / 100;
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level*0.8+this.sta*2.8);
-        fp += fp * this.armor_param('maxfp') / 100
-        fp += fp * this.weapon_param('maxfp') / 100
+        fp += fp * this.armorParam('maxfp') / 100
+        fp += fp * this.weaponParam('maxfp') / 100
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22+this.level*3.6+this.int*16.2);
-        mp += mp * this.armor_param('maxmp') / 100
-        mp += mp * this.weapon_param('maxmp') / 100
+        mp += mp * this.armorParam('maxmp') / 100
+        mp += mp * this.weaponParam('maxmp') / 100
         return mp
     }
 }
@@ -342,13 +342,13 @@ export class Ringmaster extends Assist {
 export class Acrobat extends Vagrant {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
         img = img || "layeredbow.png";
-        armor = armor || Utils.get_armor_by_name("Cruiser Set");
-        weapon = weapon || Utils.get_item_by_name("Layered Bow");
+        armor = armor || Utils.getArmorByName("Cruiser Set");
+        weapon = weapon || Utils.getItemByName("Layered Bow");
         constants = constants || {
             'weapon': 'bow',
-            'skills': [Utils.get_skill_by_name("Junk Arrow"), 
-                       Utils.get_skill_by_name("Silent Shot"), 
-                       Utils.get_skill_by_name("Arrow Rain")],
+            'skills': [Utils.getSkillByName("Junk Arrow"), 
+                       Utils.getSkillByName("Silent Shot"), 
+                       Utils.getSkillByName("Arrow Rain")],
             'attackSpeed': 80.0,
             'hps': 2,
             'HP': 1.4,
@@ -371,23 +371,23 @@ export class Acrobat extends Vagrant {
 
     get health() {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.175+this.level*(this.level+1)*this.sta*0.0035);
-        health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
-        health += health * this.weapon_param('maxhp') / 100;
-        health += health * this.buff_param('maxhp') / 100;
+        health += health * this.armorParam('maxhp') / 100;   // TODO: This could be flat HP        
+        health += health * this.weaponParam('maxhp') / 100;
+        health += health * this.buffParam('maxhp') / 100;
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level*1+this.sta*3.5);
-        fp += fp * this.armor_param('maxfp') / 100
-        fp += fp * this.weapon_param('maxfp') / 100
+        fp += fp * this.armorParam('maxfp') / 100
+        fp += fp * this.weaponParam('maxfp') / 100
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22+this.level*1+this.int*4.5);
-        mp += mp * this.armor_param('maxmp') / 100
-        mp += mp * this.weapon_param('maxmp') / 100
+        mp += mp * this.armorParam('maxmp') / 100
+        mp += mp * this.weaponParam('maxmp') / 100
         return mp
     }
 }
@@ -395,13 +395,13 @@ export class Acrobat extends Vagrant {
 export class Jester extends Acrobat {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
         img = img || "lgyoyo.png";
-        armor = armor || Utils.get_armor_by_name("Neis Set");
-        weapon = weapon || Utils.get_item_by_name("Legendary Golden Yo-Yo");
+        armor = armor || Utils.getArmorByName("Neis Set");
+        weapon = weapon || Utils.getItemByName("Legendary Golden Yo-Yo");
         constants = constants || {
             'weapon': 'yoyo',
-            'skills': [Utils.get_skill_by_name("Sneak Stab"), 
-                       Utils.get_skill_by_name("Vital Stab"), 
-                       Utils.get_skill_by_name("Hit of Penya")],
+            'skills': [Utils.getSkillByName("Sneak Stab"), 
+                       Utils.getSkillByName("Vital Stab"), 
+                       Utils.getSkillByName("Hit of Penya")],
             'attackSpeed': 85.0,
             'hps': 2,
             'HP': 1.5,
@@ -424,23 +424,23 @@ export class Jester extends Acrobat {
 
     get health() {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.1875+this.level*(this.level+1)*this.sta*0.00375);
-        health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
-        health += health * this.weapon_param('maxhp') / 100;
-        health += health * this.buff_param('maxhp') / 100;
+        health += health * this.armorParam('maxhp') / 100;   // TODO: This could be flat HP        
+        health += health * this.weaponParam('maxhp') / 100;
+        health += health * this.buffParam('maxhp') / 100;
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level*2+this.sta*7);
-        fp += fp * this.armor_param('maxfp') / 100
-        fp += fp * this.weapon_param('maxfp') / 100
+        fp += fp * this.armorParam('maxfp') / 100
+        fp += fp * this.weaponParam('maxfp') / 100
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22+this.level*1+this.int*4.5);
-        mp += mp * this.armor_param('maxmp') / 100
-        mp += mp * this.weapon_param('maxmp') / 100
+        mp += mp * this.armorParam('maxmp') / 100
+        mp += mp * this.weaponParam('maxmp') / 100
         return mp
     }
 }
@@ -448,13 +448,13 @@ export class Jester extends Acrobat {
 export class Ranger extends Acrobat {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
         img = img || "lgbow.png";
-        armor = armor || Utils.get_armor_by_name("Tyrent Set");
-        weapon = weapon || Utils.get_item_by_name("Legendary Golden Bow");
+        armor = armor || Utils.getArmorByName("Tyrent Set");
+        weapon = weapon || Utils.getItemByName("Legendary Golden Bow");
         constants = constants || {
             'weapon': 'bow',
-            'skills': [Utils.get_skill_by_name("Ice Arrow"), 
-                       Utils.get_skill_by_name("Flame Arrow"), 
-                       Utils.get_skill_by_name("Silent Arrow")],
+            'skills': [Utils.getSkillByName("Ice Arrow"), 
+                       Utils.getSkillByName("Flame Arrow"), 
+                       Utils.getSkillByName("Silent Arrow")],
             'attackSpeed': 80.0,
             'hps': 2,
             'HP': 1.6,
@@ -477,23 +477,23 @@ export class Ranger extends Acrobat {
 
     get health() {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.2+this.level*(this.level+1)*this.sta*0.004);
-        health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
-        health += health * this.weapon_param('maxhp') / 100;
-        health += health * this.buff_param('maxhp') / 100;
+        health += health * this.armorParam('maxhp') / 100;   // TODO: This could be flat HP        
+        health += health * this.weaponParam('maxhp') / 100;
+        health += health * this.buffParam('maxhp') / 100;
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level*1.2+this.sta*4.2);
-        fp += fp * this.armor_param('maxfp') / 100
-        fp += fp * this.weapon_param('maxfp') / 100
+        fp += fp * this.armorParam('maxfp') / 100
+        fp += fp * this.weaponParam('maxfp') / 100
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22+this.level*2.4+this.int*10.8);
-        mp += mp * this.armor_param('maxmp') / 100
-        mp += mp * this.weapon_param('maxmp') / 100
+        mp += mp * this.armorParam('maxmp') / 100
+        mp += mp * this.weaponParam('maxmp') / 100
         return mp
     }
 }
@@ -501,13 +501,13 @@ export class Ranger extends Acrobat {
 export class Magician extends Vagrant {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
         img = img || "opelwand.png";
-        armor = armor || Utils.get_armor_by_name("Teba Set");
-        weapon = weapon || Utils.get_item_by_name("Opel Wand");
+        armor = armor || Utils.getArmorByName("Teba Set");
+        weapon = weapon || Utils.getItemByName("Opel Wand");
         constants = constants || {
             'weapon': 'wand',
-            'skills': [Utils.get_skill_by_name("Mental Strike"), 
-                       Utils.get_skill_by_name("Rock Crash"), 
-                       Utils.get_skill_by_name("Water Well")],
+            'skills': [Utils.getSkillByName("Mental Strike"), 
+                       Utils.getSkillByName("Rock Crash"), 
+                       Utils.getSkillByName("Water Well")],
             'attackSpeed': 65.0,
             'hps': 1,
             'HP': 1.4,
@@ -529,23 +529,23 @@ export class Magician extends Vagrant {
 
     get health() {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.175+this.level*(this.level+1)*this.sta*0.0035);
-        health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
-        health += health * this.weapon_param('maxhp') / 100;
-        health += health * this.buff_param('maxhp') / 100;
+        health += health * this.armorParam('maxhp') / 100;   // TODO: This could be flat HP        
+        health += health * this.weaponParam('maxhp') / 100;
+        health += health * this.buffParam('maxhp') / 100;
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level*0.6+this.sta*2.1);
-        fp += fp * this.armor_param('maxfp') / 100
-        fp += fp * this.weapon_param('maxfp') / 100
+        fp += fp * this.armorParam('maxfp') / 100
+        fp += fp * this.weaponParam('maxfp') / 100
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22+this.level*3.4+this.int*15.3);
-        mp += mp * this.armor_param('maxmp') / 100
-        mp += mp * this.weapon_param('maxmp') / 100
+        mp += mp * this.armorParam('maxmp') / 100
+        mp += mp * this.weaponParam('maxmp') / 100
         return mp
     }
 }
@@ -553,13 +553,13 @@ export class Magician extends Vagrant {
 export class Psykeeper extends Magician {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
         img = img || "lgwand.png";
-        armor = armor || Utils.get_armor_by_name("Mekatro Set");
-        weapon = weapon || Utils.get_item_by_name("Legendary Golden Wand");
+        armor = armor || Utils.getArmorByName("Mekatro Set");
+        weapon = weapon || Utils.getItemByName("Legendary Golden Wand");
         constants = constants || {
             'weapon': 'wand',
-            'skills': [Utils.get_skill_by_name("Demonology"), 
-                       Utils.get_skill_by_name("Spirit Bomb"), 
-                       Utils.get_skill_by_name("Psychic Square")],
+            'skills': [Utils.getSkillByName("Demonology"), 
+                       Utils.getSkillByName("Spirit Bomb"), 
+                       Utils.getSkillByName("Psychic Square")],
             'attackSpeed': 70.0,
             'hps': 1,
             'HP': 1.5,
@@ -581,23 +581,23 @@ export class Psykeeper extends Magician {
 
     get health() {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.1875+this.level*(this.level+1)*this.sta*0.00375);
-        health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
-        health += health * this.weapon_param('maxhp') / 100;
-        health += health * this.buff_param('maxhp') / 100;
+        health += health * this.armorParam('maxhp') / 100;   // TODO: This could be flat HP        
+        health += health * this.weaponParam('maxhp') / 100;
+        health += health * this.buffParam('maxhp') / 100;
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level*0.8+this.sta*2.8);
-        fp += fp * this.armor_param('maxfp') / 100
-        fp += fp * this.weapon_param('maxfp') / 100
+        fp += fp * this.armorParam('maxfp') / 100
+        fp += fp * this.weaponParam('maxfp') / 100
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22+this.level*4+this.int*18);
-        mp += mp * this.armor_param('maxmp') / 100
-        mp += mp * this.weapon_param('maxmp') / 100
+        mp += mp * this.armorParam('maxmp') / 100
+        mp += mp * this.weaponParam('maxmp') / 100
         return mp
     }
 }
@@ -605,13 +605,13 @@ export class Psykeeper extends Magician {
 export class Elementor extends Magician {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
         img = img || "lgstaff.png";
-        armor = armor || Utils.get_armor_by_name("Shabel Set");
-        weapon = weapon || Utils.get_item_by_name("Legendary Golden Staff");
+        armor = armor || Utils.getArmorByName("Shabel Set");
+        weapon = weapon || Utils.getItemByName("Legendary Golden Staff");
         constants = constants || {
             'weapon': 'staff',
-            'skills': [Utils.get_skill_by_name("Firebird"), 
-                       Utils.get_skill_by_name("Windfield"), 
-                       Utils.get_skill_by_name("Iceshark")],
+            'skills': [Utils.getSkillByName("Firebird"), 
+                       Utils.getSkillByName("Windfield"), 
+                       Utils.getSkillByName("Iceshark")],
             'attackSpeed': 70.0,
             'hps': 1,
             'HP': 1.5,
@@ -633,23 +633,23 @@ export class Elementor extends Magician {
 
     get health() {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.1875+this.level*(this.level+1)*this.sta*0.00375);
-        health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
-        health += health * this.weapon_param('maxhp') / 100;
-        health += health * this.buff_param('maxhp') / 100;
+        health += health * this.armorParam('maxhp') / 100;   // TODO: This could be flat HP        
+        health += health * this.weaponParam('maxhp') / 100;
+        health += health * this.buffParam('maxhp') / 100;
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level*0.8+this.sta*2.8);
-        fp += fp * this.armor_param('maxfp') / 100
-        fp += fp * this.weapon_param('maxfp') / 100
+        fp += fp * this.armorParam('maxfp') / 100
+        fp += fp * this.weaponParam('maxfp') / 100
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22+this.level*4+this.int*18);
-        mp += mp * this.armor_param('maxmp') / 100
-        mp += mp * this.weapon_param('maxmp') / 100
+        mp += mp * this.armorParam('maxmp') / 100
+        mp += mp * this.weaponParam('maxmp') / 100
         return mp
     }
 }
@@ -657,13 +657,13 @@ export class Elementor extends Magician {
 export class Mercenary extends Vagrant {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
         img = img || "woodensword.png";
-        armor = armor || Utils.get_armor_by_name("Panggril Set");
-        weapon = weapon || Utils.get_item_by_name("Flam Sword");
+        armor = armor || Utils.getArmorByName("Panggril Set");
+        weapon = weapon || Utils.getItemByName("Flam Sword");
         constants = constants || {
             'weapon': 'sword',
-            'skills': [Utils.get_skill_by_name("Shield Bash"), 
-                       Utils.get_skill_by_name("Keenwheel"), 
-                       Utils.get_skill_by_name("Guillotine")],
+            'skills': [Utils.getSkillByName("Shield Bash"), 
+                       Utils.getSkillByName("Keenwheel"), 
+                       Utils.getSkillByName("Guillotine")],
             'attackSpeed': 80.0,
             'hps': 4,
             'HP': 1.5,
@@ -685,23 +685,23 @@ export class Mercenary extends Vagrant {
 
     get health() {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.1875+this.level*(this.level+1)*this.sta*0.00375);
-        health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
-        health += health * this.weapon_param('maxhp') / 100;
-        health += health * this.buff_param('maxhp') / 100;
+        health += health * this.armorParam('maxhp') / 100;   // TODO: This could be flat HP        
+        health += health * this.weaponParam('maxhp') / 100;
+        health += health * this.buffParam('maxhp') / 100;
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level*1.4+this.sta*4.9);
-        fp += fp * this.armor_param('maxfp') / 100
-        fp += fp * this.weapon_param('maxfp') / 100
+        fp += fp * this.armorParam('maxfp') / 100
+        fp += fp * this.weaponParam('maxfp') / 100
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22+this.level*1+this.int*4.5);
-        mp += mp * this.armor_param('maxmp') / 100
-        mp += mp * this.weapon_param('maxmp') / 100
+        mp += mp * this.armorParam('maxmp') / 100
+        mp += mp * this.weaponParam('maxmp') / 100
         return mp
     }
 }
@@ -709,13 +709,13 @@ export class Mercenary extends Vagrant {
 export class Blade extends Mercenary {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
         img = img || "lgaxe.png";
-        armor = armor || Utils.get_armor_by_name("Hanes Set");
-        weapon = weapon || Utils.get_item_by_name("Legendary Golden Axe");
+        armor = armor || Utils.getArmorByName("Hanes Set");
+        weapon = weapon || Utils.getItemByName("Legendary Golden Axe");
         constants = constants || {
             'weapon': 'axe',
-            'skills': [Utils.get_skill_by_name("Blade Dance"), 
-                       Utils.get_skill_by_name("Hawk Attack"), 
-                       Utils.get_skill_by_name("Cross Strike")],
+            'skills': [Utils.getSkillByName("Blade Dance"), 
+                       Utils.getSkillByName("Hawk Attack"), 
+                       Utils.getSkillByName("Cross Strike")],
             'attackSpeed': 90.0,
             'hps': 3,
             'HP': 1.5,
@@ -737,23 +737,23 @@ export class Blade extends Mercenary {
 
     get health() {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.1875+this.level*(this.level+1)*this.sta*0.00375);
-        health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
-        health += health * this.weapon_param('maxhp') / 100;
-        health += health * this.buff_param('maxhp') / 100;
+        health += health * this.armorParam('maxhp') / 100;   // TODO: This could be flat HP        
+        health += health * this.weaponParam('maxhp') / 100;
+        health += health * this.buffParam('maxhp') / 100;
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level*2.4+this.sta*8.400001);
-        fp += fp * this.armor_param('maxfp') / 100
-        fp += fp * this.weapon_param('maxfp') / 100
+        fp += fp * this.armorParam('maxfp') / 100
+        fp += fp * this.weaponParam('maxfp') / 100
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22+this.level*1.2+this.int*5.4);
-        mp += mp * this.armor_param('maxmp') / 100
-        mp += mp * this.weapon_param('maxmp') / 100
+        mp += mp * this.armorParam('maxmp') / 100
+        mp += mp * this.weaponParam('maxmp') / 100
         return mp
     }
 }
@@ -761,13 +761,13 @@ export class Blade extends Mercenary {
 export class Knight extends Mercenary {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
         img = img || "lgswt.png";
-        armor = armor || Utils.get_armor_by_name("Extro Set");
-        weapon = weapon || Utils.get_item_by_name("Legendary Golden Big Sword");
+        armor = armor || Utils.getArmorByName("Extro Set");
+        weapon = weapon || Utils.getItemByName("Legendary Golden Big Sword");
         constants = constants || {
             'weapon': 'axe',
-            'skills': [Utils.get_skill_by_name("Pain Dealer"), 
-                       Utils.get_skill_by_name("Power Stomp"), 
-                       Utils.get_skill_by_name("Earth Divider")],
+            'skills': [Utils.getSkillByName("Pain Dealer"), 
+                       Utils.getSkillByName("Power Stomp"), 
+                       Utils.getSkillByName("Earth Divider")],
             'attackSpeed': 65.0,
             'hps': 2,
             'HP': 2.0,
@@ -789,23 +789,23 @@ export class Knight extends Mercenary {
 
     get health() {
         let health = Math.floor(80+this.sta*10.0+this.level*(this.level+1)*0.25+this.level*(this.level+1)*this.sta*0.005);
-        health += health * this.armor_param('maxhp') / 100;   // TODO: This could be flat HP        
-        health += health * this.weapon_param('maxhp') / 100;
-        health += health * this.buff_param('maxhp') / 100;
+        health += health * this.armorParam('maxhp') / 100;   // TODO: This could be flat HP        
+        health += health * this.weaponParam('maxhp') / 100;
+        health += health * this.buffParam('maxhp') / 100;
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level*3+this.sta*10.5);
-        fp += fp * this.armor_param('maxfp') / 100
-        fp += fp * this.weapon_param('maxfp') / 100
+        fp += fp * this.armorParam('maxfp') / 100
+        fp += fp * this.weaponParam('maxfp') / 100
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22+this.level*1.2+this.int*5.4);
-        mp += mp * this.armor_param('maxmp') / 100
-        mp += mp * this.weapon_param('maxmp') / 100
+        mp += mp * this.armorParam('maxmp') / 100
+        mp += mp * this.weaponParam('maxmp') / 100
         return mp
     }
 }

@@ -1,4 +1,4 @@
-import { update_output } from "./communication.js";
+import { updateOutput } from "./communication.js";
 
 // EVENT LISTENERS
 document.getElementById("minusLevel").addEventListener("click", minusLevel)
@@ -19,17 +19,17 @@ const STA = document.getElementById('STA');
 const DEX = document.getElementById('DEX');
 const INT = document.getElementById('INT');
 const assistint = document.getElementById('assistint');
-const assist_buffs = document.getElementById('buffs');
+const assistBuffs = document.getElementById('buffs');
 const tooltips = document.getElementsByClassName('info-tooltip');
 const activeTooltip = document.getElementsByClassName('tooltip')[0];
 
-job.addEventListener("change", update_stats);
-level.addEventListener("change", update_stats);
-STR.addEventListener("change", update_stats);
-STA.addEventListener("change", update_stats);
-DEX.addEventListener("change", update_stats);
-INT.addEventListener("change", update_stats);
-assist_buffs.addEventListener("change", update_stats);
+job.addEventListener("change", updateStats);
+level.addEventListener("change", updateStats);
+STR.addEventListener("change", updateStats);
+STA.addEventListener("change", updateStats);
+DEX.addEventListener("change", updateStats);
+INT.addEventListener("change", updateStats);
+assistBuffs.addEventListener("change", updateStats);
 
 const tooltips_arr = Array.prototype.slice.call(tooltips);
 tooltips_arr.forEach(tooltip => {
@@ -47,14 +47,14 @@ tooltips_arr.forEach(tooltip => {
     })
 });
 
-update_stats();
+updateStats();
 
 function plusLevel() {
     var value = parseInt(level.value, 10)
     value = isNaN(value) ? 0 : value;
     value++;
     level.value = value;
-    update_stats();
+    updateStats();
 }
 
 function minusLevel() {
@@ -62,7 +62,7 @@ function minusLevel() {
     value = isNaN(value) ? 0 : value;
     value--;
     level.value = value;
-    update_stats();
+    updateStats();
 }
 
 function plusDEX() {
@@ -70,7 +70,7 @@ function plusDEX() {
     value = isNaN(value) ? 0 : value;
     value++;
     DEX.value = value;
-    update_stats();
+    updateStats();
 }
 
 function minusDEX() {
@@ -78,7 +78,7 @@ function minusDEX() {
     value = isNaN(value) ? 0 : value;
     value--;
     DEX.value = value;
-    update_stats();
+    updateStats();
 }
 
 function plusSTR() {
@@ -86,7 +86,7 @@ function plusSTR() {
     value = isNaN(value) ? 0 : value;
     value++;
     STR.value = value;
-    update_stats();
+    updateStats();
 }
 
 function minusSTR() {
@@ -94,7 +94,7 @@ function minusSTR() {
     value = isNaN(value) ? 0 : value;
     value--;
     STR.value = value;
-    update_stats();
+    updateStats();
 }
 
 function plusSTA() {
@@ -102,7 +102,7 @@ function plusSTA() {
     value = isNaN(value) ? 0 : value;
     value++;
     STA.value = value;
-    update_stats();
+    updateStats();
 }
 
 function minusSTA() {
@@ -110,7 +110,7 @@ function minusSTA() {
     value = isNaN(value) ? 0 : value;
     value--;
     STA.value = value;
-    update_stats();
+    updateStats();
 }
 
 function plusINT() {
@@ -118,7 +118,7 @@ function plusINT() {
     value = isNaN(value) ? 0 : value;
     value++;
     INT.value = value;
-    update_stats();
+    updateStats();
 }
 
 function minusINT() {
@@ -126,9 +126,9 @@ function minusINT() {
     value = isNaN(value) ? 0 : value;
     value--;
     INT.value = value;
-    update_stats();
+    updateStats();
 }
 
-function update_stats() {
-    update_output(job.value, STR.value, STA.value, DEX.value, INT.value, level.value, assistint.value);
+function updateStats() {
+    updateOutput(job.value, STR.value, STA.value, DEX.value, INT.value, level.value, assistint.value);
 }

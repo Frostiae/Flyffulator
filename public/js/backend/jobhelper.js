@@ -4,63 +4,68 @@ import { Utils } from "./utils.js";
  * The mover class is the base of all characters. Acts as a helper class for a lot of functions.
  */
 export class Mover {
-    update_stats(str, sta, int, dex, level, assist_buffs, assist_int) {
+    updateStats(str, sta, int, dex, level, assistBuffs, assistInt) {
+
+        // TODO: Move most of the get methods into regular methods and call them here instead to store in the object
+        // to avoid doing all those calculations everytime we do character.aspd for example. Do it once and store it
+        // instead.
+
         this.level = parseInt(level);
         this.str = parseInt(str);
         this.sta = parseInt(sta);
         this.int = parseInt(int);
         this.dex = parseInt(dex);
-        this.assist_int = assist_int;
+        this.assistInt = assistInt;
         
-        this.apply_assist_buffs(assist_buffs);
-        this.skills_damage = this.average_skill_dmg();
+        this.applyAssistBuffs(assistBuffs);
+        this.skillsDamage = this.averageSkillDmg();
 
         return this;
     }
 
-    apply_assist_buffs(enabled) {
+    applyAssistBuffs(enabled) {
         // TODO: Finish this
-        if (enabled && !this.assist_buffs) {                // Add buffs
-            this.active_buffs = [
-                Utils.get_skill_by_name('Cannon Ball'),
-                Utils.get_skill_by_name('Beef Up'),
-                Utils.get_skill_by_name('Heap Up'),
-                Utils.get_skill_by_name('Mental Sign'),
-                Utils.get_skill_by_name('Patience'),
-                Utils.get_skill_by_name('Haste'),
-                Utils.get_skill_by_name('Cat\'s Reflex'),
-                Utils.get_skill_by_name('Accuracy')
+        if (enabled && !this.assistBuffs) {                // Add buffs
+            this.activeBuffs = [
+                Utils.getSkillByName('Cannon Ball'),
+                Utils.getSkillByName('Beef Up'),
+                Utils.getSkillByName('Heap Up'),
+                Utils.getSkillByName('Mental Sign'),
+                Utils.getSkillByName('Patience'),
+                Utils.getSkillByName('Haste'),
+                Utils.getSkillByName('Cat\'s Reflex'),
+                Utils.getSkillByName('Accuracy')
             ];
 
-            this.str += this.buff_param('str', this.assist_int);
-            this.sta += this.buff_param('sta', this.assist_int);
-            this.int += this.buff_param('int', this.assist_int);
-            this.dex += this.buff_param('dex', this.assist_int);
-            this.assist_buffs = true;
-        } else if (!enabled && this.assist_buffs) {         // Remove buffs
-            this.assist_buffs = false;
-            this.str -= this.buff_param('str', this.assist_int);
-            this.sta -= this.buff_param('sta', this.assist_int);
-            this.int -= this.buff_param('int', this.assist_int);
-            this.dex -= this.buff_param('dex', this.assist_int);
+            this.str += this.buffParam('str', this.assistInt);
+            this.sta += this.buffParam('sta', this.assistInt);
+            this.int += this.buffParam('int', this.assistInt);
+            this.dex += this.buffParam('dex', this.assistInt);
+            this.assistBuffs = true;
+        } else if (!enabled && this.assistBuffs) {         // Remove buffs
+            this.assistBuffs = false;
+            this.str -= this.buffParam('str', this.assistInt);
+            this.sta -= this.buffParam('sta', this.assistInt);
+            this.int -= this.buffParam('int', this.assistInt);
+            this.dex -= this.buffParam('dex', this.assistInt);
 
-            this.active_buffs = [];
+            this.activeBuffs = [];
         }
     }
 
-    get remaining_points() {
+    get remainingPoints() {
         let points = this.level * 2 - 2;
         points -= (this.str + this.sta + this.dex + this.int) - 60;     // Don't count the base 15
-        if (this.assist_buffs && this.active_buffs.length) {
-            points += this.buff_param('dex', this.assist_int) + 
-                      this.buff_param('sta', this.assist_int) + 
-                      this.buff_param('str', this.assist_int) + 
-                      this.buff_param('int', this.assist_int);
+        if (this.assistBuffs && this.activeBuffs.length) {
+            points += this.buffParam('dex', this.assistInt) + 
+                      this.buffParam('sta', this.assistInt) + 
+                      this.buffParam('str', this.assistInt) + 
+                      this.buffParam('int', this.assistInt);
         }
         return points;
     }
 
-    weapon_attack() {
+    weaponAttack() {
         let weapon = this.constants.weapon;
         switch (weapon) {
             case 'axe':
@@ -80,37 +85,32 @@ export class Mover {
         }
     }
 
-    armor_param(param) {
+    armorParam(param) {
         var add = 0;
         if (this.armor && this.armor.bonus) {
-            this.armor.bonus.forEach(bonus => {
-                if (bonus.ability.parameter == param)
-                    add = bonus.ability.add;
-            });
+            const bonus = this.armor.bonus.find(a => a.ability.parameter == param);
+            if (bonus) add = bonus.ability.add;
         }
         return add;
     }
 
-    weapon_param(param) {
+    weaponParam(param) {
         var add = 0;
         if (this.weapon && this.weapon.abilities) {
-            this.weapon.abilities.forEach(bonus => {
-                if (bonus.parameter == param) {
-                    add = bonus.add;
-                }
-            });
+            const bonus = this.weapon.abilities.find(a => a.parameter == param);
+            if (bonus) add = bonus.add;
         }
         return add;
     }
 
-    buff_param(param) {
+    buffParam(param) {
         var add = 0;
-        this.active_buffs.forEach(buff => {
+        this.activeBuffs.forEach(buff => {
             let level = buff.levels.slice(-1)[0];
             let abilities = level.abilities;
-            abilities.forEach(ability => {
+            abilities.forEach(ability => {          // forEach here and not .find() because there might be multiple buffs with param
                 if (ability.parameter == param) {
-                    let extra = level.scalingParameters[1].scale * this.assist_int;
+                    let extra = level.scalingParameters[1].scale * this.assistInt;
                     extra = extra > level.scalingParameters[1].maximum ? level.scalingParameters[1].maximum : extra;
                     add += ability.add + extra;
                 }
@@ -123,73 +123,73 @@ export class Mover {
      * @param monster   The monster to find the hit rate against.
      * @returns         The percentage of hits that will connect against the monster.
      */
-    hit_result(monster) {
+    hitResult(monster) {
         // CMover::GetAttackResult
-        let hit_rate = Math.floor(((this.dex * 1.6) / (this.dex + monster.parry)) * 1.5 *
+        let hitRate = Math.floor(((this.dex * 1.6) / (this.dex + monster.parry)) * 1.5 *
             (this.level * 1.2 / (this.level + monster.level)) * 100.0);
 
-        hit_rate += this.hitrate;
-        hit_rate = hit_rate > 100 ? 100 : hit_rate;
-        hit_rate = hit_rate < 20 ? 20 : hit_rate;
+        hitRate += this.hitrate;
+        hitRate = hitRate > 100 ? 100 : hitRate;
+        hitRate = hitRate < 20 ? 20 : hitRate;
 
-        return hit_rate;
+        return hitRate;
     }
 
     /**
      * @param monster   The monster to find the time to kill for.
      * @returns         The time to kill the monster using auto attacks.
      */
-    ttk_monster(monster) {
+    ttkMonster(monster) {
         if (!monster) return 0;
         let res = {};
-        const auto = this.ttk_auto(monster);
+        const auto = this.ttkAuto(monster);
         res.auto = auto;    // Auto attack
         
         return res;
     }
 
 
-    ttk_auto(monster) {
+    ttkAuto(monster) {
         // Auto attack
         let damage = 1;
-        damage = this.get_damage_against(monster);
-        const hits_to_kill = monster.hp / damage;
+        damage = this.getDamageAgainst(monster);
+        const hitsToKill = monster.hp / damage;
 
-        const hitrate = this instanceof Psykeeper ? 100 : this.hit_result(monster);
-        let hits_sec = this.constants.hps * this.aspd / 100;
-        hits_sec *= hitrate / 100;
+        const hitrate = this instanceof Psykeeper ? 100 : this.hitResult(monster);
+        let hitsSec = this.constants.hps * this.aspd / 100;
+        hitsSec *= hitrate / 100;
 
-        return hits_to_kill / hits_sec;
+        return hitsToKill / hitsSec;
     }
 
-    get_damage_against(opponent, index=null) {
+    getDamageAgainst(opponent, index=null) {
         // TODO: Incorporate elements from skills
         var factor = 1.0;
-        if (index && this.constants.skills[index].name.en == "Spirit Bomb") factor = 1.5;
+        if (index && this.constants.skills[index] && this.constants.skills[index].name.en == "Spirit Bomb") factor = 1.5;
         
         var delta = opponent.level - this.level;
         if (delta > 0) {
-            let max_over = 16;
-            delta = Math.min(delta, (max_over - 1));
-            let radian = (Math.PI * delta) / (max_over * 2.0);
+            const maxOver = 16;
+            delta = Math.min(delta, (maxOver - 1));
+            let radian = (Math.PI * delta) / (maxOver * 2.0);
             factor *= Math.cos(radian);
         }
         
-        if (index === null || Object.values(this.skills_damage).length <= index) {
-            var damage = (this.average_aa * factor) - opponent.defense;
+        if (index === null || Object.values(this.skillsDamage).length <= index) {
+            var damage = (this.averageAA * factor) - opponent.defense;
         } else {
-            var damage = (Object.values(this.skills_damage)[index] * factor) - opponent.defense;
+            var damage = (Object.values(this.skillsDamage)[index] * factor) - opponent.defense;
         }
 
         return damage < 1 ? 1 : damage;
     }
 
-    average_skill_dmg() {
+    averageSkillDmg() {
         let res = {}
         this.constants.skills.forEach(skill => {
             if (skill) {
-                let damage = this.skill_dmg(skill);
-                damage *= this.damage_multiplier(skill);
+                let damage = this.skillDmg(skill);
+                damage *= this.damageMultiplier(skill);
                 res[skill.name.en] = damage;
             }
         });
@@ -197,7 +197,7 @@ export class Mover {
         return res;
     }
 
-    damage_multiplier(skill=null) {
+    damageMultiplier(skill=null) {
         let factor = 1.0;
 
         if (skill) {
@@ -208,44 +208,44 @@ export class Mover {
             }
         }
 
-        const weapon_bonus = this.weapon_param('attack') / 100;
-        factor += this instanceof Blade ? weapon_bonus * 2 : weapon_bonus;
-        factor += this.armor_param('attack') / 100;
+        const weaponBonus = this.weaponParam('attack') / 100;
+        factor += this instanceof Blade ? weaponBonus * 2 : weaponBonus;
+        factor += this.armorParam('attack') / 100;
 
         return factor;
     }
 
-    skill_dmg(skill) {
+    skillDmg(skill) {
         const params = skill.levels.slice(-1)[0];       // Cannot use at() because of Safari compatibility
-        let weapon_min = 3;
-        let weapon_max = 4;
+        let weaponMin = 3;
+        let weaponMax = 4;
 
         if (this.weapon) {
-            weapon_min = this.weapon.minAttack;
-            weapon_max = this.weapon.maxAttack;
+            weaponMin = this.weapon.minAttack;
+            weaponMax = this.weapon.maxAttack;
         }
 
         const stat = params.scalingParameters[0].stat;
-        var refer_stat = this.str;
+        var referStat = this.str;
         switch (stat) {
             case 'sta':
-                refer_stat = this.sta;
+                referStat = this.sta;
                 break;
             case 'dex':
-                refer_stat = this.dex;
+                referStat = this.dex;
                 break;
             case 'int':
-                refer_stat = this.int;
+                referStat = this.int;
                 break;
             default:
-                refer_stat = this.str;
+                referStat = this.str;
         }
 
         const level = skill.levels.length;
-        const base = refer_stat * params.scalingParameters[0].scale;
-        const power_min = ((weapon_min + (params.minAttack + 0) * 5 + base - 20) * (16 + level) / 13);
-        const power_max = ((weapon_max + (params.maxAttack + 0) * 5 + base - 20) * (16 + level) / 13);
-        let final = (power_min + power_max) / 2;
+        const base = referStat * params.scalingParameters[0].scale;
+        const powerMin = ((weaponMin + (params.minAttack + 0) * 5 + base - 20) * (16 + level) / 13);
+        const powerMax = ((weaponMax + (params.maxAttack + 0) * 5 + base - 20) * (16 + level) / 13);
+        let final = (powerMin + powerMax) / 2;
         
         // Maybe add a defines file and avoid string comparison
         if (skill.name.en == "Asalraalaikum") { final += (((this.str / 10) * level) * (5 + this.mp / 10) + 150); }

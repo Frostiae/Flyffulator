@@ -270,12 +270,12 @@ ul {
     justify-content: space-between;
 }
 
-#chart, #exphpchart {
+#chart, #expHPChart {
     margin-left: -21px;
     margin-top: -45px;
 }
 
-#hitsperlevelchart {
+#hitsPerLevelChart {
     margin-left: -10px;
     margin-top: -10px;
 }
