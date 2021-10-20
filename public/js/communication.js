@@ -33,6 +33,7 @@ const assistbuffs = document.getElementById('buffs');
 const setweapon = document.getElementById('setweapon');
 const setarmor = document.getElementById('setarmor');
 const statpoints = document.getElementById('statpoints');
+const ttkaa = document.getElementById('ttkaa');
 
 var activeSkill = document.getElementById('skill0box');
 activeSkill.style.boxShadow = '#ffffff1e 0px 0px 20px';
@@ -71,6 +72,12 @@ export function update_output(job, str, sta, dex, int, level, assistint) {
     let skill_index = skills.indexOf(activeSkill);
     if (skill_index >= 3) skill_index = null;   // Auto attack
     const monsters = utils.get_monsters_at_level(level, skill_index);
+
+    const focus = monsters.find(monster => monster.level >= character.level);
+    if (focus) {
+        const ttk = character.ttk_monster(focus);
+        ttkaa.innerText = ttk.auto.toFixed(0) + 's to kill a ' + focus.name.en + ' (approximate)';
+    }
 
     if (monsters && monsters.length > 0) {
         update_exp_charts(monsters, level);
@@ -188,20 +195,20 @@ function update_exp_charts(monsters, level) {
 }
 
 function update_skills(character) {
-    const len = Object.keys(character.average_skill_dmg).length;
+    const len = Object.keys(character.skills_damage).length;
     if (len >= 1) {
-        skill1.innerText = Object.keys(character.average_skill_dmg)[0];
-        skill1dmg.innerText = character.average_skill_dmg[skill1.innerText].toFixed(0) - 20;
+        skill1.innerText = Object.keys(character.skills_damage)[0];
+        skill1dmg.innerText = character.skills_damage[skill1.innerText].toFixed(0) - 20;
     }
 
     if (len >= 2) {
-        skill2.innerText = Object.keys(character.average_skill_dmg)[1];
-        skill2dmg.innerText = character.average_skill_dmg[skill2.innerText].toFixed(0) - 20;
+        skill2.innerText = Object.keys(character.skills_damage)[1];
+        skill2dmg.innerText = character.skills_damage[skill2.innerText].toFixed(0) - 20;
     }
 
     if (len >= 3) {
-        skill3.innerText = Object.keys(character.average_skill_dmg)[2];
-        skill3dmg.innerText = character.average_skill_dmg[skill3.innerText].toFixed(0) - 20;
+        skill3.innerText = Object.keys(character.skills_damage)[2];
+        skill3dmg.innerText = character.skills_damage[skill3.innerText].toFixed(0) - 20;
     }
 }
 

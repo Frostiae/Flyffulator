@@ -7,9 +7,12 @@ export class Vagrant {
         this.weapon = weapon || Utils.get_item_by_name("Wooden Sword");
         this.assist_buffs = false;
         this.constants = constants || {
-            'skills': ["Clean Hit", "Flurry", "Over Cutter"],
+            'skills': [Utils.get_skill_by_name("Clean Hit"), 
+                       Utils.get_skill_by_name("Flurry"), 
+                       Utils.get_skill_by_name("Over Cutter")],
             'weapon': 'sword',  // Change this to weaponType when we have weapon integration
             'attackSpeed': 75.0,
+            'hps': 4,
             'HP': 0.9,
             'MP': 0.3,
             'FP': 0.3,
@@ -24,12 +27,15 @@ export class Vagrant {
             'wand': 6.0,
             'yoyo': 4.2
         };
+        this.skills_damage = {};
 
         this.str = parseInt(str);
         this.sta = parseInt(sta);
         this.int = parseInt(int);
         this.dex = parseInt(dex);
         this.level = parseInt(level);
+
+        this.active_buffs = [];
 
         this.base_str = 0;
         this.base_sta = 0;
@@ -88,6 +94,8 @@ export class Vagrant {
         const weapon_bonus = this.weapon_param('attackspeed');
         final += this instanceof Blade ? weapon_bonus * 2 : weapon_bonus;
         final += this.armor_param('attackspeed');
+
+        final = final > 100 ? 100 : final;
         return Math.floor(final);
     }
 
@@ -100,7 +108,7 @@ export class Vagrant {
         const weapon_bonus = this.weapon_param('criticalchance');
         chance += this instanceof Blade ? weapon_bonus * 2 : weapon_bonus;
         chance += this.armor_param('criticalchance');
-        return chance;
+        return chance > 100 ? 100 : chance;
     }
 
     get attack() {
@@ -176,20 +184,7 @@ export class Vagrant {
         return defense;
     }
 
-    get average_skill_dmg() {
-        let res = {}
-        this.constants.skills.forEach(skill => {
-            let info = Utils.get_skill_by_name(skill);
-            if (info) {
-                let damage = this.skill_dmg(info);
-                damage *= this.damage_multiplier(info);
-                res[info.name.en] = damage;
-            }
-        });
-
-        return res;
-    }
-
+    
     get remaining_points() {
         let points = this.level * 2 - 2;
         points -= (this.str + this.sta + this.dex + this.int) - 60;
@@ -198,12 +193,63 @@ export class Vagrant {
         }
         return points;
     }
+    
+    average_skill_dmg() {
+        let res = {}
+        this.constants.skills.forEach(skill => {
+            if (skill) {
+                let damage = this.skill_dmg(skill);
+                if (skill.name.en == "Spirit Bomb") console.log(damage);
+                damage *= this.damage_multiplier(skill);
+                if (skill.name.en == "Spirit Bomb") console.log(damage);
+                res[skill.name.en] = damage;
+            }
+        });
 
+        return res;
+    }
+
+    /**
+     * @param monster   The monster to find the hit rate against.
+     * @returns         The percentage of hits that will connect against the monster.
+     */
+    hit_result(monster) {
+        // CMover::GetAttackResult
+        let hit_rate = Math.floor(((this.dex * 1.6) / (this.dex + monster.parry)) * 1.5 *
+            (this.level * 1.2 / (this.level + monster.level)) * 100.0);
+
+        hit_rate += this.hitrate;
+        hit_rate = hit_rate > 100 ? 100 : hit_rate;
+        hit_rate = hit_rate < 20 ? 20 : hit_rate;
+
+        return hit_rate;
+    }
+
+    /**
+     * @param monster   The monster to find the time to kill for.
+     * @returns         The time to kill the monster using auto attacks.
+     */
     ttk_monster(monster) {
-        let damage = 1;
+        if (!monster) return 0;
+        let res = {};
+        const auto = this.ttk_auto(monster);
+        res.auto = auto;    // Auto attack
+        
+        return res;
+    }
+
+
+    ttk_auto(monster) {
         // Auto attack
-        damage = this.average_aa;
-        // TODO
+        let damage = 1;
+        damage = this.get_damage_against(monster);
+        const hits_to_kill = monster.hp / damage;
+
+        const hitrate = this instanceof Psykeeper ? 100 : this.hit_result(monster);
+        let hits_sec = this.constants.hps * this.aspd / 100;
+        hits_sec *= hitrate / 100;
+
+        return hits_to_kill / hits_sec;
     }
 
     damage_multiplier(skill=null) {
@@ -304,7 +350,19 @@ export class Vagrant {
         return add;
     }
 
-    apply_assist_buffs(assist_int) {
+    apply_assist_buffs(assist_int, enabled) {
+        // TODO: Finish this
+        if (enabled) {
+            this.active_buffs = [
+                Utils.get_skill_by_name('Cannon Ball'),
+                Utils.get_skill_by_name('Beef Up'),
+                Utils.get_skill_by_name('Heap Up'),
+                Utils.get_skill_by_name('Mental Sign'),
+                Utils.get_skill_by_name('Cannon Ball'),
+            ]
+        }
+
+
         assist_int = assist_int > 500 ? 500 : assist_int;
         this.bonus_str = 20 + (assist_int / 25);
         this.bonus_sta = 30 + (assist_int / 25);
@@ -340,26 +398,28 @@ export class Vagrant {
             this.dex = this.base_dex;
         }
 
+        this.skills_damage = this.average_skill_dmg();
+
         return this;
     }
 
     get_damage_against(opponent, index=null) {
         // TODO: Incorporate elements from skills
         var factor = 1.0;
+        if (index && this.constants.skills[index].name.en == "Spirit Bomb") factor = 1.5;
+        
         var delta = opponent.level - this.level;
-
         if (delta > 0) {
             let max_over = 16;
             delta = Math.min(delta, (max_over - 1));
             let radian = (Math.PI * delta) / (max_over * 2.0);
             factor *= Math.cos(radian);
         }
-
-        if (index === null || Object.values(this.average_skill_dmg).length <= index) {
+        
+        if (index === null || Object.values(this.skills_damage).length <= index) {
             var damage = (this.average_aa * factor) - opponent.defense;
         } else {
-            // * factor?
-            var damage = (Object.values(this.average_skill_dmg)[index] * factor) - opponent.defense;
+            var damage = (Object.values(this.skills_damage)[index] * factor) - opponent.defense;
         }
 
         return damage < 1 ? 1 : damage;
@@ -370,13 +430,16 @@ export class Vagrant {
 export class Assist extends Vagrant {
     constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
         img = img || "overamknuckle.png";
-        armor = armor || Utils.get_armor_by_name("Wedge Set");
+        armor = armor || Utils.get_armor_by_name("Sayram Set");
         weapon = weapon || Utils.get_item_by_name("Paipol Knuckle");
         constants = constants || {
             'weapon': 'knuckle',
-            'skills': ['Power Fist', 'Temping Hole', 'Burst Crack'],
+            'skills': [Utils.get_skill_by_name("Power First"), 
+                       Utils.get_skill_by_name("Temping Hole"), 
+                       Utils.get_skill_by_name("Burst Crack")],
             'attackSpeed': 75.0,  // Might be 70
             'HP': 1.4,
+            'hps': 4,
             'MP': 1.3,
             'FP': 0.6,
             'Def': 1.2,
@@ -422,8 +485,11 @@ export class Billposter extends Assist {
         weapon = weapon || Utils.get_item_by_name("Legendary Golden Gloves");
         constants = constants || {
             'weapon': 'knuckle',
-            'skills': ['Bgvur Tialbold', 'Blood Fist', 'Asalraalaikum'],
+            'skills': [Utils.get_skill_by_name("Bgvur Tialbold"), 
+                       Utils.get_skill_by_name("Blood Fist"), 
+                       Utils.get_skill_by_name("Asalraalaikum")],
             'attackSpeed': 85.0,
+            'hps': 4,
             'HP': 1.8,
             'MP': 0.9,
             'FP': 1.1,
@@ -470,8 +536,9 @@ export class Ringmaster extends Assist {
         weapon = weapon || Utils.get_item_by_name("Legendary Golden Stick");
         constants = constants || {
             'weapon': 'stick',
-            'skills': ['Merkaba Hanzelrusha'],
+            'skills': [Utils.get_skill_by_name('Merkaba Hanzelrusha')],
             'attackSpeed': 75.0,
+            'hps': 3,
             'HP': 1.6,
             'MP': 1.8,
             'FP': 0.4,
@@ -518,8 +585,11 @@ export class Acrobat extends Vagrant {
         weapon = weapon || Utils.get_item_by_name("Layered Bow");
         constants = constants || {
             'weapon': 'bow',
-            'skills': ['Junk Arrow', 'Silent Shot', 'Arrow Rain'],
+            'skills': [Utils.get_skill_by_name("Junk Arrow"), 
+                       Utils.get_skill_by_name("Silent Shot"), 
+                       Utils.get_skill_by_name("Arrow Rain")],
             'attackSpeed': 80.0,
+            'hps': 2,
             'HP': 1.4,
             'MP': 0.5,
             'FP': 0.5,
@@ -567,8 +637,11 @@ export class Jester extends Acrobat {
         weapon = weapon || Utils.get_item_by_name("Legendary Golden Yo-Yo");
         constants = constants || {
             'weapon': 'yoyo',
-            'skills': ['Sneak Stab', 'Vital Stab', 'Hit of Penya'],
+            'skills': [Utils.get_skill_by_name("Sneak Stab"), 
+                       Utils.get_skill_by_name("Vital Stab"), 
+                       Utils.get_skill_by_name("Hit of Penya")],
             'attackSpeed': 85.0,
+            'hps': 2,
             'HP': 1.5,
             'MP': 0.5,
             'FP': 1.0,
@@ -616,8 +689,11 @@ export class Ranger extends Acrobat {
         weapon = weapon || Utils.get_item_by_name("Legendary Golden Bow");
         constants = constants || {
             'weapon': 'bow',
-            'skills': ['Ice Arrow', 'Flame Arrow', 'Silent Arrow'],
+            'skills': [Utils.get_skill_by_name("Ice Arrow"), 
+                       Utils.get_skill_by_name("Flame Arrow"), 
+                       Utils.get_skill_by_name("Silent Arrow")],
             'attackSpeed': 80.0,
+            'hps': 2,
             'HP': 1.6,
             'MP': 1.2,
             'FP': 0.6,
@@ -665,8 +741,11 @@ export class Magician extends Vagrant {
         weapon = weapon || Utils.get_item_by_name("Opel Wand");
         constants = constants || {
             'weapon': 'wand',
-            'skills': ['Mental Strike', 'Rock Crash', 'Water Well'],
+            'skills': [Utils.get_skill_by_name("Mental Strike"), 
+                       Utils.get_skill_by_name("Rock Crash"), 
+                       Utils.get_skill_by_name("Water Well")],
             'attackSpeed': 65.0,
+            'hps': 1,
             'HP': 1.4,
             'MP': 1.7,
             'FP': 0.3,
@@ -713,8 +792,11 @@ export class Psykeeper extends Magician {
         weapon = weapon || Utils.get_item_by_name("Legendary Golden Wand");
         constants = constants || {
             'weapon': 'wand',
-            'skills': ['Demonology', 'Spirit Bomb', 'Psychic Square'],
+            'skills': [Utils.get_skill_by_name("Demonology"), 
+                       Utils.get_skill_by_name("Spirit Bomb"), 
+                       Utils.get_skill_by_name("Psychic Square")],
             'attackSpeed': 70.0,
+            'hps': 1,
             'HP': 1.5,
             'MP': 2.0,
             'FP': 0.4,
@@ -761,8 +843,11 @@ export class Elementor extends Magician {
         weapon = weapon || Utils.get_item_by_name("Legendary Golden Staff");
         constants = constants || {
             'weapon': 'staff',
-            'skills': ['Firebird', 'Windfield', 'Iceshark'],
+            'skills': [Utils.get_skill_by_name("Firebird"), 
+                       Utils.get_skill_by_name("Windfield"), 
+                       Utils.get_skill_by_name("Iceshark")],
             'attackSpeed': 70.0,
+            'hps': 1,
             'HP': 1.5,
             'MP': 2.0,
             'FP': 0.4,
@@ -809,8 +894,11 @@ export class Mercenary extends Vagrant {
         weapon = weapon || Utils.get_item_by_name("Flam Sword");
         constants = constants || {
             'weapon': 'sword',
-            'skills': ['Shield Bash', 'Keenwheel', 'Guillotine'],
+            'skills': [Utils.get_skill_by_name("Shield Bash"), 
+                       Utils.get_skill_by_name("Keenwheel"), 
+                       Utils.get_skill_by_name("Guillotine")],
             'attackSpeed': 80.0,
+            'hps': 4,
             'HP': 1.5,
             'MP': 0.5,
             'FP': 0.7,
@@ -857,8 +945,11 @@ export class Blade extends Mercenary {
         weapon = weapon || Utils.get_item_by_name("Legendary Golden Axe");
         constants = constants || {
             'weapon': 'axe',
-            'skills': ['Blade Dance', 'Hawk Attack', 'Cross Strike'],
+            'skills': [Utils.get_skill_by_name("Blade Dance"), 
+                       Utils.get_skill_by_name("Hawk Attack"), 
+                       Utils.get_skill_by_name("Cross Strike")],
             'attackSpeed': 90.0,
+            'hps': 3,
             'HP': 1.5,
             'MP': 0.6,
             'FP': 1.2,
@@ -905,8 +996,11 @@ export class Knight extends Mercenary {
         weapon = weapon || Utils.get_item_by_name("Legendary Golden Big Sword");
         constants = constants || {
             'weapon': 'axe',
-            'skills': ['Pain Dealer', 'Power Stomp', 'Earth Divider'],
+            'skills': [Utils.get_skill_by_name("Pain Dealer"), 
+                       Utils.get_skill_by_name("Power Stomp"), 
+                       Utils.get_skill_by_name("Earth Divider")],
             'attackSpeed': 65.0,
+            'hps': 2,
             'HP': 2.0,
             'MP': 0.6,
             'FP': 1.5,
