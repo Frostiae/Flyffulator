@@ -4,27 +4,12 @@ import { Utils } from "./utils.js";
  * The mover class is the base of all characters. Acts as a helper class for a lot of functions.
  */
 export class Mover {
-    updateStats(str, sta, int, dex, level, assistBuffs, assistInt) {
-
+    update() {
         // TODO: Move most of the get methods into regular methods and call them here instead to store in the object
         // to avoid doing all those calculations everytime we do character.aspd for example. Do it once and store it
         // instead.
 
-        this.level = parseInt(level);
-        this.str = parseInt(str);
-        this.sta = parseInt(sta);
-        this.int = parseInt(int);
-        this.dex = parseInt(dex);
-        this.assistInt = assistInt;
-        
-        this.applyAssistBuffs(assistBuffs);
         this.skillsDamage = this.averageSkillDmg();
-
-        this.str = this.str < 15 ? 15 : this.str;
-        this.sta = this.sta < 15 ? 15 : this.sta;
-        this.dex = this.dex < 15 ? 15 : this.dex;
-        this.int = this.int < 15 ? 15 : this.int;
-
         return this;
     }
 

@@ -40,7 +40,17 @@ export class Utils {
 
 
     updateJob(job) {
-        if (this.character.constructor.name != job) { this.character = JobFactory.createJob(job); }
+        if (this.character.constructor.name != job) { 
+            this.character = JobFactory.createJob(job, 
+                            this.character.str, 
+                            this.character.sta, 
+                            this.character.dex, 
+                            this.character.int,
+                            this.character.level);
+            return true;
+        }
+
+        return false;
     }
 
     getMonstersAtLevel(level, skill=null) {
@@ -64,21 +74,21 @@ export class Utils {
 }
 
 class JobFactory {
-    static createJob(job) {
+    static createJob(job, str, sta, dex, int, level) {
         switch (job) {
-            case 'Vagrant': return new Vagrant();
-            case 'Assist': return new Assist();
-            case 'Billposter': return new Billposter();
-            case 'Ringmaster': return new Ringmaster();
-            case 'Acrobat': return new Acrobat();
-            case 'Jester': return new Jester();
-            case 'Ranger': return new Ranger();
-            case 'Magician': return new Magician();
-            case 'Psykeeper': return new Psykeeper();
-            case 'Elementor': return new Elementor();
-            case 'Mercenary': return new Mercenary();
-            case 'Blade': return new Blade();
-            case 'Knight': return new Knight();
+            case 'Vagrant': return new Vagrant(str, sta, int, dex, level);
+            case 'Assist': return new Assist(str, sta, int, dex, level);
+            case 'Billposter': return new Billposter(str, sta, int, dex, level);
+            case 'Ringmaster': return new Ringmaster(str, sta, int, dex, level);
+            case 'Acrobat': return new Acrobat(str, sta, int, dex, level);
+            case 'Jester': return new Jester(str, sta, int, dex, level);
+            case 'Ranger': return new Ranger(str, sta, int, dex, level);
+            case 'Magician': return new Magician(str, sta, int, dex, level);
+            case 'Psykeeper': return new Psykeeper(str, sta, int, dex, level);
+            case 'Elementor': return new Elementor(str, sta, int, dex, level);
+            case 'Mercenary': return new Mercenary(str, sta, int, dex, level);
+            case 'Blade': return new Blade(str, sta, int, dex, level);
+            case 'Knight': return new Knight(str, sta, int, dex, level);
         }
     }
 }
