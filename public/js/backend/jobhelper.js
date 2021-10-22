@@ -119,7 +119,7 @@ export class Mover {
             (this.level * 1.2 / (this.level + monster.level)) * 100.0);
 
         hitRate += this.hitrate;
-        hitRate = hitRate > 100 ? 100 : hitRate;
+        hitRate = hitRate > 96 ? 96 : hitRate;
         hitRate = hitRate < 20 ? 20 : hitRate;
 
         return hitRate;
