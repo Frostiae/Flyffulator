@@ -109,7 +109,7 @@
                               <h5 style="color: #7279AA;">int</h5>
                             </span>
                             
-                            <p id="statpoints">{{ character.remainingPoints }}</p>
+                            <p id="statpoints" v-cloak>{{ character.remainingPoints }}</p>
                         </div>
                     </div>
 
@@ -120,8 +120,8 @@
                         <h5>Weapon</h5>
                       </div>
                       <div class="values">
-                        <p class="equip">{{ character.armor ? character.armor.name.en : "None" }}</p>
-                        <p class="equip">{{ character.weapon ? character.weapon.name.en : "None" }}</p>
+                        <p class="equip" v-cloak>{{ character.armor ? character.armor.name.en : "None" }}</p>
+                        <p class="equip" v-cloak>{{ character.weapon ? character.weapon.name.en : "None" }}</p>
                       </div>
                     </div>
                     <h5 style="opacity: 0.5;">These values cannot be changed on the web version of this calculator. If you would like to experiment with specific equipment, there will be an executable desktop application soon.</h5>
@@ -196,29 +196,29 @@
         <div class="rightpanel">
             <div class="panelcontent" id="outputstats">
                 <h5>Max Health</h5>
-                <p>{{ character.health || "N/A" }}</p>
+                <p v-cloak>{{ character.health || "N/A" }}</p>
                 <h5>Max MP</h5>
-                <p>{{ character.mp || "N/A" }}</p>
+                <p v-cloak>{{ character.mp || "N/A" }}</p>
                 <h5>Max FP</h5>
-                <p>{{ character.fp || "N/A" }}</p>
+                <p v-cloak>{{ character.fp || "N/A" }}</p>
                 <h5>Speed</h5>
                 <p>100%</p>
                 <hr>
                 <h5>Attack</h5>
-                <p>{{ character.attack.toFixed(0) || "N/A" }}</p>
+                <p v-cloak>{{ character.attack.toFixed(0) || "N/A" }}</p>
                 <h5>Attack Speed</h5>
-                <p>{{ character.aspd + '%' || "N/A" }}</p>
+                <p v-cloak>{{ character.aspd + '%' || "N/A" }}</p>
                 <h5>Hit Rate</h5>
-                <p>{{ character.hitrate + '%' || "N/A" }}</p>
+                <p v-cloak>{{ character.hitrate + '%' || "N/A" }}</p>
                 <h5>Critical Chance</h5>
-                <p>{{ character.criticalChance + '%' || "N/A" }}</p>
+                <p v-cloak>{{ character.criticalChance + '%' || "N/A" }}</p>
                 <h5>Critical Damage</h5>
-                <p>{{ character.criticalDamage || "N/A" }}</p>
+                <p v-cloak>{{ character.criticalDamage || "N/A" }}</p>
                 <hr>
                 <h5>Defense</h5>
-                <p>{{ character.defense || "N/A" }}</p>
+                <p v-cloak>{{ character.defense || "N/A" }}</p>
                 <h5>Parry</h5>
-                <p>{{ character.parry + '%' || "N/A" }}</p>
+                <p v-cloak>{{ character.parry + '%' || "N/A" }}</p>
                 <h5>Melee Block</h5>
                 <p>N/A</p>
                 <h5>Ranged Block</h5>

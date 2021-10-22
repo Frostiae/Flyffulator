@@ -3,6 +3,8 @@ body, html {
     font-family: 'Roboto';
 }
 
+[v-cloak] { display: none; }
+
 img#bg-radial {
     width: 550px;
     display: block;
