@@ -108,7 +108,7 @@ a:hover {
     padding-bottom: 10px;
 }
 
-p#setweapon, p#setarmor {
+p.equip {
     font-family: 'Roboto';
     font-size: 13px;
     margin: 4px;
@@ -122,7 +122,7 @@ p#setweapon, p#setarmor {
     padding-bottom: 10px;
 }
 
-.extensivestats .extensiverow .extensivebasic {
+.extensivestats .extensiverow .extensivebasic, .extensivebasicdmg{
     display: flex;
     flex-direction: column;
     background-color: #2E325C;
@@ -164,21 +164,21 @@ p#setweapon, p#setarmor {
     transition: 0.3s;
 }
 
-.extensivestats .extensiverow .extensivebasic p {
+.extensivestats .extensiverow .extensivebasic p, .extensivebasicdmg p {
     font-size: 35px;
     font-weight: 500;
     margin-left: 20px;
 }
 
-.extensivestats .extensiverow .extensivebasic h3 {
+.extensivestats .extensiverow .extensivebasic h3, .extensivebasicdmg h3 {
     margin-left: 20px;
 }
 
-.extensivestats .extensiverow .extensivebasic h5 {
+.extensivestats .extensiverow .extensivebasic h5, .extensivebasicdmg h5 {
     margin-left: 20px;
 }
 
-.extensivestats .extensiverow .extensivebasic:hover {
+.extensivestats .extensiverow .extensivebasic:hover, .extensivebasicdmg:hover {
     box-shadow: #0000001e 0px 10px 20px;
     transition: 0.3s;
     width: 205px;
@@ -415,7 +415,9 @@ select:active {
     background-color: white;
 }
 
-input[type=text] {
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
     background: none;
     border:none;
     width: 50px;
@@ -424,6 +426,11 @@ input[type=text] {
     font-weight: 500;
     font-family: 'Roboto';
     margin: 2px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
 }
 
 input[type=checkbox]#buffs {
