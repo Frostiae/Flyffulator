@@ -1,6 +1,6 @@
 <template>
   <div class="extensivechart">
-      <p id="info">How many kills it would take to gain one level at each of these monsters at your current level.</p>
+      <p id="info">A showcase of the EXP:Health ratio of the monsters around your level.</p>
       <img class="info-tooltip" src='../assets/images/Icons/info.png'>
 
       <apexchart

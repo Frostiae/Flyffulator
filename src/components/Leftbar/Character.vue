@@ -16,7 +16,7 @@
 
       <div class="values">
         <span class="value">
-          <select name="class" @change="updateJob($event)" id="job">
+          <select name="class" @change="$root.updateJob($event)" id="job">
             <option value="Vagrant">Vagrant</option>
             <option value="Assist">Assist</option>
             <option value="Billposter">Billposter</option>

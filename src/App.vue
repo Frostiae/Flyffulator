@@ -1,5 +1,8 @@
 <template>
   <div class="mainpage">
+    <div class="tooltip">
+      <h5>info</h5>
+    </div>
     <leftbar/>
     
     <div class="content">
@@ -10,11 +13,28 @@
       </div>
 
       <div class="extensivestats">
+
         <h3>Leveling</h3>
         <div class="extensiverow">
           <experience-per-kill/>
           <kills-per-level/>
           <exp-hp-ratio/>
+        </div>
+
+        <div class="extensiverow">
+          <hits-per-level/>
+        </div>
+
+        <h3>Damage</h3>
+        <div class="extensiverow">
+          <damage-box title="Average AA" skillindex=-1 />
+          <damage-box title="N/A" skillindex=0 />
+          <damage-box title="N/A" skillindex=1 />
+          <damage-box title="N/A" skillindex=2 />
+        </div>
+
+        <div class="footer">
+          <h5>Flyff simulator built specifically for <a href='https://flyff-api.sniegu.fr/'>Project M</a> by Frostiae#2809</h5>
         </div>
       </div>
     </div>
@@ -28,6 +48,8 @@
 import ExperiencePerKill from './components/ExperiencePerKill.vue'
 import KillsPerLevel from './components/KillsPerLevel.vue'
 import ExpHpRatio from './components/ExpHpRatio.vue'
+import DamageBox from './components/DamageBox.vue'
+import HitsPerLevel from './components/HitsPerLevel.vue'
 import TopStats from './components/TopStats.vue'
 import Leftbar from './components/Leftbar.vue'
 import Rightbar from './components/Rightbar.vue'
@@ -41,7 +63,9 @@ export default {
     ExperiencePerKill,
     TopStats,
     KillsPerLevel,
+    HitsPerLevel,
     ExpHpRatio,
+    DamageBox,
     Leftbar,
     Rightbar
   },
@@ -85,11 +109,28 @@ export default {
         }
       }
     },
+    updateJob(e) {
+      if (utils.updateJob(e.target.value)) {
+        this.character = utils.character.update();
+        this.updateCharacter();
+      }
+    },
     updateCharacter() {
       validateInput(this.character)
       this.character.update()
       this.monsters = utils.getMonstersAtLevel(this.character.level, this.skillIndex)
     },
+    updateMonsters(index) {
+      this.skillIndex = index
+      if (this.skillIndex == -1) {
+        this.monsters = utils.getMonstersAtLevel(this.character.level, null);
+      } else {
+        this.monsters = utils.getMonstersAtLevel(this.character.level, this.skillIndex);
+        this.skillIndex = this.skillIndex;
+      }
+
+      monsters = this.monsters;
+    }
   }
 }
 
@@ -121,6 +162,22 @@ body, html {
     #1c1e3a 100%
     );
   overflow: hidden;
+}
+
+a {
+  color: #DADEEF;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.footer {
+  margin-top: 50px;
+  padding-bottom: 10px;
 }
 
 hr {
@@ -171,8 +228,9 @@ option {
   overflow-y: auto;
   overflow-x: hidden;
   height: 100vh;
-  margin-left: 290px;
-  margin-right: 290px;
+  margin-left: 330px;
+  margin-right: 300px;
+  scrollbar-width: none;
 
   .basestats {
     display: flex;
@@ -230,21 +288,21 @@ option {
         box-shadow: #0000001e 0px 5px 5px;
         transition: 0.3s;
         margin-right: 10px;
+      }
 
-        #big {
-          background-color: #2E325C;
-          height: 400px;
-          width: 820px;
-          border-radius: 20px;
-          box-shadow: #0000001e 0px 5px 5px;
-          transition: 0.3s;
-          margin-right: 10px;
-        }
+      .extensivechart#big {
+        background-color: #2E325C;
+        height: 400px;
+        width: 820px;
+        border-radius: 20px;
+        box-shadow: #0000001e 0px 5px 5px;
+        transition: 0.3s;
+        margin-right: 10px;
+      }
 
-        #big:hover {
-          box-shadow: #0000001e 0px 10px 20px;
-          transition: 0.3s;
-        }
+      .extensivechart#big:hover {
+        box-shadow: #0000001e 0px 10px 20px;
+        transition: 0.3s;
       }
 
       .extensivechart#hover {
@@ -276,6 +334,7 @@ input[type=number] {
 }
 
 .tooltip {
+  display: none;
   position: absolute;
   background-color: #DADEEF;
   border-radius: 10px;
@@ -324,5 +383,20 @@ input[type=checkbox]#buffs {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1F2342;
+  border-radius: 15px;
+  border: 3px solid #252849;
+  margin: 10px;
 }
 </style>

@@ -67,7 +67,8 @@ export class Utils {
         });
 
         res.forEach(monster => {
-            monster.player_damage = this.character.getDamageAgainst(monster, skill);
+            monster.playerDamage = this.character.getDamageAgainst(monster, skill);
+            monster.playerDamage = monster.playerDamage <= 0 ? 1 : monster.playerDamage;
         });
 
         return res;

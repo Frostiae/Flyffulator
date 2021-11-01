@@ -156,7 +156,7 @@ export class Mover {
     getDamageAgainst(opponent, index=null) {
         // TODO: Incorporate elements from skills
         var factor = 1.0;
-        if (index && this.constants.skills[index] && this.constants.skills[index].name.en == "Spirit Bomb") factor = 1.5;
+        if (index && index != -1 && this.constants.skills[index] && this.constants.skills[index].name.en == "Spirit Bomb") factor = 1.5;
         
         var delta = opponent.level - this.level;
         if (delta > 0) {

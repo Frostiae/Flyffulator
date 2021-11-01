@@ -49,15 +49,13 @@ export default {
 <style lang='scss'>
 .rightpanel {
   position: fixed;
-  width: 25%;
   height: 100%;
   overflow-x: hidden;
   background-color: #1F2342;
   right: 0;
   top: 0;
   border-radius: 15px 0px 0px 15px;
-  min-width: 200px;
-  max-width: 290px;
+  width: 290px;
   text-align: center;
   font-weight: 500;
 }

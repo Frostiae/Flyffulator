@@ -37,8 +37,7 @@ export default {
   float: left;
   top: 0;
   border-radius: 0px 15px 15px 0px;
-  min-width: 250px;
-  max-width: 330px;
+  width: 330px;
   overflow-y: auto;
   z-index: 1;
 
