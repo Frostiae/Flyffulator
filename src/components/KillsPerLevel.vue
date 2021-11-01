@@ -19,10 +19,44 @@ import VueApexCharts from "vue3-apexcharts"
 export default {
   name: 'KillsPerLevel',
   components: {
-      apexchart: VueApexCharts
+      apexchart: VueApexCharts,
+  },
+  watch: {
+    '$root.monsters'() {
+      this.update()
+    }
+  },
+  created() { this.update() },
+  methods: {
+    update() {
+      this.monsters = this.$root.monsters
+      this.character = this.$root.character
+      let killreq = []
+      let names = []
+
+      this.monsters.forEach(monster => {
+        if (monster.experience > 0) {
+          const expReward = this.$root.getExpReward(monster, this.character.level)
+          if (expReward > 0) {
+            killreq = [...killreq, parseFloat(100 / expReward).toFixed(2)]
+            names = [...names, 'Level ' + monster.level + ': ' + monster.name.en]
+          }
+        }
+      })
+
+      // Average kill per level for each monster
+      const killsum = killreq.reduce((a, b) => parseFloat(a) + parseFloat(b), 0)
+      const killavg = (killsum / killreq.length).toFixed(0) || 0
+
+      this.series[0].data = killreq
+      this.chartOptions.xaxis.categories = names
+      this.chartOptions.annotations.yaxis[0].y = killavg
+      this.chartOptions.annotations.yaxis[0].label.text = 'Average: ' + killavg
+    }
   },
   data() {
     return {
+      monsters: this.$root.monsters,
       character: this.$root.character,
       chartOptions: {
         chart: {
@@ -47,10 +81,11 @@ export default {
         },
         annotations: {
           yaxis: [{
-          y: 30,
-          label: {
-              text: 'Average'
-          }
+            y: 30,
+            strokeDashArray: 3,
+            label: {
+                text: 'Average'
+            }
           }]
         },
         plotOptions: {

@@ -48,7 +48,28 @@ export default {
   data() {
     return {
       character: utils.character.update(),
-      monsters: utils.getMonstersAtLevel(utils.character.level)
+      monsters: utils.getMonstersAtLevel(utils.character.level),
+      skillIndex: null
+    }
+  },
+  watch: {
+    'character.level'() {
+      this.updateCharacter()
+    },
+    'character.str'() {
+      this.updateCharacter();
+    },
+    'character.sta'() {
+      this.updateCharacter();
+    },
+    'character.dex'() {
+      this.updateCharacter();
+    },
+    'character.int'() {
+      this.updateCharacter();
+    },
+    'character.assistInt'() {
+      this.updateCharacter();
     }
   },
   methods: {
@@ -63,8 +84,22 @@ export default {
           return monster.experienceTable[newIndex];
         }
       }
-    }
+    },
+    updateCharacter() {
+      validateInput(this.character)
+      this.character.update()
+      this.monsters = utils.getMonstersAtLevel(this.character.level, this.skillIndex)
+    },
   }
+}
+
+function validateInput(character) {
+  character.level = character.level < 1 ? 1 : character.level;
+  character.str = character.str < 1 ? 1 : character.str;
+  character.sta = character.sta < 1 ? 1 : character.sta;
+  character.dex = character.dex < 1 ? 1 : character.dex;
+  character.int = character.int < 1 ? 1 : character.int;
+  character.assistInt = character.assistInt < 1 ? 1 : character.assistInt;
 }
 </script>
 

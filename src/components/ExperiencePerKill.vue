@@ -20,26 +20,30 @@ export default {
   },
   created() { this.getBestExp() },
   watch: {
-    '$root.monsters'() { this.getBestExp() }
+    '$root.monsters'() {
+      this.monsters = this.$root.monsters
+      this.character = this.$root.character
+      this.getBestExp()
+    }
   },
   methods: {
     getBestExp() {
       let best = null
       this.monsters.forEach(monster => {
         if (monster.experience > 0) {
-          const expReward = this.$root.getExpReward(monster, this.character.level);
+          const expReward = this.$root.getExpReward(monster, this.character.level)
           if (best == null || expReward > best.reward) {
             best = {
               name: monster.name.en,
               reward: expReward
-            };
+            }
           }
         }
-      });
+      })
 
       if (best) {
-          this.reward = best.reward;
-          this.name = best.name;
+        this.reward = best.reward
+        this.name = best.name
       }
     }
   }

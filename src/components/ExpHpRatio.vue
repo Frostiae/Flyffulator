@@ -21,6 +21,39 @@ export default {
   components: {
       apexchart: VueApexCharts
   },
+  watch: {
+    '$root.monsters'() {
+      this.update()
+    }
+  },
+  created() { this.update() },
+  methods: {
+    update() {
+      this.monsters = this.$root.monsters
+      this.character = this.$root.character
+      let expPerHP = []
+      let names = []
+
+      this.monsters.forEach(monster => {
+        if (monster.experience > 0) {
+          const expReward = this.$root.getExpReward(monster, this.character.level)
+          if (expReward > 0) {
+            expPerHP = [...expPerHP, parseFloat((expReward / monster.hp) * 100000 || 0).toFixed(3)]
+            names = [...names, 'Level ' + monster.level + ': ' + monster.name.en]
+          }
+        }
+      })
+
+      // Average exp per hp for each monster
+      const expHPSum = expPerHP.reduce((a, b) => parseFloat(a) + parseFloat(b), 0);
+      const expHPAvg = (expHPSum / expPerHP.length).toFixed(3) || 0;
+
+      this.series[0].data = expPerHP
+      this.chartOptions.xaxis.categories = names
+      this.chartOptions.annotations.yaxis[0].y = expHPAvg
+      this.chartOptions.annotations.yaxis[0].label.text = 'Average: ' + expHPAvg
+    }
+  },
   data() {
     return {
       character: this.$root.character,
