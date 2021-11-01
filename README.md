@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://flyffulator.com/">
-    <img src="https://i.imgur.com/Bkmb5j6.png" alt="flyffulator" width="256" height="256">
+    <img src="https://i.imgur.com/l9bO03e.png" alt="flyffulator" width="256" height="256">
   </a>
 </p>
 
