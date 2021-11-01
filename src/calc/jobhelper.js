@@ -166,7 +166,7 @@ export class Mover {
             factor *= Math.cos(radian);
         }
         
-        if (index === null || Object.values(this.skillsDamage).length <= index) {
+        if (index === null || Object.values(this.skillsDamage).length <= index || index == -1) {
             var damage = (this.averageAA * factor) - opponent.defense;
         } else {
             var damage = (Object.values(this.skillsDamage)[index] * factor) - opponent.defense;

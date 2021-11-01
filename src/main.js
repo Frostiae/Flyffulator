@@ -13,7 +13,6 @@ const tooltipsArr = Array.prototype.slice.call(tooltips);
 
 tooltipsArr.forEach(tooltip => {
     tooltip.addEventListener("mouseover", (event) => {
-        console.log("tooltip");
         let text = tooltip.parentNode.getElementsByTagName("p")[0];
         activeTooltip.getElementsByTagName('h5')[0].innerText = text.innerText;
 

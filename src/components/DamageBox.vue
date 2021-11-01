@@ -52,7 +52,6 @@ export default {
               this.ttk = this.character.ttkMonster(focus).auto.toFixed(0) + 's to kill a ' + this.monster + ' (approximate)';
           } else {
               this.skill = Object.keys(this.character.skillsDamage)[this.skillindex];
-              console.log(this.character.skillsDamage)
               if (this.skill) {
                   this.damage = this.character.skillsDamage[this.skill].toFixed(0) - 20;
               } else this.skill = "None"

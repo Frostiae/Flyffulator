@@ -20,24 +20,24 @@ export default {
   },
   created() { this.update() },
   watch: {
-    '$root.character.str'() {
+    '$root.character.ref.str'() {
       this.update()
     },
-    '$root.character.sta'() {
+    '$root.character.ref.sta'() {
       this.update()
     },
-    '$root.character.dex'() {
+    '$root.character.ref.dex'() {
       this.update()
     },
-    '$root.character.int'() {
+    '$root.character.ref.int'() {
       this.update()
     }
   },
   methods: {
     update() {
-      this.character = this.$root.character
+      this.character = this.$root.character.ref
 
-      this.series[0].data[3] = this.character.sta * 2 < 100 ? this.character.sta * 2 : 100                                                         // Defense
+      this.series[0].data[3] = this.character.sta * 2 < 100 ? this.character.sta * 2 : 100                                                    // Defense
       this.series[0].data[0] = (this.character.str * this.character.dex) / 10 < 100 ? (this.character.str * this.character.dex) / 10 : 100;   // Auto attack
       this.series[0].data[2] = (this.character.str * this.character.int) / 10 < 100 ? (this.character.str * this.character.int) / 10 : 100;   // Skill
     }
@@ -47,6 +47,9 @@ export default {
       character: this.$root.character,
       chartOptions: {
         chart: {
+          animations: {
+            enabled: false
+          },
           toolbar: {
             show: false
           },

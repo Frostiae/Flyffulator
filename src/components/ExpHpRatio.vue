@@ -59,6 +59,9 @@ export default {
       character: this.$root.character.ref,
       chartOptions: {
         chart: {
+          animations: {
+            enabled: false
+          },
           offsetX: -21,
           offsetY: -45,
           toolbar: {

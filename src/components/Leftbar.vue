@@ -19,7 +19,7 @@ export default {
       Character,
       Equipment,
       Changelog
-  }
+  },
 }
 </script>
 

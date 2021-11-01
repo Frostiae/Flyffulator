@@ -75,7 +75,7 @@ export default {
         ref: utils.character
       },
       monsters: utils.getMonstersAtLevel(utils.character.level),
-      skillIndex: null
+      skillIndex: -1    // Auto attack is used initially for all damage calculations
     }
   },
   watch: {
@@ -129,12 +129,11 @@ export default {
     },
     updateMonsters(index) {
       this.skillIndex = index
-      console.log(this.character.ref.level)
       if (this.skillIndex == -1) {
         this.monsters = utils.getMonstersAtLevel(this.character.ref.level, null);
       } else {
         this.monsters = utils.getMonstersAtLevel(this.character.ref.level, this.skillIndex);
-        this.skillIndex = this.skillIndex;
+        this.skillIndex = index;
       }
     },
     getImageUrl(img) {
@@ -146,6 +145,7 @@ export default {
 
 function validateInput(character) {
   character.level = character.level < 1 ? 1 : character.level;
+  character.level = character.level > 120 ? 120 : character.level;
   character.str = character.str < 1 ? 1 : character.str;
   character.sta = character.sta < 1 ? 1 : character.sta;
   character.dex = character.dex < 1 ? 1 : character.dex;
