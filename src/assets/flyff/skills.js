@@ -1,3 +1,4 @@
+/* eslint-disable */
 const skillsjson = [
    {
       "id": 39,

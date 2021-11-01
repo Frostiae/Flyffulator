@@ -1,42 +1,67 @@
 <template>
-  <leftbar/>
+  <div class="mainpage">
+    <leftbar/>
+    
+    <div class="content">
 
-  <rightbar/>
+      <div class="basestats">
+        <img src="./assets/images/woodensword.png"/>
+        <top-stats/>
+      </div>
+
+      <div class="extensivestats">
+        <h3>Leveling</h3>
+        <div class="extensiverow">
+          <experience-per-kill/>
+          <kills-per-level/>
+          <exp-hp-ratio/>
+        </div>
+      </div>
+    </div>
+
+    <rightbar/>
+  </div>
 </template>
 
 <script>
 /* eslint-disable */
 import ExperiencePerKill from './components/ExperiencePerKill.vue'
+import KillsPerLevel from './components/KillsPerLevel.vue'
+import ExpHpRatio from './components/ExpHpRatio.vue'
+import TopStats from './components/TopStats.vue'
 import Leftbar from './components/Leftbar.vue'
 import Rightbar from './components/Rightbar.vue'
+import { Utils } from './calc/utils.js'
+
+const utils = new Utils()
 
 export default {
   name: 'App',
   components: {
     ExperiencePerKill,
+    TopStats,
+    KillsPerLevel,
+    ExpHpRatio,
     Leftbar,
     Rightbar
   },
   data() {
     return {
-      character: {
-        level: 0,
-        str: 0,
-        sta: 0,
-        dex: 0,
-        int: 0,
-        remainingPoints: 15,
-        assistInt: 300,
-        health: 0,
-        mp: 0,
-        fp: 0,
-        attack: 0,
-        aspd: 0,
-        hitrate: 0,
-        criticalChance: 0,
-        criticalDamage: 0,
-        defense: 0,
-        parry: 0,
+      character: utils.character.update(),
+      monsters: utils.getMonstersAtLevel(utils.character.level)
+    }
+  },
+  methods: {
+    getExpReward(monster, level) {
+      for (let value of monster.experienceTable) {
+        if (value == monster.experience) {
+          // Value is the experience we get at the same level
+          let index = monster.experienceTable.indexOf(value);
+          let levelDifference = monster.level - level;
+          let newIndex = index - levelDifference < 0 ? 0 : index - levelDifference;
+          
+          return monster.experienceTable[newIndex];
+        }
       }
     }
   }
@@ -46,7 +71,11 @@ export default {
 <style lang='scss'>
 * {
   box-sizing: border-box;
-  margin: 0;
+}
+
+.mainpage {
+  height: 100vh;
+  width: 100vw;
 }
 
 body, html {
@@ -56,6 +85,7 @@ body, html {
     #252849 40%,
     #1c1e3a 100%
     );
+  overflow: hidden;
 }
 
 hr {
@@ -99,6 +129,104 @@ option {
   color: black;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh;
+  margin-left: 290px;
+  margin-right: 290px;
+
+  .basestats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    img {
+      width: 313px;
+      height: 313px;
+    }
+  }
+
+  .extensivestats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin: 30px;
+    margin-top: -20px;
+    padding-bottom: 20px;
+
+    .extensiverow {
+      display: flex;
+      flex-direction: row;
+      margin-top: 10px;
+      padding-bottom: 10px;
+
+      .extensivebasic {
+        display: flex;
+        flex-direction: column;
+        background-color: #2E325C;
+        width: 200px;
+        height: 180px;
+        border-radius: 20px;
+        box-shadow: #0000001e 0px 5px 5px;
+        transition: 0.3s;
+        margin-right: 10px;
+
+        p {
+          font-size: 35px;
+          font-weight: 500;
+          margin-left: 20px;
+        }
+
+        h3, h5 {
+          margin-left: 20px;
+        }
+      }
+
+      .extensivechart {
+        background-color: #2E325C;
+        height: 180px;
+        width: 300px;
+        border-radius: 20px;
+        box-shadow: #0000001e 0px 5px 5px;
+        transition: 0.3s;
+        margin-right: 10px;
+
+        #big {
+          background-color: #2E325C;
+          height: 400px;
+          width: 820px;
+          border-radius: 20px;
+          box-shadow: #0000001e 0px 5px 5px;
+          transition: 0.3s;
+          margin-right: 10px;
+        }
+
+        #big:hover {
+          box-shadow: #0000001e 0px 10px 20px;
+          transition: 0.3s;
+        }
+      }
+
+      .extensivechart#hover {
+        box-shadow: #0000001e 0px 10px 20px;
+        transition: 0.3s;
+      }
+
+      .extensivebasic:hover {
+        box-shadow: #0000001e 0px 10px 20px;
+        transition: 0.3s;
+        width: 205px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
 input[type=number] {
   -moz-appearance: textfield;
   appearance: textfield;
@@ -110,6 +238,39 @@ input[type=number] {
   font-weight: 500;
   font-family: 'Roboto';
   margin: 2px;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #DADEEF;
+  border-radius: 10px;
+  width: 275px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.407);
+  color: #5975cf;
+  padding: 15px;
+  z-index: 99;
+}
+
+p#info {
+  display: none;
+}
+
+.info-tooltip {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  margin-top: 22px;
+  transition: 0.3s;
+  border-radius: 15px;
+  width: 22px;
+  opacity: 0.8;
+  z-index: 99;
+}
+
+.info-tooltip:hover {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.307);
+  opacity: 0.5;
+  transition: 0.3s;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -126,7 +287,7 @@ input[type=checkbox]#buffs {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
-  width: 100vh;
+  width: 100vw;
   overflow-x: hidden;
 }
 </style>

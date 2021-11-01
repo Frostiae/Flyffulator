@@ -1,3 +1,4 @@
+/* eslint-disable */
 const setsjson = [
    {
       "id": 30,

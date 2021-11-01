@@ -29,10 +29,12 @@ export default {
 }
 
 .sidepanel {
+  position: fixed;
   height: 100%;
   overflow-x: hidden;
   background-color: #1F2342;
   left: 0;
+  float: left;
   top: 0;
   border-radius: 0px 15px 15px 0px;
   min-width: 250px;
