@@ -40,15 +40,15 @@ export class Utils {
     }
 
 
-    updateJob(job) {
-        if (this.character.constructor.name != job) { 
-            this.character = JobFactory.createJob(job, 
-                            this.character.str, 
-                            this.character.sta, 
-                            this.character.dex, 
-                            this.character.int,
-                            this.character.level);
-            return true;
+    updateJob(character, job) {
+        if (character.constructor.name != job) { 
+            let c = JobFactory.createJob(job, 
+                            character.str, 
+                            character.sta, 
+                            character.dex, 
+                            character.int,
+                            character.level);
+            return c;
         }
 
         return false;

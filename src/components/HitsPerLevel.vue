@@ -31,7 +31,7 @@ export default {
   methods: {
     update() {
       this.monsters = this.$root.monsters
-      this.character = this.$root.character
+      this.character = this.$root.character.ref
       
       let hitreq = []
       let names = []
@@ -58,7 +58,7 @@ export default {
   data() {
     return {
       monsters: this.$root.monsters,
-      character: this.$root.character,
+      character: this.$root.character.ref,
       chartOptions: {
         chart: {
           offsetX: 0,
@@ -125,7 +125,11 @@ export default {
         tooltip: {
           shared: false,
           followCursor: true,
-          x: { }
+          x: {
+            formatter: (val) => {
+              return val
+            }
+          }
         },
         grid: {
           show: true,
@@ -165,7 +169,7 @@ export default {
       series: [
         {
           name: "Hits per level",
-          data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43],
+          data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43, 43, 43, 43, 43, 43, 43],
         },
       ],
     }

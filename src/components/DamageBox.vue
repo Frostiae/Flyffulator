@@ -13,7 +13,7 @@ export default {
   props: ['title', 'skillindex'],
   data() {
     return {
-      character: this.$root.character,
+      character: this.$root.character.ref,
       monsters: this.$root.monsters,
       skill: 'none',
       damage: 0,
@@ -27,14 +27,14 @@ export default {
     if (this.skillindex == -1) this.active = true 
   },
   watch: {
-    '$root.character.averageAA'() {
+    '$root.character.ref.averageAA'() {
       this.monsters = this.$root.monsters
-      this.character = this.$root.character
+      this.character = this.$root.character.ref
       this.getDamage()
     },
-    '$root.character.skillsDamage'() {
+    '$root.character.ref.skillsDamage'() {
       this.monsters = this.$root.monsters
-      this.character = this.$root.character
+      this.character = this.$root.character.ref
       this.getDamage()
     },
     '$root.monsters'() {
@@ -47,11 +47,12 @@ export default {
       if (focus) {
           this.monster = focus.name.en;
           
-          if (this.skillindex == -1) {
+          if (this.skillindex == -1 && this.character.averageAA) {
               this.damage = this.character.averageAA.toFixed(0);  
               this.ttk = this.character.ttkMonster(focus).auto.toFixed(0) + 's to kill a ' + this.monster + ' (approximate)';
           } else {
               this.skill = Object.keys(this.character.skillsDamage)[this.skillindex];
+              console.log(this.character.skillsDamage)
               if (this.skill) {
                   this.damage = this.character.skillsDamage[this.skill].toFixed(0) - 20;
               } else this.skill = "None"

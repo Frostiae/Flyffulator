@@ -34,43 +34,43 @@
         </span>
 
         <span class="value">
-          <button class="btn-plus" @click="character.level--">-</button>
-          <input class="charinput" type="number" v-model="character.level"/>
-          <button class="btn-plus" @click="character.level++">+</button>
+          <button class="btn-plus" @click="character.ref.level--">-</button>
+          <input class="charinput" type="number" v-model="character.ref.level"/>
+          <button class="btn-plus" @click="character.ref.level++">+</button>
         </span>
 
         <span class="value">
-          <button class="btn-plus" @click="character.str--">-</button>
-          <input class="charinput" type="number" v-model="character.str"/>
-          <button class="btn-plus" @click="character.str++">+</button>
+          <button class="btn-plus" @click="character.ref.str--">-</button>
+          <input class="charinput" type="number" v-model="character.ref.str"/>
+          <button class="btn-plus" @click="character.ref.str++">+</button>
         </span>
 
         <span class="value">
-          <button class="btn-plus" @click="character.sta--">-</button>
-          <input class="charinput" type="number" v-model="character.sta"/>
-          <button class="btn-plus" @click="character.sta++">+</button>
+          <button class="btn-plus" @click="character.ref.sta--">-</button>
+          <input class="charinput" type="number" v-model="character.ref.sta"/>
+          <button class="btn-plus" @click="character.ref.sta++">+</button>
         </span>
 
         <span class="value">
-          <button class="btn-plus" @click="character.dex--">-</button>
-          <input class="charinput" type="number" v-model="character.dex"/>
-          <button class="btn-plus" @click="character.dex++">+</button>
+          <button class="btn-plus" @click="character.ref.dex--">-</button>
+          <input class="charinput" type="number" v-model="character.ref.dex"/>
+          <button class="btn-plus" @click="character.ref.dex++">+</button>
         </span>
 
         <span class="value">
-          <button class="btn-plus" @click="character.int--">-</button>
-          <input class="charinput" type="number" v-model="character.int"/>
-          <button class="btn-plus" @click="character.int++">+</button>
+          <button class="btn-plus" @click="character.ref.int--">-</button>
+          <input class="charinput" type="number" v-model="character.ref.int"/>
+          <button class="btn-plus" @click="character.ref.int++">+</button>
         </span>
 
         <span class="value">
           <label for="buffs"></label>
-          <input id="buffs" type="checkbox" @change="character.applyAssistBuffs($event.target.checked)">
-          <input class="charinput" type="number" v-model="character.assistInt"/>
+          <input id="buffs" type="checkbox" @change="character.ref.applyAssistBuffs($event.target.checked)">
+          <input class="charinput" type="number" v-model="character.ref.assistInt"/>
           <h5 style="color: #7279AA;">int</h5>
         </span>
         
-        <p id="statpoints" v-cloak>{{ character.remainingPoints }}</p>
+        <p id="statpoints" v-cloak>{{ character.ref.remainingPoints }}</p>
       </div>
     </div>
   </div>

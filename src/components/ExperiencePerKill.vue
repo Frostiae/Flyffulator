@@ -11,7 +11,7 @@ export default {
   name: 'ExperiencePerKill',
   data() {
     return {
-      character: this.$root.character,
+      character: this.$root.character.ref,
       monsters: this.$root.monsters,
       title: 'Experience/Kill',
       reward: 0,
@@ -22,7 +22,7 @@ export default {
   watch: {
     '$root.monsters'() {
       this.monsters = this.$root.monsters
-      this.character = this.$root.character
+      this.character = this.$root.character.ref
       this.getBestExp()
     }
   },

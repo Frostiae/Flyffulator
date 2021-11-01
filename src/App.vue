@@ -6,14 +6,13 @@
     <leftbar/>
     
     <div class="content">
-
       <div class="basestats">
-        <img src="./assets/images/woodensword.png"/>
+        <img :src="getImageUrl(character.ref.weapon_img)"/>
         <top-stats/>
       </div>
 
       <div class="extensivestats">
-
+        
         <h3>Leveling</h3>
         <div class="extensiverow">
           <experience-per-kill/>
@@ -24,7 +23,7 @@
         <div class="extensiverow">
           <hits-per-level/>
         </div>
-
+        
         <h3>Damage</h3>
         <div class="extensiverow">
           <damage-box title="Average AA" skillindex=-1 />
@@ -54,6 +53,7 @@ import TopStats from './components/TopStats.vue'
 import Leftbar from './components/Leftbar.vue'
 import Rightbar from './components/Rightbar.vue'
 import { Utils } from './calc/utils.js'
+import { Billposter, Vagrant } from './calc/jobs'
 
 const utils = new Utils()
 
@@ -71,31 +71,34 @@ export default {
   },
   data() {
     return {
-      character: utils.character.update(),
+      character: {
+        ref: utils.character
+      },
       monsters: utils.getMonstersAtLevel(utils.character.level),
       skillIndex: null
     }
   },
   watch: {
-    'character.level'() {
+    'character.ref.level'() {
       this.updateCharacter()
     },
-    'character.str'() {
-      this.updateCharacter();
+    'character.ref.str'() {
+      this.updateCharacter()
     },
-    'character.sta'() {
-      this.updateCharacter();
+    'character.ref.sta'() {
+      this.updateCharacter()
     },
-    'character.dex'() {
-      this.updateCharacter();
+    'character.ref.dex'() {
+      this.updateCharacter()
     },
-    'character.int'() {
-      this.updateCharacter();
+    'character.ref.int'() {
+      this.updateCharacter()
     },
-    'character.assistInt'() {
-      this.updateCharacter();
+    'character.ref.assistInt'() {
+      this.updateCharacter()
     }
   },
+  created() { this.updateCharacter() },
   methods: {
     getExpReward(monster, level) {
       for (let value of monster.experienceTable) {
@@ -110,26 +113,33 @@ export default {
       }
     },
     updateJob(e) {
-      if (utils.updateJob(e.target.value)) {
-        this.character = utils.character.update();
-        this.updateCharacter();
+      let c = utils.updateJob(this.character.ref, e.target.value)
+      if (c) {
+        this.character.ref = c
+        this.updateCharacter()
       }
     },
     updateCharacter() {
-      validateInput(this.character)
-      this.character.update()
-      this.monsters = utils.getMonstersAtLevel(this.character.level, this.skillIndex)
+      validateInput(this.character.ref)
+      this.character.ref.update()
+
+      // Need to update the character in utils since that is what utils uses
+      utils.character = this.character.ref
+      this.monsters = utils.getMonstersAtLevel(this.character.ref.level, this.skillIndex)
     },
     updateMonsters(index) {
       this.skillIndex = index
+      console.log(this.character.ref.level)
       if (this.skillIndex == -1) {
-        this.monsters = utils.getMonstersAtLevel(this.character.level, null);
+        this.monsters = utils.getMonstersAtLevel(this.character.ref.level, null);
       } else {
-        this.monsters = utils.getMonstersAtLevel(this.character.level, this.skillIndex);
+        this.monsters = utils.getMonstersAtLevel(this.character.ref.level, this.skillIndex);
         this.skillIndex = this.skillIndex;
       }
-
-      monsters = this.monsters;
+    },
+    getImageUrl(img) {
+      var images = require.context('./assets/images/', false, /\.png$/)
+      return images('./' + img)
     }
   }
 }

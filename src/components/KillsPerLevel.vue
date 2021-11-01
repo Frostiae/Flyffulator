@@ -30,7 +30,7 @@ export default {
   methods: {
     update() {
       this.monsters = this.$root.monsters
-      this.character = this.$root.character
+      this.character = this.$root.character.ref
       let killreq = []
       let names = []
 
@@ -57,7 +57,7 @@ export default {
   data() {
     return {
       monsters: this.$root.monsters,
-      character: this.$root.character,
+      character: this.$root.character.ref,
       chartOptions: {
         chart: {
           offsetX: -21,

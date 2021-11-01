@@ -22,7 +22,12 @@ export default {
   name: 'Equipment',
   data() {
     return {
-      character: this.$root.character
+      character: this.$root.character.ref
+    }
+  },
+  watch: {
+    '$root.character.ref'() {
+      this.character = this.$root.character.ref
     }
   }
 }
