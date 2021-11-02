@@ -200,7 +200,7 @@ export class Assist extends Vagrant {
         weapon = weapon || Utils.getItemByName("Paipol Knuckle");
         constants = constants || {
             'weapon': 'knuckle',
-            'skills': [Utils.getSkillByName("Power First"), 
+            'skills': [Utils.getSkillByName("Power Fist"), 
                        Utils.getSkillByName("Temping Hole"), 
                        Utils.getSkillByName("Burst Crack")],
             'attackSpeed': 75.0,  // Might be 70

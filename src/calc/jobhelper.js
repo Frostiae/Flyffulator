@@ -147,8 +147,8 @@ export class Mover {
 
     ttkSkill(monster, index) {
         // Skills
-        if (this.constants.skills.length <= index) return;
-
+        if (!this.constants.skills[index]) return;
+        
         let damage = 1;
         damage = this.getDamageAgainst(monster, index);
         const hitsToKill = monster.hp / damage;
@@ -156,7 +156,6 @@ export class Mover {
         const frames = 55;
         const hitsPerSec = (30 / frames) * (this.DCT / 100);
         
-        console.log(this.constants.skills[index].name.en, hitsPerSec, damage)
         // Cooldown only matters if we need to hit more than once
         if (hitsToKill > 1) {
             const cooldown = this.constants.skills[index].levels.slice(-1)[0].cooldown;
@@ -182,7 +181,6 @@ export class Mover {
     getDamageAgainst(opponent, index=null) {
         // TODO: Incorporate elements from skills
         var factor = 1.0;
-        if (index && index != -1 && this.constants.skills[index] && this.constants.skills[index].name.en == "Spirit Bomb") factor = 1.5;
         
         var delta = opponent.level - this.level;
         if (delta > 0) {
@@ -216,7 +214,7 @@ export class Mover {
 
     damageMultiplier(skill=null) {
         let factor = 1.0;
-        const elementalBonus = {
+        let elementalBonus = {
             fire: this.armorParam('firemastery') + this.weaponParam('firemastery') + this.buffParam('firemastery'),
             earth: this.armorParam('earthmastery') + this.weaponParam('earthmastery') + this.buffParam('earthmastery'),
             water: this.armorParam('watermastery') + this.weaponParam('watermastery') + this.buffParam('watermastery'),
@@ -224,14 +222,16 @@ export class Mover {
             elec: this.armorParam('electricitymastery') + this.weaponParam('electricitymastery') + this.buffParam('electricitymastery'),
         };
 
+        // Specific skill multipliers
         if (skill) {
             switch (skill.name.en) {
                 case "Spirit Bomb":
-                    factor += 0.5;
+                    factor += 1.25;
                     break;
             }
         }
 
+        // Element multipliers
         if (skill && skill.element) {
             switch (skill.element) {
                 case "fire":
