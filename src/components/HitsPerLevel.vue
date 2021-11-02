@@ -23,12 +23,21 @@ export default {
       apexchart: VueApexCharts,
   },
   watch: {
-    '$root.monsters'() {
-      this.update()
-    }
+    '$root.monsters'() { this.update() },
+    '$root.darkMode'() { this.updateTheme() }
   },
   created() { this.update() },
   methods: {
+    updateTheme() {
+      let opts = {... this.chartOptions}
+      opts.title.style.color = this.$root.hcolor
+      // opts.yaxis is undefined when you change the theme back twice? why...?
+      // opts.yaxis.labels.style.colors = this.$root.hcolor
+      opts.xaxis.labels.style.colors = this.$root.hcolor
+      console.log(opts)
+      opts.grid.borderColor = this.$root.mainbg
+      this.chartOptions = opts
+    },
     update() {
       this.monsters = this.$root.monsters
       this.character = this.$root.character.ref
@@ -122,7 +131,7 @@ export default {
             fontSize:  '21px',
             fontWeight:  '500',
             fontFamily:  "Roboto",
-            color:  '#7279AA'
+            color:  '#F2F2F2'
           }
         },
         tooltip: {
@@ -136,7 +145,8 @@ export default {
         },
         grid: {
           show: true,
-          borderColor: '#1F2342'
+          borderColor: this.$root.mainbg,
+          opacity: 0.5
         },
         dataLabels: {
           enabled: true
@@ -149,7 +159,7 @@ export default {
             },
             show: true,
             style: {
-              colors: '#7279AA'
+              colors: '#F2F2F2'
             }
           },
           axisTicks: {
@@ -164,7 +174,7 @@ export default {
           labels: {
             show: true,
             style: {
-              colors: '#7279AA'
+              colors: '#F2F2F2'
             }
           }
         },

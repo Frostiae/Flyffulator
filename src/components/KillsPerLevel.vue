@@ -24,10 +24,18 @@ export default {
   watch: {
     '$root.monsters'() {
       this.update()
+    },
+    '$root.darkMode'() {
+      this.updateTheme()
     }
   },
   created() { this.update() },
   methods: {
+    updateTheme() {
+      let opts = {... this.chartOptions}
+      opts.title.style.color = this.$root.hcolor
+      this.chartOptions = opts
+    },
     update() {
       this.monsters = this.$root.monsters
       this.character = this.$root.character.ref
@@ -115,7 +123,7 @@ export default {
             fontSize:  '21px',
             fontWeight:  '500',
             fontFamily:  "Roboto",
-            color:  '#7279AA'
+            color:  this.$root.hcolor
           }
         },
         tooltip: {

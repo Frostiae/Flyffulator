@@ -20,20 +20,20 @@ export default {
   },
   created() { this.update() },
   watch: {
-    '$root.character.ref.str'() {
-      this.update()
-    },
-    '$root.character.ref.sta'() {
-      this.update()
-    },
-    '$root.character.ref.dex'() {
-      this.update()
-    },
-    '$root.character.ref.int'() {
-      this.update()
-    }
+    '$root.character.ref.str'() { this.update() },
+    '$root.character.ref.sta'() { this.update() },
+    '$root.character.ref.dex'() { this.update() },
+    '$root.character.ref.int'() { this.update() },
+    '$root.darkMode'() { this.updateTheme() }
   },
   methods: {
+    updateTheme() {
+      let opts = {... this.chartOptions}
+      opts.plotOptions.radar.polygons.strokeColors = this.$root.hcolor + '60'
+      opts.plotOptions.radar.polygons.connectorColors = this.$root.hcolor + '60'
+      opts.xaxis.labels.style.colors = [this.$root.hcolor, this.$root.hcolor, this.$root.hcolor, this.$root.hcolor, this.$root.hcolor, this.$root.hcolor] 
+      this.chartOptions = opts
+    },
     update() {
       this.character = this.$root.character.ref
 
@@ -72,9 +72,9 @@ export default {
           radar: {
             size: 115,
             polygons: {
-              strokeColors: '#7279AA',
+              strokeColors: this.$root.hcolor + '60',
               strokeWidth: 0.5,
-              connectorColors: '#7279AA'
+              connectorColors: this.$root.hcolor + '60'
             }
           }
         },
@@ -103,7 +103,7 @@ export default {
           labels: {
             show: true,
             style: {
-              colors: ['#7279AA', '#7279AA', '#7279AA', '#7279AA', '#7279AA', '#7279AA'],
+              colors: [this.$root.hcolor, this.$root.hcolor, this.$root.hcolor, this.$root.hcolor, this.$root.hcolor, this.$root.hcolor],
               fontFamily: 'Roboto',
               fontSize: '12px',
               fontWeight: '700'

@@ -71,6 +71,12 @@ export default {
   },
   data() {
     return {
+      darkMode: true,
+      componentbg: '#262626',
+      sidepanelbg: '#1d1d1d',
+      hcolor: '#F2F2F2',
+      pcolor: '#A67041',
+      mainbg: 'radial-gradient(ellipse at top left, #1b1b1b 40%, #292929) 100%)',
       character: {
         ref: utils.character
       },
@@ -79,6 +85,22 @@ export default {
     }
   },
   watch: {
+    darkMode() {
+      console.log(this.darkMode)
+      if (this.darkMode) {
+          this.componentbg = '#262626'
+          this.sidepanelbg = '#1d1d1d'
+          this.hcolor = '#F2F2F2'
+          this.pcolor = '#A67041'
+          this.mainbg = '#1b1b1b'
+      } else {
+          this.componentbg = '#2e325c'
+          this.sidepanelbg = '#1f2342'
+          this.hcolor = '#7279aa'
+          this.pcolor = '#dadeef'
+          this.mainbg = '#252849'
+      }
+    },
     'character.ref.level'() {
       this.updateCharacter()
     },
@@ -162,20 +184,31 @@ function validateInput(character) {
 .mainpage {
   height: 100vh;
   width: 100vw;
+  background-color: v-bind(mainbg);
+  transition: 0.3s;
+}
+
+.stats {
+  background-color: v-bind(componentbg);
+  transition: 0.3s
+}
+
+.sidepanel {
+  background-color: v-bind(sidepanelbg);
+}
+
+.rightpanel {
+  background-color: v-bind(sidepanelbg);
 }
 
 body, html {
-  background:
-    radial-gradient(
-    ellipse at top left,
-    #252849 40%,
-    #1c1e3a 100%
-    );
   overflow: hidden;
+  background: radial-gradient(ellipse at top left, #1b1b1b 40%, #292929) 100%;
+  margin: 0;
 }
 
 a {
-  color: #DADEEF;
+  color: #008ffb;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -191,19 +224,22 @@ a:hover {
 }
 
 hr {
-  border-color: #7279AA;
+  border-color: #F2F2F2;
+  opacity: 0.5;
   margin: 8px;
 }
 
 p {
-  color: #DADEEF;
+  color: v-bind(pcolor);
   margin: 3px;
+  transition: 0.3s;
 }
 
 h1, h2, h3, h4, h5 {
-  color: #7279AA;
+  color: v-bind(hcolor);
   font-weight: 500;
   margin-bottom: 8px;
+  transition: 0.3s;
 }
 
 h5 {
@@ -212,7 +248,8 @@ h5 {
 
 ul {
   font-size: 13px;
-  color: #7279AA;
+  color: v-bind(hcolor);
+  transition: 0.3s;
   font-weight: 500;
 }
 
@@ -271,7 +308,7 @@ option {
       .extensivebasic {
         display: flex;
         flex-direction: column;
-        background-color: #2E325C;
+        background-color: v-bind(componentbg);
         width: 200px;
         height: 180px;
         border-radius: 20px;
@@ -291,7 +328,7 @@ option {
       }
 
       .extensivechart {
-        background-color: #2E325C;
+        background-color: v-bind(componentbg);
         height: 180px;
         width: 300px;
         border-radius: 20px;
@@ -301,7 +338,7 @@ option {
       }
 
       .extensivechart#big {
-        background-color: #2E325C;
+        background-color: v-bind(componentbg);
         height: 400px;
         width: 820px;
         border-radius: 20px;

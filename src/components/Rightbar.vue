@@ -51,12 +51,12 @@ export default {
   position: fixed;
   height: 100%;
   overflow-x: hidden;
-  background-color: #1F2342;
   right: 0;
   top: 0;
   border-radius: 15px 0px 0px 15px;
   width: 290px;
   text-align: center;
   font-weight: 500;
+  transition: 0.3s;
 }
 </style>
