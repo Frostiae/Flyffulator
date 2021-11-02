@@ -4,8 +4,6 @@
             <character/>
             <equipment/>
             <changelog/>
-
-            <div><img src="../assets/images/Icons/Items/genmatsupguru.png" @click="toggleTheme"></div>
         </div>
     </div>
 </template>
@@ -21,11 +19,6 @@ export default {
       Character,
       Equipment,
       Changelog
-  },
-  methods: {
-    toggleTheme() {
-      this.$root.darkMode = !this.$root.darkMode
-    }
   }
 }
 </script>
@@ -109,7 +102,6 @@ export default {
   }
 
   .btn-plus {
-    color: #7279AA;
     font-weight: bolder;
     font-size: 13px;
     background: none;

@@ -4,6 +4,8 @@
       <h5>info</h5>
     </div>
     <leftbar/>
+
+    <div class="themetoggle"><img :src="getIconUrl(themeImage)" @click="toggleTheme"></div>
     
     <div class="content">
       <div class="basestats">
@@ -72,11 +74,14 @@ export default {
   data() {
     return {
       darkMode: true,
+      themeImage: 'sunstone.png',
       componentbg: '#262626',
       sidepanelbg: '#1d1d1d',
       hcolor: '#F2F2F2',
       pcolor: '#A67041',
       mainbg: 'radial-gradient(ellipse at top left, #1b1b1b 40%, #292929) 100%)',
+      mainbg1: '#1b1b1b',
+      mainbg2: '#292929',
       character: {
         ref: utils.character
       },
@@ -92,36 +97,30 @@ export default {
           this.sidepanelbg = '#1d1d1d'
           this.hcolor = '#F2F2F2'
           this.pcolor = '#A67041'
-          this.mainbg = '#1b1b1b'
+          this.mainbg1 = '#1b1b1b'
+          this.mainbg2 = '#292929'
       } else {
           this.componentbg = '#2e325c'
           this.sidepanelbg = '#1f2342'
           this.hcolor = '#7279aa'
           this.pcolor = '#dadeef'
-          this.mainbg = '#252849'
+          this.mainbg1 = '#252849'
+          this.mainbg2 = '#1c1e3a'
       }
     },
-    'character.ref.level'() {
-      this.updateCharacter()
-    },
-    'character.ref.str'() {
-      this.updateCharacter()
-    },
-    'character.ref.sta'() {
-      this.updateCharacter()
-    },
-    'character.ref.dex'() {
-      this.updateCharacter()
-    },
-    'character.ref.int'() {
-      this.updateCharacter()
-    },
-    'character.ref.assistInt'() {
-      this.updateCharacter()
-    }
+    'character.ref.level'() { this.updateCharacter() },
+    'character.ref.str'() { this.updateCharacter() },
+    'character.ref.sta'() { this.updateCharacter() },
+    'character.ref.dex'() { this.updateCharacter() },
+    'character.ref.int'() { this.updateCharacter() },
+    'character.ref.assistInt'() { this.updateCharacter() }
   },
   created() { this.updateCharacter() },
   methods: {
+    toggleTheme() {
+      this.darkMode = !this.darkMode
+      this.themeImage = this.darkMode ? 'sunstone.png' : 'moonstone.png'
+    },
     getExpReward(monster, level) {
       for (let value of monster.experienceTable) {
         if (value == monster.experience) {
@@ -161,6 +160,10 @@ export default {
     getImageUrl(img) {
       var images = require.context('./assets/images/', false, /\.png$/)
       return images('./' + img)
+    },
+    getIconUrl(img) {
+      var images = require.context('./assets/images/Icons/Items', false, /\.png$/)
+      return images('./' + img)
     }
   }
 }
@@ -181,10 +184,27 @@ function validateInput(character) {
   box-sizing: border-box;
 }
 
+.themetoggle {
+  position: fixed;
+  margin-top: 20px;
+  margin-left: 350px;
+  transition: 0.3s;
+  border-radius: 20px;
+  box-shadow: #0000001e 0px 0px 0px;
+  padding: 5px;
+}
+
+.themetoggle:hover {
+  cursor: pointer;
+  background-color: #70707020;
+  box-shadow: #0000001e 0px 5px 20px;
+  border-radius: 35px;
+}
+
 .mainpage {
   height: 100vh;
   width: 100vw;
-  background-color: v-bind(mainbg);
+  background: radial-gradient(ellipse at top left, v-bind(mainbg1) 40%, v-bind(mainbg2) 100%);
   transition: 0.3s;
 }
 
@@ -201,9 +221,12 @@ function validateInput(character) {
   background-color: v-bind(sidepanelbg);
 }
 
+.btn-plus {
+  color: v-bind(pcolor);
+}
+
 body, html {
   overflow: hidden;
-  background: radial-gradient(ellipse at top left, #1b1b1b 40%, #292929) 100%;
   margin: 0;
 }
 
