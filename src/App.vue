@@ -464,9 +464,9 @@ input[type=checkbox]#buffs {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #1F2342;
+  background-color: v-bind(sidepanelbg);
   border-radius: 15px;
-  border: 3px solid #252849;
+  border: 3px solid v-bind(componentbg);
   margin: 10px;
 }
 </style>
