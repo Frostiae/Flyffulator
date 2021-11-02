@@ -4,6 +4,8 @@
       <h5>info</h5>
     </div>
     <leftbar/>
+
+    <div class="themetoggle"><img :src="getIconUrl(themeImage)" @click="toggleTheme"></div>
     
     <div class="content">
       <div class="basestats">
@@ -71,6 +73,15 @@ export default {
   },
   data() {
     return {
+      darkMode: true,
+      themeImage: 'sunstone.png',
+      componentbg: '#262626',
+      sidepanelbg: '#1d1d1d',
+      hcolor: '#F2F2F2',
+      pcolor: '#A67041',
+      mainbg: 'radial-gradient(ellipse at top left, #1b1b1b 40%, #292929) 100%)',
+      mainbg1: '#1b1b1b',
+      mainbg2: '#292929',
       character: {
         ref: utils.character
       },
@@ -79,27 +90,37 @@ export default {
     }
   },
   watch: {
-    'character.ref.level'() {
-      this.updateCharacter()
+    darkMode() {
+      console.log(this.darkMode)
+      if (this.darkMode) {
+          this.componentbg = '#262626'
+          this.sidepanelbg = '#1d1d1d'
+          this.hcolor = '#F2F2F2'
+          this.pcolor = '#A67041'
+          this.mainbg1 = '#1b1b1b'
+          this.mainbg2 = '#292929'
+      } else {
+          this.componentbg = '#2e325c'
+          this.sidepanelbg = '#1f2342'
+          this.hcolor = '#7279aa'
+          this.pcolor = '#dadeef'
+          this.mainbg1 = '#252849'
+          this.mainbg2 = '#1c1e3a'
+      }
     },
-    'character.ref.str'() {
-      this.updateCharacter()
-    },
-    'character.ref.sta'() {
-      this.updateCharacter()
-    },
-    'character.ref.dex'() {
-      this.updateCharacter()
-    },
-    'character.ref.int'() {
-      this.updateCharacter()
-    },
-    'character.ref.assistInt'() {
-      this.updateCharacter()
-    }
+    'character.ref.level'() { this.updateCharacter() },
+    'character.ref.str'() { this.updateCharacter() },
+    'character.ref.sta'() { this.updateCharacter() },
+    'character.ref.dex'() { this.updateCharacter() },
+    'character.ref.int'() { this.updateCharacter() },
+    'character.ref.assistInt'() { this.updateCharacter() }
   },
   created() { this.updateCharacter() },
   methods: {
+    toggleTheme() {
+      this.darkMode = !this.darkMode
+      this.themeImage = this.darkMode ? 'sunstone.png' : 'moonstone.png'
+    },
     getExpReward(monster, level) {
       for (let value of monster.experienceTable) {
         if (value == monster.experience) {
@@ -139,6 +160,10 @@ export default {
     getImageUrl(img) {
       var images = require.context('./assets/images/', false, /\.png$/)
       return images('./' + img)
+    },
+    getIconUrl(img) {
+      var images = require.context('./assets/images/Icons/Items', false, /\.png$/)
+      return images('./' + img)
     }
   }
 }
@@ -159,23 +184,54 @@ function validateInput(character) {
   box-sizing: border-box;
 }
 
+.themetoggle {
+  position: fixed;
+  margin-top: 20px;
+  margin-left: 350px;
+  transition: 0.3s;
+  border-radius: 20px;
+  box-shadow: #0000001e 0px 0px 0px;
+  padding: 5px;
+}
+
+.themetoggle:hover {
+  cursor: pointer;
+  background-color: #70707020;
+  box-shadow: #0000001e 0px 5px 20px;
+  border-radius: 35px;
+}
+
 .mainpage {
   height: 100vh;
   width: 100vw;
+  background: radial-gradient(ellipse at top left, v-bind(mainbg1) 40%, v-bind(mainbg2) 100%);
+  transition: 0.3s;
+}
+
+.stats {
+  background-color: v-bind(componentbg);
+  transition: 0.3s
+}
+
+.sidepanel {
+  background-color: v-bind(sidepanelbg);
+}
+
+.rightpanel {
+  background-color: v-bind(sidepanelbg);
+}
+
+.btn-plus {
+  color: v-bind(pcolor);
 }
 
 body, html {
-  background:
-    radial-gradient(
-    ellipse at top left,
-    #252849 40%,
-    #1c1e3a 100%
-    );
   overflow: hidden;
+  margin: 0;
 }
 
 a {
-  color: #DADEEF;
+  color: #008ffb;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -191,19 +247,22 @@ a:hover {
 }
 
 hr {
-  border-color: #7279AA;
+  border-color: #F2F2F2;
+  opacity: 0.5;
   margin: 8px;
 }
 
 p {
-  color: #DADEEF;
+  color: v-bind(pcolor);
   margin: 3px;
+  transition: 0.3s;
 }
 
 h1, h2, h3, h4, h5 {
-  color: #7279AA;
+  color: v-bind(hcolor);
   font-weight: 500;
   margin-bottom: 8px;
+  transition: 0.3s;
 }
 
 h5 {
@@ -212,7 +271,8 @@ h5 {
 
 ul {
   font-size: 13px;
-  color: #7279AA;
+  color: v-bind(hcolor);
+  transition: 0.3s;
   font-weight: 500;
 }
 
@@ -271,7 +331,7 @@ option {
       .extensivebasic {
         display: flex;
         flex-direction: column;
-        background-color: #2E325C;
+        background-color: v-bind(componentbg);
         width: 200px;
         height: 180px;
         border-radius: 20px;
@@ -291,7 +351,7 @@ option {
       }
 
       .extensivechart {
-        background-color: #2E325C;
+        background-color: v-bind(componentbg);
         height: 180px;
         width: 300px;
         border-radius: 20px;
@@ -301,7 +361,7 @@ option {
       }
 
       .extensivechart#big {
-        background-color: #2E325C;
+        background-color: v-bind(componentbg);
         height: 400px;
         width: 820px;
         border-radius: 20px;

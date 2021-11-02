@@ -19,7 +19,7 @@ export default {
       Character,
       Equipment,
       Changelog
-  },
+  }
 }
 </script>
 
@@ -32,7 +32,6 @@ export default {
   position: fixed;
   height: 100%;
   overflow-x: hidden;
-  background-color: #1F2342;
   left: 0;
   float: left;
   top: 0;
@@ -40,6 +39,7 @@ export default {
   width: 330px;
   overflow-y: auto;
   z-index: 1;
+  transition: 0.3s;
 
   .char {
     margin-bottom: 18px;
@@ -48,7 +48,6 @@ export default {
   .stats {
     display: flex;
     flex-direction: row;
-    background-color: #2E325C;
     border-radius: 15px;
     width: 100%;
     min-height: 20px;
@@ -103,7 +102,6 @@ export default {
   }
 
   .btn-plus {
-    color: #7279AA;
     font-weight: bolder;
     font-size: 13px;
     background: none;

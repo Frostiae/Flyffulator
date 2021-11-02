@@ -67,7 +67,7 @@
           <label for="buffs"></label>
           <input id="buffs" type="checkbox" @change="character.ref.applyAssistBuffs($event.target.checked)">
           <input class="charinput" type="number" v-model="character.ref.assistInt"/>
-          <h5 style="color: #7279AA;">int</h5>
+          <h5>int</h5>
         </span>
         
         <p id="statpoints" v-cloak>{{ character.ref.remainingPoints }}</p>
