@@ -27,11 +27,6 @@ export default {
     if (this.skillindex == -1) this.active = true 
   },
   watch: {
-    '$root.character.ref.averageAA'() {
-      this.monsters = this.$root.monsters
-      this.character = this.$root.character.ref
-      this.getDamage()
-    },
     '$root.character.ref.skillsDamage'() {
       this.monsters = this.$root.monsters
       this.character = this.$root.character.ref
@@ -46,18 +41,24 @@ export default {
       let focus = this.monsters.find(monster => monster.level >= this.character.level);
       if (focus) {
           this.monster = focus.name.en;
+          const ttk = this.character.ttkMonster(focus)
           
           if (this.skillindex == -1 && this.character.averageAA) {
               this.damage = this.character.averageAA.toFixed(0);  
-              this.ttk = this.character.ttkMonster(focus).auto.toFixed(0) + 's to kill a ' + this.monster + ' (approximate)';
+              this.ttk = ttk.auto.toFixed(0) + 's to kill a ' + this.monster + ' (approximate)';
           } else {
               this.skill = Object.keys(this.character.skillsDamage)[this.skillindex];
               if (this.skill) {
-                  this.damage = this.character.skillsDamage[this.skill].toFixed(0) - 20;
-              } else this.skill = "None"
+                  this.damage = this.character.skillsDamage[this.skill].toFixed(0) - 20;  // - 20 is because of training dummy defense
+              } else {
+                this.skill = "None"
+                this.damage = "N/A"
+              }
 
-              // TODO: change this to react to the return value of character.ttkMonster
               this.ttk = "ttk: N/A"
+              if (this.skillindex == 0 && ttk.skill1) this.ttk = ttk.skill1.toFixed(0) + 's to kill a ' + this.monster + ' (approximate)';
+              if (this.skillindex == 1 && ttk.skill2) this.ttk = ttk.skill2.toFixed(0) + 's to kill a ' + this.monster + ' (approximate)';
+              if (this.skillindex == 2 && ttk.skill3) this.ttk = ttk.skill3.toFixed(0) + 's to kill a ' + this.monster + ' (approximate)';
           }
       }
     },

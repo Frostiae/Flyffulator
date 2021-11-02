@@ -134,11 +134,36 @@ export class Mover {
         if (!monster) return 0;
         let res = {};
         const auto = this.ttkAuto(monster);
-        res.auto = auto;    // Auto attack
+        const skill1 = this.ttkSkill(monster, 0);
+        const skill2 = this.ttkSkill(monster, 1);
+        const skill3 = this.ttkSkill(monster, 2);
+        res.auto = auto;        // Auto attack
+        res.skill1 = skill1;
+        res.skill2 = skill2;
+        res.skill3 = skill3;
         
         return res;
     }
 
+    ttkSkill(monster, index) {
+        // Skills
+        if (!this.constants.skills[index]) return;
+        
+        let damage = 1;
+        damage = this.getDamageAgainst(monster, index);
+        const hitsToKill = monster.hp / damage;
+
+        const frames = 55;
+        const hitsPerSec = (30 / frames) * (this.DCT / 100);
+        
+        // Cooldown only matters if we need to hit more than once
+        if (hitsToKill > 1) {
+            const cooldown = this.constants.skills[index].levels.slice(-1)[0].cooldown;
+            if (cooldown) return (hitsToKill / hitsPerSec) + (cooldown * hitsToKill); 
+        }
+
+        return (hitsToKill / hitsPerSec)
+    }
 
     ttkAuto(monster) {
         // Auto attack
@@ -156,7 +181,6 @@ export class Mover {
     getDamageAgainst(opponent, index=null) {
         // TODO: Incorporate elements from skills
         var factor = 1.0;
-        if (index && index != -1 && this.constants.skills[index] && this.constants.skills[index].name.en == "Spirit Bomb") factor = 1.5;
         
         var delta = opponent.level - this.level;
         if (delta > 0) {
@@ -190,11 +214,40 @@ export class Mover {
 
     damageMultiplier(skill=null) {
         let factor = 1.0;
+        let elementalBonus = {
+            fire: this.armorParam('firemastery') + this.weaponParam('firemastery') + this.buffParam('firemastery'),
+            earth: this.armorParam('earthmastery') + this.weaponParam('earthmastery') + this.buffParam('earthmastery'),
+            water: this.armorParam('watermastery') + this.weaponParam('watermastery') + this.buffParam('watermastery'),
+            wind: this.armorParam('windmastery') + this.weaponParam('windmastery') + this.buffParam('windmastery'),
+            elec: this.armorParam('electricitymastery') + this.weaponParam('electricitymastery') + this.buffParam('electricitymastery'),
+        };
 
+        // Specific skill multipliers
         if (skill) {
             switch (skill.name.en) {
                 case "Spirit Bomb":
-                    factor = 1.5;
+                    factor += 1.25;
+                    break;
+            }
+        }
+
+        // Element multipliers
+        if (skill && skill.element) {
+            switch (skill.element) {
+                case "fire":
+                    factor += (elementalBonus.fire / 100);
+                    break;
+                case "earth":
+                    factor += (elementalBonus.earth / 100);
+                    break;
+                case "water":
+                    factor += (elementalBonus.water / 100);
+                    break;
+                case "wind":
+                    factor += (elementalBonus.wind / 100);
+                    break;
+                case "electricity":
+                    factor += (elementalBonus.elec / 100);
                     break;
             }
         }
