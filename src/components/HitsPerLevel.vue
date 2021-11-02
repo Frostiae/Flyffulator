@@ -34,7 +34,6 @@ export default {
       // opts.yaxis is undefined when you change the theme back twice? why...?
       // opts.yaxis.labels.style.colors = this.$root.hcolor
       opts.xaxis.labels.style.colors = this.$root.hcolor
-      console.log(opts)
       opts.grid.borderColor = this.$root.mainbg
       this.chartOptions = opts
     },

@@ -91,7 +91,6 @@ export default {
   },
   watch: {
     darkMode() {
-      console.log(this.darkMode)
       if (this.darkMode) {
           this.componentbg = '#262626'
           this.sidepanelbg = '#1d1d1d'

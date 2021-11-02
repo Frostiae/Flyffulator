@@ -2,7 +2,7 @@
   <div class="char">
     <h3>Changelog</h3>
     <div class="stats" id="changelog">
-      <h5>Novermber 1</h5>
+      <h5>November 1</h5>
       <ul>
         <li>Converted the front-end entirely to Vue3.</li>
         <li>Added a dark theme toggle at the top of the page.</li>
