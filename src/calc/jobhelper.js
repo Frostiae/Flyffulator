@@ -134,11 +134,37 @@ export class Mover {
         if (!monster) return 0;
         let res = {};
         const auto = this.ttkAuto(monster);
-        res.auto = auto;    // Auto attack
+        const skill1 = this.ttkSkill(monster, 0);
+        const skill2 = this.ttkSkill(monster, 1);
+        const skill3 = this.ttkSkill(monster, 2);
+        res.auto = auto;        // Auto attack
+        res.skill1 = skill1;
+        res.skill2 = skill2;
+        res.skill3 = skill3;
         
         return res;
     }
 
+    ttkSkill(monster, index) {
+        // Skills
+        if (this.constants.skills.length <= index) return;
+
+        let damage = 1;
+        damage = this.getDamageAgainst(monster, index);
+        const hitsToKill = monster.hp / damage;
+
+        const frames = 55;
+        const hitsPerSec = (30 / frames) * (this.DCT / 100);
+        
+        console.log(this.constants.skills[index].name.en, hitsPerSec, damage)
+        // Cooldown only matters if we need to hit more than once
+        if (hitsToKill > 1) {
+            const cooldown = this.constants.skills[index].levels.slice(-1)[0].cooldown;
+            if (cooldown) return (hitsToKill / hitsPerSec) + (cooldown * hitsToKill); 
+        }
+
+        return (hitsToKill / hitsPerSec)
+    }
 
     ttkAuto(monster) {
         // Auto attack
