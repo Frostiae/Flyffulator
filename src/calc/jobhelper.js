@@ -190,11 +190,38 @@ export class Mover {
 
     damageMultiplier(skill=null) {
         let factor = 1.0;
+        const elementalBonus = {
+            fire: this.armorParam('firemastery') + this.weaponParam('firemastery') + this.buffParam('firemastery'),
+            earth: this.armorParam('earthmastery') + this.weaponParam('earthmastery') + this.buffParam('earthmastery'),
+            water: this.armorParam('watermastery') + this.weaponParam('watermastery') + this.buffParam('watermastery'),
+            wind: this.armorParam('windmastery') + this.weaponParam('windmastery') + this.buffParam('windmastery'),
+            elec: this.armorParam('electricitymastery') + this.weaponParam('electricitymastery') + this.buffParam('electricitymastery'),
+        };
 
         if (skill) {
             switch (skill.name.en) {
                 case "Spirit Bomb":
-                    factor = 1.5;
+                    factor += 0.5;
+                    break;
+            }
+        }
+
+        if (skill && skill.element) {
+            switch (skill.element) {
+                case "fire":
+                    factor += (elementalBonus.fire / 100);
+                    break;
+                case "earth":
+                    factor += (elementalBonus.earth / 100);
+                    break;
+                case "water":
+                    factor += (elementalBonus.water / 100);
+                    break;
+                case "wind":
+                    factor += (elementalBonus.wind / 100);
+                    break;
+                case "electricity":
+                    factor += (elementalBonus.elec / 100);
                     break;
             }
         }
