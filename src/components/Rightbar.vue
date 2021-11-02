@@ -9,6 +9,8 @@
       <p v-cloak>{{ character.ref.fp || "N/A" }}</p>
       <h5>Speed</h5>
       <p>100%</p>
+      <h5>Casting Speed</h5>
+      <p v-cloak>{{ character.ref.DCT }}%</p>
       <hr>
       <h5>Attack</h5>
       <p v-cloak>{{ character.ref.attack.toFixed(0) || "N/A" }}</p>

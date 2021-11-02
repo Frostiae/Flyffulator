@@ -107,6 +107,13 @@ export class Vagrant extends Mover {
         return chance > 100 ? 100 : chance;
     }
 
+    get DCT() {
+        let dct = 100;  // Starts out as 100%
+        dct += this.armorParam('decreasedcastingtime');
+        dct += this.weaponParam('decreasedcastingtime');
+        return dct;
+    }
+
     get attack() {
         let pnMin = 3 * 2;
         let pnMax = 4 * 2;
@@ -401,7 +408,7 @@ export class Jester extends Acrobat {
         constants = constants || {
             'weapon': 'yoyo',
             'skills': [Utils.getSkillByName("Sneak Stab"), 
-                       Utils.getSkillByName("Vital Stab"), 
+                       Utils.getSkillByName("Vital stab"), 
                        Utils.getSkillByName("Hit of Penya")],
             'attackSpeed': 85.0,
             'hps': 2,
@@ -558,7 +565,7 @@ export class Psykeeper extends Magician {
         weapon = weapon || Utils.getItemByName("Legendary Golden Wand");
         constants = constants || {
             'weapon': 'wand',
-            'skills': [Utils.getSkillByName("Demonology"), 
+            'skills': [Utils.getSkillByName("Psychic Bomb"), 
                        Utils.getSkillByName("Spirit Bomb"), 
                        Utils.getSkillByName("Psychic Square")],
             'attackSpeed': 70.0,
