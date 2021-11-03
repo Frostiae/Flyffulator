@@ -1,10 +1,12 @@
 /* eslint-disable */
-const skillsjson = [
+export const skillsjson = [
    {
       "id": 39,
       "name": {
          "en": "Holyguard",
          "ar": "Holyguard",
+         "br": "Guarda Sagrada",
+         "cns": "\u5723\u529b\u969c\u58c1",
          "de": "Holy Guard",
          "fi": "Holyguard",
          "fil": "Holyguard",
@@ -12,23 +14,27 @@ const skillsjson = [
          "it": "Holyguard",
          "kr": "\ud640\ub9ac\uac00\ub4dc",
          "nl": "Holyguard",
-         "pl": "Holyguard",
+         "pl": "\u015awi\u0119ta Os\u0142ona",
          "ru": "\u0421\u0432\u0435\u0442\u043b\u044b\u0439 \u0445\u0440\u0430\u043d\u0438\u0442\u0435\u043b\u044c",
-         "sw": "Holyguard"
+         "sw": "Holyguard",
+         "th": "Holyguard"
       },
       "description": {
          "en": "Protects the target from incoming critical hits for a limited amount of time.",
          "ar": "Protects the target from incoming critical hits for a limited amount of time.",
+         "br": "Concede prote\u00e7\u00e3o m\u00e1xima contra ataques cr\u00edticos por um per\u00edodo limitado de tempo.",
+         "cns": "\u6682\u65f6\u63d0\u9ad8\u65bd\u6cd5\u5bf9\u8c61\u7684\u56de\u907f\u66b4\u51fb\u7684\u80fd\u529b\u3002",
          "de": "Erh\u00f6ht den Magiewiderstand des angew\u00e4hlten Spielers.",
          "fi": "Suojaa kohdetta tulevilta kriittisilt\u00e4 osumilta rajoitetun ajan.",
          "fil": "Protects the target from incoming critical hits for a limited amount of time.",
-         "fr": "Augmente la r\u00e9sistance \u00e0 la magie de la cible",
+         "fr": "Emp\u00eache la cible de recevoir des coups critiques pendant un certain temps.",
          "it": "Protects the target from incoming critical hits for a limited amount of time.",
          "kr": "\ub300\uc0c1\uc5d0\uac8c \uc2e0\uc131\ud55c \uacb0\uacc4\ub97c \uccd0\uc11c \ub9c8\ubc95 \ubc29\uc5b4\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Protects the target from incoming critical hits for a limited amount of time.",
-         "pl": "Protects the target from incoming critical hits for a limited amount of time.",
-         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0437\u0430\u043f\u0430\u0441 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f \u0446\u0435\u043b\u0438.",
-         "sw": "Protects the target from incoming critical hits for a limited amount of time."
+         "pl": "Chroni cel przed otrzymaniem ciosu krytycznego przez kr\u00f3tki czas.",
+         "ru": "\u0417\u0430\u0449\u0438\u0449\u0430\u0435\u0442 \u0446\u0435\u043b\u044c \u043e\u0442 \u043a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u0443\u0434\u0430\u0440\u043e\u0432 \u043d\u0430 \u043d\u0435\u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u0432\u0440\u0435\u043c\u044f.",
+         "sw": "Protects the target from incoming critical hits for a limited amount of time.",
+         "th": "Protects the target from incoming critical hits for a limited amount of time."
       },
       "icon": "rinsuphguard.png",
       "class": 9389,
@@ -286,6 +292,8 @@ const skillsjson = [
       "name": {
          "en": "Sonic Blade",
          "ar": "Sonic Blade",
+         "br": "L\u00e2mina S\u00f4nica",
+         "cns": "\u6bc1\u706d\u653b\u51fb",
          "de": "Sonic Blade",
          "fi": "Sonic Blade",
          "fil": "Sonic Blade",
@@ -293,13 +301,16 @@ const skillsjson = [
          "it": "Sonic Blade",
          "kr": "\uc18c\ub2c9 \ube14\ub808\uc774\ub4dc",
          "nl": "Sonic Blade",
-         "pl": "Sonic Blade",
+         "pl": "Soniczne Ostrze",
          "ru": "\u041f\u0430\u0440\u044f\u0449\u0438\u0439 \u043a\u043b\u0438\u043d\u043e\u043a",
-         "sw": "Sonic Blade"
+         "sw": "Sonic Blade",
+         "th": "Sonic Blade"
       },
       "description": {
          "en": "Powerful, slashing attack. Requires two Weapons.",
          "ar": "Powerful, slashing attack. Requires two Weapons.",
+         "br": "Um golpe potente e cortante. Exige duas armas.",
+         "cns": "\u5c06\u6240\u6709\u7684\u6c14\u96c6\u4e2d\u5728\u6b66\u5668\u4e0a\uff0c\u653b\u51fb\u5904\u4e8e\u540c\u4e00\u76f4\u7ebf\u4e0a\u7684\u654c\u4eba\u3002",
          "de": "Ein Hieb gegen den Gegner mit der Waffe, geladen mit Geisteskraft.",
          "fi": "Voimakas, viilt\u00e4v\u00e4 isku. Vaatii kaksi Asetta.",
          "fil": "Powerful, slashing attack. Requires two Weapons.",
@@ -307,9 +318,10 @@ const skillsjson = [
          "it": "Powerful, slashing attack. Requires two Weapons.",
          "kr": "\ubb34\uae30\uc5d0 \uae30\ub97c \ubaa8\uc544 \ubc29\ucd9c\ud558\uc5ec \uc804\ubc29\uc758 \uc801\ub4e4\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Powerful, slashing attack. Requires two Weapons.",
-         "pl": "Powerful, slashing attack. Requires two Weapons.",
-         "ru": "\u0421\u0438\u043b\u044c\u043d\u044b\u0439 \u0440\u0435\u0436\u0443\u0449\u0438\u0439 \u0443\u0434\u0430\u0440.  \u0414\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0440\u0435\u0431\u0443\u044e\u0442\u0441\u044f \u0434\u0432\u0430 \u043a\u043b\u0438\u043d\u043a\u0430.",
-         "sw": "Powerful, slashing attack. Requires two Weapons."
+         "pl": "Pot\u0119\u017cne ci\u0119cie, przebijaj\u0105ce wszystkich wrog\u00f3w zebranych przed tob\u0105. Wymaga dw\u00f3ch broni.",
+         "ru": "\u0421\u0438\u043b\u044c\u043d\u044b\u0439 \u0440\u0435\u0436\u0443\u0449\u0438\u0439 \u0443\u0434\u0430\u0440. \u0414\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0440\u0435\u0431\u0443\u044e\u0442\u0441\u044f \u0434\u0432\u0430 \u043a\u043b\u0438\u043d\u043a\u0430.",
+         "sw": "Powerful, slashing attack. Requires two Weapons.",
+         "th": "Powerful, slashing attack. Requires two Weapons."
       },
       "icon": "blddblsonbld.png",
       "class": 2246,
@@ -496,6 +508,8 @@ const skillsjson = [
       "name": {
          "en": "Deadly swing",
          "ar": "Deadly swing",
+         "br": "Balan\u00e7o Fatal",
+         "cns": "\u6b7b\u4ea1\u8f6e\u821e",
          "de": "Deadly Swing",
          "fi": "Deadly swing",
          "fil": "Deadly swing",
@@ -503,13 +517,16 @@ const skillsjson = [
          "it": "Deadly swing",
          "kr": "\ub370\ub4e4\ub9ac \uc2a4\uc719",
          "nl": "Deadly swing",
-         "pl": "Deadly swing",
+         "pl": "\u015amiertelny Wymach",
          "ru": "\u0421\u043c\u0435\u0440\u0442\u043e\u043d\u043e\u0441\u043d\u0430\u044f \u043d\u0438\u0442\u044c",
-         "sw": "Deadly swing"
+         "sw": "Deadly swing",
+         "th": "Deadly swing"
       },
       "description": {
          "en": "Strong Yo-yo blast. Chance to make the enemy lose health over time.",
          "ar": "Strong Yo-yo blast. Chance to make the enemy lose health over time.",
+         "br": "Um forte golpe de Ioi\u00f4 que tem chance de fazer o inimigo perder vida por um tempo determinado.",
+         "cns": "\u98de\u8f6e\u534e\u4e3d\u7684\u5207\u5272\uff0c\u4e00\u5b9a\u51e0\u7387\u8ba9\u5bf9\u65b9\u6301\u7eed\u51fa\u8840\u3002",
          "de": "Verursacht kritischen Schaden durch einen unvorhersehbaren Angriff mit dem Yoyo. Der Gegner kann den Status Bluten erleiden.",
          "fi": "Strong Yo-yo blast. Chance to make the enemy lose health over time.",
          "fil": "Strong Yo-yo blast. Chance to make the enemy lose health over time.",
@@ -517,9 +534,10 @@ const skillsjson = [
          "it": "Strong Yo-yo blast. Chance to make the enemy lose health over time.",
          "kr": "\uc694\uc694\ub97c \uc608\uce21\ubd88\ud5c8\uc758 \uc7a5\uc18c\ub85c \ub0a0\ub824 \uce58\uba85\uc801\uc778 \uacf5\uaca9\uc744 \ud569\ub2c8\ub2e4. \uc774\ub54c \uc801\uc740 \uc77c\uc815 \ud655\ub960\ub85c \ucd9c\ud608 \uc0c1\ud0dc\uac00 \ub429\ub2c8\ub2e4.",
          "nl": "Strong Yo-yo blast. Chance to make the enemy lose health over time.",
-         "pl": "Strong Yo-yo blast. Chance to make the enemy lose health over time.",
+         "pl": "Pot\u0119\u017cne uderzenie Yo-Yo, kt\u00f3re wywo\u0142uje krwawienie u celu.",
          "ru": "\u0421\u0438\u043b\u044c\u043d\u044b\u0439 \u0443\u0434\u0430\u0440 \u0439\u043e-\u0439\u043e. \u041f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a \u0431\u0443\u0434\u0435\u0442 \u043f\u043e\u043b\u0443\u0447\u0430\u0442\u044c \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u044b\u0439 \u0443\u0440\u043e\u043d.",
-         "sw": "Strong Yo-yo blast. Chance to make the enemy lose health over time."
+         "sw": "Strong Yo-yo blast. Chance to make the enemy lose health over time.",
+         "th": "Strong Yo-yo blast. Chance to make the enemy lose health over time."
       },
       "icon": "acryoydeadly.png",
       "class": 9098,
@@ -1207,6 +1225,8 @@ const skillsjson = [
       "name": {
          "en": "Keenwheel",
          "ar": "Keenwheel",
+         "br": "Voragem",
+         "cns": "\u5207\u88c2\u98ce\u8f6e",
          "de": "Keenwheel",
          "fi": "Keenwheel",
          "fil": "Keenwheel",
@@ -1214,13 +1234,16 @@ const skillsjson = [
          "it": "Attacco Circolare",
          "kr": "\ud0a8\ud720",
          "nl": "Keenwheel",
-         "pl": "Keenwheel",
+         "pl": "Wiruj\u0105ce Ci\u0119cie",
          "ru": "\u0412\u0435\u0440\u0442\u0443\u0448\u043a\u0430",
-         "sw": "Keenwheel"
+         "sw": "Keenwheel",
+         "th": "Keenwheel"
       },
       "description": {
          "en": "A continuous spinning attack.",
          "ar": "A continuous spinning attack.",
+         "br": "Um ataque girat\u00f3rio cont\u00ednuo.",
+         "cns": "\u5faa\u73af\u6280\u80fd\uff0c\u9ad8\u901f\u65cb\u8f6c\u81ea\u5df1\u7684\u8eab\u4f53\uff0c\u5229\u7528\u8f6c\u52a8\u65f6\u4ea7\u751f\u7684\u79bb\u5fc3\u529b\u8fde\u7eed\u653b\u51fb\u5bf9\u65b9\u3002",
          "de": "Ein Kreiselskill, um den Feind mehrmals schnell hintereinander zu treffen. ",
          "fi": "Jatkuva py\u00f6riv\u00e4 hy\u00f6kk\u00e4ys.",
          "fil": "A continuous spinning attack.",
@@ -1228,9 +1251,10 @@ const skillsjson = [
          "it": "Un attacco circolare che colpisce l'avversario tre volte.",
          "kr": "\uc11c\ud074\uc2a4\ud0ac\ub85c \ubab8\uc744 \uae09\uc18d\uc73c\ub85c \ud68c\uc804\ud558\uba70 \uc0c1\ub300\ub97c \uc5f0\uc18d \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "A continuous spinning attack.",
-         "pl": "A continuous spinning attack.",
+         "pl": "Tnie przeciwnika wielokrotnie, poprzez wirowanie wok\u00f3\u0142 w\u0142asnej osi.",
          "ru": "\u041f\u0440\u043e\u0434\u043e\u043b\u0436\u0438\u0442\u0435\u043b\u044c\u043d\u0430\u044f \u043a\u0440\u0443\u0433\u043e\u0432\u0430\u044f \u0430\u0442\u0430\u043a\u0430.",
-         "sw": "A continuous spinning attack."
+         "sw": "A continuous spinning attack.",
+         "th": "A continuous spinning attack."
       },
       "icon": "meronekeenwh.png",
       "class": 764,
@@ -1537,6 +1561,8 @@ const skillsjson = [
       "name": {
          "en": "Perfect Block",
          "ar": "Perfect Block",
+         "br": "Bloqueio Perfeito",
+         "cns": "\u7edd\u5bf9\u95ea\u907f",
          "de": "Perfect Block",
          "fi": "Perfect Block",
          "fil": "Perfect Block",
@@ -1544,13 +1570,16 @@ const skillsjson = [
          "it": "Perfect Block",
          "kr": "\uc5c9\ud130\ub9ac\ud654\uc0b4",
          "nl": "Perfect Block",
-         "pl": "Perfect Block",
+         "pl": "Perfekcyjny Blok",
          "ru": "\u041c\u0430\u0441\u0442\u0435\u0440 \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f",
-         "sw": "Perfect Block"
+         "sw": "Perfect Block",
+         "th": "Perfect Block"
       },
       "description": {
          "en": "Increases block rate.",
          "ar": "Increases block rate.",
+         "br": "Aumenta a taxa de bloqueio.",
+         "cns": "\u63d0\u9ad8\u56de\u907f\u5bf9\u65b9\u653b\u51fb\u7684\u80fd\u529b\u3002",
          "de": "Erh\u00f6hen der Abwehr durch Konzentration auf die Bewegung des Gegners.",
          "fi": "Increases block rate.",
          "fil": "Increases block rate.",
@@ -1558,9 +1587,10 @@ const skillsjson = [
          "it": "Increases block rate.",
          "kr": "\uc801\uc758 \uc6c0\uc9c1\uc784\uc5d0 \uc9d1\uc911\ud558\uc5ec \ube14\ub7ed\uc728\uc774 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4",
          "nl": "Increases block rate.",
-         "pl": "Increases block rate.",
+         "pl": "Zwi\u0119ksza szans\u0119 na blok.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0432\u0435\u0440\u043e\u044f\u0442\u043d\u043e\u0441\u0442\u044c \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u0443\u0434\u0430\u0440\u043e\u0432 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430.",
-         "sw": "Increases block rate."
+         "sw": "Increases block rate.",
+         "th": "Increases block rate."
       },
       "icon": "acrsupblock.png",
       "class": 9098,
@@ -1848,6 +1878,8 @@ const skillsjson = [
       "name": {
          "en": "Bgvur Tialbold",
          "ar": "Bgvur Tialbold",
+         "br": "Bgvur Tialbold",
+         "cns": "\u6597\u6c14\u98ce\u66b4",
          "de": "Bgvur Tialbold",
          "fi": "Bgvur Tialbold",
          "fil": "Bgvur Tialbold",
@@ -1857,11 +1889,14 @@ const skillsjson = [
          "nl": "Bgvur Tialbold",
          "pl": "Bgvur Tialbold",
          "ru": "\u041f\u043e\u0436\u0438\u0440\u0430\u0442\u0435\u043b\u044c",
-         "sw": "Bgvur Tialbold"
+         "sw": "Bgvur Tialbold",
+         "th": "Bgvur Tialbold"
       },
       "description": {
          "en": "Strikes at nearby enemies with an outward shockwave.",
          "ar": "Strikes at nearby enemies with an outward shockwave.",
+         "br": "Golpeia todos os inimigos por perto com uma onda de choque.",
+         "cns": "\u5c06\u6597\u6c14\u5316\u4f5c\u98ce\u66b4\uff0c\u6253\u51fb\u5468\u56f4\u7684\u654c\u4eba\u3002",
          "de": "Einen Gegner mit einer Schockwelle angreifen.",
          "fi": "Iskee l\u00e4heiseen viholliseen iskuaallolla.",
          "fil": "Strikes at nearby enemies with an outward shockwave.",
@@ -1869,9 +1904,10 @@ const skillsjson = [
          "it": "Strikes at nearby enemies with an outward shockwave.",
          "kr": "\uc790\uc2e0\uc758 \uc8fc\ubcc0\uc5d0 \ucda9\uaca9\ud30c\ub97c \ub0a0\ub824 \uc801\ub4e4\uc744 \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Strikes at nearby enemies with an outward shockwave.",
-         "pl": "Strikes at nearby enemies with an outward shockwave.",
-         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0443\u0440\u043e\u043d \u043e\u043a\u0440\u0443\u0436\u0430\u044e\u0449\u0438\u043c \u0432\u0430\u0441 \u0432\u0440\u0430\u0433\u0430\u043c.",
-         "sw": "Strikes at nearby enemies with an outward shockwave."
+         "pl": "Atakuje wszystkich wrog\u00f3w wok\u00f3\u0142 ciebie za pomoc\u0105 duchowej Fali Uderzeniowej.",
+         "ru": "\u0423\u0434\u0430\u0440\u043d\u0430\u044f \u0432\u043e\u043b\u043d\u0430 \u043d\u0430\u043d\u043e\u0441\u0438\u0442 \u0443\u0440\u043e\u043d \u043e\u043a\u0440\u0443\u0436\u0430\u044e\u0449\u0438\u043c \u0432\u0430\u0441 \u0432\u0440\u0430\u0433\u0430\u043c.",
+         "sw": "Strikes at nearby enemies with an outward shockwave.",
+         "th": "Strikes at nearby enemies with an outward shockwave."
       },
       "icon": "bilgvurtialbold.png",
       "class": 7424,
@@ -2060,20 +2096,25 @@ const skillsjson = [
       "name": {
          "en": "Damage",
          "ar": "Damage",
+         "br": "Dano",
+         "cns": "\u6ce2\u53ca",
          "de": "Damage",
          "fi": "Damage",
          "fil": "Damage",
          "fr": "D\u00e9g\u00e2ts",
          "it": "Damage",
          "kr": "\ub370\ubbf8\uc9c0",
-         "nl": "Damage",
+         "nl": "Schade",
          "pl": "Damage",
          "ru": "\u0423\u0440\u043e\u043d",
-         "sw": "Damage"
+         "sw": "Damage",
+         "th": "Damage"
       },
       "description": {
          "en": "",
          "ar": "",
+         "br": "",
+         "cns": "",
          "de": "",
          "fi": "",
          "fil": "",
@@ -2083,7 +2124,8 @@ const skillsjson = [
          "nl": "",
          "pl": "",
          "ru": "",
-         "sw": ""
+         "sw": "",
+         "th": ""
       },
       "icon": "elemulavalan.png",
       "level": 1,
@@ -2173,6 +2215,8 @@ const skillsjson = [
       "name": {
          "en": "Wind Cutter",
          "ar": "Wind Cutter",
+         "br": "Vento Perfurante",
+         "cns": "\u98ce\u4e4b\u5229\u5203",
          "de": "Wind Cutter",
          "fi": "Wind Cutter",
          "fil": "Wind Cutter",
@@ -2180,13 +2224,16 @@ const skillsjson = [
          "it": "Wind Cutter",
          "kr": "\uc708\ub4dc \ucee4\ud130",
          "nl": "Wind Cutter",
-         "pl": "Wind Cutter",
+         "pl": "Powietrzny Siekacz",
          "ru": "\u0412\u043e\u0437\u0434\u0443\u0448\u043d\u0430\u044f \u0441\u0442\u0440\u0435\u043b\u0430",
-         "sw": "Wind Cutter"
+         "sw": "Wind Cutter",
+         "th": "Wind Cutter"
       },
       "description": {
          "en": "Ranged, wind attack.",
          "ar": "Ranged, wind attack.",
+         "br": "Ataque de vento a distancia.",
+         "cns": "\u7528\u950b\u5229\u7684\u98ce\u5203\u523a\u70c8\u5bf9\u65b9\u7684\u8eab\u4f53\u3002",
          "de": "Den Gegner durch starken Wind, so scharf wie ein Messer, Schaden zuf\u00fcgen.",
          "fi": "Et\u00e4 tuulihy\u00f6kk\u00e4ys.",
          "fil": "Ranged, wind attack.",
@@ -2194,9 +2241,10 @@ const skillsjson = [
          "it": "Ranged, wind attack.",
          "kr": "\uce7c\ub0a0\ucc98\ub7fc \ub0a0\uce74\ub85c\uc6b4 \ubc14\ub78c\uc744 \ub0a0\ub824 \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Ranged, wind attack.",
-         "pl": "Ranged, wind attack.",
+         "pl": "Tnie przeciwnika silnym wiatrem.",
          "ru": "\u0410\u0442\u0430\u043a\u0430 \u0434\u0430\u043b\u044c\u043d\u0435\u0433\u043e \u0431\u043e\u044f. \u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0443\u0440\u043e\u043d \u0432\u0435\u0442\u0440\u043e\u043c.",
-         "sw": "Ranged, wind attack."
+         "sw": "Ranged, wind attack.",
+         "th": "Ranged, wind attack."
       },
       "icon": "magwindcutter.png",
       "class": 9581,
@@ -2744,20 +2792,25 @@ const skillsjson = [
       "name": {
          "en": "Ice Arrow",
          "ar": "Ice Arrow",
+         "br": "Flecha Congelante",
+         "cns": "\u51b0\u7bad",
          "de": "Ice Arrow",
          "fi": "Ice Arrow",
          "fil": "Ice Arrow",
          "fr": "Barrage de glace",
          "it": "Ice Arrow",
          "kr": "\uc544\uc774\uc2a4\uc5d0\ub85c\uc6b0",
-         "nl": "Ice Arrow",
+         "nl": "IJspijl",
          "pl": "Ice Arrow",
          "ru": "\u041e\u0431\u043b\u0435\u0434\u0435\u043d\u0435\u043b\u0430\u044f \u0441\u0442\u0440\u0435\u043b\u0430",
-         "sw": "Ice Arrow"
+         "sw": "Ice Arrow",
+         "th": "Ice Arrow"
       },
       "description": {
          "en": "Slows an enemy down by shooting it with arrows covered in ice.",
          "ar": "Slows an enemy down by shooting it with arrows covered in ice.",
+         "br": "Atira uma flecha de gelo que causa dano e lentid\u00e3o a todos os inimigos ao redor do alvo.",
+         "cns": "\u7206\u53d1\u6027\u5730\u5c04\u51fa\u5177\u6709\u51bb\u7ed3\u5468\u56f4\u5bf9\u8c61\u6548\u679c\u7684\u7bad\uff0c\u7ed9\u4e88\u4f24\u5bb3\u7684\u540c\u65f6\u7275\u5236\u5bf9\u65b9\u79fb\u52a8\u3002",
          "de": "Belegt einen Pfeil mit dem Eis Attribut und verlangsamt so den Gegner.",
          "fi": "Slows an enemy down by shooting it with arrows covered in ice.",
          "fil": "Slows an enemy down by shooting it with arrows covered in ice.",
@@ -2767,7 +2820,8 @@ const skillsjson = [
          "nl": "Slows an enemy down by shooting it with arrows covered in ice.",
          "pl": "Slows an enemy down by shooting it with arrows covered in ice.",
          "ru": "\u041e\u0431\u043b\u0435\u0434\u0435\u043d\u0435\u043b\u0430\u044f \u0441\u0442\u0440\u0435\u043b\u0430 \u0437\u0430\u043c\u0435\u0434\u043b\u044f\u0435\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430.",
-         "sw": "Slows an enemy down by shooting it with arrows covered in ice."
+         "sw": "Slows an enemy down by shooting it with arrows covered in ice.",
+         "th": "Slows an enemy down by shooting it with arrows covered in ice."
       },
       "icon": "ragbowicearr.png",
       "class": 9295,
@@ -3106,6 +3160,8 @@ const skillsjson = [
       "name": {
          "en": "Bloody Strike",
          "ar": "Bloody Strike",
+         "br": "Ataque Sangrento",
+         "cns": "\u8840\u4e4b\u5149\u8f89",
          "de": "Bloody Strike",
          "fi": "Bloody Strike",
          "fil": "Bloody Strike",
@@ -3113,13 +3169,16 @@ const skillsjson = [
          "it": "Colpo Sanguinoso",
          "kr": "\ube14\ub7ec\ub514 \uc2a4\ud2b8\ub77c\uc774\ud06c",
          "nl": "Bloody Strike",
-         "pl": "Bloody Strike",
+         "pl": "Krwawy Cios",
          "ru": "\u041a\u0440\u043e\u0432\u0430\u0432\u0430\u044f \u043a\u0440\u0430\u0436\u0430",
-         "sw": "Bloody Strike"
+         "sw": "Bloody Strike",
+         "th": "Bloody Strike"
       },
       "description": {
          "en": "Drains life from an enemy.",
          "ar": "Drains life from an enemy.",
+         "br": "Drains life from an enemy.",
+         "cns": "Drains life from an enemy.",
          "de": "Drains life from an enemy.",
          "fi": "Drains life from an enemy.",
          "fil": "Drains life from an enemy.",
@@ -3129,7 +3188,8 @@ const skillsjson = [
          "nl": "Drains life from an enemy.",
          "pl": "Drains life from an enemy.",
          "ru": "Drains life from an enemy.",
-         "sw": "Drains life from an enemy."
+         "sw": "Drains life from an enemy.",
+         "th": "Drains life from an enemy."
       },
       "icon": "meronebloody.png",
       "class": 764,
@@ -3153,11 +3213,12 @@ const skillsjson = [
             "minAttack": 14,
             "maxAttack": 15,
             "consumedFP": 30,
+            "cooldown": 7,
             "casting": 1.25,
             "abilities": [
                {
                   "parameter": "stealhp",
-                  "add": 5,
+                  "add": 15,
                   "rate": true
                }
             ],
@@ -3165,7 +3226,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.42,
+                  "scale": 2.02,
                   "pvp": true,
                   "pve": true
                }
@@ -3175,11 +3236,12 @@ const skillsjson = [
             "minAttack": 15,
             "maxAttack": 16,
             "consumedFP": 32,
+            "cooldown": 7,
             "casting": 1.25,
             "abilities": [
                {
                   "parameter": "stealhp",
-                  "add": 5,
+                  "add": 17,
                   "rate": true
                }
             ],
@@ -3187,7 +3249,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.44,
+                  "scale": 2.04,
                   "pvp": true,
                   "pve": true
                }
@@ -3197,11 +3259,12 @@ const skillsjson = [
             "minAttack": 15,
             "maxAttack": 16,
             "consumedFP": 32,
+            "cooldown": 7,
             "casting": 1.25,
             "abilities": [
                {
                   "parameter": "stealhp",
-                  "add": 10,
+                  "add": 18,
                   "rate": true
                }
             ],
@@ -3209,7 +3272,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.46,
+                  "scale": 2.06,
                   "pvp": true,
                   "pve": true
                }
@@ -3219,11 +3282,12 @@ const skillsjson = [
             "minAttack": 16,
             "maxAttack": 17,
             "consumedFP": 34,
+            "cooldown": 6,
             "casting": 1.25,
             "abilities": [
                {
                   "parameter": "stealhp",
-                  "add": 10,
+                  "add": 19,
                   "rate": true
                }
             ],
@@ -3231,7 +3295,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.48,
+                  "scale": 2.08,
                   "pvp": true,
                   "pve": true
                }
@@ -3241,11 +3305,12 @@ const skillsjson = [
             "minAttack": 16,
             "maxAttack": 17,
             "consumedFP": 34,
+            "cooldown": 6,
             "casting": 1.25,
             "abilities": [
                {
                   "parameter": "stealhp",
-                  "add": 10,
+                  "add": 20,
                   "rate": true
                }
             ],
@@ -3253,7 +3318,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.5,
+                  "scale": 2.1,
                   "pvp": true,
                   "pve": true
                }
@@ -3263,11 +3328,12 @@ const skillsjson = [
             "minAttack": 17,
             "maxAttack": 18,
             "consumedFP": 37,
+            "cooldown": 6,
             "casting": 1.25,
             "abilities": [
                {
                   "parameter": "stealhp",
-                  "add": 15,
+                  "add": 21,
                   "rate": true
                }
             ],
@@ -3275,7 +3341,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.52,
+                  "scale": 2.12,
                   "pvp": true,
                   "pve": true
                }
@@ -3285,11 +3351,12 @@ const skillsjson = [
             "minAttack": 17,
             "maxAttack": 18,
             "consumedFP": 37,
+            "cooldown": 6,
             "casting": 1.25,
             "abilities": [
                {
                   "parameter": "stealhp",
-                  "add": 15,
+                  "add": 22,
                   "rate": true
                }
             ],
@@ -3297,7 +3364,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.54,
+                  "scale": 2.14,
                   "pvp": true,
                   "pve": true
                }
@@ -3307,11 +3374,12 @@ const skillsjson = [
             "minAttack": 18,
             "maxAttack": 19,
             "consumedFP": 40,
+            "cooldown": 6,
             "casting": 1.25,
             "abilities": [
                {
                   "parameter": "stealhp",
-                  "add": 15,
+                  "add": 23,
                   "rate": true
                }
             ],
@@ -3319,7 +3387,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.56,
+                  "scale": 2.16,
                   "pvp": true,
                   "pve": true
                }
@@ -3329,11 +3397,12 @@ const skillsjson = [
             "minAttack": 18,
             "maxAttack": 19,
             "consumedFP": 40,
+            "cooldown": 6,
             "casting": 1.25,
             "abilities": [
                {
                   "parameter": "stealhp",
-                  "add": 20,
+                  "add": 24,
                   "rate": true
                }
             ],
@@ -3341,7 +3410,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.58,
+                  "scale": 2.18,
                   "pvp": true,
                   "pve": true
                }
@@ -3351,11 +3420,12 @@ const skillsjson = [
             "minAttack": 19,
             "maxAttack": 20,
             "consumedFP": 44,
+            "cooldown": 6,
             "casting": 1.25,
             "abilities": [
                {
                   "parameter": "stealhp",
-                  "add": 20,
+                  "add": 25,
                   "rate": true
                }
             ],
@@ -3363,7 +3433,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.6,
+                  "scale": 2.2,
                   "pvp": true,
                   "pve": true
                }
@@ -3373,11 +3443,12 @@ const skillsjson = [
             "minAttack": 19,
             "maxAttack": 20,
             "consumedFP": 44,
+            "cooldown": 5,
             "casting": 1.25,
             "abilities": [
                {
                   "parameter": "stealhp",
-                  "add": 20,
+                  "add": 26,
                   "rate": true
                }
             ],
@@ -3385,7 +3456,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.62,
+                  "scale": 2.22,
                   "pvp": true,
                   "pve": true
                }
@@ -3395,11 +3466,12 @@ const skillsjson = [
             "minAttack": 20,
             "maxAttack": 21,
             "consumedFP": 48,
+            "cooldown": 5,
             "casting": 1.25,
             "abilities": [
                {
                   "parameter": "stealhp",
-                  "add": 25,
+                  "add": 27,
                   "rate": true
                }
             ],
@@ -3407,7 +3479,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.64,
+                  "scale": 2.24,
                   "pvp": true,
                   "pve": true
                }
@@ -3417,11 +3489,12 @@ const skillsjson = [
             "minAttack": 20,
             "maxAttack": 21,
             "consumedFP": 48,
+            "cooldown": 5,
             "casting": 1.25,
             "abilities": [
                {
                   "parameter": "stealhp",
-                  "add": 25,
+                  "add": 28,
                   "rate": true
                }
             ],
@@ -3429,7 +3502,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.66,
+                  "scale": 2.26,
                   "pvp": true,
                   "pve": true
                }
@@ -3439,11 +3512,12 @@ const skillsjson = [
             "minAttack": 21,
             "maxAttack": 22,
             "consumedFP": 53,
+            "cooldown": 5,
             "casting": 1.25,
             "abilities": [
                {
                   "parameter": "stealhp",
-                  "add": 25,
+                  "add": 29,
                   "rate": true
                }
             ],
@@ -3451,7 +3525,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.68,
+                  "scale": 2.28,
                   "pvp": true,
                   "pve": true
                }
@@ -3461,6 +3535,7 @@ const skillsjson = [
             "minAttack": 21,
             "maxAttack": 22,
             "consumedFP": 53,
+            "cooldown": 5,
             "casting": 1.25,
             "abilities": [
                {
@@ -3473,7 +3548,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.7,
+                  "scale": 2.3,
                   "pvp": true,
                   "pve": true
                }
@@ -3483,11 +3558,12 @@ const skillsjson = [
             "minAttack": 22,
             "maxAttack": 23,
             "consumedFP": 58,
+            "cooldown": 5,
             "casting": 1.25,
             "abilities": [
                {
                   "parameter": "stealhp",
-                  "add": 30,
+                  "add": 31,
                   "rate": true
                }
             ],
@@ -3495,7 +3571,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.72,
+                  "scale": 2.32,
                   "pvp": true,
                   "pve": true
                }
@@ -3505,11 +3581,12 @@ const skillsjson = [
             "minAttack": 22,
             "maxAttack": 23,
             "consumedFP": 58,
+            "cooldown": 5,
             "casting": 1.25,
             "abilities": [
                {
                   "parameter": "stealhp",
-                  "add": 30,
+                  "add": 32,
                   "rate": true
                }
             ],
@@ -3517,7 +3594,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.74,
+                  "scale": 2.34,
                   "pvp": true,
                   "pve": true
                }
@@ -3527,11 +3604,12 @@ const skillsjson = [
             "minAttack": 23,
             "maxAttack": 24,
             "consumedFP": 64,
+            "cooldown": 5,
             "casting": 1.25,
             "abilities": [
                {
                   "parameter": "stealhp",
-                  "add": 35,
+                  "add": 33,
                   "rate": true
                }
             ],
@@ -3539,7 +3617,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.76,
+                  "scale": 2.36,
                   "pvp": true,
                   "pve": true
                }
@@ -3549,11 +3627,12 @@ const skillsjson = [
             "minAttack": 23,
             "maxAttack": 24,
             "consumedFP": 64,
+            "cooldown": 5,
             "casting": 1.25,
             "abilities": [
                {
                   "parameter": "stealhp",
-                  "add": 35,
+                  "add": 34,
                   "rate": true
                }
             ],
@@ -3561,7 +3640,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.78,
+                  "scale": 2.38,
                   "pvp": true,
                   "pve": true
                }
@@ -3571,6 +3650,7 @@ const skillsjson = [
             "minAttack": 24,
             "maxAttack": 25,
             "consumedFP": 70,
+            "cooldown": 4,
             "casting": 1.25,
             "abilities": [
                {
@@ -3583,7 +3663,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.8,
+                  "scale": 2.4,
                   "pvp": true,
                   "pve": true
                }
@@ -3596,20 +3676,25 @@ const skillsjson = [
       "name": {
          "en": "Protect",
          "ar": "Protect",
+         "br": "Proteger",
+         "cns": "\u5b88\u62a4\u672f",
          "de": "Protect",
          "fi": "Protect",
          "fil": "Protect",
          "fr": "Fortification",
          "it": "Protect",
          "kr": "\ud504\ub85c\ud14d\ud2b8",
-         "nl": "Protect",
-         "pl": "Protect",
+         "nl": "Bescherming",
+         "pl": "Opieka",
          "ru": "\u041f\u043e\u0441\u0432\u044f\u0449\u0435\u043d\u0438\u0435",
-         "sw": "Protect"
+         "sw": "Protect",
+         "th": "Protect"
       },
       "description": {
          "en": "Decreases the damage from physical attacks on a target.",
          "ar": "Decreases the damage from physical attacks on a target.",
+         "br": "Concede maior prote\u00e7\u00e3o a dano de ataques f\u00edsicos.",
+         "cns": "\u6682\u65f6\u63d0\u9ad8\u65bd\u6cd5\u5bf9\u8c61\u7684\u7269\u7406\u9632\u5fa1\u529b\u3002",
          "de": "Erh\u00f6ht die physische Verteidigung des angew\u00e4hlten Spielers.",
          "fi": "Laskee kohteen saamaa vahinkoa fyysisist\u00e4 hy\u00f6kk\u00e4yksist\u00e4.",
          "fil": "Decreases the damage from physical attacks on a target.",
@@ -3617,9 +3702,10 @@ const skillsjson = [
          "it": "Decreases the damage from physical attacks on a target.",
          "kr": "\ub300\uc0c1\uc5d0\uac8c \uc2e0\uc131\ud55c \uacb0\uacc4\ub97c \uccd0\uc11c \ubb3c\ub9ac \ubc29\uc5b4\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Decreases the damage from physical attacks on a target.",
-         "pl": "Decreases the damage from physical attacks on a target.",
-         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438 \u0432\u044b\u0431\u0440\u0430\u043d\u043d\u043e\u0439 \u0446\u0435\u043b\u0438.",
-         "sw": "Decreases the damage from physical attacks on a target."
+         "pl": "Zwi\u0119ksza obron\u0119 celu.",
+         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0437\u0430\u0449\u0438\u0442\u0443 \u0432\u044b\u0431\u0440\u0430\u043d\u043d\u043e\u0439 \u0446\u0435\u043b\u0438 \u043e\u0442 \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u0430\u0442\u0430\u043a.",
+         "sw": "Decreases the damage from physical attacks on a target.",
+         "th": "Decreases the damage from physical attacks on a target."
       },
       "icon": "rinsupprotec.png",
       "class": 9389,
@@ -3947,6 +4033,8 @@ const skillsjson = [
       "name": {
          "en": "Special Hit",
          "ar": "\u0634\u062d\u0646\u0629 \u0627\u0644\u0637\u0627\u0642\u0629",
+         "br": "Golpe Retalhador",
+         "cns": "\u6012\u7130\u56de\u65cb",
          "de": "Special Hit",
          "fi": "Special Hit",
          "fil": "Special Hit",
@@ -3954,13 +4042,16 @@ const skillsjson = [
          "it": "Colpo Speciale",
          "kr": "\uc2a4\ud398\uc15c \ud788\ud2b8",
          "nl": "Special Hit",
-         "pl": "Special Hit",
+         "pl": "Specjalny Cios",
          "ru": "\u0420\u0435\u0437\u043a\u0438\u0439 \u0443\u0434\u0430\u0440",
-         "sw": "Special Hit"
+         "sw": "Special Hit",
+         "th": "Special Hit"
       },
       "description": {
          "en": "A single, powerful strike that attacks all enemies in front.",
          "ar": "\u0634\u062d\u0646\u0629 \u0643\u0628\u064a\u0631\u0629 \u0645\u0646 \u0627\u0644\u0637\u0627\u0642\u0629 \u062a\u0637\u0627\u0644 \u0643\u0644 \u0627\u0644\u062e\u0635\u0648\u0645 \u0641\u064a \u0627\u0644\u062c\u0648\u0627\u0631.",
+         "br": "Um ataque \u00fanico e poderoso que ataca todos os inimigos \u00e0 frente.",
+         "cns": "\u6700\u5927\u9650\u5ea6\u5730\u5229\u7528\u8eab\u4f53\u7684\u53cd\u4f5c\u7528\u529b\u7206\u53d1\u51fa\u6012\u7130\u653b\u51fb\u5bf9\u65b9\u3002",
          "de": "Den Gegner mit gesamtem K\u00f6rpereinsatz schlagen.",
          "fi": "Yksitt\u00e4inen, voimakas isku joka kohdistuu kaikkiin edess\u00e4 oleviin vihollisiin.",
          "fil": "A single, powerful strike that attacks all enemies in front.",
@@ -3968,9 +4059,10 @@ const skillsjson = [
          "it": "Un colpo speciale che colpisce di fronte l'avversario.",
          "kr": "\ubab8\uc758 \ubc18\ub3d9\uc744 \ucd5c\ub300\ud55c \uc774\uc6a9\ud558\uc5ec \ud798\uc744 \uc2e4\uc5b4 \uc801\uc744 \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "A single, powerful strike that attacks all enemies in front.",
-         "pl": "A single, powerful strike that attacks all enemies in front.",
-         "ru": "\u041c\u043e\u0449\u043d\u044b\u0439 \u0443\u0434\u0430\u0440.",
-         "sw": "A single, powerful strike that attacks all enemies in front."
+         "pl": "Pot\u0119\u017cny atak kt\u00f3ry zadaje obra\u017cenia wszystkim zebranym przeciwnikom od frontu.",
+         "ru": "\u041c\u043e\u0449\u043d\u044b\u0439 \u0443\u0434\u0430\u0440, \u0430\u0442\u0430\u043a\u0443\u044e\u0449\u0438\u0439 \u0432\u043f\u0435\u0440\u0435\u0434\u0438 \u0441\u0442\u043e\u044f\u0449\u0438\u0445 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u043e\u0432.",
+         "sw": "A single, powerful strike that attacks all enemies in front.",
+         "th": "A single, powerful strike that attacks all enemies in front."
       },
       "icon": "meronesphit.png",
       "class": 764,
@@ -4317,6 +4409,8 @@ const skillsjson = [
       "name": {
          "en": "Beef Up",
          "ar": "Beef Up",
+         "br": "Fortalecer",
+         "cns": "\u529b\u91cf\u672f",
          "de": "Beef Up",
          "fi": "beef Up",
          "fil": "Beef Up",
@@ -4324,13 +4418,16 @@ const skillsjson = [
          "it": "Beef Up",
          "kr": "\ube44\ud504\uc5c5",
          "nl": "Beef Up",
-         "pl": "Beef Up",
+         "pl": "Napompowanie",
          "ru": "\u0413\u0440\u043e\u043c\u0438\u043b\u0430",
-         "sw": "Beef Up"
+         "sw": "Beef Up",
+         "th": "Beef Up"
       },
       "description": {
          "en": "Increases striking power of a target.",
          "ar": "Increases striking power of a target.",
+         "br": "Increases striking power of a target.",
+         "cns": "Increases striking power of a target.",
          "de": "Increases striking power of a target.",
          "fi": "Increases striking power of a target.",
          "fil": "Increases striking power of a target.",
@@ -4340,7 +4437,8 @@ const skillsjson = [
          "nl": "Increases striking power of a target.",
          "pl": "Increases striking power of a target.",
          "ru": "Increases striking power of a target.",
-         "sw": "Increases striking power of a target."
+         "sw": "Increases striking power of a target.",
+         "th": "Increases striking power of a target."
       },
       "icon": "asschebeefup.png",
       "class": 8962,
@@ -4968,6 +5066,8 @@ const skillsjson = [
       "name": {
          "en": "Blazing Sword",
          "ar": "Blazing Sword",
+         "br": "Espada Ardente",
+         "cns": "\u5149\u8292\u5723\u5251",
          "de": "Blazing Sword",
          "fi": "Blazing Sword",
          "fil": "Blazing Sword",
@@ -4975,13 +5075,16 @@ const skillsjson = [
          "it": "Spada Ardente",
          "kr": "\ube14\ub808\uc774\uc9d5 \uc18c\ub4dc",
          "nl": "Blazing Sword",
-         "pl": "Blazing Sword",
+         "pl": "P\u0142on\u0105cy Miecz",
          "ru": "\u041f\u044b\u043b\u0430\u044e\u0449\u0438\u0439 \u043c\u0435\u0447",
-         "sw": "Blazing Sword"
+         "sw": "Blazing Sword",
+         "th": "Blazing Sword"
       },
       "description": {
          "en": "Increases the accuracy with a Sword and increases power of the Sword.",
          "ar": "\u0632\u064a\u0627\u062f\u0629 \u062f\u0642\u0629 \u0627\u0644\u0633\u064a\u0641 \u0648 \u062d\u062f\u062a\u0647.",
+         "br": "Aumenta a precis\u00e3o e o dano da Espada.",
+         "cns": "\u88c5\u5907\u5251\u65f6\uff0c\u5927\u5e45\u5ea6\u63d0\u9ad8\u5251\u7684\u547d\u4e2d\u7387\u53ca\u653b\u51fb\u529b\u3002",
          "de": "Erh\u00f6ht die Angriffsst\u00e4rke und die Treffsicherheit deines Schwertes.",
          "fi": "Kasvattaa tarkkuutta Miekan kanssa, sek\u00e4 lis\u00e4\u00e4 Miekan voimaa.",
          "fil": "Increases the accuracy with a Sword and increases power of the Sword.",
@@ -4989,9 +5092,10 @@ const skillsjson = [
          "it": "Aumenta la precizione e la potenza d'attacco della spada.",
          "kr": "\uc18c\ub4dc\uc758 \ub2a5\ub825\uc744 \uac15\ud654\uc2dc\ucf1c \uacf5\uaca9\ub825\uacfc \uba85\uc911\ub960\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increases the accuracy with a Sword and increases power of the Sword.",
-         "pl": "Increases the accuracy with a Sword and increases power of the Sword.",
+         "pl": "Zwi\u0119ksza celno\u015b\u0107 i si\u0142\u0119 ataku Mieczy.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0442\u043e\u0447\u043d\u043e\u0441\u0442\u044c \u0438 \u0441\u0438\u043b\u0443 \u0443\u0434\u0430\u0440\u043e\u0432 \u043c\u0435\u0447\u043e\u043c.",
-         "sw": "Increases the accuracy with a Sword and increases power of the Sword."
+         "sw": "Increases the accuracy with a Sword and increases power of the Sword.",
+         "th": "Increases the accuracy with a Sword and increases power of the Sword."
       },
       "icon": "mersupblazin.png",
       "class": 764,
@@ -5379,6 +5483,8 @@ const skillsjson = [
       "name": {
          "en": "Critical Swing",
          "ar": "Critical Swing",
+         "br": "Balan\u00e7o Cr\u00edtico",
+         "cns": "\u6597\u5fd7\u98ce\u8f6e",
          "de": "Critical Swing",
          "fi": "Critical Swing",
          "fil": "Critical Swing",
@@ -5386,13 +5492,16 @@ const skillsjson = [
          "it": "Critical Swing",
          "kr": "\ud06c\ub9ac\ud2f0\uceec \uc2a4\uc719",
          "nl": "Critical Swing",
-         "pl": "Critical Swing",
+         "pl": "Krytyczny Wymach",
          "ru": "\u041a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0443\u0434\u0430\u0440\u044b",
-         "sw": "Critical Swing"
+         "sw": "Critical Swing",
+         "th": "Critical Swing"
       },
       "description": {
          "en": "Increases chance of critical strike. ",
          "ar": "Increases chance of critical strike. ",
+         "br": "Aumenta a chance de causar um acerto cr\u00edtico. ",
+         "cns": "\u6682\u65f6\u589e\u52a0\u98de\u8f6e\u7684\u7206\u51fb\u7387\u53ca\u7206\u51fb\u4f24\u5bb3\u3002",
          "de": "Erh\u00f6ht die kritische Trefferrate mit dem Yoyo.",
          "fi": "Increases chance of critical strike. ",
          "fil": "Increases chance of critical strike. ",
@@ -5400,9 +5509,10 @@ const skillsjson = [
          "it": "Increases chance of critical strike. ",
          "kr": "\uc694\uc694\uc758 \ub2a5\ub825\uc744 \uac15\ud654 \uc2dc\ucf1c \uc801\uc5d0 \ub300\ud55c \ud06c\ub9ac\ud2f0\uceec \ud655\ub960\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increases chance of critical strike. ",
-         "pl": "Increases chance of critical strike. ",
+         "pl": "Zwi\u0119ksza szans\u0119 na Cios Krytyczny.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0432\u0435\u0440\u043e\u044f\u0442\u043d\u043e\u0441\u0442\u044c \u043d\u0430\u043d\u0435\u0441\u0442\u0438 \u043a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0443\u0440\u043e\u043d.",
-         "sw": "Increases chance of critical strike. "
+         "sw": "Increases chance of critical strike. ",
+         "th": "Increases chance of critical strike. "
       },
       "icon": "jstsupswing.png",
       "class": 3545,
@@ -5650,6 +5760,8 @@ const skillsjson = [
       "name": {
          "en": "Meteo Shower",
          "ar": "Meteo Shower",
+         "br": "Meteoro",
+         "cns": "\u9668\u77f3\u5760\u843d",
          "de": "Meteor Shower",
          "fi": "Meteo Shower",
          "fil": "Meteo Shower",
@@ -5657,13 +5769,16 @@ const skillsjson = [
          "it": "Meteo Shower",
          "kr": "\uba54\ud14c\uc624 \uc0e4\uc6cc",
          "nl": "Meteo Shower",
-         "pl": "Meteo Shower",
+         "pl": "Deszcz Meteor\u00f3w",
          "ru": "\u041c\u0435\u0442\u0435\u043e\u0440\u0438\u0442\u043d\u044b\u0439 \u0434\u043e\u0436\u0434\u044c",
-         "sw": "Meteo Shower"
+         "sw": "Meteo Shower",
+         "th": "Meteo Shower"
       },
       "description": {
          "en": "Damages surrounding enemies with a falling meteor.",
          "ar": "Damages surrounding enemies with a falling meteor.",
+         "br": "Causa dano aos inimigos ao redor com um meteoro.",
+         "cns": "\u53ec\u5524\u71c3\u70e7\u7740\u7684\u9668\u77f3\u88ad\u51fb\u5468\u56f4\u6240\u6709\u7684\u5bf9\u8c61\u3002",
          "de": "Allen Gegnern durch fallende brennende Meteorbrocken Schaden zuf\u00fcgen.",
          "fi": "Damages surrounding enemies with a falling meteor.",
          "fil": "Damages surrounding enemies with a falling meteor.",
@@ -5671,9 +5786,10 @@ const skillsjson = [
          "it": "Damages surrounding enemies with a falling meteor.",
          "kr": "\ubd88\ud0c0\ub294 \uc6b4\uc11d\uc744 \ub5a8\uc5b4\ud2b8\ub824 \uc8fc\ubcc0\uc758 \ubaa8\ub4e0 \uc801\ub4e4\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Damages surrounding enemies with a falling meteor.",
-         "pl": "Damages surrounding enemies with a falling meteor.",
+         "pl": "Atakuje wszystkich wrog\u00f3w wok\u00f3\u0142 ciebie deszczem meteor\u00f3w.",
          "ru": "\u041d\u0430 \u0432\u0440\u0430\u0433\u043e\u0432 \u043e\u0431\u0440\u0443\u0448\u0438\u0432\u0430\u0435\u0442\u0441\u044f \u043c\u0435\u0442\u0435\u043e\u0440\u0438\u0442\u043d\u044b\u0439 \u0434\u043e\u0436\u0434\u044c, \u043d\u0430\u043d\u043e\u0441\u044f\u0449\u0438\u0439 \u0443\u0440\u043e\u043d \u043e\u0433\u043d\u0435\u043c \u0438 \u0437\u0435\u043c\u043b\u0435\u0439.",
-         "sw": "Damages surrounding enemies with a falling meteor."
+         "sw": "Damages surrounding enemies with a falling meteor.",
+         "th": "Damages surrounding enemies with a falling meteor."
       },
       "icon": "elemulmeteos.png",
       "class": 9150,
@@ -5875,6 +5991,8 @@ const skillsjson = [
       "name": {
          "en": "Stone Spear",
          "ar": "Stone Spear",
+         "br": "Lan\u00e7a de Pedra",
+         "cns": "\u77f3\u67aa\u6295\u5c04",
          "de": "Stone Spear",
          "fi": "Stone Spear",
          "fil": "Stone Spear",
@@ -5882,13 +6000,16 @@ const skillsjson = [
          "it": "Stone Spear",
          "kr": "\uc2a4\ud1a4 \uc2a4\ud53c\uc5b4",
          "nl": "Stone Spear",
-         "pl": "Stone Spear",
+         "pl": "Kamienna W\u0142\u00f3cznia",
          "ru": "\u041a\u0430\u043c\u0435\u043d\u043d\u043e\u0435 \u043a\u043e\u043f\u044c\u0435",
-         "sw": "Stone Spear"
+         "sw": "Stone Spear",
+         "th": "Stone Spear"
       },
       "description": {
          "en": "Damages an enemy with a stone spear.",
          "ar": "Damages an enemy with a stone spear.",
+         "br": "Causa dano ao inimigo com uma lan\u00e7a de pedra.",
+         "cns": "\u5411\u76ee\u6807\u6295\u63b7\u950b\u5229\u7684\u77f3\u67aa\u3002",
          "de": "Den Gegner mit einem Sturm von versteinerten Speeren angreifen.",
          "fi": "Damages an enemy with a stone spear.",
          "fil": "Damages an enemy with a stone spear.",
@@ -5896,9 +6017,10 @@ const skillsjson = [
          "it": "Damages an enemy with a stone spear.",
          "kr": "\ub3cc\ub85c \ub9cc\ub4e4\uc5b4\uc9c4 \ucc3d\uc744 \ub0a0\ub824 \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Damages an enemy with a stone spear.",
-         "pl": "Damages an enemy with a stone spear.",
+         "pl": "Rzuca w przeciwnika Kamienna W\u0142\u00f3czni\u0105.",
          "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d \u0437\u0435\u043c\u043b\u0435\u0439.",
-         "sw": "Damages an enemy with a stone spear."
+         "sw": "Damages an enemy with a stone spear.",
+         "th": "Damages an enemy with a stone spear."
       },
       "icon": "eleearstnspr.png",
       "class": 9150,
@@ -6086,6 +6208,8 @@ const skillsjson = [
       "name": {
          "en": "Toggle Buff",
          "ar": "Toggle Buff",
+         "br": "Alternar Buff",
+         "cns": "Buff\u4f5c\u7528",
          "de": "Toggle Buff",
          "fi": "Toggle Buff",
          "fil": "Toggle Buff",
@@ -6095,11 +6219,14 @@ const skillsjson = [
          "nl": "Toggle Buff",
          "pl": "Toggle Buff",
          "ru": "\u0412\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435 \u044d\u0444\u0444\u0435\u043a\u0442\u043e\u0432",
-         "sw": "Toggle Buff"
+         "sw": "Toggle Buff",
+         "th": "Toggle Buff"
       },
       "description": {
          "en": "",
          "ar": "",
+         "br": "",
+         "cns": "",
          "de": "",
          "fi": "",
          "fil": "",
@@ -6109,7 +6236,8 @@ const skillsjson = [
          "nl": "",
          "pl": "",
          "ru": "",
-         "sw": ""
+         "sw": "",
+         "th": ""
       },
       "icon": "jstyoybackst.png",
       "level": 1,
@@ -6138,6 +6266,8 @@ const skillsjson = [
       "name": {
          "en": "Circle Healing",
          "ar": "Circle Healing",
+         "br": "C\u00edrculo de Cura",
+         "cns": "\u5149\u8292\u5723\u6b4c",
          "de": "Circle Healing",
          "fi": "Cicle Healing",
          "fil": "Circle Healing",
@@ -6145,13 +6275,16 @@ const skillsjson = [
          "it": "Circle Healing",
          "kr": "\uc368\ud074\ud790\ub9c1",
          "nl": "Circle Healing",
-         "pl": "Circle Healing",
+         "pl": "Kr\u0105g Leczenia",
          "ru": "\u0418\u0441\u0446\u0435\u043b\u044f\u044e\u0449\u0438\u0439 \u043a\u0440\u0443\u0433",
-         "sw": "Circle Healing"
+         "sw": "Circle Healing",
+         "th": "Circle Healing"
       },
       "description": {
          "en": "Heals party members close to you.",
          "ar": "Heals party members close to you.",
+         "br": "Cura membros de grupo que est\u00e3o pr\u00f3ximos de voc\u00ea.",
+         "cns": "\u6fc0\u53d1\u9b54\u68d2\u4ea7\u751f\u5927\u91cf\u5723\u5149\u7167\u8000\u5927\u5730\uff0c\u88ab\u5723\u5149\u6c90\u6d74\u5230\u7684\u540c\u4f34\u4f1a\u9010\u6e10\u6d88\u9664\u75b2\u60eb\u548c\u4f24\u52bf\u3002",
          "de": "Heilt Partymitglieder in deiner N\u00e4he.",
          "fi": "Parantaa ryhm\u00e4n j\u00e4seni\u00e4 l\u00e4hell\u00e4 sinua.",
          "fil": "Heals party members close to you.",
@@ -6159,9 +6292,10 @@ const skillsjson = [
          "it": "Heals party members close to you.",
          "kr": "\uac00\uae4c\uc774 \uc788\ub294 \uadf9\ub2e8\uc6d0\ub4e4\uc758 HP\ub97c \uc77c\uc815\ub7c9 \ud68c\ubcf5\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Heals party members close to you.",
-         "pl": "Heals party members close to you.",
+         "pl": "Leczy wszystkich cz\u0142onk\u00f3w dru\u017cyny wok\u00f3\u0142 ciebie.",
          "ru": "\u0418\u0441\u0446\u0435\u043b\u044f\u0435\u0442 \u043d\u0430\u0445\u043e\u0434\u044f\u0449\u0438\u0445\u0441\u044f \u043f\u043e\u0431\u043b\u0438\u0437\u043e\u0441\u0442\u0438 \u0438\u0433\u0440\u043e\u043a\u043e\u0432 \u0432\u0430\u0448\u0435\u0439 \u0442\u0440\u0443\u043f\u043f\u044b.",
-         "sw": "Heals party members close to you."
+         "sw": "Heals party members close to you.",
+         "th": "Heals party members close to you."
       },
       "icon": "asschecircle.png",
       "class": 8962,
@@ -6609,6 +6743,8 @@ const skillsjson = [
       "name": {
          "en": "Rock Crash",
          "ar": "Rock Crash",
+         "br": "Colis\u00e3o",
+         "cns": "\u79fb\u5c71\u4e4b\u672f",
          "de": "Rock Crash",
          "fi": "Rock Crash",
          "fil": "Rock Crash",
@@ -6616,13 +6752,16 @@ const skillsjson = [
          "it": "Rock Crash",
          "kr": "\uc2a4\ud30c\uc774\ud06c \uc2a4\ud1a4",
          "nl": "Rock Crash",
-         "pl": "Rock Crash",
+         "pl": "Kamienne Rozbicie",
          "ru": "\u041a\u0430\u043c\u043d\u0435\u043f\u0430\u0434",
-         "sw": "Rock Crash"
+         "sw": "Rock Crash",
+         "th": "Rock Crash"
       },
       "description": {
          "en": "Damages the enemy with a giant stone.",
          "ar": "Damages the enemy with a giant stone.",
+         "br": "Causa dano no inimigo com uma pedra gigante.",
+         "cns": "\u53ec\u5524\u5de8\u5927\u7684\u5ca9\u77f3\u63b7\u5411\u654c\u4eba\u3002",
          "de": "Dem Gegner mit einem gigantischen Felsen Schaden zuf\u00fcgen.",
          "fi": "Damages the enemy with a giant stone.",
          "fil": "Damages the enemy with a giant stone.",
@@ -6630,9 +6769,10 @@ const skillsjson = [
          "it": "Damages the enemy with a giant stone.",
          "kr": "\uac70\ub300\ud55c \ubc14\uc704\ub97c \ub5a8\uc5b4\ub728\ub824 \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Damages the enemy with a giant stone.",
-         "pl": "Damages the enemy with a giant stone.",
+         "pl": "Rzuca we wroga olbrzymim g\u0142azem. Cel b\u0119dzie zmia\u017cd\u017cony i chwilowo bardziej podatny na ataki Wiatrem.",
          "ru": "\u041d\u0430 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430 \u043e\u0431\u0440\u0443\u0448\u0438\u0432\u0430\u044e\u0442\u0441\u044f \u043a\u0430\u043c\u043d\u0438.",
-         "sw": "Damages the enemy with a giant stone."
+         "sw": "Damages the enemy with a giant stone.",
+         "th": "Damages the enemy with a giant stone."
       },
       "icon": "magrockcrash.png",
       "class": 9581,
@@ -7160,20 +7300,25 @@ const skillsjson = [
       "name": {
          "en": "Cannon Ball",
          "ar": "Cannon Ball",
+         "br": "Bala de Canh\u00e3o",
+         "cns": "\u654f\u6377\u672f",
          "de": "Cannonball",
          "fi": "Cannon Ball",
          "fil": "Cannon Ball",
          "fr": "Boulet de canon",
          "it": "Cannon Ball",
          "kr": "\uce90\ub17c\ubcfc",
-         "nl": "Cannon Ball",
-         "pl": "Cannon Ball",
+         "nl": "Kanonskogel",
+         "pl": "Kula Armatnia",
          "ru": "\u041f\u0443\u0448\u0435\u0447\u043d\u043e\u0435 \u044f\u0434\u0440\u043e",
-         "sw": "Cannon Ball"
+         "sw": "Cannon Ball",
+         "th": "Cannon Ball"
       },
       "description": {
          "en": "Increases the DEX of the target.",
          "ar": "Increases the DEX of the target.",
+         "br": "Aumenta a destreza.",
+         "cns": "\u6682\u65f6\u63d0\u9ad8\u65bd\u6cd5\u5bf9\u8c61\u7684\u654f\u6377\u3002",
          "de": "Erh\u00f6ht die Bereitwilligkeit des angew\u00e4hlten Spielers.",
          "fi": "Kasvattaa kohteen Ketteryytt\u00e4.",
          "fil": "Increases the DEX of the target.",
@@ -7181,9 +7326,10 @@ const skillsjson = [
          "it": "Increases the DEX of the target.",
          "kr": "\ub300\uc0c1\uc758 \ubbfc\ucca9\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increases the DEX of the target.",
-         "pl": "Increases the DEX of the target.",
+         "pl": "Zwi\u0119ksza DEX celu.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u043b\u043e\u0432\u043a\u043e\u0441\u0442\u044c \u0446\u0435\u043b\u0438.",
-         "sw": "Increases the DEX of the target."
+         "sw": "Increases the DEX of the target.",
+         "th": "Increases the DEX of the target."
       },
       "icon": "asschecannon.png",
       "class": 8962,
@@ -7811,6 +7957,8 @@ const skillsjson = [
       "name": {
          "en": "Buff Break",
          "ar": "Buff Break",
+         "br": "Buff Break",
+         "cns": "\u6e05\u9664",
          "de": "Buff Break",
          "fi": "Buff Break",
          "fil": "Buff Break",
@@ -7820,11 +7968,14 @@ const skillsjson = [
          "nl": "Buff Break",
          "pl": "Buff Break",
          "ru": "\u0421\u043d\u044f\u0442\u0438\u0435 \u044d\u0444\u0444\u0435\u043a\u0442\u043e\u0432",
-         "sw": "Buff Break"
+         "sw": "Buff Break",
+         "th": "Buff Break"
       },
       "description": {
          "en": "",
          "ar": "",
+         "br": "",
+         "cns": "",
          "de": "",
          "fi": "",
          "fil": "",
@@ -7834,7 +7985,8 @@ const skillsjson = [
          "nl": "",
          "pl": "",
          "ru": "",
-         "sw": ""
+         "sw": "",
+         "th": ""
       },
       "icon": "magspekestone.png",
       "level": 1,
@@ -7870,6 +8022,8 @@ const skillsjson = [
       "name": {
          "en": "Mental Sign",
          "ar": "Mental Sign",
+         "br": "Vest\u00edgio Mental",
+         "cns": "\u667a\u529b\u672f",
          "de": "Mental Sign",
          "fi": "Mental Sign",
          "fil": "Mental Sign",
@@ -7877,13 +8031,16 @@ const skillsjson = [
          "it": "Mental Sign",
          "kr": "\uba58\ud0c8\uc0ac\uc778",
          "nl": "Mental Sign",
-         "pl": "Mental Sign",
+         "pl": "Znak Umys\u0142u",
          "ru": "\u0423\u043c\u043d\u0438\u043a",
-         "sw": "Mental Sign"
+         "sw": "Mental Sign",
+         "th": "Mental Sign"
       },
       "description": {
          "en": "Increases INT of a target",
          "ar": "Increases INT of a target",
+         "br": "Aumenta a intelig\u00eancia.",
+         "cns": "\u6682\u65f6\u63d0\u9ad8\u65bd\u6cd5\u5bf9\u8c61\u7684\u667a\u529b\u3002",
          "de": "Erh\u00f6ht die Intelligenz des angew\u00e4hlten Spielers.",
          "fi": "Kasvattaa kohteen \u00c4ly\u00e4",
          "fil": "Increases INT of a target",
@@ -7891,9 +8048,10 @@ const skillsjson = [
          "it": "Increases INT of a target",
          "kr": "\ub300\uc0c1\uc758 \uc9c0\ub2a5\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increases INT of a target",
-         "pl": "Increases INT of a target",
+         "pl": "Zwi\u0119ksza INT celu.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0438\u043d\u0442\u0435\u043b\u043b\u0435\u043a\u0442 \u0446\u0435\u043b\u0438.",
-         "sw": "Increases INT of a target"
+         "sw": "Increases INT of a target",
+         "th": "Increases INT of a target"
       },
       "icon": "asschemental.png",
       "class": 8962,
@@ -8521,6 +8679,8 @@ const skillsjson = [
       "name": {
          "en": "Burningfield",
          "ar": "Burningfield",
+         "br": "Campo em Chamas",
+         "cns": "\u706b\u9677\u9631",
          "de": "Burning Field",
          "fi": "Burningfield",
          "fil": "Burningfield",
@@ -8528,13 +8688,16 @@ const skillsjson = [
          "it": "Burningfield",
          "kr": "\ubc84\ub2dd\ud544\ub4dc",
          "nl": "Burningfield",
-         "pl": "Burningfield",
+         "pl": "P\u0142on\u0105ce Pole",
          "ru": "\u0413\u043e\u0440\u044f\u0449\u0430\u044f \u0437\u0435\u043c\u043b\u044f",
-         "sw": "Burningfield"
+         "sw": "Burningfield",
+         "th": "Burningfield"
       },
       "description": {
          "en": "Does damage to the enemy over a period of time",
          "ar": "Does damage to the enemy over a period of time",
+         "br": "Causa dano ao inimigo ao longo de um per\u00edodo de tempo.",
+         "cns": "\u5c06\u6307\u5b9a\u7684\u5730\u533a\u53d8\u6210\u706b\u6d77\uff0c\u5bf9\u654c\u4eba\u65bd\u52a0\u6301\u7eed\u653b\u51fb\u3002",
          "de": "Den Gegner kontinuierlich mit einer Feuerflut angreifen.",
          "fi": "Does damage to the enemy over a period of time",
          "fil": "Does damage to the enemy over a period of time",
@@ -8542,9 +8705,10 @@ const skillsjson = [
          "it": "Does damage to the enemy over a period of time",
          "kr": "\uc9c0\uc815\ub41c \uc9c0\uc5ed\uc744 \ubd88\ubc14\ub2e4\ub85c \ub9cc\ub4e4\uc5b4 \uc801\ub4e4\uc5d0\uac8c \uc9c0\uc18d\uc801\uc778 \uacf5\uaca9\uc744 \ud569\ub2c8\ub2e4.",
          "nl": "Does damage to the enemy over a period of time",
-         "pl": "Does damage to the enemy over a period of time",
-         "ru": "\u0412\u044b \u043f\u043e\u043b\u0443\u0447\u0430\u0435\u0442\u0435 \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u044b\u0439 \u0443\u0440\u043e\u043d.",
-         "sw": "Does damage to the enemy over a period of time"
+         "pl": "Podpala ziemi\u0119 by zadawa\u0107 ci\u0105g\u0142e obra\u017cenia wrogom w zasi\u0119gu.",
+         "ru": "\u041f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a \u043f\u043e\u043b\u0443\u0447\u0430\u0435\u0442 \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u044b\u0439 \u0443\u0440\u043e\u043d.",
+         "sw": "Does damage to the enemy over a period of time",
+         "th": "Does damage to the enemy over a period of time"
       },
       "icon": "elefirbunfil.png",
       "level": 1,
@@ -8684,6 +8848,8 @@ const skillsjson = [
       "name": {
          "en": "Auto Shot",
          "ar": "Auto Shot",
+         "br": "Frenesi do Arco",
+         "cns": "\u81ea\u52a8\u5c04\u51fb",
          "de": "Auto Shot",
          "fi": "Auto Shot",
          "fil": "Auto Shot",
@@ -8691,13 +8857,16 @@ const skillsjson = [
          "it": "Auto Shot",
          "kr": "\uc624\ud1a0 \uc0f7",
          "nl": "Auto Shot",
-         "pl": "Auto Shot",
+         "pl": "Automatyczne Strzelanie",
          "ru": "\u041e\u0447\u0435\u0440\u0435\u0434\u044c",
-         "sw": "Auto Shot"
+         "sw": "Auto Shot",
+         "th": "Auto Shot"
       },
       "description": {
          "en": "Fires arrows multiple times. Can reduce enemies Accuracy.",
          "ar": "Fires arrows multiple times. Can reduce enemies Accuracy.",
+         "br": "Dispara flechas v\u00e1rias vezes. Pode reduzir a precis\u00e3o do inimigo.",
+         "cns": "\u8fde\u7eed\u5c06\u591a\u53d1\u5f13\u7bad\u96c6\u4e2d\u5c04\u5411\u4e00\u4e2a\u70b9\uff0c\u6709\u4e00\u5b9a\u51e0\u7387\u964d\u4f4e\u5bf9\u65b9\u547d\u4e2d\u3002",
          "de": "Schie\u00dft schnell einen Pfeil auf den Gegner. Der Gegner kann in Dunkelheit geh\u00fcllt werden.",
          "fi": "Fires arrows multiple times. Can reduce enemies Accuracy.",
          "fil": "Fires arrows multiple times. Can reduce enemies Accuracy.",
@@ -8705,9 +8874,10 @@ const skillsjson = [
          "it": "Fires arrows multiple times. Can reduce enemies Accuracy.",
          "kr": "\uc801\uc744 \ud5a5\ud574 \uc5f0\uc18d\ud558\uc5ec \ube60\ub978 \ub3d9\uc791\uc73c\ub85c \ud654\uc0b4\uc744 \ub0a0\ub9bd\ub2c8\ub2e4. \uc774\ub54c \uc801\uc740 \uc77c\uc815 \ud655\ub960\ub85c \uc5b4\ub460 \uc0c1\ud0dc\uac00 \ub429\ub2c8\ub2e4.",
          "nl": "Fires arrows multiple times. Can reduce enemies Accuracy.",
-         "pl": "Fires arrows multiple times. Can reduce enemies Accuracy.",
+         "pl": "Strzela kilkukrotnie we wroga. Mo\u017ce obni\u017cy\u0107 jego celno\u015b\u0107.",
          "ru": "\u0411\u044b\u0441\u0442\u0440\u044b\u0435 \u0432\u044b\u0441\u0442\u0440\u0435\u043b\u044b, \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u044e\u0449\u0438\u0435 \u043e\u0441\u043b\u0435\u043f\u0438\u0442\u044c \u0432\u0440\u0430\u0433\u0430.",
-         "sw": "Fires arrows multiple times. Can reduce enemies Accuracy."
+         "sw": "Fires arrows multiple times. Can reduce enemies Accuracy.",
+         "th": "Fires arrows multiple times. Can reduce enemies Accuracy."
       },
       "icon": "acrbowauto.png",
       "class": 9098,
@@ -9256,6 +9426,8 @@ const skillsjson = [
       "name": {
          "en": "Piercing Serpent",
          "ar": "Piercing Serpent",
+         "br": "Serpente Perfurante",
+         "cns": "\u62f3\u4e4b\u805a",
          "de": "Piercing Serpent",
          "fi": "Piercing Serpent",
          "fil": "Piercing Serpent",
@@ -9263,13 +9435,16 @@ const skillsjson = [
          "it": "Piercing Serpent",
          "kr": "\ud53c\uc5b4\uc2f1 \uc11c\ud39c\ud2b8",
          "nl": "Piercing Serpent",
-         "pl": "Piercing Serpent",
+         "pl": "Przebijaj\u0105cy W\u0105\u017c",
          "ru": "\u0411\u0440\u043e\u0441\u043e\u043a \u0437\u043c\u0435\u0438",
-         "sw": "Piercing Serpent"
+         "sw": "Piercing Serpent",
+         "th": "Piercing Serpent"
       },
       "description": {
          "en": "Fires a piercing beam at the target. ",
          "ar": "Fires a piercing beam at the target. ",
+         "br": "Atira um raio penetrante no alvo.",
+         "cns": "\u5c06\u5143\u6c14\u96c6\u4e2d\u5230\u62f3\u5957\u4e0a\uff0c\u7784\u51c6\u5904\u4e8e\u540c\u4e00\u6761\u7ebf\u4e0a\u7684\u654c\u4eba\u731b\u529b\u53d1\u5c04\u3002",
          "de": "Einen Angriff gegen den Feind, in dem man Geisteskraft aus dem Knuckle schie\u00dft.",
          "fi": "Ampuu l\u00e4p\u00e4isev\u00e4n s\u00e4teen kohteeseen.",
          "fil": "Fires a piercing beam at the target. ",
@@ -9277,9 +9452,10 @@ const skillsjson = [
          "it": "Fires a piercing beam at the target. ",
          "kr": "\ub108\ud074\ud574\uba38\uc5d0 \uc21c\uac04\uc801\uc73c\ub85c \uae30\ub97c \ubaa8\uc558\ub2e4\uac00 \uc804\ubc29\uc758 \uc801\ub4e4\uc744 \ud5a5\ud574 \ubc1c\uc0ac\ud558\uc5ec \uac00\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Fires a piercing beam at the target. ",
-         "pl": "Fires a piercing beam at the target. ",
+         "pl": "Przebija wszystkich wrog\u00f3w przed tob\u0105 za pomoc\u0105 promienia energii.",
          "ru": "\u0420\u0435\u0437\u043a\u0438\u0439 \u0440\u044b\u0432\u043e\u043a \u0432\u043f\u0435\u0440\u0435\u0434 \u0438 \u043c\u043e\u0449\u043d\u044b\u0439 \u0443\u0434\u0430\u0440.",
-         "sw": "Fires a piercing beam at the target. "
+         "sw": "Fires a piercing beam at the target. ",
+         "th": "Fires a piercing beam at the target. "
       },
       "icon": "bilpiercingserpent.png",
       "class": 7424,
@@ -9301,8 +9477,8 @@ const skillsjson = [
       "skillPoints": 3,
       "levels": [
          {
-            "minAttack": 96,
-            "maxAttack": 97,
+            "minAttack": 110,
+            "maxAttack": 111,
             "consumedFP": 50,
             "casting": 1,
             "spellRange": 4,
@@ -9310,15 +9486,15 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.52,
+                  "scale": 4.52,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 98,
-            "maxAttack": 99,
+            "minAttack": 111,
+            "maxAttack": 112,
             "consumedFP": 55,
             "casting": 1,
             "spellRange": 4,
@@ -9326,103 +9502,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.54,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 100,
-            "maxAttack": 101,
-            "consumedFP": 60,
-            "casting": 1,
-            "spellRange": 4,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 3.56,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 102,
-            "maxAttack": 103,
-            "consumedFP": 65,
-            "casting": 1,
-            "spellRange": 4,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 3.58,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 104,
-            "maxAttack": 105,
-            "consumedFP": 70,
-            "casting": 1,
-            "spellRange": 4,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 3.6,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 106,
-            "maxAttack": 107,
-            "consumedFP": 75,
-            "casting": 1,
-            "spellRange": 4,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 3.62,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 108,
-            "maxAttack": 109,
-            "consumedFP": 80,
-            "casting": 1,
-            "spellRange": 4,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 3.64,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 110,
-            "maxAttack": 111,
-            "consumedFP": 85,
-            "casting": 1,
-            "spellRange": 4,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 3.66,
+                  "scale": 4.54,
                   "pvp": true,
                   "pve": true
                }
@@ -9431,14 +9511,30 @@ const skillsjson = [
          {
             "minAttack": 112,
             "maxAttack": 113,
-            "consumedFP": 90,
+            "consumedFP": 60,
             "casting": 1,
             "spellRange": 4,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.68,
+                  "scale": 4.56,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 113,
+            "maxAttack": 114,
+            "consumedFP": 65,
+            "casting": 1,
+            "spellRange": 4,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.58,
                   "pvp": true,
                   "pve": true
                }
@@ -9447,6 +9543,86 @@ const skillsjson = [
          {
             "minAttack": 114,
             "maxAttack": 115,
+            "consumedFP": 70,
+            "casting": 1,
+            "spellRange": 4,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.6,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 115,
+            "maxAttack": 116,
+            "consumedFP": 75,
+            "casting": 1,
+            "spellRange": 4,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.62,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 116,
+            "maxAttack": 117,
+            "consumedFP": 80,
+            "casting": 1,
+            "spellRange": 4,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.64,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 117,
+            "maxAttack": 118,
+            "consumedFP": 85,
+            "casting": 1,
+            "spellRange": 4,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.66,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 118,
+            "maxAttack": 119,
+            "consumedFP": 90,
+            "casting": 1,
+            "spellRange": 4,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.68,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 119,
+            "maxAttack": 120,
             "consumedFP": 100,
             "casting": 1,
             "spellRange": 4,
@@ -9454,7 +9630,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.7,
+                  "scale": 4.7,
                   "pvp": true,
                   "pve": true
                }
@@ -9467,6 +9643,8 @@ const skillsjson = [
       "name": {
          "en": "Ice Missile",
          "ar": "Ice Missile",
+         "br": "M\u00edssil de Gelo",
+         "cns": "\u6781\u5730\u51b0\u67f1",
          "de": "Ice Missile",
          "fi": "Ice Missile",
          "fil": "Ice Missile",
@@ -9474,13 +9652,16 @@ const skillsjson = [
          "it": "Ice Missile",
          "kr": "\uc544\uc774\uc2a4 \ubbf8\uc0ac\uc77c",
          "nl": "Ice Missile",
-         "pl": "Ice Missile",
+         "pl": "Lodowy Pocisk",
          "ru": "\u041b\u0435\u0434\u044f\u043d\u0430\u044f \u0441\u0442\u0440\u0435\u043b\u0430",
-         "sw": "Ice Missile"
+         "sw": "Ice Missile",
+         "th": "Ice Missile"
       },
       "description": {
          "en": "Blasts the enemy with a missile of ice. Chance to reduce the speed of the target.",
          "ar": "Blasts the enemy with a missile of ice. Chance to reduce the speed of the target.",
+         "br": "Atinge o inimigo com um m\u00edssil de gelo. Tem chance de reduzir a velocidade do alvo.",
+         "cns": "\u501f\u52a9\u795e\u5947\u529b\u91cf\u53ec\u5524\u6781\u5730\u51b0\u67f1\uff0c\u5bf9\u76ee\u6807\u9020\u6210\u5de8\u5927\u4f24\u5bb3\uff0c\u6709\u4e00\u5b9a\u51e0\u7387\u964d\u4f4e\u5bf9\u65b9\u7684\u79fb\u52a8\u901f\u5ea6\u3002",
          "de": "Dem Gegner durch das Durchbohren mit Eis Schaden zuf\u00fcgen.",
          "fi": "Iskee viholliseen j\u00e4\u00e4ohjuksella. Mahdollisuus alentaa kohteen nopeutta.",
          "fil": "Blasts the enemy with a missile of ice. Chance to reduce the speed of the target.",
@@ -9488,9 +9669,10 @@ const skillsjson = [
          "it": "Blasts the enemy with a missile of ice. Chance to reduce the speed of the target.",
          "kr": "\ucc28\uac00\uc6b4 \uc5bc\uc74c \uc1a1\uacf3\uc744 \ub0a0\ub824 \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Blasts the enemy with a missile of ice. Chance to reduce the speed of the target.",
-         "pl": "Blasts the enemy with a missile of ice. Chance to reduce the speed of the target.",
-         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d \u0432\u043e\u0434\u043e\u0439.",
-         "sw": "Blasts the enemy with a missile of ice. Chance to reduce the speed of the target."
+         "pl": "Trafia wroga lodowym pociskiem. Szansa na obni\u017cenie pr\u0119dko\u015bci celu.",
+         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d \u0432\u043e\u0434\u043e\u0439 \u0441 \u0448\u0430\u043d\u0441\u043e\u043c \u0443\u043c\u0435\u043d\u044c\u0448\u0438\u0442\u044c \u0435\u0433\u043e \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u044c.",
+         "sw": "Blasts the enemy with a missile of ice. Chance to reduce the speed of the target.",
+         "th": "Blasts the enemy with a missile of ice. Chance to reduce the speed of the target."
       },
       "icon": "magwaticemis.png",
       "class": 9581,
@@ -10138,6 +10320,8 @@ const skillsjson = [
       "name": {
          "en": "Junk Arrow",
          "ar": "Junk Arrow",
+         "br": "Tiros R\u00e1pidos",
+         "cns": "\u4e71\u7bad\u5c04\u51fb",
          "de": "Junk Arrow",
          "fi": "Junk Arrow",
          "fil": "Junk Arrow",
@@ -10147,11 +10331,14 @@ const skillsjson = [
          "nl": "Junk Arrow",
          "pl": "Junk Arrow",
          "ru": "\u0421\u0435\u044f\u0442\u0435\u043b\u044c \u0441\u0442\u0440\u0435\u043b",
-         "sw": "Junk Arrow"
+         "sw": "Junk Arrow",
+         "th": "Junk Arrow"
       },
       "description": {
          "en": "Fire arrows wildly.",
          "ar": "Fire arrows wildly.",
+         "br": "Dispara flechas aleat\u00f3riamente.",
+         "cns": "\u65e0\u76ee\u6807\u5730\u968f\u610f\u4e71\u5c04\u3002",
          "de": "Schie\u00dft einen Pfeil, der den Gegner vergiften kann. Die Treffsicherheit ist niedrig.",
          "fi": "Fire arrows wildly.",
          "fil": "Fire arrows wildly.",
@@ -10160,8 +10347,9 @@ const skillsjson = [
          "kr": "\uc801\uc744 \ud5a5\ud574 \ud654\uc0b4\uc744 \ub9c8\uad6c \uc3e9\ub2c8\ub2e4. \ud55c\ubc88\uc5d0 \ub9ce\uc740 \uacf5\uaca9\uc744 \ud558\uc9c0\ub9cc, \ud654\uc0b4\uc758 \uc801\uc911\ub960\uc740 \ub5a8\uc5b4\uc9d1\ub2c8\ub2e4.",
          "nl": "Fire arrows wildly.",
          "pl": "Fire arrows wildly.",
-         "ru": "\u041f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u0432\u044b\u043f\u0443\u0441\u0442\u0438\u0442\u044c \u0441\u0440\u0430\u0437\u0443 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0441\u0442\u0440\u0435\u043b. \u0422\u043e\u0447\u043d\u043e\u0441\u0442\u044c \u0441\u0442\u0440\u0435\u043b\u044c\u0431\u044b \u043f\u0440\u0438 \u044d\u0442\u043e\u043c \u043f\u0430\u0434\u0430\u0435\u0442.",
-         "sw": "Fire arrows wildly."
+         "ru": "\u0411\u044b\u0441\u0442\u0440\u043e, \u043d\u043e \u043d\u0435 \u043e\u0447\u0435\u043d\u044c \u0442\u043e\u0447\u043d\u043e \u0432\u044b\u043f\u0443\u0441\u043a\u0430\u0435\u0442 \u0441\u0440\u0430\u0437\u0443 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0441\u0442\u0440\u0435\u043b.",
+         "sw": "Fire arrows wildly.",
+         "th": "Fire arrows wildly."
       },
       "icon": "acrbowjunkbo.png",
       "class": 9098,
@@ -10525,6 +10713,8 @@ const skillsjson = [
       "name": {
          "en": "Gvur Tialla",
          "ar": "Gvur Tialla",
+         "br": "Gvur Tialla",
+         "cns": "\u6062\u590d\u672f",
          "de": "Gvur Tialla",
          "fi": "Gvur Tialla",
          "fil": "Gvur Tialla",
@@ -10534,11 +10724,14 @@ const skillsjson = [
          "nl": "Gvur Tialla",
          "pl": "Gvur Tialla",
          "ru": "\u041e\u0447\u0438\u0449\u0435\u043d\u0438\u0435",
-         "sw": "Gvur Tialla"
+         "sw": "Gvur Tialla",
+         "th": "Gvur Tialla"
       },
       "description": {
          "en": "Removes de-buffs from a target.",
          "ar": "Removes de-buffs from a target.",
+         "br": "Remove qualquer efeito negativo do alvo.",
+         "cns": "\u6062\u590d\u65bd\u6cd5\u5bf9\u8c61\u7684\u5f02\u5e38\u72b6\u6001\u3002",
          "de": "Entfernt alle negativen Effekte von einem Spieler.",
          "fi": "Poistaa kohteelta haittavaikutukset.",
          "fil": "Removes de-buffs from a target.",
@@ -10546,9 +10739,10 @@ const skillsjson = [
          "it": "Removes de-buffs from a target.",
          "kr": "\ub300\uc0c1\uc5d0\uac8c \uac78\ub9b0 \uc0c1\ud0dc\uc774\uc0c1\uc744 \ud68c\ubcf5\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Removes de-buffs from a target.",
-         "pl": "Removes de-buffs from a target.",
+         "pl": "Usuwa kl\u0105twy z celu.",
          "ru": "\u0421\u043d\u0438\u043c\u0430\u0435\u0442 \u0441 \u0446\u0435\u043b\u0438 \u043e\u0442\u0440\u0438\u0446\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u044d\u0444\u0444\u0435\u043a\u0442\u044b.",
-         "sw": "Removes de-buffs from a target."
+         "sw": "Removes de-buffs from a target.",
+         "th": "Removes de-buffs from a target."
       },
       "icon": "rincuregvur.png",
       "class": 9389,
@@ -10607,6 +10801,8 @@ const skillsjson = [
       "name": {
          "en": "Crucio Spell",
          "ar": "Crucio Spell",
+         "br": "Feiti\u00e7o Crucio",
+         "cns": "\u80fd\u91cf\u53cd\u5f39",
          "de": "Crucio Spell",
          "fi": "Crucio Spell",
          "fil": "Crucio Spell",
@@ -10614,23 +10810,27 @@ const skillsjson = [
          "it": "Crucio Spell",
          "kr": "\ud06c\ub8e8\uc2dc\uc624 \uc2a4\ud3a0",
          "nl": "Crucio Spell",
-         "pl": "Crucio Spell",
+         "pl": "Kl\u0105twa B\u00f3lu",
          "ru": "\u041f\u0430\u043b\u0430\u0447",
-         "sw": "Crucio Spell"
+         "sw": "Crucio Spell",
+         "th": "Crucio Spell"
       },
       "description": {
          "en": "Deals damage to an enemy equal to 1.75x the amount the enemy deals.",
          "ar": "Deals damage to an enemy equal to 1.75x the amount the enemy deals.",
+         "br": "Causa dano a um inimigo igual a 1.75x a quantidade de dano que o inimigo causa.",
+         "cns": "\u5c06\u5bf9\u65b9\u7269\u7406\u6280\u80fd\u4ea7\u751f\u7684\u4f24\u5bb3\u7ffb\u500d\u53cd\u5f39\u56de\u53bb\u3002",
          "de": "Die Sch\u00e4den von Skills und magischen Attacken zur\u00fcckwerfen.",
          "fi": "Deals damage to an enemy equal to 1.75x the amount the enemy deals.",
          "fil": "Deals damage to an enemy equal to 1.75x the amount the enemy deals.",
-         "fr": "Enveloppe le Sorcier d'une aura magique qui r\u00e9percute sur l'ennemi les d\u00e9g\u00e2ts re\u00e7us, pouvant jusqu'\u00e0 doubler les dommages subis",
+         "fr": "Enveloppe le Sorcier d'une aura magique qui r\u00e9percute sur l'ennemi 1,75x les d\u00e9g\u00e2ts re\u00e7us.",
          "it": "Deals damage to an enemy equal to 1.75x the amount the enemy deals.",
          "kr": "\uc801\uc5d0\uac8c \ubc1b\uc740 \ub370\ubbf8\uc9c0\uc758 \uc77c\ubd80\ub97c \ub3cc\ub824\uc900\ub2e4. (\uce90\ub9ad\ud130, \ubaac\uc2a4\ud130\ub294 \uac01\uac01 \ub2e4\ub978 \ub370\ubbf8\uc9c0 \uacf5\uc2dd \uc801\uc6a9)",
          "nl": "Deals damage to an enemy equal to 1.75x the amount the enemy deals.",
-         "pl": "Deals damage to an enemy equal to 1.75x the amount the enemy deals.",
-         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d \u0432 \u0434\u0432\u0430 \u0440\u0430\u0437\u0430 \u0431\u043e\u043b\u044c\u0448\u0435 \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u043d\u043e\u0433\u043e.",
-         "sw": "Deals damage to an enemy equal to 1.75x the amount the enemy deals."
+         "pl": "Zadaje wrogom 1,75x obra\u017ce\u0144 jakie zadaj\u0105 tobie.",
+         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d \u0432 1.75 \u0440\u0430\u0437\u0430 \u0431\u043e\u043b\u044c\u0448\u0435 \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u043d\u043e\u0433\u043e \u0432\u0430\u043c\u0438.",
+         "sw": "Deals damage to an enemy equal to 1.75x the amount the enemy deals.",
+         "th": "Deals damage to an enemy equal to 1.75x the amount the enemy deals."
       },
       "icon": "psycruciospell.png",
       "class": 5709,
@@ -10645,7 +10845,7 @@ const skillsjson = [
       ],
       "weapon": "wand",
       "combo": "general",
-      "debuff": true,
+      "debuff": false,
       "flying": true,
       "passive": false,
       "target": "currentplayer",
@@ -10878,20 +11078,25 @@ const skillsjson = [
       "name": {
          "en": "Strongwind",
          "ar": "Strongwind",
+         "br": "Vento Forte",
+         "cns": "\u9f99\u5377\u98d3\u98ce",
          "de": "Strongwind",
          "fi": "Strongwind",
          "fil": "Strongwind",
          "fr": "Bourrasque",
          "it": "Strongwind",
          "kr": "\uc2a4\ud2b8\ub871\uc708\ub4dc",
-         "nl": "Strongwind",
-         "pl": "Strongwind",
+         "nl": "Harde wind",
+         "pl": "Silny Podmuch",
          "ru": "\u041f\u043e\u0440\u044b\u0432 \u0432\u0435\u0442\u0440\u0430",
-         "sw": "Strongwind"
+         "sw": "Strongwind",
+         "th": "Strongwind"
       },
       "description": {
          "en": "Ranged, wind attack that moves the enemy.",
          "ar": "Ranged, wind attack that moves the enemy.",
+         "br": "Ataque de vento a distancia que empurra o inimigo.",
+         "cns": "\u501f\u52a9\u6cd5\u529b\u4ea7\u751f\u9f99\u5377\u98ce\uff0c\u7ed9\u5bf9\u65b9\u9020\u6210\u8f83\u9ad8\u7684\u4f24\u5bb3\uff0c\u5e76\u6709\u6982\u7387\u5c06\u5bf9\u65b9\u51fb\u9000\u3002",
          "de": "Dem Gegner durch einen starken Wind Schaden zuf\u00fcgen. Der Gegner wird dabei zur\u00fcckgesto\u00dfen.",
          "fi": "Et\u00e4 tuulihy\u00f6kk\u00e4ys joka liikuttaa vihollista.",
          "fil": "Ranged, wind attack that moves the enemy.",
@@ -10899,9 +11104,10 @@ const skillsjson = [
          "it": "Ranged, wind attack that moves the enemy.",
          "kr": "\uac15\ud55c \ubc14\ub78c\uc73c\ub85c \uc801\uc5d0\uac8c \ub0a0\ub824 \uacf5\uaca9\ud569\ub2c8\ub2e4. \uc774\ub54c \uc801\uc744 \ubc18\ub300 \ubc29\ud5a5\uc73c\ub85c \ubc00\uc5b4\ub0c5\ub2c8\ub2e4.",
          "nl": "Ranged, wind attack that moves the enemy.",
-         "pl": "Ranged, wind attack that moves the enemy.",
+         "pl": "Odpycha wroga pot\u0119\u017cnym podmuchem.",
          "ru": "\u0410\u0442\u0430\u043a\u0430 \u0434\u0430\u043b\u044c\u043d\u0435\u0433\u043e \u0431\u043e\u044f, \u043e\u0442\u0431\u0440\u0430\u0441\u044b\u0432\u0430\u044e\u0449\u0430\u044f \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430.",
-         "sw": "Ranged, wind attack that moves the enemy."
+         "sw": "Ranged, wind attack that moves the enemy.",
+         "th": "Ranged, wind attack that moves the enemy."
       },
       "icon": "magwindstrong.png",
       "class": 9581,
@@ -11249,6 +11455,8 @@ const skillsjson = [
       "name": {
          "en": "Buff Break X",
          "ar": "Buff Break X",
+         "br": "Buff Break X",
+         "cns": "\u6d01\u51c0",
          "de": "Buff Break X",
          "fi": "Buff Break X",
          "fil": "Buff Break X",
@@ -11258,11 +11466,14 @@ const skillsjson = [
          "nl": "Buff Break X",
          "pl": "Buff Break X",
          "ru": "\u0421\u043d\u044f\u0442\u0438\u0435 \u044d\u0444\u0444\u0435\u043a\u0442\u043e\u0432 \u0425",
-         "sw": "Buff Break X"
+         "sw": "Buff Break X",
+         "th": "Buff Break X"
       },
       "description": {
          "en": "",
          "ar": "",
+         "br": "",
+         "cns": "",
          "de": "",
          "fi": "",
          "fil": "",
@@ -11272,7 +11483,8 @@ const skillsjson = [
          "nl": "",
          "pl": "",
          "ru": "",
-         "sw": ""
+         "sw": "",
+         "th": ""
       },
       "icon": "magspekestone.png",
       "level": 1,
@@ -11308,6 +11520,8 @@ const skillsjson = [
       "name": {
          "en": "Reflex Hit",
          "ar": "\u0627\u0644\u0625\u0646\u062a\u0642\u0627\u0645",
+         "br": "Golpe de Reflexo",
+         "cns": "\u7206\u88c2\u6012\u51fb",
          "de": "Reflex Hit",
          "fi": "Reflex Hit",
          "fil": "Reflex Hit",
@@ -11315,13 +11529,16 @@ const skillsjson = [
          "it": "Vendetta",
          "kr": "\ub9ac\ud50c\ub809\uc2a4 \ud788\ud2b8",
          "nl": "Reflex Hit",
-         "pl": "Reflex Hit",
+         "pl": "Cios Zwrotny",
          "ru": "\u041e\u0442\u0440\u0430\u0436\u0435\u043d\u0438\u0435",
-         "sw": "Reflex Hit"
+         "sw": "Reflex Hit",
+         "th": "Reflex Hit"
       },
       "description": {
          "en": "This skill absorbs one attack and releases back at an enemy.",
          "ar": "\u062a\u062c\u0645\u064a\u0639 \u0627\u0644\u0625\u0635\u0627\u0628\u0627\u062a \u0627\u0644\u0645\u062a\u0644\u0642\u0627\u0629 \u0648 \u0627\u0631\u0633\u0627\u0644\u0647\u0627 \u0646\u062d\u0648 \u0627\u0644\u062e\u0635\u0645.",
+         "br": "Esta habilidade absorve um ataque e libera de volta em um inimigo.",
+         "cns": "\u5e26\u6709\u7206\u70b8\u6548\u679c\u7684\u6124\u6012\u4e00\u51fb\u3002",
          "de": "Ein Hieb gegen den Gegner, der den Schaden des Angreifers reflektiert.",
          "fi": "T\u00e4m\u00e4 taito imee itseens\u00e4 yhden hy\u00f6kk\u00e4yksen ja vapauttaa sen takaisin vihollista kohti.",
          "fil": "This skill absorbs one attack and releases back at an enemy.",
@@ -11329,9 +11546,10 @@ const skillsjson = [
          "it": "Attacco di mischia a cui si aggiunge una parte dei danni subito nella fase di preparazione.",
          "kr": "\uc801\uc73c\ub85c\ubd80\ud130 \ubc1b\ub294 \ucda9\uaca9\uc5d0 \uc790\uc2e0\uc758 \ud798\uc744 \ub354\ud558\uc5ec \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "This skill absorbs one attack and releases back at an enemy.",
-         "pl": "This skill absorbs one attack and releases back at an enemy.",
-         "ru": "\u041f\u0440\u043e\u0432\u043e\u0434\u0438\u0442 \u0430\u0442\u0430\u043a\u0443, \u0437\u0430\u0440\u044f\u0436\u0430\u0435\u043c\u0443\u044e \u043f\u043e\u043b\u0443\u0447\u0430\u0435\u043c\u044b\u043c \u0443\u0440\u043e\u043d\u043e\u043c",
-         "sw": "This skill absorbs one attack and releases back at an enemy."
+         "pl": "Absorbuje atak przeciwnika i zwraca go ze zwi\u0119kszon\u0105 si\u0142\u0105.",
+         "ru": "\u041a\u043e\u043d\u0442\u0440\u0430\u0442\u0430\u043a\u0443\u0435\u0442 \u0432\u0440\u0430\u0433\u0430 \u0435\u0433\u043e \u0436\u0435 \u0443\u0440\u043e\u043d\u043e\u043c.",
+         "sw": "This skill absorbs one attack and releases back at an enemy.",
+         "th": "This skill absorbs one attack and releases back at an enemy."
       },
       "icon": "meronereflex.png",
       "class": 764,
@@ -11717,21 +11935,26 @@ const skillsjson = [
       "id": 1986,
       "name": {
          "en": "Slash",
-         "ar": "Slash",
+         "ar": "\u0633\u0644\u062e\u0629",
+         "br": "Golpear",
+         "cns": "\u9006\u624b\u56de\u65cb",
          "de": "Splash",
          "fi": "Slash",
          "fil": "Slash",
          "fr": "Fulgurance",
          "it": "Slash",
          "kr": "\uc2a4\ud50c\ub798\uc26c",
-         "nl": "Slash",
-         "pl": "Slash",
+         "nl": "Hakken",
+         "pl": "Podw\u00f3jne Ci\u0119cie",
          "ru": "\u041f\u043e\u0440\u0435\u0437",
-         "sw": "Slash"
+         "sw": "Slash",
+         "th": "Slash"
       },
       "description": {
          "en": "Strikes the enemy two times, in rapid succession.",
          "ar": "\u062a\u062c\u0645\u0639 \u0627\u0644\u0642\u0648\u0649 \u0644\u0645\u062f\u0629 \u0648\u062c\u064a\u0632\u0629\u060c \u062b\u0645 \u062a\u0648\u062c\u0647 \u0636\u0631\u0628\u062a\u064a\u0646 \u0645\u062a\u062a\u0627\u0644\u064a\u062a\u064a\u0646 \u0646\u062d\u0648 \u0627\u0644\u062e\u0635\u0645.",
+         "br": "Golpeia o inimigo duas vezes em sucess\u00f5es r\u00e1pidas.",
+         "cns": "\u8d77\u59cb\u6280\u80fd\uff0c\u5229\u7528\u8eab\u4f53\u7684\u53cd\u4f5c\u7528\u529b\uff0c\u77ac\u95f4\u8fde\u7eed\u653b\u51fb\u5bf9\u65b9\u4e24\u6b21\u3002",
          "de": "Ein Skill, um den Feind 2x mit konzentrierter Energie zu schlagen.",
          "fi": "Iskee vihollista kaksi kertaa nopeasti per\u00e4j\u00e4lkeen.",
          "fil": "Strikes the enemy two times, in rapid succession.",
@@ -11739,9 +11962,10 @@ const skillsjson = [
          "it": "Carica l'energia e colpisce l'avversario due volte.",
          "kr": "\uc2a4\ud0ed\uc2a4\ud0ac\ub85c \ubab8\uc744 \uad7d\ud600 \ud798\uc744 \ubaa8\uc740 \ub4a4 \ubc18\ub3d9\uc744 \uc774\uc6a9\ud558\uc5ec 2\ud68c \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Strikes the enemy two times, in rapid succession.",
-         "pl": "Strikes the enemy two times, in rapid succession.",
+         "pl": "Rozpoczyna kombo dwoma, szybkimi ci\u0119ciami.",
          "ru": "\u0414\u0432\u0430 \u0431\u044b\u0441\u0442\u0440\u044b\u0445 \u0443\u0434\u0430\u0440\u0430 \u043f\u043e \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443.",
-         "sw": "Strikes the enemy two times, in rapid succession."
+         "sw": "Strikes the enemy two times, in rapid succession.",
+         "th": "Strikes the enemy two times, in rapid succession."
       },
       "icon": "meronesplmas.png",
       "class": 764,
@@ -12043,6 +12267,8 @@ const skillsjson = [
       "name": {
          "en": "Bow Mastery",
          "ar": "Bow Mastery",
+         "br": "Maestria do Arco",
+         "cns": "\u5f13\u672f\u9886\u609f",
          "de": "Bow Mastery",
          "fi": "Bow Mastery",
          "fil": "Bow Mastery",
@@ -12050,13 +12276,16 @@ const skillsjson = [
          "it": "Bow Mastery",
          "kr": "\ubcf4\uc6b0 \ub9c8\uc2a4\ud130\ub9ac",
          "nl": "Bow Mastery",
-         "pl": "Bow Mastery",
+         "pl": "Mistrzostwo \u0141uku",
          "ru": "\u041c\u0430\u0441\u0442\u0435\u0440 \u0441\u0442\u0440\u0435\u043b\u044c\u0431\u044b",
-         "sw": "Bow Mastery"
+         "sw": "Bow Mastery",
+         "th": "Bow Mastery"
       },
       "description": {
          "en": "Increases damage done with a Bow.",
          "ar": "Increases damage done with a Bow.",
+         "br": "Aumenta o dano causado com arcos.",
+         "cns": "\u6682\u65f6\u63d0\u9ad8\u5f13\u7bad\u7684\u653b\u51fb\u529b\u3002",
          "de": "Die Angriffskraft erh\u00f6ht sich, wenn du einen Bogen benutzt.",
          "fi": "Increases damage done with a Bow.",
          "fil": "Increases damage done with a Bow.",
@@ -12064,9 +12293,10 @@ const skillsjson = [
          "it": "Increases damage done with a Bow.",
          "kr": "\ubcf4\uc6b0\uc758 \uc0ac\uc6a9 \ub2a5\ub825\uc744 \ub192\uc5ec\uc11c \uacf5\uaca9\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increases damage done with a Bow.",
-         "pl": "Increases damage done with a Bow.",
-         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0443\u0440\u043e\u043d \u0438 \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u044c \u0430\u0442\u0430\u043a\u0438 \u043f\u0440\u0438 \u0441\u0442\u0440\u0435\u043b\u044c\u0431\u0435 \u0438\u0437 \u043b\u0443\u043a\u0430.",
-         "sw": "Increases damage done with a Bow."
+         "pl": "Zwi\u0119ksza si\u0142\u0119 ataku \u0141uku.",
+         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0443\u0440\u043e\u043d \u043f\u0440\u0438 \u0441\u0442\u0440\u0435\u043b\u044c\u0431\u0435 \u0438\u0437 \u043b\u0443\u043a\u0430.",
+         "sw": "Increases damage done with a Bow.",
+         "th": "Increases damage done with a Bow."
       },
       "icon": "acrsupbowmaster.png",
       "class": 9098,
@@ -12334,6 +12564,8 @@ const skillsjson = [
       "name": {
          "en": "Lightning Mastery",
          "ar": "Lightning Mastery",
+         "br": "Mestre do Raio",
+         "cns": "\u96f7\u7cfb\u4fee\u70bc",
          "de": "Lightning Master",
          "fi": "Lightning Mastery",
          "fil": "Lightning Mastery",
@@ -12341,13 +12573,16 @@ const skillsjson = [
          "it": "Lightning Mastery",
          "kr": "\ub77c\uc774\ud2b8\ub2dd \ub9c8\uc2a4\ud130",
          "nl": "Lightning Mastery",
-         "pl": "Lightning Mastery",
+         "pl": "Mistrz Pr\u0105du",
          "ru": "\u0412\u043b\u0430\u0441\u0442\u0435\u043b\u0438\u043d \u043c\u043e\u043b\u043d\u0438\u0439",
-         "sw": "Lightning Mastery"
+         "sw": "Lightning Mastery",
+         "th": "Lightning Mastery"
       },
       "description": {
          "en": "Increases the striking power of electric spells.",
          "ar": "Increases the striking power of electric spells.",
+         "br": "Aumenta o poder das magias de Eletricidade.",
+         "cns": "\u63d0\u9ad8\u96f7\u7cfb\u9b54\u6cd5\u653b\u51fb\u529b\u3002",
          "de": "Erh\u00f6hen der Angriffst\u00e4rke von Magie mit Blitz Attributen.",
          "fi": "Increases the striking power of electric spells.",
          "fil": "Increases the striking power of electric spells.",
@@ -12355,9 +12590,10 @@ const skillsjson = [
          "it": "Increases the striking power of electric spells.",
          "kr": "\ub77c\uc774\ud2b8\ub2dd \uc18d\uc131 \ub9c8\ubc95\uc758 \uacf5\uaca9\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increases the striking power of electric spells.",
-         "pl": "Increases the striking power of electric spells.",
+         "pl": "Zwi\u0119ksza si\u0142\u0119 Elektrycznych czar\u00f3w.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u0438\u043b\u0443 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439 \u0441\u0442\u0438\u0445\u0438\u0438 \u043c\u043e\u043b\u043d\u0438\u0439.",
-         "sw": "Increases the striking power of electric spells."
+         "sw": "Increases the striking power of electric spells.",
+         "th": "Increases the striking power of electric spells."
       },
       "icon": "eleeleelemst.png",
       "class": 9150,
@@ -12515,6 +12751,8 @@ const skillsjson = [
       "name": {
          "en": "Blindside",
          "ar": "Blindside",
+         "br": "Desarme",
+         "cns": "\u6bc1\u706d\u72c2\u6c14",
          "de": "Blindside",
          "fi": "Blindside",
          "fil": "Blindside",
@@ -12522,13 +12760,16 @@ const skillsjson = [
          "it": "Pugnalata",
          "kr": "\ube14\ub77c\uc778\ub4dc \uc0ac\uc774\ub4dc",
          "nl": "Blindside",
-         "pl": "Blindside",
+         "pl": "Cios z P\u00f3\u0142obrotu",
          "ru": "\u041a\u043e\u0441\u0430 \u0441\u043c\u0435\u0440\u0442\u0438",
-         "sw": "Blindside"
+         "sw": "Blindside",
+         "th": "Blindside"
       },
       "description": {
          "en": "A spinning, finishing move.",
          "ar": "A spinning, finishing move.",
+         "br": "Movimento girat\u00f3rio fatal.",
+         "cns": "\u7ec8\u7ed3\u6280\u80fd\uff0c\u96c6\u4e2d\u653b\u51fb\u5bf9\u65b9\u7684\u5f31\u70b9\uff0c\u5bf9\u5176\u9020\u6210\u81f4\u547d\u4e00\u51fb\u3002",
          "de": "Ein Abschluss Skill, um den Feind mit deiner ganzen Kraft zu schlagen.",
          "fi": "Py\u00f6riv\u00e4 lopetusliike.",
          "fil": "A spinning, finishing move.",
@@ -12536,9 +12777,10 @@ const skillsjson = [
          "it": "Infligge un colpo circolare devastante",
          "kr": "\ud53c\ub2c8\uc26c\uc2a4\ud0ac\ub85c \ud798\uc744 \ubaa8\uc544 \uc801\uc744 \uac15\ud558\uac8c \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "A spinning, finishing move.",
-         "pl": "A spinning, finishing move.",
+         "pl": "Cios ko\u0144cz\u0105cy kombinacj\u0119, wymierzony z tak\u0105 si\u0142\u0105, \u017ce czasem og\u0142usza wroga.",
          "ru": "\u041a\u0440\u0443\u0433\u043e\u0432\u043e\u0439 \u0443\u0434\u0430\u0440, \u0437\u0430\u0432\u0435\u0440\u0448\u0430\u044e\u0449\u0438\u0439 \u0441\u0435\u0440\u0438\u044e.",
-         "sw": "A spinning, finishing move."
+         "sw": "A spinning, finishing move.",
+         "th": "A spinning, finishing move."
       },
       "icon": "meroneblinds.png",
       "class": 764,
@@ -13045,6 +13287,8 @@ const skillsjson = [
       "name": {
          "en": "Stun Group",
          "ar": "Stun Group",
+         "br": "Stun Group",
+         "cns": "Stun Group",
          "de": "Stun Group",
          "fi": "Stun Group",
          "fil": "Stun Group",
@@ -13054,21 +13298,25 @@ const skillsjson = [
          "nl": "Stun Group",
          "pl": "Stun Group",
          "ru": "Stun Group",
-         "sw": "Stun Group"
+         "sw": "Stun Group",
+         "th": "Stun Group"
       },
       "description": {
          "en": "You fainted.",
          "ar": "You fainted.",
+         "br": "Voc\u00ea desmaiou.",
+         "cns": "\u65e0\u6cd5\u79fb\u52a8\u7684\u72b6\u6001",
          "de": "Du f\u00e4llst in Ohnmacht.",
          "fi": "You fainted.",
          "fil": "You fainted.",
          "fr": "Le groupe est \u00e9tourdi et ne peut bouger",
          "it": "You fainted.",
          "kr": "\uc6c0\uc9c1\uc77c \uc218 \uc5c6\ub294 \uae30\uc808 \uc0c1\ud0dc\uc785\ub2c8\ub2e4.",
-         "nl": "You fainted.",
+         "nl": "Je viel flauw.",
          "pl": "You fainted.",
          "ru": "\u0412\u044b \u043b\u0438\u0448\u0438\u043b\u0438\u0441\u044c \u0441\u043e\u0437\u043d\u0430\u043d\u0438\u044f.",
-         "sw": "You fainted."
+         "sw": "You fainted.",
+         "th": "You fainted."
       },
       "icon": "magspekestone.png",
       "level": 1,
@@ -13099,6 +13347,8 @@ const skillsjson = [
       "name": {
          "en": "Single Stun",
          "ar": "Single Stun",
+         "br": "Atordoamento \u00danico",
+         "cns": "\u6655\u7729(\u5355)",
          "de": "Stun Single",
          "fi": "Single Stun",
          "fil": "Single Stun",
@@ -13108,11 +13358,14 @@ const skillsjson = [
          "nl": "Single Stun",
          "pl": "Single Stun",
          "ru": "\u041e\u0433\u043b\u0443\u0448\u0435\u043d\u0438\u0435",
-         "sw": "Single Stun"
+         "sw": "Single Stun",
+         "th": "Single Stun"
       },
       "description": {
          "en": "You are stunned and cannot move.",
          "ar": "You are stunned and cannot move.",
+         "br": "You are stunned and cannot move.",
+         "cns": "You are stunned and cannot move.",
          "de": "You are stunned and cannot move.",
          "fi": "You are stunned and cannot move.",
          "fil": "You are stunned and cannot move.",
@@ -13122,7 +13375,8 @@ const skillsjson = [
          "nl": "You are stunned and cannot move.",
          "pl": "You are stunned and cannot move.",
          "ru": "You are stunned and cannot move.",
-         "sw": "You are stunned and cannot move."
+         "sw": "You are stunned and cannot move.",
+         "th": "You are stunned and cannot move."
       },
       "icon": "magspekestone.png",
       "level": 1,
@@ -13192,6 +13446,8 @@ const skillsjson = [
       "name": {
          "en": "Counter Attack",
          "ar": "Counter Attack",
+         "br": "Contra Ataque",
+         "cns": "\u7834\u62db",
          "de": "Counter Attack",
          "fi": "Counter Attack",
          "fil": "Counter Attack",
@@ -13199,13 +13455,16 @@ const skillsjson = [
          "it": "Counter Attack",
          "kr": "\uc5d0\ub85c\uc6b0 \ub808\uc778",
          "nl": "Counter Attack",
-         "pl": "Counter Attack",
+         "pl": "Kontratak",
          "ru": "\u041a\u043e\u043d\u0442\u0440\u0430\u0442\u0430\u043a\u0430",
-         "sw": "Counter Attack"
+         "sw": "Counter Attack",
+         "th": "Counter Attack"
       },
       "description": {
          "en": "Execute an attack after the enemy does.",
          "ar": "Execute an attack after the enemy does.",
+         "br": "Executa um contra ataque logo ap\u00f3s um inimigo utilizar uma habilidade em voc\u00ea.",
+         "cns": "\u56de\u907f\u654c\u4eba\u7684\u4e00\u6b21\u653b\u51fb\uff0c\u5e76\u7acb\u523b\u53cd\u51fb\u5e76\u51fb\u6655\u5bf9\u65b9\u3002",
          "de": "Nach dem Angriff eines Gegners erfolgt automatisch ein Gegenangriff.",
          "fi": "Execute an attack after the enemy does.",
          "fil": "Execute an attack after the enemy does.",
@@ -13213,9 +13472,10 @@ const skillsjson = [
          "it": "Execute an attack after the enemy does.",
          "kr": "\uc801\uc758 \uacf5\uaca9\uc744 \uc2e0\uc911\ud788 \uae30\ub2e4\ub9ac\uace0 \uc788\ub2e4\uac00 \ube48\ud2c8\uc744 \uce74\uc6b4\ud130\ub85c \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Execute an attack after the enemy does.",
-         "pl": "Execute an attack after the enemy does.",
+         "pl": "Powstrzymuje atak wroga i og\u0142usza go.",
          "ru": "\u0414\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0443\u0434\u0430\u0440 \u0432 \u043e\u0442\u0432\u0435\u0442 \u043d\u0430 \u0443\u0434\u0430\u0440 \u0432\u0440\u0430\u0433\u0430.",
-         "sw": "Execute an attack after the enemy does."
+         "sw": "Execute an attack after the enemy does.",
+         "th": "Execute an attack after the enemy does."
       },
       "icon": "acryoycounte.png",
       "class": 9098,
@@ -13663,6 +13923,8 @@ const skillsjson = [
       "name": {
          "en": "Snatch",
          "ar": "Snatch",
+         "br": "Arrebatar",
+         "cns": "\u5077\u88ad",
          "de": "Snitch",
          "fi": "Snatch",
          "fil": "Snatch",
@@ -13670,13 +13932,16 @@ const skillsjson = [
          "it": "Snatch",
          "kr": "\uc2ac\ub85c\uc6b0 \uc2a4\ud0ed",
          "nl": "Snatch",
-         "pl": "Snatch",
+         "pl": "Uszczkni\u0119cie",
          "ru": "\u041a\u0440\u0430\u0436\u0430",
-         "sw": "Snatch"
+         "sw": "Snatch",
+         "th": "Snatch"
       },
       "description": {
          "en": "Steal penya from a target while in Dark Illusion. Attack from behind.",
          "ar": "Steal penya from a target while in Dark Illusion. Attack from behind.",
+         "br": "Um ataque que rouba Penya de um alvo durante uma Ilus\u00e3o das Trevas. \u00c9 necess\u00e1rio atacar por tr\u00e1s do alvo.",
+         "cns": "\u9700\u5904\u4e8e\u6f5c\u884c\u72b6\u6001\u4e14\u53ea\u80fd\u5728\u80cc\u540e\u4f7f\u7528\uff0c\u7ed9\u4e88\u81f4\u547d\u4f24\u5bb3\u7684\u540c\u65f6\u6709\u4e00\u5b9a\u51e0\u7387\u7a83\u53d6\u5bf9\u65b9\u7684\u91d1\u5e01\u3002",
          "de": "Stiehlt Penya vom Gegner w\u00e4hrend man Dark Illusion benutzt. Du solltest hinter dem angew\u00e4hlten Ziel stehen.",
          "fi": "Steal penya from a target while in Dark Illusion. Attack from behind.",
          "fil": "Steal penya from a target while in Dark Illusion. Attack from behind.",
@@ -13684,9 +13949,10 @@ const skillsjson = [
          "it": "Steal penya from a target while in Dark Illusion. Attack from behind.",
          "kr": "\ub2e4\ud06c\uc77c\ub8e8\uc804 \uc0c1\ud0dc\uc5d0\uc11c \uc77c\uc815 \ud655\ub960\ub85c \uc801\uc758 \ud398\ub0d0\ub97c \ud6d4\uce69\ub2c8\ub2e4. \ub300\uc0c1\uc758 \ub4a4\uc5d0\uc11c\ub9cc \uc0ac\uc6a9 \uac00\ub2a5\ud569\ub2c8\ub2e4.",
          "nl": "Steal penya from a target while in Dark Illusion. Attack from behind.",
-         "pl": "Steal penya from a target while in Dark Illusion. Attack from behind.",
+         "pl": "Okrada cel z Penya. Ten atak mo\u017cna wykona\u0107 tylko z Mrocznej Iluzji i od ty\u0142u.",
          "ru": "\u041f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u0441\u0442\u044f\u043d\u0443\u0442\u044c \u0443 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430 \u043f\u0435\u043d\u043d\u0438, \u043f\u043e\u0434\u043e\u0431\u0440\u0430\u0432\u0448\u0438\u0441\u044c \u043a \u043d\u0435\u043c\u0443 \u0441\u043e \u0441\u043f\u0438\u043d\u044b. \u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e \u0442\u043e\u043b\u044c\u043a\u043e \u043f\u0440\u0438 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u0438 \u0418\u043b\u043b\u044e\u0437\u0438\u0438 \u043f\u0443\u0441\u0442\u043e\u0442\u044b.",
-         "sw": "Steal penya from a target while in Dark Illusion. Attack from behind."
+         "sw": "Steal penya from a target while in Dark Illusion. Attack from behind.",
+         "th": "Steal penya from a target while in Dark Illusion. Attack from behind."
       },
       "icon": "acryoysnitch.png",
       "class": 9098,
@@ -14014,6 +14280,8 @@ const skillsjson = [
       "name": {
          "en": "Pain Dealer",
          "ar": "Pain Dealer",
+         "br": "Distribuidor de Dor",
+         "cns": "\u788e\u7532",
          "de": "Pain Dealer",
          "fi": "Pain Dealer",
          "fil": "Pain Dealer",
@@ -14021,13 +14289,16 @@ const skillsjson = [
          "it": "Pain Dealer",
          "kr": "\ud398\uc778 \ub51c\ub7ec",
          "nl": "Pain Dealer",
-         "pl": "Pain Dealer",
+         "pl": "Bolesna Rana",
          "ru": "\u041d\u0435\u0441\u0443\u0449\u0438\u0439 \u0431\u043e\u043b\u044c",
-         "sw": "Pain Dealer"
+         "sw": "Pain Dealer",
+         "th": "Pain Dealer"
       },
       "description": {
          "en": "Powerful, downward strike. Lowers the defense of the target. Requires two-handed axe.",
          "ar": "Powerful, downward strike. Lowers the defense of the target. Requires two-handed axe.",
+         "br": "Um golpe potente para baixo. Diminui a defesa do alvo. Exige um machado de duas m\u00e3os.",
+         "cns": "\u7528\u65a7\u51fb\u88c2\u654c\u4eba\u7684\u76d4\u7532\uff0c\u77ed\u65f6\u95f4\u5185\u964d\u4f4e\u5bf9\u65b9\u9632\u5fa1\u529b\u3002",
          "de": "Verringert die gegnerische Verteidigung kurzzeitig beim Angriff, wenn man eine Axt verwendet.",
          "fi": "Voimakas, alasp\u00e4in suuntautuva isku. Alentaa kohteen puolustusta. Vaatii kahden k\u00e4den kirveen.",
          "fil": "Powerful, downward strike. Lowers the defense of the target. Requires two-handed axe.",
@@ -14035,9 +14306,10 @@ const skillsjson = [
          "it": "Powerful, downward strike. Lowers the defense of the target. Requires two-handed axe.",
          "kr": "\uc5d1\uc2a4\ub85c \uc801\uc758 \uac11\uc637\uc744 \ub0b4\ub824\ucc0d\uc5b4 \uc77c\uc2dc\uc801\uc73c\ub85c \ubc29\uc5b4\ub825\uc744 \ud558\ub77d\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Powerful, downward strike. Lowers the defense of the target. Requires two-handed axe.",
-         "pl": "Powerful, downward strike. Lowers the defense of the target. Requires two-handed axe.",
+         "pl": "Potwornie bolesny cios, obni\u017caj\u0105cy si\u0142\u0119 obrony celu. Wymaga Halabardy.",
          "ru": "\u0421\u0438\u043b\u044c\u043d\u044b\u0439 \u0443\u0434\u0430\u0440, \u0441\u043d\u0438\u0436\u0430\u044e\u0449\u0438\u0439 \u0437\u0430\u0449\u0438\u0442\u0443 \u0446\u0435\u043b\u0438. \u0414\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f \u0434\u0432\u0443\u0440\u0443\u0447\u043d\u044b\u0439 \u0442\u043e\u043f\u043e\u0440 \u0438\u043b\u0438 \u0441\u0435\u043a\u0438\u0440\u0430.",
-         "sw": "Powerful, downward strike. Lowers the defense of the target. Requires two-handed axe."
+         "sw": "Powerful, downward strike. Lowers the defense of the target. Requires two-handed axe.",
+         "th": "Powerful, downward strike. Lowers the defense of the target. Requires two-handed axe."
       },
       "icon": "knttaxpaidea.png",
       "class": 5330,
@@ -14315,6 +14587,8 @@ const skillsjson = [
       "name": {
          "en": "Temping Hole",
          "ar": "Temping Hole",
+         "br": "Soco Carregado",
+         "cns": "\u5723\u5149\u7834",
          "de": "Tamping Hole",
          "fi": "Temping Hole",
          "fil": "Temping Hole",
@@ -14322,13 +14596,16 @@ const skillsjson = [
          "it": "Temping Hole",
          "kr": "\ud0ec\ud551\ud640",
          "nl": "Temping Hole",
-         "pl": "Temping Hole",
+         "pl": "Zamaszysta Pi\u0119\u015b\u0107",
          "ru": "\u041f\u0440\u044f\u043c\u043e\u0439 \u0443\u0434\u0430\u0440",
-         "sw": "Temping Hole"
+         "sw": "Temping Hole",
+         "th": "Temping Hole"
       },
       "description": {
          "en": "Powerful, straight punch.",
          "ar": "Powerful, straight punch.",
+         "br": "Um poderoso e certeiro soco.",
+         "cns": "\u5c06\u5723\u5149\u4e4b\u529b\u805a\u96c6\u5728\u62f3\u5957,\u7ed9\u5bf9\u65b9\u9020\u6210\u4f24\u5bb3\u3002",
          "de": "Einen Hieb gegen den Gegner mit dem Knuckel ausf\u00fchren.",
          "fi": "Voimakas, suora ly\u00f6nti.",
          "fil": "Powerful, straight punch.",
@@ -14336,9 +14613,10 @@ const skillsjson = [
          "it": "Powerful, straight punch.",
          "kr": "\ub108\ud074\ud574\uba38\ub85c \uc801\uc744 \uac15\ud558\uac8c \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Powerful, straight punch.",
-         "pl": "Powerful, straight punch.",
+         "pl": "Uderza przeciwnika z solidnego zamachu.",
          "ru": "\u0420\u0435\u0437\u043a\u0438\u0439 \u043f\u0440\u044f\u043c\u043e\u0439 \u0443\u0434\u0430\u0440.",
-         "sw": "Powerful, straight punch."
+         "sw": "Powerful, straight punch.",
+         "th": "Powerful, straight punch."
       },
       "icon": "assknutampin.png",
       "class": 8962,
@@ -14666,6 +14944,8 @@ const skillsjson = [
       "name": {
          "en": "Berserker Mushroom",
          "ar": "Berserker Mushroom",
+         "br": "Cogumelo Berserker",
+         "cns": "\u654f\u9510",
          "de": "The Madness of a Poisonous Mushroom",
          "fi": "Berserker Mushroom",
          "fil": "Berserker Mushroom",
@@ -14675,11 +14955,14 @@ const skillsjson = [
          "nl": "Berserker Mushroom",
          "pl": "Berserker Mushroom",
          "ru": "\u0413\u0440\u0438\u0431-\u0431\u0435\u0440\u0441\u0435\u0440\u043a",
-         "sw": "Berserker Mushroom"
+         "sw": "Berserker Mushroom",
+         "th": "Berserker Mushroom"
       },
       "description": {
          "en": "Increases striking power and attack speed.",
          "ar": "Increases striking power and attack speed.",
+         "br": "Aumenta o poder de golpe e a velocidade de ataque.",
+         "cns": "\u589e\u52a0\u653b\u51fb\u529b\u548c\u653b\u51fb\u901f\u5ea6\u3002",
          "de": "Verringern der Angriffsst\u00e4rke und das Angriffstempo.",
          "fi": "Increases striking power and attack speed.",
          "fil": "Increases striking power and attack speed.",
@@ -14689,7 +14972,8 @@ const skillsjson = [
          "nl": "Increases striking power and attack speed.",
          "pl": "Increases striking power and attack speed.",
          "ru": "\u0421\u043a\u043e\u0440\u043e\u0441\u0442\u044c \u0438 \u0441\u0438\u043b\u0430 \u0430\u0442\u0430\u043a\u0438 \u043f\u043e\u0432\u044b\u0448\u0435\u043d\u044b.",
-         "sw": "Increases striking power and attack speed."
+         "sw": "Increases striking power and attack speed.",
+         "th": "Increases striking power and attack speed."
       },
       "icon": "bldsupberser.png",
       "level": 1,
@@ -14725,20 +15009,25 @@ const skillsjson = [
       "name": {
          "en": "Waterball",
          "ar": "Waterball",
+         "br": "Bolhas De \u00c1gua",
+         "cns": "\u6c34\u7403\u51dd\u805a",
          "de": "Waterball",
          "fi": "Waterball",
          "fil": "Waterball",
          "fr": "Boule de glace",
          "it": "Waterball",
          "kr": "\uc544\uc774\uc2a4 \ubbf8\uc0ac\uc77c",
-         "nl": "Waterball",
-         "pl": "Waterball",
+         "nl": "Waterbal",
+         "pl": "Kula Wody",
          "ru": "\u0412\u043e\u0434\u044f\u043d\u043e\u0439 \u0448\u0430\u0440",
-         "sw": "Waterball"
+         "sw": "Waterball",
+         "th": "Waterball"
       },
       "description": {
          "en": "A water attack that shoots multiple water orbs at your target.",
          "ar": "A water attack that shoots multiple water orbs at your target.",
+         "br": "Ataque de \u00e1gua que causa danos m\u00faltiplos no inimigo.",
+         "cns": "\u5c06\u6c34\u51dd\u805a\u6210\u6c34\u7403\u8fde\u7eed\u53d1\u5c04\u3002",
          "de": "Dem Gegner mit einem starken Wasserball Schaden zuf\u00fcgen.",
          "fi": "A water attack that shoots multiple water orbs at your target.",
          "fil": "A water attack that shoots multiple water orbs at your target.",
@@ -14746,9 +15035,10 @@ const skillsjson = [
          "it": "A water attack that shoots multiple water orbs at your target.",
          "kr": "\ubb3c\uc758 \uae30\uc6b4\uc744 \uc751\ucd95\uc2dc\ud0a8 \uad6c\uccb4\ub97c \ub0a0\ub824 \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "A water attack that shoots multiple water orbs at your target.",
-         "pl": "A water attack that shoots multiple water orbs at your target.",
-         "ru": "\u0410\u0442\u0430\u043a\u0430 \u0434\u0430\u043b\u044c\u043d\u0435\u0433\u043e \u0431\u043e\u044f. \u0421\u0442\u0438\u0445\u0438\u044f \u0432\u043e\u0434\u044b. \u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0443\u0434\u0430\u0440\u043e\u0432 \u043f\u043e\u0434\u0440\u044f\u0434.",
-         "sw": "A water attack that shoots multiple water orbs at your target."
+         "pl": "Atakuje przeciwnika wielokrotnie za pomoc\u0105 wybuchowych b\u0105belk\u00f3w.",
+         "ru": "\u0410\u0442\u0430\u043a\u0430 \u0434\u0430\u043b\u044c\u043d\u0435\u0433\u043e \u0431\u043e\u044f. \u0421\u0442\u0438\u0445\u0438\u044f \u0432\u043e\u0434\u044b \u043d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0443\u0434\u0430\u0440\u043e\u0432 \u043f\u043e\u0434\u0440\u044f\u0434.",
+         "sw": "A water attack that shoots multiple water orbs at your target.",
+         "th": "A water attack that shoots multiple water orbs at your target."
       },
       "icon": "magwaterball.png",
       "class": 9581,
@@ -15096,6 +15386,8 @@ const skillsjson = [
       "name": {
          "en": "Patience",
          "ar": "Patience",
+         "br": "Perseveran\u00e7a",
+         "cns": "\u751f\u547d\u4e4b\u6cc9",
          "de": "Patience",
          "fi": "Patience",
          "fil": "Patience",
@@ -15103,23 +15395,27 @@ const skillsjson = [
          "it": "Patience",
          "kr": "\ud398\uc774\uc158\uc2a4",
          "nl": "Patience",
-         "pl": "Patience",
+         "pl": "Cierpliwo\u015b\u0107",
          "ru": "\u0422\u0435\u0440\u043f\u0435\u043d\u0438\u0435",
-         "sw": "Patience"
+         "sw": "Patience",
+         "th": "Patience"
       },
       "description": {
-         "en": "Increases all incoming healing from all sources.",
-         "ar": "Increases all incoming healing from all sources.",
-         "de": "Die HP eines Spielers vor\u00fcbergehend erh\u00f6hen.",
-         "fi": "Kasvattaa kaikkea tulevaa parannusta kaikista l\u00e4hteist\u00e4.",
-         "fil": "Increases all incoming healing from all sources.",
-         "fr": "Augmente temporairement le total des PV de la cible",
-         "it": "Increases all incoming healing from all sources.",
-         "kr": "\uc77c\uc815\uc2dc\uac04 \ub3d9\uc548 \ub300\uc0c1\uc758 \ucd5c\ub300 HP\uc758 \uc591\uc744 \ub298\ub9bd\ub2c8\ub2e4.",
-         "nl": "Increases all incoming healing from all sources.",
-         "pl": "Increases all incoming healing from all sources.",
-         "ru": "\u0412\u0440\u0435\u043c\u0435\u043d\u043d\u043e \u043f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0437\u0430\u043f\u0430\u0441 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f \u0446\u0435\u043b\u0438.",
-         "sw": "Increases all incoming healing from all sources."
+         "en": "Increases maximum HP of the target.",
+         "ar": "Increases maximum HP of the target.",
+         "br": "Increases maximum HP of the target.",
+         "cns": "Increases maximum HP of the target.",
+         "de": "Increases maximum HP of the target.",
+         "fi": "Increases maximum HP of the target.",
+         "fil": "Increases maximum HP of the target.",
+         "fr": "Increases maximum HP of the target.",
+         "it": "Increases maximum HP of the target.",
+         "kr": "Increases maximum HP of the target.",
+         "nl": "Increases maximum HP of the target.",
+         "pl": "Increases maximum HP of the target.",
+         "ru": "Increases maximum HP of the target.",
+         "sw": "Increases maximum HP of the target.",
+         "th": "Increases maximum HP of the target."
       },
       "icon": "assheapatien.png",
       "class": 8962,
@@ -15747,20 +16043,25 @@ const skillsjson = [
       "name": {
          "en": "Lightning Ball",
          "ar": "Lightning Ball",
+         "br": "Bola Est\u00e1tica",
+         "cns": "\u9b54\u7535\u53ec\u5524",
          "de": "Lightning Ball",
          "fi": "Lightning Ball",
          "fil": "Lightning Ball",
          "fr": "Electricit\u00e9",
          "it": "Lightning Ball",
          "kr": "\ub77c\uc774\ud2b8\ub2dd \ubcfc",
-         "nl": "Lightning Ball",
-         "pl": "Lightning Ball",
+         "nl": "Bliksembal",
+         "pl": "Kula Energii",
          "ru": "\u0428\u0430\u0440\u043e\u0432\u0430\u044f \u043c\u043e\u043b\u043d\u0438\u044f",
-         "sw": "Lightning Ball"
+         "sw": "Lightning Ball",
+         "th": "Lightning Ball"
       },
       "description": {
          "en": "Damages the enemy with a ball of static.",
          "ar": "Damages the enemy with a ball of static.",
+         "br": "Causa danos no inimigo com uma bola de est\u00e1tica.",
+         "cns": "\u53ec\u5524\u9b54\u7535\u5e03\u6210\u7535\u7f51\u653b\u51fb\u5bf9\u65b9\u3002",
          "de": "Dem Gegner durch statische Energie Schaden zuf\u00fcgen.",
          "fi": "Damages the enemy with a ball of static.",
          "fil": "Damages the enemy with a ball of static.",
@@ -15768,9 +16069,10 @@ const skillsjson = [
          "it": "Damages the enemy with a ball of static.",
          "kr": "\uc8fc\uc704\uc758 \uc815\uc804\uae30\ub97c \ubaa8\uc544 \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Damages the enemy with a ball of static.",
-         "pl": "Damages the enemy with a ball of static.",
-         "ru": "\u0421\u0442\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0435 \u044d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0441\u043e\u0431\u0438\u0440\u0430\u0435\u0442\u0441\u044f \u0432 \u043d\u0435\u0431\u043e\u043b\u044c\u0448\u043e\u0439 \u0448\u0430\u0440, \u043d\u0430\u043d\u043e\u0441\u044f\u0449\u0438\u0439 \u043b\u0435\u0433\u043a\u0438\u0439 \u0443\u0440\u043e\u043d.",
-         "sw": "Damages the enemy with a ball of static."
+         "pl": "Zadaje przeciwnikowi obra\u017cenia za pomoc\u0105 Kuli Statycznej Energii.",
+         "ru": "\u0421\u0442\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0435 \u044d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0441\u043e\u0431\u0438\u0440\u0430\u0435\u0442\u0441\u044f \u0432 \u043d\u0435\u0431\u043e\u043b\u044c\u0448\u043e\u0439 \u0448\u0430\u0440, \u043d\u0430\u043d\u043e\u0441\u044f\u0449\u0438\u0439 \u0443\u0440\u043e\u043d \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443.",
+         "sw": "Damages the enemy with a ball of static.",
+         "th": "Damages the enemy with a ball of static."
       },
       "icon": "magelelgtbal.png",
       "class": 9581,
@@ -16118,20 +16420,25 @@ const skillsjson = [
       "name": {
          "en": "Earth Divider",
          "ar": "Earth Divider",
+         "br": "Divisor de Terras",
+         "cns": "\u5f00\u5929\u8f9f\u5730",
          "de": "Earth Divider",
          "fi": "Earth Divider",
          "fil": "Earth Divider",
          "fr": "S\u00e9parateur de terre",
          "it": "Terremoto",
          "kr": "\uc5b4\uc2a4 \ub514\ubc14\uc774\ub354",
-         "nl": "Earth Divider",
-         "pl": "Earth Divider",
+         "nl": "Aarde Splitter",
+         "pl": "Przepo\u0142owienie Ziemi",
          "ru": "\u0417\u0435\u043c\u043b\u0435\u0442\u0440\u044f\u0441\u0435\u043d\u0438\u0435",
-         "sw": "Earth Divider"
+         "sw": "Earth Divider",
+         "th": "Earth Divider"
       },
       "description": {
          "en": "Powerful, downward strike. Has a chance to reduce Incoming Healing on target.",
          "ar": "Powerful, downward strike. Has a chance to reduce Incoming Healing on target.",
+         "br": "Golpe poderoso para baixo. Tem uma chance de reduzir a Cura Recebida do alvo.",
+         "cns": "\u7528\u5168\u90e8\u529b\u91cf\u91cd\u51fb\u5904\u4e8e\u540c\u4e00\u76f4\u7ebf\u4e0a\u7684\u654c\u4eba\uff0c\u9020\u6210\u8f83\u5927\u4f24\u5bb3",
          "de": "Ein Hieb gegen Gegner durch einen absoluten Hieb des Schwertes.",
          "fi": "Voimakas, alasp\u00e4in suuntautuva isku. Mahdollisesti v\u00e4hent\u00e4\u00e4 kohteen vastaanottamaa parannusta.",
          "fil": "Powerful, downward strike. Has a chance to reduce Incoming Healing on target.",
@@ -16139,9 +16446,10 @@ const skillsjson = [
          "it": "Colpo di spada superpotente che infligge danni agli avversari davanti il Cavaliere.",
          "kr": "\ub545\uc744 \uac00\ub97c\ub4ef\ud55c \uae30\uc138\ub85c \uc18c\ub4dc\ub97c \uc218\uc9c1\uc73c\ub85c \ub0b4\ub824\uccd0 \uc804\ubc29\uc758 \uc801\ub4e4\uc744 \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Powerful, downward strike. Has a chance to reduce Incoming Healing on target.",
-         "pl": "Powerful, downward strike. Has a chance to reduce Incoming Healing on target.",
+         "pl": "Rozrywaj\u0105cy cios, uderzaj\u0105cy wszystkich wrog\u00f3w w linii przed tob\u0105. Posiada szans\u0119 na wywo\u0142anie krwawienia u trafionych wrog\u00f3w.",
          "ru": "\u0421\u0438\u043b\u044c\u043d\u044b\u0439 \u0443\u0434\u0430\u0440, \u0440\u0430\u0441\u043a\u0430\u043b\u044b\u0432\u0430\u044e\u0449\u0438\u0439 \u0437\u0435\u043c\u043b\u044e.",
-         "sw": "Powerful, downward strike. Has a chance to reduce Incoming Healing on target."
+         "sw": "Powerful, downward strike. Has a chance to reduce Incoming Healing on target.",
+         "th": "Powerful, downward strike. Has a chance to reduce Incoming Healing on target."
       },
       "icon": "knttswethdvd.png",
       "class": 5330,
@@ -16439,6 +16747,8 @@ const skillsjson = [
       "name": {
          "en": "Sneaker",
          "ar": "\u0627\u0644\u0641\u062e",
+         "br": "Sneaker",
+         "cns": "\u7ea0\u7f20\u5929\u7f51",
          "de": "Sneaker",
          "fi": "Sneaker",
          "fil": "Sneaker",
@@ -16446,13 +16756,16 @@ const skillsjson = [
          "it": "Agguato",
          "kr": "\uc2a4\ub124\uc5b4",
          "nl": "Sneaker",
-         "pl": "Sneaker",
+         "pl": "Sie\u0107 \u0141owcy",
          "ru": "\u0421\u0435\u0442\u044c",
-         "sw": "Sneaker"
+         "sw": "Sneaker",
+         "th": "Sneaker"
       },
       "description": {
          "en": "Stops an enemy.",
          "ar": "\u062a\u062c\u0645\u064a\u062f \u062d\u0631\u0643\u0629 \u0627\u0644\u062e\u0635\u0645 \u0644\u0645\u062f\u0629 \u0642\u0635\u064a\u0631\u0629.",
+         "br": "Prende o inimigo no lugar.",
+         "cns": "\u53ec\u5524\u5929\u7f51\u5957\u4f4f\u76ee\u6807\uff0c\u6709\u4e00\u5b9a\u51e0\u7387\u4f7f\u5176\u79fb\u52a8\u901f\u5ea6\u51cf\u7f13\u3002",
          "de": "Ein Netz wird ausgeworfen, um den Gegner zu verlangsamen.",
          "fi": "Pys\u00e4ytt\u00e4\u00e4 vihollisen.",
          "fil": "Stops an enemy.",
@@ -16460,9 +16773,10 @@ const skillsjson = [
          "it": "Immobilizza l'avversario per un momento.",
          "kr": "\uadf8\ubb3c\uc744 \uc801\uc5d0\uac8c \uc50c\uc6cc \uc774\ub3d9\ud558\uc9c0 \ubabb\ud558\ub3c4\ub85d \ub9cc\ub4ed\ub2c8\ub2e4.",
          "nl": "Stops an enemy.",
-         "pl": "Stops an enemy.",
+         "pl": "Unieruchamia przeciwnika za pomoc\u0105 rzuconej sieci.",
          "ru": "\u041d\u0430\u043a\u0438\u0434\u044b\u0432\u0430\u0435\u0442 \u0441\u0435\u0442\u044c \u043d\u0430 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430, \u0447\u0442\u043e \u0437\u0430\u0441\u0442\u0430\u0432\u043b\u044f\u0435\u0442 \u0435\u0433\u043e \u0434\u0432\u0438\u0433\u0430\u0435\u0442\u0441\u044f \u043c\u0435\u0434\u043b\u0435\u043d\u043d\u0435\u0435.",
-         "sw": "Stops an enemy."
+         "sw": "Stops an enemy.",
+         "th": "Stops an enemy."
       },
       "icon": "meronesenake.png",
       "class": 764,
@@ -16809,6 +17123,8 @@ const skillsjson = [
       "name": {
          "en": "Charge",
          "ar": "Charge",
+         "br": "Carregada",
+         "cns": "\u96f7\u9706\u4e07\u94a7",
          "de": "Charge",
          "fi": "Charge",
          "fil": "Charge",
@@ -16816,13 +17132,16 @@ const skillsjson = [
          "it": "Charge",
          "kr": "\ucc28\uc9c0",
          "nl": "Charge",
-         "pl": "Charge",
+         "pl": "Szar\u017ca",
          "ru": "\u041d\u0430\u0442\u0438\u0441\u043a",
-         "sw": "Charge"
+         "sw": "Charge",
+         "th": "Charge"
       },
       "description": {
          "en": "Powerful, upward strike. Stuns the enemy.",
          "ar": "Powerful, upward strike. Stuns the enemy.",
+         "br": "Golpe poderoso para cima que atordoa o inimigo.",
+         "cns": "\u5c06\u80fd\u91cf\u805a\u96c6\u5728\u5251\u4e0a\uff0c\u4ee5\u96f7\u9706\u4e07\u94a7\u4e4b\u52bf\u5288\u5411\u5bf9\u65b9\u3002",
          "de": "Ein Hieb gegen den Gegner durch das Schwingen des Schwertes in Himmelsrichtung.",
          "fi": "Voimakas, yl\u00f6sp\u00e4in suuntautuva isku. Tainnuttaa vihollisen.",
          "fil": "Powerful, upward strike. Stuns the enemy.",
@@ -16830,9 +17149,10 @@ const skillsjson = [
          "it": "Powerful, upward strike. Stuns the enemy.",
          "kr": "\ud558\ub298\uc744 \uac00\ub97c\ub4ef\ud55c \uae30\uc138\ub85c \uc18c\ub4dc\ub97c \uc704\ub85c \ud718\ub458\ub7ec \uc804\ubc29\uc758 \uc801\uc744 \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Powerful, upward strike. Stuns the enemy.",
-         "pl": "Powerful, upward strike. Stuns the enemy.",
-         "ru": "\u041c\u043e\u0449\u043d\u044b\u0439 \u0438 \u0440\u0435\u0437\u043a\u0438\u0439 \u0443\u0434\u0430\u0440.",
-         "sw": "Powerful, upward strike. Stuns the enemy."
+         "pl": "Szar\u017cuje wroga i og\u0142usza go.",
+         "ru": "\u041c\u043e\u0449\u043d\u044b\u0439 \u0438 \u0440\u0435\u0437\u043a\u0438\u0439 \u0443\u0434\u0430\u0440, \u043e\u0433\u043b\u0443\u0448\u0430\u044e\u0449\u0438\u0439 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430.",
+         "sw": "Powerful, upward strike. Stuns the enemy.",
+         "th": "Powerful, upward strike. Stuns the enemy."
       },
       "icon": "knttswcharge.png",
       "class": 5330,
@@ -17100,6 +17420,8 @@ const skillsjson = [
       "name": {
          "en": "Stun Group",
          "ar": "Stun Group",
+         "br": "Grupo de Atordoamento",
+         "cns": "\u5b9a\u8eab(\u53cc)",
          "de": "Stun Group",
          "fi": "Stun Group",
          "fil": "Stun Group",
@@ -17109,11 +17431,14 @@ const skillsjson = [
          "nl": "Stun Group",
          "pl": "Stun Group",
          "ru": "\u0413\u0440\u0443\u043f\u043f\u043e\u0432\u043e\u0435 \u043e\u0433\u043b\u0443\u0448\u0435\u043d\u0438\u0435",
-         "sw": "Stun Group"
+         "sw": "Stun Group",
+         "th": "Stun Group"
       },
       "description": {
          "en": "You are stunned and cannot move.",
          "ar": "You are stunned and cannot move.",
+         "br": "Voc\u00ea est\u00e1 atordoado e n\u00e3o pode se mover.",
+         "cns": "\u65e0\u6cd5\u79fb\u52a8\u7684\u72b6\u6001",
          "de": "Du bist bet\u00e4ubt und kannst dich nicht bewegen.",
          "fi": "You are stunned and cannot move.",
          "fil": "You are stunned and cannot move.",
@@ -17123,7 +17448,8 @@ const skillsjson = [
          "nl": "You are stunned and cannot move.",
          "pl": "You are stunned and cannot move.",
          "ru": "\u0412\u044b \u043e\u0433\u043b\u0443\u0448\u0435\u043d\u044b \u0438 \u043d\u0435 \u043c\u043e\u0436\u0435\u0442\u0435 \u0434\u0432\u0438\u0433\u0430\u0442\u044c\u0441\u044f.",
-         "sw": "You are stunned and cannot move."
+         "sw": "You are stunned and cannot move.",
+         "th": "You are stunned and cannot move."
       },
       "icon": "magspekestone.png",
       "level": 1,
@@ -17154,6 +17480,8 @@ const skillsjson = [
       "name": {
          "en": "Swordcross",
          "ar": "Swordcross",
+         "br": "Espada Cruzada",
+         "cns": "\u523a\u4f24",
          "de": "Swordcross",
          "fi": "Swordcross",
          "fil": "Swordcross",
@@ -17163,11 +17491,14 @@ const skillsjson = [
          "nl": "Swordcross",
          "pl": "Swordcross",
          "ru": "\u0421\u043a\u0440\u0435\u0449\u0435\u043d\u043d\u044b\u0435 \u043c\u0435\u0447\u0438",
-         "sw": "Swordcross"
+         "sw": "Swordcross",
+         "th": "Swordcross"
       },
       "description": {
          "en": "",
          "ar": "",
+         "br": "",
+         "cns": "",
          "de": "",
          "fi": "",
          "fil": "",
@@ -17177,7 +17508,8 @@ const skillsjson = [
          "nl": "",
          "pl": "",
          "ru": "",
-         "sw": ""
+         "sw": "",
+         "th": ""
       },
       "icon": "rinsupcross.png",
       "level": 1,
@@ -17208,6 +17540,8 @@ const skillsjson = [
       "name": {
          "en": "Lightning Shock",
          "ar": "Lightning Shock",
+         "br": "Choque Rel\u00e2mpago",
+         "cns": "\u7535\u95ea\u96f7\u9e23",
          "de": "Lightning Shock",
          "fi": "Lightning Shock",
          "fil": "Lightning Shock",
@@ -17215,13 +17549,16 @@ const skillsjson = [
          "it": "Lightning Shock",
          "kr": "\ub77c\uc774\ud2b8\ub2dd \uc448\ud06c",
          "nl": "Lightning Shock",
-         "pl": "Lightning Shock",
+         "pl": "Piorunuj\u0105cy Wstrz\u0105s",
          "ru": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u0448\u043e\u043a",
-         "sw": "Lightning Shock"
+         "sw": "Lightning Shock",
+         "th": "Lightning Shock"
       },
       "description": {
          "en": "Damages the enemy with a small but fast lightning ball.",
          "ar": "Damages the enemy with a small but fast lightning ball.",
+         "br": "Causa dano no inimigo com uma pequena bola el\u00e9trica.",
+         "cns": "\u5524\u8d77\u95ea\u7535\u5f3a\u529b\u653b\u51fb\uff0c\u4ee4\u5bf9\u65b9\u5904\u4e8e\u7535\u51fb\u72b6\u6001\uff0c\u964d\u4f4e\u5bf9\u571f\u7cfb\u653b\u51fb\u7684\u62b5\u6297\u529b\u3002",
          "de": "Dem Gegner mit einem elektrischen Schuss Schaden zuf\u00fcgen.",
          "fi": "Damages the enemy with a small but fast lightning ball.",
          "fil": "Damages the enemy with a small but fast lightning ball.",
@@ -17229,9 +17566,10 @@ const skillsjson = [
          "it": "Damages the enemy with a small but fast lightning ball.",
          "kr": "\ubc88\uac1c\ub97c \ub5a8\uc5b4\ub728\ub824 \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4. \uc774\ub54c \uc801\uc740 \uac10\uc804\ub41c \uc0c1\ud0dc\uac00 \ub429\ub2c8\ub2e4.",
          "nl": "Damages the enemy with a small but fast lightning ball.",
-         "pl": "Damages the enemy with a small but fast lightning ball.",
-         "ru": "\u0411\u044b\u0441\u0442\u0440\u044b\u0439 \u0443\u0434\u0430\u0440 \u043c\u043e\u043b\u043d\u0438\u0435\u0439, \u043d\u0430\u043d\u043e\u0441\u044f\u0449\u0438\u0439 \u0443\u0440\u043e\u043d \u0438 \u043d\u0430 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0441\u0435\u043a\u0443\u043d\u0434 \u0441\u043d\u0438\u0436\u0430\u044e\u0449\u0438\u0439 \u0441\u043e\u043f\u0440\u043e\u0442\u0438\u0432\u043b\u0435\u043d\u0438\u0435 \u0446\u0435\u043b\u0438 \u0441\u0442\u0438\u0445\u0438\u0438 \u0437\u0435\u043c\u043b\u0438.",
-         "sw": "Damages the enemy with a small but fast lightning ball."
+         "pl": "Wstrz\u0105sa cel pot\u0119\u017cnym wy\u0142adowaniem elektrycznym. Cel b\u0119dzie wstrz\u0105\u015bni\u0119ty i bardziej podatny na ataki Ziemi\u0105.",
+         "ru": "\u0411\u044b\u0441\u0442\u0440\u044b\u0439 \u0443\u0434\u0430\u0440 \u043c\u043e\u043b\u043d\u0438\u0435\u0439, \u043d\u0430\u043d\u043e\u0441\u044f\u0449\u0438\u0439 \u0443\u0440\u043e\u043d.",
+         "sw": "Damages the enemy with a small but fast lightning ball.",
+         "th": "Damages the enemy with a small but fast lightning ball."
       },
       "icon": "maglightshock.png",
       "class": 9581,
@@ -17779,6 +18117,8 @@ const skillsjson = [
       "name": {
          "en": "Baraqijal Esna",
          "ar": "Baraqijal Esna",
+         "br": "Baraqijal Esna",
+         "cns": "\u661f\u4e4b\u5492",
          "de": "Baraqijal Esna",
          "fi": "Baraqijal Esna",
          "fil": "Baraqijal Esna",
@@ -17788,21 +18128,25 @@ const skillsjson = [
          "nl": "Baraqijal Esna",
          "pl": "Baraqijal Esna",
          "ru": "\u0414\u0435\u043c\u043e\u043d \u0431\u0438\u0442\u0432\u044b",
-         "sw": "Baraqijal Esna"
+         "sw": "Baraqijal Esna",
+         "th": "Baraqijal Esna"
       },
       "description": {
          "en": "Decreases defense of the target.",
          "ar": "Decreases defense of the target.",
+         "br": "Diminui a defesa do alvo.",
+         "cns": "\u9001\u53bb\u661f\u5149\u7684\u8bc5\u5492\uff0c\u63d0\u5347\u5bf9\u65b9\u7684\u653b\u51fb\uff0c\u4f46\u964d\u4f4e\u5bf9\u65b9\u7684\u9632\u5fa1\u529b\u3002",
          "de": "Erh\u00f6hen der Angriffsst\u00e4rke durch das Senken der Verteidigungsst\u00e4rke. Du wendest Fl\u00fcche an.",
          "fi": "Laskee kohteen puolustusta.",
          "fil": "Decreases defense of the target.",
          "fr": "Inflige un ch\u00e2timent \u00e0 l'ennemi r\u00e9duisant sa d\u00e9fense et augmentant son attaque",
          "it": "Decreases defense of the target.",
          "kr": "\uc800\uc8fc\uc758 \ud798\uc73c\ub85c \uc801\uc744 \ubb34\ubaa8\ud558\uac8c \ub9cc\ub4e4\uc5b4 \ubc29\uc5b4\ub825\uc744 \ud558\ub77d\uc2dc\ud0a4\uace0, \uacf5\uaca9\ub825\uc740 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
-         "nl": "Decreases defense of the target.",
-         "pl": "Decreases defense of the target.",
-         "ru": "\u0421\u043d\u0438\u0436\u0430\u0435\u0442 \u0437\u0430\u0449\u0438\u0442\u0443 \u0432\u044b\u0431\u0440\u0430\u043d\u043d\u043e\u0433\u043e \u0432\u0440\u0430\u0433\u0430, \u043d\u043e \u043f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u0438\u043b\u0443 \u0435\u0433\u043e \u0430\u0442\u0430\u043a.",
-         "sw": "Decreases defense of the target."
+         "nl": "Vermindert de verdediging van het doelwit.",
+         "pl": "Przeklina cel, zmniejszaj\u0105c jego obron\u0119.",
+         "ru": "\u0421\u043d\u0438\u0436\u0430\u0435\u0442 \u0437\u0430\u0449\u0438\u0442\u0443 \u0432\u044b\u0431\u0440\u0430\u043d\u043d\u043e\u0433\u043e \u0432\u0440\u0430\u0433\u0430.",
+         "sw": "Decreases defense of the target.",
+         "th": "Decreases defense of the target."
       },
       "icon": "bilbaraqijalesna.png",
       "class": 7424,
@@ -18211,6 +18555,8 @@ const skillsjson = [
       "name": {
          "en": "Cross Line",
          "ar": "Cross Line",
+         "br": "Linha Cruzada",
+         "cns": "\u5341\u5b57\u9707\u8361",
          "de": "Cross Line",
          "fi": "Cross Line",
          "fil": "Cross Line",
@@ -18220,11 +18566,14 @@ const skillsjson = [
          "nl": "Cross Line",
          "pl": "Cross Line",
          "ru": "\u041f\u0435\u0440\u0435\u043a\u0440\u0435\u0441\u0442\u043d\u044b\u0435 \u043d\u0438\u0442\u0438",
-         "sw": "Cross Line"
+         "sw": "Cross Line",
+         "th": "Cross Line"
       },
       "description": {
          "en": "A Yo-yo strike that can cause stun.",
          "ar": "A Yo-yo strike that can cause stun.",
+         "br": "Golpe de Ioi\u00f4 que pode atordoar o alvo.",
+         "cns": "\u53cc\u8f6e\u5408\u51fb\u6253\u51fa\u66b4\u51fb\uff0c\u4e00\u5b9a\u51e0\u7387\u5c06\u5bf9\u65b9\u9707\u6655\u3002",
          "de": "Einen Angriff auf den Gegner durch das Kreuzen der Yoyos. Der Gegner kann bet\u00e4ubt werden.",
          "fi": "A Yo-yo strike that can cause stun.",
          "fil": "A Yo-yo strike that can cause stun.",
@@ -18234,7 +18583,8 @@ const skillsjson = [
          "nl": "A Yo-yo strike that can cause stun.",
          "pl": "A Yo-yo strike that can cause stun.",
          "ru": "\u041e\u0433\u043b\u0443\u0448\u0430\u044e\u0449\u0438\u0439 \u0443\u0434\u0430\u0440 \u0439\u043e-\u0439\u043e.",
-         "sw": "A Yo-yo strike that can cause stun."
+         "sw": "A Yo-yo strike that can cause stun.",
+         "th": "A Yo-yo strike that can cause stun."
       },
       "icon": "acryoycross.png",
       "class": 9098,
@@ -18742,6 +19092,8 @@ const skillsjson = [
       "name": {
          "en": "Silent Strike",
          "ar": "Silent Strike",
+         "br": "Golpe Silencioso",
+         "cns": "\u6781\u901f\u7a81\u523a",
          "de": "Silent Strike",
          "fi": "Silent Strike",
          "fil": "Silent Strike",
@@ -18749,23 +19101,27 @@ const skillsjson = [
          "it": "Silent Strike",
          "kr": "\uc0ac\uc77c\ub7f0\ud2b8 \uc2a4\ud2b8\ub77c\uc774\ud06c",
          "nl": "Silent Strike",
-         "pl": "Silent Strike",
+         "pl": "Ciche Ci\u0119cie",
          "ru": "\u041d\u0435\u0441\u043b\u044b\u0448\u043d\u044b\u0439 \u0443\u0434\u0430\u0440",
-         "sw": "Silent Strike"
+         "sw": "Silent Strike",
+         "th": "Silent Strike"
       },
       "description": {
-         "en": "A fast, sliding strike. Small chance to stun the target. Requires two swords.",
-         "ar": "A fast, sliding strike. Small chance to stun the target. Requires two swords.",
-         "de": "A fast, sliding strike. Small chance to stun the target. Requires two swords.",
-         "fi": "A fast, sliding strike. Small chance to stun the target. Requires two swords.",
-         "fil": "A fast, sliding strike. Small chance to stun the target. Requires two swords.",
-         "fr": "A fast, sliding strike. Small chance to stun the target. Requires two swords.",
-         "it": "A fast, sliding strike. Small chance to stun the target. Requires two swords.",
-         "kr": "A fast, sliding strike. Small chance to stun the target. Requires two swords.",
-         "nl": "A fast, sliding strike. Small chance to stun the target. Requires two swords.",
-         "pl": "A fast, sliding strike. Small chance to stun the target. Requires two swords.",
-         "ru": "A fast, sliding strike. Small chance to stun the target. Requires two swords.",
-         "sw": "A fast, sliding strike. Small chance to stun the target. Requires two swords."
+         "en": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
+         "ar": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
+         "br": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
+         "cns": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
+         "de": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
+         "fi": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
+         "fil": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
+         "fr": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
+         "it": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
+         "kr": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
+         "nl": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
+         "pl": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
+         "ru": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
+         "sw": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
+         "th": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand."
       },
       "icon": "blddswsilent.png",
       "class": 2246,
@@ -18778,6 +19134,7 @@ const skillsjson = [
             "level": 3
          }
       ],
+      "weapon": "sword",
       "combo": "general",
       "debuff": true,
       "flying": true,
@@ -18788,10 +19145,13 @@ const skillsjson = [
          {
             "minAttack": 120,
             "maxAttack": 121,
-            "probability": 5,
-            "probabilityPVP": 5,
+            "probability": 25,
+            "probabilityPVP": 20,
             "consumedFP": 40,
+            "cooldown": 10,
             "casting": 1.25,
+            "duration": 1,
+            "durationPVP": 1,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -18811,10 +19171,13 @@ const skillsjson = [
          {
             "minAttack": 121,
             "maxAttack": 122,
-            "probability": 5,
-            "probabilityPVP": 5,
+            "probability": 30,
+            "probabilityPVP": 30,
             "consumedFP": 42,
+            "cooldown": 10,
             "casting": 1.25,
+            "duration": 1,
+            "durationPVP": 1,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -18834,10 +19197,13 @@ const skillsjson = [
          {
             "minAttack": 122,
             "maxAttack": 123,
-            "probability": 5,
-            "probabilityPVP": 5,
+            "probability": 35,
+            "probabilityPVP": 30,
             "consumedFP": 44,
+            "cooldown": 10,
             "casting": 1.25,
+            "duration": 1,
+            "durationPVP": 1,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -18857,10 +19223,13 @@ const skillsjson = [
          {
             "minAttack": 123,
             "maxAttack": 124,
-            "probability": 10,
-            "probabilityPVP": 5,
+            "probability": 40,
+            "probabilityPVP": 35,
             "consumedFP": 46,
+            "cooldown": 10,
             "casting": 1.25,
+            "duration": 1,
+            "durationPVP": 1,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -18880,10 +19249,13 @@ const skillsjson = [
          {
             "minAttack": 124,
             "maxAttack": 125,
-            "probability": 15,
-            "probabilityPVP": 7,
+            "probability": 50,
+            "probabilityPVP": 40,
             "consumedFP": 48,
+            "cooldown": 10,
             "casting": 1.25,
+            "duration": 1,
+            "durationPVP": 1,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -18903,10 +19275,13 @@ const skillsjson = [
          {
             "minAttack": 125,
             "maxAttack": 126,
-            "probability": 20,
-            "probabilityPVP": 10,
+            "probability": 60,
+            "probabilityPVP": 45,
             "consumedFP": 50,
+            "cooldown": 10,
             "casting": 1.25,
+            "duration": 1.1,
+            "durationPVP": 1.1,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -18926,10 +19301,13 @@ const skillsjson = [
          {
             "minAttack": 126,
             "maxAttack": 127,
-            "probability": 25,
-            "probabilityPVP": 13,
+            "probability": 70,
+            "probabilityPVP": 50,
             "consumedFP": 52,
+            "cooldown": 10,
             "casting": 1.25,
+            "duration": 1.2,
+            "durationPVP": 1.2,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -18949,10 +19327,13 @@ const skillsjson = [
          {
             "minAttack": 127,
             "maxAttack": 128,
-            "probability": 30,
-            "probabilityPVP": 15,
+            "probability": 80,
+            "probabilityPVP": 60,
             "consumedFP": 54,
+            "cooldown": 10,
             "casting": 1.25,
+            "duration": 1.3,
+            "durationPVP": 1.3,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -18972,10 +19353,13 @@ const skillsjson = [
          {
             "minAttack": 128,
             "maxAttack": 129,
-            "probability": 35,
-            "probabilityPVP": 18,
+            "probability": 90,
+            "probabilityPVP": 70,
             "consumedFP": 56,
+            "cooldown": 9,
             "casting": 1.25,
+            "duration": 1.4,
+            "durationPVP": 1.4,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -18995,10 +19379,11 @@ const skillsjson = [
          {
             "minAttack": 129,
             "maxAttack": 130,
-            "probability": 40,
-            "probabilityPVP": 20,
             "consumedFP": 58,
+            "cooldown": 8,
             "casting": 1.25,
+            "duration": 1.5,
+            "durationPVP": 1.5,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -19022,6 +19407,8 @@ const skillsjson = [
       "name": {
          "en": "Fast Walker",
          "ar": "Fast Walker",
+         "br": "Passos Leves",
+         "cns": "\u75be\u884c",
          "de": "Fast Walker",
          "fi": "Fast Walker",
          "fil": "Fast Walker",
@@ -19029,13 +19416,16 @@ const skillsjson = [
          "it": "Fast Walker",
          "kr": "\ubcf4\uc6b0\ub9c8\uc2a4\ud130\ub9ac",
          "nl": "Fast Walker",
-         "pl": "Fast Walker",
+         "pl": "Szybki Ch\u00f3d",
          "ru": "\u0411\u0435\u0433\u0443\u043d",
-         "sw": "Fast Walker"
+         "sw": "Fast Walker",
+         "th": "Fast Walker"
       },
       "description": {
          "en": "Increases walk speed for a short time",
          "ar": "Increases walk speed for a short time",
+         "br": "Aumenta a velocidade de movimento por pouco tempo.",
+         "cns": "\u77ed\u65f6\u95f4\u5185\u63d0\u9ad8\u79fb\u52a8\u901f\u5ea6\u3002",
          "de": "F\u00fcr eine kurze Zeit wird die Geschwindigkeit erh\u00f6ht mit der man sich bewegt.",
          "fi": "Increases walk speed for a short time",
          "fil": "Increases walk speed for a short time",
@@ -19043,9 +19433,10 @@ const skillsjson = [
          "it": "Increases walk speed for a short time",
          "kr": "\uc9e7\uc740 \uc2dc\uac04\ub3d9\uc548 \uc774\ub3d9 \uc18d\ub3c4\ub97c \ub192\uc5ec\uc900\ub2e4",
          "nl": "Increases walk speed for a short time",
-         "pl": "Increases walk speed for a short time",
+         "pl": "Zwi\u0119ksza szybko\u015b\u0107 ruchu na kr\u00f3tki czas.",
          "ru": "\u041d\u0430 \u043a\u043e\u0440\u043e\u0442\u043a\u043e\u0435 \u0432\u0440\u0435\u043c\u044f \u043f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u044c \u0431\u0435\u0433\u0430.",
-         "sw": "Increases walk speed for a short time"
+         "sw": "Increases walk speed for a short time",
+         "th": "Increases walk speed for a short time"
       },
       "icon": "acrsupfastwa.png",
       "class": 9098,
@@ -19333,6 +19724,8 @@ const skillsjson = [
       "name": {
          "en": "Toggle Buff",
          "ar": "Toggle Buff",
+         "br": "Alternar Buff",
+         "cns": "Buff\u4f5c\u7528",
          "de": "Toggle Buff",
          "fi": "Toggle Buff",
          "fil": "Toggle Buff",
@@ -19342,11 +19735,14 @@ const skillsjson = [
          "nl": "Toggle Buff",
          "pl": "Toggle Buff",
          "ru": "\u0412\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435 \u044d\u0444\u0444\u0435\u043a\u0442\u043e\u0432",
-         "sw": "Toggle Buff"
+         "sw": "Toggle Buff",
+         "th": "Toggle Buff"
       },
       "description": {
          "en": "",
          "ar": "",
+         "br": "",
+         "cns": "",
          "de": "",
          "fi": "",
          "fil": "",
@@ -19356,7 +19752,8 @@ const skillsjson = [
          "nl": "",
          "pl": "",
          "ru": "",
-         "sw": ""
+         "sw": "",
+         "th": ""
       },
       "icon": "jstyoybackst.png",
       "level": 1,
@@ -19390,20 +19787,25 @@ const skillsjson = [
       "name": {
          "en": "Stonehand",
          "ar": "Stonehand",
+         "br": "M\u00e3o Pesada",
+         "cns": "\u5723\u62f3\u672f",
          "de": "Stonehand",
          "fi": "Stonehand",
          "fil": "Stonehand",
          "fr": "Main de pierre",
          "it": "Stonehand",
          "kr": "\uc2a4\ud1a4\ud578\ub4dc",
-         "nl": "Stonehand",
-         "pl": "Stonehand",
+         "nl": "Stenenhand",
+         "pl": "Kamienne R\u0119ce",
          "ru": "\u041a\u0430\u043c\u0435\u043d\u043d\u044b\u0439 \u043a\u0443\u043b\u0430\u043a",
-         "sw": "Stonehand"
+         "sw": "Stonehand",
+         "th": "Stonehand"
       },
       "description": {
          "en": "All attacks gain the chance to stun.",
          "ar": "All attacks gain the chance to stun.",
+         "br": "Todos os ataques t\u00eam a chance de atordoar o inimigo.",
+         "cns": "\u7528\u5723\u529b\u653b\u51fb\u5bf9\u65b9\uff0c\u6709\u51e0\u7387\u5c06\u5bf9\u65b9\u51fb\u6655\u3002",
          "de": "Verst\u00e4rkung der Waffe. Alle Waffen haben eine Bet\u00e4ubungsfunktion.",
          "fi": "Kaikilla hy\u00f6kk\u00e4yksill\u00e4 on mahdollisuus tainnuttaa.",
          "fil": "All attacks gain the chance to stun.",
@@ -19411,9 +19813,10 @@ const skillsjson = [
          "it": "All attacks gain the chance to stun.",
          "kr": "\ubb34\uae30\ub97c \ub2e8\ub2e8\ud788\ud558\uc5ec \ubaa8\ub4e0 \uacf5\uaca9\uc5d0 \ud655\ub960\uc801\uc73c\ub85c \uc2a4\ud134 \ud6a8\uacfc\ub97c \uc90d\ub2c8\ub2e4.",
          "nl": "All attacks gain the chance to stun.",
-         "pl": "All attacks gain the chance to stun.",
+         "pl": "Wszystkie twoje ataki zyskuj\u0105 szans\u0119 na og\u0142uszenie.",
          "ru": "\u041f\u0440\u0438\u0434\u0430\u0435\u0442 \u0432\u0435\u0440\u043e\u044f\u0442\u043d\u043e\u0441\u0442\u044c \u043e\u0433\u043b\u0443\u0448\u0438\u0442\u044c \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430 \u043b\u044e\u0431\u044b\u043c \u0443\u0434\u0430\u0440\u043e\u043c.",
-         "sw": "All attacks gain the chance to stun."
+         "sw": "All attacks gain the chance to stun.",
+         "th": "All attacks gain the chance to stun."
       },
       "icon": "asschestoneh.png",
       "class": 8962,
@@ -20140,6 +20543,8 @@ const skillsjson = [
       "name": {
          "en": "Guillotine",
          "ar": "\u0627\u0644\u0645\u0642\u0635\u0644\u0629",
+         "br": "Guilhotina",
+         "cns": "\u6c14\u5203\u51b2\u51fb",
          "de": "Guillotine",
          "fi": "Guillotine",
          "fil": "Guillotine",
@@ -20147,13 +20552,16 @@ const skillsjson = [
          "it": "Guillotine",
          "kr": "\uae38\ub85c\ud2f4",
          "nl": "Guillotine",
-         "pl": "Guillotine",
+         "pl": "Gilotyna",
          "ru": "\u0413\u0438\u043b\u044c\u043e\u0442\u0438\u043d\u0430",
-         "sw": "Guillotine"
+         "sw": "Guillotine",
+         "th": "Guillotine"
       },
       "description": {
          "en": "A powerful, ranged attack.",
          "ar": "\u062a\u0631\u0633\u0644 \u0645\u0648\u062c\u0629 \u0637\u0627\u0626\u0631\u0629 \u0645\u0646 \u0627\u0644\u0637\u0627\u0642\u0629 \u0646\u062d\u0648 \u0627\u0644\u062e\u0635\u0645.",
+         "br": "Um potente ataque a distancia.",
+         "cns": "\u5c06\u805a\u96c6\u7684\u6597\u6c14\u5316\u505a\u65e0\u6570\u5229\u5203\u51b2\u51fb\u5bf9\u65b9\u3002",
          "de": "Ein Hieb gegen den Gegner mit der Waffe, geladen mit Geisteskraft. ",
          "fi": "Voimakas, ranged hy\u00f6kk\u00e4ys.",
          "fil": "A powerful, ranged attack.",
@@ -20161,13 +20569,14 @@ const skillsjson = [
          "it": "Un attacco a distanza che proietta delle onde affilate.",
          "kr": "\ubb34\uae30\uc5d0 \uae30\ub97c \uc2e4\uc5b4 \uadf8\uac83\uc744 \uc801\uc5d0\uac8c \ubc1c\uc0ac\ud558\uc5ec \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "A powerful, ranged attack.",
-         "pl": "A powerful, ranged attack.",
+         "pl": "Atakuje przeciwnika na dystans ognist\u0105 fal\u0105 energii.",
          "ru": "\u041c\u043e\u0449\u043d\u0430\u044f \u0430\u0442\u0430\u043a\u0430 \u0434\u0430\u043b\u044c\u043d\u0435\u0433\u043e \u0431\u043e\u044f.",
-         "sw": "A powerful, ranged attack."
+         "sw": "A powerful, ranged attack.",
+         "th": "A powerful, ranged attack."
       },
       "icon": "meroneguillo.png",
       "class": 764,
-      "level": 30,
+      "level": 35,
       "element": "none",
       "magic": false,
       "requirements": [
@@ -20193,7 +20602,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.02,
+                  "scale": 2.52,
                   "pvp": true,
                   "pve": true
                }
@@ -20209,7 +20618,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.04,
+                  "scale": 2.54,
                   "pvp": true,
                   "pve": true
                }
@@ -20225,7 +20634,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.06,
+                  "scale": 2.56,
                   "pvp": true,
                   "pve": true
                }
@@ -20241,7 +20650,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.08,
+                  "scale": 2.58,
                   "pvp": true,
                   "pve": true
                }
@@ -20257,7 +20666,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.1,
+                  "scale": 2.6,
                   "pvp": true,
                   "pve": true
                }
@@ -20273,7 +20682,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.12,
+                  "scale": 2.62,
                   "pvp": true,
                   "pve": true
                }
@@ -20289,7 +20698,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.14,
+                  "scale": 2.64,
                   "pvp": true,
                   "pve": true
                }
@@ -20305,7 +20714,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.16,
+                  "scale": 2.66,
                   "pvp": true,
                   "pve": true
                }
@@ -20321,7 +20730,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.18,
+                  "scale": 2.68,
                   "pvp": true,
                   "pve": true
                }
@@ -20337,7 +20746,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.2,
+                  "scale": 2.7,
                   "pvp": true,
                   "pve": true
                }
@@ -20353,7 +20762,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.22,
+                  "scale": 2.72,
                   "pvp": true,
                   "pve": true
                }
@@ -20369,7 +20778,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.24,
+                  "scale": 2.74,
                   "pvp": true,
                   "pve": true
                }
@@ -20385,7 +20794,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.26,
+                  "scale": 2.76,
                   "pvp": true,
                   "pve": true
                }
@@ -20401,7 +20810,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.28,
+                  "scale": 2.78,
                   "pvp": true,
                   "pve": true
                }
@@ -20417,7 +20826,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.3,
+                  "scale": 2.8,
                   "pvp": true,
                   "pve": true
                }
@@ -20433,7 +20842,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.32,
+                  "scale": 2.82,
                   "pvp": true,
                   "pve": true
                }
@@ -20449,7 +20858,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.34,
+                  "scale": 2.84,
                   "pvp": true,
                   "pve": true
                }
@@ -20465,7 +20874,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.36,
+                  "scale": 2.86,
                   "pvp": true,
                   "pve": true
                }
@@ -20481,7 +20890,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.38,
+                  "scale": 2.88,
                   "pvp": true,
                   "pve": true
                }
@@ -20497,7 +20906,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.4,
+                  "scale": 2.9,
                   "pvp": true,
                   "pve": true
                }
@@ -20510,6 +20919,8 @@ const skillsjson = [
       "name": {
          "en": "Low Attack",
          "ar": "Low Attack",
+         "br": "Ataque Lento",
+         "cns": "\u865a\u5f31",
          "de": "Low Attack",
          "fi": "Low Attack",
          "fil": "Low Attack",
@@ -20519,11 +20930,14 @@ const skillsjson = [
          "nl": "Low Attack",
          "pl": "Low Attack",
          "ru": "\u0417\u0430\u043c\u0435\u0434\u043b\u0435\u043d\u0438\u0435 \u0430\u0442\u0430\u043a\u0438",
-         "sw": "Low Attack"
+         "sw": "Low Attack",
+         "th": "Low Attack"
       },
       "description": {
          "en": "Decreases attack speed and cool down time",
          "ar": "Decreases attack speed and cool down time",
+         "br": "Diminui a velocidade de ataque e tempo de resfriamento",
+         "cns": "\u964d\u4f4e\u7269\u7406\u653b\u51fb\u548c\u6cd5\u672f\u653b\u51fb\u7684\u901f\u5ea6\u3002",
          "de": "Verringern der Angriffsst\u00e4rke und die Pause.",
          "fi": "Decreases attack speed and cool down time",
          "fil": "Decreases attack speed and cool down time",
@@ -20533,7 +20947,8 @@ const skillsjson = [
          "nl": "Decreases attack speed and cool down time",
          "pl": "Decreases attack speed and cool down time",
          "ru": "\u0421\u043a\u043e\u0440\u043e\u0441\u0442\u044c \u0430\u0442\u0430\u043a\u0438 \u0438 \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f \u0443\u043c\u0435\u043d\u0438\u0439 \u0441\u043d\u0438\u0436\u0435\u043d\u0430.",
-         "sw": "Decreases attack speed and cool down time"
+         "sw": "Decreases attack speed and cool down time",
+         "th": "Decreases attack speed and cool down time"
       },
       "icon": "magspekestone.png",
       "level": 1,
@@ -20638,6 +21053,8 @@ const skillsjson = [
       "name": {
          "en": "Critical Shot",
          "ar": "Critical Shot",
+         "br": "Tiro Cr\u00edtico",
+         "cns": "\u901f\u5c04",
          "de": "Fast Shot",
          "fi": "Critical Shot",
          "fil": "Critical Shot",
@@ -20646,12 +21063,15 @@ const skillsjson = [
          "kr": "\uc18d\uc0ac",
          "nl": "Critical Shot",
          "pl": "Critical Shot",
-         "ru": "\u0411\u044b\u0441\u0442\u0440\u0430\u044f \u0441\u0442\u0440\u0435\u043b\u044c\u0431\u0430",
-         "sw": "Critical Shot"
+         "ru": "\u0422\u043e\u0447\u043d\u044b\u0439 \u0432\u044b\u0441\u0442\u0440\u0435\u043b",
+         "sw": "Critical Shot",
+         "th": "Critical Shot"
       },
       "description": {
          "en": "Increase Critical Hit for a limited time.",
          "ar": "Increase Critical Hit for a limited time.",
+         "br": "Aumenta o acerto cr\u00edtico por um per\u00edodo de tempo limitado.",
+         "cns": "\u96c6\u4e2d\u7cbe\u795e\u63d0\u9ad8\u53d1\u5c04\u5f13\u7bad\u7684\u901f\u5ea6\u3002",
          "de": "Erh\u00f6ht die Geschwindigkeit beim Treffen mit dem Bogen.",
          "fi": "Increase Critical Hit for a limited time.",
          "fil": "Increase Critical Hit for a limited time.",
@@ -20660,8 +21080,9 @@ const skillsjson = [
          "kr": "\uc815\uc2e0\uc744 \uc9d1\uc911\ud558\uc5ec \ud65c\uc744 \ub2f9\uae30\ub294 \uc18d\ub3c4\ub97c \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increase Critical Hit for a limited time.",
          "pl": "Increase Critical Hit for a limited time.",
-         "ru": "\u0421\u043a\u043e\u0440\u043e\u0441\u0442\u044c \u0441\u0442\u0440\u0435\u043b\u044c\u0431\u044b \u0432\u0440\u0435\u043c\u0435\u043d\u043d\u043e \u043f\u043e\u0432\u044b\u0448\u0430\u0435\u0442\u0441\u044f.",
-         "sw": "Increase Critical Hit for a limited time."
+         "ru": "\u0428\u0430\u043d\u0441 \u043a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u0443\u0434\u0430\u0440\u043e\u0432 \u0432\u0440\u0435\u043c\u0435\u043d\u043d\u043e \u043f\u043e\u0432\u044b\u0448\u0430\u0435\u0442\u0441\u044f.",
+         "sw": "Increase Critical Hit for a limited time.",
+         "th": "Increase Critical Hit for a limited time."
       },
       "icon": "ragsupfastsh.png",
       "class": 9295,
@@ -20800,7 +21221,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "criticalchance",
-                  "add": 12,
+                  "add": 11,
                   "rate": true
                }
             ],
@@ -20822,7 +21243,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "criticalchance",
-                  "add": 14,
+                  "add": 12,
                   "rate": true
                }
             ],
@@ -20844,7 +21265,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "criticalchance",
-                  "add": 16,
+                  "add": 13,
                   "rate": true
                }
             ],
@@ -20866,7 +21287,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "criticalchance",
-                  "add": 18,
+                  "add": 14,
                   "rate": true
                }
             ],
@@ -20888,7 +21309,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "criticalchance",
-                  "add": 20,
+                  "add": 15,
                   "rate": true
                }
             ],
@@ -20909,20 +21330,25 @@ const skillsjson = [
       "name": {
          "en": "Flame Ball",
          "ar": "Flame Ball",
+         "br": "Bola de Fogo",
+         "cns": "\u70bd\u70ed\u7130\u661f",
          "de": "Fire Boomerang",
          "fi": "Flame Ball",
          "fil": "Flame Ball",
          "fr": "Arc de feu",
          "it": "Flame Ball",
          "kr": "\ud30c\uc774\uc5b4 \ubd80\uba54\ub791",
-         "nl": "Flame Ball",
-         "pl": "Flame Ball",
+         "nl": "Vuurbal",
+         "pl": "Kula Ognia",
          "ru": "\u041e\u0433\u043d\u0435\u043d\u043d\u044b\u0439 \u0448\u0430\u0440",
-         "sw": "Flame Ball"
+         "sw": "Flame Ball",
+         "th": "Flame Ball"
       },
       "description": {
          "en": "Strikes at the enemy with a ball of flame.",
          "ar": "Strikes at the enemy with a ball of flame.",
+         "br": "Lan\u00e7a uma bola de chamas no inimigo.",
+         "cns": "\u53d1\u5c04\u71c3\u70e7\u7684\u706b\u7403\u653b\u51fb\u5bf9\u65b9\u3002",
          "de": "Den Gegner mit einem Boomerang aus Feuer angreifen.",
          "fi": "Iskee viholliseen tulipallolla.",
          "fil": "Strikes at the enemy with a ball of flame.",
@@ -20930,9 +21356,10 @@ const skillsjson = [
          "it": "Strikes at the enemy with a ball of flame.",
          "kr": "\ubd88\ub85c \ub41c \ubd80\uba54\ub791\uc744 \ub0a0\ub824 \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Strikes at the enemy with a ball of flame.",
-         "pl": "Strikes at the enemy with a ball of flame.",
+         "pl": "Atakuje przeciwnika kul\u0105 ognia.",
          "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d \u043e\u0433\u043d\u0435\u043c.",
-         "sw": "Strikes at the enemy with a ball of flame."
+         "sw": "Strikes at the enemy with a ball of flame.",
+         "th": "Strikes at the enemy with a ball of flame."
       },
       "icon": "magfireboomer.png",
       "class": 9581,
@@ -21280,20 +21707,25 @@ const skillsjson = [
       "name": {
          "en": "Void",
          "ar": "Void",
+         "br": "Vazio",
+         "cns": "\u98ce\u4e4b\u771f\u7a7a",
          "de": "Void",
          "fi": "Void",
          "fil": "Void",
          "fr": "Tornade",
          "it": "Void",
          "kr": "\ubcf4\uc774\ub4dc",
-         "nl": "Void",
-         "pl": "Void",
+         "nl": "Leegte",
+         "pl": "Pustka",
          "ru": "\u041f\u0443\u0441\u0442\u043e\u0442\u0430",
-         "sw": "Void"
+         "sw": "Void",
+         "th": "Void"
       },
       "description": {
          "en": "To attack the enemy by generating a perfect vacuum.",
          "ar": "To attack the enemy by generating a perfect vacuum.",
+         "br": "Ataca um inimigo gerando um v\u00e1cuo perfeito.",
+         "cns": "\u7528\u98ce\u5377\u4f4f\u5bf9\u65b9\uff0c\u5728\u5f62\u6210\u7684\u771f\u7a7a\u4e2d\u4ee4\u5176\u53d7\u5230\u4f24\u5bb3\u3002",
          "de": "Dem Gegner durch ein absolutes Vakuum Schaden erleiden lassen.",
          "fi": "To attack the enemy by generating a perfect vacuum.",
          "fil": "To attack the enemy by generating a perfect vacuum.",
@@ -21301,9 +21733,10 @@ const skillsjson = [
          "it": "To attack the enemy by generating a perfect vacuum.",
          "kr": "\uc644\ubcbd\ud55c \uc9c4\uacf5 \uc0c1\ud0dc\ub97c \ub9cc\ub4e4\uc5b4 \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "To attack the enemy by generating a perfect vacuum.",
-         "pl": "To attack the enemy by generating a perfect vacuum.",
+         "pl": "Wysysa powietrze z p\u0142uc celu z olbrzymi\u0105 si\u0142\u0105.",
          "ru": "\u0421\u043e\u0437\u0434\u0430\u0435\u0442 \u0432\u043e\u043a\u0440\u0443\u0433 \u0446\u0435\u043b\u0438 \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u0432 \u043a\u043e\u0442\u043e\u0440\u043e\u0439 \u043d\u0435\u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e \u0434\u044b\u0448\u0430\u0442\u044c. \u041f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a \u043f\u043e\u043b\u0443\u0447\u0430\u0435\u0442 \u0443\u0440\u043e\u043d.",
-         "sw": "To attack the enemy by generating a perfect vacuum."
+         "sw": "To attack the enemy by generating a perfect vacuum.",
+         "th": "To attack the enemy by generating a perfect vacuum."
       },
       "icon": "elewinvoid.png",
       "class": 9150,
@@ -21481,30 +21914,36 @@ const skillsjson = [
       "name": {
          "en": "Sandstorm",
          "ar": "Sandstorm",
+         "br": "Tempestade de Areia",
+         "cns": "\u98ce\u6c99\u541e\u566c",
          "de": "Sandstorm",
          "fi": "Sandstorm",
          "fil": "Sandstorm",
          "fr": "Temp\u00eate de sable",
          "it": "Sandstorm",
          "kr": "\uc0cc\ub4dc \uc2a4\ud1b0",
-         "nl": "Sandstorm",
-         "pl": "Sandstorm",
+         "nl": "Zandstorm",
+         "pl": "Burza Piaskowa",
          "ru": "\u0421\u0430\u043c\u0443\u043c",
-         "sw": "Sandstorm"
+         "sw": "Sandstorm",
+         "th": "Sandstorm"
       },
       "description": {
-         "en": "Damages surrounding enemies with a sandstorm.",
-         "ar": "Damages surrounding enemies with a sandstorm.",
-         "de": "Allen Gegnern durch Herbeirufen eines Sandsturms Schaden zuf\u00fcgen.",
-         "fi": "Damages surrounding enemies with a sandstorm.",
-         "fil": "Damages surrounding enemies with a sandstorm.",
-         "fr": "Invoque une temp\u00eate de sable qui s'abat sur tous les ennemis de la zone, infligeant d'importants d\u00e9g\u00e2ts de vent et de terre",
-         "it": "Damages surrounding enemies with a sandstorm.",
-         "kr": "\uac70\uce5c \ubaa8\ub798 \ud3ed\ud48d\uc744 \uc77c\uc73c\ucf1c \uc8fc\ubcc0\uc758 \ubaa8\ub4e0 \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
-         "nl": "Damages surrounding enemies with a sandstorm.",
-         "pl": "Damages surrounding enemies with a sandstorm.",
-         "ru": "\u041d\u0430 \u0432\u0440\u0430\u0433\u043e\u0432 \u043e\u0431\u0440\u0443\u0448\u0438\u0432\u0430\u0435\u0442\u0441\u044f \u043f\u0435\u0441\u0447\u0430\u043d\u0430\u044f \u0431\u0443\u0440\u044f, \u043d\u0430\u043d\u043e\u0441\u044f\u0449\u0430\u044f \u0443\u0440\u043e\u043d \u0432\u0435\u0442\u0440\u043e\u043c \u0438 \u0437\u0435\u043c\u043b\u0435\u0439.",
-         "sw": "Damages surrounding enemies with a sandstorm."
+         "en": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "ar": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "br": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "cns": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "de": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "fi": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "fil": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "fr": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "it": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "kr": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "nl": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "pl": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "ru": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "sw": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "th": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy."
       },
       "icon": "elemulsanstm.png",
       "class": 9150,
@@ -21537,6 +21976,8 @@ const skillsjson = [
             "consumedMP": 112,
             "cooldown": 10,
             "casting": 0.5,
+            "duration": 10,
+            "durationPVP": 10,
             "abilities": [
                {
                   "parameter": "hitrate",
@@ -21563,6 +22004,8 @@ const skillsjson = [
             "consumedMP": 114,
             "cooldown": 10,
             "casting": 0.5,
+            "duration": 10,
+            "durationPVP": 10,
             "abilities": [
                {
                   "parameter": "hitrate",
@@ -21589,6 +22032,8 @@ const skillsjson = [
             "consumedMP": 116,
             "cooldown": 10,
             "casting": 0.5,
+            "duration": 10,
+            "durationPVP": 10,
             "abilities": [
                {
                   "parameter": "hitrate",
@@ -21615,6 +22060,8 @@ const skillsjson = [
             "consumedMP": 118,
             "cooldown": 10,
             "casting": 0.5,
+            "duration": 10,
+            "durationPVP": 10,
             "abilities": [
                {
                   "parameter": "hitrate",
@@ -21641,6 +22088,8 @@ const skillsjson = [
             "consumedMP": 120,
             "cooldown": 10,
             "casting": 0.5,
+            "duration": 10,
+            "durationPVP": 10,
             "abilities": [
                {
                   "parameter": "hitrate",
@@ -21667,6 +22116,8 @@ const skillsjson = [
             "consumedMP": 122,
             "cooldown": 10,
             "casting": 0.5,
+            "duration": 11,
+            "durationPVP": 11,
             "abilities": [
                {
                   "parameter": "hitrate",
@@ -21693,6 +22144,8 @@ const skillsjson = [
             "consumedMP": 124,
             "cooldown": 10,
             "casting": 0.5,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "hitrate",
@@ -21719,6 +22172,8 @@ const skillsjson = [
             "consumedMP": 126,
             "cooldown": 10,
             "casting": 0.5,
+            "duration": 13,
+            "durationPVP": 13,
             "abilities": [
                {
                   "parameter": "hitrate",
@@ -21745,6 +22200,8 @@ const skillsjson = [
             "consumedMP": 128,
             "cooldown": 10,
             "casting": 0.5,
+            "duration": 14,
+            "durationPVP": 14,
             "abilities": [
                {
                   "parameter": "hitrate",
@@ -21771,6 +22228,8 @@ const skillsjson = [
             "consumedMP": 130,
             "cooldown": 10,
             "casting": 0.5,
+            "duration": 15,
+            "durationPVP": 15,
             "abilities": [
                {
                   "parameter": "hitrate",
@@ -21796,20 +22255,25 @@ const skillsjson = [
       "name": {
          "en": "Cat's Reflex",
          "ar": "Cat's Reflex",
+         "br": "Reflexo",
+         "cns": "\u8eb2\u907f\u672f",
          "de": "Cats Reflex",
          "fi": "Cat's Reflex",
          "fil": "Cat's Reflex",
          "fr": "F\u00e9linit\u00e9",
          "it": "Cat's Reflex",
          "kr": "\ucea3\uc988 \ub9ac\ud50c\ub809\uc2a4",
-         "nl": "Cat's Reflex",
-         "pl": "Cat's Reflex",
+         "nl": "Kattenreflex",
+         "pl": "Koci Refleks",
          "ru": "\u041a\u043e\u0448\u0430\u0447\u044c\u0438 \u0440\u0435\u0444\u043b\u0435\u043a\u0441\u044b",
-         "sw": "Cat's Reflex"
+         "sw": "Cat's Reflex",
+         "th": "Cat's Reflex"
       },
       "description": {
          "en": "Increases the block rate of a target.",
          "ar": "Increases the block rate of a target.",
+         "br": "Aumenta a chance de bloquear danos de ataques f\u00edsicos recebidos.",
+         "cns": "\u6682\u65f6\u63d0\u9ad8\u65bd\u6cd5\u5bf9\u8c61\u7684\u8eb2\u907f\u7387\u3002",
          "de": "Erh\u00f6ht die Abwehr des angew\u00e4hlten Spielers.",
          "fi": "Kasvattaa kohteen torjuntakerrointa.",
          "fil": "Increases the block rate of a target.",
@@ -21817,9 +22281,10 @@ const skillsjson = [
          "it": "Increases the block rate of a target.",
          "kr": "\ub300\uc0c1\uc758 \ube14\ub7ed\uc728\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increases the block rate of a target.",
-         "pl": "Increases the block rate of a target.",
+         "pl": "Zwi\u0119ksza szans\u0119 na blok.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0432\u0435\u0440\u043e\u044f\u0442\u043d\u043e\u0441\u0442\u044c \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f.",
-         "sw": "Increases the block rate of a target."
+         "sw": "Increases the block rate of a target.",
+         "th": "Increases the block rate of a target."
       },
       "icon": "asschecatsre.png",
       "class": 8962,
@@ -22447,6 +22912,8 @@ const skillsjson = [
       "name": {
          "en": "Lightning Ram",
          "ar": "Lightning Ram",
+         "br": "Bola El\u00e9trica",
+         "cns": "\u9b54\u7535\u805a\u5408",
          "de": "Lightning Palm",
          "fi": "Lightning Ram",
          "fil": "Lightning Ram",
@@ -22454,13 +22921,16 @@ const skillsjson = [
          "it": "Lightning Ram",
          "kr": "\ub77c\uc774\ud2b8\ub2dd \ud31c",
          "nl": "Lightning Ram",
-         "pl": "Lightning Ram",
+         "pl": "Piorunuj\u0105cy Taran",
          "ru": "\u041a\u043b\u0443\u0431\u043e\u043a \u043c\u043e\u043b\u043d\u0438\u0439",
-         "sw": "Lightning Ram"
+         "sw": "Lightning Ram",
+         "th": "Lightning Ram"
       },
       "description": {
          "en": "Damages the enemy with an electric ball",
          "ar": "Damages the enemy with an electric ball",
+         "br": "Causa dano no inimigo com uma bola el\u00e9trica.",
+         "cns": "\u805a\u5408\u96f7\u7535\u7684\u529b\u91cf\u5411\u654c\u4eba\u65bd\u52a0\u5f3a\u529b\u653b\u51fb\u3002",
          "de": "Dem Gegner mit einem elektrischen Ball Schaden zuf\u00fcgen.",
          "fi": "Damages the enemy with an electric ball",
          "fil": "Damages the enemy with an electric ball",
@@ -22468,9 +22938,10 @@ const skillsjson = [
          "it": "Damages the enemy with an electric ball",
          "kr": "\uc804\uae30\uc758 \uae30\uc6b4\uc744 \uc751\ucd95\uc2dc\ud0a8 \uad6c\uccb4\ub97c \ub0a0\ub824 \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Damages the enemy with an electric ball",
-         "pl": "Damages the enemy with an electric ball",
+         "pl": "Uderza wroga pot\u0119\u017cnym wy\u0142adowaniem elektrycznym.",
          "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d \u043c\u043e\u043b\u043d\u0438\u044f\u043c\u0438.",
-         "sw": "Damages the enemy with an electric ball"
+         "sw": "Damages the enemy with an electric ball",
+         "th": "Damages the enemy with an electric ball"
       },
       "icon": "maglightpalm.png",
       "class": 9581,
@@ -22818,6 +23289,8 @@ const skillsjson = [
       "name": {
          "en": "Empower Weapon",
          "ar": "Empower Weapon",
+         "br": "Arma Elementalista",
+         "cns": "\u6218\u795e\u9644\u4f53",
          "de": "Empower Weapon",
          "fi": "Empower Weapon",
          "fil": "Empower Weapon",
@@ -22825,13 +23298,16 @@ const skillsjson = [
          "it": "Incanto Rafforzato",
          "kr": "\uc784\ud30c\uc6cc \uc6e8\ud3f0",
          "nl": "Empower Weapon",
-         "pl": "Empower Weapon",
+         "pl": "Wzmocnienie \u017bywio\u0142u",
          "ru": "\u041e\u0440\u0443\u0436\u0438\u0435 \u0441\u0442\u0438\u0445\u0438\u0439",
-         "sw": "Empower Weapon"
+         "sw": "Empower Weapon",
+         "th": "Empower Weapon"
       },
       "description": {
          "en": "Uses the element of a Weapon to boost your attack power.",
          "ar": "Uses the element of a Weapon to boost your attack power.",
+         "br": "Usa o elemento da Arma para aumentar o seu dano.",
+         "cns": "\u4f9d\u9760\u6218\u795e\u8d50\u4e88\u7684\u795e\u529b\uff0c\u5927\u5e45\u5ea6\u589e\u5f3a\u6b66\u5668\u4e0a\u7684\u5c5e\u6027\u653b\u51fb\u529b\u3002",
          "de": "Zur vor\u00fcbergehenden Verst\u00e4rkung der F\u00e4higkeiten und der Attribute der Waffen.",
          "fi": "K\u00e4ytt\u00e4\u00e4 Aseen luonnonvoimaa lis\u00e4t\u00e4ksesi hy\u00f6kk\u00e4ys voimaasi.",
          "fil": "Uses the element of a Weapon to boost your attack power.",
@@ -22839,9 +23315,10 @@ const skillsjson = [
          "it": "Aumenta i danni provocati dall'incanto dell'arma usata.",
          "kr": "\uc18d\uc131 \ubb34\uae30\ub97c \ucc29\uc6a9 \uc2dc \uacf5\uaca9\ub825\uc744 \uc77c\uc2dc\uc801\uc73c\ub85c \uac15\ud654\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Uses the element of a Weapon to boost your attack power.",
-         "pl": "Uses the element of a Weapon to boost your attack power.",
+         "pl": "Zwi\u0119ksza si\u0142\u0119 ataku, wykorzystuj\u0105c \u017cywio\u0142 zawarty w twojej broni. (Bro\u0144 musi posiada\u0107 \u017cywio\u0142.)",
          "ru": "\u0423\u0441\u0438\u043b\u0438\u0432\u0430\u0435\u0442 \u0430\u0440\u043a\u0430\u043d, \u043d\u0430\u043d\u0435\u0441\u0435\u043d\u043d\u044b\u0439 \u043d\u0430 \u043e\u0440\u0443\u0436\u0438\u0435.",
-         "sw": "Uses the element of a Weapon to boost your attack power."
+         "sw": "Uses the element of a Weapon to boost your attack power.",
+         "th": "Uses the element of a Weapon to boost your attack power."
       },
       "icon": "mersupimpowe.png",
       "class": 764,
@@ -23129,6 +23606,8 @@ const skillsjson = [
       "name": {
          "en": "Sonichand",
          "ar": "Sonichand",
+         "br": "Soco S\u00f4nico",
+         "cns": "\u6d41\u661f\u62f3",
          "de": "Sonic Hand",
          "fi": "Sonichand",
          "fil": "Sonichand",
@@ -23136,13 +23615,16 @@ const skillsjson = [
          "it": "Sonichand",
          "kr": "\uc18c\ub2c9\ud578\ub4dc",
          "nl": "Sonichand",
-         "pl": "Sonichand",
+         "pl": "Soniczna Pi\u0119\u015b\u0107",
          "ru": "\u0423\u0434\u0430\u0440 \u043d\u0438\u043d\u0434\u0437\u044f",
-         "sw": "Sonichand"
+         "sw": "Sonichand",
+         "th": "Sonichand"
       },
       "description": {
          "en": "Fast, straight punch.",
          "ar": "Fast, straight punch.",
+         "br": "Um r\u00e1pido soco certeiro.",
+         "cns": "\u65e0\u6570\u62f3\u5934\u5982\u6d41\u661f\u822c\u51fb\u6253\u5728\u5bf9\u65b9\u8eab\u4e0a\uff0c\u9020\u6210\u591a\u6b21\u4f24\u5bb3\u3002",
          "de": "Den Gegner angreifen, in dem man ihn sehr schnell mit dem Knuckle angreift.",
          "fi": "Nopea, suora ly\u00f6nti.",
          "fil": "Fast, straight punch.",
@@ -23150,9 +23632,10 @@ const skillsjson = [
          "it": "Fast, straight punch.",
          "kr": "\ube60\ub978 \uc18d\ub3c4\ub85c \ub108\ud074\ud574\uba38\ub97c \ubed7\uc5b4 \uc801\uc744 \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Fast, straight punch.",
-         "pl": "Fast, straight punch.",
+         "pl": "Szybki, prosty cios.",
          "ru": "\u0411\u044b\u0441\u0442\u0440\u044b\u0439 \u0438 \u0440\u0435\u0437\u043a\u0438\u0439 \u0443\u0434\u0430\u0440.",
-         "sw": "Fast, straight punch."
+         "sw": "Fast, straight punch.",
+         "th": "Fast, straight punch."
       },
       "icon": "bilsonichand.png",
       "class": 7424,
@@ -23334,20 +23817,25 @@ const skillsjson = [
       "name": {
          "en": "Firebird",
          "ar": "Firebird",
+         "br": "P\u00e1ssaro de Fogo",
+         "cns": "\u6d74\u706b\u51e4\u51f0",
          "de": "Firebird",
          "fi": "Firebird",
          "fil": "Firebird",
          "fr": "Oiseau de feu",
          "it": "Firebird",
          "kr": "\ud30c\uc774\uc5b4 \ubc84\ub4dc",
-         "nl": "Firebird",
-         "pl": "Firebird",
+         "nl": "Vuurvogel",
+         "pl": "Ognisty Ptak",
          "ru": "\u041e\u0433\u043d\u0435\u043d\u043d\u0430\u044f \u043f\u0442\u0438\u0446\u0430",
-         "sw": "Firebird"
+         "sw": "Firebird",
+         "th": "Firebird"
       },
       "description": {
          "en": "Damages the enemy with a fire blast.",
          "ar": "Damages the enemy with a fire blast.",
+         "br": "Causa danos no inimigo com uma explos\u00e3o de fogo.",
+         "cns": "\u53ec\u5524\u6d74\u706b\u7684\u51e4\u51f0\u7ed9\u5bf9\u65b9\u5e26\u6765\u706b\u7684\u4f24\u5bb3\u3002",
          "de": "Dem Gegner mit einem Feuerball des Ph\u00f6nix Schaden zuf\u00fcgen.",
          "fi": "Damages the enemy with a fire blast.",
          "fil": "Damages the enemy with a fire blast.",
@@ -23355,9 +23843,10 @@ const skillsjson = [
          "it": "Damages the enemy with a fire blast.",
          "kr": "\uc0c8 \ud615\ud0dc\uc758 \ubd88 \ub369\uc5b4\ub9ac\ub97c \ub0a0\ub824 \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Damages the enemy with a fire blast.",
-         "pl": "Damages the enemy with a fire blast.",
+         "pl": "Ogarnia wroga piekielnym ogniem.",
          "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d \u043e\u0433\u043d\u0435\u043c.",
-         "sw": "Damages the enemy with a fire blast."
+         "sw": "Damages the enemy with a fire blast.",
+         "th": "Damages the enemy with a fire blast."
       },
       "icon": "elefirfirbrd.png",
       "class": 9150,
@@ -23545,6 +24034,8 @@ const skillsjson = [
       "name": {
          "en": "Quick Step",
          "ar": "Quick Step",
+         "br": "Passos R\u00e1pidos",
+         "cns": "\u5929\u9a6c\u884c\u7a7a",
          "de": "Quick Step",
          "fi": "Quick Step",
          "fil": "Quick Step",
@@ -23552,13 +24043,16 @@ const skillsjson = [
          "it": "Quick Step",
          "kr": "\ud035 \uc2a4\ud15d",
          "nl": "Quick Step",
-         "pl": "Quick Step",
+         "pl": "Szybki Krok",
          "ru": "\u0421\u043a\u043e\u0440\u043e\u0445\u043e\u0434",
-         "sw": "Quick Step"
+         "sw": "Quick Step",
+         "th": "Quick Step"
       },
       "description": {
          "en": "Increases the walk speed of a target.",
          "ar": "Increases the walk speed of a target.",
+         "br": "Aumenta a velocidade de movimento.",
+         "cns": "\u6682\u65f6\u63d0\u9ad8\u65bd\u6cd5\u5bf9\u8c61\u7684\u79fb\u52a8\u901f\u5ea6\u3002",
          "de": "Erh\u00f6ht die Bewegungsgeschwindigkeit des angew\u00e4hlten Spielers.",
          "fi": "Kasvattaa kohteen k\u00e4velynopeutta.",
          "fil": "Increases the walk speed of a target.",
@@ -23566,9 +24060,10 @@ const skillsjson = [
          "it": "Increases the walk speed of a target.",
          "kr": "\ub300\uc0c1\uc758 \uc774\ub3d9\uc18d\ub3c4\ub97c \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increases the walk speed of a target.",
-         "pl": "Increases the walk speed of a target.",
+         "pl": "Zwi\u0119ksza szybko\u015b\u0107 poruszania si\u0119 celu.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u044c \u0434\u0432\u0438\u0436\u0435\u043d\u0438\u044f \u0446\u0435\u043b\u0438.",
-         "sw": "Increases the walk speed of a target."
+         "sw": "Increases the walk speed of a target.",
+         "th": "Increases the walk speed of a target."
       },
       "icon": "asschequicks.png",
       "class": 8962,
@@ -24196,6 +24691,8 @@ const skillsjson = [
       "name": {
          "en": "Fire Strike",
          "ar": "Fire Strike",
+         "br": "Incinerar",
+         "cns": "\u707c\u70c8\u5e7b\u706b",
          "de": "Fire Strike",
          "fi": "Fire Strike",
          "fil": "Fire Strike",
@@ -24203,13 +24700,16 @@ const skillsjson = [
          "it": "Fire Strike",
          "kr": "\ud30c\uc774\uc5b4 \uc2a4\ud2b8\ub77c\uc774\ud06c",
          "nl": "Fire Strike",
-         "pl": "Fire Strike",
+         "pl": "Ognista Eksplozja",
          "ru": "\u041e\u0433\u043d\u0435\u043d\u043d\u044b\u0435 \u043e\u0431\u044a\u044f\u0442\u0438\u044f",
-         "sw": "Fire Strike"
+         "sw": "Fire Strike",
+         "th": "Fire Strike"
       },
       "description": {
          "en": "Damages an enemy with a fire ball.",
          "ar": "Damages an enemy with a fire ball.",
+         "br": "Causa danos no inimigo com uma grande bola de fogo.",
+         "cns": "\u53ec\u5524\u707c\u70ed\u7684\u706b\u7130\uff0c\u8ba9\u5bf9\u65b9\u53d7\u5230\u707c\u70e7\uff0c\u964d\u4f4e\u5bf9\u98ce\u7cfb\u653b\u51fb\u7684\u62b5\u6297\u529b\u3002",
          "de": "Schleudert einen riesigen Feuerball auf den Gegner.",
          "fi": "Damages an enemy with a fire ball.",
          "fil": "Damages an enemy with a fire ball.",
@@ -24217,9 +24717,10 @@ const skillsjson = [
          "it": "Damages an enemy with a fire ball.",
          "kr": "\uac70\ub300\ud55c \ubd88\ub369\uc5b4\ub9ac\ub97c \ub0a0\ub824 \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4. \uc774\ub54c \uc801\uc740 \ubd88\ud0c0\uace0 \uc788\ub294 \uc0c1\ud0dc\uac00 \ub429\ub2c8\ub2e4.",
          "nl": "Damages an enemy with a fire ball.",
-         "pl": "Damages an enemy with a fire ball.",
-         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d \u043e\u0433\u043d\u0435\u043c \u0438 \u043d\u0430 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0441\u0435\u043a\u0443\u043d\u0434 \u0441\u043d\u0438\u0436\u0430\u0435\u0442 \u0441\u043e\u043f\u0440\u043e\u0442\u0438\u0432\u043b\u0435\u043d\u0438\u0435 \u0441\u0442\u0438\u0445\u0438\u0438 \u0432\u043e\u0434\u044b.",
-         "sw": "Damages an enemy with a fire ball."
+         "pl": "Podpala wroga za pomoc\u0105 kuli ognia. Cel b\u0119dzie rozgrzany i chwilowo bardziej podatny na ataki wodne.",
+         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d \u043e\u0433\u043d\u0435\u043d\u043d\u044b\u043c \u0448\u0430\u0440\u043e\u043c.",
+         "sw": "Damages an enemy with a fire ball.",
+         "th": "Damages an enemy with a fire ball."
       },
       "icon": "magfirestrike.png",
       "class": 9581,
@@ -24767,6 +25268,8 @@ const skillsjson = [
       "name": {
          "en": "Nature",
          "ar": "Nature",
+         "br": "Nature",
+         "cns": "\u81ea\u7136\u9886\u609f",
          "de": "Nature",
          "fi": "Nature",
          "fil": "Nature",
@@ -24776,21 +25279,25 @@ const skillsjson = [
          "nl": "Nature",
          "pl": "Nature",
          "ru": "\u041f\u043e\u043c\u043e\u0449\u044c \u043f\u0440\u0438\u0440\u043e\u0434\u044b",
-         "sw": "Nature"
+         "sw": "Nature",
+         "th": "Nature"
       },
       "description": {
-         "en": "Heightens players senses with nature to increase Damage & Range of the Bow.",
-         "ar": "Heightens players senses with nature to increase Damage & Range of the Bow.",
-         "de": "Die Resistenz gegen Magie Attribute erh\u00f6hen.",
-         "fi": "Heightens players senses with nature to increase Damage & Range of the Bow.",
-         "fil": "Heightens players senses with nature to increase Damage & Range of the Bow.",
-         "fr": "Augmente la r\u00e9sistance \u00e0 la magie du Ranger",
-         "it": "Heightens players senses with nature to increase Damage & Range of the Bow.",
-         "kr": "\uc18d\uc131 \ub9c8\ubc95\uc5d0 \ub300\ud55c \uc800\ud56d\ub960\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
-         "nl": "Heightens players senses with nature to increase Damage & Range of the Bow.",
-         "pl": "Heightens players senses with nature to increase Damage & Range of the Bow.",
-         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u043e\u043f\u0440\u043e\u0442\u0438\u0432\u043b\u0435\u043d\u0438\u0435 \u043c\u0430\u0433\u0438\u0438 \u0441\u0442\u0438\u0445\u0438\u0439 \u0438 \u0443\u0432\u0435\u043b\u0438\u0447\u0438\u0432\u0430\u0435\u0442 \u0437\u0430\u043f\u0430\u0441 \u041e\u041c",
-         "sw": "Heightens players senses with nature to increase Damage & Range of the Bow."
+         "en": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
+         "ar": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
+         "br": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
+         "cns": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
+         "de": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
+         "fi": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
+         "fil": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
+         "fr": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
+         "it": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
+         "kr": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
+         "nl": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
+         "pl": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
+         "ru": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
+         "sw": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
+         "th": "Heightens the users senses with nature to increase Magic Defense & Bow Range."
       },
       "icon": "ragsupnature.png",
       "class": 9295,
@@ -24818,9 +25325,9 @@ const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "attack",
-                  "add": 1,
-                  "rate": true
+                  "parameter": "magicdefense",
+                  "add": 120,
+                  "rate": false
                },
                {
                   "parameter": "bowrange",
@@ -24845,9 +25352,9 @@ const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "attack",
-                  "add": 2,
-                  "rate": true
+                  "parameter": "magicdefense",
+                  "add": 140,
+                  "rate": false
                },
                {
                   "parameter": "bowrange",
@@ -24872,9 +25379,9 @@ const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "attack",
-                  "add": 3,
-                  "rate": true
+                  "parameter": "magicdefense",
+                  "add": 160,
+                  "rate": false
                },
                {
                   "parameter": "bowrange",
@@ -24899,9 +25406,9 @@ const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "attack",
-                  "add": 4,
-                  "rate": true
+                  "parameter": "magicdefense",
+                  "add": 180,
+                  "rate": false
                },
                {
                   "parameter": "bowrange",
@@ -24926,9 +25433,9 @@ const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "attack",
-                  "add": 5,
-                  "rate": true
+                  "parameter": "magicdefense",
+                  "add": 200,
+                  "rate": false
                },
                {
                   "parameter": "bowrange",
@@ -24953,9 +25460,9 @@ const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "attack",
-                  "add": 6,
-                  "rate": true
+                  "parameter": "magicdefense",
+                  "add": 220,
+                  "rate": false
                },
                {
                   "parameter": "bowrange",
@@ -24980,9 +25487,9 @@ const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "attack",
-                  "add": 7,
-                  "rate": true
+                  "parameter": "magicdefense",
+                  "add": 240,
+                  "rate": false
                },
                {
                   "parameter": "bowrange",
@@ -25007,9 +25514,9 @@ const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "attack",
-                  "add": 8,
-                  "rate": true
+                  "parameter": "magicdefense",
+                  "add": 260,
+                  "rate": false
                },
                {
                   "parameter": "bowrange",
@@ -25034,9 +25541,9 @@ const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "attack",
-                  "add": 9,
-                  "rate": true
+                  "parameter": "magicdefense",
+                  "add": 280,
+                  "rate": false
                },
                {
                   "parameter": "bowrange",
@@ -25061,9 +25568,9 @@ const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "attack",
-                  "add": 10,
-                  "rate": true
+                  "parameter": "magicdefense",
+                  "add": 300,
+                  "rate": false
                },
                {
                   "parameter": "bowrange",
@@ -25088,20 +25595,25 @@ const skillsjson = [
       "name": {
          "en": "Arrow Rain",
          "ar": "Arrow Rain",
+         "br": "Chuva de Flechas",
+         "cns": "\u7bad\u96e8",
          "de": "Arrow Rain",
          "fi": "Arrow Rain",
          "fil": "Arrow Rain",
          "fr": "Pluie de fl\u00e8ches",
          "it": "Arrow Rain",
          "kr": "\uc560\ub85c\uc6b0 \ub808\uc778",
-         "nl": "Arrow Rain",
-         "pl": "Arrow Rain",
+         "nl": "Pijlenregen",
+         "pl": "Deszcz Strza\u0142",
          "ru": "\u041b\u0438\u0432\u0435\u043d\u044c \u0441\u0442\u0440\u0435\u043b",
-         "sw": "Arrow Rain"
+         "sw": "Arrow Rain",
+         "th": "Arrow Rain"
       },
       "description": {
          "en": "Creates a rain of arrows that does damage over time.",
          "ar": "Creates a rain of arrows that does damage over time.",
+         "br": "Cria uma chuva de flechas que causa danos com o tempo.",
+         "cns": "\u5411\u7a7a\u4e2d\u5c04\u51fa\u7bad\u96e8\uff0c\u843d\u5728\u5468\u56f4\u7684\u654c\u4eba\u8eab\u4e0a",
          "de": "Durch einen Schuss in den Himmel, den Kopf des Gegners angreifen.",
          "fi": "Creates a rain of arrows that does damage over time.",
          "fil": "Creates a rain of arrows that does damage over time.",
@@ -25109,9 +25621,10 @@ const skillsjson = [
          "it": "Creates a rain of arrows that does damage over time.",
          "kr": "\ubb34\uc218\ud788 \ub9ce\uc740 \ud654\uc0b4\uc744 \ud558\ub298\ub85c \uc3d8\uc544\uc62c\ub824 \uc801\uc758 \uba38\ub9ac\ub97c \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Creates a rain of arrows that does damage over time.",
-         "pl": "Creates a rain of arrows that does damage over time.",
+         "pl": "Sprowadza grad strza\u0142, kt\u00f3ry zadaje obra\u017cenia wszystkim wrogom wok\u00f3\u0142 celu przez pewien czas.",
          "ru": "\u041f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u043e\u0431\u0440\u0443\u0448\u0438\u0442\u044c \u043d\u0430 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430 \u043b\u0438\u0432\u0435\u043d\u044c \u0441\u0442\u0440\u0435\u043b, \u043d\u0430\u043d\u043e\u0441\u044f\u0449\u0438\u0439 \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u044b\u0439 \u0443\u0440\u043e\u043d.",
-         "sw": "Creates a rain of arrows that does damage over time."
+         "sw": "Creates a rain of arrows that does damage over time.",
+         "th": "Creates a rain of arrows that does damage over time."
       },
       "icon": "acrbowrain.png",
       "class": 9098,
@@ -25134,11 +25647,11 @@ const skillsjson = [
       "skillPoints": 2,
       "levels": [
          {
-            "minAttack": 10,
-            "maxAttack": 11,
+            "minAttack": 16,
+            "maxAttack": 17,
             "dotTick": 0.5,
             "consumedMP": 55,
-            "cooldown": 7,
+            "cooldown": 8,
             "duration": 2,
             "durationPVP": 2,
             "spellRange": 4,
@@ -25153,11 +25666,11 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 10,
-            "maxAttack": 11,
+            "minAttack": 17,
+            "maxAttack": 18,
             "dotTick": 0.5,
             "consumedMP": 55,
-            "cooldown": 7,
+            "cooldown": 8,
             "duration": 2,
             "durationPVP": 2,
             "spellRange": 4,
@@ -25172,13 +25685,13 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 11,
-            "maxAttack": 12,
+            "minAttack": 18,
+            "maxAttack": 19,
             "dotTick": 0.5,
             "consumedMP": 57,
-            "cooldown": 7,
-            "duration": 3,
-            "durationPVP": 3,
+            "cooldown": 8,
+            "duration": 2.5,
+            "durationPVP": 2.5,
             "spellRange": 4,
             "scalingParameters": [
                {
@@ -25191,13 +25704,13 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 11,
-            "maxAttack": 12,
+            "minAttack": 19,
+            "maxAttack": 20,
             "dotTick": 0.5,
             "consumedMP": 57,
-            "cooldown": 7,
-            "duration": 3,
-            "durationPVP": 3,
+            "cooldown": 8,
+            "duration": 2.5,
+            "durationPVP": 2.5,
             "spellRange": 4,
             "scalingParameters": [
                {
@@ -25210,11 +25723,11 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 12,
-            "maxAttack": 13,
+            "minAttack": 20,
+            "maxAttack": 21,
             "dotTick": 0.5,
             "consumedMP": 60,
-            "cooldown": 7,
+            "cooldown": 8,
             "duration": 3,
             "durationPVP": 3,
             "spellRange": 4,
@@ -25229,11 +25742,11 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 12,
-            "maxAttack": 13,
+            "minAttack": 21,
+            "maxAttack": 22,
             "dotTick": 0.5,
             "consumedMP": 60,
-            "cooldown": 7,
+            "cooldown": 8,
             "duration": 3,
             "durationPVP": 3,
             "spellRange": 4,
@@ -25248,13 +25761,13 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 13,
-            "maxAttack": 14,
+            "minAttack": 22,
+            "maxAttack": 23,
             "dotTick": 0.5,
             "consumedMP": 62,
-            "cooldown": 7,
-            "duration": 3,
-            "durationPVP": 3,
+            "cooldown": 8,
+            "duration": 3.5,
+            "durationPVP": 3.5,
             "spellRange": 4,
             "scalingParameters": [
                {
@@ -25267,13 +25780,13 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 13,
-            "maxAttack": 14,
+            "minAttack": 23,
+            "maxAttack": 24,
             "dotTick": 0.5,
             "consumedMP": 62,
-            "cooldown": 7,
-            "duration": 4,
-            "durationPVP": 4,
+            "cooldown": 8,
+            "duration": 3.5,
+            "durationPVP": 3.5,
             "spellRange": 4,
             "scalingParameters": [
                {
@@ -25286,11 +25799,11 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 14,
-            "maxAttack": 15,
+            "minAttack": 24,
+            "maxAttack": 25,
             "dotTick": 0.5,
             "consumedMP": 64,
-            "cooldown": 7,
+            "cooldown": 8,
             "duration": 4,
             "durationPVP": 4,
             "spellRange": 4,
@@ -25305,11 +25818,11 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 14,
-            "maxAttack": 15,
+            "minAttack": 25,
+            "maxAttack": 26,
             "dotTick": 0.5,
             "consumedMP": 64,
-            "cooldown": 7,
+            "cooldown": 8,
             "duration": 4,
             "durationPVP": 4,
             "spellRange": 4,
@@ -25324,13 +25837,13 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 15,
-            "maxAttack": 16,
+            "minAttack": 26,
+            "maxAttack": 27,
             "dotTick": 0.5,
             "consumedMP": 66,
-            "cooldown": 7,
-            "duration": 5,
-            "durationPVP": 5,
+            "cooldown": 8,
+            "duration": 4.5,
+            "durationPVP": 4.5,
             "spellRange": 4,
             "scalingParameters": [
                {
@@ -25343,13 +25856,13 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 15,
-            "maxAttack": 16,
+            "minAttack": 27,
+            "maxAttack": 28,
             "dotTick": 0.5,
             "consumedMP": 66,
-            "cooldown": 7,
-            "duration": 5,
-            "durationPVP": 5,
+            "cooldown": 8,
+            "duration": 4.5,
+            "durationPVP": 4.5,
             "spellRange": 4,
             "scalingParameters": [
                {
@@ -25362,13 +25875,13 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 16,
-            "maxAttack": 17,
+            "minAttack": 28,
+            "maxAttack": 29,
             "dotTick": 0.5,
             "consumedMP": 68,
-            "cooldown": 7,
-            "duration": 5,
-            "durationPVP": 5,
+            "cooldown": 8,
+            "duration": 4.5,
+            "durationPVP": 4.5,
             "spellRange": 4,
             "scalingParameters": [
                {
@@ -25381,13 +25894,13 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 16,
-            "maxAttack": 17,
+            "minAttack": 29,
+            "maxAttack": 30,
             "dotTick": 0.5,
             "consumedMP": 68,
-            "cooldown": 7,
-            "duration": 5,
-            "durationPVP": 5,
+            "cooldown": 8,
+            "duration": 4.5,
+            "durationPVP": 4.5,
             "spellRange": 4,
             "scalingParameters": [
                {
@@ -25400,13 +25913,13 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 17,
-            "maxAttack": 18,
+            "minAttack": 30,
+            "maxAttack": 31,
             "dotTick": 0.5,
             "consumedMP": 70,
-            "cooldown": 7,
-            "duration": 6,
-            "durationPVP": 6,
+            "cooldown": 8,
+            "duration": 4.5,
+            "durationPVP": 4.5,
             "spellRange": 4,
             "scalingParameters": [
                {
@@ -25419,13 +25932,13 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 17,
-            "maxAttack": 18,
+            "minAttack": 31,
+            "maxAttack": 32,
             "dotTick": 0.5,
             "consumedMP": 70,
-            "cooldown": 7,
-            "duration": 6,
-            "durationPVP": 6,
+            "cooldown": 8,
+            "duration": 4.5,
+            "durationPVP": 4.5,
             "spellRange": 4,
             "scalingParameters": [
                {
@@ -25438,13 +25951,13 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 18,
-            "maxAttack": 19,
+            "minAttack": 32,
+            "maxAttack": 33,
             "dotTick": 0.5,
             "consumedMP": 75,
-            "cooldown": 7,
-            "duration": 6,
-            "durationPVP": 6,
+            "cooldown": 8,
+            "duration": 4.5,
+            "durationPVP": 4.5,
             "spellRange": 4,
             "scalingParameters": [
                {
@@ -25457,13 +25970,13 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 18,
-            "maxAttack": 19,
+            "minAttack": 33,
+            "maxAttack": 34,
             "dotTick": 0.5,
             "consumedMP": 75,
-            "cooldown": 7,
-            "duration": 6,
-            "durationPVP": 6,
+            "cooldown": 8,
+            "duration": 4.5,
+            "durationPVP": 4.5,
             "spellRange": 4,
             "scalingParameters": [
                {
@@ -25476,13 +25989,13 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 19,
-            "maxAttack": 20,
+            "minAttack": 34,
+            "maxAttack": 35,
             "dotTick": 0.5,
             "consumedMP": 80,
-            "cooldown": 7,
-            "duration": 6,
-            "durationPVP": 6,
+            "cooldown": 8,
+            "duration": 4.5,
+            "durationPVP": 4.5,
             "spellRange": 4,
             "scalingParameters": [
                {
@@ -25495,13 +26008,13 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 20,
-            "maxAttack": 21,
+            "minAttack": 35,
+            "maxAttack": 36,
             "dotTick": 0.5,
             "consumedMP": 80,
-            "cooldown": 7,
-            "duration": 6,
-            "durationPVP": 6,
+            "cooldown": 8,
+            "duration": 5,
+            "durationPVP": 5,
             "spellRange": 4,
             "scalingParameters": [
                {
@@ -25520,6 +26033,8 @@ const skillsjson = [
       "name": {
          "en": "Over Cutter",
          "ar": "Over Cutter",
+         "br": "Golpe Final",
+         "cns": "\u6458\u661f\u65a9",
          "de": "Over Cutter",
          "fi": "Over Cutter",
          "fil": "Over Cutter",
@@ -25527,13 +26042,16 @@ const skillsjson = [
          "it": "Taglia Fatale",
          "kr": "\uc624\ubc84\ucee4\ud130",
          "nl": "Over Cutter",
-         "pl": "Over Cutter",
+         "pl": "Ko\u0144cz\u0105ce Ci\u0119cie",
          "ru": "\u0414\u043e\u0431\u0438\u0432\u0430\u043d\u0438\u0435",
-         "sw": "Over Cutter"
+         "sw": "Over Cutter",
+         "th": "Over Cutter"
       },
       "description": {
          "en": "Powerful, upward, finishing move.",
          "ar": "\u0636\u0631\u0628\u0629 \u0642\u0627\u0636\u064a\u0629 \u0628\u0645\u0646\u062a\u0647\u0649 \u0627\u0644\u0642\u0648\u0629.",
+         "br": "Potente golpe de miseric\u00f3rdia.",
+         "cns": "\u7ec8\u7ed3\u6280\u80fd\uff0c\u805a\u96c6\u6d51\u8eab\u529b\u91cf\u5c06\u654c\u4eba\u51fb\u98de\u5e76\u9020\u6210\u8f83\u5927\u4f24\u5bb3\uff0c\u5f53\u7136\u4e0d\u662f\u6bcf\u6b21\u90fd\u80fd\u6210\u529f\u3002",
          "de": "Ein Abschluss Skill, um einen starken Schlag nach vorne auszuf\u00fchren.",
          "fi": "Voimakas, yl\u00f6s suuntautuva lopetusliike.",
          "fil": "Powerful, upward, finishing move.",
@@ -25541,9 +26059,10 @@ const skillsjson = [
          "it": "Si concentra prima di liberare un ultimo colpo forte.",
          "kr": "\ud53c\ub2c8\uc26c\uc2a4\ud0ac\ub85c \ud798\uc744 \ucd5c\ub300\ud55c \ubaa8\uc544 \uc704\ub85c \uc62c\ub824\uce69\ub2c8\ub2e4.",
          "nl": "Powerful, upward, finishing move.",
-         "pl": "Powerful, upward, finishing move.",
+         "pl": "Pot\u0119\u017cny cios ko\u0144cz\u0105cy kombinacj\u0119.",
          "ru": "\u041c\u043e\u0449\u043d\u044b\u0439 \u0443\u0434\u0430\u0440, \u0437\u0430\u0432\u0435\u0440\u0448\u0430\u044e\u0449\u0438\u0439 \u0441\u0435\u0440\u0438\u044e.",
-         "sw": "Powerful, upward, finishing move."
+         "sw": "Powerful, upward, finishing move.",
+         "th": "Powerful, upward, finishing move."
       },
       "icon": "vagoneovercu.png",
       "class": 9686,
@@ -25710,20 +26229,25 @@ const skillsjson = [
       "name": {
          "en": "Blade Dance",
          "ar": "Blade Dance",
+         "br": "Dan\u00e7a da L\u00e2mina",
+         "cns": "\u5200\u5251\u4e71\u821e",
          "de": "Blade Dance",
          "fi": "Blade Dance",
          "fil": "Blade Dance",
          "fr": "Danse de lames",
          "it": "Blade Dance",
          "kr": "\ube14\ub808\uc774\ub4dc \ub304\uc2a4",
-         "nl": "Blade Dance",
-         "pl": "Blade Dance",
+         "nl": "Zwaardendans",
+         "pl": "Taniec Mieczy",
          "ru": "\u0422\u0430\u043d\u0435\u0446 \u0441 \u043b\u0435\u0437\u0432\u0438\u044f\u043c\u0438",
-         "sw": "Blade Dance"
+         "sw": "Blade Dance",
+         "th": "Blade Dance"
       },
       "description": {
          "en": "Strikes at multiple enemies. Requires two Swords.",
          "ar": "Strikes at multiple enemies. Requires two Swords.",
+         "br": "Golpeia v\u00e1rios inimigos. Exige duas espadas.",
+         "cns": "\u6325\u821e\u624b\u4e2d\u7684\u5251\u653b\u51fb\u5468\u56f4\u6240\u6709\u654c\u4eba\u3002",
          "de": "Durch kurzes Tanzen ausgel\u00f6ster Schlag in einen gegnerischen Bereich.",
          "fi": "Iskee useaa vihollista. Vaatii kaksi Miekkaa.",
          "fil": "Strikes at multiple enemies. Requires two Swords.",
@@ -25731,9 +26255,10 @@ const skillsjson = [
          "it": "Strikes at multiple enemies. Requires two Swords.",
          "kr": "\ucda4\uc744 \ucd94\ub4ef \uc18c\ub4dc\ub97c \ud718\ub458\ub7ec \uc8fc\uc704\uc5d0 \uc788\ub294 \uc801\ub4e4\uc744 \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Strikes at multiple enemies. Requires two Swords.",
-         "pl": "Strikes at multiple enemies. Requires two Swords.",
-         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0443\u0440\u043e\u043d \u0441\u0440\u0430\u0437\u0443 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u043c \u0432\u0440\u0430\u0433\u0430\u043c.  \u0414\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0440\u0435\u0431\u0443\u044e\u0442\u0441\u044f \u0434\u0432\u0430 \u043c\u0435\u0447\u0430.",
-         "sw": "Strikes at multiple enemies. Requires two Swords."
+         "pl": "Atakuje wszystkich wrog\u00f3w wok\u00f3\u0142 ciebie. Wymaga dw\u00f3ch mieczy.",
+         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0443\u0440\u043e\u043d \u0441\u0440\u0430\u0437\u0443 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u043c \u0432\u0440\u0430\u0433\u0430\u043c. \u0414\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0440\u0435\u0431\u0443\u044e\u0442\u0441\u044f \u0434\u0432\u0430 \u043c\u0435\u0447\u0430.",
+         "sw": "Strikes at multiple enemies. Requires two Swords.",
+         "th": "Strikes at multiple enemies. Requires two Swords."
       },
       "icon": "blddswblddan.png",
       "class": 2246,
@@ -25921,6 +26446,8 @@ const skillsjson = [
       "name": {
          "en": "Berserk",
          "ar": "Berserk",
+         "br": "Berserk",
+         "cns": "\u72c2\u66b4",
          "de": "Berserk",
          "fi": "Berserk",
          "fil": "Berserk",
@@ -25930,11 +26457,14 @@ const skillsjson = [
          "nl": "Berserk",
          "pl": "Berserk",
          "ru": "\u0411\u0435\u0440\u0441\u0435\u0440\u043a",
-         "sw": "Berserk"
+         "sw": "Berserk",
+         "th": "Berserk"
       },
       "description": {
          "en": "Increases attack speed and striking power. Unable to use other skills using Berserk.",
          "ar": "Increases attack speed and striking power. Unable to use other skills using Berserk.",
+         "br": "Aumenta a velocidade de ataque e o poder do golpe. N\u00e3o \u00e9 poss\u00edvel utilizar outras habilidades enquanto estiver em modo Berserk.",
+         "cns": "\u77ed\u65f6\u95f4\u5185\u589e\u52a0\u653b\u51fb\u529b\u53ca\u653b\u51fb\u901f\u5ea6\uff0c\u4f46\u65e0\u6cd5\u4f7f\u7528\u6280\u80fd\u653b\u51fb\u3002",
          "de": "Erh\u00f6ht die Angriffsst\u00e4rke und das Angriffstempo indem man zornig wird.",
          "fi": "Kasvattaa hy\u00f6kk\u00e4ysnopeutta ja iskuvoimaa. Ei voida k\u00e4ytt\u00e4\u00e4 muita kykyj\u00e4 Berserkin aikana.",
          "fil": "Increases attack speed and striking power. Unable to use other skills using Berserk.",
@@ -25942,9 +26472,10 @@ const skillsjson = [
          "it": "Increases attack speed and striking power. Unable to use other skills using Berserk.",
          "kr": "\ubd84\ub178\ub97c \ud3ed\ubc1c\uc2dc\ucf1c \uc21c\uac04\uc801\uc73c\ub85c \uacf5\uaca9\ub825, \uacf5\uaca9\uc18d\ub3c4\ub97c \uc99d\uac00\uc2dc\ud0b5\ub2c8\ub2e4. \uc774\ub54c \ub2e4\ub978 \uc2a4\ud0ac\uc740 \uc0ac\uc6a9 \ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.",
          "nl": "Increases attack speed and striking power. Unable to use other skills using Berserk.",
-         "pl": "Increases attack speed and striking power. Unable to use other skills using Berserk.",
+         "pl": "Wpadasz w sza\u0142 by zwi\u0119kszy\u0107 szybko\u015b\u0107 i si\u0142\u0119 ataku. W tym stanie nie mo\u017cesz u\u017cywa\u0107 \u017cadnych umiej\u0119tno\u015bci.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u044c \u0438 \u0441\u0438\u043b\u0443 \u0430\u0442\u0430\u043a. \u0412\u0441\u0435 \u043f\u0440\u043e\u0447\u0438\u0435 \u0443\u043c\u0435\u043d\u0438\u044f \u043d\u0430 \u0432\u0440\u0435\u043c\u044f \u0431\u0435\u0440\u0441\u0435\u0440\u043a\u0430 \u0431\u043b\u043e\u043a\u0438\u0440\u0443\u044e\u0442\u0441\u044f.",
-         "sw": "Increases attack speed and striking power. Unable to use other skills using Berserk."
+         "sw": "Increases attack speed and striking power. Unable to use other skills using Berserk.",
+         "th": "Increases attack speed and striking power. Unable to use other skills using Berserk."
       },
       "icon": "bldsupberser.png",
       "class": 2246,
@@ -25977,9 +26508,9 @@ const skillsjson = [
                   "rate": true
                },
                {
-                  "parameter": "damage",
-                  "add": 100,
-                  "rate": false
+                  "parameter": "attack",
+                  "add": 1,
+                  "rate": true
                }
             ]
          },
@@ -25996,9 +26527,9 @@ const skillsjson = [
                   "rate": true
                },
                {
-                  "parameter": "damage",
-                  "add": 120,
-                  "rate": false
+                  "parameter": "attack",
+                  "add": 2,
+                  "rate": true
                }
             ]
          },
@@ -26015,9 +26546,9 @@ const skillsjson = [
                   "rate": true
                },
                {
-                  "parameter": "damage",
-                  "add": 140,
-                  "rate": false
+                  "parameter": "attack",
+                  "add": 3,
+                  "rate": true
                }
             ]
          },
@@ -26034,9 +26565,9 @@ const skillsjson = [
                   "rate": true
                },
                {
-                  "parameter": "damage",
-                  "add": 160,
-                  "rate": false
+                  "parameter": "attack",
+                  "add": 4,
+                  "rate": true
                }
             ]
          },
@@ -26053,9 +26584,9 @@ const skillsjson = [
                   "rate": true
                },
                {
-                  "parameter": "damage",
-                  "add": 180,
-                  "rate": false
+                  "parameter": "attack",
+                  "add": 5,
+                  "rate": true
                }
             ]
          },
@@ -26072,9 +26603,9 @@ const skillsjson = [
                   "rate": true
                },
                {
-                  "parameter": "damage",
-                  "add": 200,
-                  "rate": false
+                  "parameter": "attack",
+                  "add": 7,
+                  "rate": true
                }
             ]
          },
@@ -26091,9 +26622,9 @@ const skillsjson = [
                   "rate": true
                },
                {
-                  "parameter": "damage",
-                  "add": 220,
-                  "rate": false
+                  "parameter": "attack",
+                  "add": 9,
+                  "rate": true
                }
             ]
          },
@@ -26110,9 +26641,9 @@ const skillsjson = [
                   "rate": true
                },
                {
-                  "parameter": "damage",
-                  "add": 240,
-                  "rate": false
+                  "parameter": "attack",
+                  "add": 11,
+                  "rate": true
                }
             ]
          },
@@ -26129,9 +26660,9 @@ const skillsjson = [
                   "rate": true
                },
                {
-                  "parameter": "damage",
-                  "add": 260,
-                  "rate": false
+                  "parameter": "attack",
+                  "add": 13,
+                  "rate": true
                }
             ]
          },
@@ -26148,9 +26679,9 @@ const skillsjson = [
                   "rate": true
                },
                {
-                  "parameter": "damage",
-                  "add": 280,
-                  "rate": false
+                  "parameter": "attack",
+                  "add": 15,
+                  "rate": true
                }
             ]
          }
@@ -26161,6 +26692,8 @@ const skillsjson = [
       "name": {
          "en": "Belial Smashing",
          "ar": "Belial Smashing",
+         "br": "Belial Esmagador",
+         "cns": "\u51b2\u51fb\u62f3",
          "de": "Belial Smashing",
          "fi": "Belial Smashing",
          "fil": "Belial Smashing",
@@ -26168,13 +26701,16 @@ const skillsjson = [
          "it": "Belial Smashing",
          "kr": "\ubca0\ub9ac\uc54c \uc2a4\uba54\uc2f1",
          "nl": "Belial Smashing",
-         "pl": "Belial Smashing",
+         "pl": "Rozbicie Beliala",
          "ru": "\u0414\u044c\u044f\u0432\u043e\u043b\u044c\u0441\u043a\u0438\u0439 \u043d\u0430\u0442\u0438\u0441\u043a",
-         "sw": "Belial Smashing"
+         "sw": "Belial Smashing",
+         "th": "Belial Smashing"
       },
       "description": {
          "en": "Sliding, crushing attack.",
          "ar": "Sliding, crushing attack.",
+         "br": "Um ataque deslizante e esmagador.",
+         "cns": "\u805a\u96c6\u529b\u91cf\uff0c\u7528\u62f3\u5934\u51b2\u51fb\u5bf9\u65b9\uff0c\u9020\u6210\u4f24\u5bb3\u3002",
          "de": "Einen Angriff mit dem Knuckle starten und auf den Gegner einst\u00fcrmen.",
          "fi": "Liukuva, murskaava hy\u00f6kk\u00e4ys.",
          "fil": "Sliding, crushing attack.",
@@ -26182,9 +26718,10 @@ const skillsjson = [
          "it": "Sliding, crushing attack.",
          "kr": "\ub108\ud074\ud574\uba38\ub85c \uc801\uc744 \ud5a5\ud574 \ub3cc\uc9c4\ud558\uba70 \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Sliding, crushing attack.",
-         "pl": "Sliding, crushing attack.",
+         "pl": "\u015alizgowy, rozbijaj\u0105cy atak.",
          "ru": "\u0420\u0435\u0437\u043a\u0438\u0439 \u0441\u043e\u043a\u0440\u0443\u0448\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0443\u0434\u0430\u0440.",
-         "sw": "Sliding, crushing attack."
+         "sw": "Sliding, crushing attack.",
+         "th": "Sliding, crushing attack."
       },
       "icon": "bilbelialsmeshing.png",
       "class": 7424,
@@ -26214,7 +26751,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.02,
+                  "scale": 5.52,
                   "pvp": true,
                   "pve": true
                }
@@ -26229,7 +26766,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.04,
+                  "scale": 5.54,
                   "pvp": true,
                   "pve": true
                }
@@ -26244,7 +26781,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.06,
+                  "scale": 5.56,
                   "pvp": true,
                   "pve": true
                }
@@ -26259,7 +26796,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.08,
+                  "scale": 5.58,
                   "pvp": true,
                   "pve": true
                }
@@ -26274,7 +26811,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.1,
+                  "scale": 5.6,
                   "pvp": true,
                   "pve": true
                }
@@ -26289,7 +26826,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.12,
+                  "scale": 5.62,
                   "pvp": true,
                   "pve": true
                }
@@ -26304,7 +26841,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.14,
+                  "scale": 5.64,
                   "pvp": true,
                   "pve": true
                }
@@ -26319,7 +26856,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.16,
+                  "scale": 5.66,
                   "pvp": true,
                   "pve": true
                }
@@ -26334,7 +26871,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.18,
+                  "scale": 5.68,
                   "pvp": true,
                   "pve": true
                }
@@ -26349,7 +26886,7 @@ const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.2,
+                  "scale": 5.7,
                   "pvp": true,
                   "pve": true
                }
@@ -26362,6 +26899,8 @@ const skillsjson = [
       "name": {
          "en": "Smite Axe",
          "ar": "Smite Axe",
+         "br": "Machado Pesado",
+         "cns": "\u6218\u65a7\u4e4b\u5149",
          "de": "Smite Axe",
          "fi": "Smite Axe",
          "fil": "Smite Axe",
@@ -26369,23 +26908,27 @@ const skillsjson = [
          "it": "Tomahawk",
          "kr": "\uc2a4\ub9c8\uc774\ud2b8 \uc5d1\uc2a4",
          "nl": "Smite Axe",
-         "pl": "Smite Axe",
+         "pl": "Pora\u017caj\u0105cy Top\u00f3r",
          "ru": "\u041a\u0430\u0440\u0430\u044e\u0449\u0430\u044f \u0441\u0435\u043a\u0438\u0440\u0430",
-         "sw": "Smite Axe"
+         "sw": "Smite Axe",
+         "th": "Smite Axe"
       },
       "description": {
-         "en": "Increases the accuracy with an Axe and increases power of the Axe.",
-         "ar": "Increases the accuracy with an Axe and increases power of the Axe.",
-         "de": "Erh\u00f6ht die Angriffst\u00e4rke und die Verteidigungsst\u00e4rke deiner Axt.",
-         "fi": "Lis\u00e4\u00e4 tarkkuutta kirveen kanssa, sek\u00e4 lis\u00e4\u00e4 Kirveen voimaa.",
-         "fil": "Increases the accuracy with an Axe and increases power of the Axe.",
-         "fr": "Augmente la puissance d'attaque et la d\u00e9fense lors d'un combat \u00e0 la hache",
-         "it": "Aumenta la precizione e la potenza d'attacco dell'ascia. ",
-         "kr": "\uc5d1\uc2a4\uc758 \ub2a5\ub825\uc744 \uac15\ud654\uc2dc\ucf1c \uacf5\uaca9\ub825\uacfc \ubc29\uc5b4\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
-         "nl": "Increases the accuracy with an Axe and increases power of the Axe.",
-         "pl": "Increases the accuracy with an Axe and increases power of the Axe.",
-         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0437\u0430\u0449\u0438\u0442\u0443 \u0438 \u0441\u0438\u043b\u0443 \u0443\u0434\u0430\u0440\u043e\u0432 \u043f\u0440\u0438 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u0438 \u0442\u043e\u043f\u043e\u0440\u043e\u0432 \u0438 \u0441\u0435\u043a\u0438\u0440.",
-         "sw": "Increases the accuracy with an Axe and increases power of the Axe."
+         "en": "Increases Defense and increases power of the Axe.",
+         "ar": "Increases Defense and increases power of the Axe.",
+         "br": "Increases Defense and increases power of the Axe.",
+         "cns": "Increases Defense and increases power of the Axe.",
+         "de": "Increases Defense and increases power of the Axe.",
+         "fi": "Increases Defense and increases power of the Axe.",
+         "fil": "Increases Defense and increases power of the Axe.",
+         "fr": "Increases Defense and increases power of the Axe.",
+         "it": "Increases Defense and increases power of the Axe.",
+         "kr": "Increases Defense and increases power of the Axe.",
+         "nl": "Increases Defense and increases power of the Axe.",
+         "pl": "Increases Defense and increases power of the Axe.",
+         "ru": "Increases Defense and increases power of the Axe.",
+         "sw": "Increases Defense and increases power of the Axe.",
+         "th": "Increases Defense and increases power of the Axe."
       },
       "icon": "mersupsmitea.png",
       "class": 764,
@@ -26419,8 +26962,8 @@ const skillsjson = [
                },
                {
                   "parameter": "def",
-                  "add": 2,
-                  "rate": false
+                  "add": 1,
+                  "rate": true
                }
             ]
          },
@@ -26437,8 +26980,8 @@ const skillsjson = [
                },
                {
                   "parameter": "def",
-                  "add": 3,
-                  "rate": false
+                  "add": 1,
+                  "rate": true
                }
             ]
          },
@@ -26455,8 +26998,8 @@ const skillsjson = [
                },
                {
                   "parameter": "def",
-                  "add": 4,
-                  "rate": false
+                  "add": 2,
+                  "rate": true
                }
             ]
          },
@@ -26473,8 +27016,8 @@ const skillsjson = [
                },
                {
                   "parameter": "def",
-                  "add": 5,
-                  "rate": false
+                  "add": 2,
+                  "rate": true
                }
             ]
          },
@@ -26491,8 +27034,8 @@ const skillsjson = [
                },
                {
                   "parameter": "def",
-                  "add": 6,
-                  "rate": false
+                  "add": 3,
+                  "rate": true
                }
             ]
          },
@@ -26509,8 +27052,8 @@ const skillsjson = [
                },
                {
                   "parameter": "def",
-                  "add": 7,
-                  "rate": false
+                  "add": 3,
+                  "rate": true
                }
             ]
          },
@@ -26527,8 +27070,8 @@ const skillsjson = [
                },
                {
                   "parameter": "def",
-                  "add": 8,
-                  "rate": false
+                  "add": 4,
+                  "rate": true
                }
             ]
          },
@@ -26545,8 +27088,8 @@ const skillsjson = [
                },
                {
                   "parameter": "def",
-                  "add": 9,
-                  "rate": false
+                  "add": 4,
+                  "rate": true
                }
             ]
          },
@@ -26563,8 +27106,8 @@ const skillsjson = [
                },
                {
                   "parameter": "def",
-                  "add": 10,
-                  "rate": false
+                  "add": 5,
+                  "rate": true
                }
             ]
          },
@@ -26581,8 +27124,8 @@ const skillsjson = [
                },
                {
                   "parameter": "def",
-                  "add": 11,
-                  "rate": false
+                  "add": 5,
+                  "rate": true
                }
             ]
          },
@@ -26599,8 +27142,8 @@ const skillsjson = [
                },
                {
                   "parameter": "def",
-                  "add": 12,
-                  "rate": false
+                  "add": 6,
+                  "rate": true
                }
             ]
          },
@@ -26617,8 +27160,8 @@ const skillsjson = [
                },
                {
                   "parameter": "def",
-                  "add": 13,
-                  "rate": false
+                  "add": 6,
+                  "rate": true
                }
             ]
          },
@@ -26635,8 +27178,8 @@ const skillsjson = [
                },
                {
                   "parameter": "def",
-                  "add": 14,
-                  "rate": false
+                  "add": 7,
+                  "rate": true
                }
             ]
          },
@@ -26653,8 +27196,8 @@ const skillsjson = [
                },
                {
                   "parameter": "def",
-                  "add": 15,
-                  "rate": false
+                  "add": 7,
+                  "rate": true
                }
             ]
          },
@@ -26671,8 +27214,8 @@ const skillsjson = [
                },
                {
                   "parameter": "def",
-                  "add": 16,
-                  "rate": false
+                  "add": 8,
+                  "rate": true
                }
             ]
          },
@@ -26689,8 +27232,8 @@ const skillsjson = [
                },
                {
                   "parameter": "def",
-                  "add": 17,
-                  "rate": false
+                  "add": 8,
+                  "rate": true
                }
             ]
          },
@@ -26707,8 +27250,8 @@ const skillsjson = [
                },
                {
                   "parameter": "def",
-                  "add": 18,
-                  "rate": false
+                  "add": 9,
+                  "rate": true
                }
             ]
          },
@@ -26725,8 +27268,8 @@ const skillsjson = [
                },
                {
                   "parameter": "def",
-                  "add": 19,
-                  "rate": false
+                  "add": 9,
+                  "rate": true
                }
             ]
          },
@@ -26743,8 +27286,8 @@ const skillsjson = [
                },
                {
                   "parameter": "def",
-                  "add": 20,
-                  "rate": false
+                  "add": 10,
+                  "rate": true
                }
             ]
          },
@@ -26761,8 +27304,8 @@ const skillsjson = [
                },
                {
                   "parameter": "def",
-                  "add": 25,
-                  "rate": false
+                  "add": 10,
+                  "rate": true
                }
             ]
          }
@@ -26773,20 +27316,25 @@ const skillsjson = [
       "name": {
          "en": "Fire Master",
          "ar": "Fire Master",
+         "br": "Mestre do Fogo",
+         "cns": "\u706b\u7cfb\u4fee\u70bc",
          "de": "Fire Master",
          "fi": "Fire Master",
          "fil": "Fire Master",
          "fr": "Ma\u00eetre du feu",
          "it": "Fire Master",
          "kr": "\ud30c\uc774\uc5b4 \ub9c8\uc2a4\ud130",
-         "nl": "Fire Master",
-         "pl": "Fire Master",
+         "nl": "Vuurmeester",
+         "pl": "Mistrz Ognia",
          "ru": "\u0412\u043b\u0430\u0441\u0442\u0435\u043b\u0438\u043d \u043e\u0433\u043d\u044f",
-         "sw": "Fire Master"
+         "sw": "Fire Master",
+         "th": "Fire Master"
       },
       "description": {
          "en": "Increases the striking power of fire spells,",
          "ar": "Increases the striking power of fire spells,",
+         "br": "Aumenta o poder de for\u00e7a das magias de Fogo.",
+         "cns": "\u63d0\u9ad8\u706b\u7cfb\u9b54\u6cd5\u653b\u51fb\u529b\u3002",
          "de": "Erh\u00f6hung der Angriffsst\u00e4rke von Magie mit Feuer Attribute.",
          "fi": "Increases the striking power of fire spells,",
          "fil": "Increases the striking power of fire spells,",
@@ -26794,9 +27342,10 @@ const skillsjson = [
          "it": "Increases the striking power of fire spells,",
          "kr": "\ud30c\uc774\uc5b4 \uc18d\uc131 \ub9c8\ubc95\uc758 \uacf5\uaca9\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increases the striking power of fire spells,",
-         "pl": "Increases the striking power of fire spells,",
+         "pl": "Zwi\u0119ksza si\u0142\u0119 Ognistych Czar\u00f3w.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u0438\u043b\u0443 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439 \u0441\u0442\u0438\u0445\u0438\u0438 \u043e\u0433\u043d\u044f.",
-         "sw": "Increases the striking power of fire spells,"
+         "sw": "Increases the striking power of fire spells,",
+         "th": "Increases the striking power of fire spells,"
       },
       "icon": "elefirfirmst.png",
       "class": 9150,
@@ -26954,6 +27503,8 @@ const skillsjson = [
       "name": {
          "en": "Water Well",
          "ar": "Water Well",
+         "br": "Po\u00e7o Aqu\u00e1tico",
+         "cns": "\u6fc0\u6d41\u51b2\u51fb",
          "de": "Springwater",
          "fi": "Water Well",
          "fil": "Water Well",
@@ -26961,13 +27512,16 @@ const skillsjson = [
          "it": "Water Well",
          "kr": "\uc2a4\ud504\ub9c1\uc6cc\ud130",
          "nl": "Water Well",
-         "pl": "Water Well",
+         "pl": "Studnia Wody",
          "ru": "\u0413\u0435\u0439\u0437\u0435\u0440",
-         "sw": "Water Well"
+         "sw": "Water Well",
+         "th": "Water Well"
       },
       "description": {
          "en": "Splashes the enemy with a water attack. The enemy takes damage over time.",
          "ar": "Splashes the enemy with a water attack. The enemy takes damage over time.",
+         "br": "Atinge o inimigo com uma ataque de \u00e1gua. Causa dano com o passar do tempo.",
+         "cns": "\u5f62\u6210\u5f3a\u529b\u7684\u6c34\u67f1\u4f24\u5bb3\u654c\u4eba\uff0c\u8ba9\u5bf9\u65b9\u53d7\u5230\u51b0\u51bb\uff0c\u964d\u4f4e\u5bf9\u7535\u7cfb\u653b\u51fb\u7684\u62b5\u6297\u529b\u3002",
          "de": "Dem Gegner durch eine sehr gro\u00dfe Wassermenge Schaden zuf\u00fcgen. Der Gegner wird dabei nass.",
          "fi": "Splashes the enemy with a water attack. The enemy takes damage over time.",
          "fil": "Splashes the enemy with a water attack. The enemy takes damage over time.",
@@ -26975,9 +27529,10 @@ const skillsjson = [
          "it": "Splashes the enemy with a water attack. The enemy takes damage over time.",
          "kr": "\ubb3c\uae30\ub465\uc774 \uc19f\uad6c\uccd0 \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4. \uc774\ub54c \uc801\uc740 \uc816\uc5b4\uc788\ub294 \uc0c1\ud0dc\uac00 \ub429\ub2c8\ub2e4.",
          "nl": "Splashes the enemy with a water attack. The enemy takes damage over time.",
-         "pl": "Splashes the enemy with a water attack. The enemy takes damage over time.",
-         "ru": "\u041d\u0430 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430 \u043e\u0431\u0440\u0443\u0448\u0438\u0432\u0430\u044e\u0442\u0441\u044f \u0441\u0442\u0440\u0443\u0438 \u0432\u043e\u0434\u044b, \u043d\u0430\u043d\u043e\u0441\u044f\u0449\u0438\u0435 \u0443\u0440\u043e\u043d \u0438 \u0441\u043d\u0438\u0436\u0430\u044e\u0449\u0438\u0435 \u0441\u043e\u043f\u0440\u043e\u0442\u0438\u0432\u043b\u0435\u043d\u0438\u0435 \u0441\u0442\u0438\u0445\u0438\u0438 \u043c\u043e\u043b\u043d\u0438\u0438.",
-         "sw": "Splashes the enemy with a water attack. The enemy takes damage over time."
+         "pl": "Wylewa na wroga olbrzymi\u0105 ilo\u015b\u0107 wody. Mokry cel b\u0119dzie chwilowo bardziej podatny na ataki Elektryczne.",
+         "ru": "\u041d\u0430 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430 \u043e\u0431\u0440\u0443\u0448\u0438\u0432\u0430\u044e\u0442\u0441\u044f \u0441\u0442\u0440\u0443\u0438 \u0432\u043e\u0434\u044b, \u043d\u0430\u043d\u043e\u0441\u044f\u0449\u0438\u0435 \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u044b\u0439 \u0443\u0440\u043e\u043d.",
+         "sw": "Splashes the enemy with a water attack. The enemy takes damage over time.",
+         "th": "Splashes the enemy with a water attack. The enemy takes damage over time."
       },
       "icon": "magspringwater.png",
       "class": 9581,
@@ -27505,6 +28060,8 @@ const skillsjson = [
       "name": {
          "en": "Mental Strike",
          "ar": "Mental Strike",
+         "br": "Pancada Mental",
+         "cns": "\u7075\u6ce2\u72c2\u60f3",
          "de": "Mental Strike",
          "fi": "Mental Strike",
          "fil": "Mental Strike",
@@ -27512,13 +28069,16 @@ const skillsjson = [
          "it": "Mental Strike",
          "kr": "\uba58\ud0c8 \uc2a4\ud2b8\ub77c\uc774\ud06c",
          "nl": "Mental Strike",
-         "pl": "Mental Strike",
+         "pl": "Psychiczny Atak",
          "ru": "\u041f\u0441\u0438-\u0443\u0434\u0430\u0440",
-         "sw": "Mental Strike"
+         "sw": "Mental Strike",
+         "th": "Mental Strike"
       },
       "description": {
          "en": "Ranged Mental attack.",
          "ar": "Ranged Mental attack.",
+         "br": "Ataque mental a dist\u00e2ncia.",
+         "cns": "\u7ed9\u5bf9\u8c61\u65bd\u52a0\u65e0\u5c5e\u6027\u7684\u7cbe\u795e\u538b\u529b\u3002",
          "de": "Dem Gegner mit mentaler Kraft Schaden zuf\u00fcgen.",
          "fi": "Ranged Mental attack.",
          "fil": "Ranged Mental attack.",
@@ -27526,9 +28086,10 @@ const skillsjson = [
          "it": "Ranged Mental attack.",
          "kr": "\uc815\uc2e0\ub825\uc744 \uc774\uc6a9\ud558\uc5ec \uc801\uc5d0\uac8c \ubb34\uc18d\uc131 \uacf5\uaca9\uc744 \uac00\ud569\ub2c8\ub2e4.",
          "nl": "Ranged Mental attack.",
-         "pl": "Ranged Mental attack.",
+         "pl": "Atakuje umys\u0142 wroga by zada\u0107 b\u00f3l.",
          "ru": "\u0410\u0442\u0430\u043a\u0430 \u0434\u0430\u043b\u044c\u043d\u0435\u0433\u043e \u0431\u043e\u044f. \u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d \u043f\u0441\u0438-\u044d\u043d\u0435\u0440\u0433\u0438\u0435\u0439.",
-         "sw": "Ranged Mental attack."
+         "sw": "Ranged Mental attack.",
+         "th": "Ranged Mental attack."
       },
       "icon": "magmagmental.png",
       "class": 9581,
@@ -27851,6 +28412,8 @@ const skillsjson = [
       "name": {
          "en": "Enchant Absorb",
          "ar": "Enchant Absorb",
+         "br": "Ioi\u00f4 Sedento",
+         "cns": "\u751f\u547d\u5438\u53d6",
          "de": "Enchant Absorb",
          "fi": "Enchant Absorb",
          "fil": "Enchant Absorb",
@@ -27858,13 +28421,16 @@ const skillsjson = [
          "it": "Enchant Absorb",
          "kr": "\ud761\uc218",
          "nl": "Enchant Absorb",
-         "pl": "Enchant Absorb",
+         "pl": "Zaczarowane Poch\u0142anianie",
          "ru": "\u041a\u0440\u043e\u0432\u043e\u0436\u0430\u0434\u043d\u0430\u044f \u0439\u043e-\u0439\u043e",
-         "sw": "Enchant Absorb"
+         "sw": "Enchant Absorb",
+         "th": "Enchant Absorb"
       },
       "description": {
          "en": "Adds the ability to drain HP to your yo-yo and increases attack power.",
          "ar": "Adds the ability to drain HP to your yo-yo and increases attack power.",
+         "br": "Aumenta seu poder de ataque e adiciona a habilidade de roubo de vida (Drenar HP) ao seu Ioi\u00f4.",
+         "cns": "\u6682\u65f6\u4f7f\u98de\u8f6e\u7684\u653b\u51fb\u4ea7\u751f\u55dc\u8840\u7684\u6548\u679c\uff0c\u5728\u653b\u51fb\u4e2d\u6709\u4e00\u5b9a\u51e0\u7387\u5438\u53d6\u5bf9\u65b9HP\u3002",
          "de": "Erh\u00f6ht die Angriffsst\u00e4rke, indem man mit den Yoyos dem Gegner HP entzieht.",
          "fi": "Adds the ability to drain HP to your yo-yo and increases attack power.",
          "fil": "Adds the ability to drain HP to your yo-yo and increases attack power.",
@@ -27872,9 +28438,10 @@ const skillsjson = [
          "it": "Adds the ability to drain HP to your yo-yo and increases attack power.",
          "kr": "\uc694\uc694\uc5d0 HP\ud761\uc218 \uae30\ub2a5\uc744 \ucd94\uac00\uc2dc\ucf1c \uacf5\uaca9\ub825\ub97c \uc0c1\uc2b9\uc2dc\ud0a4\uace0. \uc77c\uc815 \ud655\ub960\ub85c \uc801\uc758 HP\ub97c \ud761\uc218\ud569\ub2c8\ub2e4.",
          "nl": "Adds the ability to drain HP to your yo-yo and increases attack power.",
-         "pl": "Adds the ability to drain HP to your yo-yo and increases attack power.",
+         "pl": "Dodaje szans\u0119 na kradzie\u017c HP do Yo-Yo i zwi\u0119ksza si\u0142\u0119 ataku.",
          "ru": "\u0423\u0434\u0430\u0440\u044b \u0439\u043e-\u0439\u043e \u0432\u044b\u0442\u044f\u0433\u0438\u0432\u0430\u044e\u0442 \u0438\u0437 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u0435.",
-         "sw": "Adds the ability to drain HP to your yo-yo and increases attack power."
+         "sw": "Adds the ability to drain HP to your yo-yo and increases attack power.",
+         "th": "Adds the ability to drain HP to your yo-yo and increases attack power."
       },
       "icon": "jstintabsorb.png",
       "class": 3545,
@@ -28212,6 +28779,8 @@ const skillsjson = [
       "name": {
          "en": "Knock back",
          "ar": "Knock back",
+         "br": "Knock Back",
+         "cns": "\u5c4f\u9000",
          "de": "Knock Back",
          "fi": "Knock back",
          "fil": "Knock back",
@@ -28221,11 +28790,14 @@ const skillsjson = [
          "nl": "Knock back",
          "pl": "Knock back",
          "ru": "\u041e\u0442\u043a\u0438\u0434\u044b\u0432\u0430\u043d\u0438\u0435",
-         "sw": "Knock back"
+         "sw": "Knock back",
+         "th": "Knock back"
       },
       "description": {
          "en": "Pushes the enemy back.",
          "ar": "Pushes the enemy back.",
+         "br": "Empurra o inimigo.",
+         "cns": "\u51cc\u5389\u7684\u653b\u51fb\u4ee4\u654c\u4eba\u8e09\u8dc4\u540e\u9000\u3002",
          "de": "Den Gegner wegdr\u00fccken. ",
          "fi": "Pushes the enemy back.",
          "fil": "Pushes the enemy back.",
@@ -28235,7 +28807,8 @@ const skillsjson = [
          "nl": "Pushes the enemy back.",
          "pl": "Pushes the enemy back.",
          "ru": "\u0412\u0430\u0441 \u043e\u0442\u043a\u0438\u043d\u0443\u043b\u043e \u043d\u0430\u0437\u0430\u0434.",
-         "sw": "Pushes the enemy back."
+         "sw": "Pushes the enemy back.",
+         "th": "Pushes the enemy back."
       },
       "icon": "jstyoybackst.png",
       "level": 1,
@@ -28268,6 +28841,8 @@ const skillsjson = [
       "name": {
          "en": "Sword Mastery",
          "ar": "\u0633\u064a\u0651\u062f \u0627\u0644\u0633\u064a\u0648\u0641",
+         "br": "Maestria da Espada",
+         "cns": "\u5251\u672f\u9886\u609f",
          "de": "Sword Mastery",
          "fi": "Sword Mastery",
          "fil": "Sword Mastery",
@@ -28275,13 +28850,16 @@ const skillsjson = [
          "it": "Virtuoso delle lame",
          "kr": "\uc18c\ub4dc \ub9c8\uc2a4\ud130\ub9ac",
          "nl": "Sword Mastery",
-         "pl": "Sword Mastery",
+         "pl": "Mistrzostwo Miecza",
          "ru": "\u041c\u0430\u0441\u0442\u0435\u0440 \u043c\u0435\u0447\u0430",
-         "sw": "Sword Mastery"
+         "sw": "Sword Mastery",
+         "th": "Sword Mastery"
       },
       "description": {
          "en": "Increases the striking power of a Sword.",
          "ar": "\u0632\u064a\u0627\u062f\u0629 \u0642\u0648\u0629 \u0636\u0631\u0628\u0629 \u0627\u0644\u0633\u064a\u0641.",
+         "br": "Aumenta o poder de ataque da espada.",
+         "cns": "\u5229\u7528\u4e00\u65f6\u987f\u609f\u83b7\u5f97\u7684\u5251\u672f\u7cbe\u8fdb\uff0c\u88c5\u5907\u5251\u65f6\u83b7\u5f97\u77ed\u65f6\u95f4\u7684\u653b\u51fb\u529b\u63d0\u5347\u3002",
          "de": "Zur Erh\u00f6hung der Angriffsst\u00e4rke bei Erhebung der Schwertf\u00e4higkeiten.",
          "fi": "Lis\u00e4\u00e4 Miekan iskuvoimaa.",
          "fil": "Increases the striking power of a Sword.",
@@ -28289,9 +28867,10 @@ const skillsjson = [
          "it": "Aumenta significativamente la potenza d'attacco della spada.",
          "kr": "\uc18c\ub4dc\uc758 \uc0ac\uc6a9 \ub2a5\ub825\uc744 \ub192\uc5ec\uc11c \uacf5\uaca9\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increases the striking power of a Sword.",
-         "pl": "Increases the striking power of a Sword.",
+         "pl": "Zwi\u0119ksza si\u0142\u0119 ataku mieczy.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u0438\u043b\u0443 \u0443\u0434\u0430\u0440\u043e\u0432 \u043c\u0435\u0447\u043e\u043c.",
-         "sw": "Increases the striking power of a Sword."
+         "sw": "Increases the striking power of a Sword.",
+         "th": "Increases the striking power of a Sword."
       },
       "icon": "meronesmaste.png",
       "class": 764,
@@ -28579,6 +29158,8 @@ const skillsjson = [
       "name": {
          "en": "Triple shot",
          "ar": "Triple shot",
+         "br": "Tiro Triplo",
+         "cns": "\u4e8c\u5341\u56db\u8fde\u5f3a\u5c04",
          "de": "Triple Shot",
          "fi": "Triple shot",
          "fil": "Triple shot",
@@ -28588,21 +29169,25 @@ const skillsjson = [
          "nl": "Triple shot",
          "pl": "Triple shot",
          "ru": "\u0422\u0440\u043e\u0439\u043d\u043e\u0439 \u0432\u044b\u0441\u0442\u0440\u0435\u043b",
-         "sw": "Triple shot"
+         "sw": "Triple shot",
+         "th": "Triple shot"
       },
       "description": {
-         "en": "Fires three arrows at once.",
-         "ar": "Fires three arrows at once.",
-         "de": "Einen Angriff bei wiederholtem Schie\u00dfen von drei Pfeilen auf den Gegner ausf\u00fchren.",
-         "fi": "Fires three arrows at once.",
-         "fil": "Fires three arrows at once.",
-         "fr": "D\u00e9coche trois fl\u00e8ches d'affil\u00e9e, obligeant l'ennemi \u00e0 reculer sous la grande puissance de l'attaque",
-         "it": "Fires three arrows at once.",
-         "kr": "\ud55c\ubc88\uc5d0 3\ubc1c\uc758 \ud654\uc0b4\uc744 \ub3d9\uc2dc\uc5d0 \ub0a0\ub824 \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
-         "nl": "Fires three arrows at once.",
-         "pl": "Fires three arrows at once.",
-         "ru": "\u041f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u0432\u044b\u043f\u0443\u0441\u0442\u0438\u0442\u044c \u0441\u0440\u0430\u0437\u0443 \u0442\u0440\u0438 \u0441\u0442\u0440\u0435\u043b\u044b.",
-         "sw": "Fires three arrows at once."
+         "en": "Fires three arrows at once. Stuns the target.",
+         "ar": "Fires three arrows at once. Stuns the target.",
+         "br": "Fires three arrows at once. Stuns the target.",
+         "cns": "Fires three arrows at once. Stuns the target.",
+         "de": "Fires three arrows at once. Stuns the target.",
+         "fi": "Fires three arrows at once. Stuns the target.",
+         "fil": "Fires three arrows at once. Stuns the target.",
+         "fr": "Fires three arrows at once. Stuns the target.",
+         "it": "Fires three arrows at once. Stuns the target.",
+         "kr": "Fires three arrows at once. Stuns the target.",
+         "nl": "Fires three arrows at once. Stuns the target.",
+         "pl": "Fires three arrows at once. Stuns the target.",
+         "ru": "Fires three arrows at once. Stuns the target.",
+         "sw": "Fires three arrows at once. Stuns the target.",
+         "th": "Fires three arrows at once. Stuns the target."
       },
       "icon": "ragbowtriple.png",
       "class": 9295,
@@ -28633,6 +29218,14 @@ const skillsjson = [
             "maxAttack": 137,
             "consumedMP": 55,
             "cooldown": 8,
+            "duration": 1.5,
+            "durationPVP": 1.5,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "stun"
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -28649,6 +29242,14 @@ const skillsjson = [
             "maxAttack": 138,
             "consumedMP": 60,
             "cooldown": 8,
+            "duration": 1.5,
+            "durationPVP": 1.5,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "stun"
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -28665,6 +29266,14 @@ const skillsjson = [
             "maxAttack": 139,
             "consumedMP": 65,
             "cooldown": 8,
+            "duration": 1.5,
+            "durationPVP": 1.5,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "stun"
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -28681,6 +29290,14 @@ const skillsjson = [
             "maxAttack": 140,
             "consumedMP": 70,
             "cooldown": 8,
+            "duration": 1.5,
+            "durationPVP": 1.5,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "stun"
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -28697,6 +29314,14 @@ const skillsjson = [
             "maxAttack": 141,
             "consumedMP": 75,
             "cooldown": 8,
+            "duration": 1.5,
+            "durationPVP": 1.5,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "stun"
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -28713,6 +29338,14 @@ const skillsjson = [
             "maxAttack": 142,
             "consumedMP": 80,
             "cooldown": 8,
+            "duration": 1.5,
+            "durationPVP": 1.5,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "stun"
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -28729,6 +29362,14 @@ const skillsjson = [
             "maxAttack": 143,
             "consumedMP": 85,
             "cooldown": 8,
+            "duration": 1.5,
+            "durationPVP": 1.5,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "stun"
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -28745,6 +29386,14 @@ const skillsjson = [
             "maxAttack": 144,
             "consumedMP": 90,
             "cooldown": 8,
+            "duration": 1.5,
+            "durationPVP": 1.5,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "stun"
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -28761,6 +29410,14 @@ const skillsjson = [
             "maxAttack": 145,
             "consumedMP": 95,
             "cooldown": 8,
+            "duration": 1.5,
+            "durationPVP": 1.5,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "stun"
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -28777,6 +29434,14 @@ const skillsjson = [
             "maxAttack": 150,
             "consumedMP": 100,
             "cooldown": 8,
+            "duration": 1.5,
+            "durationPVP": 1.5,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "stun"
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -28795,6 +29460,8 @@ const skillsjson = [
       "name": {
          "en": "Pulling",
          "ar": "Pulling",
+         "br": "Puxar",
+         "cns": "\u7275\u5f15",
          "de": "Pulling",
          "fi": "Pulling",
          "fil": "Pulling",
@@ -28802,13 +29469,16 @@ const skillsjson = [
          "it": "Pulling",
          "kr": "\uc694\uc694\ub9c8\uc2a4\ud130\ub9ac",
          "nl": "Pulling",
-         "pl": "Pulling",
+         "pl": "Lasso",
          "ru": "\u041b\u0430\u0441\u0441\u043e",
-         "sw": "Pulling"
+         "sw": "Pulling",
+         "th": "Pulling"
       },
       "description": {
          "en": "Brings a target to you using Yo-yo.",
          "ar": "Brings a target to you using Yo-yo.",
+         "br": "Puxa o alvo com o Ioi\u00f4.",
+         "cns": "\u5229\u7528\u98de\u8f6e\u5c06\u5bf9\u65b9\u62c9\u81ea\u81ea\u5df1\u8eab\u524d\u3002",
          "de": "Zieht mit Hilfe der Yoyos ein Ziel zu dir.",
          "fi": "Brings a target to you using Yo-yo.",
          "fil": "Brings a target to you using Yo-yo.",
@@ -28816,9 +29486,10 @@ const skillsjson = [
          "it": "Brings a target to you using Yo-yo.",
          "kr": "\uc694\uc694 \uae30\uc220\ub85c \uc790\uc2e0\uacfc \ub5a8\uc5b4\uc838 \uc788\ub294 \ub300\uc0c1\uc744 \uc790\uc2e0\uc55e\uc73c\ub85c \ub04c\uc5b4 \ub2f9\uae34\ub2e4.",
          "nl": "Brings a target to you using Yo-yo.",
-         "pl": "Brings a target to you using Yo-yo.",
+         "pl": "Przyci\u0105ga cel do ciebie za pomoc\u0105 Yo-yo.",
          "ru": "\u041f\u0440\u0438\u0442\u044f\u0433\u0438\u0432\u0430\u0435\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430 \u043a \u0432\u0430\u043c. \u0422\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f \u0439\u043e-\u0439\u043e.",
-         "sw": "Brings a target to you using Yo-yo."
+         "sw": "Brings a target to you using Yo-yo.",
+         "th": "Brings a target to you using Yo-yo."
       },
       "icon": "acryoypullin.png",
       "class": 9098,
@@ -28921,6 +29592,8 @@ const skillsjson = [
       "name": {
          "en": "Asalraalaikum",
          "ar": "Asalraalaikum",
+         "br": "Asalraalaikum",
+         "cns": "\u80cc\u6c34\u4e00\u51fb",
          "de": "Asalraalaikum",
          "fi": "Asalraalaikum",
          "fil": "Asalraalaikum",
@@ -28930,11 +29603,14 @@ const skillsjson = [
          "nl": "Asalraalaikum",
          "pl": "Asalraalaikum",
          "ru": "\u0423\u0434\u0430\u0440 \u043c\u0430\u0441\u0442\u0435\u0440\u0430",
-         "sw": "Asalraalaikum"
+         "sw": "Asalraalaikum",
+         "th": "Asalraalaikum"
       },
       "description": {
          "en": "Fully concentrated strike. Consumes 100% MP.",
          "ar": "Fully concentrated strike. Consumes 100% MP.",
+         "br": "Um ataque altamente concentrado que consome TODA a sua mana para causar um dano poderoso.",
+         "cns": "\u6d88\u8017\u5168\u90e8\u7684\u9b54\u529b\u7ed9\u5bf9\u65b9\u9020\u6210\u81f4\u6b7b\u7684\u6253\u51fb\u3002",
          "de": "Den Gegner mit voller Konzentration angreifen. Der MP verbrauch liegt bei 100%",
          "fi": "T\u00e4ysin keskitetty isku. Kuluttaa 100% MP.",
          "fil": "Fully concentrated strike. Consumes 100% MP.",
@@ -28942,9 +29618,10 @@ const skillsjson = [
          "it": "Fully concentrated strike. Consumes 100% MP.",
          "kr": "\ubaa8\ub4e0 \uc815\uc2e0\uc744 \ub108\ud074\ud574\uba38\uc758 \ud55c \uc810\uc5d0 \uc9d1\uc911\ud558\uc5ec \uc801\uc744 \ud0c0\uaca9\ud569\ub2c8\ub2e4. \uc774\ub54c MP\ub294 \ubaa8\ub450 \uc18c\ubaa8\ub429\ub2c8\ub2e4.",
          "nl": "Fully concentrated strike. Consumes 100% MP.",
-         "pl": "Fully concentrated strike. Consumes 100% MP.",
+         "pl": "Atak wymagaj\u0105cy pe\u0142nej koncentracji - konsumuje 100% MP by zada\u0107 olbrzymie obra\u017cenia. Im wi\u0119cej MP poch\u0142onie, tym wi\u0119ksze obra\u017cenia.",
          "ru": "\u041c\u043e\u0433\u0443\u0447\u0438\u0439 \u0443\u0434\u0430\u0440, \u0442\u0440\u0435\u0431\u0443\u044e\u0449\u0438\u0439 \u0430\u0431\u0441\u043e\u043b\u044e\u0442\u043d\u043e\u0439 \u0441\u043e\u0441\u0440\u0435\u0434\u043e\u0442\u043e\u0447\u0435\u043d\u043d\u043e\u0441\u0442\u0438. \u041e\u0442\u043d\u0438\u043c\u0430\u0435\u0442 \u0432\u0441\u044e \u043c\u0430\u043d\u0443 \u0431\u0435\u0437 \u043e\u0441\u0442\u0430\u0442\u043a\u0430.",
-         "sw": "Fully concentrated strike. Consumes 100% MP."
+         "sw": "Fully concentrated strike. Consumes 100% MP.",
+         "th": "Fully concentrated strike. Consumes 100% MP."
       },
       "icon": "bilasalraalaikum.png",
       "class": 7424,
@@ -29133,6 +29810,8 @@ const skillsjson = [
       "name": {
          "en": "Vital stab",
          "ar": "Vital stab",
+         "br": "Ataque Vital",
+         "cns": "\u6697\u6740",
          "de": "Fatal Stab",
          "fi": "Vital stab",
          "fil": "Vital stab",
@@ -29142,11 +29821,14 @@ const skillsjson = [
          "nl": "Vital stab",
          "pl": "Vital stab",
          "ru": "\u0423\u0434\u0430\u0440 \u0432 \u0441\u043b\u0430\u0431\u043e\u0435 \u043c\u0435\u0441\u0442\u043e",
-         "sw": "Vital stab"
+         "sw": "Vital stab",
+         "th": "Vital stab"
       },
       "description": {
          "en": "Surprise attack while in Dark Illusion.",
          "ar": "Surprise attack while in Dark Illusion.",
+         "br": "Um ataque surpresa enquanto estiver usando a Ilus\u00e3o das Trevas.",
+         "cns": "\u4ece\u6f5c\u884c\u72b6\u6001\u4e0b\u73b0\u8eab\uff0c\u7ed9\u4e88\u5bf9\u65b9\u81f4\u547d\u4e00\u51fb\uff0c\u6709\u4e00\u5b9a\u51e0\u7387\u9020\u6210\u53cc\u500d\u4f24\u5bb3\u3002",
          "de": "Einen \u00dcberraschungsangriff aus der Dunkelheit starten. Dark Illusion wird ben\u00f6tigt.",
          "fi": "Surprise attack while in Dark Illusion.",
          "fil": "Surprise attack while in Dark Illusion.",
@@ -29156,7 +29838,8 @@ const skillsjson = [
          "nl": "Surprise attack while in Dark Illusion.",
          "pl": "Surprise attack while in Dark Illusion.",
          "ru": "\u0412\u043d\u0435\u0437\u0430\u043f\u043d\u0430\u044f \u0430\u0442\u0430\u043a\u0430, \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u0430\u044f \u0442\u043e\u043b\u044c\u043a\u043e \u043f\u0440\u0438 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u0438 \u0418\u043b\u043b\u044e\u0437\u0438\u0438 \u043f\u0443\u0441\u0442\u043e\u0442\u044b.",
-         "sw": "Surprise attack while in Dark Illusion."
+         "sw": "Surprise attack while in Dark Illusion.",
+         "th": "Surprise attack while in Dark Illusion."
       },
       "icon": "jstsupvatals.png",
       "class": 3545,
@@ -29358,20 +30041,25 @@ const skillsjson = [
       "name": {
          "en": "Electric Shock",
          "ar": "Electric Shock",
+         "br": "Choque El\u00e9trico",
+         "cns": "\u96f7\u9707\u5929\u60ca",
          "de": "Electric Shock",
          "fi": "Electric Shock",
          "fil": "Electric Shock",
          "fr": "Champ \u00e9lectrique",
          "it": "Electric Shock",
          "kr": "\uc77c\ub809\ud2b8\ub9ad \uc1fc\ud06c",
-         "nl": "Electric Shock",
-         "pl": "Electric Shock",
+         "nl": "Elektrische Schok",
+         "pl": "Piorun \u0141a\u0144cuchowy",
          "ru": "\u0426\u0435\u043f\u043d\u0430\u044f \u043c\u043e\u043b\u043d\u0438\u044f",
-         "sw": "Electric Shock"
+         "sw": "Electric Shock",
+         "th": "Electric Shock"
       },
       "description": {
          "en": "Damage surrounding enemies with electricity. Defense of the enemies decreases.",
          "ar": "Damage surrounding enemies with electricity. Defense of the enemies decreases.",
+         "br": "Causa dano aos inimigos ao redor com eletricidade. A defesa dos inimigos ser\u00e1 reduzida.",
+         "cns": "\u4ee5\u96f7\u7535\u7ec7\u5c31\u7684\u7f51\u7b3c\u7f69\u4f4f\u76ee\u6807\uff0c\u8303\u56f4\u5185\u7684\u5bf9\u8c61\u7684\u9632\u5fa1\u529b\u964d\u4f4e\u3002",
          "de": "Allen Gegnern durch die Generation einer starken Elektrowelle Schaden zuf\u00fcgen. Die Verteidigung der Gegner wird gesenkt.",
          "fi": "Damage surrounding enemies with electricity. Defense of the enemies decreases.",
          "fil": "Damage surrounding enemies with electricity. Defense of the enemies decreases.",
@@ -29379,9 +30067,10 @@ const skillsjson = [
          "it": "Damage surrounding enemies with electricity. Defense of the enemies decreases.",
          "kr": "\uac15\ub825\ud55c \uc804\uae30 \ud30c\uc7a5\uc744 \uc77c\uc73c\ucf1c \uc8fc\ubcc0\uc758 \ubaa8\ub4e0 \uc801\ub4e4\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4. \uc774\ub54c \uc801\uc758 \ubc29\uc5b4\ub825\uc774 \uc77c\uc815\ub7c9 \uac10\uc18c\ud569\ub2c8\ub2e4.",
          "nl": "Damage surrounding enemies with electricity. Defense of the enemies decreases.",
-         "pl": "Damage surrounding enemies with electricity. Defense of the enemies decreases.",
-         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0432\u0441\u0435\u043c \u043d\u0430\u0445\u043e\u0434\u044f\u0449\u0438\u043c\u0441\u044f \u043f\u043e\u0431\u043b\u0438\u0437\u043e\u0441\u0442\u0438 \u0432\u0440\u0430\u0433\u0430\u043c \u0443\u0440\u043e\u043d \u043c\u043e\u043b\u043d\u0438\u0435\u0439 \u0438 \u0441\u043d\u0438\u0436\u0430\u0435\u0442 \u0438\u0445 \u0437\u0430\u0449\u0438\u0442\u0443 \u043e\u0442 \u043c\u0430\u0433\u0438\u0438.",
-         "sw": "Damage surrounding enemies with electricity. Defense of the enemies decreases."
+         "pl": "Atakuje wszystkie cele wok\u00f3\u0142 ciebie przeskakuj\u0105cym wy\u0142adowaniem. Obrona celu spadnie.",
+         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0432\u0441\u0435\u043c \u043d\u0430\u0445\u043e\u0434\u044f\u0449\u0438\u043c\u0441\u044f \u043f\u043e\u0431\u043b\u0438\u0437\u043e\u0441\u0442\u0438 \u0432\u0440\u0430\u0433\u0430\u043c \u0443\u0440\u043e\u043d \u043c\u043e\u043b\u043d\u0438\u0435\u0439 \u0438 \u0441\u043d\u0438\u0436\u0430\u0435\u0442 \u0438\u0445 \u0437\u0430\u0449\u0438\u0442\u0443.",
+         "sw": "Damage surrounding enemies with electricity. Defense of the enemies decreases.",
+         "th": "Damage surrounding enemies with electricity. Defense of the enemies decreases."
       },
       "icon": "eleeleeleshk.png",
       "class": 9150,
@@ -29659,6 +30348,8 @@ const skillsjson = [
       "name": {
          "en": "Stone Spike",
          "ar": "Stone Spike",
+         "br": "Pedregulho",
+         "cns": "\u66b4\u88c2\u7a81\u5ca9",
          "de": "Spike Stone",
          "fi": "Stone Spike",
          "fil": "Stone Spike",
@@ -29666,13 +30357,16 @@ const skillsjson = [
          "it": "Stone Spike",
          "kr": "\uc2a4\ud30c\uc774\ud06c \uc2a4\ud1a4",
          "nl": "Stone Spike",
-         "pl": "Stone Spike",
+         "pl": "Kamienny Kie\u0142",
          "ru": "\u041a\u0430\u043c\u0435\u043d\u043d\u044b\u0439 \u0448\u0438\u043f",
-         "sw": "Stone Spike"
+         "sw": "Stone Spike",
+         "th": "Stone Spike"
       },
       "description": {
          "en": "Damages an enemy with a stone spike. Chance to stun the enemy.",
          "ar": "Damages an enemy with a stone spike. Chance to stun the enemy.",
+         "br": "Causa dano no inimigo com uma estaca de pedra. Tem chance de atordoar o alvo.",
+         "cns": "\u8c03\u52a8\u5de8\u5ca9\u88ad\u51fb\u5bf9\u65b9\uff0c\u6709\u4e00\u5b9a\u51e0\u7387\u5c06\u654c\u4eba\u9707\u6655\u3002",
          "de": "Den Gegner durch einen Sturm massiver Steine Schaden zuf\u00fcgen. Der Gegner wird dabei bet\u00e4ubt.",
          "fi": "Damages an enemy with a stone spike. Chance to stun the enemy.",
          "fil": "Damages an enemy with a stone spike. Chance to stun the enemy.",
@@ -29680,9 +30374,10 @@ const skillsjson = [
          "it": "Damages an enemy with a stone spike. Chance to stun the enemy.",
          "kr": "\ub2e8\ub2e8\ud55c \ub3cc\uc744 \uc801\uc5d0\uac8c \ub0a0\ub824 \uacf5\uaca9\ud569\ub2c8\ub2e4. \uc774\ub54c \uc801\uc744 \uc77c\uc815 \ud655\ub960\ub85c \uc2a4\ud134 \uc0c1\ud0dc\ub85c \ub9cc\ub4ed\ub2c8\ub2e4.",
          "nl": "Damages an enemy with a stone spike. Chance to stun the enemy.",
-         "pl": "Damages an enemy with a stone spike. Chance to stun the enemy.",
+         "pl": "Trafia przeciwnika ostrym kamieniem. Szansa na og\u0142uszenie.",
          "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d \u0437\u0435\u043c\u043b\u0435\u0439. \u0421 \u043d\u0435\u043a\u043e\u0442\u043e\u0440\u043e\u0439 \u0432\u0435\u0440\u043e\u044f\u0442\u043d\u043e\u0441\u0442\u044c\u044e \u043c\u043e\u0436\u0435\u0442 \u043e\u0433\u043b\u0443\u0448\u0438\u0442\u044c \u0432\u0440\u0430\u0433\u0430.",
-         "sw": "Damages an enemy with a stone spike. Chance to stun the enemy."
+         "sw": "Damages an enemy with a stone spike. Chance to stun the enemy.",
+         "th": "Damages an enemy with a stone spike. Chance to stun the enemy."
       },
       "icon": "magspekestone.png",
       "class": 9581,
@@ -30230,6 +30925,8 @@ const skillsjson = [
       "name": {
          "en": "Power Swing",
          "ar": "Power Swing",
+         "br": "Balan\u00e7o de For\u00e7a",
+         "cns": "\u6a2a\u626b\u5343\u519b",
          "de": "Powerswing",
          "fi": "Power Swing",
          "fil": "Power Swing",
@@ -30237,13 +30934,16 @@ const skillsjson = [
          "it": "Folata Girevole",
          "kr": "\ud30c\uc6cc \uc2a4\uc719",
          "nl": "Power Swing",
-         "pl": "Power Swing",
+         "pl": "Pot\u0119\u017cny Zamach",
          "ru": "\u041e\u0442\u0431\u0440\u0430\u0441\u044b\u0432\u0430\u043d\u0438\u0435",
-         "sw": "Power Swing"
+         "sw": "Power Swing",
+         "th": "Power Swing"
       },
       "description": {
          "en": "To strike a blow at the enemy by flourishing a Weapon. Requires a two-handed Weapon.",
          "ar": "To strike a blow at the enemy by flourishing a Weapon. Requires a two-handed Weapon.",
+         "br": "Golpeia o inimigo brandindo uma arma. Exige uma arma de duas m\u00e3os.",
+         "cns": "\u7528\u6b66\u5668\u6a2a\u626b\u5468\u56f4\u7684\u654c\u4eba\uff0c\u5e76\u5c06\u4ed6\u4eec\u9707\u9000\u3002",
          "de": "Ein Hieb gegen den Gegner, indem man mit der Waffe weit ausholt.",
          "fi": "Iskee iskun viholliseen kukoistamalla Aseen. Vaatii kahden k\u00e4den Aseen.",
          "fil": "To strike a blow at the enemy by flourishing a Weapon. Requires a two-handed Weapon.",
@@ -30251,9 +30951,10 @@ const skillsjson = [
          "it": "Colpo circolare che infligge gravi danni e respinge gli avversari vicino.",
          "kr": "\ubb34\uae30\ub97c \uc788\ub294 \ud798\uaecf \ud718\ub458\ub7ec \uc8fc\uc704\uc758 \uc801\ub4e4\uc744 \ub0a0\ub824\ubc84\ub9bd\ub2c8\ub2e4.",
          "nl": "To strike a blow at the enemy by flourishing a Weapon. Requires a two-handed Weapon.",
-         "pl": "To strike a blow at the enemy by flourishing a Weapon. Requires a two-handed Weapon.",
+         "pl": "Odrzuca wrog\u00f3w przed tob\u0105 za pomoc\u0105 pot\u0119\u017cnego zamachu. Wymaga dwur\u0119cznej broni.",
          "ru": "\u041c\u043e\u0449\u043d\u044b\u0439 \u0443\u0434\u0430\u0440, \u043e\u0442\u0431\u0440\u0430\u0441\u044b\u0432\u0430\u044e\u0449\u0438\u0439 \u0432\u0440\u0430\u0433\u0430. \u0414\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f \u0434\u0432\u0443\u0440\u0443\u0447\u043d\u043e\u0435 \u043e\u0440\u0443\u0436\u0438\u0435.",
-         "sw": "To strike a blow at the enemy by flourishing a Weapon. Requires a two-handed Weapon."
+         "sw": "To strike a blow at the enemy by flourishing a Weapon. Requires a two-handed Weapon.",
+         "th": "To strike a blow at the enemy by flourishing a Weapon. Requires a two-handed Weapon."
       },
       "icon": "knttwopwswng.png",
       "class": 5330,
@@ -30450,6 +31151,8 @@ const skillsjson = [
       "name": {
          "en": "Flame Geyser",
          "ar": "Flame Geyser",
+         "br": "G\u00eaiser Flamejante",
+         "cns": "\u5730\u72f1\u706b\u82b1",
          "de": "Hot Air",
          "fi": "Flame Geysel",
          "fil": "Flame Geyser",
@@ -30457,13 +31160,16 @@ const skillsjson = [
          "it": "Flame Geyser",
          "kr": "\ud30c\uc774\uc5b4 \ubd80\uba54\ub791",
          "nl": "Flame Geyser",
-         "pl": "Flame Geyser",
+         "pl": "Ognisty Gejzer",
          "ru": "\u041e\u0433\u043d\u0435\u043d\u043d\u044b\u0439 \u0432\u0443\u043b\u043a\u0430\u043d",
-         "sw": "Flame Geyser"
+         "sw": "Flame Geyser",
+         "th": "Flame Geyser"
       },
       "description": {
          "en": "Damages the enemy continuously with a geyser of flame.",
          "ar": "Damages the enemy continuously with a geyser of flame.",
+         "br": "Um g\u00eaiser de chamas que causa danos cont\u00ednuos ao inimigo.",
+         "cns": "\u5f15\u53d1\u5730\u70ed\u55b7\u6d41\u7ed9\u5bf9\u65b9\u9020\u6210\u6301\u7eed\u4f24\u5bb3\u3002",
          "de": "Den Gegner durch den Geist des Feuers wiederholt Schaden zuf\u00fcgen.",
          "fi": "Vahingoittaa jatkuvasti vihollista tulisuihkulla.",
          "fil": "Damages the enemy continuously with a geyser of flame.",
@@ -30471,9 +31177,10 @@ const skillsjson = [
          "it": "Damages the enemy continuously with a geyser of flame.",
          "kr": "\ub728\uac70\uc6b4 \ubd88\uae30\uc6b4\uc73c\ub85c \uc801\uc5d0\uac8c \uc9c0\uc18d\uc801\uc778 \ud53c\ud574\ub97c \uc90d\ub2c8\ub2e4.",
          "nl": "Damages the enemy continuously with a geyser of flame.",
-         "pl": "Damages the enemy continuously with a geyser of flame.",
+         "pl": "Otacza wroga gejzerem ognia, zadaj\u0105c ci\u0105g\u0142e obra\u017cenia.",
          "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u044b\u0439 \u0443\u0440\u043e\u043d \u043e\u0433\u043d\u0435\u043c.",
-         "sw": "Damages the enemy continuously with a geyser of flame."
+         "sw": "Damages the enemy continuously with a geyser of flame.",
+         "th": "Damages the enemy continuously with a geyser of flame."
       },
       "icon": "magfirehotair.png",
       "class": 9581,
@@ -31041,20 +31748,25 @@ const skillsjson = [
       "name": {
          "en": "Heal",
          "ar": "Heal",
+         "br": "Curar",
+         "cns": "\u6cbb\u7597\u672f",
          "de": "Heal",
          "fi": "Heal",
          "fil": "Heal",
          "fr": "Soins",
          "it": "Heal",
          "kr": "\ud790\ub9c1",
-         "nl": "Heal",
-         "pl": "Heal",
+         "nl": "Helen",
+         "pl": "Leczenie",
          "ru": "\u041b\u0435\u0447\u0435\u043d\u0438\u0435",
-         "sw": "Heal"
+         "sw": "Heal",
+         "th": "Heal"
       },
       "description": {
          "en": "Recover the HP of a target.",
          "ar": "Recover the HP of a target.",
+         "br": "Restaura a vida (HP) do alvo ou de si mesmo quando n\u00e3o houver um alvo v\u00e1lido selecionado.",
+         "cns": "\u501f\u52a9\u9b54\u68d2\u4ea7\u751f\u5fae\u91cf\u5723\u5149\u6cbb\u7597\u76ee\u6807\u7684\u4f24\u52bf\u3002",
          "de": "Die HP eines Spielers wiederherstellen.",
          "fi": "Palauttaa kohteen HP.",
          "fil": "Recover the HP of a target.",
@@ -31062,9 +31774,10 @@ const skillsjson = [
          "it": "Recover the HP of a target.",
          "kr": "\ub300\uc0c1\uc758 HP\ub97c \uc77c\uc815\ub7c9 \ud68c\ubcf5\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Recover the HP of a target.",
-         "pl": "Recover the HP of a target.",
+         "pl": "Odnawia HP celu.",
          "ru": "\u0412\u043e\u0441\u0441\u0442\u0430\u043d\u0430\u0432\u043b\u0438\u0432\u0430\u0435\u0442 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u0435 \u0446\u0435\u043b\u0438.",
-         "sw": "Recover the HP of a target."
+         "sw": "Recover the HP of a target.",
+         "th": "Recover the HP of a target."
       },
       "icon": "assheahealin.png",
       "class": 8962,
@@ -31485,22 +32198,27 @@ const skillsjson = [
    {
       "id": 5697,
       "name": {
-         "en": "Poison sting",
-         "ar": "Poison sting",
+         "en": "Poison Sting",
+         "ar": "Poison Sting",
+         "br": "Poison Sting",
+         "cns": "Poison Sting",
          "de": "Poison Sting",
-         "fi": "Poison sting",
-         "fil": "Poison sting",
-         "fr": "Piq\u00fbre de poison",
-         "it": "Poison sting",
-         "kr": "\ub3c5\uce68",
-         "nl": "Poison sting",
-         "pl": "Poison sting",
-         "ru": "\u042f\u0434\u043e\u0432\u0438\u0442\u044b\u0439 \u0443\u043a\u0443\u0441",
-         "sw": "Poison sting"
+         "fi": "Poison Sting",
+         "fil": "Poison Sting",
+         "fr": "Poison Sting",
+         "it": "Poison Sting",
+         "kr": "Poison Sting",
+         "nl": "Poison Sting",
+         "pl": "Poison Sting",
+         "ru": "Poison Sting",
+         "sw": "Poison Sting",
+         "th": "Poison Sting"
       },
       "description": {
          "en": "Damages an enemy over a period of time.",
          "ar": "Damages an enemy over a period of time.",
+         "br": "Damages an enemy over a period of time.",
+         "cns": "Damages an enemy over a period of time.",
          "de": "Damages an enemy over a period of time.",
          "fi": "Damages an enemy over a period of time.",
          "fil": "Damages an enemy over a period of time.",
@@ -31510,9 +32228,10 @@ const skillsjson = [
          "nl": "Damages an enemy over a period of time.",
          "pl": "Damages an enemy over a period of time.",
          "ru": "Damages an enemy over a period of time.",
-         "sw": "Damages an enemy over a period of time."
+         "sw": "Damages an enemy over a period of time.",
+         "th": "Damages an enemy over a period of time."
       },
-      "icon": "elefirbunfil.png",
+      "icon": "elewatpoicld.png",
       "level": 1,
       "element": "none",
       "magic": false,
@@ -31595,6 +32314,8 @@ const skillsjson = [
       "name": {
          "en": "Low Attack",
          "ar": "Low Attack",
+         "br": "Low Attack",
+         "cns": "Low Attack",
          "de": "Low Attack",
          "fi": "Low Attack",
          "fil": "Low Attack",
@@ -31604,11 +32325,14 @@ const skillsjson = [
          "nl": "Low Attack",
          "pl": "Low Attack",
          "ru": "Low Attack",
-         "sw": "Low Attack"
+         "sw": "Low Attack",
+         "th": "Low Attack"
       },
       "description": {
          "en": "Decreases attack speed and cool down time",
          "ar": "Decreases attack speed and cool down time",
+         "br": "Decreases attack speed and cool down time",
+         "cns": "Decreases attack speed and cool down time",
          "de": "Decreases attack speed and cool down time",
          "fi": "Decreases attack speed and cool down time",
          "fil": "Decreases attack speed and cool down time",
@@ -31618,7 +32342,8 @@ const skillsjson = [
          "nl": "Decreases attack speed and cool down time",
          "pl": "Decreases attack speed and cool down time",
          "ru": "Decreases attack speed and cool down time",
-         "sw": "Decreases attack speed and cool down time"
+         "sw": "Decreases attack speed and cool down time",
+         "th": "Decreases attack speed and cool down time"
       },
       "icon": "magspekestone.png",
       "level": 1,
@@ -31718,20 +32443,25 @@ const skillsjson = [
       "name": {
          "en": "Protection",
          "ar": "\u0627\u0644\u062d\u0645\u0627\u064a\u0629",
+         "br": "Prote\u00e7\u00e3o",
+         "cns": "\u575a\u786c\u4e4b\u77f3",
          "de": "Protection",
          "fi": "Protection",
          "fil": "Protection",
          "fr": "Protection",
          "it": "Protezione",
          "kr": "\ud504\ub85c\ud14d\uc158",
-         "nl": "Protection",
-         "pl": "Protection",
+         "nl": "Bescherming",
+         "pl": "Ochrona",
          "ru": "\u0417\u0430\u0449\u0438\u0442\u0430",
-         "sw": "Protection"
+         "sw": "Protection",
+         "th": "Protection"
       },
       "description": {
          "en": "Increases the defense of a Shield against melee attacks & significantly increases Ranged Block.",
          "ar": "Increases the defense of a Shield against melee attacks & significantly increases Ranged Block.",
+         "br": "Aumenta a defesa de um escudo contra ataques corpo-a-corpo e aumenta significantemente o Bloqueio a Dist\u00e2ncia.",
+         "cns": "\u7528\u76fe\u724c\u5f62\u6210\u4e00\u9053\u9632\u62a4\u7f51\uff0c\u6839\u636e\u6280\u80fd\u7b49\u7ea7\u63d0\u9ad8\u4e00\u5b9a\u7a0b\u5ea6\u7684\u9632\u5fa1\u529b\u3002",
          "de": "Erh\u00f6ht die Verteidigung, in dem man dem Schild etwas seiner Kraft leiht.",
          "fi": "Kasvattaa Kilven suojausta l\u00e4hitaisteluhy\u00f6kk\u00e4yksi\u00e4 vastaan ja lis\u00e4\u00e4 huomattavasti Ranged Blokkausta.",
          "fil": "Increases the defense of a Shield against melee attacks & significantly increases Ranged Block.",
@@ -31739,9 +32469,10 @@ const skillsjson = [
          "it": "Aumenta la difesa contro gli attacchi in mischia, e aumenta il blocco degli attacchi a distanza.",
          "kr": "\ubc29\ud328\uc5d0 \ud798\uc744 \uc2e4\uc5b4 \ubc29\uc5b4\ub825\uc744 \uc62c\ub9bd\ub2c8\ub2e4.",
          "nl": "Increases the defense of a Shield against melee attacks & significantly increases Ranged Block.",
-         "pl": "Increases the defense of a Shield against melee attacks & significantly increases Ranged Block.",
-         "ru": "\u0423\u0441\u0438\u043b\u0438\u0432\u0430\u0435\u0442 \u0437\u0430\u0449\u0438\u0442\u0443.",
-         "sw": "Increases the defense of a Shield against melee attacks & significantly increases Ranged Block."
+         "pl": "Zwi\u0119ksza warto\u015b\u0107 obrony twojej Tarczy i szans\u0119 na zablokowanie ataku z dystansu.",
+         "ru": "\u0423\u043b\u0443\u0447\u0448\u0430\u0435\u0442 \u0437\u0430\u0449\u0438\u0442\u0443 \u0449\u0438\u0442\u0430 \u043e\u0442 \u0431\u043b\u0438\u0436\u043d\u0438\u0445 \u0430\u0442\u0430\u043a \u0438 \u0443\u0432\u0435\u043b\u0438\u0447\u0438\u0432\u0430\u0435\u0442 \u0448\u0430\u043d\u0441 \u0437\u0430\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0434\u0430\u043b\u044c\u043d\u0438\u0435.",
+         "sw": "Increases the defense of a Shield against melee attacks & significantly increases Ranged Block.",
+         "th": "Increases the defense of a Shield against melee attacks & significantly increases Ranged Block."
       },
       "icon": "mershiepanbar.png",
       "class": 764,
@@ -32124,20 +32855,25 @@ const skillsjson = [
       "name": {
          "en": "Rage",
          "ar": "Rage",
+         "br": "Ira",
+         "cns": "\u727a\u7272",
          "de": "Rage",
          "fi": "Rage",
          "fil": "Rage",
          "fr": "Rage",
          "it": "Collera",
          "kr": "\ub808\uc774\uc9c0",
-         "nl": "Rage",
-         "pl": "Rage",
+         "nl": "Woede",
+         "pl": "Sza\u0142",
          "ru": "\u042f\u0440\u043e\u0441\u0442\u044c",
-         "sw": "Rage"
+         "sw": "Rage",
+         "th": "Rage"
       },
       "description": {
          "en": "Increases striking power, sacrificing a lot of Defense. Requires a two-handed Weapon.",
          "ar": "Increases striking power, sacrificing a lot of Defense. Requires a two-handed Weapon.",
+         "br": "Sacrifica parte da defesa para aumentar o poder de ataque. Requer uma arma de duas m\u00e3os.",
+         "cns": "\u4e00\u65f6\u95f4\u964d\u4f4e\u9632\u5fa1\u529b\u548c\u547d\u4e2d\u7387\u6765\u5927\u5e45\u63d0\u9ad8\u653b\u51fb\u529b\u548cHP\u3002",
          "de": "Erh\u00f6ht die Angriffsst\u00e4rke und HP durch die Konzentration auf den Angriff. Verteidigung und Treffsicherheit werden gesenkt.",
          "fi": "Kasvattaa iskuvoimaa, uhraten paljon Puolustusta. Vaatii kahden k\u00e4den Aseen.",
          "fil": "Increases striking power, sacrificing a lot of Defense. Requires a two-handed Weapon.",
@@ -32145,9 +32881,10 @@ const skillsjson = [
          "it": "Aumenta l'attacco e i punti ferita a scapito della difesa e della precisione del Cavaliere.",
          "kr": "\uacf5\uaca9\uc5d0 \uc804\ub150\ud558\uc5ec \ubc29\uc5b4\ub825\uacfc \uba85\uc911\ub960\uc744 \uac10\uc18c\uc2dc\ud0a4\uace0 \uacf5\uaca9\ub825\uacfc HP\ub97c \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increases striking power, sacrificing a lot of Defense. Requires a two-handed Weapon.",
-         "pl": "Increases striking power, sacrificing a lot of Defense. Requires a two-handed Weapon.",
-         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u0438\u043b\u0443 \u0430\u0442\u0430\u043a \u0438 \u0437\u0430\u043f\u0430\u0441 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f. \u0421\u043d\u0438\u0436\u0430\u0435\u0442 \u0442\u043e\u0447\u043d\u043e\u0441\u0442\u044c \u0430\u0442\u0430\u043a \u0438 \u0437\u0430\u0449\u0438\u0442\u0443.",
-         "sw": "Increases striking power, sacrificing a lot of Defense. Requires a two-handed Weapon."
+         "pl": "Zwi\u0119ksza si\u0142\u0119 ataku kosztem obni\u017cenia w\u0142asnej obrony. Wymaga dwur\u0119cznej broni.",
+         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u0438\u043b\u0443 \u0430\u0442\u0430\u043a\u0438, \u0432\u0437\u0430\u043c\u0435\u043d \u0441\u0438\u043b\u044c\u043d\u043e \u043f\u043e\u043d\u0438\u0436\u0430\u044f \u0437\u0430\u0449\u0438\u0442\u0443. \u0414\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f \u0434\u0432\u0443\u0440\u0443\u0447\u043d\u043e\u0435 \u043e\u0440\u0443\u0436\u0438\u0435.",
+         "sw": "Increases striking power, sacrificing a lot of Defense. Requires a two-handed Weapon.",
+         "th": "Increases striking power, sacrificing a lot of Defense. Requires a two-handed Weapon."
       },
       "icon": "kntsuprage.png",
       "class": 5330,
@@ -32444,6 +33181,8 @@ const skillsjson = [
       "name": {
          "en": "Stun Group",
          "ar": "Stun Group",
+         "br": "Stun Group",
+         "cns": "Stun Group",
          "de": "Stun Group",
          "fi": "Stun Group",
          "fil": "Stun Group",
@@ -32453,11 +33192,14 @@ const skillsjson = [
          "nl": "Stun Group",
          "pl": "Stun Group",
          "ru": "Stun Group",
-         "sw": "Stun Group"
+         "sw": "Stun Group",
+         "th": "Stun Group"
       },
       "description": {
          "en": "You are stunned and you cannot move.",
          "ar": "You are stunned and you cannot move.",
+         "br": "Voc\u00ea est\u00e1 atordoadoe n\u00e3o pode se mover.",
+         "cns": "\u6682\u65f6\u5904\u4e8e\u7729\u6655\u72b6\u6001\uff0c\u65e0\u6cd5\u79fb\u52a8\u3002",
          "de": "Ihr seid bet\u00e4ubt und k\u00f6nnt euch nicht bewegen.",
          "fi": "You are stunned and you cannot move.",
          "fil": "You are stunned and you cannot move.",
@@ -32467,7 +33209,8 @@ const skillsjson = [
          "nl": "You are stunned and you cannot move.",
          "pl": "You are stunned and you cannot move.",
          "ru": "\u0412\u044b \u043e\u0433\u043b\u0443\u0448\u0435\u043d\u044b \u0438 \u043d\u0435 \u043c\u043e\u0436\u0435\u0442\u0435 \u0434\u0432\u0438\u0433\u0430\u0442\u044c\u0441\u044f.",
-         "sw": "You are stunned and you cannot move."
+         "sw": "You are stunned and you cannot move.",
+         "th": "You are stunned and you cannot move."
       },
       "icon": "magspekestone.png",
       "level": 1,
@@ -32542,6 +33285,8 @@ const skillsjson = [
       "name": {
          "en": "Asmodeus",
          "ar": "Asmodeus",
+         "br": "Asmodeus",
+         "cns": "\u62f3\u672f\u9886\u609f",
          "de": "Asmodeus",
          "fi": "Asmodeus",
          "fil": "Asmodeus",
@@ -32551,11 +33296,14 @@ const skillsjson = [
          "nl": "Asmodeus",
          "pl": "Asmodeus",
          "ru": "\u0414\u0435\u043c\u043e\u043d \u0431\u0435\u0437\u0434\u043d\u044b",
-         "sw": "Asmodeus"
+         "sw": "Asmodeus",
+         "th": "Asmodeus"
       },
       "description": {
          "en": "Increases striking power.",
          "ar": "Increases striking power.",
+         "br": "Aumenta o poder de ataque do punho.",
+         "cns": "\u63d0\u9ad8\u62f3\u5957\u719f\u7ec3\u5ea6\u6765\u589e\u5f3a\u653b\u51fb\u529b\u3002",
          "de": "Erh\u00f6hung der Angriffsst\u00e4rke durch das Verst\u00e4rken der Knuckle F\u00e4higkeiten.",
          "fi": "Kasvattaa iskuvoimaa.",
          "fil": "Increases striking power.",
@@ -32563,9 +33311,10 @@ const skillsjson = [
          "it": "Increases striking power.",
          "kr": "\ub108\ud074\ud574\uba38\uc758 \ub2a5\ub825\uc744 \uac15\ud654\uc2dc\ucf1c \uacf5\uaca9\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increases striking power.",
-         "pl": "Increases striking power.",
-         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u0438\u043b\u0443 \u0430\u0442\u0430\u043a\u0438 \u0441 \u043f\u0435\u0440\u0447\u0430\u0442\u043a\u043e\u0439.",
-         "sw": "Increases striking power."
+         "pl": "Zwi\u0119ksza obra\u017cenia zadawane pi\u0119\u015bci\u0105.",
+         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u0438\u043b\u0443 \u0430\u0442\u0430\u043a\u0438.",
+         "sw": "Increases striking power.",
+         "th": "Increases striking power."
       },
       "icon": "bilasmodeus.png",
       "class": 7424,
@@ -32809,6 +33558,8 @@ const skillsjson = [
       "name": {
          "en": "Maximum Crisis",
          "ar": "Maximum Crisis",
+         "br": "Crise M\u00e1xima",
+         "cns": "\u4e07\u5ff5\u4ff1\u7070",
          "de": "Maximum Crisis",
          "fi": "Maximum Crisis",
          "fil": "Maximum Crisis",
@@ -32816,13 +33567,16 @@ const skillsjson = [
          "it": "Maximum Crisis",
          "kr": "\ub9e5\uc2dc\uba48 \ud06c\ub77c\uc774\uc2dc\uc2a4",
          "nl": "Maximum Crisis",
-         "pl": "Maximum Crisis",
+         "pl": "Maksymalny Kryzys",
          "ru": "\u0418\u043b\u043b\u044e\u0437\u043e\u0440\u043d\u044b\u0439 \u043c\u0438\u0440",
-         "sw": "Maximum Crisis"
+         "sw": "Maximum Crisis",
+         "th": "Maximum Crisis"
       },
       "description": {
          "en": "Surrounds and damages the enemy in a strong mental barrier.",
          "ar": "Surrounds and damages the enemy in a strong mental barrier.",
+         "br": "Causa danos a todos os inimigos ao seu redor com uma potente barreira mental.",
+         "cns": "\u4ee5\u5f3a\u5927\u7684\u610f\u5ff5\u6467\u6bc1\u4e00\u5207\u5f02\u5df1\u7684\u610f\u5fd7\u3002",
          "de": "Den Gegnern um dich herum mit einer starken mentalen Welle Schaden zuf\u00fcgen.",
          "fi": "Surrounds and damages the enemy in a strong mental barrier.",
          "fil": "Surrounds and damages the enemy in a strong mental barrier.",
@@ -32830,9 +33584,10 @@ const skillsjson = [
          "it": "Surrounds and damages the enemy in a strong mental barrier.",
          "kr": "\uac15\ub825\ud55c \uc815\uc2e0\ud30c\ub85c \uc790\uc2e0\uc758 \uc8fc\ubcc0\uc758 \uc801\ub4e4\uc5d0\uac8c \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Surrounds and damages the enemy in a strong mental barrier.",
-         "pl": "Surrounds and damages the enemy in a strong mental barrier.",
+         "pl": "Zadaje obra\u017cenia wrogom wok\u00f3\u0142 ciebie, \u015bciskaj\u0105c ich psychiczn\u0105 fal\u0105.",
          "ru": "\u0417\u0430\u0442\u044f\u0433\u0438\u0432\u0430\u0435\u0442 \u0432\u0440\u0430\u0433\u0430 \u0432 \u0438\u043b\u043b\u044e\u0437\u043e\u0440\u043d\u044b\u0439 \u043c\u0438\u0440, \u0433\u0434\u0435 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a \u043f\u043e\u043b\u0443\u0447\u0430\u0435\u0442 \u0437\u043d\u0430\u0447\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0443\u0440\u043e\u043d.",
-         "sw": "Surrounds and damages the enemy in a strong mental barrier."
+         "sw": "Surrounds and damages the enemy in a strong mental barrier.",
+         "th": "Surrounds and damages the enemy in a strong mental barrier."
       },
       "icon": "psymaxcrisis.png",
       "class": 5709,
@@ -33020,6 +33775,8 @@ const skillsjson = [
       "name": {
          "en": "Rooting",
          "ar": "Rooting",
+         "br": "Enraizamento",
+         "cns": "\u5927\u5730\u7075\u7f1a",
          "de": "Rooting",
          "fi": "Rooting",
          "fil": "Rooting",
@@ -33027,13 +33784,16 @@ const skillsjson = [
          "it": "Rooting",
          "kr": "\ub77d \ud06c\ub798\uc26c",
          "nl": "Rooting",
-         "pl": "Rooting",
+         "pl": "Zakorzenienie",
          "ru": "\u041a\u043e\u0440\u043d\u0438",
-         "sw": "Rooting"
+         "sw": "Rooting",
+         "th": "Rooting"
       },
       "description": {
          "en": "Prevents an enemy from approaching.",
          "ar": "Prevents an enemy from approaching.",
+         "br": "Prevents an enemy from approaching.",
+         "cns": "Prevents an enemy from approaching.",
          "de": "Prevents an enemy from approaching.",
          "fi": "Prevents an enemy from approaching.",
          "fil": "Prevents an enemy from approaching.",
@@ -33043,7 +33803,8 @@ const skillsjson = [
          "nl": "Prevents an enemy from approaching.",
          "pl": "Prevents an enemy from approaching.",
          "ru": "Prevents an enemy from approaching.",
-         "sw": "Prevents an enemy from approaching."
+         "sw": "Prevents an enemy from approaching.",
+         "th": "Prevents an enemy from approaching."
       },
       "icon": "maglooting.png",
       "class": 9581,
@@ -33065,7 +33826,6 @@ const skillsjson = [
       "skillPoints": 2,
       "levels": [
          {
-            "dotTick": 2.5,
             "probability": 2,
             "probabilityPVP": 2,
             "consumedMP": 30,
@@ -33081,7 +33841,6 @@ const skillsjson = [
             ]
          },
          {
-            "dotTick": 2.6,
             "probability": 4,
             "probabilityPVP": 4,
             "consumedMP": 30,
@@ -33097,7 +33856,6 @@ const skillsjson = [
             ]
          },
          {
-            "dotTick": 2.7,
             "probability": 6,
             "probabilityPVP": 6,
             "consumedMP": 32,
@@ -33113,7 +33871,6 @@ const skillsjson = [
             ]
          },
          {
-            "dotTick": 2.8,
             "probability": 8,
             "probabilityPVP": 8,
             "consumedMP": 32,
@@ -33129,7 +33886,6 @@ const skillsjson = [
             ]
          },
          {
-            "dotTick": 2.9,
             "probability": 10,
             "probabilityPVP": 10,
             "consumedMP": 34,
@@ -33145,7 +33901,6 @@ const skillsjson = [
             ]
          },
          {
-            "dotTick": 3,
             "probability": 12,
             "probabilityPVP": 12,
             "consumedMP": 34,
@@ -33161,7 +33916,6 @@ const skillsjson = [
             ]
          },
          {
-            "dotTick": 3.1,
             "probability": 14,
             "probabilityPVP": 14,
             "consumedMP": 36,
@@ -33177,7 +33931,6 @@ const skillsjson = [
             ]
          },
          {
-            "dotTick": 3.2,
             "probability": 16,
             "probabilityPVP": 16,
             "consumedMP": 36,
@@ -33193,7 +33946,6 @@ const skillsjson = [
             ]
          },
          {
-            "dotTick": 3.3,
             "probability": 18,
             "probabilityPVP": 18,
             "consumedMP": 38,
@@ -33209,7 +33961,6 @@ const skillsjson = [
             ]
          },
          {
-            "dotTick": 3.4,
             "probability": 20,
             "probabilityPVP": 20,
             "consumedMP": 38,
@@ -33225,7 +33976,6 @@ const skillsjson = [
             ]
          },
          {
-            "dotTick": 3.5,
             "probability": 22,
             "probabilityPVP": 22,
             "consumedMP": 41,
@@ -33241,7 +33991,6 @@ const skillsjson = [
             ]
          },
          {
-            "dotTick": 3.6,
             "probability": 24,
             "probabilityPVP": 24,
             "consumedMP": 41,
@@ -33257,7 +34006,6 @@ const skillsjson = [
             ]
          },
          {
-            "dotTick": 3.7,
             "probability": 26,
             "probabilityPVP": 26,
             "consumedMP": 42,
@@ -33273,7 +34021,6 @@ const skillsjson = [
             ]
          },
          {
-            "dotTick": 3.8,
             "probability": 28,
             "probabilityPVP": 28,
             "consumedMP": 42,
@@ -33289,7 +34036,6 @@ const skillsjson = [
             ]
          },
          {
-            "dotTick": 3.9,
             "probability": 30,
             "probabilityPVP": 30,
             "consumedMP": 44,
@@ -33305,7 +34051,6 @@ const skillsjson = [
             ]
          },
          {
-            "dotTick": 4,
             "probability": 35,
             "probabilityPVP": 35,
             "consumedMP": 44,
@@ -33321,7 +34066,6 @@ const skillsjson = [
             ]
          },
          {
-            "dotTick": 4.1,
             "probability": 40,
             "probabilityPVP": 40,
             "consumedMP": 44,
@@ -33337,7 +34081,6 @@ const skillsjson = [
             ]
          },
          {
-            "dotTick": 4.2,
             "probability": 45,
             "probabilityPVP": 45,
             "consumedMP": 47,
@@ -33353,7 +34096,6 @@ const skillsjson = [
             ]
          },
          {
-            "dotTick": 4.3,
             "probability": 55,
             "probabilityPVP": 55,
             "consumedMP": 47,
@@ -33369,7 +34111,6 @@ const skillsjson = [
             ]
          },
          {
-            "dotTick": 4.4,
             "probability": 65,
             "probabilityPVP": 65,
             "consumedMP": 50,
@@ -33391,20 +34132,25 @@ const skillsjson = [
       "name": {
          "en": "Bleeding",
          "ar": "Bleeding",
+         "br": "Sangramento",
+         "cns": "\u51fa\u88402",
          "de": "Bleeding",
          "fi": "Bleeding",
          "fil": "Bleeding",
          "fr": "Saigner \u00e0 blanc",
          "it": "Bleeding",
          "kr": "\ucd9c\ud608",
-         "nl": "Bleeding",
+         "nl": "Bloeden",
          "pl": "Bleeding",
          "ru": "\u041a\u0440\u043e\u0432\u043e\u0442\u0435\u0447\u0435\u043d\u0438\u0435",
-         "sw": "Bleeding"
+         "sw": "Bleeding",
+         "th": "Bleeding"
       },
       "description": {
          "en": "Damages an enemy over a period of time.",
          "ar": "Damages an enemy over a period of time.",
+         "br": "Damages an enemy over a period of time.",
+         "cns": "Damages an enemy over a period of time.",
          "de": "Damages an enemy over a period of time.",
          "fi": "Damages an enemy over a period of time.",
          "fil": "Damages an enemy over a period of time.",
@@ -33414,9 +34160,10 @@ const skillsjson = [
          "nl": "Damages an enemy over a period of time.",
          "pl": "Damages an enemy over a period of time.",
          "ru": "Damages an enemy over a period of time.",
-         "sw": "Damages an enemy over a period of time."
+         "sw": "Damages an enemy over a period of time.",
+         "th": "Damages an enemy over a period of time."
       },
-      "icon": "elefirbunfil.png",
+      "icon": "bilbloodfist.png",
       "level": 1,
       "element": "none",
       "magic": false,
@@ -33564,6 +34311,8 @@ const skillsjson = [
       "name": {
          "en": "Poison Arrow",
          "ar": "Poison Arrow",
+         "br": "Flecha Venenosa",
+         "cns": "\u6bd2\u7bad",
          "de": "Poison Arrow",
          "fi": "Poison Arrow",
          "fil": "Poison Arrow",
@@ -33573,11 +34322,14 @@ const skillsjson = [
          "nl": "Poison Arrow",
          "pl": "Poison Arrow",
          "ru": "\u041e\u0442\u0440\u0430\u0432\u043b\u0435\u043d\u043d\u0430\u044f \u0441\u0442\u0440\u0435\u043b\u0430",
-         "sw": "Poison Arrow"
+         "sw": "Poison Arrow",
+         "th": "Poison Arrow"
       },
       "description": {
          "en": "Shoots a deadly arrow full of poison at the target. Inflicts Poison.",
          "ar": "Shoots a deadly arrow full of poison at the target. Inflicts Poison.",
+         "br": "Atira uma flecha mortal cheia de veneno no alvo. Inflige Veneno.",
+         "cns": "\u9644\u6bd2\u7684\u7bad\u652f\u6709\u4e00\u5b9a\u51e0\u7387\u4ee4\u654c\u4eba\u4e2d\u6bd2\u3002",
          "de": "Den Gegner mit einem vergifteten Pfeil angreifen.",
          "fi": "Shoots a deadly arrow full of poison at the target. Inflicts Poison.",
          "fil": "Shoots a deadly arrow full of poison at the target. Inflicts Poison.",
@@ -33587,7 +34339,8 @@ const skillsjson = [
          "nl": "Shoots a deadly arrow full of poison at the target. Inflicts Poison.",
          "pl": "Shoots a deadly arrow full of poison at the target. Inflicts Poison.",
          "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0441\u0438\u043b\u044c\u043d\u044b\u0439 \u0443\u0440\u043e\u043d, \u0430 \u0437\u0430\u0442\u0435\u043c \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u044b\u0439 \u0443\u0440\u043e\u043d \u044f\u0434\u043e\u043c.",
-         "sw": "Shoots a deadly arrow full of poison at the target. Inflicts Poison."
+         "sw": "Shoots a deadly arrow full of poison at the target. Inflicts Poison.",
+         "th": "Shoots a deadly arrow full of poison at the target. Inflicts Poison."
       },
       "icon": "ragbowpoison.png",
       "class": 9295,
@@ -33954,20 +34707,25 @@ const skillsjson = [
       "name": {
          "en": "Escape",
          "ar": "Escape",
+         "br": "Escapar",
+         "cns": "\u91d1\u8749\u8131\u58f3",
          "de": "Escape",
          "fi": "Escape",
          "fil": "Escape",
          "fr": "Autonomie",
          "it": "Escape",
          "kr": "\ud0c8\ucd9c",
-         "nl": "Escape",
+         "nl": "Ontsnappen",
          "pl": "Escape",
          "ru": "\u041f\u043e\u0431\u0435\u0433",
-         "sw": "Escape"
+         "sw": "Escape",
+         "th": "Escape"
       },
       "description": {
          "en": "Removes all de-buffs.",
          "ar": "Removes all de-buffs.",
+         "br": "Remove todos os efeitos negativos em voc\u00ea.",
+         "cns": "\u6323\u8131\u59a8\u788d\u81ea\u5df1\u884c\u52a8\u7684\u675f\u7f1a\u3002",
          "de": "Erm\u00f6glicht dir die Befreiung aus gewissen bewegungsbeeinflussenden Spielerskills. Dark Illusion muss zuerst ausgef\u00fchrt werden.",
          "fi": "Removes all de-buffs.",
          "fil": "Removes all de-buffs.",
@@ -33977,7 +34735,8 @@ const skillsjson = [
          "nl": "Removes all de-buffs.",
          "pl": "Removes all de-buffs.",
          "ru": "\u041f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u0432\u044b\u0440\u0432\u0430\u0442\u044c\u0441\u044f \u0438\u0437 \u043a\u043e\u0440\u043d\u0435\u0439 \u0438\u043b\u0438 \u043b\u043e\u0432\u0443\u0448\u043a\u0438.",
-         "sw": "Removes all de-buffs."
+         "sw": "Removes all de-buffs.",
+         "th": "Removes all de-buffs."
       },
       "icon": "jstsupescape.png",
       "class": 3545,
@@ -34095,6 +34854,8 @@ const skillsjson = [
       "name": {
          "en": "Spirit Bomb",
          "ar": "Spirit Bomb",
+         "br": "Bomba Espiritual",
+         "cns": "\u795e\u529b\u653b\u51fb",
          "de": "Spirit Bomb",
          "fi": "Spirit Bomb",
          "fil": "Spirit Bomb",
@@ -34102,13 +34863,16 @@ const skillsjson = [
          "it": "Spirit Bomb",
          "kr": "\uc2a4\ud53c\ub9bf \ubd04",
          "nl": "Spirit Bomb",
-         "pl": "Spirit Bomb",
+         "pl": "Eksplozja Duszy",
          "ru": "\u0421\u043f\u0438\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0432\u0437\u0440\u044b\u0432",
-         "sw": "Spirit Bomb"
+         "sw": "Spirit Bomb",
+         "th": "Spirit Bomb"
       },
       "description": {
          "en": "Does damage to an enemy based on your remaining MP amount.",
          "ar": "Does damage to an enemy based on your remaining MP amount.",
+         "br": "Causa dano ao inimigo baseando-se na quantidade restante de sua mana (MP).",
+         "cns": "\u4f7f\u5bf9\u65b9\u7684\u7cbe\u795e\u5d29\u6e83\uff0c\u6839\u636e\u81ea\u8eab\u5269\u4f59\u7684\u9b54\u6cd5\u80fd\u91cf\u7ed9\u4e88\u4e0d\u540c\u7a0b\u5ea6\u7684\u4f24\u5bb3\u3002",
          "de": "Dem Gegner durch Brechen seiner Konzentration Schaden zuf\u00fcgen. Der Schaden basiert auf den verbleibenden MP Punkten.",
          "fi": "Does damage to an enemy based on your remaining MP amount.",
          "fil": "Does damage to an enemy based on your remaining MP amount.",
@@ -34116,9 +34880,10 @@ const skillsjson = [
          "it": "Does damage to an enemy based on your remaining MP amount.",
          "kr": "\uc801\uc758 \uc815\uc2e0\uc744 \ubd95\uad34\uc2dc\ucf1c \uacf5\uaca9\ud569\ub2c8\ub2e4. \uc774\ub54c \uc790\uc2e0\uc758 MP\uac00 \ub0a8\uc740 \ub7c9\uc5d0 \ub530\ub77c \ub370\ubbf8\uc9c0\uac00 \ubcc0\ud569\ub2c8\ub2e4.",
          "nl": "Does damage to an enemy based on your remaining MP amount.",
-         "pl": "Does damage to an enemy based on your remaining MP amount.",
-         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d. \u0420\u0430\u0437\u043c\u0435\u0440 \u0443\u0440\u043e\u043d\u0430 \u0437\u0430\u0432\u0438\u0441\u0438\u0442 \u043e\u0442 \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u0430 \u043c\u0430\u043d\u044b.",
-         "sw": "Does damage to an enemy based on your remaining MP amount."
+         "pl": "Zadaje olbrzymie obra\u017cenia celowi w zale\u017cno\u015bci od twoich obecnych punkt\u00f3w MP. (Najwi\u0119ksze obra\u017cenia gdy masz 100% MP)",
+         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d. \u0420\u0430\u0437\u043c\u0435\u0440 \u0443\u0440\u043e\u043d\u0430 \u0437\u0430\u0432\u0438\u0441\u0438\u0442 \u043e\u0442 \u0432\u0430\u0448\u0435\u0433\u043e \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u0430 \u043c\u0430\u043d\u044b.",
+         "sw": "Does damage to an enemy based on your remaining MP amount.",
+         "th": "Does damage to an enemy based on your remaining MP amount."
       },
       "icon": "psyspirits.png",
       "class": 5709,
@@ -34306,6 +35071,8 @@ const skillsjson = [
       "name": {
          "en": "Flame Arrow",
          "ar": "Flame Arrow",
+         "br": "Flecha de Fogo",
+         "cns": "\u5f13\u672f\u609f\u900f",
          "de": "Flame Arrow",
          "fi": "Flame Arrow",
          "fil": "Flame Arrow",
@@ -34315,11 +35082,14 @@ const skillsjson = [
          "nl": "Flame Arrow",
          "pl": "Flame Arrow",
          "ru": "\u041f\u043b\u0430\u043c\u0435\u043d\u0435\u044e\u0449\u0430\u044f \u0441\u0442\u0440\u0435\u043b\u0430",
-         "sw": "Flame Arrow"
+         "sw": "Flame Arrow",
+         "th": "Flame Arrow"
       },
       "description": {
          "en": "Gives the fire element to arrows and damages surrounding enemies.",
          "ar": "Gives the fire element to arrows and damages surrounding enemies.",
+         "br": "Adiciona elemento de fogo nas flechas que incendeia uma pequena \u00e1rea ao redor do alvo causando danos em inimigos pr\u00f3ximos.",
+         "cns": "\u5df2\u7ecf\u609f\u900f\u5f13\u7bad\u7684\u5965\u79d8,\u83b7\u5f97\u5f13\u672f\u9886\u609f\u7684\u53cc\u500d\u7684\u5f13\u7bad\u7684\u653b\u51fb\u529b\u3002",
          "de": "Verursacht anhaltenden Feuerschaden, solange sich das Ziel im Effektbereich befindet und der Effekt aktiv ist.",
          "fi": "Gives the fire element to arrows and damages surrounding enemies.",
          "fil": "Gives the fire element to arrows and damages surrounding enemies.",
@@ -34329,7 +35099,8 @@ const skillsjson = [
          "nl": "Gives the fire element to arrows and damages surrounding enemies.",
          "pl": "Gives the fire element to arrows and damages surrounding enemies.",
          "ru": "\u0417\u0430\u0447\u0430\u0440\u043e\u0432\u044b\u0432\u0430\u0435\u0442 \u0441\u0442\u0440\u0435\u043b\u044b \u0430\u0440\u043a\u0430\u043d\u043e\u043c \u043e\u0433\u043d\u044f. \u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0443\u0440\u043e\u043d \u043d\u0435 \u0442\u043e\u043b\u044c\u043a\u043e \u0446\u0435\u043b\u0438, \u043d\u043e \u0438 \u043e\u043a\u0440\u0443\u0436\u0430\u044e\u0449\u0438\u043c \u0435\u0435 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430\u043c.",
-         "sw": "Gives the fire element to arrows and damages surrounding enemies."
+         "sw": "Gives the fire element to arrows and damages surrounding enemies.",
+         "th": "Gives the fire element to arrows and damages surrounding enemies."
       },
       "icon": "ragbowflamea.png",
       "class": 9295,
@@ -34524,6 +35295,8 @@ const skillsjson = [
       "name": {
          "en": "Earth Master",
          "ar": "Earth Master",
+         "br": "Mestre da Terra",
+         "cns": "\u5730\u7cfb\u4fee\u70bc",
          "de": "Earth Master",
          "fi": "Earth Master",
          "fil": "Earth Master",
@@ -34531,13 +35304,16 @@ const skillsjson = [
          "it": "Earth Master",
          "kr": "\uc5b4\uc2a4 \ub9c8\uc2a4\ud130",
          "nl": "Earth Master",
-         "pl": "Earth Master",
+         "pl": "Mistrz Ziemi",
          "ru": "\u0412\u043b\u0430\u0441\u0442\u0435\u043b\u0438\u043d \u0437\u0435\u043c\u043b\u0438",
-         "sw": "Earth Master"
+         "sw": "Earth Master",
+         "th": "Earth Master"
       },
       "description": {
          "en": "Increases the striking power of earth spells.",
          "ar": "Increases the striking power of earth spells.",
+         "br": "Aumenta o poder das magias de Terra.",
+         "cns": "\u63d0\u9ad8\u571f\u7cfb\u9b54\u6cd5\u653b\u51fb\u529b\u3002",
          "de": "Erh\u00f6hen der Angriffst\u00e4rke von Magie mit Erd Attributen.",
          "fi": "Increases the striking power of earth spells.",
          "fil": "Increases the striking power of earth spells.",
@@ -34545,9 +35321,10 @@ const skillsjson = [
          "it": "Increases the striking power of earth spells.",
          "kr": "\uc5b4\uc2a4 \uc18d\uc131 \ub9c8\ubc95\uc758 \uacf5\uaca9\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increases the striking power of earth spells.",
-         "pl": "Increases the striking power of earth spells.",
+         "pl": "Zwi\u0119ksza si\u0142\u0119 Czar\u00f3w Ziemi.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u0438\u043b\u0443 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439 \u0441\u0442\u0438\u0445\u0438\u0438 \u0437\u0435\u043c\u043b\u0438.",
-         "sw": "Increases the striking power of earth spells."
+         "sw": "Increases the striking power of earth spells.",
+         "th": "Increases the striking power of earth spells."
       },
       "icon": "eleearearmst.png",
       "class": 9150,
@@ -34705,6 +35482,8 @@ const skillsjson = [
       "name": {
          "en": "Windfield",
          "ar": "Windfield",
+         "br": "Ventania",
+         "cns": "\u72c2\u98ce\u6012\u543c",
          "de": "Windfield",
          "fi": "Windfield",
          "fil": "Windfield",
@@ -34712,13 +35491,16 @@ const skillsjson = [
          "it": "Windfield",
          "kr": "\uc708\ub4dc \ud544\ub4dc",
          "nl": "Windfield",
-         "pl": "Windfield",
+         "pl": "Pole Burzowe",
          "ru": "\u0421\u043c\u0435\u0440\u0447",
-         "sw": "Windfield"
+         "sw": "Windfield",
+         "th": "Windfield"
       },
       "description": {
          "en": "Damages surrounding enemies with a wind attack. The speed of the enemies will be reduced.",
          "ar": "Damages surrounding enemies with a wind attack. The speed of the enemies will be reduced.",
+         "br": "Causa dano aos inimigos ao redor com um ataque de vento que reduz a velocidade de movimento dos inimigos.",
+         "cns": "\u4e00\u6bb5\u65f6\u95f4\u5185\u5c06\u533a\u57df\u7b3c\u7f69\u5728\u72c2\u98ce\u4e4b\u4e2d\uff0c\u4e00\u5b9a\u51e0\u7387\u51cf\u6162\u533a\u57df\u5185\u76ee\u6807\u7684\u79fb\u52a8\u901f\u5ea6\u3002",
          "de": "Allen Gegnern durch einen herbeigerufenen starken Sturm Schaden zuf\u00fcgen. Die Geschwindigkeit der Gegner wird reduziert.",
          "fi": "Damages surrounding enemies with a wind attack. The speed of the enemies will be reduced.",
          "fil": "Damages surrounding enemies with a wind attack. The speed of the enemies will be reduced.",
@@ -34726,9 +35508,10 @@ const skillsjson = [
          "it": "Damages surrounding enemies with a wind attack. The speed of the enemies will be reduced.",
          "kr": "\uac15\ub82c\ud55c \ub3cc\ud48d\uc744 \uc77c\uc73c\ucf1c \uc8fc\ubcc0\uc758 \ubaa8\ub4e0 \uc801\ub4e4\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4. \uc774\ub54c \uc801\uc758 \uc774\ub3d9 \uc18d\ub3c4\ub97c \uac10\uc18c\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Damages surrounding enemies with a wind attack. The speed of the enemies will be reduced.",
-         "pl": "Damages surrounding enemies with a wind attack. The speed of the enemies will be reduced.",
+         "pl": "Atakuje wszystkich wrog\u00f3w wok\u00f3\u0142 celu pot\u0119\u017cnym wiatrem. Szybko\u015b\u0107 poruszania si\u0119 wroga spadnie.",
          "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0432\u0441\u0435\u043c \u043d\u0430\u0445\u043e\u0434\u044f\u0449\u0438\u043c\u0441\u044f \u043f\u043e\u0431\u043b\u0438\u0437\u043e\u0441\u0442\u0438 \u0432\u0440\u0430\u0433\u0430\u043c \u0443\u0440\u043e\u043d \u0432\u0435\u0442\u0440\u043e\u043c \u0438 \u0437\u0430\u043c\u0435\u0434\u043b\u044f\u0435\u0442 \u0438\u0445.",
-         "sw": "Damages surrounding enemies with a wind attack. The speed of the enemies will be reduced."
+         "sw": "Damages surrounding enemies with a wind attack. The speed of the enemies will be reduced.",
+         "th": "Damages surrounding enemies with a wind attack. The speed of the enemies will be reduced."
       },
       "icon": "elewinwinfil.png",
       "class": 9150,
@@ -35096,20 +35879,25 @@ const skillsjson = [
       "name": {
          "en": "Prevention",
          "ar": "Prevention",
+         "br": "Preven\u00e7\u00e3o",
+         "cns": "\u795e\u4e4b\u5e87\u62a4",
          "de": "Prevention",
          "fi": "Prevention",
          "fil": "Prevention",
          "fr": "Second souffle",
          "it": "Prevention",
          "kr": "\ud504\ub9ac\ubca4\uc158",
-         "nl": "Prevention",
-         "pl": "Prevention",
+         "nl": "Wering",
+         "pl": "Prewencja",
          "ru": "\u041f\u0440\u0435\u0434\u043e\u0441\u0442\u043e\u0440\u043e\u0436\u043d\u043e\u0441\u0442\u044c",
-         "sw": "Prevention"
+         "sw": "Prevention",
+         "th": "Prevention"
       },
       "description": {
          "en": "Target recovers HP when it reaches below a certain point.",
          "ar": "Target recovers HP when it reaches below a certain point.",
+         "br": "Recupera a vida (HP) quando este estiver abaixo de um determinado valor.",
+         "cns": "\u7948\u6c42\u795e\u7075\u7684\u5e87\u62a4\uff0c\u5728\u6fd2\u4e34\u6b7b\u4ea1\u7684\u65f6\u5019\u53ca\u65f6\u6cbb\u7597\u81ea\u5df1\u7684\u4f24\u52bf\u3002",
          "de": "Segnet dich, so dass sich die HP wieder auff\u00fcllen sobald diese unter einen bestimmten Wert gefallen sind.",
          "fi": "Kohteen HP palautuu sen laskiessa alle tietyn rajan.",
          "fil": "Target recovers HP when it reaches below a certain point.",
@@ -35117,9 +35905,10 @@ const skillsjson = [
          "it": "Target recovers HP when it reaches below a certain point.",
          "kr": "HP\uac00 \uc77c\uc815\ub7c9 \uc774\ud558\uac00 \ub418\uba74 \uc790\ub3d9\uc73c\ub85c \ud68c\ubcf5\ud560 \uc218 \uc788\ub3c4\ub85d \ucd95\ubcf5\uc744 \uac78\uc5b4\uc90d\ub2c8\ub2e4.",
          "nl": "Target recovers HP when it reaches below a certain point.",
-         "pl": "Target recovers HP when it reaches below a certain point.",
+         "pl": "Je\u015bli twoje HP spadn\u0105 poni\u017cej pewnego limitu, otrzymasz jednorazow\u0105 dawk\u0119 leczenia.",
          "ru": "\u0415\u0441\u043b\u0438 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u0435 \u0446\u0435\u043b\u0438 \u043f\u0430\u0434\u0430\u0435\u0442 \u043d\u0438\u0436\u0435 \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u043d\u043e\u0439 \u043e\u0442\u043c\u0435\u0442\u043a\u0438, \u043e\u043d\u043e \u0432\u043e\u043b\u0448\u0435\u0431\u043d\u044b\u043c \u043e\u0431\u0440\u0430\u0437\u043e\u043c \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u0430\u0432\u043b\u0438\u0432\u0430\u0435\u0442\u0441\u044f.",
-         "sw": "Target recovers HP when it reaches below a certain point."
+         "sw": "Target recovers HP when it reaches below a certain point.",
+         "th": "Target recovers HP when it reaches below a certain point."
       },
       "icon": "assheapreven.png",
       "class": 8962,
@@ -35607,6 +36396,8 @@ const skillsjson = [
       "name": {
          "en": "Power Fist",
          "ar": "Power Fist",
+         "br": "Soco Concentrado",
+         "cns": "\u795e\u5149\u7834",
          "de": "Power Fist",
          "fi": "Power Fist",
          "fil": "Power Fist",
@@ -35614,13 +36405,16 @@ const skillsjson = [
          "it": "Power Fist",
          "kr": "\ud30c\uc6cc \ud53c\uc2a4\ud2b8",
          "nl": "Power Fist",
-         "pl": "Power Fist",
+         "pl": "Pi\u0119\u015b\u0107 Mocy",
          "ru": "\u0425\u0435\u043b\u043b\u0431\u043e\u0439",
-         "sw": "Power Fist"
+         "sw": "Power Fist",
+         "th": "Power Fist"
       },
       "description": {
          "en": "Concentrated power strike.",
          "ar": "Concentrated power strike.",
+         "br": "Um potente golpe concentrado.",
+         "cns": "\u5c06\u795e\u7075\u8d50\u4e88\u7684\u5723\u529b\u96c6\u4e2d\u5728\u62f3\u5957\u4e0a\u91cd\u521b\u654c\u4eba\u3002",
          "de": "Ein Hieb gegen den Gegner durch Konzentration auf den Knuckle.",
          "fi": "Keskitetty voimaisku.",
          "fil": "Concentrated power strike.",
@@ -35628,9 +36422,10 @@ const skillsjson = [
          "it": "Concentrated power strike.",
          "kr": "\ub108\ud074\ud574\uba38\uc5d0 \uc628 \ubab8\uc758 \ud798\uc744 \uc2e4\uc5b4 \uc801\uc744 \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Concentrated power strike.",
-         "pl": "Concentrated power strike.",
+         "pl": "Skoncentrowany uderzenie pi\u0119\u015bci\u0105.",
          "ru": "\u041c\u043e\u0449\u043d\u044b\u0439 \u0438 \u0440\u0435\u0437\u043a\u0438\u0439 \u0443\u0434\u0430\u0440 \u043f\u0435\u0440\u0447\u0430\u0442\u043a\u043e\u0439.",
-         "sw": "Concentrated power strike."
+         "sw": "Concentrated power strike.",
+         "th": "Concentrated power strike."
       },
       "icon": "assknupowerf.png",
       "class": 8962,
@@ -35958,6 +36753,8 @@ const skillsjson = [
       "name": {
          "en": "Yo-Yo mastery",
          "ar": "Yo-Yo mastery",
+         "br": "Maestria do Ioi\u00f4",
+         "cns": "\u8f6e\u672f\u9886\u609f",
          "de": "Yoyo Mastery",
          "fi": "Yo-Yo mastery",
          "fil": "Yo-Yo mastery",
@@ -35965,13 +36762,16 @@ const skillsjson = [
          "it": "Yo-Yo mastery",
          "kr": "\uc694\uc694 \ub9c8\uc2a4\ud130\ub9ac",
          "nl": "Yo-Yo mastery",
-         "pl": "Yo-Yo mastery",
+         "pl": "Mistrzostwo Yo-Yo",
          "ru": "\u0419\u043e-\u0419\u043e\u0434\u0430",
-         "sw": "Yo-Yo mastery"
+         "sw": "Yo-Yo mastery",
+         "th": "Yo-Yo mastery"
       },
       "description": {
          "en": "Increases damage done with a Yo-yo.",
          "ar": "Increases damage done with a Yo-yo.",
+         "br": "Aumenta o dano causado com um Ioi\u00f4.",
+         "cns": "\u6682\u65f6\u63d0\u9ad8\u98de\u8f6e\u7684\u653b\u51fb\u529b\u3002",
          "de": "Erh\u00f6hen der Angriffskraft durch steigern der Yoyo F\u00e4higkeiten.",
          "fi": "Increases damage done with a Yo-yo.",
          "fil": "Increases damage done with a Yo-yo.",
@@ -35979,9 +36779,10 @@ const skillsjson = [
          "it": "Increases damage done with a Yo-yo.",
          "kr": "\uc694\uc694\uc758 \uc0ac\uc6a9 \ub2a5\ub825\uc744 \ub192\uc5ec\uc11c \uacf5\uaca9\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increases damage done with a Yo-yo.",
-         "pl": "Increases damage done with a Yo-yo.",
-         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0443\u0440\u043e\u043d \u0438 \u0442\u043e\u0447\u043d\u043e\u0441\u0442\u044c \u043f\u0440\u0438 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u0438 \u0439\u043e-\u0439\u043e.",
-         "sw": "Increases damage done with a Yo-yo."
+         "pl": "Zwi\u0119ksza si\u0142\u0119 ataku Yo-Yo.",
+         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0443\u0440\u043e\u043d \u043f\u0440\u0438 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u0438 \u0439\u043e-\u0439\u043e.",
+         "sw": "Increases damage done with a Yo-yo.",
+         "th": "Increases damage done with a Yo-yo."
       },
       "icon": "acrsupyoymaster.png",
       "class": 9098,
@@ -36249,6 +37050,8 @@ const skillsjson = [
       "name": {
          "en": "Shield Bash",
          "ar": "Shield Bash",
+         "br": "Golpe de Escudo",
+         "cns": "\u76fe\u724c\u731b\u51fb",
          "de": "Shield Strike",
          "fi": "Shield Bash",
          "fil": "Shield Bash",
@@ -36256,13 +37059,16 @@ const skillsjson = [
          "it": "Shield Bash",
          "kr": "\uc2e4\ub4dc \ubc30\uc26c",
          "nl": "Shield Bash",
-         "pl": "Shield Bash",
+         "pl": "Grzmotni\u0119cie Tarcz\u0105",
          "ru": "\u0414\u0438\u043d\u0430\u043c\u0438\u0442",
-         "sw": "Shield Bash"
+         "sw": "Shield Bash",
+         "th": "Shield Bash"
       },
       "description": {
          "en": "Attack your target with your shield. This attack has a chance to stun your enemy. Requires a shield.",
          "ar": "Attack your target with your shield. This attack has a chance to stun your enemy. Requires a shield.",
+         "br": "Ataque seu alvo com o seu escudo. Esse ataque tem chance de atordoar o seu inimigo. Exige um escudo.",
+         "cns": "\u7528\u4f60\u7684\u76fe\u724c\u653b\u51fb\u4f60\u7684\u76ee\u6807\u3002\u8fd9\u6b21\u653b\u51fb\u6709\u673a\u4f1a\u51fb\u660f\u4f60\u7684\u654c\u4eba\u3002",
          "de": "Schlage mit deinem Schild zu. Kann das Ziel bet\u00e4uben. Ein Schild muss ausger\u00fcstet sein.",
          "fi": "Attack your target with your shield. This attack has a chance to stun your enemy. Requires a shield.",
          "fil": "Attack your target with your shield. This attack has a chance to stun your enemy. Requires a shield.",
@@ -36270,9 +37076,10 @@ const skillsjson = [
          "it": "Attack your target with your shield. This attack has a chance to stun your enemy. Requires a shield.",
          "kr": "\ub300\uc0c1\uc744 \ubc29\ud328\ub85c \ud0c0\uaca9\ud558\uba70, \uc77c\uc815\ud655\ub960\ub85c \uc2a4\ud134 \uc0c1\ud0dc\ub85c \ub9cc\ub4e0\ub2e4.",
          "nl": "Attack your target with your shield. This attack has a chance to stun your enemy. Requires a shield.",
-         "pl": "Attack your target with your shield. This attack has a chance to stun your enemy. Requires a shield.",
+         "pl": "Pr\u00f3buje og\u0142uszy\u0107 cel za pomoc\u0105 silnego uderzenia tarcz\u0105. Wymaga Tarczy.",
          "ru": "\u0423\u0434\u0430\u0440 \u0449\u0438\u0442\u043e\u043c, \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u044e\u0449\u0438\u0439 \u0441 \u043d\u0435\u043a\u043e\u0442\u043e\u0440\u043e\u0439 \u0432\u0435\u0440\u043e\u044f\u0442\u043d\u043e\u0441\u0442\u044c\u044e \u043e\u0433\u043b\u0443\u0448\u0438\u0442\u044c \u0446\u0435\u043b\u044c.",
-         "sw": "Attack your target with your shield. This attack has a chance to stun your enemy. Requires a shield."
+         "sw": "Attack your target with your shield. This attack has a chance to stun your enemy. Requires a shield.",
+         "th": "Attack your target with your shield. This attack has a chance to stun your enemy. Requires a shield."
       },
       "icon": "mershiebash.png",
       "class": 764,
@@ -36800,6 +37607,8 @@ const skillsjson = [
       "name": {
          "en": "Atk. Counter",
          "ar": "Atk. Counter",
+         "br": "Contra Ataque",
+         "cns": "\u4f3a\u673a\u800c\u52a8",
          "de": "Attack Counter",
          "fi": "Atk. Counter",
          "fil": "Atk. Counter",
@@ -36809,11 +37618,14 @@ const skillsjson = [
          "nl": "Atk. Counter",
          "pl": "Atk. Counter",
          "ru": "\u041a\u043e\u043d\u0442\u0440\u0430\u0442\u0430\u043a\u0430",
-         "sw": "Atk. Counter"
+         "sw": "Atk. Counter",
+         "th": "Atk. Counter"
       },
       "description": {
          "en": "Attack just as an enemy attacks",
          "ar": "Attack just as an enemy attacks",
+         "br": "Ataca logo quando um inimigo ataca",
+         "cns": "\u6682\u65f6\u56de\u907f\u654c\u4eba\u7684\u653b\u51fb\uff0c\u5f85\u5176\u9732\u51fa\u7834\u7efd\u7acb\u523b\u8fd8\u51fb\u3002",
          "de": "Erh\u00f6ht die Angriffsst\u00e4rke, wenn man ein Yoyo benutzt.",
          "fi": "Attack just as an enemy attacks",
          "fil": "Attack just as an enemy attacks",
@@ -36823,7 +37635,8 @@ const skillsjson = [
          "nl": "Attack just as an enemy attacks",
          "pl": "Attack just as an enemy attacks",
          "ru": "\u0414\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0443\u0434\u0430\u0440 \u0432 \u043e\u0442\u0432\u0435\u0442 \u043d\u0430 \u0443\u0434\u0430\u0440 \u0432\u0440\u0430\u0433\u0430.",
-         "sw": "Attack just as an enemy attacks"
+         "sw": "Attack just as an enemy attacks",
+         "th": "Attack just as an enemy attacks"
       },
       "icon": "jstyoybackst.png",
       "level": 1,
@@ -37263,6 +38076,8 @@ const skillsjson = [
       "name": {
          "en": "Burningfield",
          "ar": "Burningfield",
+         "br": "Burningfield",
+         "cns": "Burningfield",
          "de": "Burningfield",
          "fi": "Burningfield",
          "fil": "Burningfield",
@@ -37272,11 +38087,14 @@ const skillsjson = [
          "nl": "Burningfield",
          "pl": "Burningfield",
          "ru": "Burningfield",
-         "sw": "Burningfield"
+         "sw": "Burningfield",
+         "th": "Burningfield"
       },
       "description": {
          "en": "Does damage to the enemy over a period of time",
          "ar": "Does damage to the enemy over a period of time",
+         "br": "Does damage to the enemy over a period of time",
+         "cns": "Does damage to the enemy over a period of time",
          "de": "Does damage to the enemy over a period of time",
          "fi": "Does damage to the enemy over a period of time",
          "fil": "Does damage to the enemy over a period of time",
@@ -37286,7 +38104,8 @@ const skillsjson = [
          "nl": "Does damage to the enemy over a period of time",
          "pl": "Does damage to the enemy over a period of time",
          "ru": "Does damage to the enemy over a period of time",
-         "sw": "Does damage to the enemy over a period of time"
+         "sw": "Does damage to the enemy over a period of time",
+         "th": "Does damage to the enemy over a period of time"
       },
       "icon": "elefirbunfil.png",
       "class": 9150,
@@ -37584,6 +38403,8 @@ const skillsjson = [
       "name": {
          "en": "Lightning Strike",
          "ar": "Lightning Strike",
+         "br": "Rel\u00e2mpago",
+         "cns": "\u96f7\u9706\u4e4b\u6012",
          "de": "Thunder Strike",
          "fi": "Lightning Strike",
          "fil": "Lightning Strike",
@@ -37591,13 +38412,16 @@ const skillsjson = [
          "it": "Lightning Strike",
          "kr": "\uc36c\ub354 \uc2a4\ud2b8\ub77c\uc774\ud06c",
          "nl": "Lightning Strike",
-         "pl": "Lightning Strike",
+         "pl": "Piorunuj\u0105ce Wy\u0142adowanie",
          "ru": "\u0423\u0434\u0430\u0440 \u043c\u043e\u043b\u043d\u0438\u0438",
-         "sw": "Lightning Strike"
+         "sw": "Lightning Strike",
+         "th": "Lightning Strike"
       },
       "description": {
          "en": "Damages the enemy with a bolt of lightning.",
          "ar": "Damages the enemy with a bolt of lightning.",
+         "br": "Causa dano ao inimigo com um raio.",
+         "cns": "\u65bd\u5c55\u6124\u6012\u7684\u96f7\u9707\uff0c\u5c55\u793a\u51fa\u6124\u6012\u7684\u5a01\u529b\u3002",
          "de": "Dem Gegner durch einen starken elektrischen Blitz Schaden zuf\u00fcgen.",
          "fi": "Damages the enemy with a bolt of lightning.",
          "fil": "Damages the enemy with a bolt of lightning.",
@@ -37605,9 +38429,10 @@ const skillsjson = [
          "it": "Damages the enemy with a bolt of lightning.",
          "kr": "\uac15\ub825\ud55c \ubc88\uac1c\ub97c \ub5a8\uc5b4\ud2b8\ub824 \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Damages the enemy with a bolt of lightning.",
-         "pl": "Damages the enemy with a bolt of lightning.",
+         "pl": "Wy\u0142adowuje olbrzymi\u0105 ilo\u015b\u0107 energii na cel.",
          "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d \u043c\u043e\u043b\u043d\u0438\u0435\u0439.",
-         "sw": "Damages the enemy with a bolt of lightning."
+         "sw": "Damages the enemy with a bolt of lightning.",
+         "th": "Damages the enemy with a bolt of lightning."
       },
       "icon": "eleelethunst.png",
       "class": 9150,
@@ -37785,20 +38610,25 @@ const skillsjson = [
       "name": {
          "en": "Poison",
          "ar": "Poison",
+         "br": "Veneno",
+         "cns": "\u4e2d\u6bd2",
          "de": "Poison",
          "fi": "Poison",
          "fil": "Poison",
          "fr": "Piq\u00fbre de poison",
          "it": "Poison",
          "kr": "\uc77c\ubc18\ub3c5",
-         "nl": "Poison",
+         "nl": "Vergif",
          "pl": "Poison",
          "ru": "\u042f\u0434",
-         "sw": "Poison"
+         "sw": "Poison",
+         "th": "Poison"
       },
       "description": {
          "en": "Damages an enemy over a period of time and reduces their ability to heal.",
          "ar": "Damages an enemy over a period of time and reduces their ability to heal.",
+         "br": "Causa danos a um inimigo por um per\u00edodo de tempo limitado e reduz a sua capacidade de cura.",
+         "cns": "\u4e00\u5b9a\u65f6\u95f4\u5185\u53d7\u6301\u7eed\u7684\u6bd2\u4f24\u5bb3\u3002",
          "de": "Den Gegner kontinuierlich mit Gift f\u00fcr eine bestimmte Zeit angreifen.",
          "fi": "Damages an enemy over a period of time and reduces their ability to heal.",
          "fil": "Damages an enemy over a period of time and reduces their ability to heal.",
@@ -37807,10 +38637,11 @@ const skillsjson = [
          "kr": "\uc77c\uc815 \uc2dc\uac04\ub3d9\uc548 \ucd9c\ud608\ub85c \uc778\ud55c \uc9c0\uc18d\uc801\uc778 \ud53c\ud574\ub97c \uc785\ud799\ub2c8\ub2e4.",
          "nl": "Damages an enemy over a period of time and reduces their ability to heal.",
          "pl": "Damages an enemy over a period of time and reduces their ability to heal.",
-         "ru": "\u0412\u044b \u043f\u043e\u043b\u0443\u0447\u0430\u0435\u0442\u0435 \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u044b\u0439 \u0443\u0440\u043e\u043d.",
-         "sw": "Damages an enemy over a period of time and reduces their ability to heal."
+         "ru": "\u0412\u044b \u043f\u043e\u043b\u0443\u0447\u0430\u0435\u0442\u0435 \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u044b\u0439 \u0443\u0440\u043e\u043d. \u042d\u0444\u0444\u0435\u043a\u0442\u0438\u0432\u043d\u043e\u0441\u0442\u044c \u043b\u0435\u0447\u0435\u043d\u0438\u044f \u0441\u043d\u0438\u0436\u0435\u043d\u0430.",
+         "sw": "Damages an enemy over a period of time and reduces their ability to heal.",
+         "th": "Damages an enemy over a period of time and reduces their ability to heal."
       },
-      "icon": "elefirbunfil.png",
+      "icon": "elewatpoicld.png",
       "level": 1,
       "element": "none",
       "magic": false,
@@ -38008,6 +38839,8 @@ const skillsjson = [
       "name": {
          "en": "Geburah Tiphreth",
          "ar": "Geburah Tiphreth",
+         "br": "Geburah Tiphreth",
+         "cns": "\u6218\u6597\u4e4b\u6b4c",
          "de": "Geburah Tiphreth",
          "fi": "Geburah Tiphreth",
          "fil": "Geburah Tiphreth",
@@ -38017,11 +38850,14 @@ const skillsjson = [
          "nl": "Geburah Tiphreth",
          "pl": "Geburah Tiphreth",
          "ru": "\u041f\u0435\u0441\u043d\u044c \u043e\u0431\u043e\u0434\u0440\u0435\u043d\u0438\u044f",
-         "sw": "Geburah Tiphreth"
+         "sw": "Geburah Tiphreth",
+         "th": "Geburah Tiphreth"
       },
       "description": {
          "en": "This ability draws upon the inner strength of the user & nearby party members, increasing both Attack Power and Attack Speed for a limited time.",
          "ar": "This ability draws upon the inner strength of the user & nearby party members, increasing both Attack Power and Attack Speed for a limited time.",
+         "br": "Essa habilidade se baseia na for\u00e7a interna do usu\u00e1rio e dos membros do grupo pr\u00f3ximos, aumentando o Poder de Ataque e a Velocidade de Ataque por um tempo limitado.",
+         "cns": "\u541f\u5531\u6218\u6b4c\uff0c\u63d0\u9ad8\u5468\u56f4\u540c\u4f34\u7684\u653b\u51fb\u529b\u548c\u653b\u51fb\u901f\u5ea6\u3002",
          "de": "Verbessern der F\u00e4higkeiten im Kampf f\u00fcr die Partymitglieder in deiner N\u00e4he.",
          "fi": "K\u00e4ytt\u00e4j\u00e4n ja l\u00e4heisten ryhm\u00e4n j\u00e4senten sis\u00e4inen voima kasvattaa Hy\u00f6kk\u00e4ysvoimaa sek\u00e4 Hy\u00f6kk\u00e4snopeutta rajoitetun ajan.",
          "fil": "This ability draws upon the inner strength of the user & nearby party members, increasing both Attack Power and Attack Speed for a limited time.",
@@ -38029,9 +38865,10 @@ const skillsjson = [
          "it": "This ability draws upon the inner strength of the user & nearby party members, increasing both Attack Power and Attack Speed for a limited time.",
          "kr": "\uac00\uae4c\uc774 \uc788\ub294 \uadf9\ub2e8\uc6d0\ub4e4\uc758 \uc804\ud22c\ub2a5\ub825\uc744 \ud5a5\uc0c1\uc2dc\ud0b5\ub2c8\ub2e4. \ucd94\uac00 \ub370\ubbf8\uc9c0\uc640 \uacf5\uaca9 \uc18d\ub3c4\uc5d0 \uc601\ud5a5\uc744 \uc90d\ub2c8\ub2e4.",
          "nl": "This ability draws upon the inner strength of the user & nearby party members, increasing both Attack Power and Attack Speed for a limited time.",
-         "pl": "This ability draws upon the inner strength of the user & nearby party members, increasing both Attack Power and Attack Speed for a limited time.",
-         "ru": "\u042d\u0442\u0430 \u043f\u0435\u0441\u043d\u044c \u043f\u0440\u0438\u0437\u044b\u0432\u0430\u0435\u0442 \u0441\u043e\u0440\u0430\u0442\u043d\u0438\u043a\u043e\u0432 \u0431\u0438\u0442\u044c \u044f\u0440\u043e\u0441\u0442\u043d\u0435\u0435, \u0431\u0438\u0442\u044c \u0431\u044b\u0441\u0442\u0440\u0435\u0435. \u0412\u0440\u0435\u043c\u0435\u043d\u043d\u043e \u043f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u0438\u043b\u0443 \u0438 \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u044c \u0430\u0442\u0430\u043a.",
-         "sw": "This ability draws upon the inner strength of the user & nearby party members, increasing both Attack Power and Attack Speed for a limited time."
+         "pl": "Przebudza ukryt\u0105 si\u0142\u0119, zwi\u0119kszaj\u0105c szybko\u015b\u0107 i si\u0142\u0119 ataku cz\u0142onk\u00f3w dru\u017cyny wok\u00f3\u0142 ciebie.",
+         "ru": "\u042d\u0442\u0430 \u043f\u0435\u0441\u043d\u044c \u043f\u0440\u0438\u0437\u044b\u0432\u0430\u0435\u0442 \u0441\u043e\u0440\u0430\u0442\u043d\u0438\u043a\u043e\u0432 \u0431\u0438\u0442\u044c \u044f\u0440\u043e\u0441\u0442\u043d\u0435\u0435 \u0438 \u0431\u044b\u0441\u0442\u0440\u0435\u0435. \u0412\u0440\u0435\u043c\u0435\u043d\u043d\u043e \u043f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u0438\u043b\u0443 \u0438 \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u044c \u0430\u0442\u0430\u043a.",
+         "sw": "This ability draws upon the inner strength of the user & nearby party members, increasing both Attack Power and Attack Speed for a limited time.",
+         "th": "This ability draws upon the inner strength of the user & nearby party members, increasing both Attack Power and Attack Speed for a limited time."
       },
       "icon": "rinsqugebura.png",
       "class": 9389,
@@ -38484,30 +39321,36 @@ const skillsjson = [
       "name": {
          "en": "Accuracy",
          "ar": "Accuracy",
+         "br": "Precis\u00e3o",
+         "cns": "\u547d\u4e2d\u672f",
          "de": "Accuracy",
          "fi": "Accuracy",
          "fil": "Accuracy",
          "fr": "Pr\u00e9cision",
          "it": "Accuracy",
          "kr": "\uc5b4\ud050\ub7ec\uc2dc",
-         "nl": "Accuracy",
-         "pl": "Accuracy",
+         "nl": "Nauwkeurigheid",
+         "pl": "Celno\u015b\u0107",
          "ru": "\u041c\u0435\u0442\u043a\u043e\u0441\u0442\u044c",
-         "sw": "Accuracy"
+         "sw": "Accuracy",
+         "th": "Accuracy"
       },
       "description": {
          "en": "Increases the accuracy of a target.",
          "ar": "Increases the accuracy of a target.",
+         "br": "Diminui a chance de errar danos de ataques f\u00edsicos causados em um alvo.",
+         "cns": "\u6682\u65f6\u63d0\u9ad8\u65bd\u6cd5\u5bf9\u8c61\u7684\u547d\u4e2d\u7387\u3002",
          "de": "Erh\u00f6ht die Treffsicherheit des angew\u00e4hlten Spielers.",
          "fi": "Kasvattaa kohteen tarkkuutta.",
          "fil": "Increases the accuracy of a target.",
          "fr": "Augmente les chances de toucher",
          "it": "Increases the accuracy of a target.",
          "kr": "\ub300\uc0c1\uc758 \uba85\uc911\ub960\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
-         "nl": "Increases the accuracy of a target.",
-         "pl": "Increases the accuracy of a target.",
+         "nl": "Verhoogt de nauwkeurigheid van een doelwit.",
+         "pl": "Zwi\u0119ksza Celno\u015b\u0107 celu.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u043c\u0435\u0442\u043a\u043e\u0441\u0442\u044c \u0446\u0435\u043b\u0438.",
-         "sw": "Increases the accuracy of a target."
+         "sw": "Increases the accuracy of a target.",
+         "th": "Increases the accuracy of a target."
       },
       "icon": "asscheaccura.png",
       "class": 8962,
@@ -39135,6 +39978,8 @@ const skillsjson = [
       "name": {
          "en": "Aimed Shot",
          "ar": "Aimed Shot",
+         "br": "Tiro Certeiro",
+         "cns": "\u7cbe\u51c6\u5c04\u51fb",
          "de": "Aimed Shot",
          "fi": "Aimed Shot",
          "fil": "Aimed Shot",
@@ -39142,13 +39987,16 @@ const skillsjson = [
          "it": "Aimed Shot",
          "kr": "\ub370\ub4e4\ub9ac \uc2a4\uc719",
          "nl": "Aimed Shot",
-         "pl": "Aimed Shot",
+         "pl": "Celny Strza\u0142",
          "ru": "\u041f\u0440\u0438\u0446\u0435\u043b\u044c\u043d\u044b\u0439 \u0432\u044b\u0441\u0442\u0440\u0435\u043b",
-         "sw": "Aimed Shot"
+         "sw": "Aimed Shot",
+         "th": "Aimed Shot"
       },
       "description": {
          "en": "Slow shot that has a chance to deal double damage.",
          "ar": "Slow shot that has a chance to deal double damage.",
+         "br": "Tiro lento que tem chance de causar dano duplo.",
+         "cns": "\u4e00\u5b9a\u51e0\u7387\u5c04\u51fa\u53cc\u500d\u4f24\u5bb3\u7684\u7bad\u3002",
          "de": "Den Gegner durch einen gezielten Schuss mit dem Bogen schw\u00e4chen. Der Gegner kann doppelten Schaden erleiden.",
          "fi": "Slow shot that has a chance to deal double damage.",
          "fil": "Slow shot that has a chance to deal double damage.",
@@ -39156,9 +40004,10 @@ const skillsjson = [
          "it": "Slow shot that has a chance to deal double damage.",
          "kr": "\uc815\ubc00\ud558\uac8c \ud654\uc0b4\uc744 \uc3f4 \uc801\uc744 \uc57d\ud558\uac8c \ub9cc\ub4ed\ub2c8\ub2e4. \uc774\ub54c \uc801\uc740 \uc77c\uc815 \ud655\ub960\ub85c \ub2e4\uc74c \uacf5\uaca9\uc758 \ub370\ubbf8\uc9c0\ub97c 2\ubc30 \ubc1b\ub294 \uc0c1\ud0dc\uac00 \ub429\ub2c8\ub2e4.",
          "nl": "Slow shot that has a chance to deal double damage.",
-         "pl": "Slow shot that has a chance to deal double damage.",
-         "ru": "\u042d\u0442\u043e\u0442 \u0432\u044b\u0441\u0442\u0440\u0435\u043b \u0442\u0440\u0435\u0431\u0443\u0435\u0442 \u0432\u0440\u0435\u043c\u0435\u043d\u0438 \u043d\u0430 \u043f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u043a\u0443, \u0437\u0430\u0442\u043e \u043d\u0430\u043d\u043e\u0441\u0438\u0442 \u0434\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0443\u0440\u043e\u043d.",
-         "sw": "Slow shot that has a chance to deal double damage."
+         "pl": "Wolny strza\u0142 z szans\u0105 na podw\u00f3jne obra\u017cenia.",
+         "ru": "\u042d\u0442\u043e\u0442 \u0432\u044b\u0441\u0442\u0440\u0435\u043b \u0442\u0440\u0435\u0431\u0443\u0435\u0442 \u0432\u0440\u0435\u043c\u0435\u043d\u0438 \u043d\u0430 \u043f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u043a\u0443, \u0437\u0430\u0442\u043e \u043d\u0430\u043d\u043e\u0441\u0438\u0442 \u0434\u0432\u043e\u0439\u043d\u043e\u0439 \u0443\u0440\u043e\u043d.",
+         "sw": "Slow shot that has a chance to deal double damage.",
+         "th": "Slow shot that has a chance to deal double damage."
       },
       "icon": "acrbowaimeds.png",
       "class": 9098,
@@ -39527,6 +40376,8 @@ const skillsjson = [
       "name": {
          "en": "Sneak Stab",
          "ar": "Sneak Stab",
+         "br": "Golpe Furtivo",
+         "cns": "\u80cc\u540e\u7a81\u88ad",
          "de": "Back Step",
          "fi": "Sneak Stab",
          "fil": "Sneak Stab",
@@ -39536,11 +40387,14 @@ const skillsjson = [
          "nl": "Sneak Stab",
          "pl": "Sneak Stab",
          "ru": "\u0423\u0434\u0430\u0440 \u0432 \u0441\u043f\u0438\u043d\u0443",
-         "sw": "Sneak Stab"
+         "sw": "Sneak Stab",
+         "th": "Sneak Stab"
       },
       "description": {
          "en": "Attack a target from behind. Chance to stun target.",
          "ar": "Attack a target from behind. Chance to stun target.",
+         "br": "Um ataque por tr\u00e1s que possui chance de atordoar o alvo.",
+         "cns": "\u53ea\u80fd\u5728\u5bf9\u65b9\u80cc\u540e\u4f7f\u7528\uff0c\u4e00\u5b9a\u51e0\u7387\u51fb\u6655\u5bf9\u65b9\u3002",
          "de": "Greife einen Gegner von hinten mit einem Yoyo an. Der Gegner kann dabei bet\u00e4ubt werden.",
          "fi": "Attack a target from behind. Chance to stun target.",
          "fil": "Attack a target from behind. Chance to stun target.",
@@ -39550,7 +40404,8 @@ const skillsjson = [
          "nl": "Attack a target from behind. Chance to stun target.",
          "pl": "Attack a target from behind. Chance to stun target.",
          "ru": "\u0423\u0434\u0430\u0440 \u0432 \u0441\u043f\u0438\u043d\u0443, \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u044e\u0449\u0438\u0439 \u043e\u0433\u043b\u0443\u0448\u0438\u0442\u044c \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430.",
-         "sw": "Attack a target from behind. Chance to stun target."
+         "sw": "Attack a target from behind. Chance to stun target.",
+         "th": "Attack a target from behind. Chance to stun target."
       },
       "icon": "jstyoybackst.png",
       "class": 3545,
@@ -39828,6 +40683,8 @@ const skillsjson = [
       "name": {
          "en": "Lightning Storm",
          "ar": "Lightning Storm",
+         "br": "Tempestade de Raios",
+         "cns": "\u98ce\u96f7\u72c2\u88ad",
          "de": "Lightning Storm",
          "fi": "Lightning Storm",
          "fil": "Lightning Storm",
@@ -39835,13 +40692,16 @@ const skillsjson = [
          "it": "Lightning Storm",
          "kr": "\ub77c\uc774\ud2b8\ub2dd\uc2a4\ud1b0",
          "nl": "Lightning Storm",
-         "pl": "Lightning Storm",
+         "pl": "Piorunuj\u0105ca Burza",
          "ru": "\u0413\u0440\u043e\u0437\u043e\u0432\u0430\u044f \u0431\u0443\u0440\u044f",
-         "sw": "Lightning Storm"
+         "sw": "Lightning Storm",
+         "th": "Lightning Storm"
       },
       "description": {
          "en": "Damages surrounding enemies with electric blasts.",
          "ar": "Damages surrounding enemies with electric blasts.",
+         "br": "Causa danos nos inimigos ao redor com explos\u00f5es de eletricidade.",
+         "cns": "\u98ce\u96f7\u805a\u96c6\uff0c\u731b\u70c8\u9707\u8361\u5468\u56f4\u7684\u76ee\u6807\u3002",
          "de": "Allen Gegner mit einem herbeigerufenen elektrischen Sturm Schaden erleiden lassen.",
          "fi": "Damages surrounding enemies with electric blasts.",
          "fil": "Damages surrounding enemies with electric blasts.",
@@ -39849,9 +40709,10 @@ const skillsjson = [
          "it": "Damages surrounding enemies with electric blasts.",
          "kr": "\uc804\uae30\uc7a5\uc744 \uac00\uc9c4 \ub3cc\ud48d\uc73c\ub85c \uc8fc\ubcc0\uc758 \ubaa8\ub4e0 \uc801\ub4e4\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Damages surrounding enemies with electric blasts.",
-         "pl": "Damages surrounding enemies with electric blasts.",
+         "pl": "Atakuje wszystkich wrog\u00f3w wok\u00f3\u0142 ciebie wy\u0142adowaniami atmosferycznymi.",
          "ru": "\u041d\u0430 \u0432\u0440\u0430\u0433\u043e\u0432 \u043e\u0431\u0440\u0443\u0448\u0438\u0432\u0430\u0435\u0442\u0441\u044f \u0433\u0440\u043e\u0437\u043e\u0432\u0430\u044f \u0431\u0443\u0440\u044f, \u043d\u0430\u043d\u043e\u0441\u044f\u0449\u0430\u044f \u0443\u0440\u043e\u043d \u043c\u043e\u043b\u043d\u0438\u044f\u043c\u0438 \u0438 \u0432\u0435\u0442\u0440\u043e\u043c.",
-         "sw": "Damages surrounding enemies with electric blasts."
+         "sw": "Damages surrounding enemies with electric blasts.",
+         "th": "Damages surrounding enemies with electric blasts."
       },
       "icon": "elemullgtstm.png",
       "class": 9150,
@@ -40053,6 +40914,8 @@ const skillsjson = [
       "name": {
          "en": "Hit of Penya",
          "ar": "Hit of Penya",
+         "br": "Impacto de Penya",
+         "cns": "\u4e7e\u5764\u4e00\u63b7",
          "de": "Hit of Penya",
          "fi": "Hit of Penya",
          "fil": "Hit of Penya",
@@ -40061,12 +40924,15 @@ const skillsjson = [
          "kr": "\ud788\ud2b8 \uc624\ube0c \ud398\ub0d0",
          "nl": "Hit of Penya",
          "pl": "Hit of Penya",
-         "ru": "\u0423\u0434\u0430\u0440 \u043d\u0430 \u043f\u0435\u043d\u043d\u0438",
-         "sw": "Hit of Penya"
+         "ru": "\u0423\u0434\u0430\u0440 \u043f\u0435\u043d\u043d\u0438",
+         "sw": "Hit of Penya",
+         "th": "Hit of Penya"
       },
       "description": {
          "en": "Strengthens the attack of a yo-yo by consuming penya.",
          "ar": "Strengthens the attack of a yo-yo by consuming penya.",
+         "br": "Um poderoso ataque com seu Ioi\u00f4 que consome penya no processo.",
+         "cns": "\u65e0\u89c6\u9632\u5fa1\u5730\u653b\u51fb\u5bf9\u65b9\uff0c\u9020\u6210\u4f24\u5bb3\u8d8a\u5927\u635f\u5931\u7684\u91d1\u5e01\u4e5f\u8d8a\u591a\u3002",
          "de": "Einen Angriff mit Penya auf den Gegner starten, durch das Benutzen der Yoyos. Deine Penya werden dabei verbraucht.",
          "fi": "Strengthens the attack of a yo-yo by consuming penya.",
          "fil": "Strengthens the attack of a yo-yo by consuming penya.",
@@ -40076,7 +40942,8 @@ const skillsjson = [
          "nl": "Strengthens the attack of a yo-yo by consuming penya.",
          "pl": "Strengthens the attack of a yo-yo by consuming penya.",
          "ru": "\u0421\u0438\u043b\u044c\u043d\u044b\u0439 \u0443\u0434\u0430\u0440 \u0439\u043e-\u0439\u043e. \u0420\u0430\u0441\u0445\u043e\u0434\u0443\u0435\u0442 \u043f\u0435\u043d\u043d\u0438.",
-         "sw": "Strengthens the attack of a yo-yo by consuming penya."
+         "sw": "Strengthens the attack of a yo-yo by consuming penya.",
+         "th": "Strengthens the attack of a yo-yo by consuming penya."
       },
       "icon": "jstyoypenya.png",
       "class": 3545,
@@ -40254,20 +41121,25 @@ const skillsjson = [
       "name": {
          "en": "Psychic Bomb",
          "ar": "Psychic Bomb",
+         "br": "Bomba Ps\u00edquica",
+         "cns": "\u7075\u5ff5\u5f39",
          "de": "Psychic Bomb",
          "fi": "Psychic Bomb",
          "fil": "Psychic Bomb",
          "fr": "Bombe psychique",
          "it": "Psychic Bomb",
          "kr": "\uc0ac\uc774\ud0a5 \ubd04",
-         "nl": "Psychic Bomb",
-         "pl": "Psychic Bomb",
+         "nl": "Psychische Bom",
+         "pl": "Psychiczna Bomba",
          "ru": "\u041f\u0441\u0438-\u0432\u0437\u0440\u044b\u0432",
-         "sw": "Psychic Bomb"
+         "sw": "Psychic Bomb",
+         "th": "Psychic Bomb"
       },
       "description": {
          "en": "Damages the enemy with a ball of mental energy.",
          "ar": "Damages the enemy with a ball of mental energy.",
+         "br": "Causa dano ao inimigo com uma bola de energia mental.",
+         "cns": "\u51dd\u805a\u7cbe\u795e\u529b\u5c06\u5176\u7206\u53d1\u51fa\u6765\uff0c\u731b\u70c8\u5730\u653b\u51fb\u5bf9\u65b9\uff0c\u4e00\u5b9a\u51e0\u7387\u5c06\u5bf9\u65b9\u51fb\u6655\u3002",
          "de": "Dem Gegner durch das Explodieren einer geistigen Bombe Schaden zuf\u00fcgen.",
          "fi": "Damages the enemy with a ball of mental energy.",
          "fil": "Damages the enemy with a ball of mental energy.",
@@ -40275,9 +41147,10 @@ const skillsjson = [
          "it": "Damages the enemy with a ball of mental energy.",
          "kr": "\uc815\uc2e0\ub825\uc744 \ud30c\uad34\uc758 \ud798\uc73c\ub85c \ud3ed\ubc1c\uc2dc\ucf1c \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Damages the enemy with a ball of mental energy.",
-         "pl": "Damages the enemy with a ball of mental energy.",
+         "pl": "Wywo\u0142uje pot\u0119\u017cny wybuch psychicznej energii, kt\u00f3ry mo\u017ce og\u0142uszy\u0107 cel.",
          "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0437\u043d\u0430\u0447\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0443\u0440\u043e\u043d \u043f\u0441\u0438-\u044d\u043d\u0435\u0440\u0433\u0438\u0435\u0439.",
-         "sw": "Damages the enemy with a ball of mental energy."
+         "sw": "Damages the enemy with a ball of mental energy.",
+         "th": "Damages the enemy with a ball of mental energy."
       },
       "icon": "psypsybomb.png",
       "class": 5709,
@@ -40565,20 +41438,25 @@ const skillsjson = [
       "name": {
          "en": "Krrr's poison",
          "ar": "Krrr's poison",
+         "br": "Veneno de Krrr",
+         "cns": "\u9b54\u97f3\u4f20\u8111",
          "de": "Krrrs Poison",
          "fi": "Krrr's poison",
          "fil": "Krrr's poison",
          "fr": "Poison de Krrr",
          "it": "Krrr's poison",
          "kr": "\ud06c\ub974\ub989\uc758 \ub3c5",
-         "nl": "Krrr's poison",
+         "nl": "Krrr's vergif",
          "pl": "Krrr's poison",
          "ru": "\u042f\u0434 \u041a\u0440-\u0440\u0430",
-         "sw": "Krrr's poison"
+         "sw": "Krrr's poison",
+         "th": "Krrr's poison"
       },
       "description": {
          "en": "Damages an enemy over a period of time.",
          "ar": "Damages an enemy over a period of time.",
+         "br": "Causa dano por um per\u00edodo de tempo limitado.",
+         "cns": "\u65bd\u653e\u540e\u4f7f\u76ee\u6807\u4e00\u5b9a\u65f6\u95f4\u5185\u53d7\u5230\u6301\u7eed\u7684\u6bd2\u4f24\u5bb3\u3002",
          "de": "Den Gegner kontinuierlich durch Blutung f\u00fcr eine bestimmte Zeit Schaden zuf\u00fcgen.",
          "fi": "Damages an enemy over a period of time.",
          "fil": "Damages an enemy over a period of time.",
@@ -40588,7 +41466,8 @@ const skillsjson = [
          "nl": "Damages an enemy over a period of time.",
          "pl": "Damages an enemy over a period of time.",
          "ru": "\u0412\u044b \u043f\u043e\u043b\u0443\u0447\u0430\u0435\u0442\u0435 \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u044b\u0439 \u0443\u0440\u043e\u043d.",
-         "sw": "Damages an enemy over a period of time."
+         "sw": "Damages an enemy over a period of time.",
+         "th": "Damages an enemy over a period of time."
       },
       "icon": "jstintpoison.png",
       "level": 1,
@@ -40621,6 +41500,8 @@ const skillsjson = [
       "name": {
          "en": "Hawk Attack",
          "ar": "Hawk Attack",
+         "br": "Ataque do Falc\u00e3o",
+         "cns": "\u591c\u5e55\u964d\u4e34",
          "de": "Hawk Attack",
          "fi": "Hawk Attack",
          "fil": "Hawk Attack",
@@ -40628,23 +41509,27 @@ const skillsjson = [
          "it": "Hawk Attack",
          "kr": "\ud638\ud06c \uc5b4\ud0dd",
          "nl": "Hawk Attack",
-         "pl": "Hawk Attack",
+         "pl": "Atak Jastrz\u0119bia",
          "ru": "\u0423\u0434\u0430\u0440 \u044f\u0441\u0442\u0440\u0435\u0431\u0430",
-         "sw": "Hawk Attack"
+         "sw": "Hawk Attack",
+         "th": "Hawk Attack"
       },
       "description": {
-         "en": "Powerful, downward strike. Small chance to stun the target. Requires two axes.",
-         "ar": "Powerful, downward strike. Small chance to stun the target. Requires two axes.",
-         "de": "Powerful, downward strike. Small chance to stun the target. Requires two axes.",
-         "fi": "Powerful, downward strike. Small chance to stun the target. Requires two axes.",
-         "fil": "Powerful, downward strike. Small chance to stun the target. Requires two axes.",
-         "fr": "Powerful, downward strike. Small chance to stun the target. Requires two axes.",
-         "it": "Powerful, downward strike. Small chance to stun the target. Requires two axes.",
-         "kr": "Powerful, downward strike. Small chance to stun the target. Requires two axes.",
-         "nl": "Powerful, downward strike. Small chance to stun the target. Requires two axes.",
-         "pl": "Powerful, downward strike. Small chance to stun the target. Requires two axes.",
-         "ru": "Powerful, downward strike. Small chance to stun the target. Requires two axes.",
-         "sw": "Powerful, downward strike. Small chance to stun the target. Requires two axes."
+         "en": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
+         "ar": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
+         "br": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
+         "cns": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
+         "de": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
+         "fi": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
+         "fil": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
+         "fr": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
+         "it": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
+         "kr": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
+         "nl": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
+         "pl": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
+         "ru": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
+         "sw": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
+         "th": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand."
       },
       "icon": "blddaxhawatt.png",
       "class": 2246,
@@ -40668,16 +41553,17 @@ const skillsjson = [
          {
             "minAttack": 120,
             "maxAttack": 121,
-            "probability": 5,
-            "probabilityPVP": 5,
-            "consumedFP": 56,
+            "probability": 25,
+            "probabilityPVP": 20,
+            "consumedFP": 40,
+            "cooldown": 10,
             "casting": 1.25,
-            "duration": 15,
-            "durationPVP": 15,
+            "duration": 4,
+            "durationPVP": 4,
             "abilities": [
                {
                   "parameter": "attribute",
-                  "attribute": "stun"
+                  "attribute": "hitrate"
                }
             ],
             "scalingParameters": [
@@ -40693,16 +41579,17 @@ const skillsjson = [
          {
             "minAttack": 121,
             "maxAttack": 122,
-            "probability": 5,
-            "probabilityPVP": 5,
-            "consumedFP": 59,
+            "probability": 30,
+            "probabilityPVP": 25,
+            "consumedFP": 42,
+            "cooldown": 10,
             "casting": 1.25,
-            "duration": 15,
-            "durationPVP": 15,
+            "duration": 4.2,
+            "durationPVP": 4.2,
             "abilities": [
                {
                   "parameter": "attribute",
-                  "attribute": "stun"
+                  "attribute": "hitrate"
                }
             ],
             "scalingParameters": [
@@ -40718,16 +41605,17 @@ const skillsjson = [
          {
             "minAttack": 122,
             "maxAttack": 123,
-            "probability": 5,
-            "probabilityPVP": 5,
-            "consumedFP": 62,
+            "probability": 35,
+            "probabilityPVP": 30,
+            "consumedFP": 44,
+            "cooldown": 10,
             "casting": 1.25,
-            "duration": 15,
-            "durationPVP": 15,
+            "duration": 4.3,
+            "durationPVP": 4.3,
             "abilities": [
                {
                   "parameter": "attribute",
-                  "attribute": "stun"
+                  "attribute": "hitrate"
                }
             ],
             "scalingParameters": [
@@ -40743,16 +41631,17 @@ const skillsjson = [
          {
             "minAttack": 123,
             "maxAttack": 124,
-            "probability": 10,
-            "probabilityPVP": 5,
-            "consumedFP": 65,
+            "probability": 40,
+            "probabilityPVP": 35,
+            "consumedFP": 46,
+            "cooldown": 10,
             "casting": 1.25,
-            "duration": 15,
-            "durationPVP": 15,
+            "duration": 4.4,
+            "durationPVP": 4.4,
             "abilities": [
                {
                   "parameter": "attribute",
-                  "attribute": "stun"
+                  "attribute": "hitrate"
                }
             ],
             "scalingParameters": [
@@ -40768,16 +41657,17 @@ const skillsjson = [
          {
             "minAttack": 124,
             "maxAttack": 125,
-            "probability": 15,
-            "probabilityPVP": 7,
-            "consumedFP": 68,
+            "probability": 50,
+            "probabilityPVP": 40,
+            "consumedFP": 48,
+            "cooldown": 10,
             "casting": 1.25,
-            "duration": 15,
-            "durationPVP": 15,
+            "duration": 4.5,
+            "durationPVP": 4.5,
             "abilities": [
                {
                   "parameter": "attribute",
-                  "attribute": "stun"
+                  "attribute": "hitrate"
                }
             ],
             "scalingParameters": [
@@ -40793,16 +41683,17 @@ const skillsjson = [
          {
             "minAttack": 125,
             "maxAttack": 126,
-            "probability": 20,
-            "probabilityPVP": 10,
-            "consumedFP": 71,
+            "probability": 60,
+            "probabilityPVP": 50,
+            "consumedFP": 50,
+            "cooldown": 10,
             "casting": 1.25,
-            "duration": 15,
-            "durationPVP": 15,
+            "duration": 4.6,
+            "durationPVP": 4.6,
             "abilities": [
                {
                   "parameter": "attribute",
-                  "attribute": "stun"
+                  "attribute": "hitrate"
                }
             ],
             "scalingParameters": [
@@ -40818,16 +41709,17 @@ const skillsjson = [
          {
             "minAttack": 126,
             "maxAttack": 127,
-            "probability": 25,
-            "probabilityPVP": 13,
-            "consumedFP": 74,
+            "probability": 70,
+            "probabilityPVP": 60,
+            "consumedFP": 52,
+            "cooldown": 10,
             "casting": 1.25,
-            "duration": 15,
-            "durationPVP": 15,
+            "duration": 4.7,
+            "durationPVP": 4.7,
             "abilities": [
                {
                   "parameter": "attribute",
-                  "attribute": "stun"
+                  "attribute": "hitrate"
                }
             ],
             "scalingParameters": [
@@ -40843,16 +41735,17 @@ const skillsjson = [
          {
             "minAttack": 127,
             "maxAttack": 128,
-            "probability": 30,
-            "probabilityPVP": 15,
-            "consumedFP": 77,
+            "probability": 80,
+            "probabilityPVP": 70,
+            "consumedFP": 54,
+            "cooldown": 10,
             "casting": 1.25,
-            "duration": 15,
-            "durationPVP": 15,
+            "duration": 4.8,
+            "durationPVP": 4.8,
             "abilities": [
                {
                   "parameter": "attribute",
-                  "attribute": "stun"
+                  "attribute": "hitrate"
                }
             ],
             "scalingParameters": [
@@ -40868,16 +41761,17 @@ const skillsjson = [
          {
             "minAttack": 128,
             "maxAttack": 129,
-            "probability": 35,
-            "probabilityPVP": 18,
-            "consumedFP": 80,
+            "probability": 90,
+            "probabilityPVP": 80,
+            "consumedFP": 56,
+            "cooldown": 9,
             "casting": 1.25,
-            "duration": 15,
-            "durationPVP": 15,
+            "duration": 4.9,
+            "durationPVP": 4.9,
             "abilities": [
                {
                   "parameter": "attribute",
-                  "attribute": "stun"
+                  "attribute": "hitrate"
                }
             ],
             "scalingParameters": [
@@ -40893,16 +41787,15 @@ const skillsjson = [
          {
             "minAttack": 129,
             "maxAttack": 130,
-            "probability": 40,
-            "probabilityPVP": 20,
-            "consumedFP": 83,
+            "consumedFP": 58,
+            "cooldown": 8,
             "casting": 1.25,
-            "duration": 15,
-            "durationPVP": 15,
+            "duration": 5,
+            "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "attribute",
-                  "attribute": "stun"
+                  "attribute": "hitrate"
                }
             ],
             "scalingParameters": [
@@ -40922,20 +41815,25 @@ const skillsjson = [
       "name": {
          "en": "Bleeding",
          "ar": "Bleeding",
+         "br": "Sangramento",
+         "cns": "\u51fa\u88402",
          "de": "Bleeding",
          "fi": "Bleeding",
          "fil": "Bleeding",
          "fr": "Saigner \u00e0 blanc",
          "it": "Bleeding",
          "kr": "\ucd9c\ud608",
-         "nl": "Bleeding",
+         "nl": "Bloeden",
          "pl": "Bleeding",
          "ru": "\u041a\u0440\u043e\u0432\u043e\u0442\u0435\u0447\u0435\u043d\u0438\u0435",
-         "sw": "Bleeding"
+         "sw": "Bleeding",
+         "th": "Bleeding"
       },
       "description": {
          "en": "Damages an enemy over a period of time.",
          "ar": "Damages an enemy over a period of time.",
+         "br": "Damages an enemy over a period of time.",
+         "cns": "Damages an enemy over a period of time.",
          "de": "Damages an enemy over a period of time.",
          "fi": "Damages an enemy over a period of time.",
          "fil": "Damages an enemy over a period of time.",
@@ -40945,9 +41843,10 @@ const skillsjson = [
          "nl": "Damages an enemy over a period of time.",
          "pl": "Damages an enemy over a period of time.",
          "ru": "Damages an enemy over a period of time.",
-         "sw": "Damages an enemy over a period of time."
+         "sw": "Damages an enemy over a period of time.",
+         "th": "Damages an enemy over a period of time."
       },
-      "icon": "elefirbunfil.png",
+      "icon": "bilbloodfist.png",
       "level": 1,
       "element": "none",
       "magic": false,
@@ -41095,6 +41994,8 @@ const skillsjson = [
       "name": {
          "en": "Blinkpool",
          "ar": "Blinkpool",
+         "br": "Blinkpool",
+         "cns": "\u7a7a\u95f4\u8f6c\u6362",
          "de": "Blinkpool",
          "fi": "Blinkpool",
          "fil": "Blinkpool",
@@ -41102,13 +42003,16 @@ const skillsjson = [
          "it": "Blinkpool",
          "kr": "\ube14\ub9c1\ud06c\ud480",
          "nl": "Blinkpool",
-         "pl": "Blinkpool",
+         "pl": "Teleportacja",
          "ru": "\u0411\u043b\u0438\u043a",
-         "sw": "Blinkpool"
+         "sw": "Blinkpool",
+         "th": "Blinkpool"
       },
       "description": {
          "en": "Allows you to teleport.",
          "ar": "Allows you to teleport.",
+         "br": "Permite que voc\u00ea teleporte uma curta dist\u00e2ncia.",
+         "cns": "\u8fdb\u884c\u77ed\u8ddd\u79bb\u4f20\u9001\u3002",
          "de": "Sich durch die Magie bewegen.",
          "fi": "Sallii sinun teleportata.",
          "fil": "Allows you to teleport.",
@@ -41116,9 +42020,10 @@ const skillsjson = [
          "it": "Allows you to teleport.",
          "kr": "\ub9c8\uc220\ub85c \uc5f7\uc740 \ubc14\ub78c\uad6c\uba4d\uc744 \uadfc\uc811\ud55c \uacf3\uc5d0 \ub6ab\uc5b4 \uc21c\uac04\uc801\uc73c\ub85c \uc774\ub3d9\ud569\ub2c8\ub2e4.",
          "nl": "Allows you to teleport.",
-         "pl": "Allows you to teleport.",
+         "pl": "Przenosi Ci\u0119 na wybrane przez ciebie miejsce.",
          "ru": "\u041f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u043c\u0433\u043d\u043e\u0432\u0435\u043d\u043d\u043e \u043f\u0435\u0440\u0435\u043d\u0435\u0441\u0442\u0438\u0441\u044c \u0432 \u0432\u044b\u0431\u0440\u0430\u043d\u043d\u043e\u0435 \u043c\u0435\u0441\u0442\u043e \u0432 \u043f\u0440\u0435\u0434\u0435\u043b\u0430\u0445 \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u043d\u043e\u0433\u043e \u0440\u0430\u0434\u0438\u0443\u0441\u0430.",
-         "sw": "Allows you to teleport."
+         "sw": "Allows you to teleport.",
+         "th": "Allows you to teleport."
       },
       "icon": "magmagblinkp.png",
       "class": 9581,
@@ -41246,30 +42151,36 @@ const skillsjson = [
       "name": {
          "en": "Dark Illusion",
          "ar": "Dark Illusion",
+         "br": "Ilus\u00e3o das Trevas",
+         "cns": "\u6f5c\u884c",
          "de": "Dark Illusion",
          "fi": "Dark Illusion",
          "fil": "Dark Illusion",
          "fr": "Illusion des t\u00e9n\u00e8bres",
          "it": "Dark Illusion",
          "kr": "\ub2e4\ud06c\uc77c\ub8e8\uc83c",
-         "nl": "Dark Illusion",
-         "pl": "Dark Illusion",
+         "nl": "Duistere Illusie",
+         "pl": "Mroczna Iluzja",
          "ru": "\u0418\u043b\u043b\u044e\u0437\u0438\u044f \u043f\u0443\u0441\u0442\u043e\u0442\u044b",
-         "sw": "Dark Illusion"
+         "sw": "Dark Illusion",
+         "th": "Dark Illusion"
       },
       "description": {
          "en": "Become Invisible for a short time.",
          "ar": "Become Invisible for a short time.",
+         "br": "Torna-se invis\u00edvel por pouco tempo.",
+         "cns": "\u6682\u65f6\u8fdb\u5165\u9690\u8eab\u72b6\u6001\u3002",
          "de": "Verstecke deine Anwesenheit in der Dunkelheit.",
          "fi": "Become Invisible for a short time.",
          "fil": "Become Invisible for a short time.",
          "fr": "Projette une illusion, permettant de se rendre temporairement invisible aux yeux de l'ennemi jusqu'\u00e0 la prochaine attaque",
          "it": "Become Invisible for a short time.",
          "kr": "\uadf8\ub9bc\uc790 \uc18d\uc73c\ub85c \uc228\uc5b4 \uc790\uc2e0\uc758 \ud615\uccb4\ub97c \uac10\ucda5\ub2c8\ub2e4.",
-         "nl": "Become Invisible for a short time.",
-         "pl": "Become Invisible for a short time.",
+         "nl": "Wordt onzichtbaar voor een korte tijd. ",
+         "pl": "Na moment daje Ci pe\u0142n\u0105 niewidzialno\u015b\u0107.",
          "ru": "\u041f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u043d\u0430 \u043a\u043e\u0440\u043e\u0442\u043a\u043e\u0435 \u0432\u0440\u0435\u043c\u044f \u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c\u0441\u044f \u043d\u0435\u0432\u0438\u0434\u0438\u043c\u044b\u043c.",
-         "sw": "Become Invisible for a short time."
+         "sw": "Become Invisible for a short time.",
+         "th": "Become Invisible for a short time."
       },
       "icon": "acrsupillusi.png",
       "class": 9098,
@@ -41537,6 +42448,8 @@ const skillsjson = [
       "name": {
          "en": "Heal Rain",
          "ar": "Heal Rain",
+         "br": "Chuva de Cura",
+         "cns": "\u751f\u547d\u795d\u798f",
          "de": "Heal Rain",
          "fi": "Heal Rain",
          "fil": "Heal Rain",
@@ -41544,13 +42457,16 @@ const skillsjson = [
          "it": "Heal Rain",
          "kr": "\ud790 \ub808\uc778",
          "nl": "Heal Rain",
-         "pl": "Heal Rain",
+         "pl": "Deszcz Leczenia",
          "ru": "\u0418\u0441\u0446\u0435\u043b\u044f\u044e\u0449\u0438\u0439 \u043b\u0438\u0432\u0435\u043d\u044c",
-         "sw": "Heal Rain"
+         "sw": "Heal Rain",
+         "th": "Heal Rain"
       },
       "description": {
          "en": "Recovers HP for party members near you.",
          "ar": "Recovers HP for party members near you.",
+         "br": "Restaura a vida (HP) dos seus membros de grupo que est\u00e3o pr\u00f3ximos a voc\u00ea.",
+         "cns": "\u5927\u91cf\u6062\u590d\u9644\u8fd1\u540c\u4f34\u7684\u751f\u547d\u503c\u3002",
          "de": "Stellt eine Menge HP von Partymitgliedern in deiner N\u00e4he wieder her.",
          "fi": "Palauttaa l\u00e4hell\u00e4 olevien ryhm\u00e4n j\u00e4senien HPta.",
          "fil": "Recovers HP for party members near you.",
@@ -41558,9 +42474,10 @@ const skillsjson = [
          "it": "Recovers HP for party members near you.",
          "kr": "\uac00\uae4c\uc774 \uc788\ub294 \uadf9\ub2e8\uc6d0\ub4e4\uc758 HP\ub97c \ub300\ub7c9 \ud68c\ubcf5\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Recovers HP for party members near you.",
-         "pl": "Recovers HP for party members near you.",
+         "pl": "Leczy olbrzymie ilo\u015bci HP u wszystkich cz\u0142onk\u00f3w dru\u017cyny wok\u00f3\u0142 ciebie.",
          "ru": "\u0412\u043e\u0441\u0441\u0442\u0430\u043d\u0430\u0432\u043b\u0438\u0432\u0430\u0435\u0442 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u0435 \u043d\u0430\u0445\u043e\u0434\u044f\u0449\u0438\u0445\u0441\u044f \u0440\u044f\u0434\u043e\u043c \u0438\u0433\u0440\u043e\u043a\u043e\u0432 \u0442\u0440\u0443\u043f\u043f\u044b.",
-         "sw": "Recovers HP for party members near you."
+         "sw": "Recovers HP for party members near you.",
+         "th": "Recovers HP for party members near you."
       },
       "icon": "rinheahealra.png",
       "class": 9389,
@@ -41798,6 +42715,8 @@ const skillsjson = [
       "name": {
          "en": "Slow Step",
          "ar": "Slow Step",
+         "br": "Lentid\u00e3o",
+         "cns": "\u8fdf\u7f13\u672f",
          "de": "Slow Step",
          "fi": "Slow Step",
          "fil": "Slow Step",
@@ -41805,23 +42724,27 @@ const skillsjson = [
          "it": "Slow Step",
          "kr": "\uc2ac\ub85c\uc6b0 \uc2a4\ud15d",
          "nl": "Slow Step",
-         "pl": "Slow Step",
+         "pl": "Wolny Krok",
          "ru": "\u0417\u0430\u043c\u0435\u0434\u043b\u0435\u043d\u0438\u0435",
-         "sw": "Slow Step"
+         "sw": "Slow Step",
+         "th": "Slow Step"
       },
       "description": {
          "en": "Slows an enemy",
          "ar": "Slows an enemy",
+         "br": "Um ataque com o ioi\u00f4 que deixa o inimigo lento.",
+         "cns": "\u7528\u98de\u8f6e\u653b\u51fb\u654c\u4eba\u7684\u817f\u90e8\uff0c\u51cf\u7f13\u5bf9\u65b9\u7684\u79fb\u52a8\u901f\u5ea6\u3002",
          "de": "Das Bein des Gegners Angreifen, um ihn zu verlangsamen.",
          "fi": "Slows an enemy",
          "fil": "Slows an enemy",
          "fr": "Attaque de faible puissance au yo-yo mais qui a une chance d'anesth\u00e9sier l'ennemi, ralentissant ainsi ses d\u00e9placements",
          "it": "Slows an enemy",
          "kr": "\uc801\uc758 \uc6c0\uc9c1\uc784\uc774 \ub290\ub824\uc9c0\ub3c4\ub85d \uc694\uc694\ub85c \ud558\uccb4\ub97c \uacf5\uaca9\ud569\ub2c8\ub2e4.",
-         "nl": "Slows an enemy",
-         "pl": "Slows an enemy",
+         "nl": "Vertraagt een vijand",
+         "pl": "Atakuje nogi wroga i spowalnia go.",
          "ru": "\u0417\u0430\u043c\u0435\u0434\u043b\u044f\u0435\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430.",
-         "sw": "Slows an enemy"
+         "sw": "Slows an enemy",
+         "th": "Slows an enemy"
       },
       "icon": "acryoyslowst.png",
       "class": 9098,
@@ -42424,6 +43347,8 @@ const skillsjson = [
       "name": {
          "en": "Pain Reflection",
          "ar": "\u0639\u0627\u0643\u0633 \u0627\u0644\u0623\u0644\u0645",
+         "br": "Reflexo da Dor",
+         "cns": "\u53cd\u51fb\u98ce\u66b4",
          "de": "Pain Reflection",
          "fi": "Pain Reflection",
          "fil": "Pain Reflection",
@@ -42431,13 +43356,16 @@ const skillsjson = [
          "it": "Rinvio doloroso",
          "kr": "\ud398\uc778 \ub9ac\ud50c\ub809\uc158",
          "nl": "Pain Reflection",
-         "pl": "Pain Reflection",
+         "pl": "Odbicie B\u00f3lu",
          "ru": "\u041e\u0442\u0440\u0430\u0436\u0435\u043d\u0438\u0435 \u0431\u043e\u043b\u0438",
-         "sw": "Pain Reflection"
+         "sw": "Pain Reflection",
+         "th": "Pain Reflection"
       },
       "description": {
          "en": "Reflects a part of the damage received by an enemy.",
          "ar": "Reflects a part of the damage received by an enemy.",
+         "br": "Reflete parte do dano recebido de volta para o inimigo.",
+         "cns": "\u4ee5\u6d69\u7136\u6b63\u6c14\u5b88\u62a4\u5fc3\u5fd7\uff0c\u628a\u53d7\u5230\u7684\u90e8\u5206\u4f24\u5bb3\u8fd4\u8fd8\u7ed9\u5bf9\u65b9\u3002",
          "de": "Reflektiert einen Teil des Schadens, welcher dir vom Gegner zuf\u00fcgt wird.",
          "fi": "Peilaa osan viholliselta saadusta osumasta.",
          "fil": "Reflects a part of the damage received by an enemy.",
@@ -42445,9 +43373,10 @@ const skillsjson = [
          "it": "Rinvia une parte dei danni subito dall'avversario.",
          "kr": "\uc801\uc774 \uc790\uc2e0\uc744 \uacf5\uaca9\ud560 \ub54c \ubc1b\uc740 \ucda9\uaca9\uc758 \uc77c\ubd80\ub97c \uc801\uc5d0\uac8c \ubc18\uc0ac\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Reflects a part of the damage received by an enemy.",
-         "pl": "Reflects a part of the damage received by an enemy.",
+         "pl": "Pasywnie zadaje atakuj\u0105cym wrogom cz\u0119\u015b\u0107 zadanych przez nich obra\u017ce\u0144.",
          "ru": "\u0427\u0430\u0441\u0442\u0438\u0447\u043d\u043e \u043e\u0442\u0440\u0430\u0436\u0430\u0435\u0442 \u0430\u0442\u0430\u043a\u0443, \u043d\u0430\u043d\u043e\u0441\u044f \u0443\u0440\u043e\u043d \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443.",
-         "sw": "Reflects a part of the damage received by an enemy."
+         "sw": "Reflects a part of the damage received by an enemy.",
+         "th": "Reflects a part of the damage received by an enemy."
       },
       "icon": "kntsuppairef.png",
       "class": 5330,
@@ -42694,20 +43623,25 @@ const skillsjson = [
       "name": {
          "en": "Wind Master",
          "ar": "Wind Master",
+         "br": "Mestre do Vento",
+         "cns": "\u98ce\u7cfb\u4fee\u70bc",
          "de": "Wind Master",
          "fi": "Wind Master",
          "fil": "Wind Master",
          "fr": "Ma\u00eetre du vent",
          "it": "Wind Master",
          "kr": "\uc708\ub4dc \ub9c8\uc2a4\ud130",
-         "nl": "Wind Master",
-         "pl": "Wind Master",
+         "nl": "Windmeester",
+         "pl": "Mistrz Wiatru",
          "ru": "\u0412\u043b\u0430\u0441\u0442\u0435\u043b\u0438\u043d \u0432\u0435\u0442\u0440\u0430",
-         "sw": "Wind Master"
+         "sw": "Wind Master",
+         "th": "Wind Master"
       },
       "description": {
          "en": "Increases the striking power of wind spells.",
          "ar": "Increases the striking power of wind spells.",
+         "br": "Aumenta o poder das magias de Ar.",
+         "cns": "\u63d0\u9ad8\u98ce\u7cfb\u9b54\u6cd5\u653b\u51fb\u529b\u3002",
          "de": "Erh\u00f6hen der Angriffst\u00e4rke von Magie mit Wind Attributen.",
          "fi": "Increases the striking power of wind spells.",
          "fil": "Increases the striking power of wind spells.",
@@ -42715,9 +43649,10 @@ const skillsjson = [
          "it": "Increases the striking power of wind spells.",
          "kr": "\uc708\ub4dc \uc18d\uc131 \ub9c8\ubc95\uc758 \uacf5\uaca9\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increases the striking power of wind spells.",
-         "pl": "Increases the striking power of wind spells.",
+         "pl": "Zwi\u0119ksza si\u0142\u0119 Czar\u00f3w Wiatru.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u0438\u043b\u0443 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439 \u0441\u0442\u0438\u0445\u0438\u0438 \u0432\u0435\u0442\u0440\u0430.",
-         "sw": "Increases the striking power of wind spells."
+         "sw": "Increases the striking power of wind spells.",
+         "th": "Increases the striking power of wind spells."
       },
       "icon": "elewinwinmst.png",
       "class": 9150,
@@ -42875,20 +43810,25 @@ const skillsjson = [
       "name": {
          "en": "Steal HP",
          "ar": "Steal HP",
+         "br": "Roubar HP",
+         "cns": "\u5438\u8840",
          "de": "Steal HP",
          "fi": "Steal HP",
          "fil": "Steal HP",
          "fr": "Siphon de vie",
          "it": "Steal HP",
          "kr": "\ud761\ud608",
-         "nl": "Steal HP",
+         "nl": "HP stelen",
          "pl": "Steal HP",
          "ru": "\u041a\u0440\u0430\u0436\u0430 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f",
-         "sw": "Steal HP"
+         "sw": "Steal HP",
+         "th": "Steal HP"
       },
       "description": {
          "en": "Drains life from an enemy.",
          "ar": "\u062a\u0633\u062a\u0646\u0632\u0641 \u0627\u0644\u062d\u064a\u0627\u0629 \u0645\u0646 \u0627\u0644\u062e\u0635\u0645.",
+         "br": "Drena a vida de um inimigo.",
+         "cns": "\u5438\u53d6\u5bf9\u65b9\u7684\u751f\u547d\u3002",
          "de": "Vom Feind Lebensenergie absaugen.",
          "fi": "Imee vihollisesta elinvoiman.",
          "fil": "Drains life from an enemy.",
@@ -42896,9 +43836,10 @@ const skillsjson = [
          "it": "Succhia i punti ferita dell'avversario.",
          "kr": "\ub300\uc0c1\uc758 \uc0dd\uba85\ub825\uc744 \ud761\uc218\ud569\ub2c8\ub2e4.",
          "nl": "Drains life from an enemy.",
-         "pl": "Drains life from an enemy.",
-         "ru": "\u0416\u0438\u0437\u043d\u044c \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u043e \u043f\u043e\u043a\u0438\u0434\u0430\u0435\u0442 \u0432\u0430\u0441.",
-         "sw": "Drains life from an enemy."
+         "pl": "Tnie przeciwnika i kradnie jego si\u0142\u0119 \u017cyciow\u0105 z rany.",
+         "ru": "\u0412\u044b\u0441\u0430\u0441\u044b\u0432\u0430\u0435\u0442 \u0436\u0438\u0437\u043d\u044c \u0438\u0437 \u0432\u0440\u0430\u0433\u0430.",
+         "sw": "Drains life from an enemy.",
+         "th": "Drains life from an enemy."
       },
       "icon": "magspekestone.png",
       "level": 1,
@@ -43008,20 +43949,25 @@ const skillsjson = [
       "name": {
          "en": "Stun",
          "ar": "Stun",
+         "br": "Atordoamento",
+         "cns": "\u6655\u7729",
          "de": "Stun",
          "fi": "Stun",
          "fil": "Stun",
          "fr": "Etourdissement",
          "it": "Stun",
          "kr": "\uae30\uc808",
-         "nl": "Stun",
+         "nl": "Verdoven",
          "pl": "Stun",
          "ru": "\u041e\u0433\u043b\u0443\u0448\u0435\u043d\u0438\u0435",
-         "sw": "Stun"
+         "sw": "Stun",
+         "th": "Stun"
       },
       "description": {
          "en": "You are stunned and cannot move.",
          "ar": "You are stunned and cannot move.",
+         "br": "You are stunned and cannot move.",
+         "cns": "You are stunned and cannot move.",
          "de": "You are stunned and cannot move.",
          "fi": "You are stunned and cannot move.",
          "fil": "You are stunned and cannot move.",
@@ -43031,7 +43977,8 @@ const skillsjson = [
          "nl": "You are stunned and cannot move.",
          "pl": "You are stunned and cannot move.",
          "ru": "You are stunned and cannot move.",
-         "sw": "You are stunned and cannot move."
+         "sw": "You are stunned and cannot move.",
+         "th": "You are stunned and cannot move."
       },
       "icon": "magspekestone.png",
       "level": 1,
@@ -43251,6 +44198,8 @@ const skillsjson = [
       "name": {
          "en": "Heap Up",
          "ar": "Heap Up",
+         "br": "Rigor",
+         "cns": "\u5f3a\u8eab\u672f",
          "de": "Heap Up",
          "fi": "Heap Up",
          "fil": "Heap Up",
@@ -43258,13 +44207,16 @@ const skillsjson = [
          "it": "Heap Up",
          "kr": "\ud799\uc5c5",
          "nl": "Heap Up",
-         "pl": "Heap Up",
+         "pl": "Napakowanie",
          "ru": "\u0422\u044f\u0436\u0435\u043b\u043e\u0432\u0435\u0441",
-         "sw": "Heap Up"
+         "sw": "Heap Up",
+         "th": "Heap Up"
       },
       "description": {
          "en": "Increases the physical strength of the target.",
          "ar": "Increases the physical strength of the target.",
+         "br": "Aumenta a resist\u00eancia f\u00edsica e a quantidade de vida.",
+         "cns": "\u6682\u65f6\u63d0\u9ad8\u65bd\u6cd5\u5bf9\u8c61\u7684\u4f53\u8d28\u3002",
          "de": "Erh\u00f6ht die physische St\u00e4rke des angew\u00e4hlten Spielers.",
          "fi": "Kasvattaa kohteen fyysist\u00e4 voimaa.",
          "fil": "Increases the physical strength of the target.",
@@ -43272,9 +44224,10 @@ const skillsjson = [
          "it": "Increases the physical strength of the target.",
          "kr": "\ub300\uc0c1\uc758 \uccb4\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increases the physical strength of the target.",
-         "pl": "Increases the physical strength of the target.",
+         "pl": "Zwi\u0119ksza STA celu.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0432\u044b\u043d\u043e\u0441\u043b\u0438\u0432\u043e\u0441\u0442\u044c \u0446\u0435\u043b\u0438.",
-         "sw": "Increases the physical strength of the target."
+         "sw": "Increases the physical strength of the target.",
+         "th": "Increases the physical strength of the target."
       },
       "icon": "asscheheapup.png",
       "class": 8962,
@@ -43902,30 +44855,36 @@ const skillsjson = [
       "name": {
          "en": "Blizzard",
          "ar": "Blizzard",
+         "br": "Nevasca",
+         "cns": "\u96ea\u5c71\u5d29\u584c",
          "de": "Avalanche",
          "fi": "Blizzard",
          "fil": "Blizzard",
          "fr": "Avalanche",
          "it": "Blizzard",
          "kr": "\uc544\ubc14\ub780\uce58",
-         "nl": "Blizzard",
-         "pl": "Blizzard",
+         "nl": "Sneeuwstorm",
+         "pl": "Zamie\u0107",
          "ru": "\u0411\u0443\u0440\u0430\u043d",
-         "sw": "Blizzard"
+         "sw": "Blizzard",
+         "th": "Blizzard"
       },
       "description": {
-         "en": "Damages surrounding enemies with a snowstorm.",
-         "ar": "Damages surrounding enemies with a snowstorm.",
-         "de": "Allen Gegnern Schaden zuf\u00fcgen, indem man einen Blizzard herbeiruft. Die Gegner werden dabei bet\u00e4ubt.",
-         "fi": "Damages surrounding enemies with a snowstorm.",
-         "fil": "Damages surrounding enemies with a snowstorm.",
-         "fr": "Invoque une avalanche qui s'abat sur tous les ennemis de la zone, infligeant d'\u00e9normes d\u00e9g\u00e2ts d'eau et de terre et les \u00e9tourdissant",
-         "it": "Damages surrounding enemies with a snowstorm.",
-         "kr": "\uc138\ucc2c \ub208\ubcf4\ub77c\ub97c \uc77c\uc73c\ucf1c \uc8fc\ubcc0\uc758 \ubaa8\ub4e0 \uc801\ub4e4\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4. \uc774\ub54c \uc801\uc744 \uc77c\uc815 \ud655\ub960\ub85c \uc2a4\ud134 \uc0c1\ud0dc\ub85c \ub9cc\ub4ed\ub2c8\ub2e4.",
-         "nl": "Damages surrounding enemies with a snowstorm.",
-         "pl": "Damages surrounding enemies with a snowstorm.",
-         "ru": "\u041d\u0430 \u0432\u0440\u0430\u0433\u043e\u0432 \u043e\u0431\u0440\u0443\u0448\u0438\u0432\u0430\u0435\u0442\u0441\u044f \u0431\u0443\u0440\u0430\u043d, \u043d\u0430\u043d\u043e\u0441\u044f\u0449\u0438\u0439 \u0443\u0440\u043e\u043d \u0432\u043e\u0434\u043e\u0439 \u0438 \u0437\u0435\u043c\u043b\u0435\u0439, \u0430 \u0442\u0430\u043a\u0436\u0435 \u043e\u0433\u043b\u0443\u0448\u0430\u044e\u0449\u0438\u0439 \u0438\u0445.",
-         "sw": "Damages surrounding enemies with a snowstorm."
+         "en": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
+         "ar": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
+         "br": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
+         "cns": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
+         "de": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
+         "fi": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
+         "fil": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
+         "fr": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
+         "it": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
+         "kr": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
+         "nl": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
+         "pl": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
+         "ru": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
+         "sw": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
+         "th": "Damages surrounding enemies with a snowstorm. Chance to Stun."
       },
       "icon": "elemulavalan.png",
       "class": 9150,
@@ -44227,6 +45186,8 @@ const skillsjson = [
       "name": {
          "en": "Burst Crack",
          "ar": "Burst Crack",
+         "br": "Ruptura",
+         "cns": "\u5723\u5149\u5927\u5730",
          "de": "Burst Crack",
          "fi": "Burst Crack",
          "fil": "Burst Crack",
@@ -44234,13 +45195,16 @@ const skillsjson = [
          "it": "Burst Crack",
          "kr": "\ubc84\uc2a4\ud2b8\ud06c\ub799",
          "nl": "Burst Crack",
-         "pl": "Burst Crack",
+         "pl": "Wybuchowe P\u0119kni\u0119cie",
          "ru": "\u041f\u0440\u043e\u043b\u043e\u043c",
-         "sw": "Burst Crack"
+         "sw": "Burst Crack",
+         "th": "Burst Crack"
       },
       "description": {
          "en": "Pounds the ground and damages enemies around you.",
          "ar": "Pounds the ground and damages enemies around you.",
+         "br": "Golpeia o ch\u00e3o e defere danos nos inimigos ao seu redor.",
+         "cns": "\u5c06\u5927\u91cf\u7684\u5723\u5149\u4e4b\u529b\u805a\u96c6\u5728\u62f3\u5957\u51fb\u5411\u5730\u9762\uff0c\u5bf9\u5468\u56f4\u7684\u654c\u4eba\u9020\u6210\u4f24\u5bb3\u3002",
          "de": "Das Knuckle mit aller Kraft in den Boden rammen und durch die Ersch\u00fctterung des Bodens f\u00fcgst du dem Gegner Schaden zu.",
          "fi": "Iskee maata vahingoittaen vihollisia ymp\u00e4rill\u00e4si.",
          "fil": "Pounds the ground and damages enemies around you.",
@@ -44248,9 +45212,10 @@ const skillsjson = [
          "it": "Pounds the ground and damages enemies around you.",
          "kr": "\ub108\ud074\ud574\uba38\ub85c \ubc14\ub2e5\uc744 \ud0c0\uaca9\ud558\uc5ec \uac00\uae4c\uc774 \uc788\ub294 \uc801\ub4e4\uc744 \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Pounds the ground and damages enemies around you.",
-         "pl": "Pounds the ground and damages enemies around you.",
+         "pl": "Uderza ziemi\u0119 z olbrzymi\u0105 si\u0142\u0119, zadaj\u0105c obra\u017cenia wszystkim celom wok\u00f3\u0142 ciebie.",
          "ru": "\u0423\u0434\u0430\u0440, \u043f\u0440\u043e\u0431\u0438\u0432\u0430\u044e\u0449\u0438\u0439 \u0437\u0435\u043c\u043b\u044e \u0438 \u043d\u0430\u043d\u043e\u0441\u044f\u0449\u0438\u0439 \u0443\u0440\u043e\u043d \u0432\u0441\u0435\u043c \u0432\u0440\u0430\u0433\u0430\u043c \u043f\u043e\u0431\u043b\u0438\u0437\u043e\u0441\u0442\u0438.",
-         "sw": "Pounds the ground and damages enemies around you."
+         "sw": "Pounds the ground and damages enemies around you.",
+         "th": "Pounds the ground and damages enemies around you."
       },
       "icon": "assknuburstc.png",
       "class": 8962,
@@ -44598,20 +45563,25 @@ const skillsjson = [
       "name": {
          "en": "Earthquake",
          "ar": "Earthquake",
+         "br": "Terremoto",
+         "cns": "\u5730\u52a8\u5c71\u6447",
          "de": "Earthquake",
          "fi": "Earthquake",
          "fil": "Earthquake",
          "fr": "Tremblement de terre",
          "it": "Earthquake",
          "kr": "\uc5b4\uc2a4\ud018\uc774\ud06c",
-         "nl": "Earthquake",
-         "pl": "Earthquake",
+         "nl": "Aardbeving",
+         "pl": "Trz\u0119sienie Ziemi",
          "ru": "\u0414\u0440\u043e\u0436\u044c \u0437\u0435\u043c\u043b\u0438",
-         "sw": "Earthquake"
+         "sw": "Earthquake",
+         "th": "Earthquake"
       },
       "description": {
          "en": "Damages surrounding enemies area.",
          "ar": "Damages surrounding enemies area.",
+         "br": "Causa dano aos inimigos ao redor.",
+         "cns": "\u5f15\u53d1\u5927\u5730\u9707\u5bf9\u5468\u56f4\u654c\u4eba\u65bd\u52a0\u5f3a\u5927\u4f24\u5bb3\u3002",
          "de": "Allen Gegnern durch ein herbei beschworenes Erdbeben Schaden zuf\u00fcgen.",
          "fi": "Damages surrounding enemies area.",
          "fil": "Damages surrounding enemies area.",
@@ -44619,9 +45589,10 @@ const skillsjson = [
          "it": "Damages surrounding enemies area.",
          "kr": "\uc9c0\uc9c4\uc744 \uc77c\uc73c\ucf1c \uc8fc\ubcc0\uc758 \ubaa8\ub4e0 \uc801\ub4e4\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Damages surrounding enemies area.",
-         "pl": "Damages surrounding enemies area.",
+         "pl": "Wstrz\u0105sa Ziemi\u0119 by zada\u0107 obra\u017cenia wszystkim wrogom wok\u00f3\u0142 celu.",
          "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0443\u0440\u043e\u043d \u043f\u043e \u043e\u0431\u043b\u0430\u0441\u0442\u0438.",
-         "sw": "Damages surrounding enemies area."
+         "sw": "Damages surrounding enemies area.",
+         "th": "Damages surrounding enemies area."
       },
       "icon": "eleearearsqk.png",
       "class": 9150,
@@ -44809,6 +45780,8 @@ const skillsjson = [
       "name": {
          "en": "Piercing Arrow",
          "ar": "Piercing Arrow",
+         "br": "Flecha Perfurante",
+         "cns": "\u8d2f\u7a7f\u5c04\u51fb",
          "de": "Piercing Arrow",
          "fi": "Piercing Arrow",
          "fil": "Piercing Arrow",
@@ -44818,21 +45791,25 @@ const skillsjson = [
          "nl": "Piercing Arrow",
          "pl": "Piercing Arrow",
          "ru": "\u041f\u0440\u043e\u043d\u0437\u0430\u044e\u0449\u0430\u044f \u0441\u0442\u0440\u0435\u043b\u0430",
-         "sw": "Piercing Arrow"
+         "sw": "Piercing Arrow",
+         "th": "Piercing Arrow"
       },
       "description": {
-         "en": "Increased arrow strike. Has a chance to stun the target.",
-         "ar": "Increased arrow strike. Has a chance to stun the target.",
-         "de": "Einen Angriff auf den Gegner durch einen Schuss ins Herz.",
-         "fi": "Increased arrow strike. Has a chance to stun the target.",
-         "fil": "Increased arrow strike. Has a chance to stun the target.",
-         "fr": "D\u00e9coche une fl\u00e8che puissante qui transperce tous les ennemis dans l'axe du tir",
-         "it": "Increased arrow strike. Has a chance to stun the target.",
-         "kr": "\uac15\ub825\ud55c \ud654\uc0b4\uc744 \ub0a0\ub824 \uc9c1\uc120 \uc0c1\uc758 \uc801\ub4e4\uc744 \uad00\ud1b5\ud558\uba70 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
-         "nl": "Increased arrow strike. Has a chance to stun the target.",
-         "pl": "Increased arrow strike. Has a chance to stun the target.",
-         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0437\u043d\u0430\u0447\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0443\u0440\u043e\u043d \u0446\u0435\u043b\u0438 \u0438 \u0432\u0441\u0435\u043c \u0432\u0440\u0430\u0433\u0430\u043c, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043d\u0430\u0445\u043e\u0434\u044f\u0442\u0441\u044f \u043d\u0430 \u043b\u0438\u043d\u0438\u0438 \u043f\u043e\u043b\u0435\u0442\u0430 \u0441\u0442\u0440\u0435\u043b\u044b.",
-         "sw": "Increased arrow strike. Has a chance to stun the target."
+         "en": "Increased arrow strike.",
+         "ar": "Increased arrow strike.",
+         "br": "Increased arrow strike.",
+         "cns": "Increased arrow strike.",
+         "de": "Increased arrow strike.",
+         "fi": "Increased arrow strike.",
+         "fil": "Increased arrow strike.",
+         "fr": "Increased arrow strike.",
+         "it": "Increased arrow strike.",
+         "kr": "Increased arrow strike.",
+         "nl": "Increased arrow strike.",
+         "pl": "Increased arrow strike.",
+         "ru": "Increased arrow strike.",
+         "sw": "Increased arrow strike.",
+         "th": "Increased arrow strike."
       },
       "icon": "ragbowpierci.png",
       "class": 9295,
@@ -44855,20 +45832,10 @@ const skillsjson = [
       "skillPoints": 3,
       "levels": [
          {
-            "minAttack": 100,
-            "maxAttack": 101,
-            "probability": 62,
-            "probabilityPVP": 62,
+            "minAttack": 105,
+            "maxAttack": 106,
             "consumedMP": 42,
             "cooldown": 5,
-            "duration": 2,
-            "durationPVP": 2,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "stun"
-               }
-            ],
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -44880,20 +45847,10 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 101,
-            "maxAttack": 102,
-            "probability": 64,
-            "probabilityPVP": 64,
+            "minAttack": 106,
+            "maxAttack": 107,
             "consumedMP": 44,
             "cooldown": 5,
-            "duration": 2,
-            "durationPVP": 2,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "stun"
-               }
-            ],
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -44905,20 +45862,10 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 102,
-            "maxAttack": 103,
-            "probability": 66,
-            "probabilityPVP": 66,
+            "minAttack": 107,
+            "maxAttack": 108,
             "consumedMP": 46,
             "cooldown": 5,
-            "duration": 2,
-            "durationPVP": 2,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "stun"
-               }
-            ],
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -44930,20 +45877,10 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 103,
-            "maxAttack": 104,
-            "probability": 68,
-            "probabilityPVP": 68,
+            "minAttack": 108,
+            "maxAttack": 109,
             "consumedMP": 48,
             "cooldown": 5,
-            "duration": 2,
-            "durationPVP": 2,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "stun"
-               }
-            ],
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -44955,20 +45892,10 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 104,
-            "maxAttack": 105,
-            "probability": 70,
-            "probabilityPVP": 70,
+            "minAttack": 109,
+            "maxAttack": 110,
             "consumedMP": 50,
             "cooldown": 5,
-            "duration": 2,
-            "durationPVP": 2,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "stun"
-               }
-            ],
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -44980,20 +45907,10 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 105,
-            "maxAttack": 106,
-            "probability": 72,
-            "probabilityPVP": 72,
+            "minAttack": 110,
+            "maxAttack": 111,
             "consumedMP": 52,
             "cooldown": 5,
-            "duration": 2,
-            "durationPVP": 2,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "stun"
-               }
-            ],
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -45005,20 +45922,10 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 106,
-            "maxAttack": 107,
-            "probability": 74,
-            "probabilityPVP": 74,
+            "minAttack": 111,
+            "maxAttack": 112,
             "consumedMP": 54,
             "cooldown": 5,
-            "duration": 2,
-            "durationPVP": 2,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "stun"
-               }
-            ],
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -45030,20 +45937,10 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 107,
-            "maxAttack": 108,
-            "probability": 76,
-            "probabilityPVP": 76,
+            "minAttack": 112,
+            "maxAttack": 113,
             "consumedMP": 56,
             "cooldown": 5,
-            "duration": 2,
-            "durationPVP": 2,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "stun"
-               }
-            ],
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -45055,20 +45952,10 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 108,
-            "maxAttack": 109,
-            "probability": 78,
-            "probabilityPVP": 78,
+            "minAttack": 113,
+            "maxAttack": 114,
             "consumedMP": 58,
             "cooldown": 5,
-            "duration": 2,
-            "durationPVP": 2,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "stun"
-               }
-            ],
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -45080,20 +45967,10 @@ const skillsjson = [
             ]
          },
          {
-            "minAttack": 109,
-            "maxAttack": 110,
-            "probability": 80,
-            "probabilityPVP": 80,
+            "minAttack": 114,
+            "maxAttack": 115,
             "consumedMP": 60,
             "cooldown": 5,
-            "duration": 2,
-            "durationPVP": 2,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "stun"
-               }
-            ],
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -45111,20 +45988,25 @@ const skillsjson = [
       "name": {
          "en": "Flurry",
          "ar": "Flurry",
+         "br": "Agita\u00e7\u00e3o",
+         "cns": "\u75be\u98ce\u7a81\u523a",
          "de": "Brandish",
          "fi": "Flurry",
          "fil": "Flurry",
          "fr": "Vol\u00e9e de coups",
          "it": "Raffica di Colpi",
          "kr": "\ube0c\ub79c\ub514\uc26c",
-         "nl": "Flurry",
-         "pl": "Flurry",
+         "nl": "Vlaag",
+         "pl": "Grad Cios\u00f3w",
          "ru": "\u0428\u043a\u0432\u0430\u043b",
-         "sw": "Flurry"
+         "sw": "Flurry",
+         "th": "Flurry"
       },
       "description": {
          "en": "Rapid, stabbing attack.",
          "ar": "\u062a\u0648\u062c\u0647 \u0646\u062d\u0648 \u0627\u0644\u062e\u0635\u0645 \u0639\u062f\u0629 \u0637\u0639\u0646\u0627\u062a \u0633\u0631\u064a\u0639\u0629.",
+         "br": "R\u00e1pidos golpes perfurantes.",
+         "cns": "\u5faa\u73af\u6280\u80fd\uff0c\u7528\u5251\u6216\u65a7\u5bf9\u654c\u4eba\u8fdb\u884c\u5feb\u901f\u8fde\u7eed\u7a81\u523a",
          "de": "Ein Rundumhieb, um den Feind schnell mehrfach mit dem Schwert zu durchl\u00f6chern.",
          "fi": "Nopea pistohy\u00f6kk\u00e4ys.",
          "fil": "Rapid, stabbing attack.",
@@ -45132,9 +46014,10 @@ const skillsjson = [
          "it": "Attacco rapido e pugnalante.",
          "kr": "\uc11c\ud074\uc2a4\ud0ac\ub85c \uc18c\ub4dc\ub97c \uc0ac\uc6a9\ud558\uc5ec \ube44\uc624\ub4ef \ucc14\ub7ec \uc5f0\uc18d\uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Rapid, stabbing attack.",
-         "pl": "Rapid, stabbing attack.",
+         "pl": "Zadaje kilka, szybkich cios\u00f3w.",
          "ru": "\u0421\u0435\u0440\u0438\u044f \u0447\u0443\u0432\u0441\u0442\u0432\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0445 \u0443\u043a\u043e\u043b\u043e\u0432.",
-         "sw": "Rapid, stabbing attack."
+         "sw": "Rapid, stabbing attack.",
+         "th": "Rapid, stabbing attack."
       },
       "icon": "vagonebrandi.png",
       "class": 9686,
@@ -45301,6 +46184,8 @@ const skillsjson = [
       "name": {
          "en": "Burn",
          "ar": "Burn",
+         "br": "Queimar",
+         "cns": "\u706b\u4f24",
          "de": "Burn",
          "fi": "Burn",
          "fil": "Burn",
@@ -45308,13 +46193,16 @@ const skillsjson = [
          "it": "Burn",
          "kr": "Burn",
          "nl": "Burn",
-         "pl": "Burn",
+         "pl": "P\u0142oni\u0119cie",
          "ru": "\u041e\u0436\u043e\u0433",
-         "sw": "Burn"
+         "sw": "Burn",
+         "th": "Burn"
       },
       "description": {
          "en": "Damages your target continuously over time.",
          "ar": "Damages your target continuously over time.",
+         "br": "Causa dano ao seu alvo continuamente com o tempo.",
+         "cns": "\u5728\u4e00\u5b9a\u65f6\u95f4\u5185\uff0c\u53d7\u5230\u6301\u7eed\u6027\u7684\u4f24\u5bb3\u3002",
          "de": "F\u00fcgt dem Ziel \u00fcber einen gewissen Zeitraum nach und nach Schaden zu.",
          "fi": "Damages your target continuously over time.",
          "fil": "Damages your target continuously over time.",
@@ -45322,9 +46210,10 @@ const skillsjson = [
          "it": "Damages your target continuously over time.",
          "kr": "\uc77c\uc815 \uc2dc\uac04\ub3d9\uc548 \ub300\uc0c1\uc5d0\uac8c \uc9c0\uc18d\uc801\uc778 \ud53c\ud574\ub97c \uc785\ud799\ub2c8\ub2e4.",
          "nl": "Damages your target continuously over time.",
-         "pl": "Damages your target continuously over time.",
+         "pl": "Cel otrzymuje ci\u0105g\u0142e obra\u017cenia.",
          "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u044b\u0439 \u0443\u0440\u043e\u043d.",
-         "sw": "Damages your target continuously over time."
+         "sw": "Damages your target continuously over time.",
+         "th": "Damages your target continuously over time."
       },
       "icon": "burn.png",
       "level": 1,
@@ -45358,6 +46247,8 @@ const skillsjson = [
       "name": {
          "en": "Psychic Wall",
          "ar": "Psychic Wall",
+         "br": "Parede Ps\u00edquica",
+         "cns": "\u7075\u529b\u5899",
          "de": "Psychic Wall",
          "fi": "Psychic Wall",
          "fil": "Psychic Wall",
@@ -45365,13 +46256,16 @@ const skillsjson = [
          "it": "Psychic Wall",
          "kr": "\uc0ac\uc774\ud0a5 \uc6d4",
          "nl": "Psychic Wall",
-         "pl": "Psychic Wall",
+         "pl": "Psychiczna \u015aciana",
          "ru": "\u041f\u0441\u0438-\u0437\u0430\u0441\u043b\u043e\u043d",
-         "sw": "Psychic Wall"
+         "sw": "Psychic Wall",
+         "th": "Psychic Wall"
       },
       "description": {
          "en": "Creates a wall that pushes an enemy back and damages them & reduces their speed if they touch it.",
          "ar": "Creates a wall that pushes an enemy back and damages them & reduces their speed if they touch it.",
+         "br": "Cria uma parede que empurra um inimigo para tr\u00e1s causando dano e reduzindo sua velocidade.",
+         "cns": "\u51ed\u501f\u5bf9\u4fe1\u5ff5\u7684\u6267\u7740\u5f62\u6210\u4e00\u5835\u5899\uff0c\u4efb\u4f55\u654c\u4eba\u5984\u60f3\u901a\u8fc7\u5fc5\u5c06\u53d7\u5230\u4e25\u60e9\u3002",
          "de": "H\u00e4lt den Gegner mit Hilfe einer spirituellen Mauer von dir fern. ",
          "fi": "Creates a wall that pushes an enemy back and damages them & reduces their speed if they touch it.",
          "fil": "Creates a wall that pushes an enemy back and damages them & reduces their speed if they touch it.",
@@ -45379,9 +46273,10 @@ const skillsjson = [
          "it": "Creates a wall that pushes an enemy back and damages them & reduces their speed if they touch it.",
          "kr": "\uac15\ud55c \uc5fc\ub825\uc73c\ub85c \ubcbd\uc744 \ub9cc\ub4e4\uc5b4 \uc801\uc774 \ub2e4\uac00\uc62c \uc218 \uc5c6\uac8c \ub9cc\ub4ed\ub2c8\ub2e4.",
          "nl": "Creates a wall that pushes an enemy back and damages them & reduces their speed if they touch it.",
-         "pl": "Creates a wall that pushes an enemy back and damages them & reduces their speed if they touch it.",
+         "pl": "Stwarza barier\u0119 kt\u00f3ra bole\u015bnie odpycha wroga i zmniejsza jego szybko\u015b\u0107.",
          "ru": "\u041f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u0432\u043e\u0437\u0432\u0435\u0441\u0442\u0438 \u0437\u0430\u0441\u043b\u043e\u043d. \u0415\u0441\u043b\u0438 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a \u043a\u043e\u0441\u043d\u0435\u0442\u0441\u044f \u0435\u0433\u043e, \u0442\u043e \u043f\u043e\u043b\u0443\u0447\u0438\u0442 \u0443\u0440\u043e\u043d \u0438 \u0431\u0443\u0434\u0435\u0442 \u043e\u0442\u0431\u0440\u043e\u0448\u0435\u043d \u043d\u0430\u0437\u0430\u0434.",
-         "sw": "Creates a wall that pushes an enemy back and damages them & reduces their speed if they touch it."
+         "sw": "Creates a wall that pushes an enemy back and damages them & reduces their speed if they touch it.",
+         "th": "Creates a wall that pushes an enemy back and damages them & reduces their speed if they touch it."
       },
       "icon": "psypsywall.png",
       "class": 5709,
@@ -45721,20 +46616,25 @@ const skillsjson = [
       "name": {
          "en": "Holycross",
          "ar": "Holycross",
+         "br": "Cruz Sagrada",
+         "cns": "\u795e\u5723\u60e9\u6212",
          "de": "Holy Cross",
          "fi": "Holycross",
          "fil": "Holycross",
          "fr": "Croix du templier",
          "it": "Holycross",
          "kr": "\ud640\ub9ac\ud06c\ub85c\uc2a4",
-         "nl": "Holycross",
-         "pl": "Holycross",
+         "nl": "Heilig Kruis",
+         "pl": "\u015awi\u0119ty Krzy\u017c",
          "ru": "\u041e\u0441\u0435\u043d\u044f\u044e\u0449\u0438\u0439 \u043a\u0440\u0435\u0441\u0442",
-         "sw": "Holycross"
+         "sw": "Holycross",
+         "th": "Holycross"
       },
       "description": {
          "en": "Target enemy takes double damage for a limited time.",
          "ar": "Target enemy takes double damage for a limited time.",
+         "br": "Faz o alvo receber o dobro de dano por um tempo limitado.",
+         "cns": "\u4f7f\u654c\u4eba\u65e0\u6761\u4ef6\u53d7\u5230\u53cc\u500d\u4f24\u5bb3\u3002",
          "de": "L\u00e4sst den Gegner zweifachen Schaden durch Einschr\u00e4nkungen erleiden.",
          "fi": "Kohde vihollinen ottaa rajoitetun ajan kaksinkertaista vahinkoa.",
          "fil": "Target enemy takes double damage for a limited time.",
@@ -45742,9 +46642,10 @@ const skillsjson = [
          "it": "Target enemy takes double damage for a limited time.",
          "kr": "\uc801\uc5d0\uac8c \uc2e0\uc131\ud55c \uc18d\ubc15\uc744 \uac78\uc5b4 \ub2e4\uc74c \uacf5\uaca9\uc73c\ub85c 2\ubc30\uc758 \ub370\ubbf8\uc9c0\ub97c \uc785\ub3c4\ub85d \ub9cc\ub4ed\ub2c8\ub2e4.",
          "nl": "Target enemy takes double damage for a limited time.",
-         "pl": "Target enemy takes double damage for a limited time.",
+         "pl": "Cel otrzymuje podw\u00f3jne obra\u017cenia na pewien czas.",
          "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u043c\u044b\u0439 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d \u0443\u0434\u0432\u0430\u0438\u0432\u0430\u0435\u0442\u0441\u044f.",
-         "sw": "Target enemy takes double damage for a limited time."
+         "sw": "Target enemy takes double damage for a limited time.",
+         "th": "Target enemy takes double damage for a limited time."
       },
       "icon": "rinsupcross.png",
       "class": 9389,
@@ -45779,6 +46680,8 @@ const skillsjson = [
       "name": {
          "en": "Demonology",
          "ar": "Demonology",
+         "br": "Dem\u00f4nologia",
+         "cns": "\u5e7b\u8c61\u6050\u60e7",
          "de": "Demonology",
          "fi": "Demonology",
          "fil": "Demonology",
@@ -45786,13 +46689,16 @@ const skillsjson = [
          "it": "Demonology",
          "kr": "\ub370\ubaa8\ub180\ub85c\uc9c0",
          "nl": "Demonology",
-         "pl": "Demonology",
+         "pl": "Demonologia",
          "ru": "\u0414\u0435\u043c\u043e\u043d\u043e\u043b\u043e\u0433",
-         "sw": "Demonology"
+         "sw": "Demonology",
+         "th": "Demonology"
       },
       "description": {
          "en": "Damages the enemy with a mental blast and reduces their attack power.",
          "ar": "Damages the enemy with a mental blast and reduces their attack power.",
+         "br": "Causa dano ao inimigo com uma explos\u00e3o mental e reduz o poder de ataque dele.",
+         "cns": "\u5f62\u6210\u6076\u9b54\u7684\u5e7b\u5f71\u6765\u6467\u6bc1\u5bf9\u65b9\u7684\u7cbe\u795e\uff0c\u4f7f\u5176\u653b\u51fb\u529b\u4e0b\u964d\u3002",
          "de": "Die gegnerische Seele sch\u00e4digen indem man b\u00f6se Gedanken beschw\u00f6rt.",
          "fi": "Damages the enemy with a mental blast and reduces their attack power.",
          "fil": "Damages the enemy with a mental blast and reduces their attack power.",
@@ -45800,9 +46706,10 @@ const skillsjson = [
          "it": "Damages the enemy with a mental blast and reduces their attack power.",
          "kr": "\uc545\ub9c8\uc758 \uc0ac\ub150\uc744 \uc18c\ud658\ud574 \uc801\uc5d0\uac8c \uc815\uc2e0\uc801\uc778 \uacf5\uaca9\uc744 \ud569\ub2c8\ub2e4.",
          "nl": "Damages the enemy with a mental blast and reduces their attack power.",
-         "pl": "Damages the enemy with a mental blast and reduces their attack power.",
-         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d \u043f\u0441\u0438-\u044d\u043d\u0435\u0440\u0433\u0438\u0435\u0439.",
-         "sw": "Damages the enemy with a mental blast and reduces their attack power."
+         "pl": "Rozrywa umys\u0142 celu i obni\u017ca jego si\u0142\u0119 ataku.",
+         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d \u043f\u0441\u0438-\u044d\u043d\u0435\u0440\u0433\u0438\u0435\u0439 \u0438 \u0443\u043c\u0435\u043d\u044c\u0448\u0430\u0435\u0442 \u0435\u0433\u043e \u0430\u0442\u0430\u043a\u0443.",
+         "sw": "Damages the enemy with a mental blast and reduces their attack power.",
+         "th": "Damages the enemy with a mental blast and reduces their attack power."
       },
       "icon": "psydnolgy.png",
       "class": 5709,
@@ -46085,6 +46992,8 @@ const skillsjson = [
       "name": {
          "en": "Merkaba Hanzelrusha",
          "ar": "Merkaba Hanzelrusha",
+         "br": "Merkaba Hanzelrusha",
+         "cns": "\u795e\u5723\u9886\u57df",
          "de": "Merkaba Hanzelrusha",
          "fi": "Merkaba Hanzelrusha",
          "fil": "Merkaba Hanzelrusha",
@@ -46094,11 +47003,14 @@ const skillsjson = [
          "nl": "Merkaba Hanzelrusha",
          "pl": "Merkaba Hanzelrusha",
          "ru": "\u0420\u0430\u0434\u0443\u0436\u043d\u044b\u0439 \u043a\u0440\u0435\u0441\u0442",
-         "sw": "Merkaba Hanzelrusha"
+         "sw": "Merkaba Hanzelrusha",
+         "th": "Merkaba Hanzelrusha"
       },
       "description": {
          "en": "Enemies take damage in an area around you.",
          "ar": "Enemies take damage in an area around you.",
+         "br": "Os inimigos sofrem danos em uma \u00e1rea ao seu redor.",
+         "cns": "\u5728\u5723\u4e4b\u5149\u7167\u5c04\u4e0b\u5f62\u6210\u5177\u6709\u5723\u529b\u7684\u9886\u57df\uff0c\u6253\u51fb\u8e0f\u5165\u9886\u57df\u7684\u654c\u4eba\u3002",
          "de": "Zieht einen heiligen Bereich um dich. Gegner erleiden in diesem Bereich Schaden.",
          "fi": "L\u00e4heiset viholliset ottavat vahinkoa.",
          "fil": "Enemies take damage in an area around you.",
@@ -46106,9 +47018,10 @@ const skillsjson = [
          "it": "Enemies take damage in an area around you.",
          "kr": "\uc790\uc2e0\uc758 \uc8fc\ubcc0\uc5d0 \uc131\uc2a4\ub7ec\uc6b4 \uc601\uc5ed\uc744 \ud615\uc131\ud558\uc5ec \ubc94\uc704\uc548\uc5d0 \ub4e4\uc5b4\uc624\ub294 \uc801\uc5d0\uac8c \ub370\ubbf8\uc9c0\ub97c \uc90d\ub2c8\ub2e4.",
          "nl": "Enemies take damage in an area around you.",
-         "pl": "Enemies take damage in an area around you.",
+         "pl": "Stwarza na ziemi pole energii, kt\u00f3re zadaje obra\u017cenia co pewien czas wszystkim wrogom w zasi\u0119gu.",
          "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0443\u0440\u043e\u043d \u043f\u043e \u043e\u0431\u043b\u0430\u0441\u0442\u0438.",
-         "sw": "Enemies take damage in an area around you."
+         "sw": "Enemies take damage in an area around you.",
+         "th": "Enemies take damage in an area around you."
       },
       "icon": "rinsupanzelr.png",
       "class": 9389,
@@ -46337,6 +47250,8 @@ const skillsjson = [
       "name": {
          "en": "Cross Strike",
          "ar": "Cross Strike",
+         "br": "Ataque Cruzado",
+         "cns": "\u5341\u5b57\u6253\u51fb",
          "de": "Cross Strike",
          "fi": "Cross Strike",
          "fil": "Cross Strike",
@@ -46344,13 +47259,16 @@ const skillsjson = [
          "it": "Cross Strike",
          "kr": "\ud06c\ub85c\uc2a4 \uc2a4\ud2b8\ub77c\uc774\ud06c",
          "nl": "Cross Strike",
-         "pl": "Cross Strike",
+         "pl": "Krzy\u017cowe Ci\u0119cie",
          "ru": "\u041a\u0440\u0435\u0441\u0442-\u043d\u0430\u043a\u0440\u0435\u0441\u0442",
-         "sw": "Cross Strike"
+         "sw": "Cross Strike",
+         "th": "Cross Strike"
       },
       "description": {
          "en": "Powerful strike using two Weapons.",
          "ar": "Powerful strike using two Weapons.",
+         "br": "Um golpe poderoso usando as duas armas.",
+         "cns": "\u5c06\u53cc\u6b66\u5668\u4ea4\u9519\u5288\u5411\u5bf9\u65b9\uff0c\u5728\u5bf9\u65b9\u8eab\u4f53\u4e0a\u7559\u4e0b\u6c38\u6052\u7684\u5341\u5b57\u8bb0\u53f7",
          "de": "Den Gegner mit zwei Einhandwaffen angreifen.",
          "fi": "Voimakas isku k\u00e4ytt\u00e4en kahta Asetta.",
          "fil": "Powerful strike using two Weapons.",
@@ -46358,9 +47276,10 @@ const skillsjson = [
          "it": "Powerful strike using two Weapons.",
          "kr": "\uc591\uc190\uc758 \ubb34\uae30\ub97c X\uc790\ub85c \uad50\ucc28\uc2dc\ud0a4\uba70 \uc801\uc744 \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Powerful strike using two Weapons.",
-         "pl": "Powerful strike using two Weapons.",
+         "pl": "Tnie przeciwnika na krzy\u017c za pomoc\u0105 dw\u00f3ch broni.",
          "ru": "\u0423\u0434\u0430\u0440 \u0434\u0432\u0443\u043c\u044f \u043a\u043b\u0438\u043d\u043a\u0430\u043c\u0438 \u043e\u0434\u043d\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u043e.",
-         "sw": "Powerful strike using two Weapons."
+         "sw": "Powerful strike using two Weapons.",
+         "th": "Powerful strike using two Weapons."
       },
       "icon": "blddblcross.png",
       "class": 2246,
@@ -46547,6 +47466,8 @@ const skillsjson = [
       "name": {
          "en": "Protective Tree Bark",
          "ar": "Protective Tree Bark",
+         "br": "Casca de \u00c1rvore Protetora",
+         "cns": "\u575a\u7532\u672f",
          "de": "The Protection to use the Bark of a Tree",
          "fi": "Protective Tree Bark",
          "fil": "Protective Tree Bark",
@@ -46556,11 +47477,14 @@ const skillsjson = [
          "nl": "Protective Tree Bark",
          "pl": "Protective Tree Bark",
          "ru": "\u041f\u0440\u043e\u0447\u043d\u0430\u044f \u043a\u043e\u0440\u0430",
-         "sw": "Protective Tree Bark"
+         "sw": "Protective Tree Bark",
+         "th": "Protective Tree Bark"
       },
       "description": {
          "en": "Increases defense by wrapping the body in tree bark.",
          "ar": "Increases defense by wrapping the body in tree bark.",
+         "br": "Aumenta a defesa envolvendo o corpo na casca da \u00e1rvore.",
+         "cns": "\u7528\u575a\u786c\u7684\u6811\u76ae\u7f20\u7ed5\u6574\u4e2a\u8eab\u4f53\u589e\u52a0\u9632\u5fa1\u529b\u3002",
          "de": "Verringern der k\u00f6rperlichen Angriffsst\u00e4rke durch das Verstecken des K\u00f6rpers in der Rinde eines Baums.",
          "fi": "Increases defense by wrapping the body in tree bark.",
          "fil": "Increases defense by wrapping the body in tree bark.",
@@ -46570,7 +47494,8 @@ const skillsjson = [
          "nl": "Increases defense by wrapping the body in tree bark.",
          "pl": "Increases defense by wrapping the body in tree bark.",
          "ru": "\u041a\u043e\u0440\u0430 \u043e\u0431\u0432\u043e\u043b\u0430\u043a\u0438\u0432\u0430\u0435\u0442 \u0442\u0435\u043b\u043e, \u043f\u043e\u0432\u044b\u0448\u0430\u044f \u0437\u0430\u0449\u0438\u0442\u0443.",
-         "sw": "Increases defense by wrapping the body in tree bark."
+         "sw": "Increases defense by wrapping the body in tree bark.",
+         "th": "Increases defense by wrapping the body in tree bark."
       },
       "icon": "mershieprotec.png",
       "level": 15,
@@ -46602,6 +47527,8 @@ const skillsjson = [
       "name": {
          "en": "Psychic Square",
          "ar": "Psychic Square",
+         "br": "Explos\u00e3o Ps\u00edquica",
+         "cns": "\u6df7\u6c8c\u5c01\u5370",
          "de": "Psychic Square",
          "fi": "Psychic Square",
          "fil": "Psychic Square",
@@ -46609,13 +47536,16 @@ const skillsjson = [
          "it": "Psychic Square",
          "kr": "\uc0ac\uc774\ud0a5 \uc2a4\ud018\uc5b4",
          "nl": "Psychic Square",
-         "pl": "Psychic Square",
+         "pl": "Psychiczne Pole",
          "ru": "\u041f\u0441\u0438-\u0433\u0435\u043d\u0435\u0440\u0430\u0442\u043e\u0440",
-         "sw": "Psychic Square"
+         "sw": "Psychic Square",
+         "th": "Psychic Square"
       },
       "description": {
          "en": "Damages the enemies around you with a psychic blast.",
          "ar": "Damages the enemies around you with a psychic blast.",
+         "br": "Causa danos a todos os inimigos com uma explos\u00e3o ps\u00edquica.",
+         "cns": "\u5c06\u76ee\u6807\u7275\u5f15\u81f3\u6df7\u6c8c\u7684\u7cbe\u795e\u4e16\u754c\uff0c\u8fdb\u5165\u8005\u5c06\u53d7\u5230\u4e25\u91cd\u4f24\u5bb3\u3002",
          "de": "Dem Gegner Schaden erleiden lassen, indem man sie im Chaos verwickelt.",
          "fi": "Damages the enemies around you with a psychic blast.",
          "fil": "Damages the enemies around you with a psychic blast.",
@@ -46623,9 +47553,10 @@ const skillsjson = [
          "it": "Damages the enemies around you with a psychic blast.",
          "kr": "\ud63c\ub3c8\uc758 \uc815\uc2e0 \uc138\uacc4\ub85c \ub04c\uc5b4\ub4e4\uc5ec \uc801\ub4e4 \uc804\uccb4\ub97c \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Damages the enemies around you with a psychic blast.",
-         "pl": "Damages the enemies around you with a psychic blast.",
+         "pl": "Zadaje obra\u017cenia wszystkim wrogom wok\u00f3\u0142 wybranego celu za pomoc\u0105 psychicznego pola.",
          "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0437\u043d\u0430\u0447\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0443\u0440\u043e\u043d \u0446\u0435\u043b\u0438 \u0438 \u043d\u0430\u0445\u043e\u0434\u044f\u0449\u0438\u043c\u0441\u044f \u0440\u044f\u0434\u043e\u043c \u0441 \u043d\u0435\u0439 \u0432\u0440\u0430\u0433\u0430\u043c.",
-         "sw": "Damages the enemies around you with a psychic blast."
+         "sw": "Damages the enemies around you with a psychic blast.",
+         "th": "Damages the enemies around you with a psychic blast."
       },
       "icon": "psypsysquare.png",
       "class": 5709,
@@ -46817,6 +47748,8 @@ const skillsjson = [
       "name": {
          "en": "Water Master",
          "ar": "Water Master",
+         "br": "Mestre da \u00c1gua",
+         "cns": "\u6c34\u7cfb\u4fee\u70bc",
          "de": "Water Master",
          "fi": "Water Master",
          "fil": "Water Master",
@@ -46824,13 +47757,16 @@ const skillsjson = [
          "it": "Water Master",
          "kr": "\uc6cc\ud130 \ub9c8\uc2a4\ud130",
          "nl": "Water Master",
-         "pl": "Water Master",
+         "pl": "Mistrz Wody",
          "ru": "\u0412\u043b\u0430\u0441\u0442\u0435\u043b\u0438\u043d \u0432\u043e\u0434\u044b",
-         "sw": "Water Master"
+         "sw": "Water Master",
+         "th": "Water Master"
       },
       "description": {
          "en": "Increases striking power of water spells.",
          "ar": "Increases striking power of water spells.",
+         "br": "Aumenta o poder das magias de \u00c1gua.",
+         "cns": "\u63d0\u9ad8\u6c34\u7cfb\u9b54\u6cd5\u653b\u51fb\u529b\u3002",
          "de": "Erh\u00f6hen der Angriffst\u00e4rke von Magie mit Wasser Attributen.",
          "fi": "Increases striking power of water spells.",
          "fil": "Increases striking power of water spells.",
@@ -46838,9 +47774,10 @@ const skillsjson = [
          "it": "Increases striking power of water spells.",
          "kr": "\uc6cc\ud130 \uc18d\uc131 \ub9c8\ubc95\uc758 \uacf5\uaca9\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increases striking power of water spells.",
-         "pl": "Increases striking power of water spells.",
+         "pl": "Zwi\u0119ksza si\u0142\u0119 Wodnych Czar\u00f3w.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u0438\u043b\u0443 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439 \u0441\u0442\u0438\u0445\u0438\u0438 \u0432\u043e\u0434\u044b.",
-         "sw": "Increases striking power of water spells."
+         "sw": "Increases striking power of water spells.",
+         "th": "Increases striking power of water spells."
       },
       "icon": "elewatwatmst.png",
       "class": 9150,
@@ -46998,30 +47935,36 @@ const skillsjson = [
       "name": {
          "en": "Resurrection",
          "ar": "Resurrection",
+         "br": "Ressurrei\u00e7\u00e3o",
+         "cns": "\u795e\u5723\u4e4b\u5149",
          "de": "Resurrection",
          "fi": "Resurrection",
          "fil": "Resurrection",
          "fr": "R\u00e9surrection",
          "it": "Resurrection",
          "kr": "\ub808\uc800\ub809\uc158",
-         "nl": "Resurrection",
-         "pl": "Resurrection",
+         "nl": "Herrijzens",
+         "pl": "Wskrzeszenie",
          "ru": "\u0412\u043e\u0441\u043a\u0440\u0435\u0448\u0435\u043d\u0438\u0435",
-         "sw": "Resurrection"
+         "sw": "Resurrection",
+         "th": "Resurrection"
       },
       "description": {
          "en": "Resurrects a dead player.",
          "ar": "Resurrects a dead player.",
+         "br": "Ressuscita um jogador morto.",
+         "cns": "\u5411\u795e\u660e\u7948\u7977\uff0c\u5c06\u6b7b\u4ea1\u7684\u540c\u4f34\u590d\u6d3b\u3002",
          "de": "Einen toten Charakter mit heiliger Energie wiederbeleben.",
          "fi": "Her\u00e4tt\u00e4\u00e4 kuolleen pelaajan.",
          "fil": "Resurrects a dead player.",
          "fr": "Ressuscite la cible d'entre les morts et la r\u00e9g\u00e9n\u00e8re d'une partie de ses PV",
          "it": "Resurrects a dead player.",
          "kr": "\uc0ac\ub9dd\ud55c \uce90\ub9ad\ud130\ub97c \uc2e0\uc131\ud55c \ud798\uc73c\ub85c \ubd80\ud65c\uc2dc\ud0b5\ub2c8\ub2e4.",
-         "nl": "Resurrects a dead player.",
-         "pl": "Resurrects a dead player.",
+         "nl": "Herrijst een dode speler.",
+         "pl": "Wskrzesza martwego gracza. Wskrzeszony gracz traci mniej punkt\u00f3w do\u015bwiadczenia.",
          "ru": "\u0412\u043e\u0441\u043a\u0440\u0435\u0448\u0430\u0435\u0442 \u043f\u0430\u0432\u0448\u0435\u0433\u043e \u0441\u043e\u0440\u0430\u0442\u043d\u0438\u043a\u0430.",
-         "sw": "Resurrects a dead player."
+         "sw": "Resurrects a dead player.",
+         "th": "Resurrects a dead player."
       },
       "icon": "asshearesurr.png",
       "class": 8962,
@@ -47549,6 +48492,8 @@ const skillsjson = [
       "name": {
          "en": "Enchant Poison",
          "ar": "Enchant Poison",
+         "br": "Ioi\u00f4 Venenoso",
+         "cns": "\u6bd2\u51fb",
          "de": "Enchant Poison",
          "fi": "Enchant Poison",
          "fil": "Enchant Poison",
@@ -47556,13 +48501,16 @@ const skillsjson = [
          "it": "Enchant Poison",
          "kr": "\ud3ec\uc774\uc98c",
          "nl": "Enchant Poison",
-         "pl": "Enchant Poison",
+         "pl": "Zaczarowana Trucizna",
          "ru": "\u042f\u0434\u043e\u0432\u0438\u0442\u0430\u044f \u0439\u043e-\u0439\u043e",
-         "sw": "Enchant Poison"
+         "sw": "Enchant Poison",
+         "th": "Enchant Poison"
       },
       "description": {
          "en": "Adds poison damage to your yo-yo and increases attack power.",
          "ar": "Adds poison damage to your yo-yo and increases attack power.",
+         "br": "Aumenta seu poder de ataque e adiciona a possibilidade de envenenar o alvo com seu Ioi\u00f4.",
+         "cns": "\u6682\u65f6\u7ed9\u98de\u8f6e\u9644\u52a0\u6bd2\u5c5e\u6027\uff0c\u6709\u4e00\u5b9a\u51e0\u7387\u4ee4\u5bf9\u65b9\u4e2d\u6bd2\u3002",
          "de": "Erh\u00f6ht die Angriffsst\u00e4rke der Yoyos durch das Hinzuf\u00fcgen des Gift-Attributs.",
          "fi": "Adds poison damage to your yo-yo and increases attack power.",
          "fil": "Adds poison damage to your yo-yo and increases attack power.",
@@ -47570,9 +48518,10 @@ const skillsjson = [
          "it": "Adds poison damage to your yo-yo and increases attack power.",
          "kr": "\uc694\uc694\uc5d0 \ub3c5 \uc18d\uc131\uc744 \ucd94\uac00\uc2dc\ucf1c \uacf5\uaca9\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0a4\uace0 \uc77c\uc815 \ud655\ub960\ub85c \ub3c5\uc5d0 \uc911\ub3c5\ub418\uac8c \ud569\ub2c8\ub2e4.",
          "nl": "Adds poison damage to your yo-yo and increases attack power.",
-         "pl": "Adds poison damage to your yo-yo and increases attack power.",
+         "pl": "Dodaje trucizn\u0119 do Yo-Yo i zwi\u0119ksza si\u0142\u0119 ataku.",
          "ru": "\u041d\u0430 \u043e\u0440\u0443\u0436\u0438\u0435 \u043d\u0430\u043d\u043e\u0441\u0438\u0442\u0441\u044f \u044f\u0434. \u042d\u0442\u043e \u043f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u043f\u0440\u0438\u0447\u0438\u043d\u044f\u0435\u043c\u044b\u0439 \u0438\u043c \u0443\u0440\u043e\u043d \u0438 \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u043e\u0442\u0440\u0430\u0432\u0438\u0442\u044c \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430.",
-         "sw": "Adds poison damage to your yo-yo and increases attack power."
+         "sw": "Adds poison damage to your yo-yo and increases attack power.",
+         "th": "Adds poison damage to your yo-yo and increases attack power."
       },
       "icon": "jstintpoison.png",
       "class": 3545,
@@ -47910,20 +48859,25 @@ const skillsjson = [
       "name": {
          "en": "Silent Arrow",
          "ar": "Silent Arrow",
+         "br": "Flecha Silenciadora",
+         "cns": "\u6c89\u9ed8\u4e4b\u7bad",
          "de": "Silent Arrow",
          "fi": "Silent Arrow",
          "fil": "Silent Arrow",
          "fr": "Lance de silence",
          "it": "Silent Arrow",
          "kr": "\uce68\ubb35\uc758\uc5d0\ub85c\uc6b0",
-         "nl": "Silent Arrow",
+         "nl": "Stille Pijl",
          "pl": "Silent Arrow",
          "ru": "\u0413\u043b\u0443\u0448\u0430\u0449\u0430\u044f \u0441\u0442\u0440\u0435\u043b\u0430",
-         "sw": "Silent Arrow"
+         "sw": "Silent Arrow",
+         "th": "Silent Arrow"
       },
       "description": {
          "en": "Attacks the enemy and prevents them from casting spells.",
          "ar": "Attacks the enemy and prevents them from casting spells.",
+         "br": "Ataca o inimigo e o impede de conjurar magias.",
+         "cns": "\u53d1\u51fa\u5e26\u6709\u6c89\u9ed8\u6548\u679c\u7684\u7bad\uff0c\u4f7f\u5176\u65e0\u6cd5\u4f7f\u7528\u9b54\u6cd5\u3002",
          "de": "Der Gegner wird daran gehindert, einen Zauberspruch zu vollenden.",
          "fi": "Attacks the enemy and prevents them from casting spells.",
          "fil": "Attacks the enemy and prevents them from casting spells.",
@@ -47933,7 +48887,8 @@ const skillsjson = [
          "nl": "Attacks the enemy and prevents them from casting spells.",
          "pl": "Attacks the enemy and prevents them from casting spells.",
          "ru": "\u0413\u043b\u0443\u0448\u0430\u0449\u0430\u044f \u0441\u0442\u0440\u0435\u043b\u0430 \u043d\u0435 \u0434\u0430\u0435\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0447\u0438\u0442\u0430\u0442\u044c \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u044f.",
-         "sw": "Attacks the enemy and prevents them from casting spells."
+         "sw": "Attacks the enemy and prevents them from casting spells.",
+         "th": "Attacks the enemy and prevents them from casting spells."
       },
       "icon": "ragbowsltaro.png",
       "class": 9295,
@@ -48007,7 +48962,7 @@ const skillsjson = [
             "minAttack": 110,
             "maxAttack": 111,
             "consumedMP": 34,
-            "cooldown": 14,
+            "cooldown": 15,
             "duration": 14,
             "durationPVP": 14,
             "abilities": [
@@ -48031,7 +48986,7 @@ const skillsjson = [
             "minAttack": 112,
             "maxAttack": 113,
             "consumedMP": 36,
-            "cooldown": 14,
+            "cooldown": 15,
             "duration": 16,
             "durationPVP": 16,
             "abilities": [
@@ -48055,7 +49010,7 @@ const skillsjson = [
             "minAttack": 114,
             "maxAttack": 115,
             "consumedMP": 38,
-            "cooldown": 13,
+            "cooldown": 15,
             "duration": 18,
             "durationPVP": 18,
             "abilities": [
@@ -48079,7 +49034,7 @@ const skillsjson = [
             "minAttack": 116,
             "maxAttack": 117,
             "consumedMP": 40,
-            "cooldown": 13,
+            "cooldown": 15,
             "duration": 20,
             "durationPVP": 20,
             "abilities": [
@@ -48103,7 +49058,7 @@ const skillsjson = [
             "minAttack": 118,
             "maxAttack": 119,
             "consumedMP": 42,
-            "cooldown": 12,
+            "cooldown": 15,
             "duration": 22,
             "durationPVP": 22,
             "abilities": [
@@ -48127,7 +49082,7 @@ const skillsjson = [
             "minAttack": 120,
             "maxAttack": 121,
             "consumedMP": 44,
-            "cooldown": 12,
+            "cooldown": 15,
             "duration": 24,
             "durationPVP": 24,
             "abilities": [
@@ -48151,7 +49106,7 @@ const skillsjson = [
             "minAttack": 122,
             "maxAttack": 123,
             "consumedMP": 46,
-            "cooldown": 11,
+            "cooldown": 15,
             "duration": 28,
             "durationPVP": 28,
             "abilities": [
@@ -48175,7 +49130,7 @@ const skillsjson = [
             "minAttack": 124,
             "maxAttack": 125,
             "consumedMP": 48,
-            "cooldown": 10,
+            "cooldown": 15,
             "duration": 30,
             "durationPVP": 30,
             "abilities": [
@@ -48202,20 +49157,25 @@ const skillsjson = [
       "name": {
          "en": "Blood Fist",
          "ar": "Blood Fist",
+         "br": "Punho de Sangue",
+         "cns": "\u8840\u821e",
          "de": "Blood Fist",
          "fi": "Blood Fist",
          "fil": "Blood Fist",
          "fr": "Effusion de sang",
          "it": "Blood Fist",
          "kr": "\ube14\ub7ec\ub4dc \ud53c\uc2a4\ud2b8",
-         "nl": "Blood Fist",
-         "pl": "Blood Fist",
+         "nl": "Bloedvuist",
+         "pl": "Krwawa Pi\u0119\u015b\u0107",
          "ru": "\u041f\u0435\u0440\u0432\u0430\u044f \u043a\u0440\u043e\u0432\u044c",
-         "sw": "Blood Fist"
+         "sw": "Blood Fist",
+         "th": "Blood Fist"
       },
       "description": {
          "en": "Strikes a heavy blow to the enemy that causes bleeding to the target.",
          "ar": "Strikes a heavy blow to the enemy that causes bleeding to the target.",
+         "br": "Um forte golpe que faz com que o inimigo tenha um sangramento por um tempo.",
+         "cns": "\u7528\u62f3\u5957\u96c6\u4e2d\u653b\u51fb\u5bf9\u65b9\u7684\u5f31\u70b9\uff0c\u4e00\u5b9a\u51e0\u7387\u6709\u51fa\u8840\u6548\u679c\u3002",
          "de": "Ein Angriff gegen den Gegner welcher diesen schw\u00e4cht. Der Feind wird in den Bluten Status versetzt.",
          "fi": "Iskee kovan iskun viholliseen, joka aiheuttaa verenvuotoa kohteella.",
          "fil": "Strikes a heavy blow to the enemy that causes bleeding to the target.",
@@ -48223,9 +49183,10 @@ const skillsjson = [
          "it": "Strikes a heavy blow to the enemy that causes bleeding to the target.",
          "kr": "\ub108\ud074\ud574\uba38\ub85c \uc801\uc758 \uc57d\uc810\uc744 \uc9d1\uc911 \ud0c0\uaca9\ud569\ub2c8\ub2e4. \uc774\ub54c \uc801\uc740 \uc77c\uc815 \ud655\ub960\ub85c \ucd9c\ud608 \uc0c1\ud0dc\uac00 \ub429\ub2c8\ub2e4.",
          "nl": "Strikes a heavy blow to the enemy that causes bleeding to the target.",
-         "pl": "Strikes a heavy blow to the enemy that causes bleeding to the target.",
-         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d. \u0412\u0440\u0430\u0433 \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u043e \u0442\u0435\u0440\u044f\u0435\u0442 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u0435.",
-         "sw": "Strikes a heavy blow to the enemy that causes bleeding to the target."
+         "pl": "Brutalny cios, wywo\u0142uj\u0105cy krwawienie u wroga.",
+         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d. \u0412\u0440\u0430\u0433 \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u043e \u0442\u0435\u0440\u044f\u0435\u0442 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u0435 \u043e\u0442 \u043a\u0440\u043e\u0432\u043e\u0442\u0435\u0447\u0435\u043d\u0438\u044f.",
+         "sw": "Strikes a heavy blow to the enemy that causes bleeding to the target.",
+         "th": "Strikes a heavy blow to the enemy that causes bleeding to the target."
       },
       "icon": "bilbloodfist.png",
       "class": 7424,
@@ -48533,6 +49494,8 @@ const skillsjson = [
       "name": {
          "en": "Power Stomp",
          "ar": "Power Stomp",
+         "br": "\u00cdmpeto do Cavaleiro",
+         "cns": "\u5927\u5730\u5171\u9e23",
          "de": "Power Stump",
          "fi": "Power Stomp",
          "fil": "Power Stomp",
@@ -48540,13 +49503,16 @@ const skillsjson = [
          "it": "Power Stomp",
          "kr": "\ud30c\uc6cc \uc2a4\ud140\ud504",
          "nl": "Power Stomp",
-         "pl": "Power Stomp",
+         "pl": "Pot\u0119\u017cne Tupni\u0119cie",
          "ru": "\u041e\u0448\u0435\u043b\u043e\u043c\u043b\u044f\u044e\u0449\u0438\u0439 \u0443\u0434\u0430\u0440",
-         "sw": "Power Stomp"
+         "sw": "Power Stomp",
+         "th": "Power Stomp"
       },
       "description": {
          "en": "Pounds the ground, stunning nearby enemies. Requires two-handed axe.",
          "ar": "Pounds the ground, stunning nearby enemies. Requires two-handed axe.",
+         "br": "Pisoteia o ch\u00e3o, atordoando inimigos pr\u00f3ximos. Exige um machado de duas m\u00e3os.",
+         "cns": "\u7528\u65a7\u67c4\u6253\u51fb\u5730\u9762\u5236\u9020\u51b2\u51fb\u6ce2\u653b\u51fb\u5468\u56f4\u654c\u4eba\uff0c\u4e00\u5b9a\u51e0\u7387\u5c06\u5bf9\u65b9\u6253\u6655\u3002",
          "de": "Wirft den Gegner zu Boden, indem man mit der Axt auf die Erde schl\u00e4gt. Chance, den Gegner zu bet\u00e4uben.",
          "fi": "Iskee maata tainuttaen l\u00e4heiset viholliset. Vaatii kahden k\u00e4den kirveen.",
          "fil": "Pounds the ground, stunning nearby enemies. Requires two-handed axe.",
@@ -48554,9 +49520,10 @@ const skillsjson = [
          "it": "Pounds the ground, stunning nearby enemies. Requires two-handed axe.",
          "kr": "\uc591\uc190\ub3c4\ub07c\ub85c \uc9c0\uba74\uc744 \uac15\ud558\uac8c \ub0b4\ub9ac\uccd0\uc11c \uc8fc\ubcc0\uc758 \uc801\ub4e4\uc744 \ud0c0\uaca9\ud569\ub2c8\ub2e4. \uc774\ub54c \uc801\ub4e4\uc744 \uc77c\uc815 \ud655\ub960\ub85c \uc2a4\ud134 \uc0c1\ud0dc\ub85c \ub9cc\ub4ed\ub2c8\ub2e4.",
          "nl": "Pounds the ground, stunning nearby enemies. Requires two-handed axe.",
-         "pl": "Pounds the ground, stunning nearby enemies. Requires two-handed axe.",
+         "pl": "Uderza ziemi\u0119 z olbrzymi\u0105 si\u0142\u0105, wywo\u0142uj\u0105c\u0105 og\u0142uszenie u wrog\u00f3w wok\u00f3\u0142 ciebie. Wymaga Halabardy.",
          "ru": "\u0423\u0434\u0430\u0440 \u0432 \u0437\u0435\u043c\u043b\u044e, \u043e\u0433\u043b\u0443\u0448\u0430\u044e\u0449\u0438\u0439 \u0441\u0442\u043e\u044f\u0449\u0438\u0445 \u043f\u043e\u0431\u043b\u0438\u0437\u043e\u0441\u0442\u0438 \u0432\u0440\u0430\u0433\u043e\u0432. \u0414\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f \u0434\u0432\u0443\u0440\u0443\u0447\u043d\u044b\u0439 \u0442\u043e\u043f\u043e\u0440 \u0438\u043b\u0438 \u0441\u0435\u043a\u0438\u0440\u0430.",
-         "sw": "Pounds the ground, stunning nearby enemies. Requires two-handed axe."
+         "sw": "Pounds the ground, stunning nearby enemies. Requires two-handed axe.",
+         "th": "Pounds the ground, stunning nearby enemies. Requires two-handed axe."
       },
       "icon": "knttaxpwstum.png",
       "class": 5330,
@@ -48844,6 +49811,8 @@ const skillsjson = [
       "name": {
          "en": "Silent Shot",
          "ar": "Silent Shot",
+         "br": "Tiro Silencioso",
+         "cns": "\u4f0f\u51fb",
          "de": "Silent Shot",
          "fi": "Silent Shot",
          "fil": "Silent Shot",
@@ -48851,13 +49820,16 @@ const skillsjson = [
          "it": "Silent Shot",
          "kr": "\uc0ac\uc77c\ub7f0\ud2b8 \uc0f7",
          "nl": "Silent Shot",
-         "pl": "Silent Shot",
+         "pl": "Cichy Strza\u0142",
          "ru": "\u0411\u0435\u0441\u0448\u0443\u043c\u043d\u044b\u0439 \u0432\u044b\u0441\u0442\u0440\u0435\u043b",
-         "sw": "Silent Shot"
+         "sw": "Silent Shot",
+         "th": "Silent Shot"
       },
       "description": {
          "en": "A surprise attack that does more damage during Dark Illusion.",
          "ar": "A surprise attack that does more damage during Dark Illusion.",
+         "br": "Ataque surpresa que causa mais dano durante a Ilus\u00e3o das Trevas.",
+         "cns": "\u5077\u88ad\u5bf9\u65b9\uff0c\u5728\u6f5c\u884c\u72b6\u6001\u4e0b\u5a01\u529b\u66f4\u5927\uff0c\u65bd\u5c55\u6280\u80fd\u540e\u6f5c\u884c\u72b6\u6001\u4f1a\u88ab\u89e3\u9664\u3002",
          "de": "Ein \u00dcberraschungsangriff. Durch den Status von Dark Illusion wird die Angriffsst\u00e4rke erh\u00f6ht.",
          "fi": "A surprise attack that does more damage during Dark Illusion.",
          "fil": "A surprise attack that does more damage during Dark Illusion.",
@@ -48865,9 +49837,10 @@ const skillsjson = [
          "it": "A surprise attack that does more damage during Dark Illusion.",
          "kr": "\uc228\uc744 \uc8fd\uc774\uace0 \uc801\uc5d0\uac8c \uae30\uc2b5 \uacf5\uaca9\uc744 \ud569\ub2c8\ub2e4. \ub2e4\ud06c\uc77c\ub8e8\uc83c \uc0c1\ud0dc\uc5d0\uc11c \uc0ac\uc6a9\ud558\uba74 \uacf5\uaca9\ub825\uc774 \ucee4\uc9d1\ub2c8\ub2e4.",
          "nl": "A surprise attack that does more damage during Dark Illusion.",
-         "pl": "A surprise attack that does more damage during Dark Illusion.",
+         "pl": "Niespodziewany atak, kt\u00f3ry z Mrocznej Iluzji zadaje wi\u0119ksze obra\u017cenia.",
          "ru": "\u041f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u0437\u0430\u0441\u0442\u0430\u0442\u044c \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430 \u0432\u0440\u0430\u0441\u043f\u043b\u043e\u0445. \u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0431\u043e\u043b\u044c\u0448\u0435 \u0443\u0440\u043e\u043d\u0430 \u043f\u0440\u0438 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u0438 \u0418\u043b\u043b\u044e\u0437\u0438\u0438 \u043f\u0443\u0441\u0442\u043e\u0442\u044b.",
-         "sw": "A surprise attack that does more damage during Dark Illusion."
+         "sw": "A surprise attack that does more damage during Dark Illusion.",
+         "th": "A surprise attack that does more damage during Dark Illusion."
       },
       "icon": "acrbowsilent.png",
       "class": 9098,
@@ -49196,6 +50169,8 @@ const skillsjson = [
       "name": {
          "en": "Swordwind",
          "ar": "Swordwind",
+         "br": "Sopro Espada",
+         "cns": "\u87ba\u65cb\u70c8\u98ce",
          "de": "Swordwind",
          "fi": "Swordwind",
          "fil": "Swordwind",
@@ -49203,13 +50178,16 @@ const skillsjson = [
          "it": "Swordwind",
          "kr": "\ud30c\uc774\uc5b4 \uc2a4\ud2b8\ub77c\uc774\ud06c",
          "nl": "Swordwind",
-         "pl": "Swordwind",
+         "pl": "Miecz Wiatru",
          "ru": "\u0412\u043e\u0437\u0434\u0443\u0448\u043d\u044b\u0439 \u043a\u043b\u0438\u043d\u043e\u043a",
-         "sw": "Swordwind"
+         "sw": "Swordwind",
+         "th": "Swordwind"
       },
       "description": {
          "en": "Ranged, wind attack.",
          "ar": "Ranged, wind attack.",
+         "br": "Ranged, wind attack.",
+         "cns": "Ranged, wind attack.",
          "de": "Ranged, wind attack.",
          "fi": "Ranged, wind attack.",
          "fil": "Ranged, wind attack.",
@@ -49219,7 +50197,8 @@ const skillsjson = [
          "nl": "Ranged, wind attack.",
          "pl": "Ranged, wind attack.",
          "ru": "Ranged, wind attack.",
-         "sw": "Ranged, wind attack."
+         "sw": "Ranged, wind attack.",
+         "th": "Ranged, wind attack."
       },
       "icon": "magwindswordw.png",
       "class": 9581,
@@ -49567,6 +50546,8 @@ const skillsjson = [
       "name": {
          "en": "Axe Mastery",
          "ar": "\u0633\u064a\u0651\u062f \u0627\u0644\u0641\u0624\u0648\u0633",
+         "br": "Maestria do Machado",
+         "cns": "\u65a7\u672f\u9886\u609f",
          "de": "Axe Mastery",
          "fi": "Axe Mastery",
          "fil": "Axe Mastery",
@@ -49574,13 +50555,16 @@ const skillsjson = [
          "it": "Virtuose delle ascie ",
          "kr": "\uc5d1\uc2a4 \ub9c8\uc2a4\ud130\ub9ac",
          "nl": "Axe Mastery",
-         "pl": "Axe Mastery",
+         "pl": "Mistrzostwo Topora",
          "ru": "\u041c\u0430\u0441\u0442\u0435\u0440 \u0441\u0435\u043a\u0438\u0440\u044b",
-         "sw": "Axe Mastery"
+         "sw": "Axe Mastery",
+         "th": "Axe Mastery"
       },
       "description": {
          "en": "Increases the striking power of an axe.",
          "ar": "\u0632\u064a\u0627\u062f\u0629 \u0642\u0648\u0629 \u0636\u0631\u0628\u0629 \u0627\u0644\u0641\u0623\u0633.",
+         "br": "Aumenta o poder de ataque do machado.",
+         "cns": "\u5229\u7528\u4e00\u65f6\u987f\u609f\u83b7\u5f97\u7684\u65a7\u6280\u7cbe\u8fdb\uff0c\u88c5\u5907\u65a7\u65f6\u83b7\u5f97\u77ed\u65f6\u95f4\u7684\u653b\u51fb\u529b\u63d0\u5347\u3002",
          "de": "Zur Erh\u00f6hung der Angriffsst\u00e4rke bei Erhebung der Axtf\u00e4higkeiten.",
          "fi": "Lis\u00e4\u00e4 Kirveen iskuvoimaa.",
          "fil": "Increases the striking power of an axe.",
@@ -49588,9 +50572,10 @@ const skillsjson = [
          "it": "Aumenta significativamente la potenza d'attacco dell'ascia.",
          "kr": "\uc5d1\uc2a4\uc758 \uc0ac\uc6a9 \ub2a5\ub825\uc744 \ub192\uc5ec\uc11c \uacf5\uaca9\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increases the striking power of an axe.",
-         "pl": "Increases the striking power of an axe.",
+         "pl": "Zwi\u0119ksza si\u0142\u0119 ataku topor\u00f3w.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u0438\u043b\u0443 \u0443\u0434\u0430\u0440\u043e\u0432 \u0442\u043e\u043f\u043e\u0440\u043e\u043c \u0438 \u0441\u0435\u043a\u0438\u0440\u043e\u0439.",
-         "sw": "Increases the striking power of an axe."
+         "sw": "Increases the striking power of an axe.",
+         "th": "Increases the striking power of an axe."
       },
       "icon": "meroneamaster.png",
       "class": 764,
@@ -49878,6 +50863,8 @@ const skillsjson = [
       "name": {
          "en": "Spirit Fortune",
          "ar": "Spirit Fortune",
+         "br": "Fortuna Espiritual",
+         "cns": "\u653b\u51fb\u5f3a\u5316",
          "de": "Spiriture Fortune",
          "fi": "Spirit Fortune",
          "fil": "Spirit Fortune",
@@ -49885,13 +50872,16 @@ const skillsjson = [
          "it": "Spirit Fortune",
          "kr": "\uc2a4\ud53c\ub9ac\ucc98 \ud3ec\ucd98",
          "nl": "Spirit Fortune",
-         "pl": "Spirit Fortune",
+         "pl": "Duchowe Powodzenie",
          "ru": "\u0412\u043e\u043e\u0434\u0443\u0448\u0435\u0432\u043b\u0435\u043d\u0438\u0435",
-         "sw": "Spirit Fortune"
+         "sw": "Spirit Fortune",
+         "th": "Spirit Fortune"
       },
       "description": {
          "en": "Increases striking power of a target.",
          "ar": "Increases striking power of a target.",
+         "br": "Aumenta o poder de for\u00e7a.",
+         "cns": "\u6682\u65f6\u63d0\u9ad8\u65bd\u6cd5\u5bf9\u8c61\u7684\u653b\u51fb\u529b\u3002",
          "de": "Erh\u00f6ht die Angriffsst\u00e4rke des angew\u00e4hlten Spielers.",
          "fi": "Kasvattaa kohteen iskuvoimaa.",
          "fil": "Increases striking power of a target.",
@@ -49899,9 +50889,10 @@ const skillsjson = [
          "it": "Increases striking power of a target.",
          "kr": "\ub300\uc0c1\uc5d0\uac8c \uc2e0\uc131\ud55c \ud798\uc744 \ubd88\uc5b4\ub123\uc5b4 \uacf5\uaca9\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increases striking power of a target.",
-         "pl": "Increases striking power of a target.",
-         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u0438\u043b\u0443 \u0430\u0442\u0430\u043a \u0446\u0435\u043b\u0438.",
-         "sw": "Increases striking power of a target."
+         "pl": "Zwi\u0119ksza STR celu.",
+         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u0438\u043b\u0443 \u0446\u0435\u043b\u0438.",
+         "sw": "Increases striking power of a target.",
+         "th": "Increases striking power of a target."
       },
       "icon": "rinsupspirit.png",
       "class": 9389,
@@ -50230,6 +51221,8 @@ const skillsjson = [
       "name": {
          "en": "Toggle Buff",
          "ar": "Toggle Buff",
+         "br": "Alternar Buff",
+         "cns": "Buff\u4f5c\u7528",
          "de": "Toggle Buff",
          "fi": "Toggle Buff",
          "fil": "Toggle Buff",
@@ -50239,11 +51232,14 @@ const skillsjson = [
          "nl": "Toggle Buff",
          "pl": "Toggle Buff",
          "ru": "\u0412\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435 \u044d\u0444\u0444\u0435\u043a\u0442\u043e\u0432",
-         "sw": "Toggle Buff"
+         "sw": "Toggle Buff",
+         "th": "Toggle Buff"
       },
       "description": {
          "en": "",
          "ar": "",
+         "br": "",
+         "cns": "",
          "de": "",
          "fi": "",
          "fil": "",
@@ -50253,7 +51249,8 @@ const skillsjson = [
          "nl": "",
          "pl": "",
          "ru": "",
-         "sw": ""
+         "sw": "",
+         "th": ""
       },
       "icon": "jstyoybackst.png",
       "level": 1,
@@ -50287,6 +51284,8 @@ const skillsjson = [
       "name": {
          "en": "Flash",
          "ar": "Flash",
+         "br": "Flash",
+         "cns": "\u95ea\u5149\u5f39",
          "de": "Flash",
          "fi": "Flash",
          "fil": "Flash",
@@ -50294,13 +51293,16 @@ const skillsjson = [
          "it": "Flash",
          "kr": "\uc12c\uad11\ud0c4",
          "nl": "Flash",
-         "pl": "Flash",
+         "pl": "B\u0142ysk",
          "ru": "\u0412\u0441\u043f\u044b\u0448\u043a\u0430",
-         "sw": "Flash"
+         "sw": "Flash",
+         "th": "Flash"
       },
       "description": {
          "en": "Blinded by the flash of light.",
          "ar": "Blinded by the flash of light.",
+         "br": "Luz cegante.",
+         "cns": "\u88ab\u95ea\u5149\u5f39\u51fb\u4e2d\u540e\u65e0\u6cd5\u7741\u5f00\u773c\u775b\u3002",
          "de": "Die Augen k\u00f6nnen wegen einem starken Blitz nicht ge\u00f6ffnet werden.",
          "fi": "Blinded by the flash of light.",
          "fil": "Blinded by the flash of light.",
@@ -50308,9 +51310,10 @@ const skillsjson = [
          "it": "Blinded by the flash of light.",
          "kr": "\uc12c\uad11\ud0c4 \ud2b8\ub7a9\uc5d0 \uac78\ub824 \ub208\uc744 \ub730 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.",
          "nl": "Blinded by the flash of light.",
-         "pl": "Blinded by the flash of light.",
+         "pl": "O\u015blepiony przez \u015bwiat\u0142o.",
          "ru": "\u0412\u044b \u043e\u0441\u043b\u0435\u043f\u043b\u0435\u043d\u044b \u0432\u0441\u043f\u044b\u0448\u043a\u043e\u0439 \u0441\u0432\u0435\u0442\u0430.",
-         "sw": "Blinded by the flash of light."
+         "sw": "Blinded by the flash of light.",
+         "th": "Blinded by the flash of light."
       },
       "icon": "elemulavalan.png",
       "level": 1,
@@ -50355,6 +51358,8 @@ const skillsjson = [
       "name": {
          "en": "Iceshark",
          "ar": "Iceshark",
+         "br": "Cristal de Gelo",
+         "cns": "\u51b0\u67aa\u6295\u5c04",
          "de": "Iceshark",
          "fi": "Iceshark",
          "fil": "Iceshark",
@@ -50362,13 +51367,16 @@ const skillsjson = [
          "it": "Iceshark",
          "kr": "\uc544\uc774\uc2a4 \uc0e4\ud06c",
          "nl": "Iceshark",
-         "pl": "Iceshark",
+         "pl": "Lodowy Rekin",
          "ru": "\u041b\u0435\u0434\u044f\u043d\u044b\u0435 \u0443\u043a\u0443\u0441\u044b",
-         "sw": "Iceshark"
+         "sw": "Iceshark",
+         "th": "Iceshark"
       },
       "description": {
          "en": "Ranged attack that fires an ice projectile.",
          "ar": "Ranged attack that fires an ice projectile.",
+         "br": "Ataque a dist\u00e2ncia que dispara um proj\u00e9til de gelo.",
+         "cns": "\u51dd\u6c34\u6210\u51b0\uff0c\u51fb\u5411\u9644\u8fd1\u7684\u654c\u4eba\u3002",
          "de": "Dem Gegner mit einer starken Wolke aus Eis Schaden zuf\u00fcgen.",
          "fi": "Ranged attack that fires an ice projectile.",
          "fil": "Ranged attack that fires an ice projectile.",
@@ -50376,9 +51384,10 @@ const skillsjson = [
          "it": "Ranged attack that fires an ice projectile.",
          "kr": "\uc0e4\ud06c \ud615\ud0dc\uc758 \uc5bc\uc74c \ub369\uc5b4\ub9ac\ub97c \ub0a0\ub824 \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Ranged attack that fires an ice projectile.",
-         "pl": "Ranged attack that fires an ice projectile.",
-         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d \u0432\u043e\u0434\u043e\u0439.",
-         "sw": "Ranged attack that fires an ice projectile."
+         "pl": "Ciska we wroga ostrymi od\u0142amkami lodu.",
+         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d \u043b\u0435\u0434\u044f\u043d\u044b\u043c\u0438 \u043e\u0441\u043a\u043e\u043b\u043a\u0430\u043c\u0438.",
+         "sw": "Ranged attack that fires an ice projectile.",
+         "th": "Ranged attack that fires an ice projectile."
       },
       "icon": "elewaticeshk.png",
       "class": 9150,
@@ -50566,6 +51575,8 @@ const skillsjson = [
       "name": {
          "en": "Bleeding",
          "ar": "Bleeding",
+         "br": "Bleeding",
+         "cns": "Bleeding",
          "de": "Bleeding",
          "fi": "Bleeding",
          "fil": "Bleeding",
@@ -50575,11 +51586,14 @@ const skillsjson = [
          "nl": "Bleeding",
          "pl": "Bleeding",
          "ru": "Bleeding",
-         "sw": "Bleeding"
+         "sw": "Bleeding",
+         "th": "Bleeding"
       },
       "description": {
          "en": "Damages an enemy over a period of time and reduces their attack speed.",
          "ar": "Damages an enemy over a period of time and reduces their attack speed.",
+         "br": "Causa danos a um inimigo por um per\u00edodo de tempo limitado e reduz sua velocidade de ataque.",
+         "cns": "\u4f24\u53e3\u4e0d\u65ad\u6d41\u8840\u2026\u2026",
          "de": "Den Gegner kontinuierlich durch Blutung f\u00fcr eine bestimmte Zeit Schaden zuf\u00fcgen.",
          "fi": "Damages an enemy over a period of time and reduces their attack speed.",
          "fil": "Damages an enemy over a period of time and reduces their attack speed.",
@@ -50588,10 +51602,11 @@ const skillsjson = [
          "kr": "\uc77c\uc815 \uc2dc\uac04\ub3d9\uc548 \ucd9c\ud608\ub85c \uc778\ud55c \uc9c0\uc18d\uc801\uc778 \ud53c\ud574\ub97c \uc785\ud799\ub2c8\ub2e4.",
          "nl": "Damages an enemy over a period of time and reduces their attack speed.",
          "pl": "Damages an enemy over a period of time and reduces their attack speed.",
-         "ru": "\u0412\u044b \u043f\u043e\u043b\u0443\u0447\u0430\u0435\u0442\u0435 \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u044b\u0439 \u0443\u0440\u043e\u043d.",
-         "sw": "Damages an enemy over a period of time and reduces their attack speed."
+         "ru": "\u0412\u044b \u043f\u043e\u043b\u0443\u0447\u0430\u0435\u0442\u0435 \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u044b\u0439 \u0443\u0440\u043e\u043d. \u0421\u043a\u043e\u0440\u043e\u0441\u0442\u044c \u0430\u0442\u0430\u043a\u0438 \u0441\u043d\u0438\u0436\u0435\u043d\u0430.",
+         "sw": "Damages an enemy over a period of time and reduces their attack speed.",
+         "th": "Damages an enemy over a period of time and reduces their attack speed."
       },
-      "icon": "elefirbunfil.png",
+      "icon": "bilbloodfist.png",
       "level": 1,
       "element": "none",
       "magic": false,
@@ -50789,6 +51804,8 @@ const skillsjson = [
       "name": {
          "en": "Spring Attack",
          "ar": "Spring Attack",
+         "br": "Ataque Sequencial",
+         "cns": "\u6218\u65a7\u8fde\u51fb",
          "de": "Spring Attack",
          "fi": "Spring Attack",
          "fil": "Spring Attack",
@@ -50796,13 +51813,16 @@ const skillsjson = [
          "it": "Spring Attack",
          "kr": "\uc2a4\ud504\ub9c1 \uc5b4\ud14d",
          "nl": "Spring Attack",
-         "pl": "Spring Attack",
+         "pl": "Spr\u0119\u017cysty Atak",
          "ru": "\u041f\u0440\u0443\u0436\u0438\u043d\u0430",
-         "sw": "Spring Attack"
+         "sw": "Spring Attack",
+         "th": "Spring Attack"
       },
       "description": {
          "en": "Strikes at an enemy multiple times. Requires two weapons.",
          "ar": "Strikes at an enemy multiple times. Requires two weapons.",
+         "br": "Golpeia v\u00e1rias vezes o inimigo. Exige dois machados.",
+         "cns": "\u6325\u821e\u624b\u4e2d\u7684\u65a7\u5934\u5411\u5bf9\u65b9\u53d1\u52a8\u56db\u8fde\u51fb\uff0c\u9020\u6210\u9ad8\u4e8e\u666e\u901a\u653b\u51fb\u7684\u4f24\u5bb3\u3002",
          "de": "Einen Hieb gegen den Gegner durch wiederholendes Schwingen der Axt.",
          "fi": "Iskee vihollista monta kertaa. Vaatii kaksi asetta.",
          "fil": "Strikes at an enemy multiple times. Requires two weapons.",
@@ -50810,9 +51830,10 @@ const skillsjson = [
          "it": "Strikes at an enemy multiple times. Requires two weapons.",
          "kr": "\uc5d1\uc2a4\ub97c \ub9c8\uad6c \ud718\ub458\ub7ec \uc801\uc744 \uc5f0\uc18d \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Strikes at an enemy multiple times. Requires two weapons.",
-         "pl": "Strikes at an enemy multiple times. Requires two weapons.",
-         "ru": "\u041d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0431\u044b\u0441\u0442\u0440\u044b\u0445 \u0443\u0434\u0430\u0440\u043e\u0432 \u043f\u043e \u0432\u0440\u0430\u0433\u0443.  \u0414\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0440\u0435\u0431\u0443\u044e\u0442\u0441\u044f \u0434\u0432\u0430 \u0442\u043e\u043f\u043e\u0440\u0430.",
-         "sw": "Strikes at an enemy multiple times. Requires two weapons."
+         "pl": "Uderza wielokrotnie przeciwnika za pomoc\u0105 specjalnej kombinacji cios\u00f3w. Wymaga dw\u00f3ch broni.",
+         "ru": "\u041d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0431\u044b\u0441\u0442\u0440\u044b\u0445 \u0443\u0434\u0430\u0440\u043e\u0432 \u043f\u043e \u0432\u0440\u0430\u0433\u0443. \u0414\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0440\u0435\u0431\u0443\u044e\u0442\u0441\u044f \u0434\u0432\u0430 \u0442\u043e\u043f\u043e\u0440\u0430.",
+         "sw": "Strikes at an enemy multiple times. Requires two weapons.",
+         "th": "Strikes at an enemy multiple times. Requires two weapons."
       },
       "icon": "blddaxspring.png",
       "class": 2246,
@@ -50999,20 +52020,25 @@ const skillsjson = [
       "name": {
          "en": "Poison Cloud",
          "ar": "Poison Cloud",
+         "br": "Nuvem Venenosa",
+         "cns": "\u6bd2\u4e91\u5bc6\u5e03",
          "de": "Poison Cloud",
          "fi": "Poison Cloud",
          "fil": "Poison Cloud",
          "fr": "Nuage toxique",
          "it": "Poison Cloud",
          "kr": "\ud3ec\uc774\uc98c \ud074\ub77c\uc6b0\ub4dc",
-         "nl": "Poison Cloud",
-         "pl": "Poison Cloud",
+         "nl": "Vergif Wolk",
+         "pl": "Truj\u0105ca Chmura",
          "ru": "\u042f\u0434\u043e\u0432\u0438\u0442\u043e\u0435 \u043e\u0431\u043b\u0430\u043a\u043e",
-         "sw": "Poison Cloud"
+         "sw": "Poison Cloud",
+         "th": "Poison Cloud"
       },
       "description": {
          "en": "Poisons all enemies in the surrounding area.",
          "ar": "Poisons all enemies in the surrounding area.",
+         "br": "Envenena todos os inimigos na \u00e1rea ao redor. ",
+         "cns": "\u5c06\u5bf9\u65b9\u7f6e\u4e8e\u6bd2\u4e91\u4e2d\uff0c\u4e00\u5b9a\u51e0\u7387\u4f7f\u5176\u4e2d\u6bd2\u3002",
          "de": "Allen Gegnern mit saurem Regen Schaden zuf\u00fcgen.",
          "fi": "Poisons all enemies in the surrounding area.",
          "fil": "Poisons all enemies in the surrounding area.",
@@ -51020,9 +52046,10 @@ const skillsjson = [
          "it": "Poisons all enemies in the surrounding area.",
          "kr": "\ub3c5\uc744 \ubfcc\ub9ac\ub294 \uad6c\ub984\uc744 \ub9cc\ub4e4\uc5b4 \uc8fc\ubcc0\uc758 \ubaa8\ub4e0 \uc801\ub4e4\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Poisons all enemies in the surrounding area.",
-         "pl": "Poisons all enemies in the surrounding area.",
-         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0443\u0440\u043e\u043d \u0441\u0442\u0438\u0445\u0438\u0435\u0439 \u0432\u043e\u0434\u044b \u043f\u043e \u043e\u0431\u043b\u0430\u0441\u0442\u0438.",
-         "sw": "Poisons all enemies in the surrounding area."
+         "pl": "Zatruwa wszystkich wrog\u00f3w wok\u00f3\u0142 wybranego celu. Zatruty cel b\u0119dzie otrzymywa\u0142 ci\u0105g\u0142e obra\u017cenia.",
+         "ru": "\u041e\u0442\u0440\u0430\u0432\u043b\u044f\u0435\u0442 \u0432\u0441\u0435\u0445 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u043e\u0432 \u0432\u043e\u043a\u0440\u0443\u0433.",
+         "sw": "Poisons all enemies in the surrounding area.",
+         "th": "Poisons all enemies in the surrounding area."
       },
       "icon": "elewatpoicld.png",
       "class": 9150,
@@ -51400,6 +52427,8 @@ const skillsjson = [
       "name": {
          "en": "Clean Hit",
          "ar": "Clean Hit",
+         "br": "Golpe Direto",
+         "cns": "\u5f27\u6708\u65a9",
          "de": "Clean Hit",
          "fi": "Clean Hit",
          "fil": "Clean Hit",
@@ -51409,11 +52438,14 @@ const skillsjson = [
          "nl": "Clean Hit",
          "pl": "Czyste Ci\u0119cie",
          "ru": "\u041f\u0440\u044f\u043c\u043e\u0439 \u0432\u044b\u043f\u0430\u0434",
-         "sw": "Clean Hit"
+         "sw": "Clean Hit",
+         "th": "Clean Hit"
       },
       "description": {
          "en": "A powerful, downward strike.",
          "ar": "\u0636\u0631\u0628\u0629 \u0642\u0648\u064a\u0629 \u0646\u062d\u0648 \u0627\u0644\u062e\u0635\u0645.",
+         "br": "Um potente golpe para baixo.",
+         "cns": "\u8d77\u59cb\u6280\u80fd\uff0c\u7528\u5251\u6216\u65a7\u7ed9\u654c\u4eba\u5168\u529b\u7684\u4e00\u51fb",
          "de": "Benutze diesen Skill, um mit einem m\u00e4chtigen Schwerthieb Schaden zu verursachen.",
          "fi": "Voimakas, alasp\u00e4in suuntautuva isku.",
          "fil": "A powerful, downward strike.",
@@ -51423,7 +52455,8 @@ const skillsjson = [
          "nl": "A powerful, downward strike.",
          "pl": "Zadaje przeciwnikowi jeden, solidny cios.",
          "ru": "\u0420\u0435\u0437\u043a\u0438\u0439 \u0438 \u043c\u043e\u0449\u043d\u044b\u0439 \u0443\u0434\u0430\u0440.",
-         "sw": "A powerful, downward strike."
+         "sw": "A powerful, downward strike.",
+         "th": "A powerful, downward strike."
       },
       "icon": "vagonecleanh.png",
       "class": 9686,
@@ -51585,20 +52618,25 @@ const skillsjson = [
       "name": {
          "en": "Satanology",
          "ar": "Satanology",
+         "br": "Satanologia",
+         "cns": "\u5b9a\u8eab\u672f",
          "de": "Satanology",
          "fi": "Satanology",
          "fil": "Satanology",
          "fr": "Satanologie",
          "it": "Satanology",
          "kr": "\uc0ac\ud0c0\ub180\ub85c\uc9c0",
-         "nl": "Satanology",
-         "pl": "Satanology",
+         "nl": "Satanologie",
+         "pl": "Satanologia",
          "ru": "\u0421\u0433\u043b\u0430\u0437",
-         "sw": "Satanology"
+         "sw": "Satanology",
+         "th": "Satanology"
       },
       "description": {
          "en": "Prevents an enemy from approaching.",
          "ar": "Prevents an enemy from approaching.",
+         "br": "Evita que um inimigo se aproxime.",
+         "cns": "\u8ff7\u60d1\u5bf9\u65b9\u7684\u773c\u775b\u4e00\u5b9a\u51e0\u7387\u4f7f\u5176\u5728\u7279\u5b9a\u65f6\u95f4\u5185\u65e0\u6cd5\u79fb\u52a8\u3002",
          "de": "Das Ann\u00e4hern des Gegners verhindern indem man Konfusion einsetzt.",
          "fi": "Prevents an enemy from approaching.",
          "fil": "Prevents an enemy from approaching.",
@@ -51606,9 +52644,10 @@ const skillsjson = [
          "it": "Prevents an enemy from approaching.",
          "kr": "\uc801\uc758 \ub208\uc744 \ud63c\ub780\uc2dc\ucf1c \uc6c0\uc9c1\uc774\uc9c0 \ubabb\ud558\uac8c \ub9cc\ub4ed\ub2c8\ub2e4.",
          "nl": "Prevents an enemy from approaching.",
-         "pl": "Prevents an enemy from approaching.",
+         "pl": "Chwyta cel i powstrzymuje go przed zbli\u017ceniem si\u0119.",
          "ru": "\u041f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u0434\u0435\u0440\u0436\u0430\u0442\u044c \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430 \u043d\u0430 \u0440\u0430\u0441\u0441\u0442\u043e\u044f\u043d\u0438\u0438.",
-         "sw": "Prevents an enemy from approaching."
+         "sw": "Prevents an enemy from approaching.",
+         "th": "Prevents an enemy from approaching."
       },
       "icon": "psysnolgy.png",
       "class": 5709,
@@ -51884,6 +52923,8 @@ const skillsjson = [
       "name": {
          "en": "Armor Penetrate",
          "ar": "Armor Penetrate",
+         "br": "Penetrar Armadura",
+         "cns": "\u907f\u5b9e\u5c31\u865a",
          "de": "Armor Penetrate",
          "fi": "Armor Penetrate",
          "fil": "Armor Penetrate",
@@ -51891,13 +52932,16 @@ const skillsjson = [
          "it": "Armor Penetrate",
          "kr": "\uc544\uba38 \ud398\ub108\ud2b8\ub808\uc774\ud2b8",
          "nl": "Armor Penetrate",
-         "pl": "Armor Penetrate",
+         "pl": "Przebicie Pancerza",
          "ru": "\u041f\u0440\u043e\u0431\u0438\u0432\u0430\u043d\u0438\u0435 \u0431\u0440\u043e\u043d\u0438",
-         "sw": "Armor Penetrate"
+         "sw": "Armor Penetrate",
+         "th": "Armor Penetrate"
       },
       "description": {
          "en": "Strikes at the enemy and lowers their Melee Block Rate.",
          "ar": "Strikes at the enemy and lowers their Melee Block Rate.",
+         "br": "Ataca o inimigo reduzindo sua taxa de Bloqueio Corpo a Corpo.",
+         "cns": "\u653b\u51fb\u5bf9\u65b9\u5f31\u70b9\uff0c\u964d\u4f4e\u5bf9\u65b9\u7684\u9632\u5fa1\u80fd\u529b\u3002",
          "de": "Verwirren des Gegners. Die Verteidigung des Gegners wird geschw\u00e4cht.",
          "fi": "Iskee vihollista ja laskee kohteen l\u00e4hitaistelu Block Ratea.",
          "fil": "Strikes at the enemy and lowers their Melee Block Rate.",
@@ -51905,9 +52949,10 @@ const skillsjson = [
          "it": "Strikes at the enemy and lowers their Melee Block Rate.",
          "kr": "\uc801\uc758 \ubc29\uc5b4\uac00 \uc57d\ud55c \ubd80\ubd84\uc744 \ub178\ub824\uc11c \ud0c0\uaca9\ud569\ub2c8\ub2e4. \uc774\ub54c \uc801\uc758 \ubc29\uc5b4\ub825\uc758 \uc77c\ubd80\uac00 \ubb34\uc2dc\ub429\ub2c8\ub2e4.",
          "nl": "Strikes at the enemy and lowers their Melee Block Rate.",
-         "pl": "Strikes at the enemy and lowers their Melee Block Rate.",
-         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0432\u0440\u0430\u0433\u0443 \u0443\u0440\u043e\u043d \u0438 \u0441\u043d\u0438\u0436\u0430\u0435\u0442 \u0435\u0433\u043e \u0437\u0430\u0449\u0438\u0442\u0443 \u043d\u0430 \u043d\u0435\u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u0432\u0440\u0435\u043c\u044f.",
-         "sw": "Strikes at the enemy and lowers their Melee Block Rate."
+         "pl": "Przebija pancerz wroga, obni\u017caj\u0105c jego szans\u0119 na Blok.",
+         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0432\u0440\u0430\u0433\u0443 \u0443\u0440\u043e\u043d \u0438 \u0441\u043d\u0438\u0436\u0430\u0435\u0442 \u0435\u0433\u043e \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u044c \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0430\u0442\u0430\u043a\u0438 \u0431\u043b\u0438\u0436\u043d\u0435\u0433\u043e \u0431\u043e\u044f.",
+         "sw": "Strikes at the enemy and lowers their Melee Block Rate.",
+         "th": "Strikes at the enemy and lowers their Melee Block Rate."
       },
       "icon": "blddblarmpen.png",
       "class": 2246,
@@ -52187,20 +53232,25 @@ const skillsjson = [
       "name": {
          "en": "Haste",
          "ar": "Haste",
+         "br": "Acelera\u00e7\u00e3o",
+         "cns": "\u9ad8\u6548\u672f",
          "de": "Haste",
          "fi": "Haste",
          "fil": "Haste",
          "fr": "Vivacit\u00e9",
          "it": "Haste",
          "kr": "\ud5e4\uc774\uc2a4\ud2b8",
-         "nl": "Haste",
-         "pl": "Haste",
+         "nl": "Haast",
+         "pl": "Po\u015bpiech",
          "ru": "\u0421\u043f\u0435\u0448\u043a\u0430",
-         "sw": "Haste"
+         "sw": "Haste",
+         "th": "Haste"
       },
       "description": {
          "en": "Increases attack speed and decreases casting time of a target.",
          "ar": "Increases attack speed and decreases casting time of a target.",
+         "br": "Aumenta a velocidade de ataque e diminui o tempo de conjura\u00e7\u00e3o de habilidades.",
+         "cns": "\u6682\u65f6\u63d0\u9ad8\u65bd\u6cd5\u5bf9\u8c61\u7684\u653b\u51fb\u901f\u5ea6\u3002",
          "de": "Erh\u00f6hung des Angriffstempos des angew\u00e4hlten Spielers.",
          "fi": "Kasvattaa hy\u00f6kk\u00e4ysnopeutta ja v\u00e4hent\u00e4\u00e4 kohteen loitsu aikaa.",
          "fil": "Increases attack speed and decreases casting time of a target.",
@@ -52208,9 +53258,10 @@ const skillsjson = [
          "it": "Increases attack speed and decreases casting time of a target.",
          "kr": "\ub300\uc0c1\uc758 \uacf5\uaca9\uc18d\ub3c4\ub97c \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increases attack speed and decreases casting time of a target.",
-         "pl": "Increases attack speed and decreases casting time of a target.",
-         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u044c \u0430\u0442\u0430\u043a \u0438 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439 \u0446\u0435\u043b\u0438.",
-         "sw": "Increases attack speed and decreases casting time of a target."
+         "pl": "Zwi\u0119ksza Szybko\u015b\u0107 Ataku i Szybko\u015b\u0107 rzucania zakl\u0119\u0107 celu.",
+         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u044c \u0430\u0442\u0430\u043a \u0438 \u043f\u0440\u043e\u0438\u0437\u043d\u0435\u0441\u0435\u043d\u0438\u044f \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u043d\u0438\u0439 \u0446\u0435\u043b\u0438.",
+         "sw": "Increases attack speed and decreases casting time of a target.",
+         "th": "Increases attack speed and decreases casting time of a target."
       },
       "icon": "asshaste.png",
       "class": 8962,
@@ -52239,7 +53290,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 7.5,
+                  "add": 5.5,
                   "rate": true
                },
                {
@@ -52282,7 +53333,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 8,
+                  "add": 6,
                   "rate": true
                },
                {
@@ -52325,7 +53376,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 8.5,
+                  "add": 6.5,
                   "rate": true
                },
                {
@@ -52368,7 +53419,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 9,
+                  "add": 7,
                   "rate": true
                },
                {
@@ -52411,7 +53462,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 9.5,
+                  "add": 7.5,
                   "rate": true
                },
                {
@@ -52454,7 +53505,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 10,
+                  "add": 8,
                   "rate": true
                },
                {
@@ -52497,7 +53548,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 10.5,
+                  "add": 8.5,
                   "rate": true
                },
                {
@@ -52540,7 +53591,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 11,
+                  "add": 9,
                   "rate": true
                },
                {
@@ -52583,7 +53634,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 11.5,
+                  "add": 9.5,
                   "rate": true
                },
                {
@@ -52626,7 +53677,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 12,
+                  "add": 10,
                   "rate": true
                },
                {
@@ -52669,7 +53720,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 12.5,
+                  "add": 10.5,
                   "rate": true
                },
                {
@@ -52712,7 +53763,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 13,
+                  "add": 11,
                   "rate": true
                },
                {
@@ -52755,7 +53806,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 13.5,
+                  "add": 11.5,
                   "rate": true
                },
                {
@@ -52798,7 +53849,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 14,
+                  "add": 12,
                   "rate": true
                },
                {
@@ -52841,7 +53892,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 14.5,
+                  "add": 12.5,
                   "rate": true
                },
                {
@@ -52884,7 +53935,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 15,
+                  "add": 13,
                   "rate": true
                },
                {
@@ -52927,7 +53978,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 15.5,
+                  "add": 13.5,
                   "rate": true
                },
                {
@@ -52970,7 +54021,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 16,
+                  "add": 14,
                   "rate": true
                },
                {
@@ -53013,7 +54064,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 16.5,
+                  "add": 14.5,
                   "rate": true
                },
                {
@@ -53056,7 +54107,7 @@ const skillsjson = [
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 17.5,
+                  "add": 15,
                   "rate": true
                },
                {
@@ -53098,6 +54149,8 @@ const skillsjson = [
       "name": {
          "en": "Guard",
          "ar": "Guard",
+         "br": "Guarda",
+         "cns": "\u96c6\u4e2d\u9632\u536b",
          "de": "Guard",
          "fi": "Guard",
          "fil": "Guard",
@@ -53105,13 +54158,16 @@ const skillsjson = [
          "it": "Sentinella",
          "kr": "\uacbd\ube44\ubcd1",
          "nl": "Guard",
-         "pl": "Guard",
+         "pl": "Garda",
          "ru": "\u0417\u0430\u0449\u0438\u0442\u043d\u0438\u043a",
-         "sw": "Guard"
+         "sw": "Guard",
+         "th": "Guard"
       },
       "description": {
          "en": "Increases defense by lowering attack power. Requires a weapon to be equipped.",
          "ar": "\u0627\u0646\u0642\u0627\u0635 \u0637\u0627\u0642\u0629 \u0627\u0644\u062f\u0641\u0627\u0639 \u0644\u0632\u064a\u0627\u062f\u0629 \u0637\u0627\u0642\u0629 \u0627\u0644\u0647\u062c\u0648\u0645. \u062a\u0633\u062a\u0644\u0632\u0645 \u0633\u0644\u0627\u062d\u064b\u0627 \u0645\u0639\u064a\u0651\u0646\u0627.",
+         "br": "Aumenta a defesa reduzindo o poder de ataque. Exige uma espada de duas m\u00e3os.",
+         "cns": "\u6682\u65f6\u964d\u4f4e\u6b66\u5668\u7684\u653b\u51fb\u80fd\u529b\uff0c\u96c6\u4e2d\u7cbe\u795e\u63d0\u5347\u9632\u5fa1\u3002",
          "de": "Erh\u00f6ht die Verteidigung bei Senkung der Angriffsst\u00e4rke.",
          "fi": "Increases defense by lowering attack power. Requires a weapon to be equipped.",
          "fil": "Increases defense by lowering attack power. Requires a weapon to be equipped.",
@@ -53119,9 +54175,10 @@ const skillsjson = [
          "it": "Aumenta la difesa a scapito dell'attacco del Cavaliere.",
          "kr": "\ubc29\uc5b4\uc5d0 \uc804\ub150\ud558\uc5ec \uacf5\uaca9\ub825\uc744 \uac10\uc18c\uc2dc\ud0a4\uace0 \ubc29\uc5b4\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
          "nl": "Increases defense by lowering attack power. Requires a weapon to be equipped.",
-         "pl": "Increases defense by lowering attack power. Requires a weapon to be equipped.",
+         "pl": "Masywnie zwi\u0119ksza twoj\u0105 obron\u0119 kosztem obni\u017cenia si\u0142y ataku. Wymaga dwur\u0119cznej broni.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0437\u0430\u0449\u0438\u0442\u0443, \u043d\u043e \u0441\u043d\u0438\u0436\u0430\u0435\u0442 \u0441\u0438\u043b\u0443 \u0430\u0442\u0430\u043a\u0438. \u0414\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f \u0434\u0432\u0443\u0440\u0443\u0447\u043d\u044b\u0439 \u043c\u0435\u0447 \u0438\u043b\u0438 \u0441\u0435\u043a\u0438\u0440\u0430.",
-         "sw": "Increases defense by lowering attack power. Requires a weapon to be equipped."
+         "sw": "Increases defense by lowering attack power. Requires a weapon to be equipped.",
+         "th": "Increases defense by lowering attack power. Requires a weapon to be equipped."
       },
       "icon": "kntsupguard.png",
       "class": 5330,
@@ -53383,6 +54440,8 @@ const skillsjson = [
       "name": {
          "en": "Enchant Blood",
          "ar": "Enchant Blood",
+         "br": "Ioi\u00f4 Afiado",
+         "cns": "\u5272\u88c2",
          "de": "Enchant Blood",
          "fi": "Enchant Blood",
          "fil": "Enchant Blood",
@@ -53390,13 +54449,16 @@ const skillsjson = [
          "it": "Enchant Blood",
          "kr": "\ucd9c\ud608",
          "nl": "Enchant Blood",
-         "pl": "Enchant Blood",
+         "pl": "Zaczarowana Krew",
          "ru": "\u041a\u0440\u043e\u0432\u0430\u0432\u0430\u044f \u0439\u043e-\u0439\u043e",
-         "sw": "Enchant Blood"
+         "sw": "Enchant Blood",
+         "th": "Enchant Blood"
       },
       "description": {
          "en": "Adds blood damage to your yo-yo and increases attack power.",
          "ar": "Adds blood damage to your yo-yo and increases attack power.",
+         "br": "Aumenta seu poder de ataque e adiciona a possibilidade de causar sangramento ao alvo com seu Ioi\u00f4.",
+         "cns": "\u6682\u65f6\u4ee4\u98de\u8f6e\u9644\u4e0a\u81f4\u547d\u7684\u4f24\u5bb3, \u6709\u4e00\u5b9a\u51e0\u7387\u4ee4\u5bf9\u65b9\u6301\u7eed\u51fa\u8840\u3002",
          "de": "Erh\u00f6ht die Angriffsst\u00e4rke, wenn man ein Yoyo benutzt.",
          "fi": "Adds blood damage to your yo-yo and increases attack power.",
          "fil": "Adds blood damage to your yo-yo and increases attack power.",
@@ -53404,9 +54466,10 @@ const skillsjson = [
          "it": "Adds blood damage to your yo-yo and increases attack power.",
          "kr": "\uc694\uc694\uc5d0 \uce58\uba85\uc801\uc778 \uc190\uc0c1 \uc18d\uc131\uc744 \ucd94\uac00\uc2dc\ucf1c \uacf5\uaca9\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0a4\uace0, \uc77c\uc815 \ud655\ub960\ub85c \ucd9c\ud608 \uc0c1\ud0dc\ub85c \ub9cc\ub4ed\ub2c8\ub2e4.",
          "nl": "Adds blood damage to your yo-yo and increases attack power.",
-         "pl": "Adds blood damage to your yo-yo and increases attack power.",
+         "pl": "Dodaje szans\u0119 na krwawienie do Yo-Yo i zwi\u0119ksza si\u0142\u0119 ataku.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u043f\u0440\u0438\u0447\u0438\u043d\u044f\u0435\u043c\u044b\u0439 \u0439\u043e-\u0439\u043e \u0443\u0440\u043e\u043d \u0438 \u0432\u044b\u0437\u044b\u0432\u0430\u0435\u0442 \u0443 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430 \u043a\u0440\u043e\u0432\u043e\u0442\u0435\u0447\u0435\u043d\u0438\u0435.",
-         "sw": "Adds blood damage to your yo-yo and increases attack power."
+         "sw": "Adds blood damage to your yo-yo and increases attack power.",
+         "th": "Adds blood damage to your yo-yo and increases attack power."
       },
       "icon": "jstintbleedi.png",
       "class": 3545,
@@ -53735,5 +54798,3 @@ const skillsjson = [
       ]
    }
 ]
-
-export { skillsjson }

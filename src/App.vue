@@ -405,7 +405,7 @@ input[type=number] {
 .tooltip {
   display: none;
   position: absolute;
-  background-color: #DADEEF;
+  background-color: v-bind(sidepanelbg);
   border-radius: 10px;
   width: 275px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.407);
