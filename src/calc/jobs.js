@@ -158,14 +158,24 @@ export class Vagrant extends Mover {
 
         let avgNormal = (pnMin + pnMax) / 2;
         avgNormal *= this.damageMultiplier();
+        
+        // Blade offhand calculation
         if (this instanceof Blade) { avgNormal += (avgNormal * 0.75) / 2; }
 
         const critMinFactor = 1.4 + this.criticalDamage / 100;
         const critMaxFactor = 2.0 + this.criticalDamage / 100;
         const critAvgFactor = (critMinFactor + critMaxFactor) / 2;
         const avgCrit = avgNormal * critAvgFactor;
+        
+        let final = ((avgCrit - avgNormal) * this.criticalChance / 100) + avgNormal;
 
-        const final = ((avgCrit - avgNormal) * this.criticalChance / 100) + avgNormal;
+        // Knight Swordcross calculation
+        if (this instanceof Knight && this.weapon) {
+            const swordcrossFactor = 1.0;   // 100% extra damage
+            const swordcrossChance = this.weapon.triggerSkillProbability / 100;
+            final += final * (swordcrossFactor * swordcrossChance);
+        }
+
         return final < avgNormal ? avgNormal : final;   // we wont hit below our normal, non-crit hit
         // CMover::GetAtkMultiplier
     }

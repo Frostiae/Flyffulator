@@ -291,8 +291,8 @@ export class Mover {
         const powerMax = ((weaponMax + (params.maxAttack + 0) * 5 + base - 20) * (16 + level) / 13);
         let final = (powerMin + powerMax) / 2;
         
-        // Maybe add a defines file and avoid string comparison
-        if (skill.name.en == "Asalraalaikum") { final += (((this.str / 10) * level) * (5 + this.mp / 10) + 150); }
+        if (skill.id == 5041) { final += (((this.str / 10) * level) * (5 + this.mp / 10) + 150); }      // Asal formula
+        if (this instanceof Knight) { final += final * (1.0 * (this.weapon.triggerSkillProbability / 100)); }   // Swordcross
         return final;
     }
 }
