@@ -17,9 +17,11 @@ export class Utils {
     static jobs = jobsjson;
     static sets = setsjson;
 
-    static getItemByName(name) { return this.items.find(item => item.name.en == name); }
-    static getArmorByName(name) { return this.sets.find(set => set.name.en == name); }
-    static getSkillByName(name) { return this.skills.find(skill => skill.name.en == name); }
+    static getItemByName(name)  { return this.items.find(item => item.name.en.toLowerCase() == name.toLowerCase()); }
+    static getItemById(id)      { return this.items.find(item => item.id == id); }
+    static getArmorByName(name) { return this.sets.find(set => set.name.en.toLowerCase() == name.toLowerCase()); }
+    static getSkillByName(name) { return this.skills.find(skill => skill.name.en.toLowerCase() == name.toLowerCase()); }
+    static getSkillById(id)     { return this.skills.find(skill => skill.id == id); }
 
     static getWeaponSpeed(weapon) {
         if (!weapon) return 0;

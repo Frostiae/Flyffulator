@@ -11,6 +11,7 @@
         <h5>DEX</h5>
         <h5>INT</h5>
         <h5>Assist buffs</h5>
+        <h5>Class buffs</h5>
         <h5>Stat points</h5>
       </div>
 
@@ -69,6 +70,10 @@
           <input class="charinput" type="number" v-model="character.ref.assistInt"/>
           <h5>int</h5>
         </span>
+
+        <span class="value">
+          <input id="selfbuffs" type="checkbox" @change="character.ref.applySelfBuffs($event.target.checked)">
+        </span>
         
         <p id="statpoints" v-cloak>{{ character.ref.remainingPoints }}</p>
       </div>
@@ -88,5 +93,4 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-
 </style>

@@ -15,9 +15,8 @@ export class Mover {
     }
 
     applyAssistBuffs(enabled) {
-        // TODO: Finish this
         if (enabled && !this.assistBuffs) {                // Add buffs
-            this.activeBuffs = [
+            this.activeAssistBuffs = [
                 Utils.getSkillByName('Cannon Ball'),
                 Utils.getSkillByName('Beef Up'),
                 Utils.getSkillByName('Heap Up'),
@@ -28,30 +27,52 @@ export class Mover {
                 Utils.getSkillByName('Accuracy')
             ];
 
-            this.str += this.buffParam('str', this.assistInt);
-            this.sta += this.buffParam('sta', this.assistInt);
-            this.int += this.buffParam('int', this.assistInt);
-            this.dex += this.buffParam('dex', this.assistInt);
+            this.str += this.assistBuffParam('str');
+            this.sta += this.assistBuffParam('sta');
+            this.int += this.assistBuffParam('int');
+            this.dex += this.assistBuffParam('dex');
             this.assistBuffs = true;
         } else if (!enabled && this.assistBuffs) {         // Remove buffs
             this.assistBuffs = false;
-            this.str -= this.buffParam('str', this.assistInt);
-            this.sta -= this.buffParam('sta', this.assistInt);
-            this.int -= this.buffParam('int', this.assistInt);
-            this.dex -= this.buffParam('dex', this.assistInt);
+            this.str -= this.assistBuffParam('str');
+            this.sta -= this.assistBuffParam('sta');
+            this.int -= this.assistBuffParam('int');
+            this.dex -= this.assistBuffParam('dex');
 
-            this.activeBuffs = [];
+            this.activeAssistBuffs = [];
+        }
+    }
+
+    applySelfBuffs(enabled) {
+        if (enabled && !this.selfBuffs) {
+            this.activeSelfBuffs = this.constants.buffs;
+
+            this.str += this.selfBuffParam('str');
+            this.sta += this.selfBuffParam('sta');
+            this.int += this.selfBuffParam('int');
+            this.dex += this.selfBuffParam('dex');
+
+            this.selfBuffs = true;
+        } else if (!enabled && this.selfBuffs) {
+            this.selfBuffs = false;
+
+            this.str -= this.selfBuffParam('str');
+            this.sta -= this.selfBuffParam('sta');
+            this.int -= this.selfBuffParam('int');
+            this.dex -= this.selfBuffParam('dex');
+
+            this.activeSelfBuffs = [];
         }
     }
 
     get remainingPoints() {
         let points = this.level * 2 - 2;
         points -= (this.str + this.sta + this.dex + this.int) - 60;     // Don't count the base 15
-        if (this.assistBuffs && this.activeBuffs.length) {
-            points += this.buffParam('dex', this.assistInt) + 
-                      this.buffParam('sta', this.assistInt) + 
-                      this.buffParam('str', this.assistInt) + 
-                      this.buffParam('int', this.assistInt);
+        if (this.assistBuffs && this.activeAssistBuffs.length) {
+            points += this.getExtraParam('dex') + 
+                      this.getExtraParam('sta') + 
+                      this.getExtraParam('str') + 
+                      this.getExtraParam('int');
         }
         return points;
     }
@@ -76,6 +97,10 @@ export class Mover {
         }
     }
 
+    getExtraParam(param) {
+        return this.assistBuffParam(param) + this.selfBuffParam(param);
+    }
+
     armorParam(param) {
         var add = 0;
         if (this.armor && this.armor.bonus) {
@@ -94,19 +119,42 @@ export class Mover {
         return add;
     }
 
-    buffParam(param) {
+    /**
+     * Returns additions to a specific value from your active assist buffs
+     * @param param The value to find additions for 
+     */
+    assistBuffParam(param) {
         var add = 0;
-        this.activeBuffs.forEach(buff => {
+        this.activeAssistBuffs.forEach(buff => {
             let level = buff.levels.slice(-1)[0];
             let abilities = level.abilities;
+            
             abilities.forEach(ability => {          // forEach here and not .find() because there might be multiple buffs with param
-                if (ability.parameter == param) {
+                if (ability.parameter == param && level.scalingParameters.length > 1) {
                     let extra = level.scalingParameters[1].scale * this.assistInt;
                     extra = extra > level.scalingParameters[1].maximum ? level.scalingParameters[1].maximum : extra;
                     add += ability.add + extra;
+                } else if (ability.parameter == param) {
+                    add += ability.add;
                 }
             });
         });
+        return add;
+    }
+
+    selfBuffParam(param) {
+        var add = 0;
+        this.activeSelfBuffs.forEach(buff => {
+            let level = buff.levels.slice(-1)[0];
+            let abilities = level.abilities;
+
+            abilities.forEach(ability => {
+                if (ability.parameter == param) {
+                    add += ability.add; 
+                }
+            });
+        });
+
         return add;
     }
 
@@ -215,11 +263,11 @@ export class Mover {
     damageMultiplier(skill=null) {
         let factor = 1.0;
         let elementalBonus = {
-            fire: this.armorParam('firemastery') + this.weaponParam('firemastery') + this.buffParam('firemastery'),
-            earth: this.armorParam('earthmastery') + this.weaponParam('earthmastery') + this.buffParam('earthmastery'),
-            water: this.armorParam('watermastery') + this.weaponParam('watermastery') + this.buffParam('watermastery'),
-            wind: this.armorParam('windmastery') + this.weaponParam('windmastery') + this.buffParam('windmastery'),
-            elec: this.armorParam('electricitymastery') + this.weaponParam('electricitymastery') + this.buffParam('electricitymastery'),
+            fire: this.armorParam('firemastery') + this.weaponParam('firemastery') + this.assistBuffParam('firemastery') + this.selfBuffParam('firemastery'),
+            earth: this.armorParam('earthmastery') + this.weaponParam('earthmastery') + this.assistBuffParam('earthmastery') + this.selfBuffParam('earthmastery'),
+            water: this.armorParam('watermastery') + this.weaponParam('watermastery') + this.assistBuffParam('watermastery') + this.selfBuffParam('watermastery'),
+            wind: this.armorParam('windmastery') + this.weaponParam('windmastery') + this.assistBuffParam('windmastery') + this.selfBuffParam('windmastery'),
+            elec: this.armorParam('electricitymastery') + this.weaponParam('electricitymastery') + this.assistBuffParam('electricitymastery') + this.selfBuffParam('electricitymastery'),
         };
 
         // Specific skill multipliers

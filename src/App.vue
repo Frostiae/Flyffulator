@@ -112,7 +112,8 @@ export default {
     'character.ref.sta'() { this.updateCharacter() },
     'character.ref.dex'() { this.updateCharacter() },
     'character.ref.int'() { this.updateCharacter() },
-    'character.ref.assistInt'() { this.updateCharacter() }
+    'character.ref.assistInt'() { this.updateCharacter() },
+    'character.ref.selfBuffs'() { this.updateCharacter() }
   },
   created() { this.updateCharacter() },
   methods: {
