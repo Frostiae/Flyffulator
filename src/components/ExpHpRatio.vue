@@ -53,9 +53,12 @@ export default {
       const expHPAvg = (expHPSum / expPerHP.length).toFixed(3) || 0;
 
       this.series[0].data = expPerHP
-      this.chartOptions.xaxis.categories = names
-      this.chartOptions.annotations.yaxis[0].y = expHPAvg
-      this.chartOptions.annotations.yaxis[0].label.text = 'Average: ' + expHPAvg
+
+      let opts = {... this.chartOptions}
+      opts.xaxis.categories = names
+      opts.annotations.yaxis[0].y = expHPAvg
+      opts.annotations.yaxis[0].label.text = 'Average: ' + expHPAvg
+      this.chartOptions = opts
     }
   },
   data() {

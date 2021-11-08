@@ -314,7 +314,8 @@ export class Ringmaster extends Assist {
         weapon = weapon || Utils.getItemByName("Legendary Golden Stick");
         constants = constants || {
             'weapon': 'stick',
-            'skills': [Utils.getSkillByName('Merkaba Hanzelrusha')],
+            'skills': [Utils.getSkillByName('Merkaba Hanzelrusha'),
+                       Utils.getSkillByName('Burst Crack')],
             'attackSpeed': 75.0,
             'hps': 3,
             'HP': 1.6,

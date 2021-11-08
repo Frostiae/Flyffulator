@@ -57,9 +57,12 @@ export default {
       const killavg = (killsum / killreq.length).toFixed(0) || 0
 
       this.series[0].data = killreq
-      this.chartOptions.xaxis.categories = names
-      this.chartOptions.annotations.yaxis[0].y = killavg
-      this.chartOptions.annotations.yaxis[0].label.text = 'Average: ' + killavg
+
+      let opts = {... this.chartOptions}
+      opts.xaxis.categories = names
+      opts.annotations.yaxis[0].y = killavg
+      opts.annotations.yaxis[0].label.text = 'Average: ' + killavg
+      this.chartOptions = opts
     }
   },
   data() {
