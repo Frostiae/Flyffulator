@@ -4,6 +4,7 @@
     <div class="stats" id="changelog">
       <h5>November 7</h5>
       <ul>
+        <li>Added the ability to apply class buffs.</li>
         <li>Improved the clarity of the Hits per level chart's title.</li>
       </ul>
       <h5>November 5</h5>
