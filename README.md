@@ -48,7 +48,7 @@ Start a terminal in the directory of the step from above, and run the following 
 npm install
 ```
 
-In the same directory, start the express server by running the following.
+In the same directory, start the local server by running the following.
 ```
-node server.js
+npm run serve
 ```
