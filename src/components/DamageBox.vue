@@ -38,7 +38,8 @@ export default {
   },
   methods: {
     getDamage() {
-      let focus = this.monsters.find(monster => monster.level >= this.character.level);
+      let focus = this.monsters.find(monster => monster.level >= this.character.level) || this.monsters.slice(-1)[0];
+
       if (focus) {
           this.monster = focus.name.en;
           const ttk = this.character.ttkMonster(focus)

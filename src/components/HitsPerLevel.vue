@@ -57,10 +57,16 @@ export default {
       })
 
       this.series[0].data = hitreq
-      this.chartOptions.xaxis.categories = names
-      this.chartOptions.tooltip.x.formatter = (val) => {
+      const usingSkill = this.$root.skillIndex == -1 ? "Auto Attack" : this.character.constants.skills[this.$root.skillIndex].name.en
+      
+      let opts = {...this.chartOptions}
+      opts.title.text = "Hits per level (" + usingSkill + ")"
+      opts.xaxis.categories = names
+      opts.tooltip.x.formatter = (val) => {
         return names[val - 1]
       }
+
+      this.chartOptions = opts
     }
   },
   data() {

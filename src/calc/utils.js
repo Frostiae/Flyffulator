@@ -59,13 +59,15 @@ export class Utils {
         let ignoreRanks = ['super', 'boss', 'giant'];
         
         let index = this.monsters.findIndex(monster => monster.level >= level + 1)
-        if (index === null || index < 0) { return [] }
-
+        
+        // Could not find monsters that are higher level than you, use the highest level monster
+        if (index === null || index < 0) { index = this.monsters.length - 1 }
+        
         let res = this.monsters.slice(Math.max(index - 10, 0), Math.min(index + 20, this.monsters.length))
         res = res.filter(function(monster) {
             return !ignoreRanks.includes(monster.rank) && monster.experience > 0 && !monster.name.en.includes("Criminal");
         });
-
+        
         res.forEach(monster => {
             monster.playerDamage = this.character.getDamageAgainst(monster, skill);
             monster.playerDamage = monster.playerDamage <= 0 ? 1 : monster.playerDamage;
