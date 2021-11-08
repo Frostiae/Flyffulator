@@ -57,7 +57,10 @@ export default {
       })
 
       this.series[0].data = hitreq
-      const usingSkill = this.$root.skillIndex == -1 ? "Auto Attack" : this.character.constants.skills[this.$root.skillIndex].name.en
+      let usingSkill = "Auto Attack";
+      if (this.$root.skillIndex && this.$root.skillIndex != -1 && this.character.constants.skills[this.$root.skillIndex]) {
+        usingSkill = this.character.constants.skills[this.$root.skillIndex].name.en;
+      }
       
       let opts = {...this.chartOptions}
       opts.title.text = "Hits per level (" + usingSkill + ")"

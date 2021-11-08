@@ -196,34 +196,43 @@ export class Mover {
     ttkSkill(monster, index) {
         // Skills
         if (!this.constants.skills[index]) return;
-        
-        let damage = 1;
-        damage = this.getDamageAgainst(monster, index);
-        const hitsToKill = monster.hp / damage;
-
-        const frames = 55;
-        const hitsPerSec = (30 / frames) * (this.DCT / 100);
-        
-        // Cooldown only matters if we need to hit more than once
-        if (hitsToKill > 1) {
-            const cooldown = this.constants.skills[index].levels.slice(-1)[0].cooldown;
-            if (cooldown) return (hitsToKill / hitsPerSec) + (cooldown * hitsToKill); 
-        }
-
-        return (hitsToKill / hitsPerSec)
+        return monster.hp / this.getDPS(monster, index);
     }
 
     ttkAuto(monster) {
         // Auto attack
+        return monster.hp / this.getDPS(monster);
+    }
+
+    /**
+     * Gets the damage per second numbers against a specific monster.
+     * @param monster The monster to get DPS against
+     * @param skillIndex The skill to use, or auto attack if null
+     */
+    getDPS(monster, skillIndex=null) {
         let damage = 1;
-        damage = this.getDamageAgainst(monster);
-        const hitsToKill = monster.hp / damage;
+        let dps = 1;
 
-        const hitrate = this instanceof Psykeeper ? 100 : this.hitResult(monster);
-        let hitsSec = this.constants.hps * this.aspd / 100;
-        hitsSec *= hitrate / 100;
+        if (skillIndex == null) {
+            const hitrate = this instanceof Psykeeper ? 100 : this.hitResult(monster);
+            damage = this.getDamageAgainst(monster);
+            let hitsPerSec = this.constants.hps * this.aspd / 100;
+            hitsPerSec *= hitrate / 100;
+    
+            dps = damage * hitsPerSec;
+            this.dps.aa = dps;
+        } else {
+            damage = this.getDamageAgainst(monster, skillIndex);
+            const frames = 55;
+            const hitsPerSec = (30 / frames) * (this.DCT / 100);
+            let cooldown = this.constants.skills[skillIndex].levels.slice(-1)[0].cooldown;
+            if (!cooldown) cooldown = 0;
+    
+            dps = damage * (hitsPerSec / (cooldown + 1))
+            this.dps[skillIndex] = dps;
+        }
 
-        return hitsToKill / hitsSec;
+        return dps;
     }
 
     getDamageAgainst(opponent, index=null) {

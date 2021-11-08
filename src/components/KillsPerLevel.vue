@@ -79,6 +79,9 @@ export default {
           toolbar: {
             show: false
           },
+          zoom: {
+            enabled: false
+          },
           dropShadow: {
             enabled: true,
             top: 10,

@@ -43,6 +43,15 @@ export class Vagrant extends Mover {
         this.activeAssistBuffs = [];
         this.activeSelfBuffs = [];
         this.assistInt = 300;  // How much int the assist buffing you has
+
+        this.monsters = [];
+
+        this.dps = {
+            'aa': 0,
+            '0': 0,     // Skill 1
+            '1': 0,     // Skill 2
+            '2': 0,     // Skill 3
+        }
     }
 
     get health() {

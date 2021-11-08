@@ -38,8 +38,7 @@ export default {
   },
   methods: {
     getDamage() {
-      let focus = this.monsters.find(monster => monster.level >= this.character.level) || this.monsters.slice(-1)[0];
-
+      let focus = this.$root.focusMonster;
       if (focus) {
           this.monster = focus.name.en;
           const ttk = this.character.ttkMonster(focus)
@@ -75,5 +74,6 @@ export default {
 .extensivebasic#active {
   box-shadow: #ffffff1e 0px 0px 20px;
   border: 1px solid rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
 }
 </style>

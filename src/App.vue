@@ -34,6 +34,11 @@
           <damage-box title="N/A" skillindex=2 />
         </div>
 
+        <div class="extensiverow">
+          <damage-specifics/>
+          <auto-ratio/>
+        </div>
+
         <div class="footer">
           <h5>Flyff simulator built specifically for <a href='https://flyff-api.sniegu.fr/'>Project M</a> by Frostiae#2809</h5>
         </div>
@@ -50,6 +55,8 @@ import ExperiencePerKill from './components/ExperiencePerKill.vue'
 import KillsPerLevel from './components/KillsPerLevel.vue'
 import ExpHpRatio from './components/ExpHpRatio.vue'
 import DamageBox from './components/DamageBox.vue'
+import DamageSpecifics from './components/DamageSpecifics.vue'
+import AutoRatio from './components/AutoRatio.vue'
 import HitsPerLevel from './components/HitsPerLevel.vue'
 import TopStats from './components/TopStats.vue'
 import Leftbar from './components/Leftbar.vue'
@@ -68,6 +75,8 @@ export default {
     HitsPerLevel,
     ExpHpRatio,
     DamageBox,
+    AutoRatio,
+    DamageSpecifics,
     Leftbar,
     Rightbar
   },
@@ -86,6 +95,7 @@ export default {
         ref: utils.character
       },
       monsters: utils.getMonstersAtLevel(utils.character.level),
+      focusMonster: null,
       skillIndex: -1    // Auto attack is used initially for all damage calculations
     }
   },
@@ -147,15 +157,21 @@ export default {
       // Need to update the character in utils since that is what utils uses
       utils.character = this.character.ref
       this.monsters = utils.getMonstersAtLevel(this.character.ref.level, this.skillIndex)
+      this.focusMonster = this.monsters.find(monster => monster.level >= this.character.ref.level) || this.monsters.slice(-1)[0];
+      this.character.ref.monsters = this.monsters;
     },
     updateMonsters(index) {
       this.skillIndex = index
       if (this.skillIndex == -1) {
         this.monsters = utils.getMonstersAtLevel(this.character.ref.level, null);
+        this.character.ref.monsters = this.monsters;
       } else {
         this.monsters = utils.getMonstersAtLevel(this.character.ref.level, this.skillIndex);
+        this.character.ref.monsters = this.monsters;
         this.skillIndex = index;
       }
+      
+      this.focusMonster = this.monsters.find(monster => monster.level >= this.character.ref.level) || this.monsters.slice(-1)[0];
     },
     getImageUrl(img) {
       var images = require.context('./assets/images/', false, /\.png$/)
@@ -368,6 +384,10 @@ option {
         box-shadow: #0000001e 0px 5px 5px;
         transition: 0.3s;
         margin-right: 10px;
+
+        h1 {
+          color: v-bind(pcolor);
+        }
       }
 
       .extensivechart#big:hover {
@@ -383,7 +403,7 @@ option {
       .extensivebasic:hover {
         box-shadow: #0000001e 0px 10px 20px;
         transition: 0.3s;
-        width: 205px;
+        transform: scale(1.05);
         cursor: pointer;
       }
     }
