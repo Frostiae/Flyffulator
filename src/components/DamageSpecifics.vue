@@ -3,6 +3,7 @@
       <div class="container">
           <div class="infocol">
             <h3>{{ skill }}</h3>
+            <h5>against a {{ monster }}</h5>
             <div class="infoblock">
                 <h3>Average single hit</h3>
                 <p>{{ damage }}</p>
@@ -12,7 +13,6 @@
                 <p>{{ dps }}</p>
             </div>
             <br>
-            <h5>against a {{ monster }}</h5>
           </div>
       </div>
   </div>

@@ -21,7 +21,7 @@
       <h5>Critical Chance</h5>
       <p v-cloak>{{ character.ref.criticalChance + '%' || "N/A" }}</p>
       <h5>Critical Damage</h5>
-      <p v-cloak>{{ character.ref.criticalDamage || "N/A" }}</p>
+      <p v-cloak>{{ character.ref.criticalDamage || "N/A" }}%</p>
       <hr>
       <h5>Defense</h5>
       <p v-cloak>{{ character.ref.defense || "N/A" }}</p>

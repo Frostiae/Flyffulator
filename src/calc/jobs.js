@@ -52,6 +52,15 @@ export class Vagrant extends Mover {
             '1': 0,     // Skill 2
             '2': 0,     // Skill 3
         }
+
+        this.remainingPoints = 0;
+        this.aspd = 0;
+        this.criticalChance = 0;
+        this.DCT = 0;
+        this.attack = 0;
+        this.criticalDamage = 0;
+        this.averageAA = 1;
+        this.hitrate = 1;
     }
 
     get health() {
@@ -77,7 +86,20 @@ export class Vagrant extends Mover {
         return mp
     }
 
-    get aspd() {
+    get parry() {
+        return this.dex / 2;
+    }
+
+    get defense() {
+        let defense = Math.floor(((((this.level * 2) + (this.sta / 2)) / 2.8) - 4) + ((this.sta - 14) * this.constants.Def));
+        defense += this.armorParam('def');
+        defense += this.weaponParam('def');
+        defense += this.assistBuffParam('def');
+        defense += this.selfBuffParam('def');
+        return defense;
+    }
+
+    getAspd() {
         const weaponAspd = Utils.getWeaponSpeed(this.weapon);
         let a = Math.floor(this.constants.attackSpeed + (weaponAspd * (4.0 * this.dex + this.level / 8.0)) - 3.0);
         if (a >= 187.5) a = Math.floor(187.5);
@@ -108,7 +130,7 @@ export class Vagrant extends Mover {
         return Math.floor(final);
     }
 
-    get criticalChance() {
+    getCriticalChance() {
         let chance = this.dex / 10;
         chance = Math.floor(chance * this.constants.critical);
         chance = chance >= 100 ? 100 : chance;
@@ -123,7 +145,7 @@ export class Vagrant extends Mover {
         return chance > 100 ? 100 : chance;
     }
 
-    get DCT() {
+    getDCT() {
         let dct = 100;  // Starts out as 100%
         dct += this.armorParam('decreasedcastingtime');
         dct += this.weaponParam('decreasedcastingtime');
@@ -131,7 +153,7 @@ export class Vagrant extends Mover {
         return dct;
     }
 
-    get attack() {
+    getAttack() {
         let pnMin = 3 * 2;
         let pnMax = 4 * 2;
 
@@ -152,14 +174,14 @@ export class Vagrant extends Mover {
         return final;
     }
 
-    get criticalDamage() {
+    getCriticalDamage() {
         const weaponBonus = this.weaponParam('criticaldamage');
         const armorBonus = this.armorParam('criticaldamage');
         const buffBonus = this.selfBuffParam('criticaldamage');
         return this instanceof Blade ? weaponBonus * 2 + armorBonus + buffBonus : weaponBonus + armorBonus + buffBonus;
     }
 
-    get averageAA() {
+    getAverageAA() {
         // TODO: Swordcross
         let pnMin = 3 * 2;
         let pnMax = 4 * 2;
@@ -198,7 +220,7 @@ export class Vagrant extends Mover {
         // CMover::GetAtkMultiplier
     }
 
-    get hitrate() {
+    getHitrate() {
         let hit = this.dex / 4;
         const weaponBonus = this.weaponParam('hitrate');
         hit += this instanceof Blade ? weaponBonus * 2 : weaponBonus;
@@ -206,19 +228,6 @@ export class Vagrant extends Mover {
         hit += this.assistBuffParam('hitrate');
         hit += this.selfBuffParam('hitrate');
         return hit;
-    }
-
-    get parry() {
-        return this.dex / 2;
-    }
-
-    get defense() {
-        let defense = Math.floor(((((this.level * 2) + (this.sta / 2)) / 2.8) - 4) + ((this.sta - 14) * this.constants.Def));
-        defense += this.armorParam('def');
-        defense += this.weaponParam('def');
-        defense += this.assistBuffParam('def');
-        defense += this.selfBuffParam('def');
-        return defense;
     }
 }
 

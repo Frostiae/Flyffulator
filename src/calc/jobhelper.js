@@ -6,11 +6,15 @@ import { Utils } from "./utils.js";
  */
 export class Mover {
     update() {
-        // TODO: Move most of the get methods into regular methods and call them here instead to store in the object
-        // to avoid doing all those calculations everytime we do character.aspd for example. Do it once and store it
-        // instead.
-
         this.skillsDamage = this.averageSkillDmg();
+        this.remainingPoints = this.getRemainingPoints();
+        this.criticalChance = this.getCriticalChance();
+        this.aspd = this.getAspd();
+        this.DCT = this.getDCT();
+        this.attack = this.getAttack();
+        this.criticalDamage = this.getCriticalDamage();
+        this.averageAA = this.getAverageAA();
+        this.hitrate = this.getHitrate();
         return this;
     }
 
@@ -65,7 +69,7 @@ export class Mover {
         }
     }
 
-    get remainingPoints() {
+    getRemainingPoints() {
         let points = this.level * 2 - 2;
         points -= (this.str + this.sta + this.dex + this.int) - 60;     // Don't count the base 15
         if (this.assistBuffs && this.activeAssistBuffs.length) {
@@ -236,7 +240,7 @@ export class Mover {
     }
 
     getDamageAgainst(opponent, index=null) {
-        // TODO: Incorporate elements from skills
+        // TODO: Incorporate element vs element calculation for skills
         var factor = 1.0;
         
         var delta = opponent.level - this.level;
@@ -250,6 +254,7 @@ export class Mover {
         if (index === null || Object.values(this.skillsDamage).length <= index || index == -1) {
             var damage = (this.averageAA * factor) - opponent.defense;
         } else {
+            // Look into CMover::GetMagicSkillFactor() for weird multipliers
             var damage = (Object.values(this.skillsDamage)[index] * factor) - opponent.defense;
         }
 

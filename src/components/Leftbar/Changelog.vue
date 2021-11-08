@@ -2,8 +2,11 @@
   <div class="char">
     <h3>Changelog</h3>
     <div class="stats" id="changelog">
-      <h5>November 7</h5>
+      <h5>November 8</h5>
       <ul>
+        <li>Reduced the amount of calculations required for some numbers to improve performance.</li>
+        <li>Added a more detailed damage info box which reflects the currently selected attack.</li>
+        <li>Added a STR:DEX ratio graph which reflects auto attack DPS.</li>
         <li>Added the ability to apply class buffs.</li>
         <li>Improved the clarity of the Hits per level chart's title.</li>
       </ul>

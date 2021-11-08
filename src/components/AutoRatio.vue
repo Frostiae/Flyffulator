@@ -215,14 +215,17 @@ export default {
         let maxRatio = -1;
         for (let i = 0; i < 10; i++) {
             // get str:dex ratio
-            let str = Math.floor(clone.remainingPoints * (i / 10));
-            let dex = clone.remainingPoints - str;
-
-            console.log(str, dex, i)
+            // Need to get remaining points explicitly here since it doesn't update till update().
+            const points = clone.getRemainingPoints();
+            let str = Math.floor(points * (i / 10));
+            let dex = points - str;
 
             // Minimum is 15 stats, don't go below that
             clone.str = str < 15 ? 15 : str;
             clone.dex = dex < 15 ? 15 : dex;
+
+            // Update all the stats and information
+            clone.update();
 
             let dps = parseInt(clone.getDPS(focus).toFixed(0));
             let ratio = clone.str + ' STR : ' + clone.dex + ' DEX';
