@@ -192,10 +192,8 @@ export default {
   },
   methods: {
     updateTheme() {
-      let opts = {... this.chartOptions}
+      let opts = { ...this.chartOptions }
       opts.title.style.color = this.$root.hcolor
-      // opts.yaxis is undefined when you change the theme back twice? why...?
-      // opts.yaxis.labels.style.colors = this.$root.hcolor
       this.chartOptions = opts
     },
     getTheoreticalAADPS() {
@@ -207,6 +205,22 @@ export default {
         let focus = this.monsters.find(monster => monster.level >= clone.level) || this.monsters.slice(-1)[0];
         if (!focus) return;
 
+        const extraBuffSTR = clone.getExtraBuffParam('str');
+        const extraBuffSTA = clone.getExtraBuffParam('sta');
+        const extraBuffDEX = clone.getExtraBuffParam('dex');
+        const extraBuffINT = clone.getExtraBuffParam('int');
+
+        const extraGearSTR = clone.getExtraGearParam('str');
+        const extraGearDEX = clone.getExtraGearParam('dex');
+
+        const baseSTR = 15 + extraGearSTR;
+        const baseDEX = 15 + extraGearDEX;
+
+        clone.str = baseSTR + extraBuffSTR;
+        clone.dex = baseDEX + extraBuffDEX;
+        clone.sta = 15 + extraBuffSTA;  // We don't even use these in this calculation
+        clone.int = 15 + extraBuffINT;
+
         let res = [];
         let ratios = [];
 
@@ -217,18 +231,23 @@ export default {
             // get str:dex ratio
             // Need to get remaining points explicitly here since it doesn't update till update().
             const points = clone.getRemainingPoints();
+            
+            // Add Equipment base stats
+            clone.str = baseSTR;
+            clone.dex = baseDEX;
+
             let str = Math.floor(points * (i / 10));
             let dex = points - str;
 
             // Minimum is 15 stats, don't go below that
-            clone.str = str < 15 ? 15 : str;
-            clone.dex = dex < 15 ? 15 : dex;
+            clone.str += str < 15 ? 15 : str;
+            clone.dex += dex < 15 ? 15 : dex;
 
             // Update all the stats and information
             clone.update();
 
             let dps = parseInt(clone.getDPS(focus).toFixed(0));
-            let ratio = clone.str + ' STR : ' + clone.dex + ' DEX';
+            let ratio = `Allocate ${str} STR: ${dex} DEX`;
             res = [...res, dps];
             ratios = [...ratios, ratio]
 
@@ -238,10 +257,11 @@ export default {
             }
 
             // Reset the stats back so remainingPoints() returns default values again
-            clone.str = 15;
-            clone.dex = 15;
+            clone.str = 15 + extraBuffSTR;
+            clone.dex = 15 + extraBuffDEX;
         }
 
+        // Updating the chart
         this.series[0].data = res;
 
         let opts = {...this.chartOptions};

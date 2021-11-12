@@ -73,10 +73,10 @@ export class Mover {
         let points = this.level * 2 - 2;
         points -= (this.str + this.sta + this.dex + this.int) - 60;     // Don't count the base 15
         if (this.assistBuffs && this.activeAssistBuffs.length) {
-            points += this.getExtraParam('dex') + 
-                      this.getExtraParam('sta') + 
-                      this.getExtraParam('str') + 
-                      this.getExtraParam('int');
+            points += this.getExtraBuffParam('dex') + 
+                      this.getExtraBuffParam('sta') + 
+                      this.getExtraBuffParam('str') + 
+                      this.getExtraBuffParam('int');
         }
         return points;
     }
@@ -101,8 +101,12 @@ export class Mover {
         }
     }
 
-    getExtraParam(param) {
+    getExtraBuffParam(param) {
         return this.assistBuffParam(param) + this.selfBuffParam(param);
+    }
+
+    getExtraGearParam(param) {
+        return this.armorParam(param) + this.weaponParam(param);
     }
 
     armorParam(param) {
