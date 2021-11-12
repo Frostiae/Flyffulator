@@ -182,7 +182,6 @@ export class Vagrant extends Mover {
     }
 
     getAverageAA() {
-        // TODO: Swordcross
         let pnMin = 3 * 2;
         let pnMax = 4 * 2;
 
@@ -198,11 +197,9 @@ export class Vagrant extends Mover {
 
         let avgNormal = (pnMin + pnMax) / 2;
         avgNormal *= this.damageMultiplier();
-        
-        // Blade offhand calculation
-        if (this instanceof Blade) { avgNormal += (avgNormal * 0.75) / 2; }
 
-        const critMinFactor = 1.4 + this.criticalDamage / 100;
+        // CMover::GetHitPower
+        const critMinFactor = 1.2 + this.criticalDamage / 100;
         const critMaxFactor = 2.0 + this.criticalDamage / 100;
         const critAvgFactor = (critMinFactor + critMaxFactor) / 2;
         const avgCrit = avgNormal * critAvgFactor;
@@ -215,6 +212,9 @@ export class Vagrant extends Mover {
             const swordcrossChance = this.weapon.triggerSkillProbability / 100;
             final += final * (swordcrossFactor * swordcrossChance);
         }
+
+        // Blade offhand calculation
+        if (this instanceof Blade) { final = (final + (final * 0.75)) / 2; }
 
         return final < avgNormal ? avgNormal : final;   // we wont hit below our normal, non-crit hit
         // CMover::GetAtkMultiplier
