@@ -285,11 +285,14 @@ export class Mover {
         };
 
         // Specific skill multipliers
+        // Check HoP in CAttackArbiter::OnAfterDamage
         if (skill) {
             switch (skill.name.en) {
                 case "Spirit Bomb":
                     factor += 1.25;
                     break;
+                case "Hit of Penya":
+                    factor += 3.0;
             }
         }
 
