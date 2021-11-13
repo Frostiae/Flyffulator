@@ -233,8 +233,8 @@ export default {
             const points = clone.getRemainingPoints();
             
             // Add Equipment base stats
-            clone.str = baseSTR;
-            clone.dex = baseDEX;
+            clone.str = baseSTR + extraBuffSTR;
+            clone.dex = baseDEX + extraBuffDEX;
 
             let str = Math.floor(points * (i / 10));
             let dex = points - str;

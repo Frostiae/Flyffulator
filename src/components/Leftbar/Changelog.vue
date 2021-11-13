@@ -14,7 +14,6 @@
         <li>Added a more detailed damage info box which reflects the currently selected attack.</li>
         <li>Added a STR:DEX ratio graph which reflects auto attack DPS.</li>
         <li>Added the ability to apply class buffs.</li>
-        <li>Improved the clarity of the Hits per level chart's title.</li>
       </ul>
     </div>
     <h5 style="opacity: 0.5;">This section will only outline notable changes. If you would like to follow development more closely, visit the <a href="https://github.com/Frostiae/Flyffulator">GitHub</a> page.</h5>

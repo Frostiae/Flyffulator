@@ -224,7 +224,7 @@ export class Mover {
         if (skillIndex == null) {
             const hitrate = this instanceof Psykeeper ? 100 : this.hitResult(monster);
             damage = this.getDamageAgainst(monster);
-            let hitsPerSec = this.constants.hps * this.aspd / 100;
+            let hitsPerSec = this.constants.hps * this.aspd / 100;  // This weighs very heavily on the DPS
             hitsPerSec *= hitrate / 100;
     
             dps = damage * hitsPerSec;

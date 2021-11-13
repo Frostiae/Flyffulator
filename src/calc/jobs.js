@@ -299,7 +299,7 @@ export class Billposter extends Assist {
                        Utils.getSkillByName("Asalraalaikum")],
             'buffs': [Utils.getSkillByName("Asmodeus")],
             'attackSpeed': 85.0,
-            'hps': 4,
+            'hps': 2.5,
             'HP': 1.8,
             'MP': 0.9,
             'FP': 1.1,
