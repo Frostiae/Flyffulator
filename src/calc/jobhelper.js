@@ -82,7 +82,7 @@ export class Mover {
     }
 
     weaponAttack() {
-        let weapon = this.constants.weapon;
+        let weapon = this.weapon.subcategory;
         switch (weapon) {
             case 'axe':
                 return Math.floor(((this.str - 12) * this.constants[weapon]) + ((this.level * 1.2)));
@@ -244,7 +244,7 @@ export class Mover {
     }
 
     getDamageAgainst(opponent, index=null) {
-        // TODO: Incorporate element vs element calculation for skills
+        // TODO: Incorporate element vs element calculation for skills (CAttackArbiter::PostCalcDamage)
         var factor = 1.0;
         
         var delta = opponent.level - this.level;

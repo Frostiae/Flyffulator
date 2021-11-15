@@ -15,7 +15,6 @@ export class Vagrant extends Mover {
                        Utils.getSkillByName("Flurry"), 
                        Utils.getSkillByName("Over Cutter")],
             'buffs': [],
-            'weapon': 'sword',
             'attackSpeed': 75.0,
             'hps': 4,           // TODO: change these to frames instead and calculate hits/sec using them for more accuracy
             'HP': 0.9,
@@ -150,6 +149,7 @@ export class Vagrant extends Mover {
         dct += this.armorParam('decreasedcastingtime');
         dct += this.weaponParam('decreasedcastingtime');
         dct += this.selfBuffParam('decreasedcastingtime');
+        dct += this.assistBuffParam('decreasedcastingtime');
         return dct;
     }
 
@@ -182,6 +182,7 @@ export class Vagrant extends Mover {
     }
 
     getAverageAA() {
+        // Weapon element calculations are in CMover::CalcPropDamage
         let pnMin = 3 * 2;
         let pnMax = 4 * 2;
 
@@ -238,7 +239,6 @@ export class Assist extends Vagrant {
         armor = armor || Utils.getArmorByName("Sayram Set");
         weapon = weapon || Utils.getItemByName("Paipol Knuckle");
         constants = constants || {
-            'weapon': 'knuckle',
             'skills': [Utils.getSkillByName("Power Fist"), 
                        Utils.getSkillByName("Temping Hole"), 
                        Utils.getSkillByName("Burst Crack")],
@@ -293,7 +293,6 @@ export class Billposter extends Assist {
         armor = armor || Utils.getArmorByName("Rody Set");
         weapon = weapon || Utils.getItemByName("Legendary Golden Gloves");
         constants = constants || {
-            'weapon': 'knuckle',
             'skills': [Utils.getSkillByName("Bgvur Tialbold"), 
                        Utils.getSkillByName("Blood Fist"), 
                        Utils.getSkillByName("Asalraalaikum")],
@@ -347,7 +346,6 @@ export class Ringmaster extends Assist {
         armor = armor || Utils.getArmorByName("Rimyth Set");
         weapon = weapon || Utils.getItemByName("Legendary Golden Stick");
         constants = constants || {
-            'weapon': 'stick',
             'skills': [Utils.getSkillByName('Merkaba Hanzelrusha'),
                        Utils.getSkillByName('Burst Crack')],
             'buffs': [Utils.getSkillByName("Holyguard"),
@@ -403,7 +401,6 @@ export class Acrobat extends Vagrant {
         armor = armor || Utils.getArmorByName("Cruiser Set");
         weapon = weapon || Utils.getItemByName("Layered Bow");
         constants = constants || {
-            'weapon': 'bow',
             'skills': [Utils.getSkillByName("Junk Arrow"), 
                        Utils.getSkillByName("Silent Shot"), 
                        Utils.getSkillByName("Arrow Rain")],
@@ -461,7 +458,6 @@ export class Jester extends Acrobat {
         armor = armor || Utils.getArmorByName("Neis Set");
         weapon = weapon || Utils.getItemByName("Legendary Golden Yo-Yo");
         constants = constants || {
-            'weapon': 'yoyo',
             'skills': [Utils.getSkillByName("Sneak Stab"), 
                        Utils.getSkillByName("Vital stab"), 
                        Utils.getSkillByName("Hit of Penya")],
@@ -517,7 +513,6 @@ export class Ranger extends Acrobat {
         armor = armor || Utils.getArmorByName("Tyrent Set");
         weapon = weapon || Utils.getItemByName("Legendary Golden Bow");
         constants = constants || {
-            'weapon': 'bow',
             'skills': [Utils.getSkillByName("Ice Arrow"), 
                        Utils.getSkillByName("Flame Arrow"), 
                        Utils.getSkillByName("Silent Arrow")],
@@ -573,7 +568,6 @@ export class Magician extends Vagrant {
         armor = armor || Utils.getArmorByName("Teba Set");
         weapon = weapon || Utils.getItemByName("Opel Wand");
         constants = constants || {
-            'weapon': 'wand',
             'skills': [Utils.getSkillByName("Mental Strike"), 
                        Utils.getSkillByName("Rock Crash"), 
                        Utils.getSkillByName("Water Well")],
@@ -627,7 +621,6 @@ export class Psykeeper extends Magician {
         armor = armor || Utils.getArmorByName("Mekatro Set");
         weapon = weapon || Utils.getItemByName("Legendary Golden Wand");
         constants = constants || {
-            'weapon': 'wand',
             'skills': [Utils.getSkillByName("Psychic Bomb"), 
                        Utils.getSkillByName("Spirit Bomb"), 
                        Utils.getSkillByName("Psychic Square")],
@@ -681,7 +674,6 @@ export class Elementor extends Magician {
         armor = armor || Utils.getArmorByName("Shabel Set");
         weapon = weapon || Utils.getItemByName("Legendary Golden Staff");
         constants = constants || {
-            'weapon': 'staff',
             'skills': [Utils.getSkillByName("Firebird"), 
                        Utils.getSkillByName("Windfield"), 
                        Utils.getSkillByName("Iceshark")],
@@ -739,7 +731,6 @@ export class Mercenary extends Vagrant {
         armor = armor || Utils.getArmorByName("Panggril Set");
         weapon = weapon || Utils.getItemByName("Flam Sword");
         constants = constants || {
-            'weapon': 'sword',
             'skills': [Utils.getSkillByName("Shield Bash"), 
                        Utils.getSkillByName("Keenwheel"), 
                        Utils.getSkillByName("Guillotine")],
@@ -794,7 +785,6 @@ export class Blade extends Mercenary {
         armor = armor || Utils.getArmorByName("Hanes Set");
         weapon = weapon || Utils.getItemByName("Legendary Golden Axe");
         constants = constants || {
-            'weapon': 'axe',
             'skills': [Utils.getSkillByName("Blade Dance"), 
                        Utils.getSkillByName("Hawk Attack"), 
                        Utils.getSkillByName("Cross Strike")],
@@ -848,7 +838,6 @@ export class Knight extends Mercenary {
         armor = armor || Utils.getArmorByName("Extro Set");
         weapon = weapon || Utils.getItemByName("Legendary Golden Big Sword");
         constants = constants || {
-            'weapon': 'axe',
             'skills': [Utils.getSkillByName("Pain Dealer"), 
                        Utils.getSkillByName("Power Stomp"), 
                        Utils.getSkillByName("Earth Divider")],
