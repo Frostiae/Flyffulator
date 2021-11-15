@@ -149,6 +149,7 @@ export class Vagrant extends Mover {
         dct += this.armorParam('decreasedcastingtime');
         dct += this.weaponParam('decreasedcastingtime');
         dct += this.selfBuffParam('decreasedcastingtime');
+        dct += this.assistBuffParam('decreasedcastingtime');
         return dct;
     }
 
