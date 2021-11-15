@@ -27,8 +27,8 @@ Flyffulator is a [website](https://flyffulator.com/) for [Flyff Project M](https
 - [x] Assist buffs calculation.
 - [x] Class-specific buffs calculation and option.
 - [x] Equipment bonus calculation.
-- [ ] Skill customization. (Desktop app, probably)
-- [ ] Equipment customization. (Desktop app, probably)
+- [x] Equipment customization. 
+- [ ] Skill customization.
 - [ ] Mobile browser support.
 
 <p align="center">
