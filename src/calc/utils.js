@@ -24,7 +24,7 @@ export class Utils {
     static getSkillById(id)     { return this.skills.find(skill => skill.id == id); }
     
     static getJobId(jobName) { return this.jobs.find(job => job.name.en == jobName).id; }
-    static getParentJobId(jobId) { return this.jobs.find(job => job.id == jobId).parent; }
+    static getParentJobId(jobId) { return this.jobs.find(job => job.id == jobId).parent || jobId; }
 
     static getJobWeapons(jobId) {
         const jobs = [jobId, this.getParentJobId(jobId)]
