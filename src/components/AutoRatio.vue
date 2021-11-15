@@ -188,7 +188,9 @@ export default {
     '$root.monsters'() { this.monsters = this.$root.monsters; },
     '$root.darkMode'() { this.updateTheme() },
     '$root.character.ref.level'() { this.getTheoreticalAADPS(); },
-    '$root.character.ref.assistBuffs'() { this.getTheoreticalAADPS(); }
+    '$root.character.ref.assistBuffs'() { this.getTheoreticalAADPS(); },
+    '$root.character.ref.weapon'() { this.getTheoreticalAADPS(); },
+    '$root.character.ref.armor'() { this.getTheoreticalAADPS(); }
   },
   methods: {
     updateTheme() {

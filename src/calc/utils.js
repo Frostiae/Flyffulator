@@ -22,6 +22,18 @@ export class Utils {
     static getArmorByName(name) { return this.sets.find(set => set.name.en.toLowerCase() == name.toLowerCase()); }
     static getSkillByName(name) { return this.skills.find(skill => skill.name.en.toLowerCase() == name.toLowerCase()); }
     static getSkillById(id)     { return this.skills.find(skill => skill.id == id); }
+    
+    static getJobId(jobName) { return this.jobs.find(job => job.name.en == jobName).id; }
+    static getParentJobId(jobId) { return this.jobs.find(job => job.id == jobId).parent; }
+
+    static getJobWeapons(jobId) {
+        const jobs = [jobId, this.getParentJobId(jobId)]
+        return this.items.filter(item => item.category == "weapon" && jobs.includes(item.class)); 
+    }
+    static getJobArmors(jobId) {
+        const jobs = [jobId, this.getParentJobId(jobId)]
+        return this.sets.filter(set => jobs.includes(this.getItemById(set.parts[0]).class)); 
+    }
 
     static getWeaponSpeed(weapon) {
         if (!weapon) return 0;
@@ -40,7 +52,6 @@ export class Utils {
                 return 0.085;
         }
     }
-
 
     updateJob(character, job) {
         if (character.constructor.name != job) { 

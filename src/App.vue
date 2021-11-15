@@ -123,7 +123,9 @@ export default {
     'character.ref.dex'() { this.updateCharacter() },
     'character.ref.int'() { this.updateCharacter() },
     'character.ref.assistInt'() { this.updateCharacter() },
-    'character.ref.selfBuffs'() { this.updateCharacter() }
+    'character.ref.selfBuffs'() { this.updateCharacter() },
+    'character.ref.weapon'() { this.updateCharacter() },
+    'character.ref.armor'() { this.updateCharacter() },
   },
   created() { this.updateCharacter() },
   methods: {
@@ -410,7 +412,7 @@ option {
   }
 }
 
-input[type=number] {
+input[type=number], input[type=text] {
   -moz-appearance: textfield;
   appearance: textfield;
   background: none;

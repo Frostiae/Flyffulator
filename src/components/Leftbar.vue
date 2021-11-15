@@ -88,6 +88,7 @@ export default {
     border-radius: 15px;
     transition: 0.3s;
     width: 100%;
+    text-overflow: ellipsis;
   }
 
   select:active {
@@ -131,7 +132,6 @@ export default {
     font-family: 'Roboto';
     font-size: 13px;
     margin: 4px;
-    opacity: 0.5;
   }
 
   .btn-plus:active {
