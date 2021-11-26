@@ -44,9 +44,9 @@ export default {
   },
   methods: {
     updateEquipment() {
-      const jobId = Utils.getJobId(Object.getPrototypeOf(this.character).constructor.name);
-      this.weapons = Utils.getJobWeapons(jobId);
-      this.armors = Utils.getJobArmors(jobId);
+      // const jobName = this.character.constructor.name; // This does not work on build... returns 'a'?;
+      this.weapons = Utils.getJobWeapons(this.character.jobId);
+      this.armors = Utils.getJobArmors(this.character.jobId);
     }
   },
   watch: {

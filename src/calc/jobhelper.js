@@ -5,6 +5,8 @@ import { Utils } from "./utils.js";
  * The mover class is the base of all characters. Acts as a helper class for a lot of functions.
  */
 export class Mover {
+    applyData(json) { Object.assign(this, json); }  // Importing a character
+
     update() {
         this.skillsDamage = this.averageSkillDmg();
         this.remainingPoints = this.getRemainingPoints();
@@ -258,8 +260,9 @@ export class Mover {
         if (index === null || Object.values(this.skillsDamage).length <= index || index == -1) {
             var damage = (this.averageAA * factor) - opponent.defense;
         } else {
-            // Look into CMover::GetMagicSkillFactor() for weird multipliers
-            var damage = (Object.values(this.skillsDamage)[index] * factor) - opponent.defense;
+            var skill = this.constants.skills[index];
+            var defense = skill.magic ? opponent.magicDefense : opponent.defense;
+            var damage = (Object.values(this.skillsDamage)[index] * factor) - defense;
         }
 
         return damage < 1 ? 1 : damage;
@@ -279,6 +282,7 @@ export class Mover {
     }
 
     damageMultiplier(skill=null) {
+        // Look into CMover::GetMagicSkillFactor() for element multipliers
         let factor = 1.0;
         let elementalBonus = {
             fire: this.armorParam('firemastery') + this.weaponParam('firemastery') + this.assistBuffParam('firemastery') + this.selfBuffParam('firemastery'),
@@ -361,7 +365,7 @@ export class Mover {
         let final = (powerMin + powerMax) / 2;
         
         if (skill.id == 5041) { final += (((this.str / 10) * level) * (5 + this.mp / 10) + 150); }      // Asal formula
-        if (this instanceof Knight) { final += final * (1.0 * (this.weapon.triggerSkillProbability / 100)); }   // Swordcross
+        if (this instanceof Knight && this.weapon.triggerSkillProbability) { final += final * (1.0 * (this.weapon.triggerSkillProbability / 100)); }   // Swordcross
         return final;
     }
 }

@@ -3,8 +3,9 @@ import { Mover } from "./jobhelper.js";
 import { Utils } from "./utils.js";
 
 export class Vagrant extends Mover {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
         super();
+        this.jobId = jobId || jobId || 9686;
         this.weapon_img = img || "woodensword.png";
         this.armor = armor || null;
         this.weapon = weapon || Utils.getItemByName("Wooden Sword");
@@ -208,7 +209,7 @@ export class Vagrant extends Mover {
         let final = ((avgCrit - avgNormal) * this.criticalChance / 100) + avgNormal;
 
         // Knight Swordcross calculation
-        if (this instanceof Knight && this.weapon) {
+        if (this instanceof Knight && this.weapon && this.weapon.triggerSkillProbability) {
             const swordcrossFactor = 1.0;   // 100% extra damage
             const swordcrossChance = this.weapon.triggerSkillProbability / 100;
             final += final * (swordcrossFactor * swordcrossChance);
@@ -234,7 +235,8 @@ export class Vagrant extends Mover {
 
 
 export class Assist extends Vagrant {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+        jobId = jobId || 8962;
         img = img || "overamknuckle.png";
         armor = armor || Utils.getArmorByName("Sayram Set");
         weapon = weapon || Utils.getItemByName("Paipol Knuckle");
@@ -259,7 +261,7 @@ export class Assist extends Vagrant {
             'wand': 6.0,
             'yoyo': 4.2
         };
-        super(str, sta, int, dex, level, constants, img, weapon, armor);
+        super(str, sta, int, dex, level, constants, img, weapon, armor, jobId);
     }
 
     get health() {
@@ -288,7 +290,8 @@ export class Assist extends Vagrant {
 }
 
 export class Billposter extends Assist {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+        jobId = jobId || 7424;
         img = img || "bloodyknuckle.png";
         armor = armor || Utils.getArmorByName("Rody Set");
         weapon = weapon || Utils.getItemByName("Legendary Golden Gloves");
@@ -313,7 +316,7 @@ export class Billposter extends Assist {
             'wand': 6.0,
             'yoyo': 4.2
         };
-        super(str, sta, int, dex, level, constants, img, weapon, armor);
+        super(str, sta, int, dex, level, constants, img, weapon, armor, jobId);
     }
 
     get health() {
@@ -341,7 +344,8 @@ export class Billposter extends Assist {
 }
 
 export class Ringmaster extends Assist {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+        jobId = jobId || 9389;
         img = img || "lgstick.png";
         armor = armor || Utils.getArmorByName("Rimyth Set");
         weapon = weapon || Utils.getItemByName("Legendary Golden Stick");
@@ -368,7 +372,7 @@ export class Ringmaster extends Assist {
             'wand': 6.0,
             'yoyo': 4.2
         };
-        super(str, sta, int, dex, level, constants, img, weapon, armor);
+        super(str, sta, int, dex, level, constants, img, weapon, armor, jobId);
     }
 
     get health() {
@@ -396,7 +400,8 @@ export class Ringmaster extends Assist {
 }
 
 export class Acrobat extends Vagrant {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+        jobId = jobId || 9098;
         img = img || "layeredbow.png";
         armor = armor || Utils.getArmorByName("Cruiser Set");
         weapon = weapon || Utils.getItemByName("Layered Bow");
@@ -425,7 +430,7 @@ export class Acrobat extends Vagrant {
             'bow': 3.6,
             'yoyo': 4.2
         };
-        super(str, sta, int, dex, level, constants, img, weapon, armor);
+        super(str, sta, int, dex, level, constants, img, weapon, armor, jobId);
     }
 
     get health() {
@@ -453,7 +458,8 @@ export class Acrobat extends Vagrant {
 }
 
 export class Jester extends Acrobat {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+        jobId = jobId || 3545;
         img = img || "lgyoyo.png";
         armor = armor || Utils.getArmorByName("Neis Set");
         weapon = weapon || Utils.getItemByName("Legendary Golden Yo-Yo");
@@ -480,7 +486,7 @@ export class Jester extends Acrobat {
             'yoyo': 4.6,
             'bow': 3.6
         };
-        super(str, sta, int, dex, level, constants, img, weapon, armor);
+        super(str, sta, int, dex, level, constants, img, weapon, armor, jobId);
     }
 
     get health() {
@@ -508,7 +514,8 @@ export class Jester extends Acrobat {
 }
 
 export class Ranger extends Acrobat {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+        jobId = jobId || 9295;
         img = img || "lgbow.png";
         armor = armor || Utils.getArmorByName("Tyrent Set");
         weapon = weapon || Utils.getItemByName("Legendary Golden Bow");
@@ -535,7 +542,7 @@ export class Ranger extends Acrobat {
             'yoyo': 3.6,
             'bow': 4.4
         };
-        super(str, sta, int, dex, level, constants, img, weapon, armor);
+        super(str, sta, int, dex, level, constants, img, weapon, armor, jobId);
     }
 
     get health() {
@@ -563,7 +570,8 @@ export class Ranger extends Acrobat {
 }
 
 export class Magician extends Vagrant {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+        jobId = jobId || 9581;
         img = img || "opelwand.png";
         armor = armor || Utils.getArmorByName("Teba Set");
         weapon = weapon || Utils.getItemByName("Opel Wand");
@@ -588,7 +596,7 @@ export class Magician extends Vagrant {
             'wand': 6.0,
             'yoyo': 4.2
         };
-        super(str, sta, int, dex, level, constants, img, weapon, armor);
+        super(str, sta, int, dex, level, constants, img, weapon, armor, jobId);
     }
 
     get health() {
@@ -616,7 +624,8 @@ export class Magician extends Vagrant {
 }
 
 export class Psykeeper extends Magician {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+        jobId = jobId || 5709;
         img = img || "lgwand.png";
         armor = armor || Utils.getArmorByName("Mekatro Set");
         weapon = weapon || Utils.getItemByName("Legendary Golden Wand");
@@ -641,7 +650,7 @@ export class Psykeeper extends Magician {
             'wand': 6.0,
             'yoyo': 4.2
         };
-        super(str, sta, int, dex, level, constants, img, weapon, armor);
+        super(str, sta, int, dex, level, constants, img, weapon, armor, jobId);
     }
 
     get health() {
@@ -669,7 +678,8 @@ export class Psykeeper extends Magician {
 }
 
 export class Elementor extends Magician {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+        jobId = jobId || 9150;
         img = img || "lgstaff.png";
         armor = armor || Utils.getArmorByName("Shabel Set");
         weapon = weapon || Utils.getItemByName("Legendary Golden Staff");
@@ -698,7 +708,7 @@ export class Elementor extends Magician {
             'wand': 6.0,
             'yoyo': 4.2
         };
-        super(str, sta, int, dex, level, constants, img, weapon, armor);
+        super(str, sta, int, dex, level, constants, img, weapon, armor, jobId);
     }
 
     get health() {
@@ -726,7 +736,8 @@ export class Elementor extends Magician {
 }
 
 export class Mercenary extends Vagrant {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+        jobId = jobId || 764;
         img = img || "woodensword.png";
         armor = armor || Utils.getArmorByName("Panggril Set");
         weapon = weapon || Utils.getItemByName("Flam Sword");
@@ -752,7 +763,7 @@ export class Mercenary extends Vagrant {
             'wand': 6.0,
             'yoyo': 4.2
         };
-        super(str, sta, int, dex, level, constants, img, weapon, armor);
+        super(str, sta, int, dex, level, constants, img, weapon, armor, jobId);
     }
 
     get health() {
@@ -780,7 +791,8 @@ export class Mercenary extends Vagrant {
 }
 
 export class Blade extends Mercenary {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+        jobId = jobId || 2246;
         img = img || "lgaxe.png";
         armor = armor || Utils.getArmorByName("Hanes Set");
         weapon = weapon || Utils.getItemByName("Legendary Golden Axe");
@@ -805,7 +817,7 @@ export class Blade extends Mercenary {
             'wand': 6.0,
             'yoyo': 4.2
         };
-        super(str, sta, int, dex, level, constants, img, weapon, armor);
+        super(str, sta, int, dex, level, constants, img, weapon, armor, jobId);
     }
 
     get health() {
@@ -833,7 +845,8 @@ export class Blade extends Mercenary {
 }
 
 export class Knight extends Mercenary {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+        jobId = jobId || 5330;
         img = img || "lgswt.png";
         armor = armor || Utils.getArmorByName("Extro Set");
         weapon = weapon || Utils.getItemByName("Legendary Golden Big Sword");
@@ -858,7 +871,7 @@ export class Knight extends Mercenary {
             'wand': 6.0,
             'yoyo': 4.2
         };
-        super(str, sta, int, dex, level, constants, img, weapon, armor);
+        super(str, sta, int, dex, level, constants, img, weapon, armor, jobId);
     }
 
     get health() {
