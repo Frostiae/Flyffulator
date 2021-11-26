@@ -280,17 +280,9 @@ export class Mover {
 
     damageMultiplier(skill=null) {
         let factor = 1.0;
-        let elementalBonus = {
-            fire: this.armorParam('firemastery') + this.weaponParam('firemastery') + this.assistBuffParam('firemastery') + this.selfBuffParam('firemastery'),
-            earth: this.armorParam('earthmastery') + this.weaponParam('earthmastery') + this.assistBuffParam('earthmastery') + this.selfBuffParam('earthmastery'),
-            water: this.armorParam('watermastery') + this.weaponParam('watermastery') + this.assistBuffParam('watermastery') + this.selfBuffParam('watermastery'),
-            wind: this.armorParam('windmastery') + this.weaponParam('windmastery') + this.assistBuffParam('windmastery') + this.selfBuffParam('windmastery'),
-            elec: this.armorParam('electricitymastery') + this.weaponParam('electricitymastery') + this.assistBuffParam('electricitymastery') + this.selfBuffParam('electricitymastery'),
-        };
 
-        // Specific skill multipliers
-        // Check HoP in CAttackArbiter::OnAfterDamage
         if (skill) {
+            // Specific skill multipliers
             switch (skill.name.en) {
                 case "Spirit Bomb":
                     factor += 1.25;
@@ -298,27 +290,38 @@ export class Mover {
                 case "Hit of Penya":
                     factor += 3.0;
             }
-        }
 
-        // Element multipliers
-        if (skill && skill.element) {
-            switch (skill.element) {
-                case "fire":
-                    factor += (elementalBonus.fire / 100);
-                    break;
-                case "earth":
-                    factor += (elementalBonus.earth / 100);
-                    break;
-                case "water":
-                    factor += (elementalBonus.water / 100);
-                    break;
-                case "wind":
-                    factor += (elementalBonus.wind / 100);
-                    break;
-                case "electricity":
-                    factor += (elementalBonus.elec / 100);
-                    break;
+            // Element multipliers
+            if (skill.element) {
+                let elementalBonus = {
+                    fire: this.armorParam('firemastery') + this.weaponParam('firemastery') + this.assistBuffParam('firemastery') + this.selfBuffParam('firemastery'),
+                    earth: this.armorParam('earthmastery') + this.weaponParam('earthmastery') + this.assistBuffParam('earthmastery') + this.selfBuffParam('earthmastery'),
+                    water: this.armorParam('watermastery') + this.weaponParam('watermastery') + this.assistBuffParam('watermastery') + this.selfBuffParam('watermastery'),
+                    wind: this.armorParam('windmastery') + this.weaponParam('windmastery') + this.assistBuffParam('windmastery') + this.selfBuffParam('windmastery'),
+                    elec: this.armorParam('electricitymastery') + this.weaponParam('electricitymastery') + this.assistBuffParam('electricitymastery') + this.selfBuffParam('electricitymastery'),
+                };
+
+                switch (skill.element) {
+                    case "fire":
+                        factor += (elementalBonus.fire / 100);
+                        break;
+                    case "earth":
+                        factor += (elementalBonus.earth / 100);
+                        break;
+                    case "water":
+                        factor += (elementalBonus.water / 100);
+                        break;
+                    case "wind":
+                        factor += (elementalBonus.wind / 100);
+                        break;
+                    case "electricity":
+                        factor += (elementalBonus.elec / 100);
+                        break;
+                }
             }
+
+            factor += this.weaponParam('skilldamage') / 100;
+            factor += this.armorParam('skilldamage') / 100;
         }
 
         const weaponBonus = this.weaponParam('attack') / 100;
