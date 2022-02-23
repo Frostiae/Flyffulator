@@ -96,6 +96,7 @@ export default {
       },
       monsters: utils.getMonstersAtLevel(utils.character.level),
       focusMonster: null,
+      jobName: "Vagrant", // This is used only when a character is imported, because we have no other way of changing the select field
       skillIndex: -1    // Auto attack is used initially for all damage calculations
     }
   },
@@ -124,8 +125,14 @@ export default {
     'character.ref.int'() { this.updateCharacter() },
     'character.ref.assistInt'() { this.updateCharacter() },
     'character.ref.selfBuffs'() { this.updateCharacter() },
+    'character.ref.assistBuffs'() { this.updateCharacter() },
     'character.ref.weapon'() { this.updateCharacter() },
     'character.ref.armor'() { this.updateCharacter() },
+    'character.ref.earringR'() { this.updateCharacter() },
+    'character.ref.earringL'() { this.updateCharacter() },
+    'character.ref.ringR'() { this.updateCharacter() },
+    'character.ref.ringL'() { this.updateCharacter() },
+    'character.ref.necklace'() { this.updateCharacter() },
   },
   created() { this.updateCharacter() },
   methods: {

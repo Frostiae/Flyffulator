@@ -30,15 +30,15 @@ export default {
   },
   methods: {
       exportCharacter() {
-          this.exportCode = JSON.stringify(this.$root.character.ref);
+        this.exportCode = JSON.stringify(this.$root.character.ref);
       },
       importCharacter() {
-        // Works, but displays are off TODO
           if (this.importCode) {
             let char = JSON.parse(this.importCode);
             let base = Utils.getJobFromId(char.jobId)
             base.applyData(char);
             this.$root.character.ref = base;
+            this.$root.jobName = Utils.getJobName(char.jobId);
           }
       }
   }

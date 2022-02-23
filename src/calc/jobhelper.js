@@ -7,7 +7,11 @@ import { Utils } from "./utils.js";
 export class Mover {
     applyData(json) { Object.assign(this, json); }  // Importing a character
 
+    // TODO: Change this signature back to not use direct attack changing
     update() {
+        this.applyAssistBuffs();
+        this.applySelfBuffs();
+
         this.skillsDamage = this.averageSkillDmg();
         this.remainingPoints = this.getRemainingPoints();
         this.criticalChance = this.getCriticalChance();
@@ -20,8 +24,8 @@ export class Mover {
         return this;
     }
 
-    applyAssistBuffs(enabled) {
-        if (enabled && !this.assistBuffs) {                // Add buffs
+    applyAssistBuffs() {
+        if (this.assistBuffs && this.activeAssistBuffs.length == 0) {                // Add buffs
             this.activeAssistBuffs = [
                 Utils.getSkillByName('Cannon Ball'),
                 Utils.getSkillByName('Beef Up'),
@@ -37,9 +41,7 @@ export class Mover {
             this.sta += this.assistBuffParam('sta');
             this.int += this.assistBuffParam('int');
             this.dex += this.assistBuffParam('dex');
-            this.assistBuffs = true;
-        } else if (!enabled && this.assistBuffs) {         // Remove buffs
-            this.assistBuffs = false;
+        } else if (!this.assistBuffs && this.activeAssistBuffs.length != 0) {         // Remove buffs
             this.str -= this.assistBuffParam('str');
             this.sta -= this.assistBuffParam('sta');
             this.int -= this.assistBuffParam('int');
@@ -49,19 +51,15 @@ export class Mover {
         }
     }
 
-    applySelfBuffs(enabled) {
-        if (enabled && !this.selfBuffs) {
+    applySelfBuffs() {
+        if (this.selfBuffs && this.activeSelfBuffs.length == 0) {
             this.activeSelfBuffs = this.constants.buffs;
 
             this.str += this.selfBuffParam('str');
             this.sta += this.selfBuffParam('sta');
             this.int += this.selfBuffParam('int');
             this.dex += this.selfBuffParam('dex');
-
-            this.selfBuffs = true;
-        } else if (!enabled && this.selfBuffs) {
-            this.selfBuffs = false;
-
+        } else if (!this.selfBuffs && this.activeSelfBuffs.length != 0) {
             this.str -= this.selfBuffParam('str');
             this.sta -= this.selfBuffParam('sta');
             this.int -= this.selfBuffParam('int');
@@ -108,7 +106,7 @@ export class Mover {
     }
 
     getExtraGearParam(param) {
-        return this.armorParam(param) + this.weaponParam(param);
+        return this.armorParam(param) + this.weaponParam(param) + this.jeweleryParam(param);
     }
 
     armorParam(param) {
@@ -126,6 +124,38 @@ export class Mover {
             const bonus = this.weapon.abilities.find(a => a.parameter == param);
             if (bonus) add = bonus.add;
         }
+        return add;
+    }
+
+    jeweleryParam(param) {
+        var secondaryParam = param == 'attack' ? 'damage' : ''; // Jewelery has additional damage which adds attack
+        var add = 0;
+
+        if (this.earringR && this.earringR.abilities) {
+            const bonus = this.earringR.abilities.find(a => a.parameter == param || a.parameter == secondaryParam);
+            if (bonus) add += bonus.add;
+        }
+
+        if (this.earringL && this.earringL.abilities) {
+            const bonus = this.earringL.abilities.find(a => a.parameter == param || a.parameter == secondaryParam);
+            if (bonus) add += bonus.add;
+        }
+
+        if (this.ringR && this.ringR.abilities) {
+            const bonus = this.ringR.abilities.find(a => a.parameter == param || a.parameter == secondaryParam);
+            if (bonus) add += bonus.add;
+        }
+
+        if (this.ringL && this.ringL.abilities) {
+            const bonus = this.ringL.abilities.find(a => a.parameter == param || a.parameter == secondaryParam);
+            if (bonus) add += bonus.add;
+        }
+
+        if (this.necklace && this.necklace.abilities) {
+            const bonus = this.necklace.abilities.find(a => a.parameter == param || a.parameter == secondaryParam);
+            if (bonus) add += bonus.add;
+        }
+
         return add;
     }
 
@@ -285,11 +315,11 @@ export class Mover {
         // Look into CMover::GetMagicSkillFactor() for element multipliers
         let factor = 1.0;
         let elementalBonus = {
-            fire: this.armorParam('firemastery') + this.weaponParam('firemastery') + this.assistBuffParam('firemastery') + this.selfBuffParam('firemastery'),
-            earth: this.armorParam('earthmastery') + this.weaponParam('earthmastery') + this.assistBuffParam('earthmastery') + this.selfBuffParam('earthmastery'),
-            water: this.armorParam('watermastery') + this.weaponParam('watermastery') + this.assistBuffParam('watermastery') + this.selfBuffParam('watermastery'),
-            wind: this.armorParam('windmastery') + this.weaponParam('windmastery') + this.assistBuffParam('windmastery') + this.selfBuffParam('windmastery'),
-            elec: this.armorParam('electricitymastery') + this.weaponParam('electricitymastery') + this.assistBuffParam('electricitymastery') + this.selfBuffParam('electricitymastery'),
+            fire: this.armorParam('firemastery') + this.weaponParam('firemastery') + this.assistBuffParam('firemastery') + this.selfBuffParam('firemastery') + this.jeweleryParam('firemastery'),
+            earth: this.armorParam('earthmastery') + this.weaponParam('earthmastery') + this.assistBuffParam('earthmastery') + this.selfBuffParam('earthmastery') + this.jeweleryParam('earthmastery'),
+            water: this.armorParam('watermastery') + this.weaponParam('watermastery') + this.assistBuffParam('watermastery') + this.selfBuffParam('watermastery') + this.jeweleryParam('watermastery'),
+            wind: this.armorParam('windmastery') + this.weaponParam('windmastery') + this.assistBuffParam('windmastery') + this.selfBuffParam('windmastery') + this.jeweleryParam('windmastery'),
+            elec: this.armorParam('electricitymastery') + this.weaponParam('electricitymastery') + this.assistBuffParam('electricitymastery') + this.selfBuffParam('electricitymastery') + this.jeweleryParam('electricitymastery'),
         };
 
         // Specific skill multipliers

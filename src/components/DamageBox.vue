@@ -34,7 +34,8 @@ export default {
     },
     '$root.monsters'() {
       if (this.$root.skillIndex != this.skillindex) this.active = false
-    }
+    },
+    '$root.focusMonster'() { this.getDamage(); }
   },
   methods: {
     getDamage() {

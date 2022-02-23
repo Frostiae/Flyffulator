@@ -26,7 +26,9 @@ export class Utils {
     static getJobId(jobName) { return this.jobs.find(job => job.name.en == jobName).id || 9686; }   // 9686 = vagrant
     static getParentJobId(jobId) { return this.jobs.find(job => job.id == jobId).parent || 9686; }
     static getJobName(jobId) { return this.jobs.find(job => job.id == jobId).name.en || "Vagrant"; }
-
+    
+    static getJewelery(subcategory) { return this.items.filter(item => item.category == "jewelry" && item.subcategory == subcategory); }
+    
     static getJobWeapons(jobId) {
         const jobs = [jobId, this.getParentJobId(jobId)]
         return this.items.filter(item => item.category == "weapon" && jobs.includes(item.class)); 
@@ -35,6 +37,7 @@ export class Utils {
         const jobs = [jobId, this.getParentJobId(jobId)]
         return this.sets.filter(set => jobs.includes(this.getItemById(set.parts[0]).class)); 
     }
+
 
     static getWeaponSpeed(weapon) {
         if (!weapon) return 0;

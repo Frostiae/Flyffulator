@@ -3,12 +3,17 @@ import { Mover } from "./jobhelper.js";
 import { Utils } from "./utils.js";
 
 export class Vagrant extends Mover {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null, earringR=null, earringL=null, ringR=null, ringL=null, necklace=null) {
         super();
         this.jobId = jobId || jobId || 9686;
         this.weapon_img = img || "woodensword.png";
         this.armor = armor || null;
         this.weapon = weapon || Utils.getItemByName("Wooden Sword");
+        this.earringR = earringR || null;
+        this.earringL = earringL || null;
+        this.ringR = ringR || null;
+        this.ringL = ringL || null;
+        this.necklace = necklace || null;
         this.assistBuffs = false;
         this.selfBuffs = false;
         this.constants = constants || {
@@ -69,6 +74,7 @@ export class Vagrant extends Mover {
         health += health * this.weaponParam('maxhp') / 100;
         health += health * this.assistBuffParam('maxhp') / 100;
         health += health * this.selfBuffParam('maxhp') / 100;
+        health += this.jeweleryParam('maxhp');
         return Math.floor(health);
     }
 
@@ -76,6 +82,7 @@ export class Vagrant extends Mover {
         let fp = Math.floor(this.level*0.6+this.sta*2.1);
         fp += fp * this.armorParam('maxfp') / 100
         fp += fp * this.weaponParam('maxfp') / 100
+        fp += this.jeweleryParam('maxfp')
         return fp
     }
 
@@ -83,6 +90,7 @@ export class Vagrant extends Mover {
         let mp = Math.floor(22+this.level*0.6+this.int*2.7);
         mp += mp * this.armorParam('maxmp') / 100
         mp += mp * this.weaponParam('maxmp') / 100
+        mp += this.jeweleryParam('maxmp')
         return mp
     }
 
@@ -96,6 +104,7 @@ export class Vagrant extends Mover {
         defense += this.weaponParam('def');
         defense += this.assistBuffParam('def');
         defense += this.selfBuffParam('def');
+        defense += this.jeweleryParam('def');
         return defense;
     }
 
@@ -125,6 +134,7 @@ export class Vagrant extends Mover {
         final += this.armorParam('attackspeed');
         final += this.assistBuffParam('attackspeed');
         final += this.selfBuffParam('attackspeed');
+        final += this.jeweleryParam('attackspeed');
 
         final = final > 100 ? 100 : final;
         return Math.floor(final);
@@ -139,6 +149,7 @@ export class Vagrant extends Mover {
         const weaponBonus = this.weaponParam('criticalchance');
         chance += this instanceof Blade ? weaponBonus * 2 : weaponBonus;
         chance += this.armorParam('criticalchance');
+        chance += this.jeweleryParam('criticalchance');
         chance += this.assistBuffParam('criticalchance');
         chance += this.selfBuffParam('criticalchance');
 
@@ -151,6 +162,7 @@ export class Vagrant extends Mover {
         dct += this.weaponParam('decreasedcastingtime');
         dct += this.selfBuffParam('decreasedcastingtime');
         dct += this.assistBuffParam('decreasedcastingtime');
+        dct += this.jeweleryParam('decreasedcastingtime');
         return dct;
     }
 
@@ -168,6 +180,7 @@ export class Vagrant extends Mover {
         pnMax += plus;
 
         let final = (pnMin + pnMax) / 2;
+        final += this.jeweleryParam('attack');
         final *= this.damageMultiplier();
 
         // Gear and buff params
@@ -178,8 +191,9 @@ export class Vagrant extends Mover {
     getCriticalDamage() {
         const weaponBonus = this.weaponParam('criticaldamage');
         const armorBonus = this.armorParam('criticaldamage');
+        const jeweleryBonus = this.jeweleryParam('criticaldamage');
         const buffBonus = this.selfBuffParam('criticaldamage');
-        return this instanceof Blade ? weaponBonus * 2 + armorBonus + buffBonus : weaponBonus + armorBonus + buffBonus;
+        return this instanceof Blade ? weaponBonus * 2 + armorBonus + buffBonus + jeweleryBonus : weaponBonus + armorBonus + buffBonus + jeweleryBonus;
     }
 
     getAverageAA() {
@@ -199,6 +213,7 @@ export class Vagrant extends Mover {
 
         let avgNormal = (pnMin + pnMax) / 2;
         avgNormal *= this.damageMultiplier();
+        avgNormal += this.jeweleryParam('attack');
 
         // CMover::GetHitPower
         const critMinFactor = 1.2 + this.criticalDamage / 100;
@@ -227,6 +242,7 @@ export class Vagrant extends Mover {
         const weaponBonus = this.weaponParam('hitrate');
         hit += this instanceof Blade ? weaponBonus * 2 : weaponBonus;
         hit += this.armorParam('hitrate');
+        hit += this.jeweleryParam('hitrate');
         hit += this.assistBuffParam('hitrate');
         hit += this.selfBuffParam('hitrate');
         return hit;
@@ -235,7 +251,7 @@ export class Vagrant extends Mover {
 
 
 export class Assist extends Vagrant {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null, earringR=null, earringL=null, ringR=null, ringL=null, necklace=null) {
         jobId = jobId || 8962;
         img = img || "overamknuckle.png";
         armor = armor || Utils.getArmorByName("Sayram Set");
@@ -270,6 +286,7 @@ export class Assist extends Vagrant {
         health += health * this.weaponParam('maxhp') / 100;
         health += health * this.assistBuffParam('maxhp') / 100;
         health += health * this.selfBuffParam('maxhp') / 100;
+        health += this.jeweleryParam('maxhp');
         return Math.floor(health);
     }
 
@@ -277,6 +294,7 @@ export class Assist extends Vagrant {
         let fp = Math.floor(this.level*1.2+this.sta*4.2);
         fp += fp * this.armorParam('maxfp') / 100
         fp += fp * this.weaponParam('maxfp') / 100
+        fp += this.jeweleryParam('maxfp')
         return fp
     }
 
@@ -284,13 +302,14 @@ export class Assist extends Vagrant {
         let mp = Math.floor(22+this.level*2.6+this.int*11.7);
         mp += mp * this.armorParam('maxmp') / 100
         mp += mp * this.weaponParam('maxmp') / 100
+        mp += this.jeweleryParam('maxmp')
         mp += mp * this.selfBuffParam('maxmp') / 100
         return mp
     }
 }
 
 export class Billposter extends Assist {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null, earringR=null, earringL=null, ringR=null, ringL=null, necklace=null) {
         jobId = jobId || 7424;
         img = img || "bloodyknuckle.png";
         armor = armor || Utils.getArmorByName("Rody Set");
@@ -325,6 +344,7 @@ export class Billposter extends Assist {
         health += health * this.weaponParam('maxhp') / 100;
         health += health * this.assistBuffParam('maxhp') / 100;
         health += health * this.selfBuffParam('maxhp') / 100;
+        health += this.jeweleryParam('maxhp');
         return Math.floor(health);
     }
 
@@ -332,6 +352,7 @@ export class Billposter extends Assist {
         let fp = Math.floor(this.level*2.2+this.sta*7.7);
         fp += fp * this.armorParam('maxfp') / 100
         fp += fp * this.weaponParam('maxfp') / 100
+        fp += this.jeweleryParam('maxfp')
         return fp
     }
 
@@ -339,12 +360,13 @@ export class Billposter extends Assist {
         let mp = Math.floor(22+this.level*1.8+this.int*8.1);
         mp += mp * this.armorParam('maxmp') / 100
         mp += mp * this.weaponParam('maxmp') / 100
+        mp += this.jeweleryParam('maxmp')
         return mp
     }
 }
 
 export class Ringmaster extends Assist {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null, earringR=null, earringL=null, ringR=null, ringL=null, necklace=null) {
         jobId = jobId || 9389;
         img = img || "lgstick.png";
         armor = armor || Utils.getArmorByName("Rimyth Set");
@@ -381,6 +403,7 @@ export class Ringmaster extends Assist {
         health += health * this.weaponParam('maxhp') / 100;
         health += health * this.assistBuffParam('maxhp') / 100;
         health += health * this.selfBuffParam('maxhp') / 100;
+        health += this.jeweleryParam('maxhp');
         return Math.floor(health);
     }
 
@@ -388,6 +411,7 @@ export class Ringmaster extends Assist {
         let fp = Math.floor(this.level*0.8+this.sta*2.8);
         fp += fp * this.armorParam('maxfp') / 100
         fp += fp * this.weaponParam('maxfp') / 100
+        fp += this.jeweleryParam('maxfp')
         return fp
     }
 
@@ -395,12 +419,13 @@ export class Ringmaster extends Assist {
         let mp = Math.floor(22+this.level*3.6+this.int*16.2);
         mp += mp * this.armorParam('maxmp') / 100
         mp += mp * this.weaponParam('maxmp') / 100
+        mp += this.jeweleryParam('maxmp')
         return mp
     }
 }
 
 export class Acrobat extends Vagrant {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null, earringR=null, earringL=null, ringR=null, ringL=null, necklace=null) {
         jobId = jobId || 9098;
         img = img || "layeredbow.png";
         armor = armor || Utils.getArmorByName("Cruiser Set");
@@ -439,6 +464,7 @@ export class Acrobat extends Vagrant {
         health += health * this.weaponParam('maxhp') / 100;
         health += health * this.assistBuffParam('maxhp') / 100;
         health += health * this.selfBuffParam('maxhp') / 100;
+        health += this.jeweleryParam('maxhp');
         return Math.floor(health);
     }
 
@@ -446,6 +472,7 @@ export class Acrobat extends Vagrant {
         let fp = Math.floor(this.level*1+this.sta*3.5);
         fp += fp * this.armorParam('maxfp') / 100
         fp += fp * this.weaponParam('maxfp') / 100
+        fp += this.jeweleryParam('maxfp')
         return fp
     }
 
@@ -453,12 +480,13 @@ export class Acrobat extends Vagrant {
         let mp = Math.floor(22+this.level*1+this.int*4.5);
         mp += mp * this.armorParam('maxmp') / 100
         mp += mp * this.weaponParam('maxmp') / 100
+        mp += this.jeweleryParam('maxmp')
         return mp
     }
 }
 
 export class Jester extends Acrobat {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null, earringR=null, earringL=null, ringR=null, ringL=null, necklace=null) {
         jobId = jobId || 3545;
         img = img || "lgyoyo.png";
         armor = armor || Utils.getArmorByName("Neis Set");
@@ -495,6 +523,7 @@ export class Jester extends Acrobat {
         health += health * this.weaponParam('maxhp') / 100;
         health += health * this.assistBuffParam('maxhp') / 100;
         health += health * this.selfBuffParam('maxhp') / 100;
+        health += this.jeweleryParam('maxhp');
         return Math.floor(health);
     }
 
@@ -502,6 +531,7 @@ export class Jester extends Acrobat {
         let fp = Math.floor(this.level*2+this.sta*7);
         fp += fp * this.armorParam('maxfp') / 100
         fp += fp * this.weaponParam('maxfp') / 100
+        fp += this.jeweleryParam('maxfp')
         return fp
     }
 
@@ -509,12 +539,13 @@ export class Jester extends Acrobat {
         let mp = Math.floor(22+this.level*1+this.int*4.5);
         mp += mp * this.armorParam('maxmp') / 100
         mp += mp * this.weaponParam('maxmp') / 100
+        mp += this.jeweleryParam('maxmp')
         return mp
     }
 }
 
 export class Ranger extends Acrobat {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null, earringR=null, earringL=null, ringR=null, ringL=null, necklace=null) {
         jobId = jobId || 9295;
         img = img || "lgbow.png";
         armor = armor || Utils.getArmorByName("Tyrent Set");
@@ -551,6 +582,7 @@ export class Ranger extends Acrobat {
         health += health * this.weaponParam('maxhp') / 100;
         health += health * this.assistBuffParam('maxhp') / 100;
         health += health * this.selfBuffParam('maxhp') / 100;
+        health += this.jeweleryParam('maxhp');
         return Math.floor(health);
     }
 
@@ -558,6 +590,7 @@ export class Ranger extends Acrobat {
         let fp = Math.floor(this.level*1.2+this.sta*4.2);
         fp += fp * this.armorParam('maxfp') / 100
         fp += fp * this.weaponParam('maxfp') / 100
+        fp += this.jeweleryParam('maxfp')
         return fp
     }
 
@@ -565,12 +598,13 @@ export class Ranger extends Acrobat {
         let mp = Math.floor(22+this.level*2.4+this.int*10.8);
         mp += mp * this.armorParam('maxmp') / 100
         mp += mp * this.weaponParam('maxmp') / 100
+        mp += this.jeweleryParam('maxmp')
         return mp
     }
 }
 
 export class Magician extends Vagrant {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null, earringR=null, earringL=null, ringR=null, ringL=null, necklace=null) {
         jobId = jobId || 9581;
         img = img || "opelwand.png";
         armor = armor || Utils.getArmorByName("Teba Set");
@@ -605,6 +639,7 @@ export class Magician extends Vagrant {
         health += health * this.weaponParam('maxhp') / 100;
         health += health * this.assistBuffParam('maxhp') / 100;
         health += health * this.selfBuffParam('maxhp') / 100;
+        health += this.jeweleryParam('maxhp');
         return Math.floor(health);
     }
 
@@ -612,6 +647,7 @@ export class Magician extends Vagrant {
         let fp = Math.floor(this.level*0.6+this.sta*2.1);
         fp += fp * this.armorParam('maxfp') / 100
         fp += fp * this.weaponParam('maxfp') / 100
+        fp += this.jeweleryParam('maxfp')
         return fp
     }
 
@@ -619,12 +655,13 @@ export class Magician extends Vagrant {
         let mp = Math.floor(22+this.level*3.4+this.int*15.3);
         mp += mp * this.armorParam('maxmp') / 100
         mp += mp * this.weaponParam('maxmp') / 100
+        mp += this.jeweleryParam('maxmp')
         return mp
     }
 }
 
 export class Psykeeper extends Magician {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null, earringR=null, earringL=null, ringR=null, ringL=null, necklace=null) {
         jobId = jobId || 5709;
         img = img || "lgwand.png";
         armor = armor || Utils.getArmorByName("Mekatro Set");
@@ -659,6 +696,7 @@ export class Psykeeper extends Magician {
         health += health * this.weaponParam('maxhp') / 100;
         health += health * this.assistBuffParam('maxhp') / 100;
         health += health * this.selfBuffParam('maxhp') / 100;
+        health += this.jeweleryParam('maxhp');
         return Math.floor(health);
     }
 
@@ -666,6 +704,7 @@ export class Psykeeper extends Magician {
         let fp = Math.floor(this.level*0.8+this.sta*2.8);
         fp += fp * this.armorParam('maxfp') / 100
         fp += fp * this.weaponParam('maxfp') / 100
+        fp += this.jeweleryParam('maxfp')
         return fp
     }
 
@@ -673,12 +712,13 @@ export class Psykeeper extends Magician {
         let mp = Math.floor(22+this.level*4+this.int*18);
         mp += mp * this.armorParam('maxmp') / 100
         mp += mp * this.weaponParam('maxmp') / 100
+        mp += this.jeweleryParam('maxmp')
         return mp
     }
 }
 
 export class Elementor extends Magician {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null, earringR=null, earringL=null, ringR=null, ringL=null, necklace=null) {
         jobId = jobId || 9150;
         img = img || "lgstaff.png";
         armor = armor || Utils.getArmorByName("Shabel Set");
@@ -717,6 +757,7 @@ export class Elementor extends Magician {
         health += health * this.weaponParam('maxhp') / 100;
         health += health * this.assistBuffParam('maxhp') / 100;
         health += health * this.selfBuffParam('maxhp') / 100;
+        health += this.jeweleryParam('maxhp');
         return Math.floor(health);
     }
 
@@ -724,6 +765,7 @@ export class Elementor extends Magician {
         let fp = Math.floor(this.level*0.8+this.sta*2.8);
         fp += fp * this.armorParam('maxfp') / 100
         fp += fp * this.weaponParam('maxfp') / 100
+        fp += this.jeweleryParam('maxfp')
         return fp
     }
 
@@ -731,12 +773,13 @@ export class Elementor extends Magician {
         let mp = Math.floor(22+this.level*4+this.int*18);
         mp += mp * this.armorParam('maxmp') / 100
         mp += mp * this.weaponParam('maxmp') / 100
+        mp += this.jeweleryParam('maxmp')
         return mp
     }
 }
 
 export class Mercenary extends Vagrant {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null, earringR=null, earringL=null, ringR=null, ringL=null, necklace=null) {
         jobId = jobId || 764;
         img = img || "woodensword.png";
         armor = armor || Utils.getArmorByName("Panggril Set");
@@ -772,6 +815,7 @@ export class Mercenary extends Vagrant {
         health += health * this.weaponParam('maxhp') / 100;
         health += health * this.assistBuffParam('maxhp') / 100;
         health += health * this.selfBuffParam('maxhp') / 100;
+        health += this.jeweleryParam('maxhp');
         return Math.floor(health);
     }
 
@@ -779,6 +823,7 @@ export class Mercenary extends Vagrant {
         let fp = Math.floor(this.level*1.4+this.sta*4.9);
         fp += fp * this.armorParam('maxfp') / 100
         fp += fp * this.weaponParam('maxfp') / 100
+        fp += this.jeweleryParam('maxfp')
         return fp
     }
 
@@ -786,12 +831,13 @@ export class Mercenary extends Vagrant {
         let mp = Math.floor(22+this.level*1+this.int*4.5);
         mp += mp * this.armorParam('maxmp') / 100
         mp += mp * this.weaponParam('maxmp') / 100
+        mp += this.jeweleryParam('maxmp')
         return mp
     }
 }
 
 export class Blade extends Mercenary {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null, earringR=null, earringL=null, ringR=null, ringL=null, necklace=null) {
         jobId = jobId || 2246;
         img = img || "lgaxe.png";
         armor = armor || Utils.getArmorByName("Hanes Set");
@@ -826,6 +872,7 @@ export class Blade extends Mercenary {
         health += health * this.weaponParam('maxhp') / 100;
         health += health * this.assistBuffParam('maxhp') / 100;
         health += health * this.selfBuffParam('maxhp') / 100;
+        health += this.jeweleryParam('maxhp');
         return Math.floor(health);
     }
 
@@ -833,6 +880,7 @@ export class Blade extends Mercenary {
         let fp = Math.floor(this.level*2.4+this.sta*8.400001);
         fp += fp * this.armorParam('maxfp') / 100
         fp += fp * this.weaponParam('maxfp') / 100
+        fp += this.jeweleryParam('maxfp')
         return fp
     }
 
@@ -840,12 +888,13 @@ export class Blade extends Mercenary {
         let mp = Math.floor(22+this.level*1.2+this.int*5.4);
         mp += mp * this.armorParam('maxmp') / 100
         mp += mp * this.weaponParam('maxmp') / 100
+        mp += this.jeweleryParam('maxmp')
         return mp
     }
 }
 
 export class Knight extends Mercenary {
-    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null) {
+    constructor(str=15, sta=15, int=15, dex=15, level=1, constants=null, img=null, weapon=null, armor=null, jobId=null, earringR=null, earringL=null, ringR=null, ringL=null, necklace=null) {
         jobId = jobId || 5330;
         img = img || "lgswt.png";
         armor = armor || Utils.getArmorByName("Extro Set");
@@ -880,6 +929,7 @@ export class Knight extends Mercenary {
         health += health * this.weaponParam('maxhp') / 100;
         health += health * this.assistBuffParam('maxhp') / 100;
         health += health * this.selfBuffParam('maxhp') / 100;
+        health += this.jeweleryParam('maxhp');
         return Math.floor(health);
     }
 
@@ -887,6 +937,7 @@ export class Knight extends Mercenary {
         let fp = Math.floor(this.level*3+this.sta*10.5);
         fp += fp * this.armorParam('maxfp') / 100
         fp += fp * this.weaponParam('maxfp') / 100
+        fp += this.jeweleryParam('maxfp')
         return fp
     }
 
@@ -894,6 +945,7 @@ export class Knight extends Mercenary {
         let mp = Math.floor(22+this.level*1.2+this.int*5.4);
         mp += mp * this.armorParam('maxmp') / 100
         mp += mp * this.weaponParam('maxmp') / 100
+        mp += this.jeweleryParam('maxmp')
         return mp
     }
 }
