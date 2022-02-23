@@ -324,7 +324,9 @@ export class Mover {
 
         // Specific skill multipliers
         // Check HoP in CAttackArbiter::OnAfterDamage
+
         if (skill) {
+            // Specific skill multipliers
             switch (skill.name.en) {
                 case "Spirit Bomb":
                     factor += 1.25;
@@ -332,27 +334,30 @@ export class Mover {
                 case "Hit of Penya":
                     factor += 3.0;
             }
-        }
 
-        // Element multipliers
-        if (skill && skill.element) {
-            switch (skill.element) {
-                case "fire":
-                    factor += (elementalBonus.fire / 100);
-                    break;
-                case "earth":
-                    factor += (elementalBonus.earth / 100);
-                    break;
-                case "water":
-                    factor += (elementalBonus.water / 100);
-                    break;
-                case "wind":
-                    factor += (elementalBonus.wind / 100);
-                    break;
-                case "electricity":
-                    factor += (elementalBonus.elec / 100);
-                    break;
+            // Element multipliers
+            if (skill.element) {
+                switch (skill.element) {
+                    case "fire":
+                        factor += (elementalBonus.fire / 100);
+                        break;
+                    case "earth":
+                        factor += (elementalBonus.earth / 100);
+                        break;
+                    case "water":
+                        factor += (elementalBonus.water / 100);
+                        break;
+                    case "wind":
+                        factor += (elementalBonus.wind / 100);
+                        break;
+                    case "electricity":
+                        factor += (elementalBonus.elec / 100);
+                        break;
+                }
             }
+
+            factor += this.weaponParam('skilldamage') / 100;
+            factor += this.armorParam('skilldamage') / 100;
         }
 
         const weaponBonus = this.weaponParam('attack') / 100;
