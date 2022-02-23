@@ -82,7 +82,9 @@ export class Mover {
     }
 
     weaponAttack() {
-        let weapon = this.weapon.subcategory;
+        let weapon = "";
+        if (this.weapon)
+            weapon = this.weapon.subcategory;
         switch (weapon) {
             case 'axe':
                 return Math.floor(((this.str - 12) * this.constants[weapon]) + ((this.level * 1.2)));

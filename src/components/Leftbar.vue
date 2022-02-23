@@ -31,6 +31,13 @@ export default {
   margin: 20px;
 }
 
+table.stattable {
+  text-align: center;
+  color: v-bind('$root.hcolor');
+  margin: 3px;
+  font-size: 14px;
+}
+
 .sidepanel {
   position: fixed;
   height: 100%;

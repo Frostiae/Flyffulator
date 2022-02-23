@@ -198,13 +198,4 @@ export default {
 button#applystats, button#resetstats {
   margin: 5px 15px 0px 15px;
 }
-
-table.stattable {
-  text-align: center;
-  color: v-bind('$root.hcolor');
-  font-weight: 500;
-  margin: 3px;
-  font-family: 'Roboto';
-  font-size: 14px;
-}
 </style>
