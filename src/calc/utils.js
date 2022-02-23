@@ -23,9 +23,12 @@ export class Utils {
     static getSkillByName(name) { return this.skills.find(skill => skill.name.en.toLowerCase() == name.toLowerCase()); }
     static getSkillById(id)     { return this.skills.find(skill => skill.id == id); }
     
-    static getJobId(jobName) { return this.jobs.find(job => job.name.en == jobName).id; }
-    static getParentJobId(jobId) { return this.jobs.find(job => job.id == jobId).parent || jobId; }
-
+    static getJobId(jobName) { return this.jobs.find(job => job.name.en == jobName).id || 9686; }   // 9686 = vagrant
+    static getParentJobId(jobId) { return this.jobs.find(job => job.id == jobId).parent || 9686; }
+    static getJobName(jobId) { return this.jobs.find(job => job.id == jobId).name.en || "Vagrant"; }
+    
+    static getJewelery(subcategory) { return this.items.filter(item => item.category == "jewelry" && item.subcategory == subcategory); }
+    
     static getJobWeapons(jobId) {
         const jobs = [jobId, this.getParentJobId(jobId)]
         return this.items.filter(item => item.category == "weapon" && jobs.includes(item.class)); 
@@ -34,6 +37,7 @@ export class Utils {
         const jobs = [jobId, this.getParentJobId(jobId)]
         return this.sets.filter(set => jobs.includes(this.getItemById(set.parts[0]).class)); 
     }
+
 
     static getWeaponSpeed(weapon) {
         if (!weapon) return 0;
@@ -47,15 +51,17 @@ export class Utils {
             case 'fast':
                 return 0.080;
             case 'veryfast':
-                return 0.17;    // This is the very upper bound of 'veryfast', might be better at a lower value
-            default:
                 return 0.085;
+            default:
+                return 0.17;
         }
     }
 
+    static getJobFromId(jobId) { return JobFactory.createJobFromId(jobId); }
+
     updateJob(character, job) {
         if (character.constructor.name != job) { 
-            let c = JobFactory.createJob(job, 
+            let c = JobFactory.createJobFromName(job, 
                             character.str, 
                             character.sta, 
                             character.dex, 
@@ -91,7 +97,7 @@ export class Utils {
 }
 
 class JobFactory {
-    static createJob(job, str, sta, dex, int, level) {
+    static createJobFromName(job, str, sta, dex, int, level) {
         switch (job) {
             case 'Vagrant': return new Vagrant(str, sta, int, dex, level);
             case 'Assist': return new Assist(str, sta, int, dex, level);
@@ -106,6 +112,24 @@ class JobFactory {
             case 'Mercenary': return new Mercenary(str, sta, int, dex, level);
             case 'Blade': return new Blade(str, sta, int, dex, level);
             case 'Knight': return new Knight(str, sta, int, dex, level);
+        }
+    }
+
+    static createJobFromId(jobId) {
+        switch (jobId) {
+            case 9686: return new Vagrant();
+            case 8962: return new Assist();
+            case 7424: return new Billposter();
+            case 9389: return new Ringmaster();
+            case 9098: return new Acrobat();
+            case 3545: return new Jester();
+            case 9295: return new Ranger();
+            case 9581: return new Magician();
+            case 5709: return new Psykeeper();
+            case 9150: return new Elementor();
+            case 764: return new Mercenary();
+            case 2246: return new Blade();
+            case 5330: return new Knight();
         }
     }
 }

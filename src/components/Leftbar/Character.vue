@@ -1,8 +1,8 @@
 <template>
   <div class="char">
     <h3>Your character</h3>
-    <div class="stats">
 
+    <div class="stats">
       <div class="titles">
         <h5>Class</h5>
         <h5>Level</h5>
@@ -17,7 +17,7 @@
 
       <div class="values">
         <span class="value">
-          <select name="class" @change="$root.updateJob($event)" id="job">
+          <select name="class" @change="$root.updateJob($event)" id="job" v-model="$root.jobName">
             <option value="Vagrant">Vagrant</option>
             <option value="Assist">Assist</option>
             <option value="Billposter">Billposter</option>
@@ -66,17 +66,18 @@
 
         <span class="value">
           <label for="buffs"></label>
-          <input id="buffs" type="checkbox" @change="character.ref.applyAssistBuffs($event.target.checked)">
+          <input id="buffs" type="checkbox" v-model="character.ref.assistBuffs">
           <input class="charinput" type="number" v-model="character.ref.assistInt"/>
           <h5>int</h5>
         </span>
 
         <span class="value">
-          <input id="selfbuffs" type="checkbox" @change="character.ref.applySelfBuffs($event.target.checked)">
+          <input id="selfbuffs" type="checkbox" v-model="character.ref.selfBuffs">
         </span>
         
         <p id="statpoints" v-cloak>{{ character.ref.remainingPoints }}</p>
       </div>
+
     </div>
   </div>
 </template>
