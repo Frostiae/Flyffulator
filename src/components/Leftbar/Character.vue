@@ -106,6 +106,7 @@
       </table>
 
       <button id="applystats" class="btn-plus" @click="ApplyStats">Apply</button>
+      <button id="resetstats" class="btn-plus" @click="ResetCharacter">Reset</button>
 
 
     </div>
@@ -114,6 +115,7 @@
 </template>
 
 <script>
+import { Vagrant } from '../../calc/jobs';
 export default {
   name: 'Character',
   data() {
@@ -158,6 +160,21 @@ export default {
       this.character.ref.assistInt = this.assistint;
       this.character.ref.assistBuffs = this.assistbuffs;
       this.character.ref.selfBuffs = this.classbuffs;
+    },
+    ResetCharacter() {
+      this.character.ref = new Vagrant();
+      this.$root.jobName = "Vagrant";
+      this.newlevel = 1;
+      this.addstr = 0;
+      this.addsta = 0;
+      this.adddex = 0;
+      this.addint = 0;
+      this.classbuffs = false;
+      this.assistbuffs = false;
+      this.assistint = 300;
+      this.added = 0;
+
+      this.ApplyStats();
     }
   },
   watch: {
@@ -178,8 +195,8 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-button#applystats {
-  margin: 15px 15px 0px 15px;
+button#applystats, button#resetstats {
+  margin: 5px 15px 0px 15px;
 }
 
 table.stattable {
