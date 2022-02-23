@@ -50,13 +50,18 @@ export default {
 
   .stats {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     border-radius: 15px;
     width: 100%;
     min-height: 20px;
     box-shadow: #0000001e 0px 5px 5px;
     padding-top: 10px;
     padding-bottom: 10px;
+
+    .statsrow {
+      display:flex;
+      flex-direction: row;
+    }
 
     .titles {
       display: flex;
@@ -84,7 +89,7 @@ export default {
 
   select {
     background: none;
-    color: #DADEEF;
+    color: v-bind('$root.pcolor');
     margin: 3px;
     font-weight: 500;
     border: 1px solid #5975cf00;

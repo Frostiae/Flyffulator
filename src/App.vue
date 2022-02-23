@@ -426,7 +426,7 @@ input[type=number], input[type=text] {
   border:none;
   width: 50px;
   text-align: center;
-  color: #DADEEF;
+  color: v-bind(pcolor);
   font-weight: 500;
   font-family: 'Roboto';
   margin: 2px;
