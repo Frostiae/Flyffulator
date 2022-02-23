@@ -43,6 +43,12 @@ export class Vagrant extends Mover {
         this.sta = parseInt(sta);
         this.int = parseInt(int);
         this.dex = parseInt(dex);
+
+        this.addedStr = 0;
+        this.addedSta = 0;
+        this.addedInt = 0;
+        this.addedDex = 0;
+        
         this.level = parseInt(level);
 
         this.activeAssistBuffs = [];

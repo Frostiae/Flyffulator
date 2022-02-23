@@ -116,6 +116,7 @@
 
 <script>
 import { Vagrant } from '../../calc/jobs';
+import { Utils } from '../../calc/utils';
 export default {
   name: 'Character',
   data() {
@@ -147,6 +148,10 @@ export default {
       this.character.ref.int += this.addint;
 
       this.added += this.addstr + this.addsta + this.adddex + this.addint;
+      Utils.addedStr += this.addstr;
+      Utils.addedSta += this.addsta;
+      Utils.addedDex += this.adddex;
+      Utils.addedInt += this.addint;
 
       this.addstr = 0;
       this.addsta = 0;

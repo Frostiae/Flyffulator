@@ -17,6 +17,11 @@ export class Utils {
     static jobs = jobsjson;
     static sets = setsjson;
 
+    static addedStr = 0;
+    static addedSta = 0;
+    static addedDex = 0;
+    static addedInt = 0;
+
     static getItemByName(name)  { return this.items.find(item => item.name.en.toLowerCase() == name.toLowerCase()); }
     static getItemById(id)      { return this.items.find(item => item.id == id); }
     static getArmorByName(name) { return this.sets.find(set => set.name.en.toLowerCase() == name.toLowerCase()); }
@@ -61,12 +66,14 @@ export class Utils {
 
     updateJob(character, job) {
         if (character.constructor.name != job) { 
-            let c = JobFactory.createJobFromName(job, 
-                            character.str, 
-                            character.sta, 
-                            character.dex, 
-                            character.int,
-                            character.level);
+            let stats = {
+                str: character.str,
+                sta: character.sta,
+                dex: character.dex,
+                int: character.int,
+                level: character.level
+            };
+            let c = JobFactory.createJobFromName(job, stats);
             return c;
         }
 
@@ -97,21 +104,21 @@ export class Utils {
 }
 
 class JobFactory {
-    static createJobFromName(job, str, sta, dex, int, level) {
+    static createJobFromName(job, stats) {
         switch (job) {
-            case 'Vagrant': return new Vagrant(str, sta, int, dex, level);
-            case 'Assist': return new Assist(str, sta, int, dex, level);
-            case 'Billposter': return new Billposter(str, sta, int, dex, level);
-            case 'Ringmaster': return new Ringmaster(str, sta, int, dex, level);
-            case 'Acrobat': return new Acrobat(str, sta, int, dex, level);
-            case 'Jester': return new Jester(str, sta, int, dex, level);
-            case 'Ranger': return new Ranger(str, sta, int, dex, level);
-            case 'Magician': return new Magician(str, sta, int, dex, level);
-            case 'Psykeeper': return new Psykeeper(str, sta, int, dex, level);
-            case 'Elementor': return new Elementor(str, sta, int, dex, level);
-            case 'Mercenary': return new Mercenary(str, sta, int, dex, level);
-            case 'Blade': return new Blade(str, sta, int, dex, level);
-            case 'Knight': return new Knight(str, sta, int, dex, level);
+            case 'Vagrant': return new Vagrant(stats.str, stats.sta, stats.int, stats.dex, stats.level);
+            case 'Assist': return new Assist(stats.str, stats.sta, stats.int, stats.dex, stats.level);
+            case 'Billposter': return new Billposter(stats.str, stats.sta, stats.int, stats.dex, stats.level);
+            case 'Ringmaster': return new Ringmaster(stats.str, stats.sta, stats.int, stats.dex, stats.level);
+            case 'Acrobat': return new Acrobat(stats.str, stats.sta, stats.int, stats.dex, stats.level);
+            case 'Jester': return new Jester(stats.str, stats.sta, stats.int, stats.dex, stats.level);
+            case 'Ranger': return new Ranger(stats.str, stats.sta, stats.int, stats.dex, stats.level);
+            case 'Magician': return new Magician(stats.str, stats.sta, stats.int, stats.dex, stats.level);
+            case 'Psykeeper': return new Psykeeper(stats.str, stats.sta, stats.int, stats.dex, stats.level);
+            case 'Elementor': return new Elementor(stats.str, stats.sta, stats.int, stats.dex, stats.level);
+            case 'Mercenary': return new Mercenary(stats.str, stats.sta, stats.int, stats.dex, stats.level);
+            case 'Blade': return new Blade(stats.str, stats.sta, stats.int, stats.dex, stats.level);
+            case 'Knight': return new Knight(stats.str, stats.sta, stats.int, stats.dex, stats.level);
         }
     }
 

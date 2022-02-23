@@ -204,7 +204,6 @@ export default {
         let clone = Object.assign(Object.create(Object.getPrototypeOf(this.character)), this.character);
         clone.level = clone.level < 15 ? 15 : clone.level;
 
-        //let focus = this.monsters.find(monster => monster.level >= clone.level) || this.monsters.slice(-1)[0];
         let focus = this.$root.focusMonster;
         if (!focus) return;
 

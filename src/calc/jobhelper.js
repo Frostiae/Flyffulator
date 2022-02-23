@@ -9,6 +9,7 @@ export class Mover {
 
     // TODO: Change this signature back to not use direct attack changing
     update() {
+        this.applyBaseGearStats();
         this.applyAssistBuffs();
         this.applySelfBuffs();
 
@@ -22,6 +23,13 @@ export class Mover {
         this.averageAA = this.getAverageAA();
         this.hitrate = this.getHitrate();
         return this;
+    }
+
+    applyBaseGearStats() {
+        this.str = 15 + Utils.addedStr + this.getExtraGearParam("str");
+        this.sta = 15 + Utils.addedSta + this.getExtraGearParam("sta");
+        this.dex = 15 + Utils.addedDex + this.getExtraGearParam("dex");
+        this.int = 15 + Utils.addedInt + this.getExtraGearParam("int");
     }
 
     applyAssistBuffs() {
