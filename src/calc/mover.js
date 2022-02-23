@@ -1,6 +1,7 @@
 /* eslint-disable */
 import { Vagrant, Assist, Billposter, Ringmaster, Acrobat, Jester, Ranger, Magician, Psykeeper, Elementor, Mercenary, Blade, Knight } from "./jobs.js";
 import { Utils } from "./utils.js";
+import { getDeltaFactor } from "./moverutils.js";
 /**
  * The mover class is the base of all characters. Acts as a helper class for a lot of functions.
  */
@@ -87,6 +88,157 @@ export class Mover {
                       this.getExtraBuffParam('int');
         }
         return points;
+    }
+
+    get parry() { return this.dex / 2; }
+
+    get defense() {
+        let defense = Math.floor(((((this.level * 2) + (this.sta / 2)) / 2.8) - 4) + ((this.sta - 14) * this.constants.Def));
+        defense += this.armorParam('def');
+        defense += this.weaponParam('def');
+        defense += this.assistBuffParam('def');
+        defense += this.selfBuffParam('def');
+        defense += this.jeweleryParam('def');
+        return defense;
+    }
+
+    getAspd() {
+        const weaponAspd = Utils.getWeaponSpeed(this.weapon);
+        let a = Math.floor(this.constants.attackSpeed + (weaponAspd * (4.0 * this.dex + this.level / 8.0)) - 3.0);
+        if (a >= 187.5) a = Math.floor(187.5);
+
+        const index = Math.floor(Math.min(Math.max(a / 10, 0), 17));
+        const arr = [
+            0.08, 0.16, 0.24, 0.32, 0.40,
+            0.48, 0.56, 0.64, 0.72, 0.80,
+            0.88, 0.96, 1.04, 1.12, 1.20,
+            1.30, 1.38, 1.50
+        ];
+
+        const plusValue = arr[index];
+        let fspeed = ((50.0 / (200.0 - a)) / 2.0) + plusValue;
+
+        fspeed = fspeed > 0.1 ? fspeed : 0.1;
+        fspeed = fspeed < 2.0 ? fspeed : 2.0;
+
+        let final = fspeed * 100 / 2;
+
+        const weaponBonus = this.weaponParam('attackspeed');
+        final += this instanceof Blade ? weaponBonus * 2 : weaponBonus;
+        final += this.armorParam('attackspeed');
+        final += this.assistBuffParam('attackspeed');
+        final += this.selfBuffParam('attackspeed');
+        final += this.jeweleryParam('attackspeed');
+
+        final = final > 100 ? 100 : final;
+        return Math.floor(final);
+    }
+
+    getCriticalChance() {
+        let chance = this.dex / 10;
+        chance = Math.floor(chance * this.constants.critical);
+        chance = chance >= 100 ? 100 : chance;
+        chance = chance < 0 ? 0 : chance;
+
+        const weaponBonus = this.weaponParam('criticalchance');
+        chance += this instanceof Blade ? weaponBonus * 2 : weaponBonus;
+        chance += this.armorParam('criticalchance');
+        chance += this.jeweleryParam('criticalchance');
+        chance += this.assistBuffParam('criticalchance');
+        chance += this.selfBuffParam('criticalchance');
+
+        return chance > 100 ? 100 : chance;
+    }
+
+    getDCT() {
+        let dct = 100;  // Starts out as 100%
+        dct += this.armorParam('decreasedcastingtime');
+        dct += this.weaponParam('decreasedcastingtime');
+        dct += this.selfBuffParam('decreasedcastingtime');
+        dct += this.assistBuffParam('decreasedcastingtime');
+        dct += this.jeweleryParam('decreasedcastingtime');
+        return dct;
+    }
+
+    getAttack() {
+        let pnMin = 3 * 2;
+        let pnMax = 4 * 2;
+
+        if (this.weapon) {
+            pnMin = this.weapon.minAttack * 2;
+            pnMax = this.weapon.maxAttack * 2;
+        }
+
+        let plus = this.weaponAttack();
+        pnMin += plus;
+        pnMax += plus;
+
+        let final = (pnMin + pnMax) / 2;
+        final += this.jeweleryParam('attack');
+        final *= this.damageMultiplier();
+
+        // TODO: Gear and buff params
+        
+        return final;
+    }
+
+    /**
+     * Get the total ADoCH%.
+     */
+    getCriticalDamage() {
+        const weaponBonus = this.weaponParam('criticaldamage');
+        const armorBonus = this.armorParam('criticaldamage');
+        const jeweleryBonus = this.jeweleryParam('criticaldamage');
+        const buffBonus = this.selfBuffParam('criticaldamage');
+        return this instanceof Blade ? weaponBonus * 2 + armorBonus + buffBonus + jeweleryBonus : weaponBonus + armorBonus + buffBonus + jeweleryBonus;
+    }
+
+    /**
+     * Get the average critical auto attack hit damage.
+     */
+    getCriticalHit() {
+        // CMover::GetHitPower
+        const normalHit = this.attack;
+        const critMinFactor = 1.2 + this.criticalDamage / 100;
+        const critMaxFactor = 2.0 + this.criticalDamage / 100;
+        const critAvgFactor = (critMinFactor + critMaxFactor) / 2;
+
+        return normalHit * critAvgFactor;
+    }
+
+    /**
+     * Get the average normal auto attack hit damage;
+     */
+    getAverageAA() {
+                // Weapon element calculations are in CMover::CalcPropDamage
+                const avgNormal = this.attack;
+                const avgCrit = this.getCriticalHit();
+                
+                let final = ((avgCrit - avgNormal) * this.criticalChance / 100) + avgNormal;
+        
+                // Knight Swordcross calculation
+                if (this instanceof Knight && this.weapon && this.weapon.triggerSkillProbability) {
+                    const swordcrossFactor = 1.0;   // 100% extra damage
+                    const swordcrossChance = this.weapon.triggerSkillProbability / 100;
+                    final += final * (swordcrossFactor * swordcrossChance);
+                }
+        
+                // Blade offhand calculation
+                if (this instanceof Blade) { final = (final + (final * 0.75)) / 2; }
+        
+                return final < avgNormal ? avgNormal : final;   // we wont hit below our normal, non-crit hit
+                // CMover::GetAtkMultiplier
+    }
+
+    getHitrate() {
+        let hit = this.dex / 4;
+        const weaponBonus = this.weaponParam('hitrate');
+        hit += this instanceof Blade ? weaponBonus * 2 : weaponBonus;
+        hit += this.armorParam('hitrate');
+        hit += this.jeweleryParam('hitrate');
+        hit += this.assistBuffParam('hitrate');
+        hit += this.selfBuffParam('hitrate');
+        return hit;
     }
 
     weaponAttack() {
@@ -265,14 +417,14 @@ export class Mover {
 
         if (skillIndex == null) {
             const hitrate = this instanceof Psykeeper ? 100 : this.hitResult(monster);
-            damage = this.getDamageAgainst(monster);
+            damage = this.getDamage(monster);
             let hitsPerSec = this.constants.hps * this.aspd / 100;  // This weighs very heavily on the DPS
             hitsPerSec *= hitrate / 100;
     
             dps = damage * hitsPerSec;
             this.dps.aa = dps;
         } else {
-            damage = this.getDamageAgainst(monster, skillIndex);
+            damage = this.getDamage(monster, skillIndex);
             const frames = 55;
             const hitsPerSec = (30 / frames) * (this.DCT / 100);
             let cooldown = this.constants.skills[skillIndex].levels.slice(-1)[0].cooldown;
@@ -285,24 +437,17 @@ export class Mover {
         return dps;
     }
 
-    getDamageAgainst(opponent, index=null) {
+    getDamage(opponent, skillIndex=null) {
         // TODO: Incorporate element vs element calculation for skills (CAttackArbiter::PostCalcDamage)
-        var factor = 1.0;
-        
-        var delta = opponent.level - this.level;
-        if (delta > 0) {
-            const maxOver = 16;
-            delta = Math.min(delta, (maxOver - 1));
-            let radian = (Math.PI * delta) / (maxOver * 2.0);
-            factor *= Math.cos(radian);
-        }
-        
-        if (index === null || Object.values(this.skillsDamage).length <= index || index == -1) {
-            var damage = (this.averageAA * factor) - opponent.defense;
+        const deltaFactor = getDeltaFactor(opponent.level, this.level);
+        var damage = 1;
+
+        if (skillIndex == null || skillIndex == -1) {
+            damage = (this.averageAA * deltaFactor) - opponent.defense;
         } else {
-            var skill = this.constants.skills[index];
+            var skill = this.constants.skills[skillIndex];
             var defense = skill.magic ? opponent.magicDefense : opponent.defense;
-            var damage = (Object.values(this.skillsDamage)[index] * factor) - defense;
+            damage = (Object.values(this.skillsDamage)[skillIndex] * deltaFactor) - defense;
         }
 
         return damage < 1 ? 1 : damage;
