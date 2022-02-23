@@ -97,6 +97,7 @@ export default {
     transition: 0.3s;
     width: 100%;
     text-overflow: ellipsis;
+    text-align: center;
   }
 
   select:active {
