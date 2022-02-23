@@ -67,11 +67,11 @@ export default {
         if (this.$root.focusMonster) {
 
             if (this.$root.skillIndex < 0 || this.$root.skillIndex == null) {
-                let damage = this.character.getDamageAgainst(this.$root.focusMonster);
+                let damage = this.character.getDamage(this.$root.focusMonster);
                 this.damage = damage.toFixed(0);
                 this.dps = this.character.dps.aa.toFixed(0);
             } else {
-                let damage = this.character.getDamageAgainst(this.$root.focusMonster, this.$root.skillIndex);
+                let damage = this.character.getDamage(this.$root.focusMonster, this.$root.skillIndex);
                 this.damage = damage.toFixed(0);
                 this.dps = this.character.dps[this.$root.skillIndex].toFixed(0);
             }
