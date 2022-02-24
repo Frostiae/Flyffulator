@@ -37,7 +37,7 @@ export class Vagrant extends Mover {
             'wand': 6.0,
             'yoyo': 4.2
         };
-        this.skillsDamage = {};
+        this.skillsRawDamage = {};
 
         this.str = parseInt(str);
         this.sta = parseInt(sta);

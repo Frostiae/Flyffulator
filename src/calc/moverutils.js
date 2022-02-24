@@ -1,6 +1,9 @@
-export function getDeltaFactor(opponentLevel, selfLevel) {
-    var deltaFactor = 1.0;
-    var delta = opponentLevel = selfLevel;
+export default class Moverutils {
+    constructor() { }
+
+    static getDeltaFactor(opponentLevel, selfLevel) {
+        var deltaFactor = 1.0;
+        var delta = opponentLevel - selfLevel;
 
         if (delta > 0) {
             const maxOver = 16;
@@ -9,5 +12,6 @@ export function getDeltaFactor(opponentLevel, selfLevel) {
             deltaFactor *= Math.cos(radian);
         }
 
-    return deltaFactor;
+        return deltaFactor;
+    }
 }

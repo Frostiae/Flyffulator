@@ -27,7 +27,7 @@ export default {
     if (this.skillindex == -1) this.active = true 
   },
   watch: {
-    '$root.character.ref.skillsDamage'() {
+    '$root.character.ref.skillsRawDamage'() {
       this.monsters = this.$root.monsters
       this.character = this.$root.character.ref
       this.getDamage()
@@ -48,9 +48,9 @@ export default {
               this.damage = this.character.averageAA.toFixed(0);  
               this.ttk = ttk.auto.toFixed(0) + 's to kill a ' + this.monster + ' (approximate)';
           } else {
-              this.skill = Object.keys(this.character.skillsDamage)[this.skillindex];
+              this.skill = Object.keys(this.character.skillsRawDamage)[this.skillindex];
               if (this.skill) {
-                  this.damage = this.character.skillsDamage[this.skill].toFixed(0) - 20;  // - 20 is because of training dummy defense
+                  this.damage = this.character.skillsRawDamage[this.skill].toFixed(0) - 20;  // - 20 is because of training dummy defense
               } else {
                 this.skill = "None"
                 this.damage = "N/A"
