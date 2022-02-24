@@ -27,7 +27,7 @@ export default {
     if (this.skillindex == -1) this.active = true 
   },
   watch: {
-    '$root.character.ref.skillsDamage'() {
+    '$root.character.ref.skillsRawDamage'() {
       this.monsters = this.$root.monsters
       this.character = this.$root.character.ref
       this.getDamage()
