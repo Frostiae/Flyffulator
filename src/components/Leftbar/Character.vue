@@ -180,20 +180,23 @@ export default {
       this.added = 0;
 
       this.ApplyStats();
+    },
+    UpdateStatPoints() {
+      this.statpoints = this.totalstatpoints - this.addstr - this.addsta - this.adddex - this.addint;
     }
   },
   watch: {
     addstr() {
-      this.statpoints = this.totalstatpoints - this.addstr;
+      this.UpdateStatPoints();
     },
     addsta() {
-      this.statpoints = this.totalstatpoints - this.addsta;
+      this.UpdateStatPoints();
     },
     adddex() {
-      this.statpoints = this.totalstatpoints - this.adddex;
+      this.UpdateStatPoints();
     },
     addint() {
-      this.statpoints = this.totalstatpoints - this.addint;
+      this.UpdateStatPoints();
     }
   }
 }
