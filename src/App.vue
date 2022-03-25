@@ -41,6 +41,7 @@
 
         <div class="footer">
           <h5>Flyff simulator built specifically for <a href='https://flyff-api.sniegu.fr/'>Project M</a> by Frostiae#2809</h5>
+          <h5 style="opacity: 0.5;">If you would like to follow development or contribute, visit the <a href="https://github.com/Frostiae/Flyffulator">GitHub</a> page.</h5>
         </div>
       </div>
     </div>
@@ -188,6 +189,10 @@ export default {
     },
     getIconUrl(img) {
       var images = require.context('./assets/images/Icons/Items', false, /\.png$/)
+      return images('./' + img)
+    },
+    getSkillIconUrl(img) {
+      var images = require.context('./assets/images/Icons/Skills/colored', false, /\.png$/)
       return images('./' + img)
     }
   }

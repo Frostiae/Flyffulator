@@ -3,8 +3,8 @@
         <div class="panelcontent">
             <character/>
             <equipment/>
+            <buffs/>
             <!--<externals/>-->
-            <changelog/>
         </div>
     </div>
 </template>
@@ -12,15 +12,17 @@
 <script>
 import Character from './Leftbar/Character.vue'
 import Equipment from './Leftbar/Equipment.vue'
+import Buffs from './Leftbar/Buffs.vue'
 //import Externals from './Leftbar/External.vue'
-import Changelog from './Leftbar/Changelog.vue'
+//import Changelog from './Leftbar/Changelog.vue'
 
 export default {
   name: 'Leftbar',
   components: {
       Character,
       Equipment,
-      Changelog,
+      Buffs,
+      //Changelog,
       //Externals
   }
 }
