@@ -106,7 +106,8 @@
       </table>
 
       <button id="applystats" class="btn-plus" @click="ApplyStats">Apply</button>
-      <button id="resetstats" class="btn-plus" @click="ResetCharacter">Reset</button>
+      <button id="restatstats" class="btn-plus" @click="RestatCharacter">Re-Stat</button>
+      <button id="resetstats" class="btn-plus" @click="ResetCharacter">Full Reset</button>
 
 
     </div>
@@ -185,6 +186,20 @@ export default {
 
       this.ApplyStats();
     },
+    RestatCharacter() {
+      this.addstr = 0;
+      this.addsta = 0;
+      this.adddex = 0;
+      this.addint = 0;
+      this.added = 0;
+      Utils.addedStr = 0;
+      Utils.addedSta = 0;
+      Utils.addedDex = 0;
+      Utils.addedInt = 0;
+
+      this.ApplyStats();
+      this.character.ref.update();
+    },
     UpdateStatPoints() {
       this.statpoints = this.totalstatpoints - this.addstr - this.addsta - this.adddex - this.addint;
     }
@@ -207,7 +222,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-button#applystats, button#resetstats {
+button#applystats, button#resetstats, button#restatstats {
   margin: 5px 15px 0px 15px;
 }
 </style>
