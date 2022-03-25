@@ -189,6 +189,7 @@ export default {
     '$root.darkMode'() { this.updateTheme() },
     '$root.character.ref.level'() { this.getTheoreticalAADPS(); },
     '$root.character.ref.assistBuffs'() { this.getTheoreticalAADPS(); },
+    '$root.character.ref.selfBuffs'() { this.getTheoreticalAADPS(); },
     '$root.character.ref.weapon'() { this.getTheoreticalAADPS(); },
     '$root.character.ref.armor'() { this.getTheoreticalAADPS(); }
   },
