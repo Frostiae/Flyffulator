@@ -174,6 +174,10 @@ export default {
       this.addsta = 0;
       this.adddex = 0;
       this.addint = 0;
+      Utils.addedStr = 0;
+      Utils.addedSta = 0;
+      Utils.addedDex = 0;
+      Utils.addedInt = 0;
       this.classbuffs = false;
       this.assistbuffs = false;
       this.assistint = 300;
