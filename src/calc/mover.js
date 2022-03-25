@@ -536,4 +536,53 @@ export class Mover {
 
         return final;
     }
+
+    /**
+     * Calculates the best STR:DEX ratio against the given target
+     * @param target The targetted monster.
+     */
+    getOptimalAutoRatio(target) {
+        let dpsValues = [];
+        let ratios = []
+        
+        // Calculating for at least level 15
+        this.level = this.level < 15 ? 15 : this.level;
+
+        this.str -= Utils.addedStr;
+        this.sta -= Utils.addedSta;
+        this.dex -= Utils.addedDex;
+        this.int -= Utils.addedInt;
+
+        let str, dex, dps, ratio, maxRatio;
+        let maxDPS = -1;
+        const points = this.level * 2 - 2;
+        for (let i = 0; i < 10; i++) {
+            str = Math.floor(points * (i / 10));
+            dex = points - str;
+
+            this.str += str;
+            this.dex += dex;
+
+            this.criticalChance = this.getCriticalChance();
+            this.aspd = this.getAspd();
+            this.attack = this.getAttack();
+            this.averageAA = this.getAverageAA();
+            this.hitrate = this.getHitrate();
+
+            dps = parseInt(this.getDPS(target).toFixed(0));
+            ratio = `Allocate ${str} STR, ${dex} DEX`;
+            dpsValues = [...dpsValues, dps];
+            ratios = [...ratios, ratio];
+
+            if (dps > maxDPS || maxDPS == -1) {
+                maxDPS = dps;
+                maxRatio = i + 1;
+            }
+
+            this.str -= str;
+            this.dex -= dex;
+        }
+
+        return { maxDPS, maxRatio, dpsValues, ratios };
+    }
 }

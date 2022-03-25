@@ -1,6 +1,7 @@
 <template>
   <div class="char">
     <h3>Active Buffs</h3>
+    <h5>Add buffs through the 'Your Character' module</h5>
     <div class="stats">
       <ul>
         <li v-for="buff in buffs" :value="buff" :key="buff.id">
@@ -50,5 +51,11 @@ ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+h5 {
+  opacity: 0.5;
+  margin: 0;
+  margin-bottom: 20px;
 }
 </style>

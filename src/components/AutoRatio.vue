@@ -202,75 +202,20 @@ export default {
         this.character = this.$root.character.ref;
         // This is apparently the easiest and best way to clone an instance of a class...
         let clone = Object.assign(Object.create(Object.getPrototypeOf(this.character)), this.character);
-        clone.level = clone.level < 15 ? 15 : clone.level;
 
         let focus = this.$root.focusMonster;
         if (!focus) return;
 
-        const extraBuffSTR = clone.getExtraBuffParam('str');
-        const extraBuffSTA = clone.getExtraBuffParam('sta');
-        const extraBuffDEX = clone.getExtraBuffParam('dex');
-        const extraBuffINT = clone.getExtraBuffParam('int');
-
-        const extraGearSTR = clone.getExtraGearParam('str');
-        const extraGearDEX = clone.getExtraGearParam('dex');
-
-        const baseSTR = 15 + extraGearSTR;
-        const baseDEX = 15 + extraGearDEX;
-
-        clone.str = baseSTR + extraBuffSTR;
-        clone.dex = baseDEX + extraBuffDEX;
-        clone.sta = 15 + extraBuffSTA;  // We don't even use these in this calculation
-        clone.int = 15 + extraBuffINT;
-
-        let res = [];
-        let ratios = [];
-
-        // Find DPS values for 10 different ratios of dex:str
-        let maxDPS = -1;
-        let maxRatio = -1;
-        for (let i = 0; i < 10; i++) {
-            // get str:dex ratio
-            // Need to get remaining points explicitly here since it doesn't update till update().
-            const points = clone.getRemainingPoints();
-            
-            // Add Equipment base stats
-            clone.str = baseSTR + extraBuffSTR;
-            clone.dex = baseDEX + extraBuffDEX;
-
-            let str = Math.floor(points * (i / 10));
-            let dex = points - str;
-
-            // Minimum is 15 stats, don't go below that
-            clone.str += str < 15 ? 15 : str;
-            clone.dex += dex < 15 ? 15 : dex;
-
-            // Update all the stats and information
-            clone.update();
-
-            let dps = parseInt(clone.getDPS(focus).toFixed(0));
-            let ratio = `Allocate ${str} STR: ${dex} DEX`;
-            res = [...res, dps];
-            ratios = [...ratios, ratio]
-
-            if (dps > maxDPS || maxDPS == -1) {
-                maxDPS = dps;
-                maxRatio = i + 1;
-            }
-
-            // Reset the stats back so remainingPoints() returns default values again
-            clone.str = 15 + extraBuffSTR;
-            clone.dex = 15 + extraBuffDEX;
-        }
+        const result = clone.getOptimalAutoRatio(focus);
 
         // Updating the chart
-        this.series[0].data = res;
+        this.series[0].data = result.dpsValues;
 
         let opts = {...this.chartOptions};
-        opts.xaxis.categories = ratios;
-        opts.annotations.points[0].y = maxDPS;
-        opts.annotations.points[0].x = maxRatio;
-        opts.annotations.points[0].label.text = ratios[maxRatio - 1]
+        opts.xaxis.categories = result.ratios;
+        opts.annotations.points[0].y = result.maxDPS;
+        opts.annotations.points[0].x = result.maxRatio;
+        opts.annotations.points[0].label.text = result.ratios[result.maxRatio - 1]
         this.chartOptions = opts;
     }
   }
