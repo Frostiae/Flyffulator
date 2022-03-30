@@ -11,7 +11,7 @@
 </h3>
 
 ## About
-Flyffulator is a [website](https://flyffulator.com/) for [Flyff Project M](https://discord.gg/qDS8ZGUbmA) players to simulate characters and be able to calculate an optimal build or leveling strategy. 
+Flyffulator is a [website](https://flyffulator.com/) for [Flyff Universe](https://discord.gg/flyffuniverse) players to simulate characters and be able to calculate an optimal build or leveling strategy. 
 
 - [x] Highest experience per kill monster at your level.
 - [x] Kills per level chart for the relevant monsters.
@@ -35,7 +35,7 @@ Flyffulator is a [website](https://flyffulator.com/) for [Flyff Project M](https
   <img src="https://i.imgur.com/z54z0qT.gif" alt="flyffulator" width=75%>
 </p>
 
-This project originally used [Pyff](https://github.com/Frostiae/Pyff), a python wrapper for the [Project M API](https://flyff-api.sniegu.fr/). The library used for rendering the all the charts is [ApexCharts](https://apexcharts.com/). We are also now using Vue3 as the front end framework.
+This project originally used [Pyff](https://github.com/Frostiae/Pyff), a python wrapper for the [Flyff Universe](https://flyff-api.sniegu.fr/). The library used for rendering the all the charts is [ApexCharts](https://apexcharts.com/). We are also now using Vue3 as the front end framework.
 
 ## Installation for development
 Clone the repository into any directory.

@@ -159,6 +159,9 @@ export class Mover {
         let final = (pnMin + pnMax) / 2;
         final += this.jeweleryParam('attack');
         final += this.armorParam('attack');
+        final += this.getExtraBuffParam('attack');
+        final *= 1 + (this.getExtraBuffParam('attack', true) / 100);
+
         final += this instanceof Blade ? this.weaponParam('attack') * 2 : this.weaponParam('attack');
 
         final *= 1 + (this.jeweleryParam('attack', true) / 100);
@@ -336,13 +339,14 @@ export class Mover {
     }
 
     selfBuffParam(param, rate = false) {
+        var secondaryParam = param == 'attack' ? 'damage' : ''; // Spirit Fortune has additional damage which adds attack
         var add = 0;
         this.activeSelfBuffs.forEach(buff => {
             let level = buff.levels.slice(-1)[0];
             let abilities = level.abilities;
 
             abilities.forEach(ability => {
-                if (ability.parameter == param && ability.rate == rate) {
+                if ((ability.parameter == param || ability.parameter == secondaryParam) && ability.rate == rate) {
                     add += ability.add;
                 }
             });
@@ -415,6 +419,7 @@ export class Mover {
             dps = damage * hitsPerSec;
             this.dps.aa = dps;
         } else {
+            // TODO: Add dotTick support here
             damage = this.getDamage(monster, skillIndex);
             const frames = 55;
             const hitsPerSec = (30 / frames) * (this.DCT / 100);
