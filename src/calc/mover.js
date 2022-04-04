@@ -505,10 +505,15 @@ export class Mover {
                 referStat = this.str;
         }
 
+        // CMover::GetMeleeSkillPower()
         const level = skill.levels.length;
         const base = referStat * params.scalingParameters[0].scale;
-        const powerMin = ((weaponMin + (params.minAttack + 0) * 5 + base - 20) * (16 + level) / 13);
-        const powerMax = ((weaponMax + (params.maxAttack + 0) * 5 + base - 20) * (16 + level) / 13);
+        let powerMin = ((weaponMin + (params.minAttack + 0) * 5 + base - 20) * (16 + level) / 13);
+        let powerMax = ((weaponMax + (params.maxAttack + 0) * 5 + base - 20) * (16 + level) / 13);
+
+        // TODO: get extra weapon damage here (Damage with sword, etc)
+        powerMin += this.getExtraParam("damage");
+        powerMax += this.getExtraParam("damage");
         let final = (powerMin + powerMax) / 2;
 
         // BEGIN HARDCODING
