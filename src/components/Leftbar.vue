@@ -48,7 +48,9 @@ table.stattable {
   float: left;
   top: 0;
   border-radius: 0px 15px 15px 0px;
-  width: 330px;
+  width: 22vw;
+  max-width: 330px;
+  min-width: 290px;
   overflow-y: auto;
   z-index: 1;
   transition: 0.3s;

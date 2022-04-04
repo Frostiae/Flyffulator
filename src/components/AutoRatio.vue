@@ -1,13 +1,18 @@
 <template>
-  <div class="extensivechart" id="big">
-    <div class="infoblock" id="chart">
-        <apexchart
-        height="320"
-        width="640"
-        type="area"
-        :options="chartOptions"
-        :series="series"
-        ></apexchart>
+  <div>
+    <div class="big-chart-disclaimer">
+      <h5>Your screen size is too small to view large charts.</h5>
+    </div>
+    <div class="extensivechart" id="big">
+      <div class="infoblock" id="chart">
+          <apexchart
+          height="320"
+          width="640"
+          type="area"
+          :options="chartOptions"
+          :series="series"
+          ></apexchart>
+      </div>
     </div>
   </div>
 </template>

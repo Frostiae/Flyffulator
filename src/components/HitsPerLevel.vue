@@ -1,16 +1,22 @@
 <template>
-  <div class="extensivechart" id="big">
-      <p id="info">How many hits (auto-attack or skill, if applicable) it would take to gain one level at each of these monsters at your current level and power.<br>
-        The damage used in this calculation takes into consideration your hit rate, critical chance, and more to give an accurate result.</p>
-      <img class="info-tooltip" src='../assets/images/Icons/info.png' style="margin-right: 90px; margin-top: 12px">
+  <div>
+    <div class="big-chart-disclaimer">
+      <h5>Your screen size is too small to view large charts.</h5>
+    </div>
+    <div class="extensivechart" id="big">
+        <p id="info">How many hits (auto-attack or skill, if applicable) it would take to gain one level at each of these monsters at your current level and power.<br>
+          The damage used in this calculation takes into consideration your hit rate, critical chance, and more to give an accurate result.</p>
+        <img class="info-tooltip" src='../assets/images/Icons/info.png' style="margin-right: 90px; margin-top: 12px">
 
-      <apexchart
-      height="400"
-      width="800"
-      type="line"
-      :options="chartOptions"
-      :series="series"
-    ></apexchart>
+        <apexchart
+        height="400"
+        width="800"
+        type="line"
+        :options="chartOptions"
+        :series="series"
+      ></apexchart>
+    </div>
+    
   </div>
 </template>
 

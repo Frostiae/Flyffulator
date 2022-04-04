@@ -328,8 +328,9 @@ option {
   overflow-y: auto;
   overflow-x: hidden;
   height: 100vh;
-  margin-left: 330px;
-  margin-right: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vw;
   scrollbar-width: none;
 
   .basestats {
@@ -357,6 +358,7 @@ option {
       flex-direction: row;
       margin-top: 10px;
       padding-bottom: 10px;
+      flex-wrap: wrap;
 
       .extensivebasic {
         display: flex;
@@ -368,6 +370,7 @@ option {
         box-shadow: #0000001e 0px 5px 5px;
         transition: 0.3s;
         margin-right: 10px;
+        margin-bottom: 10px;
 
         p {
           font-size: 35px;
@@ -388,9 +391,15 @@ option {
         box-shadow: #0000001e 0px 5px 5px;
         transition: 0.3s;
         margin-right: 10px;
+        margin-bottom: 10px;
+      }
+
+      .big-chart-disclaimer {
+        display: block;
       }
 
       .extensivechart#big {
+        display: none;
         background-color: v-bind(componentbg);
         height: 400px;
         width: 820px;
@@ -401,6 +410,16 @@ option {
 
         h1 {
           color: v-bind(pcolor);
+        }
+      }
+
+      @media only screen and (min-width: 1450px) {
+        .extensivechart#big {
+          display: block;
+        }
+
+        .big-chart-disclaimer {
+          display: none;
         }
       }
 
@@ -421,6 +440,12 @@ option {
         cursor: pointer;
       }
     }
+  }
+}
+
+@media only screen and (min-width: 1450px) {
+  .content {
+    width: 60vw;
   }
 }
 

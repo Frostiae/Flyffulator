@@ -56,7 +56,9 @@ export default {
   right: 0;
   top: 0;
   border-radius: 15px 0px 0px 15px;
-  width: 290px;
+  width: 22vw;
+  max-width: 330px;
+  min-width: 180px;
   text-align: center;
   font-weight: 500;
   transition: 0.3s;
