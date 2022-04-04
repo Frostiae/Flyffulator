@@ -33,6 +33,7 @@ export class Utils {
     static getJobName(jobId) { return this.jobs.find(job => job.id == jobId).name.en || "Vagrant"; }
     
     static getJewelery(subcategory) { return this.items.filter(item => item.category == "jewelry" && item.subcategory == subcategory); }
+    static getPiercingCards() { return this.items.filter(item => item.subcategory == "piercingcard"); }
     
     static getJobWeapons(jobId) {
         const jobs = [jobId, this.getParentJobId(jobId)]

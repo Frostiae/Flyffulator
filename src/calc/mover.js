@@ -271,6 +271,15 @@ export class Mover {
             const bonus = this.armor.bonus.find(a => a.ability.parameter == param && a.ability.rate == rate);
             if (bonus) add = bonus.ability.add;
         }
+
+        // Suit Piercing
+        if (this.suitPiercing) {
+            const ability = this.suitPiercing.abilities[0];
+            if (ability.parameter == param && ability.rate == rate) {
+                add += ability.add * 4; // 4 card piercing slots
+            }
+        }
+
         return add;
     }
 

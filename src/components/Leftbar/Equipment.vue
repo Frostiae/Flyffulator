@@ -107,6 +107,21 @@
           </td>
         </tr>
 
+        <tr>
+          <td><h5>Suit Piercing</h5></td>
+          <td>
+            <select v-model="character.suitPiercing" id="equipment-select">
+              <option disabled value="">Select a card...</option>
+              <option v-for="card in piercingCards" :value="card" :key="card.id">
+                {{ card.name.en }}
+              </option>
+          </select>
+          </td>
+          <td>
+            <button class="btn-plus" @click="character.suitPiercing = null">x</button>
+          </td>
+        </tr>
+
       </table>
     </div>
   </div>
@@ -124,7 +139,8 @@ export default {
       armors: [],
       earrings: [],
       necklaces: [],
-      rings: []
+      rings: [],
+      piercingCards: []
     }
   },
   mounted() {
@@ -132,6 +148,7 @@ export default {
     this.earrings = Utils.getJewelery("earring");
     this.rings = Utils.getJewelery("ring");
     this.necklaces = Utils.getJewelery("necklace");
+    this.piercingCards = Utils.getPiercingCards();
   },
   methods: {
     updateEquipment() {

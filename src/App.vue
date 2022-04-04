@@ -134,6 +134,7 @@ export default {
     'character.ref.ringR'() { this.updateCharacter() },
     'character.ref.ringL'() { this.updateCharacter() },
     'character.ref.necklace'() { this.updateCharacter() },
+    'character.ref.suitPiercing'() { this.updateCharacter() },
   },
   created() { this.updateCharacter() },
   methods: {
