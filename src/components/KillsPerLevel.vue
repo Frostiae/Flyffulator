@@ -74,8 +74,6 @@ export default {
           animations: {
             enabled: false
           },
-          offsetX: -21,
-          offsetY: -45,
           toolbar: {
             show: false
           },
@@ -184,5 +182,8 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-
+.vue-apexcharts {
+  margin-left: -21px;
+  margin-top: -45px;
+}
 </style>

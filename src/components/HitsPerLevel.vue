@@ -81,8 +81,6 @@ export default {
           animations: {
             enabled: true
           },
-          offsetX: 0,
-          offsetY: -15,
           toolbar: {
               show: true,
               offsetY: 12,
@@ -199,5 +197,4 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-
 </style>
