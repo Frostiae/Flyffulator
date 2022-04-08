@@ -152,7 +152,6 @@ export default {
   },
   methods: {
     updateEquipment() {
-      // const jobName = this.character.constructor.name; // This does not work on build... returns 'a'?;
       this.weapons = Utils.getJobWeapons(this.character.jobId).sort(Utils.sortByName);
       this.armors = Utils.getJobArmors(this.character.jobId).sort(Utils.sortByName);
     }
