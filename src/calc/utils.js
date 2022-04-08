@@ -65,6 +65,17 @@ export class Utils {
 
     static getJobFromId(jobId) { return JobFactory.createJobFromId(jobId); }
 
+    static sortByName(a, b) {
+        if (a.name.en < b.name.en) {
+            return -1;
+        }
+        if (a.name.en > b.name.en) {
+            return 1;
+        }
+        
+        return 0;
+    }
+
     updateJob(character, job) {
         if (character.constructor.name != job) { 
             let stats = {

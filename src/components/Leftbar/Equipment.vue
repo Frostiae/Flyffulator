@@ -145,16 +145,16 @@ export default {
   },
   mounted() {
     this.updateEquipment();
-    this.earrings = Utils.getJewelery("earring");
-    this.rings = Utils.getJewelery("ring");
-    this.necklaces = Utils.getJewelery("necklace");
-    this.piercingCards = Utils.getPiercingCards();
+    this.earrings = Utils.getJewelery("earring").sort(Utils.sortByName);
+    this.rings = Utils.getJewelery("ring").sort(Utils.sortByName);
+    this.necklaces = Utils.getJewelery("necklace").sort(Utils.sortByName);
+    this.piercingCards = Utils.getPiercingCards().sort(Utils.sortByName);
   },
   methods: {
     updateEquipment() {
       // const jobName = this.character.constructor.name; // This does not work on build... returns 'a'?;
-      this.weapons = Utils.getJobWeapons(this.character.jobId);
-      this.armors = Utils.getJobArmors(this.character.jobId);
+      this.weapons = Utils.getJobWeapons(this.character.jobId).sort(Utils.sortByName);
+      this.armors = Utils.getJobArmors(this.character.jobId).sort(Utils.sortByName);
     }
   },
   watch: {
