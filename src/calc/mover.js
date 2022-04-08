@@ -255,6 +255,7 @@ export class Mover {
      * @param param The parameter to look for in all equipment and buffs 
      */
     getExtraParam(param, rate = false) {
+        // TODO: Refactor the whole secondary param thing, use an array of params to check instead
         return this.getExtraGearParam(param, rate) + this.getExtraBuffParam(param, rate);
     }
 
@@ -267,18 +268,30 @@ export class Mover {
     }
 
     armorParam(param, rate = false) {
+        var secondaryParam = "";
+        if (param == "str" || param == "sta" || param == "dex" || param == "int") secondaryParam = "allstats";
+
         var add = 0;
         if (this.armor && this.armor.bonus) {
-            const bonus = this.armor.bonus.find(a => a.ability.parameter == param && a.ability.rate == rate);
+            const bonus = this.armor.bonus.find(a => (a.ability.parameter == param || a.ability.parameter == secondaryParam) && a.ability.rate == rate);
             if (bonus) add = bonus.ability.add;
         }
 
         // Suit Piercing
         if (this.suitPiercing) {
-            const ability = this.suitPiercing.abilities[0];
-            if (ability.parameter == param && ability.rate == rate) {
+            const ability = this.suitPiercing.abilities[0]; // Piercing cards only have one ability
+            if ((ability.parameter == param || ability.parameter == secondaryParam) && ability.rate == rate) {
                 add += ability.add * 4; // 4 card piercing slots
             }
+        }
+
+        // Shield
+        if (this.shield && this.shield.abilities) {
+            this.shield.abilities.forEach(ability => {
+                if ((ability.parameter == param || ability.parameter == secondaryParam) && ability.rate == rate) {
+                    add += ability.add;
+                }
+            });
         }
 
         return add;
