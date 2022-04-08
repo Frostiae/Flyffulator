@@ -34,6 +34,7 @@ export class Utils {
     
     static getJewelery(subcategory) { return this.items.filter(item => item.category == "jewelry" && item.subcategory == subcategory); }
     static getPiercingCards() { return this.items.filter(item => item.subcategory == "piercingcard"); }
+    static getShields() { return this.items.filter(item => item.subcategory == "shield"); }
     
     static getJobWeapons(jobId) {
         const jobs = [jobId, this.getParentJobId(jobId)]
@@ -72,7 +73,7 @@ export class Utils {
         if (a.name.en > b.name.en) {
             return 1;
         }
-        
+
         return 0;
     }
 

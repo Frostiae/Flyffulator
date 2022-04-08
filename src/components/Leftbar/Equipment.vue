@@ -33,6 +33,21 @@
         </tr>
 
         <tr>
+          <td><h5>Shield</h5></td>
+          <td>
+            <select v-model="character.shield" id="equipment-select" :disabled=!canUseShield>
+              <option disabled value="">Select a shield...</option>
+              <option v-for="shield in shields" :value="shield" :key="shield.id">
+                {{ shield.name.en }}
+              </option>
+          </select>
+          </td>
+          <td>
+            <button class="btn-plus" @click="character.shield = null">x</button>
+          </td>
+        </tr>
+
+        <tr>
           <td><h5>Earring</h5></td>
           <td>
             <select v-model="character.earringR" id="equipment-select">
@@ -129,6 +144,7 @@
 
 <script>
 import { Utils } from '../../calc/utils.js'
+import { Ringmaster, Ranger, Jester, Acrobat } from '../../calc/jobs'
 
 export default {
   name: 'Equipment',
@@ -140,7 +156,9 @@ export default {
       earrings: [],
       necklaces: [],
       rings: [],
-      piercingCards: []
+      piercingCards: [],
+      shields: [],
+      canUseShield: true
     }
   },
   mounted() {
@@ -149,11 +167,21 @@ export default {
     this.rings = Utils.getJewelery("ring").sort(Utils.sortByName);
     this.necklaces = Utils.getJewelery("necklace").sort(Utils.sortByName);
     this.piercingCards = Utils.getPiercingCards().sort(Utils.sortByName);
+    this.shields = Utils.getShields().sort(Utils.sortByName);
   },
   methods: {
     updateEquipment() {
       this.weapons = Utils.getJobWeapons(this.character.jobId).sort(Utils.sortByName);
       this.armors = Utils.getJobArmors(this.character.jobId).sort(Utils.sortByName);
+
+      if (this.character instanceof Ranger ||
+          this.character instanceof Ringmaster ||
+          this.character instanceof Jester ||
+          this.character instanceof Acrobat) {
+            this.canUseShield = false;
+          } else {
+            this.canUseShield = true;
+          }
     }
   },
   watch: {
@@ -178,6 +206,10 @@ select#equipment-select {
   margin-right: 20px;
   width: 140px;
   text-align: center;
+}
+
+select:disabled {
+  opacity: 0.3;
 }
 
 button.btn-plus {
