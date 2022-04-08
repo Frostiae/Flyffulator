@@ -57,6 +57,7 @@ export class Mover {
     }
 
     applySelfBuffs() {
+        // TODO: Add 1st job buffs here, like sword mastery
         if (this.selfBuffs && this.activeSelfBuffs.length == 0) {
             this.activeSelfBuffs = this.constants.buffs;
 
@@ -455,14 +456,15 @@ export class Mover {
 
         if (skillIndex == null || skillIndex == -1) {
             damage = this.averageAA;
-            defense = opponent.defense;
+            defense = Moverutils.calcMonsterDefense(opponent);
         } else {
             var skill = this.constants.skills[skillIndex];
-            defense = skill.magic ? opponent.magicDefense : opponent.defense;
+            defense = Moverutils.calcMonsterDefense(opponent, skill.magic);
             damage = Object.values(this.skillsRawDamage)[skillIndex];
         }
 
-        damage -= defense;
+        damage -= Moverutils.calcDamageDefense(defense, damage);
+        // damage -= defense; // OLD
         damage *= deltaFactor;
 
         return damage < 1 ? 1 : damage;
