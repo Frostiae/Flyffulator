@@ -192,6 +192,7 @@ export default {
   watch: {
     '$root.monsters'() { this.monsters = this.$root.monsters; },
     '$root.darkMode'() { this.updateTheme() },
+    '$root.focusMonster'() { this.getTheoreticalAADPS(); },
     '$root.character.ref.level'() { this.getTheoreticalAADPS(); },
     '$root.character.ref.assistBuffs'() { this.getTheoreticalAADPS(); },
     '$root.character.ref.selfBuffs'() { this.getTheoreticalAADPS(); },
