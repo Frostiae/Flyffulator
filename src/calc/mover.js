@@ -239,7 +239,6 @@ export class Mover {
      * @param param The parameter to look for in all equipment and buffs 
      */
     getExtraParam(param, rate = false) {
-        // TODO: Refactor the whole secondary param thing, use an array of params to check instead
         return this.getExtraGearParam(param, rate) + this.getExtraBuffParam(param, rate);
     }
 
@@ -252,19 +251,18 @@ export class Mover {
     }
 
     armorParam(param, rate = false) {
-        var secondaryParam = "";
-        if (param == "str" || param == "sta" || param == "dex" || param == "int") secondaryParam = "allstats";
+        var params = [param].concat(Utils.globalParams[param]);
 
         var add = 0;
         if (this.armor && this.armor.bonus) {
-            const bonus = this.armor.bonus.find(a => (a.ability.parameter == param || a.ability.parameter == secondaryParam) && a.ability.rate == rate);
+            const bonus = this.armor.bonus.find(a => params.includes(a.ability.parameter) && a.ability.rate == rate);
             if (bonus) add = bonus.ability.add;
         }
 
         // Suit Piercing
         if (this.suitPiercing) {
             const ability = this.suitPiercing.abilities[0]; // Piercing cards only have one ability
-            if ((ability.parameter == param || ability.parameter == secondaryParam) && ability.rate == rate) {
+            if (params.includes(ability.parameter) && ability.rate == rate) {
                 add += ability.add * 4; // 4 card piercing slots
             }
         }
@@ -274,23 +272,24 @@ export class Mover {
 
     weaponParam(param, rate = false) {
         var add = 0;
+        var params = [param].concat(Utils.globalParams[param]);
+
         // Mainhand bonus addition
         if (this.mainhand && this.mainhand.abilities) {
-            const bonus = this.mainhand.abilities.find(a => a.parameter == param && a.rate == rate);
+            const bonus = this.mainhand.abilities.find(a => params.includes(a.parameter) && a.rate == rate);
             if (bonus) add += bonus.add;
         }
 
         // Offhand bonus addition, including shields
-        // TODO: Secondary param stuff 'allstats'
         if (this.offhand && this.offhand.abilities) {
             if (this.offhand.subcategory == "shield") {
                 this.offhand.abilities.forEach(ability => {
-                    if ((ability.parameter == param) && ability.rate == rate) {
+                    if (params.includes(ability.parameter) && ability.rate == rate) {
                         add += ability.add;
                     }
                 });
             } else {
-                const bonus = this.offhand.abilities.find(a => a.parameter == param && a.rate == rate);
+                const bonus = this.offhand.abilities.find(a => params.includes(a.parameter) && a.rate == rate);
                 if (bonus) add += bonus.add;
             }
         }
@@ -299,31 +298,31 @@ export class Mover {
     }
 
     jeweleryParam(param, rate = false) {
-        var secondaryParam = param == 'attack' ? 'damage' : ''; // Jewelery has additional damage which adds attack
         var add = 0;
+        var params = [param].concat(Utils.globalParams[param]);
 
         if (this.earringR && this.earringR.abilities) {
-            const bonus = this.earringR.abilities.find(a => (a.parameter == param || a.parameter == secondaryParam) && a.rate == rate);
+            const bonus = this.earringR.abilities.find(a => params.includes(a.parameter) && a.rate == rate);
             if (bonus) add += bonus.add;
         }
 
         if (this.earringL && this.earringL.abilities) {
-            const bonus = this.earringL.abilities.find(a => (a.parameter == param || a.parameter == secondaryParam) && a.rate == rate);
+            const bonus = this.earringL.abilities.find(a => params.includes(a.parameter) && a.rate == rate);
             if (bonus) add += bonus.add;
         }
 
         if (this.ringR && this.ringR.abilities) {
-            const bonus = this.ringR.abilities.find(a => (a.parameter == param || a.parameter == secondaryParam) && a.rate == rate);
+            const bonus = this.ringR.abilities.find(a => params.includes(a.parameter) && a.rate == rate);
             if (bonus) add += bonus.add;
         }
 
         if (this.ringL && this.ringL.abilities) {
-            const bonus = this.ringL.abilities.find(a => (a.parameter == param || a.parameter == secondaryParam) && a.rate == rate);
+            const bonus = this.ringL.abilities.find(a => params.includes(a.parameter) && a.rate == rate);
             if (bonus) add += bonus.add;
         }
 
         if (this.necklace && this.necklace.abilities) {
-            const bonus = this.necklace.abilities.find(a => (a.parameter == param || a.parameter == secondaryParam) && a.rate == rate);
+            const bonus = this.necklace.abilities.find(a => params.includes(a.parameter) && a.rate == rate);
             if (bonus) add += bonus.add;
         }
 
@@ -336,16 +335,18 @@ export class Mover {
      */
     assistBuffParam(param, rate = false) {
         var add = 0;
+        var params = [param].concat(Utils.globalParams[param]);
+
         this.activeAssistBuffs.forEach(buff => {
             let level = buff.levels.slice(-1)[0];
             let abilities = level.abilities;
 
             abilities.forEach(ability => { // forEach here and not .find() because there might be multiple buffs with param
-                if (ability.parameter == param && level.scalingParameters.length > 1 && ability.rate == rate) {
+                if (params.includes(ability.parameter) && level.scalingParameters.length > 1 && ability.rate == rate) {
                     let extra = level.scalingParameters[1].scale * this.assistInt;
                     extra = extra > level.scalingParameters[1].maximum ? level.scalingParameters[1].maximum : extra;
                     add += ability.add + extra;
-                } else if (ability.parameter == param && ability.rate == rate) {
+                } else if (params.includes(ability.parameter) && ability.rate == rate) {
                     add += ability.add;
                 }
             });
@@ -354,14 +355,15 @@ export class Mover {
     }
 
     selfBuffParam(param, rate = false) {
-        var secondaryParam = param == 'attack' ? 'damage' : ''; // Spirit Fortune has additional damage which adds attack
         var add = 0;
+        var params = [param].concat(Utils.globalParams[param]);
+
         this.activeSelfBuffs.forEach(buff => {
             let level = buff.levels.slice(-1)[0];
             let abilities = level.abilities;
 
             abilities.forEach(ability => {
-                if ((ability.parameter == param || ability.parameter == secondaryParam) && ability.rate == rate) {
+                if (params.includes(ability.parameter) && ability.rate == rate) {
                     add += ability.add;
                 }
             });

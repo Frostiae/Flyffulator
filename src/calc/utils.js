@@ -22,6 +22,30 @@ export class Utils {
     static addedDex = 0;
     static addedInt = 0;
 
+    // These parameters come in different names, so this object describes those. Used in getExtraParam() etc. in mover.js
+    static globalParams = {
+        "attack": [
+            "damage",
+            "attack"
+        ],
+        "str": [
+            "str",
+            "allstats"
+        ],
+        "sta": [
+            "sta",
+            "allstats"
+        ],
+        "dex": [
+            "dex",
+            "allstats"
+        ],
+        "int": [
+            "int",
+            "allstats"
+        ]
+    }
+
     static getItemByName(name)  { return this.items.find(item => item.name.en.toLowerCase() == name.toLowerCase()); }
     static getItemById(id)      { return this.items.find(item => item.id == id); }
     static getArmorByName(name) { return this.sets.find(set => set.name.en.toLowerCase() == name.toLowerCase()); }
