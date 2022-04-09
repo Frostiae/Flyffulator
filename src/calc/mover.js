@@ -120,8 +120,6 @@ export class Mover {
         let final = fspeed * 100 / 2;
 
         final += this.getExtraParam('attackspeed', true);
-        final += this instanceof Blade ? this.weaponParam('attackspeed', true) : 0;
-
         final = final > 100 ? 100 : final;
         return Math.floor(final);
     }
@@ -133,15 +131,12 @@ export class Mover {
         chance = chance < 0 ? 0 : chance;
 
         chance += this.getExtraParam('criticalchance', true);
-        chance += this instanceof Blade ? this.weaponParam('criticalchance', true) : 0;
-
         return chance > 100 ? 100 : chance;
     }
 
     getDCT() {
         let dct = 100; // Starts out as 100%
         dct += this.getExtraParam('decreasedcastingtime', true);
-        dct += this instanceof Blade ? this.weaponParam('decreasedcastingtime', true) : 0;
         return dct;
     }
 
@@ -159,19 +154,9 @@ export class Mover {
         pnMax += plus;
 
         let final = (pnMin + pnMax) / 2;
-        final += this.jeweleryParam('attack');
-        final += this.armorParam('attack');
-        final += this.getExtraBuffParam('attack');
-        final *= 1 + (this.getExtraBuffParam('attack', true) / 100);
 
-        final += this instanceof Blade ? this.weaponParam('attack') * 2 : this.weaponParam('attack');
-
-        final *= 1 + (this.jeweleryParam('attack', true) / 100);
-        final *= 1 + (this.armorParam('attack', true) / 100);
-
-        const weaponBonus = this instanceof Blade ? this.weaponParam('attack', true) * 2 : this.weaponParam('attack', true);
-        final *= 1 + (weaponBonus / 100);
-
+        final += this.getExtraParam("attack");
+        final *= 1 + (this.getExtraParam("attack", true) / 100);
         return final;
     }
 
@@ -181,7 +166,6 @@ export class Mover {
     getCriticalDamage() {
         let adoch = 0;
         adoch += this.getExtraParam('criticaldamage', true);
-        adoch += this instanceof Blade ? this.weaponParam('criticaldamage', true) : 0;
         return adoch;
     }
 
@@ -225,7 +209,6 @@ export class Mover {
     getHitrate() {
         let hit = this.dex / 4;
         hit += this.getExtraParam('hitrate', true);
-        hit += this instanceof Blade ? this.weaponParam('hitrate', true) : 0;
         return hit;
     }
 
