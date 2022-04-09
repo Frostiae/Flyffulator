@@ -14,7 +14,6 @@ export class Mover {
         this.applySelfBuffs();
 
         this.skillsRawDamage = this.updateSkillDamage();
-        this.remainingPoints = this.getRemainingPoints();
         this.criticalChance = this.getCriticalChance();
         this.aspd = this.getAspd();
         this.DCT = this.getDCT();
@@ -73,19 +72,6 @@ export class Mover {
 
             this.activeSelfBuffs = [];
         }
-    }
-
-    // TODO: Remove the use of this in autoratio and get rid of it
-    getRemainingPoints() {
-        let points = this.level * 2 - 2;
-        points -= (this.str + this.sta + this.dex + this.int) - 60; // Don't count the base 15
-        if (this.assistBuffs && this.activeAssistBuffs.length) {
-            points += this.getExtraBuffParam('dex') +
-                this.getExtraBuffParam('sta') +
-                this.getExtraBuffParam('str') +
-                this.getExtraBuffParam('int');
-        }
-        return points;
     }
 
     get parry() { return this.dex / 2; }

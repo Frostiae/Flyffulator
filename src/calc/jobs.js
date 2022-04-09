@@ -68,7 +68,6 @@ export class Vagrant extends Mover {
             '2': 0, // Skill 3
         }
 
-        this.remainingPoints = 0;
         this.aspd = 0;
         this.criticalChance = 0;
         this.DCT = 0;
