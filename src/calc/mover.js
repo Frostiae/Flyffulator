@@ -91,6 +91,7 @@ export class Mover {
     get parry() { return this.dex / 2; }
 
     get defense() {
+        // TODO: Use the formula?
         let defense = Math.floor(((((this.level * 2) + (this.sta / 2)) / 2.8) - 4) + ((this.sta - 14) * this.constants.Def));
         defense += this.getExtraParam('def');
         defense *= 1 + (this.getExtraParam('def', true) / 100);
@@ -530,6 +531,7 @@ export class Mover {
         }
 
         // CMover::GetMeleeSkillPower()
+        // TODO: Skills aren't taking attack into consideration properly
         const level = skill.levels.length;
         const base = referStat * params.scalingParameters[0].scale;
         let powerMin = ((weaponMin + (params.minAttack + 0) * 5 + base - 20) * (16 + level) / 13);

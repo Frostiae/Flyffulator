@@ -144,7 +144,6 @@
 
 <script>
 import { Utils } from '../../calc/utils.js'
-import { Ringmaster, Ranger, Jester, Acrobat } from '../../calc/jobs'
 
 export default {
   name: 'Equipment',
@@ -173,21 +172,20 @@ export default {
     updateEquipment() {
       this.weapons = Utils.getJobWeapons(this.character.jobId).sort(Utils.sortByName);
       this.armors = Utils.getJobArmors(this.character.jobId).sort(Utils.sortByName);
-
-      if (this.character instanceof Ranger ||
-          this.character instanceof Ringmaster ||
-          this.character instanceof Jester ||
-          this.character instanceof Acrobat) {
-            this.canUseShield = false;
-          } else {
-            this.canUseShield = true;
-          }
     }
   },
   watch: {
     '$root.character.ref'() {
       this.character = this.$root.character.ref;
       this.updateEquipment();
+    },
+    '$root.character.ref.weapon'() {
+      if (this.character.weapon.twoHanded) {
+        this.canUseShield = false;
+        this.character.shield = null;
+      } else {
+        this.canUseShield = true;
+      }
     }
   }
 }
