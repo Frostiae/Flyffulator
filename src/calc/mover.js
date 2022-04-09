@@ -56,7 +56,6 @@ export class Mover {
     }
 
     applySelfBuffs() {
-        // TODO: Add 1st job buffs here, like sword mastery
         if (this.selfBuffs && this.activeSelfBuffs.length == 0) {
             this.activeSelfBuffs = this.constants.buffs;
 
@@ -512,13 +511,12 @@ export class Mover {
         }
 
         // CMover::GetMeleeSkillPower()
-        // TODO: Skills aren't taking attack into consideration properly
         const level = skill.levels.length;
         const base = referStat * params.scalingParameters[0].scale;
         let powerMin = ((weaponMin + (params.minAttack + 0) * 5 + base - 20) * (16 + level) / 13);
         let powerMax = ((weaponMax + (params.maxAttack + 0) * 5 + base - 20) * (16 + level) / 13);
 
-        // TODO: get extra weapon damage here (Damage with sword, etc)
+        // Add all the extra attack from gear
         const extraFlatAttack = this.getExtraParam("attack");
         const extraAttack = this.getExtraParam("attack", true) / 100;
         const extraWeaponAttack = this.getExtraParam(this.mainhand.subcategory + "attack");
