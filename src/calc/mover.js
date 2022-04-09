@@ -199,25 +199,27 @@ export class Mover {
     }
 
     weaponAttack() {
-        let weapon = "";
-        if (this.mainhand)
-            weapon = this.mainhand.subcategory;
+        let weapon = this.mainhand.subcategory;
+        var nATK = 0;
         switch (weapon) {
             case 'axe':
-                return Math.floor(((this.str - 12) * this.constants[weapon]) + ((this.level * 1.2)));
+                nATK =  Math.floor(((this.str - 12) * this.constants[weapon]) + ((this.level * 1.2)));
             case 'staff':
-                return Math.floor(((this.str - 10) * this.constants[weapon]) + ((this.level * 1.1)));
+                nATK = Math.floor(((this.str - 10) * this.constants[weapon]) + ((this.level * 1.1)));
             case 'stick':
-                return Math.floor(((this.str - 10) * this.constants[weapon]) + ((this.level * 1.3)));
+                nATK = Math.floor(((this.str - 10) * this.constants[weapon]) + ((this.level * 1.3)));
             case 'knuckle':
-                return Math.floor(((this.str - 10) * this.constants[weapon]) + ((this.level * 1.2)));
+                nATK = Math.floor(((this.str - 10) * this.constants[weapon]) + ((this.level * 1.2)));
             case 'wand':
-                return Math.floor((this.int - 10) * this.constants[weapon] + this.level * 1.2);
+                nATK = Math.floor((this.int - 10) * this.constants[weapon] + this.level * 1.2);
             case 'bow': //  This is definitely incorrect for project M
-                return Math.floor(((this.dex - 14) * this.constants[weapon] + (this.level * 1.3) * 0.7));
+                nATK = Math.floor(((this.dex - 14) * this.constants[weapon] + (this.level * 1.3) * 0.7));
             default:
-                return Math.floor(((this.str - 12) * this.constants[weapon]) + ((this.level * 1.1)));
+                nATK = Math.floor(((this.str - 12) * this.constants[weapon]) + ((this.level * 1.1)));
         }
+
+        nATK += this.getExtraParam(weapon + "attack");
+        return nATK;
     }
 
     /**
@@ -517,8 +519,15 @@ export class Mover {
         let powerMax = ((weaponMax + (params.maxAttack + 0) * 5 + base - 20) * (16 + level) / 13);
 
         // TODO: get extra weapon damage here (Damage with sword, etc)
-        powerMin += this.getExtraParam("damage");
-        powerMax += this.getExtraParam("damage");
+        const extraFlatAttack = this.getExtraParam("attack");
+        const extraAttack = this.getExtraParam("attack", true) / 100;
+        const extraWeaponAttack = this.getExtraParam(this.mainhand.subcategory + "attack");
+
+        powerMin += extraFlatAttack + extraWeaponAttack;
+        powerMin *= 1 + extraAttack;
+        powerMax += extraFlatAttack + extraWeaponAttack;
+        powerMax *= 1 + extraAttack;
+
         let final = (powerMin + powerMax) / 2;
 
         // BEGIN HARDCODING
