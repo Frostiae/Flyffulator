@@ -20,9 +20,9 @@
         </tr>
 
         <tr>
-          <td><h5>Weapon</h5></td>
+          <td><h5>Mainhand</h5></td>
           <td>
-            <select v-model="character.weapon" id="equipment-select">
+            <select v-model="character.mainhand" id="equipment-select">
               <option disabled value="">Select a weapon...</option>
               <option v-for="weapon in weapons" :value="weapon" :key="weapon.id">
                 {{ weapon.name.en }}
@@ -33,17 +33,17 @@
         </tr>
 
         <tr>
-          <td><h5>Shield</h5></td>
+          <td><h5>Offhand</h5></td>
           <td>
-            <select v-model="character.shield" id="equipment-select" :disabled=!canUseShield>
-              <option disabled value="">Select a shield...</option>
-              <option v-for="shield in shields" :value="shield" :key="shield.id">
-                {{ shield.name.en }}
+            <select v-model="character.offhand" id="equipment-select" :disabled=!canUseOffhand>
+              <option disabled value="">Select an offhand...</option>
+              <option v-for="offhand in offhands" :value="offhand" :key="offhand.id">
+                {{ offhand.name.en }}
               </option>
           </select>
           </td>
           <td>
-            <button class="btn-plus" @click="character.shield = null">x</button>
+            <button class="btn-plus" @click="character.offhand = null">x</button>
           </td>
         </tr>
 
@@ -144,6 +144,7 @@
 
 <script>
 import { Utils } from '../../calc/utils.js'
+import { Blade } from '../../calc/jobs.js'
 
 export default {
   name: 'Equipment',
@@ -157,7 +158,8 @@ export default {
       rings: [],
       piercingCards: [],
       shields: [],
-      canUseShield: true
+      offhands: [],
+      canUseOffhand: true
     }
   },
   mounted() {
@@ -167,11 +169,23 @@ export default {
     this.necklaces = Utils.getJewelery("necklace").sort(Utils.sortByName);
     this.piercingCards = Utils.getPiercingCards().sort(Utils.sortByName);
     this.shields = Utils.getShields().sort(Utils.sortByName);
+
+    this.offhands = [...this.shields];
+    if (this.character instanceof Blade) {
+      this.offhands = this.offhands.concat(this.weapons);
+    }
   },
   methods: {
     updateEquipment() {
       this.weapons = Utils.getJobWeapons(this.character.jobId).sort(Utils.sortByName);
       this.armors = Utils.getJobArmors(this.character.jobId).sort(Utils.sortByName);
+
+      // Blades can use a shield or a weapon in their offhand
+      if (this.character instanceof Blade) {
+        this.offhands = [];
+        this.offhands = [...this.shields];
+        this.offhands = this.offhands.concat(this.weapons);
+      }
     }
   },
   watch: {
@@ -179,12 +193,12 @@ export default {
       this.character = this.$root.character.ref;
       this.updateEquipment();
     },
-    '$root.character.ref.weapon'() {
-      if (this.character.weapon.twoHanded) {
-        this.canUseShield = false;
-        this.character.shield = null;
+    '$root.character.ref.mainhand'() {
+      if (this.character.mainhand.twoHanded) {
+        this.canUseOffhand = false;
+        this.character.offhand = null;
       } else {
-        this.canUseShield = true;
+        this.canUseOffhand = true;
       }
     }
   }

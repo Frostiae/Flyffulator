@@ -14,7 +14,6 @@ export class Mover {
         this.applySelfBuffs();
 
         this.skillsRawDamage = this.updateSkillDamage();
-        this.remainingPoints = this.getRemainingPoints();
         this.criticalChance = this.getCriticalChance();
         this.aspd = this.getAspd();
         this.DCT = this.getDCT();
@@ -75,19 +74,6 @@ export class Mover {
         }
     }
 
-    // TODO: Remove the use of this in autoratio and get rid of it
-    getRemainingPoints() {
-        let points = this.level * 2 - 2;
-        points -= (this.str + this.sta + this.dex + this.int) - 60; // Don't count the base 15
-        if (this.assistBuffs && this.activeAssistBuffs.length) {
-            points += this.getExtraBuffParam('dex') +
-                this.getExtraBuffParam('sta') +
-                this.getExtraBuffParam('str') +
-                this.getExtraBuffParam('int');
-        }
-        return points;
-    }
-
     get parry() { return this.dex / 2; }
 
     get defense() {
@@ -99,7 +85,7 @@ export class Mover {
     }
 
     getAspd() {
-        const weaponAspd = Utils.getWeaponSpeed(this.weapon);
+        const weaponAspd = Utils.getWeaponSpeed(this.mainhand);
         let a = Math.floor(this.constants.attackSpeed + (weaponAspd * (4.0 * this.dex + this.level / 8.0)) - 3.0);
         if (a >= 187.5) a = Math.floor(187.5);
 
@@ -120,8 +106,6 @@ export class Mover {
         let final = fspeed * 100 / 2;
 
         final += this.getExtraParam('attackspeed', true);
-        final += this instanceof Blade ? this.weaponParam('attackspeed', true) : 0;
-
         final = final > 100 ? 100 : final;
         return Math.floor(final);
     }
@@ -133,15 +117,12 @@ export class Mover {
         chance = chance < 0 ? 0 : chance;
 
         chance += this.getExtraParam('criticalchance', true);
-        chance += this instanceof Blade ? this.weaponParam('criticalchance', true) : 0;
-
         return chance > 100 ? 100 : chance;
     }
 
     getDCT() {
         let dct = 100; // Starts out as 100%
         dct += this.getExtraParam('decreasedcastingtime', true);
-        dct += this instanceof Blade ? this.weaponParam('decreasedcastingtime', true) : 0;
         return dct;
     }
 
@@ -149,9 +130,9 @@ export class Mover {
         let pnMin = 3 * 2;
         let pnMax = 4 * 2;
 
-        if (this.weapon) {
-            pnMin = this.weapon.minAttack * 2;
-            pnMax = this.weapon.maxAttack * 2;
+        if (this.mainhand) {
+            pnMin = this.mainhand.minAttack * 2;
+            pnMax = this.mainhand.maxAttack * 2;
         }
 
         let plus = this.weaponAttack();
@@ -159,19 +140,9 @@ export class Mover {
         pnMax += plus;
 
         let final = (pnMin + pnMax) / 2;
-        final += this.jeweleryParam('attack');
-        final += this.armorParam('attack');
-        final += this.getExtraBuffParam('attack');
-        final *= 1 + (this.getExtraBuffParam('attack', true) / 100);
 
-        final += this instanceof Blade ? this.weaponParam('attack') * 2 : this.weaponParam('attack');
-
-        final *= 1 + (this.jeweleryParam('attack', true) / 100);
-        final *= 1 + (this.armorParam('attack', true) / 100);
-
-        const weaponBonus = this instanceof Blade ? this.weaponParam('attack', true) * 2 : this.weaponParam('attack', true);
-        final *= 1 + (weaponBonus / 100);
-
+        final += this.getExtraParam("attack");
+        final *= 1 + (this.getExtraParam("attack", true) / 100);
         return final;
     }
 
@@ -181,7 +152,6 @@ export class Mover {
     getCriticalDamage() {
         let adoch = 0;
         adoch += this.getExtraParam('criticaldamage', true);
-        adoch += this instanceof Blade ? this.weaponParam('criticaldamage', true) : 0;
         return adoch;
     }
 
@@ -209,9 +179,9 @@ export class Mover {
         let final = ((avgCrit - avgNormal) * this.criticalChance / 100) + avgNormal;
 
         // Knight Swordcross calculation
-        if (this instanceof Knight && this.weapon && this.weapon.triggerSkillProbability) {
+        if (this instanceof Knight && this.mainhand && this.mainhand.triggerSkillProbability) {
             const swordcrossFactor = 1.0; // 100% extra damage
-            const swordcrossChance = this.weapon.triggerSkillProbability / 100;
+            const swordcrossChance = this.mainhand.triggerSkillProbability / 100;
             final += final * (swordcrossFactor * swordcrossChance);
         }
 
@@ -225,14 +195,13 @@ export class Mover {
     getHitrate() {
         let hit = this.dex / 4;
         hit += this.getExtraParam('hitrate', true);
-        hit += this instanceof Blade ? this.weaponParam('hitrate', true) : 0;
         return hit;
     }
 
     weaponAttack() {
         let weapon = "";
-        if (this.weapon)
-            weapon = this.weapon.subcategory;
+        if (this.mainhand)
+            weapon = this.mainhand.subcategory;
         switch (weapon) {
             case 'axe':
                 return Math.floor(((this.str - 12) * this.constants[weapon]) + ((this.level * 1.2)));
@@ -256,7 +225,6 @@ export class Mover {
      * @param param The parameter to look for in all equipment and buffs 
      */
     getExtraParam(param, rate = false) {
-        // TODO: Refactor the whole secondary param thing, use an array of params to check instead
         return this.getExtraGearParam(param, rate) + this.getExtraBuffParam(param, rate);
     }
 
@@ -269,30 +237,20 @@ export class Mover {
     }
 
     armorParam(param, rate = false) {
-        var secondaryParam = "";
-        if (param == "str" || param == "sta" || param == "dex" || param == "int") secondaryParam = "allstats";
+        var params = [param].concat(Utils.globalParams[param]);
 
         var add = 0;
         if (this.armor && this.armor.bonus) {
-            const bonus = this.armor.bonus.find(a => (a.ability.parameter == param || a.ability.parameter == secondaryParam) && a.ability.rate == rate);
+            const bonus = this.armor.bonus.find(a => params.includes(a.ability.parameter) && a.ability.rate == rate);
             if (bonus) add = bonus.ability.add;
         }
 
         // Suit Piercing
         if (this.suitPiercing) {
             const ability = this.suitPiercing.abilities[0]; // Piercing cards only have one ability
-            if ((ability.parameter == param || ability.parameter == secondaryParam) && ability.rate == rate) {
+            if (params.includes(ability.parameter) && ability.rate == rate) {
                 add += ability.add * 4; // 4 card piercing slots
             }
-        }
-
-        // Shield
-        if (this.shield && this.shield.abilities) {
-            this.shield.abilities.forEach(ability => {
-                if ((ability.parameter == param || ability.parameter == secondaryParam) && ability.rate == rate) {
-                    add += ability.add;
-                }
-            });
         }
 
         return add;
@@ -300,39 +258,57 @@ export class Mover {
 
     weaponParam(param, rate = false) {
         var add = 0;
-        if (this.weapon && this.weapon.abilities) {
-            const bonus = this.weapon.abilities.find(a => a.parameter == param && a.rate == rate);
-            if (bonus) add = bonus.add;
+        var params = [param].concat(Utils.globalParams[param]);
+
+        // Mainhand bonus addition
+        if (this.mainhand && this.mainhand.abilities) {
+            const bonus = this.mainhand.abilities.find(a => params.includes(a.parameter) && a.rate == rate);
+            if (bonus) add += bonus.add;
         }
+
+        // Offhand bonus addition, including shields
+        if (this.offhand && this.offhand.abilities) {
+            if (this.offhand.subcategory == "shield") {
+                this.offhand.abilities.forEach(ability => {
+                    if (params.includes(ability.parameter) && ability.rate == rate) {
+                        add += ability.add;
+                    }
+                });
+            } else {
+                const bonus = this.offhand.abilities.find(a => params.includes(a.parameter) && a.rate == rate);
+                if (bonus) add += bonus.add;
+            }
+        }
+
         return add;
     }
 
     jeweleryParam(param, rate = false) {
-        var secondaryParam = param == 'attack' ? 'damage' : ''; // Jewelery has additional damage which adds attack
         var add = 0;
+        var params = [param].concat(Utils.globalParams[param]);
 
         if (this.earringR && this.earringR.abilities) {
-            const bonus = this.earringR.abilities.find(a => (a.parameter == param || a.parameter == secondaryParam) && a.rate == rate);
+            const bonus = this.earringR.abilities.find(a => params.includes(a.parameter) && a.rate == rate);
             if (bonus) add += bonus.add;
         }
 
         if (this.earringL && this.earringL.abilities) {
-            const bonus = this.earringL.abilities.find(a => (a.parameter == param || a.parameter == secondaryParam) && a.rate == rate);
+            const bonus = this.earringL.abilities.find(a => params.includes(a.parameter) && a.rate == rate);
             if (bonus) add += bonus.add;
         }
 
         if (this.ringR && this.ringR.abilities) {
-            const bonus = this.ringR.abilities.find(a => (a.parameter == param || a.parameter == secondaryParam) && a.rate == rate);
+            const bonus = this.ringR.abilities.find(a => params.includes(a.parameter) && a.rate == rate);
             if (bonus) add += bonus.add;
         }
 
         if (this.ringL && this.ringL.abilities) {
-            const bonus = this.ringL.abilities.find(a => (a.parameter == param || a.parameter == secondaryParam) && a.rate == rate);
+            const bonus = this.ringL.abilities.find(a => params.includes(a.parameter) && a.rate == rate);
             if (bonus) add += bonus.add;
         }
 
         if (this.necklace && this.necklace.abilities) {
-            const bonus = this.necklace.abilities.find(a => (a.parameter == param || a.parameter == secondaryParam) && a.rate == rate);
+            const bonus = this.necklace.abilities.find(a => params.includes(a.parameter) && a.rate == rate);
             if (bonus) add += bonus.add;
         }
 
@@ -345,16 +321,18 @@ export class Mover {
      */
     assistBuffParam(param, rate = false) {
         var add = 0;
+        var params = [param].concat(Utils.globalParams[param]);
+
         this.activeAssistBuffs.forEach(buff => {
             let level = buff.levels.slice(-1)[0];
             let abilities = level.abilities;
 
             abilities.forEach(ability => { // forEach here and not .find() because there might be multiple buffs with param
-                if (ability.parameter == param && level.scalingParameters.length > 1 && ability.rate == rate) {
+                if (params.includes(ability.parameter) && level.scalingParameters.length > 1 && ability.rate == rate) {
                     let extra = level.scalingParameters[1].scale * this.assistInt;
                     extra = extra > level.scalingParameters[1].maximum ? level.scalingParameters[1].maximum : extra;
                     add += ability.add + extra;
-                } else if (ability.parameter == param && ability.rate == rate) {
+                } else if (params.includes(ability.parameter) && ability.rate == rate) {
                     add += ability.add;
                 }
             });
@@ -363,14 +341,15 @@ export class Mover {
     }
 
     selfBuffParam(param, rate = false) {
-        var secondaryParam = param == 'attack' ? 'damage' : ''; // Spirit Fortune has additional damage which adds attack
         var add = 0;
+        var params = [param].concat(Utils.globalParams[param]);
+
         this.activeSelfBuffs.forEach(buff => {
             let level = buff.levels.slice(-1)[0];
             let abilities = level.abilities;
 
             abilities.forEach(ability => {
-                if ((ability.parameter == param || ability.parameter == secondaryParam) && ability.rate == rate) {
+                if (params.includes(ability.parameter) && ability.rate == rate) {
                     add += ability.add;
                 }
             });
@@ -509,9 +488,9 @@ export class Mover {
         let weaponMin = 3;
         let weaponMax = 4;
 
-        if (this.weapon) {
-            weaponMin = this.weapon.minAttack;
-            weaponMax = this.weapon.maxAttack;
+        if (this.mainhand) {
+            weaponMin = this.mainhand.minAttack;
+            weaponMax = this.mainhand.maxAttack;
         }
 
         const stat = params.scalingParameters[0].stat;
@@ -543,7 +522,7 @@ export class Mover {
         let final = (powerMin + powerMax) / 2;
 
         // BEGIN HARDCODING
-        if (this instanceof Knight && this.weapon.triggerSkillProbability) { final += final * (1.0 * (this.weapon.triggerSkillProbability / 100)); } // Swordcross
+        if (this instanceof Knight && this.mainhand.triggerSkillProbability) { final += final * (1.0 * (this.mainhand.triggerSkillProbability / 100)); } // Swordcross
 
         switch (skill.id) {
             case 6206: // Spirit bomb
