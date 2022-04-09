@@ -334,7 +334,9 @@ export class Jester extends Acrobat {
                 Utils.getSkillByName("Hit of Penya")
             ],
             'buffs': [Utils.getSkillByName("Critical Swing"),
-                Utils.getSkillByName("Enchant Absorb")
+                Utils.getSkillByName("Enchant Absorb"),
+                Utils.getSkillByName("Yo-Yo Mastery"),
+                Utils.getSkillByName("Bow Mastery")
             ],
             'attackSpeed': 85.0,
             'hps': 2,
@@ -390,7 +392,9 @@ export class Ranger extends Acrobat {
                 Utils.getSkillByName("Silent Arrow")
             ],
             'buffs': [Utils.getSkillByName("Critical Shot"),
-                Utils.getSkillByName("Nature")
+                Utils.getSkillByName("Nature"),
+                Utils.getSkillByName("Yo-Yo Mastery"),
+                Utils.getSkillByName("Bow Mastery")
             ],
             'attackSpeed': 80.0,
             'hps': 2,
@@ -663,9 +667,13 @@ export class Blade extends Mercenary {
         constants = constants || {
             'skills': [Utils.getSkillByName("Blade Dance"),
                 Utils.getSkillByName("Hawk Attack"),
-                Utils.getSkillByName("Cross Strike")
+                Utils.getSkillByName("Cross Strike"),
             ],
-            'buffs': [Utils.getSkillByName("Berserk")],
+            'buffs': [Utils.getSkillByName("Berserk"),
+                Utils.getSkillByName("Smite Axe"),
+                Utils.getSkillByName("Axe Mastery"),
+                Utils.getSkillByName("Sword Mastery"),
+                Utils.getSkillByName("Protection")],
             'attackSpeed': 90.0,
             'hps': 3,
             'HP': 1.5,
@@ -718,7 +726,11 @@ export class Knight extends Mercenary {
                 Utils.getSkillByName("Power Stomp"),
                 Utils.getSkillByName("Earth Divider")
             ],
-            'buffs': [Utils.getSkillByName("Rage")],
+            'buffs': [Utils.getSkillByName("Rage"),
+                Utils.getSkillByName("Smite Axe"),
+                Utils.getSkillByName("Axe Mastery"),
+                Utils.getSkillByName("Sword Mastery"),
+                Utils.getSkillByName("Protection")],
             'attackSpeed': 65.0,
             'hps': 2,
             'HP': 2.0,

@@ -24,9 +24,9 @@ export class Utils {
 
     // These parameters come in different names, so this object describes those. Used in getExtraParam() etc. in mover.js
     static globalParams = {
-        "attack": [
-            "damage",
-            "attack"
+        "attack": [ // attack appears as
+            "damage",   // damage
+            "attack"    // attack
         ],
         "str": [
             "str",
