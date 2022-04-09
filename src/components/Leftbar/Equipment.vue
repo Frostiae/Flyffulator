@@ -22,7 +22,7 @@
         <tr>
           <td><h5>Weapon</h5></td>
           <td>
-            <select v-model="character.weapon" id="equipment-select">
+            <select v-model="character.mainhand" id="equipment-select">
               <option disabled value="">Select a weapon...</option>
               <option v-for="weapon in weapons" :value="weapon" :key="weapon.id">
                 {{ weapon.name.en }}
@@ -179,8 +179,8 @@ export default {
       this.character = this.$root.character.ref;
       this.updateEquipment();
     },
-    '$root.character.ref.weapon'() {
-      if (this.character.weapon.twoHanded) {
+    '$root.character.ref.mainhand'() {
+      if (this.character.mainhand.twoHanded) {
         this.canUseShield = false;
         this.character.shield = null;
       } else {

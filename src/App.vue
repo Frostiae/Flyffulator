@@ -127,7 +127,7 @@ export default {
     'character.ref.assistInt'() { this.updateCharacter() },
     'character.ref.selfBuffs'() { this.updateCharacter() },
     'character.ref.assistBuffs'() { this.updateCharacter() },
-    'character.ref.weapon'() { this.updateCharacter() },
+    'character.ref.mainhand'() { this.updateCharacter() },
     'character.ref.armor'() { this.updateCharacter() },
     'character.ref.earringR'() { this.updateCharacter() },
     'character.ref.earringL'() { this.updateCharacter() },

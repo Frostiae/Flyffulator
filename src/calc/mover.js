@@ -99,7 +99,7 @@ export class Mover {
     }
 
     getAspd() {
-        const weaponAspd = Utils.getWeaponSpeed(this.weapon);
+        const weaponAspd = Utils.getWeaponSpeed(this.mainhand);
         let a = Math.floor(this.constants.attackSpeed + (weaponAspd * (4.0 * this.dex + this.level / 8.0)) - 3.0);
         if (a >= 187.5) a = Math.floor(187.5);
 
@@ -149,9 +149,9 @@ export class Mover {
         let pnMin = 3 * 2;
         let pnMax = 4 * 2;
 
-        if (this.weapon) {
-            pnMin = this.weapon.minAttack * 2;
-            pnMax = this.weapon.maxAttack * 2;
+        if (this.mainhand) {
+            pnMin = this.mainhand.minAttack * 2;
+            pnMax = this.mainhand.maxAttack * 2;
         }
 
         let plus = this.weaponAttack();
@@ -209,9 +209,9 @@ export class Mover {
         let final = ((avgCrit - avgNormal) * this.criticalChance / 100) + avgNormal;
 
         // Knight Swordcross calculation
-        if (this instanceof Knight && this.weapon && this.weapon.triggerSkillProbability) {
+        if (this instanceof Knight && this.mainhand && this.mainhand.triggerSkillProbability) {
             const swordcrossFactor = 1.0; // 100% extra damage
-            const swordcrossChance = this.weapon.triggerSkillProbability / 100;
+            const swordcrossChance = this.mainhand.triggerSkillProbability / 100;
             final += final * (swordcrossFactor * swordcrossChance);
         }
 
@@ -231,8 +231,8 @@ export class Mover {
 
     weaponAttack() {
         let weapon = "";
-        if (this.weapon)
-            weapon = this.weapon.subcategory;
+        if (this.mainhand)
+            weapon = this.mainhand.subcategory;
         switch (weapon) {
             case 'axe':
                 return Math.floor(((this.str - 12) * this.constants[weapon]) + ((this.level * 1.2)));
@@ -300,8 +300,8 @@ export class Mover {
 
     weaponParam(param, rate = false) {
         var add = 0;
-        if (this.weapon && this.weapon.abilities) {
-            const bonus = this.weapon.abilities.find(a => a.parameter == param && a.rate == rate);
+        if (this.mainhand && this.mainhand.abilities) {
+            const bonus = this.mainhand.abilities.find(a => a.parameter == param && a.rate == rate);
             if (bonus) add = bonus.add;
         }
         return add;
@@ -509,9 +509,9 @@ export class Mover {
         let weaponMin = 3;
         let weaponMax = 4;
 
-        if (this.weapon) {
-            weaponMin = this.weapon.minAttack;
-            weaponMax = this.weapon.maxAttack;
+        if (this.mainhand) {
+            weaponMin = this.mainhand.minAttack;
+            weaponMax = this.mainhand.maxAttack;
         }
 
         const stat = params.scalingParameters[0].stat;
@@ -543,7 +543,7 @@ export class Mover {
         let final = (powerMin + powerMax) / 2;
 
         // BEGIN HARDCODING
-        if (this instanceof Knight && this.weapon.triggerSkillProbability) { final += final * (1.0 * (this.weapon.triggerSkillProbability / 100)); } // Swordcross
+        if (this instanceof Knight && this.mainhand.triggerSkillProbability) { final += final * (1.0 * (this.mainhand.triggerSkillProbability / 100)); } // Swordcross
 
         switch (skill.id) {
             case 6206: // Spirit bomb
