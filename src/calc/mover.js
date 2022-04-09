@@ -286,24 +286,32 @@ export class Mover {
             }
         }
 
-        // Shield
-        if (this.shield && this.shield.abilities) {
-            this.shield.abilities.forEach(ability => {
-                if ((ability.parameter == param || ability.parameter == secondaryParam) && ability.rate == rate) {
-                    add += ability.add;
-                }
-            });
-        }
-
         return add;
     }
 
     weaponParam(param, rate = false) {
         var add = 0;
+        // Mainhand bonus addition
         if (this.mainhand && this.mainhand.abilities) {
             const bonus = this.mainhand.abilities.find(a => a.parameter == param && a.rate == rate);
-            if (bonus) add = bonus.add;
+            if (bonus) add += bonus.add;
         }
+
+        // Offhand bonus addition, including shields
+        // TODO: Secondary param stuff 'allstats'
+        if (this.offhand && this.offhand.abilities) {
+            if (this.offhand.subcategory == "shield") {
+                this.offhand.abilities.forEach(ability => {
+                    if ((ability.parameter == param) && ability.rate == rate) {
+                        add += ability.add;
+                    }
+                });
+            } else {
+                const bonus = this.offhand.abilities.find(a => a.parameter == param && a.rate == rate);
+                if (bonus) add += bonus.add;
+            }
+        }
+
         return add;
     }
 

@@ -82,37 +82,22 @@ export class Vagrant extends Mover {
 
     get health() {
         let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.1125 + this.level * (this.level + 1) * this.sta * 0.00225);
-        
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
-        health *= this instanceof Blade ? 1 + (this.weaponParam('maxhp', true) / 100) : 1;
-
         health += this.getExtraParam('maxhp', false);
-        health += this instanceof Blade ? this.weaponParam('maxhp', false) : 0;
-
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level * 0.6 + this.sta * 2.1);
-        
         fp *= 1 + (this.getExtraParam('maxfp', true) / 100);
-        fp *= this instanceof Blade ? 1 + (this.weaponParam('maxfp', true) / 100) : 1;
-
         fp += this.getExtraParam('maxfp', false);
-        fp += this instanceof Blade ? this.weaponParam('maxfp', false) : 0;
-
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22 + this.level * 0.6 + this.int * 2.7);
-        
         mp *= 1 + (this.getExtraParam('maxmp', true) / 100);
-        mp *= this instanceof Blade ? 1 + (this.weaponParam('maxmp', true) / 100) : 1;
-
         mp += this.getExtraParam('maxmp', false);
-        mp += this instanceof Blade ? this.weaponParam('maxmp', false) : 0;
-
         return mp
     }
 }
@@ -146,42 +131,27 @@ export class Assist extends Vagrant {
             'wand': 6.0,
             'yoyo': 4.2
         };
-        super(str, sta, int, dex, level, constants, img, mainhand, armor, jobId);
+        super(str, sta, int, dex, level, constants, img, mainhand, offhand, armor, jobId);
     }
 
     get health() {
         let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.175 + this.level * (this.level + 1) * this.sta * 0.0035);
-        
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
-        health *= this instanceof Blade ? 1 + (this.weaponParam('maxhp', true) / 100) : 1;
-
         health += this.getExtraParam('maxhp', false);
-        health += this instanceof Blade ? this.weaponParam('maxhp', false) : 0;
-
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level * 1.2 + this.sta * 4.2);
-        
         fp *= 1 + (this.getExtraParam('maxfp', true) / 100);
-        fp *= this instanceof Blade ? 1 + (this.weaponParam('maxfp', true) / 100) : 1;
-
         fp += this.getExtraParam('maxfp', false);
-        fp += this instanceof Blade ? this.weaponParam('maxfp', false) : 0;
-
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22 + this.level * 2.6 + this.int * 11.7);
-        
         mp *= 1 + (this.getExtraParam('maxmp', true) / 100);
-        mp *= this instanceof Blade ? 1 + (this.weaponParam('maxmp', true) / 100) : 1;
-
         mp += this.getExtraParam('maxmp', false);
-        mp += this instanceof Blade ? this.weaponParam('maxmp', false) : 0;
-
         return mp
     }
 }
@@ -214,42 +184,27 @@ export class Billposter extends Assist {
             'wand': 6.0,
             'yoyo': 4.2
         };
-        super(str, sta, int, dex, level, constants, img, mainhand, armor, jobId);
+        super(str, sta, int, dex, level, constants, img, mainhand, offhand, armor, jobId);
     }
 
     get health() {
         let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.225 + this.level * (this.level + 1) * this.sta * 0.0045);
-        
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
-        health *= this instanceof Blade ? 1 + (this.weaponParam('maxhp', true) / 100) : 1;
-
         health += this.getExtraParam('maxhp', false);
-        health += this instanceof Blade ? this.weaponParam('maxhp', false) : 0;
-
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level * 2.2 + this.sta * 7.7);
-        
         fp *= 1 + (this.getExtraParam('maxfp', true) / 100);
-        fp *= this instanceof Blade ? 1 + (this.weaponParam('maxfp', true) / 100) : 1;
-
         fp += this.getExtraParam('maxfp', false);
-        fp += this instanceof Blade ? this.weaponParam('maxfp', false) : 0;
-
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22 + this.level * 1.8 + this.int * 8.1);
-        
         mp *= 1 + (this.getExtraParam('maxmp', true) / 100);
-        mp *= this instanceof Blade ? 1 + (this.weaponParam('maxmp', true) / 100) : 1;
-
         mp += this.getExtraParam('maxmp', false);
-        mp += this instanceof Blade ? this.weaponParam('maxmp', false) : 0;
-
         return mp
     }
 }
@@ -285,42 +240,27 @@ export class Ringmaster extends Assist {
             'wand': 6.0,
             'yoyo': 4.2
         };
-        super(str, sta, int, dex, level, constants, img, mainhand, armor, jobId);
+        super(str, sta, int, dex, level, constants, img, mainhand, offhand, armor, jobId);
     }
 
     get health() {
         let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.2 + this.level * (this.level + 1) * this.sta * 0.004);
-
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
-        health *= this instanceof Blade ? 1 + (this.weaponParam('maxhp', true) / 100) : 1;
-
         health += this.getExtraParam('maxhp', false);
-        health += this instanceof Blade ? this.weaponParam('maxhp', false) : 0;
-
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level * 0.8 + this.sta * 2.8);
-
         fp *= 1 + (this.getExtraParam('maxfp', true) / 100);
-        fp *= this instanceof Blade ? 1 + (this.weaponParam('maxfp', true) / 100) : 1;
-
         fp += this.getExtraParam('maxfp', false);
-        fp += this instanceof Blade ? this.weaponParam('maxfp', false) : 0;
-
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22 + this.level * 3.6 + this.int * 16.2);
-
         mp *= 1 + (this.getExtraParam('maxmp', true) / 100);
-        mp *= this instanceof Blade ? 1 + (this.weaponParam('maxmp', true) / 100) : 1;
-
         mp += this.getExtraParam('maxmp', false);
-        mp += this instanceof Blade ? this.weaponParam('maxmp', false) : 0;
-
         return mp
     }
 }
@@ -358,42 +298,27 @@ export class Acrobat extends Vagrant {
             'bow': 3.6,
             'yoyo': 4.2
         };
-        super(str, sta, int, dex, level, constants, img, mainhand, armor, jobId);
+        super(str, sta, int, dex, level, constants, img, mainhand, offhand, armor, jobId);
     }
 
     get health() {
         let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.175 + this.level * (this.level + 1) * this.sta * 0.0035);
-
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
-        health *= this instanceof Blade ? 1 + (this.weaponParam('maxhp', true) / 100) : 1;
-
         health += this.getExtraParam('maxhp', false);
-        health += this instanceof Blade ? this.weaponParam('maxhp', false) : 0;
-
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level * 1 + this.sta * 3.5);
-
         fp *= 1 + (this.getExtraParam('maxfp', true) / 100);
-        fp *= this instanceof Blade ? 1 + (this.weaponParam('maxfp', true) / 100) : 1;
-
         fp += this.getExtraParam('maxfp', false);
-        fp += this instanceof Blade ? this.weaponParam('maxfp', false) : 0;
-
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22 + this.level * 1 + this.int * 4.5);
-
         mp *= 1 + (this.getExtraParam('maxmp', true) / 100);
-        mp *= this instanceof Blade ? 1 + (this.weaponParam('maxmp', true) / 100) : 1;
-
         mp += this.getExtraParam('maxmp', false);
-        mp += this instanceof Blade ? this.weaponParam('maxmp', false) : 0;
-
         return mp
     }
 }
@@ -429,42 +354,27 @@ export class Jester extends Acrobat {
             'yoyo': 4.6,
             'bow': 3.6
         };
-        super(str, sta, int, dex, level, constants, img, mainhand, armor, jobId);
+        super(str, sta, int, dex, level, constants, img, mainhand, offhand, armor, jobId);
     }
 
     get health() {
         let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.1875 + this.level * (this.level + 1) * this.sta * 0.00375);
-
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
-        health *= this instanceof Blade ? 1 + (this.weaponParam('maxhp', true) / 100) : 1;
-
         health += this.getExtraParam('maxhp', false);
-        health += this instanceof Blade ? this.weaponParam('maxhp', false) : 0;
-
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level * 2 + this.sta * 7);
-
         fp *= 1 + (this.getExtraParam('maxfp', true) / 100);
-        fp *= this instanceof Blade ? 1 + (this.weaponParam('maxfp', true) / 100) : 1;
-
         fp += this.getExtraParam('maxfp', false);
-        fp += this instanceof Blade ? this.weaponParam('maxfp', false) : 0;
-
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22 + this.level * 1 + this.int * 4.5);
-
         mp *= 1 + (this.getExtraParam('maxmp', true) / 100);
-        mp *= this instanceof Blade ? 1 + (this.weaponParam('maxmp', true) / 100) : 1;
-
         mp += this.getExtraParam('maxmp', false);
-        mp += this instanceof Blade ? this.weaponParam('maxmp', false) : 0;
-
         return mp
     }
 }
@@ -500,42 +410,27 @@ export class Ranger extends Acrobat {
             'yoyo': 3.6,
             'bow': 4.4
         };
-        super(str, sta, int, dex, level, constants, img, mainhand, armor, jobId);
+        super(str, sta, int, dex, level, constants, img, mainhand, offhand, armor, jobId);
     }
 
     get health() {
         let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.2 + this.level * (this.level + 1) * this.sta * 0.004);
-
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
-        health *= this instanceof Blade ? 1 + (this.weaponParam('maxhp', true) / 100) : 1;
-
         health += this.getExtraParam('maxhp', false);
-        health += this instanceof Blade ? this.weaponParam('maxhp', false) : 0;
-
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level * 1.2 + this.sta * 4.2);
-
         fp *= 1 + (this.getExtraParam('maxfp', true) / 100);
-        fp *= this instanceof Blade ? 1 + (this.weaponParam('maxfp', true) / 100) : 1;
-
         fp += this.getExtraParam('maxfp', false);
-        fp += this instanceof Blade ? this.weaponParam('maxfp', false) : 0;
-
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22 + this.level * 2.4 + this.int * 10.8);
-
         mp *= 1 + (this.getExtraParam('maxmp', true) / 100);
-        mp *= this instanceof Blade ? 1 + (this.weaponParam('maxmp', true) / 100) : 1;
-
         mp += this.getExtraParam('maxmp', false);
-        mp += this instanceof Blade ? this.weaponParam('maxmp', false) : 0;
-
         return mp
     }
 }
@@ -568,42 +463,27 @@ export class Magician extends Vagrant {
             'wand': 6.0,
             'yoyo': 4.2
         };
-        super(str, sta, int, dex, level, constants, img, mainhand, armor, jobId);
+        super(str, sta, int, dex, level, constants, img, mainhand, offhand, armor, jobId);
     }
 
     get health() {
         let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.175 + this.level * (this.level + 1) * this.sta * 0.0035);
-
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
-        health *= this instanceof Blade ? 1 + (this.weaponParam('maxhp', true) / 100) : 1;
-
         health += this.getExtraParam('maxhp', false);
-        health += this instanceof Blade ? this.weaponParam('maxhp', false) : 0;
-
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level * 0.6 + this.sta * 2.1);
-
         fp *= 1 + (this.getExtraParam('maxfp', true) / 100);
-        fp *= this instanceof Blade ? 1 + (this.weaponParam('maxfp', true) / 100) : 1;
-
         fp += this.getExtraParam('maxfp', false);
-        fp += this instanceof Blade ? this.weaponParam('maxfp', false) : 0;
-
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22 + this.level * 3.4 + this.int * 15.3);
-
         mp *= 1 + (this.getExtraParam('maxmp', true) / 100);
-        mp *= this instanceof Blade ? 1 + (this.weaponParam('maxmp', true) / 100) : 1;
-
         mp += this.getExtraParam('maxmp', false);
-        mp += this instanceof Blade ? this.weaponParam('maxmp', false) : 0;
-
         return mp
     }
 }
@@ -636,42 +516,27 @@ export class Psykeeper extends Magician {
             'wand': 6.0,
             'yoyo': 4.2
         };
-        super(str, sta, int, dex, level, constants, img, mainhand, armor, jobId);
+        super(str, sta, int, dex, level, constants, img, mainhand, offhand, armor, jobId);
     }
 
     get health() {
         let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.1875 + this.level * (this.level + 1) * this.sta * 0.00375);
-
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
-        health *= this instanceof Blade ? 1 + (this.weaponParam('maxhp', true) / 100) : 1;
-
         health += this.getExtraParam('maxhp', false);
-        health += this instanceof Blade ? this.weaponParam('maxhp', false) : 0;
-
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level * 0.8 + this.sta * 2.8);
-
         fp *= 1 + (this.getExtraParam('maxfp', true) / 100);
-        fp *= this instanceof Blade ? 1 + (this.weaponParam('maxfp', true) / 100) : 1;
-
         fp += this.getExtraParam('maxfp', false);
-        fp += this instanceof Blade ? this.weaponParam('maxfp', false) : 0;
-
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22 + this.level * 4 + this.int * 18);
-
         mp *= 1 + (this.getExtraParam('maxmp', true) / 100);
-        mp *= this instanceof Blade ? 1 + (this.weaponParam('maxmp', true) / 100) : 1;
-
         mp += this.getExtraParam('maxmp', false);
-        mp += this instanceof Blade ? this.weaponParam('maxmp', false) : 0;
-
         return mp
     }
 }
@@ -709,42 +574,27 @@ export class Elementor extends Magician {
             'wand': 6.0,
             'yoyo': 4.2
         };
-        super(str, sta, int, dex, level, constants, img, mainhand, armor, jobId);
+        super(str, sta, int, dex, level, constants, img, mainhand, offhand, armor, jobId);
     }
 
     get health() {
         let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.1875 + this.level * (this.level + 1) * this.sta * 0.00375);
-
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
-        health *= this instanceof Blade ? 1 + (this.weaponParam('maxhp', true) / 100) : 1;
-
         health += this.getExtraParam('maxhp', false);
-        health += this instanceof Blade ? this.weaponParam('maxhp', false) : 0;
-
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level * 0.8 + this.sta * 2.8);
-
         fp *= 1 + (this.getExtraParam('maxfp', true) / 100);
-        fp *= this instanceof Blade ? 1 + (this.weaponParam('maxfp', true) / 100) : 1;
-
         fp += this.getExtraParam('maxfp', false);
-        fp += this instanceof Blade ? this.weaponParam('maxfp', false) : 0;
-
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22 + this.level * 4 + this.int * 18);
-
         mp *= 1 + (this.getExtraParam('maxmp', true) / 100);
-        mp *= this instanceof Blade ? 1 + (this.weaponParam('maxmp', true) / 100) : 1;
-
         mp += this.getExtraParam('maxmp', false);
-        mp += this instanceof Blade ? this.weaponParam('maxmp', false) : 0;
-
         return mp
     }
 }
@@ -779,42 +629,27 @@ export class Mercenary extends Vagrant {
             'wand': 6.0,
             'yoyo': 4.2
         };
-        super(str, sta, int, dex, level, constants, img, mainhand, armor, jobId);
+        super(str, sta, int, dex, level, constants, img, mainhand, offhand, armor, jobId);
     }
 
     get health() {
         let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.1875 + this.level * (this.level + 1) * this.sta * 0.00375);
-
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
-        health *= this instanceof Blade ? 1 + (this.weaponParam('maxhp', true) / 100) : 1;
-
         health += this.getExtraParam('maxhp', false);
-        health += this instanceof Blade ? this.weaponParam('maxhp', false) : 0;
-
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level * 1.4 + this.sta * 4.9);
-
         fp *= 1 + (this.getExtraParam('maxfp', true) / 100);
-        fp *= this instanceof Blade ? 1 + (this.weaponParam('maxfp', true) / 100) : 1;
-
         fp += this.getExtraParam('maxfp', false);
-        fp += this instanceof Blade ? this.weaponParam('maxfp', false) : 0;
-
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22 + this.level * 1 + this.int * 4.5);
-
         mp *= 1 + (this.getExtraParam('maxmp', true) / 100);
-        mp *= this instanceof Blade ? 1 + (this.weaponParam('maxmp', true) / 100) : 1;
-
         mp += this.getExtraParam('maxmp', false);
-        mp += this instanceof Blade ? this.weaponParam('maxmp', false) : 0;
-
         return mp
     }
 }
@@ -825,7 +660,7 @@ export class Blade extends Mercenary {
         img = img || "lgaxe.png";
         armor = armor || Utils.getArmorByName("Hanes Set");
         mainhand = mainhand || Utils.getItemByName("Legendary Golden Axe");
-        offhand = offhand || mainhand;
+        offhand = offhand || Utils.getItemByName("Legendary Golden Axe");
         constants = constants || {
             'skills': [Utils.getSkillByName("Blade Dance"),
                 Utils.getSkillByName("Hawk Attack"),
@@ -848,42 +683,27 @@ export class Blade extends Mercenary {
             'wand': 6.0,
             'yoyo': 4.2
         };
-        super(str, sta, int, dex, level, constants, img, mainhand, armor, jobId);
+        super(str, sta, int, dex, level, constants, img, mainhand, offhand, armor, jobId);
     }
 
     get health() {
         let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.1875 + this.level * (this.level + 1) * this.sta * 0.00375);
-
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
-        health *= this instanceof Blade ? 1 + (this.weaponParam('maxhp', true) / 100) : 1;
-
         health += this.getExtraParam('maxhp', false);
-        health += this instanceof Blade ? this.weaponParam('maxhp', false) : 0;
-
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level * 2.4 + this.sta * 8.400001);
-
         fp *= 1 + (this.getExtraParam('maxfp', true) / 100);
-        fp *= this instanceof Blade ? 1 + (this.weaponParam('maxfp', true) / 100) : 1;
-
         fp += this.getExtraParam('maxfp', false);
-        fp += this instanceof Blade ? this.weaponParam('maxfp', false) : 0;
-
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22 + this.level * 1.2 + this.int * 5.4);
-
         mp *= 1 + (this.getExtraParam('maxmp', true) / 100);
-        mp *= this instanceof Blade ? 1 + (this.weaponParam('maxmp', true) / 100) : 1;
-
         mp += this.getExtraParam('maxmp', false);
-        mp += this instanceof Blade ? this.weaponParam('maxmp', false) : 0;
-
         return mp
     }
 }
@@ -916,42 +736,27 @@ export class Knight extends Mercenary {
             'wand': 6.0,
             'yoyo': 4.2
         };
-        super(str, sta, int, dex, level, constants, img, mainhand, armor, jobId);
+        super(str, sta, int, dex, level, constants, img, mainhand, offhand, armor, jobId);
     }
 
     get health() {
         let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.25 + this.level * (this.level + 1) * this.sta * 0.005);
-
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
-        health *= this instanceof Blade ? 1 + (this.weaponParam('maxhp', true) / 100) : 1;
-
         health += this.getExtraParam('maxhp', false);
-        health += this instanceof Blade ? this.weaponParam('maxhp', false) : 0;
-
         return Math.floor(health);
     }
 
     get fp() {
         let fp = Math.floor(this.level * 3 + this.sta * 10.5);
-
         fp *= 1 + (this.getExtraParam('maxfp', true) / 100);
-        fp *= this instanceof Blade ? 1 + (this.weaponParam('maxfp', true) / 100) : 1;
-
         fp += this.getExtraParam('maxfp', false);
-        fp += this instanceof Blade ? this.weaponParam('maxfp', false) : 0;
-
         return fp
     }
 
     get mp() {
         let mp = Math.floor(22 + this.level * 1.2 + this.int * 5.4);
-
         mp *= 1 + (this.getExtraParam('maxmp', true) / 100);
-        mp *= this instanceof Blade ? 1 + (this.weaponParam('maxmp', true) / 100) : 1;
-
         mp += this.getExtraParam('maxmp', false);
-        mp += this instanceof Blade ? this.weaponParam('maxmp', false) : 0;
-
         return mp
     }
 }

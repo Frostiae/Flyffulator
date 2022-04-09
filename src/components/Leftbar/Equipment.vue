@@ -20,7 +20,7 @@
         </tr>
 
         <tr>
-          <td><h5>Weapon</h5></td>
+          <td><h5>Mainhand</h5></td>
           <td>
             <select v-model="character.mainhand" id="equipment-select">
               <option disabled value="">Select a weapon...</option>
@@ -33,17 +33,17 @@
         </tr>
 
         <tr>
-          <td><h5>Shield</h5></td>
+          <td><h5>Offhand</h5></td>
           <td>
-            <select v-model="character.shield" id="equipment-select" :disabled=!canUseShield>
+            <select v-model="character.offhand" id="equipment-select" :disabled=!canUseShield>
               <option disabled value="">Select a shield...</option>
-              <option v-for="shield in shields" :value="shield" :key="shield.id">
-                {{ shield.name.en }}
+              <option v-for="weapon in weapons" :value="weapon" :key="weapon.id">
+                {{ weapon.name.en }}
               </option>
           </select>
           </td>
           <td>
-            <button class="btn-plus" @click="character.shield = null">x</button>
+            <button class="btn-plus" @click="character.offhand = null">x</button>
           </td>
         </tr>
 
@@ -148,6 +148,7 @@ import { Utils } from '../../calc/utils.js'
 export default {
   name: 'Equipment',
   data() {
+    // TODO: Change shield stuff to offhand
     return {
       character: this.$root.character.ref,
       weapons: [],
