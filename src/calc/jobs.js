@@ -3,12 +3,13 @@ import { Mover } from "./mover.js";
 import { Utils } from "./utils.js";
 
 export class Vagrant extends Mover {
-    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, armor = null, jobId = null) {
+    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, offhand = null, armor = null, jobId = null) {
         super();
         this.jobId = jobId || jobId || 9686;
         this.weapon_img = img || "woodensword.png";
         this.armor = armor || null;
         this.mainhand = mainhand || Utils.getItemByName("Wooden Sword");
+        this.offhand = offhand || null;
         this.earringR = null;
         this.earringL = null;
         this.ringR = null;
@@ -118,7 +119,7 @@ export class Vagrant extends Mover {
 
 
 export class Assist extends Vagrant {
-    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, armor = null, jobId = null) {
+    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, offhand = null, armor = null, jobId = null) {
         jobId = jobId || 8962;
         img = img || "overamknuckle.png";
         armor = armor || Utils.getArmorByName("Sayram Set");
@@ -186,7 +187,7 @@ export class Assist extends Vagrant {
 }
 
 export class Billposter extends Assist {
-    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, armor = null, jobId = null) {
+    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, offhand = null, armor = null, jobId = null) {
         jobId = jobId || 7424;
         img = img || "bloodyknuckle.png";
         armor = armor || Utils.getArmorByName("Rody Set");
@@ -254,7 +255,7 @@ export class Billposter extends Assist {
 }
 
 export class Ringmaster extends Assist {
-    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, armor = null, jobId = null) {
+    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, offhand = null, armor = null, jobId = null) {
         jobId = jobId || 9389;
         img = img || "lgstick.png";
         armor = armor || Utils.getArmorByName("Rimyth Set");
@@ -325,7 +326,7 @@ export class Ringmaster extends Assist {
 }
 
 export class Acrobat extends Vagrant {
-    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, armor = null, jobId = null) {
+    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, offhand = null, armor = null, jobId = null) {
         jobId = jobId || 9098;
         img = img || "layeredbow.png";
         armor = armor || Utils.getArmorByName("Cruiser Set");
@@ -398,7 +399,7 @@ export class Acrobat extends Vagrant {
 }
 
 export class Jester extends Acrobat {
-    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, armor = null, jobId = null) {
+    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, offhand = null, armor = null, jobId = null) {
         jobId = jobId || 3545;
         img = img || "lgyoyo.png";
         armor = armor || Utils.getArmorByName("Neis Set");
@@ -469,7 +470,7 @@ export class Jester extends Acrobat {
 }
 
 export class Ranger extends Acrobat {
-    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, armor = null, jobId = null) {
+    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, offhand = null, armor = null, jobId = null) {
         jobId = jobId || 9295;
         img = img || "lgbow.png";
         armor = armor || Utils.getArmorByName("Tyrent Set");
@@ -540,7 +541,7 @@ export class Ranger extends Acrobat {
 }
 
 export class Magician extends Vagrant {
-    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, armor = null, jobId = null) {
+    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, offhand = null, armor = null, jobId = null) {
         jobId = jobId || 9581;
         img = img || "opelwand.png";
         armor = armor || Utils.getArmorByName("Teba Set");
@@ -608,7 +609,7 @@ export class Magician extends Vagrant {
 }
 
 export class Psykeeper extends Magician {
-    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, armor = null, jobId = null) {
+    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, offhand = null, armor = null, jobId = null) {
         jobId = jobId || 5709;
         img = img || "lgwand.png";
         armor = armor || Utils.getArmorByName("Mekatro Set");
@@ -676,7 +677,7 @@ export class Psykeeper extends Magician {
 }
 
 export class Elementor extends Magician {
-    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, armor = null, jobId = null) {
+    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, offhand = null, armor = null, jobId = null) {
         jobId = jobId || 9150;
         img = img || "lgstaff.png";
         armor = armor || Utils.getArmorByName("Shabel Set");
@@ -749,7 +750,7 @@ export class Elementor extends Magician {
 }
 
 export class Mercenary extends Vagrant {
-    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, armor = null, jobId = null) {
+    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, offhand = null, armor = null, jobId = null) {
         jobId = jobId || 764;
         img = img || "woodensword.png";
         armor = armor || Utils.getArmorByName("Panggril Set");
@@ -819,11 +820,12 @@ export class Mercenary extends Vagrant {
 }
 
 export class Blade extends Mercenary {
-    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, armor = null, jobId = null) {
+    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, offhand = null, armor = null, jobId = null) {
         jobId = jobId || 2246;
         img = img || "lgaxe.png";
         armor = armor || Utils.getArmorByName("Hanes Set");
         mainhand = mainhand || Utils.getItemByName("Legendary Golden Axe");
+        offhand = offhand || mainhand;
         constants = constants || {
             'skills': [Utils.getSkillByName("Blade Dance"),
                 Utils.getSkillByName("Hawk Attack"),
@@ -887,7 +889,7 @@ export class Blade extends Mercenary {
 }
 
 export class Knight extends Mercenary {
-    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, armor = null, jobId = null) {
+    constructor(str = 15, sta = 15, int = 15, dex = 15, level = 1, constants = null, img = null, mainhand = null, offhand = null, armor = null, jobId = null) {
         jobId = jobId || 5330;
         img = img || "lgswt.png";
         armor = armor || Utils.getArmorByName("Extro Set");
