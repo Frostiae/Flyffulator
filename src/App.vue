@@ -302,7 +302,7 @@ h5 {
   margin: 3px;
 }
 
-ul {
+ul, ol {
   font-size: 13px;
   color: v-bind(hcolor);
   transition: 0.3s;

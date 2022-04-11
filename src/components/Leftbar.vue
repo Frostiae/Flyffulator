@@ -1,6 +1,7 @@
 <template>
     <div class="sidepanel">
         <div class="panelcontent">
+            <builds/>
             <character/>
             <equipment/>
             <buffs/>
@@ -13,6 +14,7 @@
 import Character from './Leftbar/Character.vue'
 import Equipment from './Leftbar/Equipment.vue'
 import Buffs from './Leftbar/Buffs.vue'
+import Builds from './Leftbar/Builds.vue'
 //import Externals from './Leftbar/External.vue'
 //import Changelog from './Leftbar/Changelog.vue'
 
@@ -22,6 +24,7 @@ export default {
       Character,
       Equipment,
       Buffs,
+      Builds
       //Changelog,
       //Externals
   }
