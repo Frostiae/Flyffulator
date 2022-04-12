@@ -145,16 +145,8 @@ export default {
       this.themeImage = this.darkMode ? 'sunstone.png' : 'moonstone.png'
     },
     getExpReward(monster, level) {
-      for (let value of monster.experienceTable) {
-        if (value == monster.experience) {
-          // Value is the experience we get at the same level
-          let index = monster.experienceTable.indexOf(value);
-          let levelDifference = monster.level - level;
-          let newIndex = index - levelDifference < 0 ? 0 : index - levelDifference;
-          
-          return monster.experienceTable[newIndex];
-        }
-      }
+      // TODO: Get rid of this function
+      return monster.experienceTable[level - 1];
     },
     updateJob(e) {
       let c = utils.updateJob(this.character.ref, e.target.value)
