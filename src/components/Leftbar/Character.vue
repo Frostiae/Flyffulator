@@ -141,6 +141,14 @@ export default {
   },
   methods: {
     ApplyStats() {
+      if (this.addstr === "" || this.addsta === "" || this.adddex === "" || this.addint === "") {
+        this.addstr = 0;
+        this.adddex = 0;
+        this.addsta = 0;
+        this.addint = 0;
+        return;
+      }
+      
       this.character.ref.level = this.newlevel;
 
       this.character.ref.str += this.addstr;
