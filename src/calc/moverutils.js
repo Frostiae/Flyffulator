@@ -1,6 +1,13 @@
 export default class Moverutils {
     constructor() { }
 
+    static trainingDummy = {
+        "defense": 133,
+        "sta": 1,
+        "levelScales": true,
+        "level": 0  // Scales with the attacker's level
+    }
+
     static getDeltaFactor(opponentLevel, selfLevel) {
         var deltaFactor = 1.0;
         var delta = opponentLevel - selfLevel;
@@ -15,15 +22,16 @@ export default class Moverutils {
         return deltaFactor;
     }
 
-    static calcMonsterDefense(monster, magic=false) {
+    static calcMonsterDefense(monster, magic=false, monsterLevel=0) {
         var staFactor = 0.75;
         var levelScale = 2.0 / 2.8;
         var statScale = 0.5 / 2.8;
+        var level = monsterLevel == 0 ? monster.level : monsterLevel; 
 
         // dwNaturalArmor / 4
         var equipmentDefense = !magic ? monster.defense / 4 : monster.magicDefense / 4;
         
-        var defense = Math.floor(monster.level * levelScale + (monster.sta * statScale + (monster.sta - 14) * 1.0) * staFactor - 4);
+        var defense = Math.floor(level * levelScale + (monster.sta * statScale + (monster.sta - 14) * 1.0) * staFactor - 4);
         defense += equipmentDefense;
 
         defense = defense < 0 ? 0 : defense;
