@@ -44,8 +44,8 @@ export default {
           this.monster = focus.name.en;
           const ttk = this.character.ttkMonster(focus)
           
-          if (this.skillindex == -1 && this.character.averageAA) {
-              this.damage = this.character.averageAA.toFixed(0);  
+          if (this.skillindex == -1) {
+              this.damage = this.character.getDamage().toFixed(0);
               this.ttk = ttk.auto.toFixed(0) + 's to kill a ' + this.monster + ' (approximate)';
           } else {
               this.skill = Object.keys(this.character.skillsRawDamage)[this.skillindex];
