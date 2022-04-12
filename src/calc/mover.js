@@ -19,7 +19,6 @@ export class Mover {
         this.DCT = this.getDCT();
         this.attack = this.getAttack();
         this.criticalDamage = this.getCriticalDamage();
-        this.averageAA = this.getAverageAA();
         this.hitrate = this.getHitrate();
         return this;
     }
@@ -157,38 +156,23 @@ export class Mover {
     /**
      * Get the average critical auto attack hit damage.
      */
-    getCriticalHit() {
+    getCriticalHit(monster=null) {
         // CMover::GetHitPower
+        var fMin = 1.1;
+        var fMax = 1.4;
+
+        if (monster != null) {
+            if (this.level > monster.level && !monster.levelScales) {
+                fMin = 1.2;
+                fMax = 2.0;
+            }
+        }
         const normalHit = this.attack;
-        const critMinFactor = 1.2 + this.criticalDamage / 100;
-        const critMaxFactor = 2.0 + this.criticalDamage / 100;
+        const critMinFactor = fMin + this.criticalDamage / 100;
+        const critMaxFactor = fMax + this.criticalDamage / 100;
         const critAvgFactor = (critMinFactor + critMaxFactor) / 2;
 
         return normalHit * critAvgFactor;
-    }
-
-    /**
-     * Get the average normal auto attack hit damage;
-     */
-    getAverageAA() {
-        // Weapon element calculations are in CMover::CalcPropDamage
-        const avgNormal = this.attack;
-        const avgCrit = this.getCriticalHit();
-
-        let final = ((avgCrit - avgNormal) * this.criticalChance / 100) + avgNormal;
-
-        // Knight Swordcross calculation
-        if (this instanceof Knight && this.mainhand && this.mainhand.triggerSkillProbability) {
-            const swordcrossFactor = 1.0; // 100% extra damage
-            const swordcrossChance = this.mainhand.triggerSkillProbability / 100;
-            final += final * (swordcrossFactor * swordcrossChance);
-        }
-
-        // Blade offhand calculation
-        if (this instanceof Blade) { final = (final + (final * 0.75)) / 2; }
-
-        return final < avgNormal ? avgNormal : final; // we wont hit below our normal, non-crit hit
-        // CMover::GetAtkMultiplier
     }
 
     getHitrate() {
@@ -450,26 +434,64 @@ export class Mover {
      * @param {monster} opponent The monster you are facing
      * @param {int} skillIndex The index of the skill you are using, null or -1 if none
      */
-    getDamage(opponent, skillIndex = null) {
+    getDamage(opponent = Moverutils.trainingDummy, skillIndex = null) {
         // TODO: Incorporate element vs element calculation for skills (CAttackArbiter::PostCalcDamage)
-        const deltaFactor = Moverutils.getDeltaFactor(opponent.level, this.level);
+
+        var deltaFactor;
+        if (opponent.level === 0) {
+            deltaFactor = 1;
+        } else {
+            deltaFactor = Moverutils.getDeltaFactor(opponent.level, this.level);
+        }
+
         var damage = 1;
         var defense = 1;
 
-        if (skillIndex == null || skillIndex == -1) {
-            damage = this.averageAA;
-            defense = Moverutils.calcMonsterDefense(opponent);
-        } else {
+        if (skillIndex == null || skillIndex == -1) {   // Auto Attacks
+            var damageNormal = this.attack;
+            var damageCrit = this.getCriticalHit(opponent);
+
+            if (opponent.levelScales) {
+                defense = Moverutils.calcMonsterDefense(opponent, false, this.level);
+            } else {
+                defense = Moverutils.calcMonsterDefense(opponent);
+            }
+
+            damageNormal -= Moverutils.calcDamageDefense(defense, damageNormal);
+            damageCrit -= Moverutils.calcDamageDefense(defense, damageCrit);
+
+            damage = (damageNormal * (1 - this.criticalChance / 100) + damageCrit * (this.criticalChance / 100));
+        } else {    // Skills
             var skill = this.constants.skills[skillIndex];
-            defense = Moverutils.calcMonsterDefense(opponent, skill.magic);
+
+            if (opponent.levelScales) {
+                defense = Moverutils.calcMonsterDefense(opponent, skill.magic, this.level);
+            } else {
+                defense = Moverutils.calcMonsterDefense(opponent, skill.magic);
+            }
+
             damage = Object.values(this.skillsRawDamage)[skillIndex];
+            damage -= Moverutils.calcDamageDefense(defense, damage);
         }
 
-        damage -= Moverutils.calcDamageDefense(defense, damage);
-        // damage -= defense; // OLD
         damage *= deltaFactor;
-
+        damage *= this.getDamageMultiplier();
         return damage < 1 ? 1 : damage;
+    }
+
+    getDamageMultiplier() {
+        let factor = 1.0;
+
+        // Knight Swordcross calculation
+        if (this instanceof Knight && this.mainhand && this.mainhand.triggerSkillProbability) {
+            factor *= 1 + this.mainhand.triggerSkillProbability / 100;
+        }
+
+        // Blade offhand calculation
+        // 2 Hits at 100% damage, 2 hits at 75% damage
+        if (this instanceof Blade) { factor *= 0.875; }
+
+        return factor;
     }
 
     /**
@@ -480,7 +502,7 @@ export class Mover {
         let res = {}
         this.constants.skills.forEach(skill => {
             if (skill) {
-                let damage = this.skillDmg(skill);
+                let damage = this.getSkillDmg(skill);
                 res[skill.name.en] = damage;
             }
         });
@@ -492,7 +514,7 @@ export class Mover {
      * Calculates the raw damage of a skill.
      * @param skill The skill to calculate raw damage for 
      */
-    skillDmg(skill) {
+    getSkillDmg(skill) {
         const params = skill.levels.slice(-1)[0]; // Cannot use at() because of Safari compatibility
         let weaponMin = 3;
         let weaponMax = 4;
@@ -541,6 +563,7 @@ export class Mover {
 
         switch (skill.id) {
             case 6206: // Spirit bomb
+                // TODO: Check this in CAttackArbiter::GetDamageMultiplier()
                 final *= 2.25;
                 break;
             case 7156: // Hit of Penya
@@ -601,7 +624,6 @@ export class Mover {
             this.criticalChance = this.getCriticalChance();
             this.aspd = this.getAspd();
             this.attack = this.getAttack();
-            this.averageAA = this.getAverageAA();
             this.hitrate = this.getHitrate();
 
             dps = parseInt(this.getDPS(target).toFixed(0));
