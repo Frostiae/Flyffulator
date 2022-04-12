@@ -545,14 +545,19 @@ export class Mover {
         switch (skill.element) {
             case "fire":
                 final *= 1 + (this.getExtraParam("firemastery", true) / 100);
+                break;
             case "earth":
                 final *= 1 + (this.getExtraParam("earthmastery", true) / 100);
+                break;
             case "water":
                 final *= 1 + (this.getExtraParam("watermastery", true) / 100);
+                break;
             case "wind":
                 final *= 1 + (this.getExtraParam("windmastery", true) / 100);
+                break;
             case "electricity":
                 final *= 1 + (this.getExtraParam("electricitymastery", true) / 100);
+                break;
         }
 
         final *= 1 + (this.getExtraParam("skilldamage") / 100);
