@@ -3,7 +3,6 @@
     <h3>Your Builds</h3>
     <div class="stats">
         <input type="text" v-model="currentBuild.name" placeholder="build name">
-        <button class="btn-plus" id="savebuild" @click="saveBuild">Save</button>
         <button class="btn-plus" id="newbuild" @click="newBuild">New</button>
         <button class="btn-plus" id="deletebuild" @click="deleteBuild">Delete</button>
         <ol>
@@ -20,7 +19,8 @@ import { Utils } from '../../calc/utils.js'
 
 class Build {
   id;
-  name;
+  name;  
+  appliedStats;
   constructor(id, name){
     this.id = id
     this.name = name;
@@ -31,16 +31,32 @@ export default {
   name: 'Builds',
   data() {
       return {
+          character: this.$root.character,
           currentBuild: null,
           builds: []
       }
   },
   created() { 
-    this.newBuild();
+    for (let i = 0; i < localStorage.length; i++){
+      let key = localStorage.key(i);
+      if(!key.startsWith("Build_")){
+        continue;
+      }
+      let build = JSON.parse(localStorage.getItem(localStorage.key(i)));
+      this.builds.push(build);
+    }
+    if(this.builds.length == 0){
+      this.newBuild();
+    }else{
+      this.currentBuild = this.builds[0]
+      setTimeout(() => this.$emit('LoadAppliedStats', this.currentBuild.appliedStats), 10);      
+    }
   },
   methods: {
-      saveBuild() {
-        // TODO
+      saveAppliedStats(appliedStats) {
+        console.log(appliedStats);
+        this.currentBuild.appliedStats = appliedStats;
+        this.saveCurrentToDisk();
       },
       newBuild() {
         let newNameBase = "New Build";
@@ -52,6 +68,8 @@ export default {
         }
         this.currentBuild = new Build(Utils.newGuid(), newName);
         this.builds.push(this.currentBuild);
+        this.saveCurrentToDisk();
+        setTimeout(() => this.$emit('NewBuild', {}), 10);
       },
       loadBuild(id){
         let build = this.builds.find(b => b.id === id);
@@ -59,6 +77,13 @@ export default {
           return;
         }
         this.currentBuild = build;
+        
+        if(this.currentBuild.appliedStats) {
+          this.$emit('LoadAppliedStats', this.currentBuild.appliedStats);
+        }
+      },
+      saveCurrentToDisk(){
+        localStorage.setItem(`Build_${this.currentBuild.id}`, JSON.stringify(this.currentBuild));
       },
       deleteBuild(){
           if(confirm(`Are you sure you want to delete build ${this.currentBuild.name}?`)) {
@@ -66,6 +91,8 @@ export default {
             if(index >= 0){
               this.builds.splice(index,1)
             }
+            localStorage.removeItem(`Build_${this.currentBuild.id}`)
+
             if(this.builds.length == 0) {
               this.newBuild();
             }else{
@@ -87,7 +114,7 @@ h5 {
     text-align: center;
 }
 
-button#savebuild, button#newbuild, button#deletebuild {
+button#newbuild, button#deletebuild {
   margin: 5px 15px 0px 15px;
 }
 

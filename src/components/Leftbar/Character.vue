@@ -166,6 +166,49 @@ export default {
       this.character.ref.assistInt = this.assistint;
       this.character.ref.assistBuffs = this.assistbuffs;
       this.character.ref.selfBuffs = this.classbuffs;
+
+      this.$emit('CharacterStatsApplied', {
+        jobName:  this.$root.jobName,
+        newlevel: this.newlevel,
+        added: this.added,
+        str: this.character.ref.str,
+        sta: this.character.ref.sta,
+        dex: this.character.ref.dex,
+        int: this.character.ref.int,
+        addedStr: Utils.addedStr,
+        addedSta: Utils.addedSta,
+        addedDex: Utils.addedDex,
+        addedInt: Utils.addedInt,    
+        statpoints: this.statpoints,
+        totalstatpoints: this.totalstatpoints,
+        assistint: this.assistint,
+        assistbuffs: this.assistbuffs,
+        classbuffs: this.classbuffs,
+      });
+    },
+    applyLoadedStats(appliedStats){      
+      this.character.ref = new Vagrant();
+      this.$root.jobName = appliedStats.jobName;
+      this.newlevel = appliedStats.newlevel;
+      this.added = appliedStats.added;
+      Utils.addedStr = appliedStats.addedStr;
+      Utils.addedSta = appliedStats.addedSta;
+      Utils.addedDex = appliedStats.addedDex;
+      Utils.addedInt = appliedStats.addedInt;
+      this.character.ref.str = appliedStats.str;
+      this.character.ref.sta = appliedStats.sta;
+      this.character.ref.dex = appliedStats.dex;
+      this.character.ref.int = appliedStats.int;
+      this.statpoints = appliedStats.statpoints;
+      this.totalstatpoints = appliedStats.totalstatpoints;
+      this.assistint = appliedStats.assistint;
+      this.assistbuffs = appliedStats.assistbuffs;
+      this.classbuffs = appliedStats.classbuffs;
+      this.addstr = 0;
+      this.addsta = 0;
+      this.adddex = 0;
+      this.addint = 0;
+      this.ApplyStats();
     },
     ResetCharacter() {
       this.character.ref = new Vagrant();

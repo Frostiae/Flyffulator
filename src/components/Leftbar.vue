@@ -1,8 +1,8 @@
 <template>
     <div class="sidepanel">
         <div class="panelcontent">
-            <builds/>
-            <character/>
+            <builds ref="builds" @LoadAppliedStats="onLoadAppliedStats" @NewBuild="onNewBuild"/>
+            <character ref="character" @CharacterStatsApplied="onCharacterStatsApplied"/>
             <equipment/>
             <buffs/>
             <!--<externals/>-->
@@ -27,6 +27,22 @@ export default {
       Builds
       //Changelog,
       //Externals
+  },
+  methods: {
+    onCharacterStatsApplied(appliedStats){
+      console.log("Saving stats...")
+      console.log(appliedStats);
+      this.$refs.builds.saveAppliedStats(appliedStats);
+    },
+    onLoadAppliedStats(appliedStats){
+      console.log("Loading stats...");
+      console.log(appliedStats);
+      this.$refs.character.applyLoadedStats(appliedStats);
+    },
+    onNewBuild(){
+      // makes sure the new build gets the active character stats automatically
+      this.$refs.character.ApplyStats();
+    }
   }
 }
 </script>
