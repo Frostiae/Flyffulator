@@ -30,7 +30,7 @@ export class Vagrant extends Mover {
             'HP': 0.9,
             'MP': 0.3,
             'FP': 0.3,
-            'Def': 1,
+            'Def': 0.9,
             'block': 0.2,
             'critical': 1.0,
             'sword': 4.5,
@@ -73,7 +73,6 @@ export class Vagrant extends Mover {
         this.DCT = 0;
         this.attack = 0;
         this.criticalDamage = 0;
-        this.averageAA = 1;
         this.hitrate = 1;
 
         this.forceUpdate = 0;
@@ -114,7 +113,7 @@ export class Assist extends Vagrant {
                 Utils.getSkillByName("Burst Crack")
             ],
             'buffs': [Utils.getSkillByName("Stonehand")],
-            'attackSpeed': 75.0, // Might be 70
+            'attackSpeed': 75.0,
             'HP': 1.4,
             'hps': 4,
             'MP': 1.3,
@@ -167,12 +166,12 @@ export class Billposter extends Assist {
                 Utils.getSkillByName("Asalraalaikum")
             ],
             'buffs': [Utils.getSkillByName("Asmodeus")],
-            'attackSpeed': 85.0,
+            'attackSpeed': 82.0,
             'hps': 2.5,
             'HP': 1.8,
             'MP': 0.9,
             'FP': 1.1,
-            'Def': 1.7,
+            'Def': 1.4,
             'block': 0.7,
             'critical': 1.0,
             'sword': 4.5,
@@ -280,13 +279,13 @@ export class Acrobat extends Vagrant {
                 Utils.getSkillByName("Yo-Yo mastery"),
                 Utils.getSkillByName("Fast Walker")
             ],
-            'attackSpeed': 80.0,
+            'attackSpeed': 77.0,
             'hps': 2,
             'HP': 1.4,
             'MP': 0.5,
             'FP': 0.5,
-            'Def': 1.4,
-            'block': 0.5,
+            'Def': 1.2,
+            'block': 0.6,
             'critical': 1.0,
             'sword': 4.5,
             'axe': 5.5,
@@ -338,12 +337,12 @@ export class Jester extends Acrobat {
                 Utils.getSkillByName("Yo-Yo Mastery"),
                 Utils.getSkillByName("Bow Mastery")
             ],
-            'attackSpeed': 85.0,
+            'attackSpeed': 82.0,
             'hps': 2,
             'HP': 1.5,
             'MP': 0.5,
             'FP': 1.0,
-            'Def': 1.5,
+            'Def': 1.4,
             'block': 0.8,
             'critical': 4.0,
             'sword': 4.5,
@@ -352,8 +351,8 @@ export class Jester extends Acrobat {
             'stick': 3.0,
             'knuckle': 5.0,
             'wand': 6.0,
-            'yoyo': 4.6,
-            'bow': 3.6
+            'yoyo': 5.0,
+            'bow': 2.0
         };
         super(str, sta, int, dex, level, constants, img, mainhand, offhand, armor, jobId);
     }
@@ -396,13 +395,13 @@ export class Ranger extends Acrobat {
                 Utils.getSkillByName("Yo-Yo Mastery"),
                 Utils.getSkillByName("Bow Mastery")
             ],
-            'attackSpeed': 80.0,
+            'attackSpeed': 77.0,
             'hps': 2,
             'HP': 1.6,
             'MP': 1.2,
             'FP': 0.6,
-            'Def': 1.6,
-            'block': 0.9,
+            'Def': 1.4,
+            'block': 0.8,
             'critical': 2.0,
             'sword': 4.5,
             'axe': 5.5,
@@ -410,8 +409,8 @@ export class Ranger extends Acrobat {
             'stick': 3.0,
             'knuckle': 5.0,
             'wand': 6.0,
-            'yoyo': 3.6,
-            'bow': 4.4
+            'yoyo': 2.0,
+            'bow': 4.0
         };
         super(str, sta, int, dex, level, constants, img, mainhand, offhand, armor, jobId);
     }
@@ -450,12 +449,12 @@ export class Magician extends Vagrant {
                 Utils.getSkillByName("Water Well")
             ],
             'buffs': [],
-            'attackSpeed': 65.0,
+            'attackSpeed': 62.0,
             'hps': 1,
             'HP': 1.4,
             'MP': 1.7,
             'FP': 0.3,
-            'Def': 1.2,
+            'Def': 1.15,
             'block': 0.5,
             'critical': 1.0,
             'sword': 4.5,
@@ -503,7 +502,7 @@ export class Psykeeper extends Magician {
                 Utils.getSkillByName("Psychic Square")
             ],
             'buffs': [],
-            'attackSpeed': 70.0,
+            'attackSpeed': 67.0,
             'hps': 1,
             'HP': 1.5,
             'MP': 2.0,
@@ -561,7 +560,7 @@ export class Elementor extends Magician {
                 Utils.getSkillByName("Wind Master"),
                 Utils.getSkillByName("Water Master")
             ],
-            'attackSpeed': 70.0,
+            'attackSpeed': 67.0,
             'hps': 1,
             'HP': 1.5,
             'MP': 2.0,
@@ -616,13 +615,13 @@ export class Mercenary extends Vagrant {
             'buffs': [Utils.getSkillByName("Blazing Sword"),
                 Utils.getSkillByName("Sword Mastery")
             ],
-            'attackSpeed': 80.0,
+            'attackSpeed': 77.0,
             'hps': 4,
             'HP': 1.5,
             'MP': 0.5,
             'FP': 0.7,
-            'Def': 1.35,
-            'block': 0.8,
+            'Def': 1.25,
+            'block': 0.5,
             'critical': 1.0,
             'sword': 4.5,
             'axe': 5.5,
@@ -674,13 +673,13 @@ export class Blade extends Mercenary {
                 Utils.getSkillByName("Axe Mastery"),
                 Utils.getSkillByName("Sword Mastery"),
                 Utils.getSkillByName("Protection")],
-            'attackSpeed': 90.0,
+            'attackSpeed': 87.0,
             'hps': 3,
             'HP': 1.5,
             'MP': 0.6,
             'FP': 1.2,
-            'Def': 1.5,
-            'block': 1.4,
+            'Def': 1.45,
+            'block': 1.5,
             'critical': 1.0,
             'sword': 4.5,
             'axe': 5.5,
@@ -731,12 +730,12 @@ export class Knight extends Mercenary {
                 Utils.getSkillByName("Axe Mastery"),
                 Utils.getSkillByName("Sword Mastery"),
                 Utils.getSkillByName("Protection")],
-            'attackSpeed': 65.0,
+            'attackSpeed': 77.0,
             'hps': 2,
             'HP': 2.0,
             'MP': 0.6,
             'FP': 1.5,
-            'Def': 1.8,
+            'Def': 1.55,
             'block': 1.0,
             'critical': 1.0,
             'sword': 4.5,
