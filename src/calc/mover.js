@@ -204,18 +204,25 @@ export class Mover {
         switch (weapon) {
             case 'axe':
                 nATK =  Math.floor(((this.str - 12) * this.constants[weapon]) + ((this.level * 1.2)));
+                break;
             case 'staff':
                 nATK = Math.floor(((this.str - 10) * this.constants[weapon]) + ((this.level * 1.1)));
+                break;
             case 'stick':
                 nATK = Math.floor(((this.str - 10) * this.constants[weapon]) + ((this.level * 1.3)));
+                break;
             case 'knuckle':
                 nATK = Math.floor(((this.str - 10) * this.constants[weapon]) + ((this.level * 1.2)));
+                break;
             case 'wand':
                 nATK = Math.floor((this.int - 10) * this.constants[weapon] + this.level * 1.2);
+                break;
             case 'bow': //  This is definitely incorrect for project M
                 nATK = Math.floor(((this.dex - 14) * this.constants[weapon] + (this.level * 1.3) * 0.7));
+                break;
             default:
                 nATK = Math.floor(((this.str - 12) * this.constants[weapon]) + ((this.level * 1.1)));
+                break;
         }
 
         nATK += this.getExtraParam(weapon + "attack");
