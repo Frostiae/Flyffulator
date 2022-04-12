@@ -192,6 +192,7 @@ export class Mover {
     }
 
     getHitrate() {
+        // This is just the value displayed in the stats window, basically not used anywhere else
         let hit = this.dex / 4;
         hit += this.getExtraParam('hitrate', true);
         return hit;
@@ -368,7 +369,7 @@ export class Mover {
         let hitRate = Math.floor(((this.dex * 1.6) / (this.dex + monster.parry)) * 1.5 *
             (this.level * 1.2 / (this.level + monster.level)) * 100.0);
 
-        hitRate += this.hitrate;
+        hitRate += this.getExtraParam("hitrate", true);
         hitRate = hitRate > 96 ? 96 : hitRate;
         hitRate = hitRate < 20 ? 20 : hitRate;
 
