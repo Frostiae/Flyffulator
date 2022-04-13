@@ -1,9 +1,9 @@
 <template>
     <div class="sidepanel">
         <div class="panelcontent">
-            <builds ref="builds" @LoadAppliedStats="onLoadAppliedStats" @NewBuild="onNewBuild"/>
+            <builds ref="builds" @LoadAppliedStats="onLoadAppliedStats" @NewBuild="onNewBuild" @LoadEquipment="onLoadEquipment"/>
             <character ref="character" @CharacterStatsApplied="onCharacterStatsApplied"/>
-            <equipment/>
+            <equipment ref="equipment" @CharacterEquipementChanged="onCharacterEquipementChanged"/>
             <buffs/>
             <!--<externals/>-->
         </div>
@@ -34,14 +34,25 @@ export default {
       console.log(appliedStats);
       this.$refs.builds.saveAppliedStats(appliedStats);
     },
+    onCharacterEquipementChanged(equipment){
+      console.log("Saving equips...")
+      console.log(equipment);
+      this.$refs.builds.saveEquipment(equipment);
+    },
     onLoadAppliedStats(appliedStats){
       console.log("Loading stats...");
       console.log(appliedStats);
       this.$refs.character.applyLoadedStats(appliedStats);
     },
+    onLoadEquipment(equipment){
+      console.log("Loading equipment...");
+      console.log(equipment);
+      this.$refs.equipment.applyEquip(equipment);
+    },
     onNewBuild(){
-      // makes sure the new build gets the active character stats automatically
+      // makes sure the new build gets the active character stats and equips automatically
       this.$refs.character.ApplyStats();
+      this.$refs.equipment.onEquipChanged();
     }
   }
 }

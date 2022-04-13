@@ -21,6 +21,7 @@ class Build {
   id;
   name;  
   appliedStats;
+  equipment;
   constructor(id, name){
     this.id = id
     this.name = name;
@@ -49,13 +50,17 @@ export default {
       this.newBuild();
     }else{
       this.currentBuild = this.builds[0]
-      setTimeout(() => this.$emit('LoadAppliedStats', this.currentBuild.appliedStats), 10);      
+      setTimeout(() => this.$emit('LoadEquipment', this.currentBuild.equipment), 10);   
+      setTimeout(() => this.$emit('LoadAppliedStats', this.currentBuild.appliedStats), 20);         
     }
   },
   methods: {
       saveAppliedStats(appliedStats) {
-        console.log(appliedStats);
         this.currentBuild.appliedStats = appliedStats;
+        this.saveCurrentToDisk();
+      },
+      saveEquipment(equipment){
+        this.currentBuild.equipment = equipment;
         this.saveCurrentToDisk();
       },
       newBuild() {
@@ -80,6 +85,7 @@ export default {
         
         if(this.currentBuild.appliedStats) {
           this.$emit('LoadAppliedStats', this.currentBuild.appliedStats);
+          this.$emit('LoadEquipment', this.currentBuild.equipment);
         }
       },
       saveCurrentToDisk(){
