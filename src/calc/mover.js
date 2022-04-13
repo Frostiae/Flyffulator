@@ -449,6 +449,7 @@ export class Mover {
 
         if (skillIndex == null || skillIndex == -1) {   // Auto Attacks
             var damageNormal = this.attack;
+            // TODO: Crit is done AFTER defense on universe
             var damageCrit = this.getCriticalHit(opponent);
 
             if (opponent.levelScales) {

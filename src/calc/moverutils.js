@@ -27,9 +27,11 @@ export default class Moverutils {
         var levelScale = 2.0 / 2.8;
         var statScale = 0.5 / 2.8;
         var level = monsterLevel == 0 ? monster.level : monsterLevel; 
+        var armor = monsterLevel == 0 ? monster.defense : this.trainingDummy.defense * monsterLevel / 100;
 
+        // TODO: Incorporate magic defense for training dummy maybe
         // dwNaturalArmor / 4
-        var equipmentDefense = !magic ? monster.defense / 4 : monster.magicDefense / 4;
+        var equipmentDefense = !magic ? armor / 4 : monster.magicDefense / 4;
         
         var defense = Math.floor(level * levelScale + (monster.sta * statScale + (monster.sta - 14) * 1.0) * staFactor - 4);
         defense += equipmentDefense;
