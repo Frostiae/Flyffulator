@@ -154,9 +154,9 @@ export class Mover {
     }
 
     /**
-     * Get the average critical auto attack hit damage.
+     * Get the average critical hit damage of damageNormal against the specified monster (or a training dummy if null).
      */
-    getCriticalHit(monster=null) {
+    getCriticalHit(monster=null, damageNormal) {
         // CMover::GetHitPower
         var fMin = 1.1;
         var fMax = 1.4;
@@ -167,12 +167,12 @@ export class Mover {
                 fMax = 2.0;
             }
         }
-        const normalHit = this.attack;
+
         const critMinFactor = fMin + this.criticalDamage / 100;
         const critMaxFactor = fMax + this.criticalDamage / 100;
         const critAvgFactor = (critMinFactor + critMaxFactor) / 2;
 
-        return normalHit * critAvgFactor;
+        return damageNormal * critAvgFactor;
     }
 
     getHitrate() {
@@ -449,8 +449,6 @@ export class Mover {
 
         if (skillIndex == null || skillIndex == -1) {   // Auto Attacks
             var damageNormal = this.attack;
-            // TODO: Crit is done AFTER defense on universe
-            var damageCrit = this.getCriticalHit(opponent);
 
             if (opponent.levelScales) {
                 defense = Moverutils.calcMonsterDefense(opponent, false, this.level);
@@ -459,7 +457,7 @@ export class Mover {
             }
 
             damageNormal -= Moverutils.calcDamageDefense(defense, damageNormal);
-            damageCrit -= Moverutils.calcDamageDefense(defense, damageCrit);
+            var damageCrit = this.getCriticalHit(opponent, damageNormal);   // Critical hit is calculated after defense in Flyff Universe
 
             damage = (damageNormal * (1 - this.criticalChance / 100) + damageCrit * (this.criticalChance / 100));
         } else {    // Skills
