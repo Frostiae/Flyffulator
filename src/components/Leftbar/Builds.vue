@@ -19,6 +19,16 @@
           <td><input type="text" v-model="newBuildName" placeholder="build name"></td>
           <td><button class="btn-plus" id="newbuild" @click="newBuild">New</button></td>
         </tr>
+
+        <tr>
+          <td><input type="text" v-model="importCode" placeholder="import code"></td>
+          <td><button class="btn-plus" id="newbuild" @click="importBuild" :disabled="importCode == ''">Import Build</button></td>
+        </tr>
+
+        <tr>
+          <td><input type="text" v-model="exportCode" placeholder="export code" disabled></td>
+          <td><button class="btn-plus" id="newbuild" @click="exportBuild">Generate Code</button></td>
+        </tr>
       </table>
 
       <button class="btn-plus" id="savebuild" @click="saveCurrentBuild">Save</button>
@@ -48,7 +58,9 @@ export default {
           character: this.$root.character.ref,
           currentBuild: null,
           builds: [],
-          newBuildName: ""
+          newBuildName: "",
+          importCode: "",
+          exportCode: ""
       }
   },
   created() { 
@@ -164,6 +176,20 @@ export default {
               this.currentBuild = this.builds[0];
             }
           }
+      },
+      importBuild() {
+        if (this.importCode == "") return;
+        let build = JSON.parse(this.importCode);
+        build.id = Utils.newGuid();
+        build.name += " [Imported]";
+
+        this.builds.push(build);
+        this.currentBuild = build;
+        this.loadBuild();
+        setTimeout(() => this.saveCurrentBuild(), 10);
+      },
+      exportBuild() {
+        this.exportCode = JSON.stringify(this.currentBuild);
       }
   }
 }

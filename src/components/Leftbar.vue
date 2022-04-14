@@ -36,8 +36,8 @@ export default {
       if (this.$refs.equipment) this.$refs.equipment.applyEquip(equipment);
     },
     onNewBuild() {
-      // makes sure the new build gets the active character stats and equips automatically
-      if (this.$refs.character && this.$refs.equipment) {
+      // makes sure the new build gets the active character stats
+      if (this.$refs.character) {
         this.$refs.character.ApplyStats();
       }
     }
@@ -147,6 +147,10 @@ table.stattable {
     border: 1px solid #5975cf31;
     transition: 0.3s;
     margin: 0;
+
+    &:disabled {
+      opacity: 0.5;
+    }
   }
 
   .btn-plus:hover {
