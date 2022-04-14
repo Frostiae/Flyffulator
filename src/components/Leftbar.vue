@@ -1,8 +1,9 @@
 <template>
     <div class="sidepanel">
         <div class="panelcontent">
-            <character/>
-            <equipment/>
+            <builds ref="builds" @LoadAppliedStats="onLoadAppliedStats" @NewBuild="onNewBuild" @LoadEquipment="onLoadEquipment" />
+            <character ref="character" />
+            <equipment ref="equipment" />
             <buffs/>
             <!--<externals/>-->
         </div>
@@ -13,6 +14,7 @@
 import Character from './Leftbar/Character.vue'
 import Equipment from './Leftbar/Equipment.vue'
 import Buffs from './Leftbar/Buffs.vue'
+import Builds from './Leftbar/Builds.vue'
 //import Externals from './Leftbar/External.vue'
 //import Changelog from './Leftbar/Changelog.vue'
 
@@ -22,8 +24,23 @@ export default {
       Character,
       Equipment,
       Buffs,
+      Builds
       //Changelog,
       //Externals
+  },
+  methods: {
+    onLoadAppliedStats(appliedStats) {
+      if (this.$refs.character) this.$refs.character.applyLoadedStats(appliedStats);
+    },
+    onLoadEquipment(equipment) {
+      if (this.$refs.equipment) this.$refs.equipment.applyEquip(equipment);
+    },
+    onNewBuild() {
+      // makes sure the new build gets the active character stats and equips automatically
+      if (this.$refs.character && this.$refs.equipment) {
+        this.$refs.character.ApplyStats();
+      }
+    }
   }
 }
 </script>

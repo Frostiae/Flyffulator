@@ -148,8 +148,9 @@ export default {
       // TODO: Get rid of this function
       return monster.experienceTable[level - 1];
     },
-    updateJob(e) {
-      let c = utils.updateJob(this.character.ref, e.target.value)
+    updateJob() {
+      let c = utils.updateJob(this.character.ref, this.jobName)
+
       if (c) {
         this.character.ref = c
         this.updateCharacter()
@@ -294,7 +295,7 @@ h5 {
   margin: 3px;
 }
 
-ul {
+ul, ol {
   font-size: 13px;
   color: v-bind(hcolor);
   transition: 0.3s;
@@ -448,7 +449,7 @@ input[type=number], input[type=text] {
   -moz-appearance: textfield;
   appearance: textfield;
   background: none;
-  border:none;
+  border: none;
   width: 50px;
   text-align: center;
   color: v-bind(pcolor);

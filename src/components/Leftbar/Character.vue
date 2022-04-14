@@ -1,6 +1,6 @@
 <template>
   <div class="char">
-    <h3>Your character</h3>
+    <h3>Your Character</h3>
 
     <div class="stats">
       <table class="stattable">
@@ -10,7 +10,7 @@
             <td><h5>Class</h5></td>
             <td></td>
             <td>
-              <select name="class" @change="$root.updateJob($event)" id="job" v-model="$root.jobName">
+              <select name="class" @change="$root.updateJob()" id="job" v-model="$root.jobName">
                 <option value="Vagrant">Vagrant</option>
                 <option value="Assist">Assist</option>
                 <option value="Billposter">Billposter</option>
@@ -175,6 +175,29 @@ export default {
       this.character.ref.assistBuffs = this.assistbuffs;
       this.character.ref.selfBuffs = this.classbuffs;
     },
+    applyLoadedStats(appliedStats){      
+      this.character.ref = new Vagrant();
+      this.$root.jobName = appliedStats.jobName;
+      this.$root.updateJob();
+      this.newlevel = appliedStats.newlevel;
+      this.added = appliedStats.addedStr + appliedStats.addedSta + appliedStats.addedDex + appliedStats.addedInt;
+      Utils.addedStr = appliedStats.addedStr;
+      Utils.addedSta = appliedStats.addedSta;
+      Utils.addedDex = appliedStats.addedDex;
+      Utils.addedInt = appliedStats.addedInt;
+      this.character.ref.str = appliedStats.str;
+      this.character.ref.sta = appliedStats.sta;
+      this.character.ref.dex = appliedStats.dex;
+      this.character.ref.int = appliedStats.int;
+      this.assistint = appliedStats.assistint;
+      this.assistbuffs = appliedStats.assistbuffs;
+      this.classbuffs = appliedStats.classbuffs;
+      this.addstr = 0;
+      this.addsta = 0;
+      this.adddex = 0;
+      this.addint = 0;
+      this.ApplyStats();
+    },
     ResetCharacter() {
       this.character.ref = new Vagrant();
       this.$root.jobName = "Vagrant";
@@ -224,6 +247,15 @@ export default {
     },
     addint() {
       this.UpdateStatPoints();
+    },
+    assistint() {
+      Utils.assistInt = this.assistint;
+    },
+    assistbuffs() {
+      Utils.assistBuffs = this.assistbuffs;
+    },
+    classbuffs() {
+      Utils.classBuffs = this.classbuffs;
     }
   }
 }

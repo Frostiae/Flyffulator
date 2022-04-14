@@ -1,6 +1,6 @@
 <template>
   <div class="char">
-    <h3>Equipment</h3>
+    <h3>Your Equipment</h3>
     <div class="stats">
       <table class="stattable">
 
@@ -186,6 +186,24 @@ export default {
         this.offhands = [...this.shields];
         this.offhands = this.offhands.concat(this.weapons);
       }
+    },
+    applyEquip(equipment) {
+      setTimeout(() => {
+        this.character.armor = this.byId(this.armors, equipment.armor);
+        this.character.mainhand = this.byId(this.weapons, equipment.mainhand) || Utils.getItemByName("Wooden Sword");
+        
+        this.character.offhand = this.byId(this.offhands.concat(this.weapons), equipment.offhand);
+        this.character.earringR = this.byId(this.earrings, equipment.earringR);
+        this.character.earringL = this.byId(this.earrings, equipment.earringL);
+        this.character.necklace = this.byId(this.necklaces, equipment.necklace);
+        this.character.ringR = this.byId(this.rings, equipment.ringR);
+        this.character.ringL = this.byId(this.rings, equipment.ringL);
+        this.character.suitPiercing = this.byId(this.piercingCards, equipment.suitPiercing);
+      }, 10);
+    },
+    byId(arr, id) {
+      let obj = arr.find(o => o.id == id);
+      return obj ?? null;
     }
   },
   watch: {

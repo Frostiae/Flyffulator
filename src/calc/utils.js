@@ -22,6 +22,10 @@ export class Utils {
     static addedDex = 0;
     static addedInt = 0;
 
+    static assistInt = 300;
+    static assistBuffs = false;
+    static classBuffs = false;
+
     // These parameters come in different names, so this object describes those. Used in getExtraParam() etc. in mover.js
     static globalParams = {
         "attack": [ // attack appears as
@@ -137,6 +141,12 @@ export class Utils {
         });
 
         return res;
+    }
+    
+    static newGuid() {
+        return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+          (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+        );
     }
 }
 
