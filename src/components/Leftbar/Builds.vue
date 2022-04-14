@@ -2,14 +2,27 @@
   <div class="char">
     <h3>Your Builds</h3>
     <div class="stats">
-        <input type="text" v-model="currentBuild.name" placeholder="build name">
-        <button class="btn-plus" id="newbuild" @click="newBuild">New</button>
-        <button class="btn-plus" id="deletebuild" @click="deleteBuild">Delete</button>
-        <ol>
-          <li v-for="build in builds" :key="build.id" @click="loadBuild(build.id)">
-            <span v-if="build.id === this.currentBuild.id">[ACTIVE] </span>{{ build.name }}
-          </li>
-        </ol>
+      <table class="stattable">
+        <tr>
+          <td><h5>Selected Build</h5></td>
+          <td>
+            <select v-model="currentBuild" id="build-select">
+              <option value="" disabled>Select a build...</option>
+              <option v-for="build in builds" :value="build" :key="build.id">
+                {{ build.name }}
+              </option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td><input type="text" v-model="newBuildName" placeholder="build name"></td>
+          <td><button class="btn-plus" id="newbuild" @click="newBuild">New</button></td>
+        </tr>
+      </table>
+
+      <button class="btn-plus" id="savebuild" @click="saveCurrentBuild">Save</button>
+      <button class="btn-plus" id="deletebuild" @click="deleteBuild">Delete</button>
     </div>
   </div>
 </template>
@@ -32,9 +45,10 @@ export default {
   name: 'Builds',
   data() {
       return {
-          character: this.$root.character,
+          character: this.$root.character.ref,
           currentBuild: null,
-          builds: []
+          builds: [],
+          newBuildName: ""
       }
   },
   created() { 
@@ -48,13 +62,54 @@ export default {
     }
     if(this.builds.length == 0){
       this.newBuild();
-    }else{
+    } else {
       this.currentBuild = this.builds[0]
       setTimeout(() => this.$emit('LoadEquipment', this.currentBuild.equipment), 10);   
       setTimeout(() => this.$emit('LoadAppliedStats', this.currentBuild.appliedStats), 20);         
     }
   },
+  watch: {
+    currentBuild() {
+      if (this.currentBuild != null)
+        this.loadBuild();
+    },
+    '$root.character.ref'() {
+      this.character = this.$root.character.ref;
+    }
+  },
   methods: {
+      saveCurrentBuild() {
+        const newStats = {
+          jobName:  this.$root.jobName,
+          newlevel: this.character.level,
+          str: this.character.str,
+          sta: this.character.sta,
+          dex: this.character.dex,
+          int: this.character.int,
+          addedStr: Utils.addedStr,
+          addedSta: Utils.addedSta,
+          addedDex: Utils.addedDex,
+          addedInt: Utils.addedInt,    
+          assistint: Utils.assistInt,
+          assistbuffs: Utils.assistBuffs,
+          classbuffs: Utils.classBuffs,
+        };
+
+        const newEquipment = {
+          mainhand: this.character.mainhand?.id,
+          armor: this.character.armor?.id,
+          offhand: this.character.offhand?.id,
+          earringR: this.character.earringR?.id,
+          earringL: this.character.earringL?.id,
+          necklace: this.character.necklace?.id,
+          ringR: this.character.ringR?.id,
+          ringL: this.character.ringL?.id,
+          suitPiercing: this.character.suitPiercing?.id,
+        };
+
+        this.saveAppliedStats(newStats);
+        this.saveEquipment(newEquipment);
+      },
       saveAppliedStats(appliedStats) {
         this.currentBuild.appliedStats = appliedStats;
         this.saveCurrentToDisk();
@@ -64,44 +119,48 @@ export default {
         this.saveCurrentToDisk();
       },
       newBuild() {
-        let newNameBase = "New Build";
-        let nameCounter = 0;
-        let newName = newNameBase;
-        while(this.builds.find(b => b.name === newName)){
-          nameCounter++;
-          newName = `${newNameBase} (${nameCounter})`;
+        if (this.newBuildName == "") {
+          this.newBuildName = "New Build";
         }
+
+        let nameCounter = 0;
+        let newName = this.newBuildName;
+
+        while (this.builds.find(b => b.name === newName)) {
+          nameCounter++;
+          newName = `${this.newBuildName} (${nameCounter})`;
+        }
+
         this.currentBuild = new Build(Utils.newGuid(), newName);
         this.builds.push(this.currentBuild);
-        this.saveCurrentToDisk();
+        this.saveCurrentBuild();
         setTimeout(() => this.$emit('NewBuild', {}), 10);
+
+        this.newBuildName = "";
       },
-      loadBuild(id){
-        let build = this.builds.find(b => b.id === id);
-        if(!build){
-          return;
-        }
-        this.currentBuild = build;
+      loadBuild() {
+        if (!this.currentBuild) return;
         
-        if(this.currentBuild.appliedStats) {
+        if (this.currentBuild.appliedStats) {
           this.$emit('LoadAppliedStats', this.currentBuild.appliedStats);
           this.$emit('LoadEquipment', this.currentBuild.equipment);
         }
       },
-      saveCurrentToDisk(){
+      saveCurrentToDisk() {
         localStorage.setItem(`Build_${this.currentBuild.id}`, JSON.stringify(this.currentBuild));
       },
-      deleteBuild(){
-          if(confirm(`Are you sure you want to delete build ${this.currentBuild.name}?`)) {
+      deleteBuild() {
+          if (confirm(`Are you sure you want to delete build ${this.currentBuild.name}?`)) {
             let index = this.builds.indexOf(this.currentBuild);
-            if(index >= 0){
+            
+            if(index >= 0) {
               this.builds.splice(index,1)
             }
-            localStorage.removeItem(`Build_${this.currentBuild.id}`)
 
-            if(this.builds.length == 0) {
+            localStorage.removeItem(`Build_${this.currentBuild.id}`)
+            if (this.builds.length == 0) {
               this.newBuild();
-            }else{
+            } else {
               this.currentBuild = this.builds[0];
             }
           }
@@ -117,26 +176,46 @@ export default {
 
 <style scoped lang='scss'>
 h5 {
-    text-align: center;
+  text-align: center;
 }
 
-button#newbuild, button#deletebuild {
-  margin: 5px 15px 0px 15px;
+tr {
+  button {
+    width: 100%;
+  }
+}
+
+button#deletebuild, button#savebuild {
+  margin: 0 5%;
+  margin-top: 10px;
 }
 
 button {
-    text-align: auto;
-    width: auto;
-    padding: auto;
+  text-align: auto;
+  width: auto;
+  padding: auto;
 }
 
 input[type=text] {
-    width: 86%;
-    margin-left: 7%;
-    text-overflow: ellipsis;
+  width: 100px;
+  border: 1px solid #5975cf31;
+  border-radius: 20px;
+  text-overflow: ellipsis;
+
+  &:hover {
+    border: 1px solid #5975cf;
+  }
 }
 
-li:hover {
-  cursor: pointer;
+select#build-select {
+  color: v-bind('$root.pcolor');
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  text-align: center;
+}
+
+select:disabled {
+  opacity: 0.3;
 }
 </style>

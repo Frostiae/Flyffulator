@@ -1,6 +1,6 @@
 <template>
   <div class="char">
-    <h3>Equipment</h3>
+    <h3>Your Equipment</h3>
     <div class="stats">
       <table class="stattable">
 
@@ -159,8 +159,7 @@ export default {
       piercingCards: [],
       shields: [],
       offhands: [],
-      canUseOffhand: true,
-      isLoading: false
+      canUseOffhand: true
     }
   },
   mounted() {
@@ -188,24 +187,7 @@ export default {
         this.offhands = this.offhands.concat(this.weapons);
       }
     },
-    onEquipChanged(){
-      if(this.isLoading) {
-        return;
-      }
-      this.$emit('CharacterEquipementChanged', {
-         mainhand: this.character.mainhand?.id,
-         armor: this.character.armor?.id,
-         offhand: this.character.offhand?.id,
-         earringR: this.character.earringR?.id,
-         earringL: this.character.earringL?.id,
-         necklace: this.character.necklace?.id,
-         ringR: this.character.ringR?.id,
-         ringL: this.character.ringL?.id,
-         suitPiercing: this.character.suitPiercing?.id,
-      });
-    },
-    applyEquip(equipment){
-      this.isLoading = true;
+    applyEquip(equipment) {
       setTimeout(() => {
         this.character.armor = this.byId(this.armors, equipment.armor);
         this.character.mainhand = this.byId(this.weapons, equipment.mainhand) || Utils.getItemByName("Wooden Sword");
@@ -217,12 +199,9 @@ export default {
         this.character.ringR = this.byId(this.rings, equipment.ringR);
         this.character.ringL = this.byId(this.rings, equipment.ringL);
         this.character.suitPiercing = this.byId(this.piercingCards, equipment.suitPiercing);
-        setTimeout(() => {
-          this.isLoading = false;
-        }, 10);
       }, 10);
     },
-    byId(arr, id){
+    byId(arr, id) {
       let obj = arr.find(o => o.id == id);
       return obj ?? null;
     }
@@ -231,7 +210,6 @@ export default {
     '$root.character.ref'() {
       this.character = this.$root.character.ref;
       this.updateEquipment();
-      this.onEquipChanged();
     },
     '$root.character.ref.mainhand'() {
       if (this.character.mainhand.twoHanded) {
@@ -240,31 +218,6 @@ export default {
       } else {
         this.canUseOffhand = true;
       }
-      this.onEquipChanged();
-    },
-    '$root.character.ref.armor'(){
-      this.onEquipChanged();
-    },
-    '$root.character.ref.offhand'(){
-      this.onEquipChanged();
-    },
-    '$root.character.ref.earringR'(){
-      this.onEquipChanged();
-    },
-    '$root.character.ref.earringL'(){
-      this.onEquipChanged();
-    },
-    '$root.character.ref.necklace'(){
-      this.onEquipChanged();
-    },
-    '$root.character.ref.ringR'(){
-      this.onEquipChanged();
-    },
-    '$root.character.ref.ringL'(){
-      this.onEquipChanged();
-    },
-    '$root.character.ref.suitPiercing'(){
-      this.onEquipChanged();
     }
   }
 }

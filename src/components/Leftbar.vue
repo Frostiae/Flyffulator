@@ -1,9 +1,9 @@
 <template>
     <div class="sidepanel">
         <div class="panelcontent">
-            <builds ref="builds" @LoadAppliedStats="onLoadAppliedStats" @NewBuild="onNewBuild" @LoadEquipment="onLoadEquipment"/>
-            <character ref="character" @CharacterStatsApplied="onCharacterStatsApplied"/>
-            <equipment ref="equipment" @CharacterEquipementChanged="onCharacterEquipementChanged"/>
+            <builds ref="builds" @LoadAppliedStats="onLoadAppliedStats" @NewBuild="onNewBuild" @LoadEquipment="onLoadEquipment" />
+            <character ref="character" />
+            <equipment ref="equipment" />
             <buffs/>
             <!--<externals/>-->
         </div>
@@ -29,30 +29,17 @@ export default {
       //Externals
   },
   methods: {
-    onCharacterStatsApplied(appliedStats){
-      console.log("Saving stats...")
-      console.log(appliedStats);
-      this.$refs.builds.saveAppliedStats(appliedStats);
+    onLoadAppliedStats(appliedStats) {
+      if (this.$refs.character) this.$refs.character.applyLoadedStats(appliedStats);
     },
-    onCharacterEquipementChanged(equipment){
-      console.log("Saving equips...")
-      console.log(equipment);
-      this.$refs.builds.saveEquipment(equipment);
+    onLoadEquipment(equipment) {
+      if (this.$refs.equipment) this.$refs.equipment.applyEquip(equipment);
     },
-    onLoadAppliedStats(appliedStats){
-      console.log("Loading stats...");
-      console.log(appliedStats);
-      this.$refs.character.applyLoadedStats(appliedStats);
-    },
-    onLoadEquipment(equipment){
-      console.log("Loading equipment...");
-      console.log(equipment);
-      this.$refs.equipment.applyEquip(equipment);
-    },
-    onNewBuild(){
+    onNewBuild() {
       // makes sure the new build gets the active character stats and equips automatically
-      this.$refs.character.ApplyStats();
-      this.$refs.equipment.onEquipChanged();
+      if (this.$refs.character && this.$refs.equipment) {
+        this.$refs.character.ApplyStats();
+      }
     }
   }
 }

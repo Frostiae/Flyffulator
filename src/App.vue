@@ -156,8 +156,9 @@ export default {
         }
       }
     },
-    updateJob(e) {
-      let c = utils.updateJob(this.character.ref, e.target.value)
+    updateJob() {
+      let c = utils.updateJob(this.character.ref, this.jobName)
+
       if (c) {
         this.character.ref = c
         this.updateCharacter()
@@ -456,7 +457,7 @@ input[type=number], input[type=text] {
   -moz-appearance: textfield;
   appearance: textfield;
   background: none;
-  border:none;
+  border: none;
   width: 50px;
   text-align: center;
   color: v-bind(pcolor);

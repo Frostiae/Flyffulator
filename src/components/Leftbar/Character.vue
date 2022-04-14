@@ -1,6 +1,6 @@
 <template>
   <div class="char">
-    <h3>Your character</h3>
+    <h3>Your Character</h3>
 
     <div class="stats">
       <table class="stattable">
@@ -10,7 +10,7 @@
             <td><h5>Class</h5></td>
             <td></td>
             <td>
-              <select name="class" @change="$root.updateJob($event)" id="job" v-model="$root.jobName">
+              <select name="class" @change="$root.updateJob()" id="job" v-model="$root.jobName">
                 <option value="Vagrant">Vagrant</option>
                 <option value="Assist">Assist</option>
                 <option value="Billposter">Billposter</option>
@@ -166,31 +166,13 @@ export default {
       this.character.ref.assistInt = this.assistint;
       this.character.ref.assistBuffs = this.assistbuffs;
       this.character.ref.selfBuffs = this.classbuffs;
-
-      this.$emit('CharacterStatsApplied', {
-        jobName:  this.$root.jobName,
-        newlevel: this.newlevel,
-        added: this.added,
-        str: this.character.ref.str,
-        sta: this.character.ref.sta,
-        dex: this.character.ref.dex,
-        int: this.character.ref.int,
-        addedStr: Utils.addedStr,
-        addedSta: Utils.addedSta,
-        addedDex: Utils.addedDex,
-        addedInt: Utils.addedInt,    
-        statpoints: this.statpoints,
-        totalstatpoints: this.totalstatpoints,
-        assistint: this.assistint,
-        assistbuffs: this.assistbuffs,
-        classbuffs: this.classbuffs,
-      });
     },
     applyLoadedStats(appliedStats){      
       this.character.ref = new Vagrant();
       this.$root.jobName = appliedStats.jobName;
+      this.$root.updateJob();
       this.newlevel = appliedStats.newlevel;
-      this.added = appliedStats.added;
+      this.added = appliedStats.addedStr + appliedStats.addedSta + appliedStats.addedDex + appliedStats.addedInt;
       Utils.addedStr = appliedStats.addedStr;
       Utils.addedSta = appliedStats.addedSta;
       Utils.addedDex = appliedStats.addedDex;
@@ -199,8 +181,6 @@ export default {
       this.character.ref.sta = appliedStats.sta;
       this.character.ref.dex = appliedStats.dex;
       this.character.ref.int = appliedStats.int;
-      this.statpoints = appliedStats.statpoints;
-      this.totalstatpoints = appliedStats.totalstatpoints;
       this.assistint = appliedStats.assistint;
       this.assistbuffs = appliedStats.assistbuffs;
       this.classbuffs = appliedStats.classbuffs;
@@ -259,6 +239,15 @@ export default {
     },
     addint() {
       this.UpdateStatPoints();
+    },
+    assistint() {
+      Utils.assistInt = this.assistint;
+    },
+    assistbuffs() {
+      Utils.assistBuffs = this.assistbuffs;
+    },
+    classbuffs() {
+      Utils.classBuffs = this.classbuffs;
     }
   }
 }
