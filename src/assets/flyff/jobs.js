@@ -24,7 +24,7 @@ export const jobsjson = [
       "icon": "mercenary.png",
       "minLevel": 15,
       "maxLevel": 60,
-      "maxHP": "80+sta*10.0+level*(level+1)*0.1875+level*(level+1)*sta*0.00375",
+      "maxHP": "150+level*30+sta*level*0.3",
       "maxFP": "level*1.4+sta*4.9",
       "maxMP": "22+level*1+int*4.5"
    },
@@ -52,7 +52,7 @@ export const jobsjson = [
       "icon": "blade.png",
       "minLevel": 60,
       "maxLevel": 120,
-      "maxHP": "80+sta*10.0+level*(level+1)*0.1875+level*(level+1)*sta*0.00375",
+      "maxHP": "150+level*30+sta*level*0.3",
       "maxFP": "level*2.4+sta*8.400001",
       "maxMP": "22+level*1.2+int*5.4"
    },
@@ -80,7 +80,7 @@ export const jobsjson = [
       "icon": "jester.png",
       "minLevel": 60,
       "maxLevel": 120,
-      "maxHP": "80+sta*10.0+level*(level+1)*0.1875+level*(level+1)*sta*0.00375",
+      "maxHP": "150+level*30+sta*level*0.3",
       "maxFP": "level*2+sta*7",
       "maxMP": "22+level*1+int*4.5"
    },
@@ -108,7 +108,7 @@ export const jobsjson = [
       "icon": "knight.png",
       "minLevel": 60,
       "maxLevel": 120,
-      "maxHP": "80+sta*10.0+level*(level+1)*0.25+level*(level+1)*sta*0.005",
+      "maxHP": "150+level*40+sta*level*0.4",
       "maxFP": "level*3+sta*10.5",
       "maxMP": "22+level*1.2+int*5.4"
    },
@@ -136,7 +136,7 @@ export const jobsjson = [
       "icon": "psychikeeper.png",
       "minLevel": 60,
       "maxLevel": 120,
-      "maxHP": "80+sta*10.0+level*(level+1)*0.1875+level*(level+1)*sta*0.00375",
+      "maxHP": "150+level*30+sta*level*0.3",
       "maxFP": "level*0.8+sta*2.8",
       "maxMP": "22+level*4+int*18"
    },
@@ -164,7 +164,7 @@ export const jobsjson = [
       "icon": "billposter.png",
       "minLevel": 60,
       "maxLevel": 120,
-      "maxHP": "80+sta*10.0+level*(level+1)*0.225+level*(level+1)*sta*0.0045",
+      "maxHP": "150+level*36+sta*level*0.36",
       "maxFP": "level*2.2+sta*7.7",
       "maxMP": "22+level*1.8+int*8.1"
    },
@@ -192,7 +192,7 @@ export const jobsjson = [
       "icon": "assist.png",
       "minLevel": 15,
       "maxLevel": 60,
-      "maxHP": "80+sta*10.0+level*(level+1)*0.175+level*(level+1)*sta*0.0035",
+      "maxHP": "150+level*28+sta*level*0.28",
       "maxFP": "level*1.2+sta*4.2",
       "maxMP": "22+level*2.6+int*11.7"
    },
@@ -220,7 +220,7 @@ export const jobsjson = [
       "icon": "acrobat.png",
       "minLevel": 15,
       "maxLevel": 60,
-      "maxHP": "80+sta*10.0+level*(level+1)*0.175+level*(level+1)*sta*0.0035",
+      "maxHP": "150+level*28+sta*level*0.28",
       "maxFP": "level*1+sta*3.5",
       "maxMP": "22+level*1+int*4.5"
    },
@@ -248,7 +248,7 @@ export const jobsjson = [
       "icon": "elementor.png",
       "minLevel": 60,
       "maxLevel": 120,
-      "maxHP": "80+sta*10.0+level*(level+1)*0.1875+level*(level+1)*sta*0.00375",
+      "maxHP": "150+level*30+sta*level*0.3",
       "maxFP": "level*0.8+sta*2.8",
       "maxMP": "22+level*4+int*18"
    },
@@ -276,7 +276,7 @@ export const jobsjson = [
       "icon": "ranger.png",
       "minLevel": 60,
       "maxLevel": 120,
-      "maxHP": "80+sta*10.0+level*(level+1)*0.2+level*(level+1)*sta*0.004",
+      "maxHP": "150+level*32+sta*level*0.32",
       "maxFP": "level*1.2+sta*4.2",
       "maxMP": "22+level*2.4+int*10.8"
    },
@@ -304,7 +304,7 @@ export const jobsjson = [
       "icon": "ringmaster.png",
       "minLevel": 60,
       "maxLevel": 120,
-      "maxHP": "80+sta*10.0+level*(level+1)*0.2+level*(level+1)*sta*0.004",
+      "maxHP": "150+level*32+sta*level*0.32",
       "maxFP": "level*0.8+sta*2.8",
       "maxMP": "22+level*3.6+int*16.2"
    },
@@ -332,7 +332,7 @@ export const jobsjson = [
       "icon": "magician.png",
       "minLevel": 15,
       "maxLevel": 60,
-      "maxHP": "80+sta*10.0+level*(level+1)*0.175+level*(level+1)*sta*0.0035",
+      "maxHP": "150+level*28+sta*level*0.28",
       "maxFP": "level*0.6+sta*2.1",
       "maxMP": "22+level*3.4+int*15.3"
    },
@@ -359,7 +359,7 @@ export const jobsjson = [
       "icon": "vagrant.png",
       "minLevel": 1,
       "maxLevel": 15,
-      "maxHP": "80+sta*10.0+level*(level+1)*0.1125+level*(level+1)*sta*0.00225",
+      "maxHP": "150+level*18+sta*level*0.18",
       "maxFP": "level*0.6+sta*2.1",
       "maxMP": "22+level*0.6+int*2.7"
    }

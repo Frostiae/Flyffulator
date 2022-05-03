@@ -72,7 +72,7 @@ export const skillsjson = [
                {
                   "parameter": "duration",
                   "stat": "int",
-                  "scale": 0.05,
+                  "scale": 0.03,
                   "pvp": true,
                   "pve": true
                }
@@ -95,7 +95,7 @@ export const skillsjson = [
                {
                   "parameter": "duration",
                   "stat": "int",
-                  "scale": 0.05,
+                  "scale": 0.03,
                   "pvp": true,
                   "pve": true
                }
@@ -118,7 +118,7 @@ export const skillsjson = [
                {
                   "parameter": "duration",
                   "stat": "int",
-                  "scale": 0.05,
+                  "scale": 0.03,
                   "pvp": true,
                   "pve": true
                }
@@ -141,7 +141,7 @@ export const skillsjson = [
                {
                   "parameter": "duration",
                   "stat": "int",
-                  "scale": 0.05,
+                  "scale": 0.03,
                   "pvp": true,
                   "pve": true
                }
@@ -164,7 +164,7 @@ export const skillsjson = [
                {
                   "parameter": "duration",
                   "stat": "int",
-                  "scale": 0.05,
+                  "scale": 0.03,
                   "pvp": true,
                   "pve": true
                }
@@ -187,7 +187,7 @@ export const skillsjson = [
                {
                   "parameter": "duration",
                   "stat": "int",
-                  "scale": 0.05,
+                  "scale": 0.03,
                   "pvp": true,
                   "pve": true
                }
@@ -210,7 +210,7 @@ export const skillsjson = [
                {
                   "parameter": "duration",
                   "stat": "int",
-                  "scale": 0.05,
+                  "scale": 0.03,
                   "pvp": true,
                   "pve": true
                }
@@ -233,7 +233,7 @@ export const skillsjson = [
                {
                   "parameter": "duration",
                   "stat": "int",
-                  "scale": 0.05,
+                  "scale": 0.03,
                   "pvp": true,
                   "pve": true
                }
@@ -256,7 +256,7 @@ export const skillsjson = [
                {
                   "parameter": "duration",
                   "stat": "int",
-                  "scale": 0.05,
+                  "scale": 0.03,
                   "pvp": true,
                   "pve": true
                }
@@ -279,7 +279,7 @@ export const skillsjson = [
                {
                   "parameter": "duration",
                   "stat": "int",
-                  "scale": 0.05,
+                  "scale": 0.03,
                   "pvp": true,
                   "pve": true
                }
@@ -298,7 +298,7 @@ export const skillsjson = [
          "fi": "Sonic Blade",
          "fil": "Sonic Blade",
          "fr": "D\u00e9charge sonique",
-         "it": "Sonic Blade",
+         "it": "Onda sonica",
          "kr": "\uc18c\ub2c9 \ube14\ub808\uc774\ub4dc",
          "nl": "Sonic Blade",
          "pl": "Soniczne Ostrze",
@@ -307,21 +307,21 @@ export const skillsjson = [
          "th": "Sonic Blade"
       },
       "description": {
-         "en": "Powerful, slashing attack. Requires two Weapons.",
-         "ar": "Powerful, slashing attack. Requires two Weapons.",
-         "br": "Um golpe potente e cortante. Exige duas armas.",
-         "cns": "\u5c06\u6240\u6709\u7684\u6c14\u96c6\u4e2d\u5728\u6b66\u5668\u4e0a\uff0c\u653b\u51fb\u5904\u4e8e\u540c\u4e00\u76f4\u7ebf\u4e0a\u7684\u654c\u4eba\u3002",
-         "de": "Ein Hieb gegen den Gegner mit der Waffe, geladen mit Geisteskraft.",
-         "fi": "Voimakas, viilt\u00e4v\u00e4 isku. Vaatii kaksi Asetta.",
-         "fil": "Powerful, slashing attack. Requires two Weapons.",
-         "fr": "Concentre l'\u00e9nergie de l'Assassin pour d\u00e9livrer un coup d\u00e9vastateur aux ennemis situ\u00e9s devant lui",
-         "it": "Powerful, slashing attack. Requires two Weapons.",
-         "kr": "\ubb34\uae30\uc5d0 \uae30\ub97c \ubaa8\uc544 \ubc29\ucd9c\ud558\uc5ec \uc804\ubc29\uc758 \uc801\ub4e4\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
-         "nl": "Powerful, slashing attack. Requires two Weapons.",
-         "pl": "Pot\u0119\u017cne ci\u0119cie, przebijaj\u0105ce wszystkich wrog\u00f3w zebranych przed tob\u0105. Wymaga dw\u00f3ch broni.",
-         "ru": "\u0421\u0438\u043b\u044c\u043d\u044b\u0439 \u0440\u0435\u0436\u0443\u0449\u0438\u0439 \u0443\u0434\u0430\u0440. \u0414\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0440\u0435\u0431\u0443\u044e\u0442\u0441\u044f \u0434\u0432\u0430 \u043a\u043b\u0438\u043d\u043a\u0430.",
-         "sw": "Powerful, slashing attack. Requires two Weapons.",
-         "th": "Powerful, slashing attack. Requires two Weapons."
+         "en": "Powerful, slashing attack. Attacks all enemies around. Requires two weapons.",
+         "ar": "Powerful, slashing attack. Attacks all enemies around. Requires two weapons.",
+         "br": "Powerful, slashing attack. Attacks all enemies around. Requires two weapons.",
+         "cns": "Powerful, slashing attack. Attacks all enemies around. Requires two weapons.",
+         "de": "Powerful, slashing attack. Attacks all enemies around. Requires two weapons.",
+         "fi": "Powerful, slashing attack. Attacks all enemies around. Requires two weapons.",
+         "fil": "Powerful, slashing attack. Attacks all enemies around. Requires two weapons.",
+         "fr": "Powerful, slashing attack. Attacks all enemies around. Requires two weapons.",
+         "it": "Powerful, slashing attack. Attacks all enemies around. Requires two weapons.",
+         "kr": "Powerful, slashing attack. Attacks all enemies around. Requires two weapons.",
+         "nl": "Powerful, slashing attack. Attacks all enemies around. Requires two weapons.",
+         "pl": "Powerful, slashing attack. Attacks all enemies around. Requires two weapons.",
+         "ru": "Powerful, slashing attack. Attacks all enemies around. Requires two weapons.",
+         "sw": "Powerful, slashing attack. Attacks all enemies around. Requires two weapons.",
+         "th": "Powerful, slashing attack. Attacks all enemies around. Requires two weapons."
       },
       "icon": "blddblsonbld.png",
       "class": 2246,
@@ -338,7 +338,7 @@ export const skillsjson = [
       "debuff": true,
       "flying": true,
       "passive": false,
-      "target": "line",
+      "target": "area",
       "skillPoints": 3,
       "levels": [
          {
@@ -350,8 +350,15 @@ export const skillsjson = [
             "scalingParameters": [
                {
                   "parameter": "attack",
+                  "stat": "str",
+                  "scale": 6.02,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.02,
+                  "scale": 1.52,
                   "pvp": true,
                   "pve": true
                }
@@ -366,8 +373,15 @@ export const skillsjson = [
             "scalingParameters": [
                {
                   "parameter": "attack",
+                  "stat": "str",
+                  "scale": 6.04,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.04,
+                  "scale": 1.54,
                   "pvp": true,
                   "pve": true
                }
@@ -382,8 +396,15 @@ export const skillsjson = [
             "scalingParameters": [
                {
                   "parameter": "attack",
+                  "stat": "str",
+                  "scale": 6.06,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.06,
+                  "scale": 1.56,
                   "pvp": true,
                   "pve": true
                }
@@ -398,8 +419,15 @@ export const skillsjson = [
             "scalingParameters": [
                {
                   "parameter": "attack",
+                  "stat": "str",
+                  "scale": 6.08,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.08,
+                  "scale": 1.58,
                   "pvp": true,
                   "pve": true
                }
@@ -414,8 +442,15 @@ export const skillsjson = [
             "scalingParameters": [
                {
                   "parameter": "attack",
+                  "stat": "str",
+                  "scale": 6.1,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.1,
+                  "scale": 1.6,
                   "pvp": true,
                   "pve": true
                }
@@ -430,8 +465,15 @@ export const skillsjson = [
             "scalingParameters": [
                {
                   "parameter": "attack",
+                  "stat": "str",
+                  "scale": 6.12,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.12,
+                  "scale": 1.62,
                   "pvp": true,
                   "pve": true
                }
@@ -446,8 +488,15 @@ export const skillsjson = [
             "scalingParameters": [
                {
                   "parameter": "attack",
+                  "stat": "str",
+                  "scale": 6.14,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.14,
+                  "scale": 1.64,
                   "pvp": true,
                   "pve": true
                }
@@ -462,8 +511,15 @@ export const skillsjson = [
             "scalingParameters": [
                {
                   "parameter": "attack",
+                  "stat": "str",
+                  "scale": 6.16,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.16,
+                  "scale": 1.66,
                   "pvp": true,
                   "pve": true
                }
@@ -478,8 +534,15 @@ export const skillsjson = [
             "scalingParameters": [
                {
                   "parameter": "attack",
+                  "stat": "str",
+                  "scale": 6.18,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.18,
+                  "scale": 1.68,
                   "pvp": true,
                   "pve": true
                }
@@ -494,8 +557,15 @@ export const skillsjson = [
             "scalingParameters": [
                {
                   "parameter": "attack",
+                  "stat": "str",
+                  "scale": 6.2,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.2,
+                  "scale": 1.7,
                   "pvp": true,
                   "pve": true
                }
@@ -541,7 +611,7 @@ export const skillsjson = [
       },
       "icon": "acryoydeadly.png",
       "class": 9098,
-      "level": 50,
+      "level": 40,
       "element": "none",
       "magic": false,
       "requirements": [
@@ -577,7 +647,12 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -5.5,
+                  "add": -2,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -5,
                   "rate": true
                }
             ],
@@ -610,7 +685,12 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -5.55,
+                  "add": -2,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -6,
                   "rate": true
                }
             ],
@@ -643,7 +723,12 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -5.6,
+                  "add": -2,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -6,
                   "rate": true
                }
             ],
@@ -676,7 +761,12 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -5.65,
+                  "add": -2,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -7,
                   "rate": true
                }
             ],
@@ -709,7 +799,12 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -5.7,
+                  "add": -2.5,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -7,
                   "rate": true
                }
             ],
@@ -742,7 +837,12 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -5.75,
+                  "add": -3,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -8,
                   "rate": true
                }
             ],
@@ -775,7 +875,12 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -5.85,
+                  "add": -3.5,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -8,
                   "rate": true
                }
             ],
@@ -808,7 +913,12 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -6,
+                  "add": -4,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -9,
                   "rate": true
                }
             ],
@@ -841,7 +951,12 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -6.1,
+                  "add": -4.5,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -9,
                   "rate": true
                }
             ],
@@ -874,7 +989,12 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -6.25,
+                  "add": -5,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -10,
                   "rate": true
                }
             ],
@@ -907,7 +1027,12 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -6.35,
+                  "add": -5.5,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -10,
                   "rate": true
                }
             ],
@@ -940,7 +1065,12 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -6.5,
+                  "add": -6,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -11,
                   "rate": true
                }
             ],
@@ -973,7 +1103,12 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -6.6,
+                  "add": -6.5,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -11,
                   "rate": true
                }
             ],
@@ -1006,7 +1141,12 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -6.75,
+                  "add": -7,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -12,
                   "rate": true
                }
             ],
@@ -1039,7 +1179,12 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -7,
+                  "add": -7.5,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -12,
                   "rate": true
                }
             ],
@@ -1068,11 +1213,16 @@ export const skillsjson = [
                   "parameter": "attribute",
                   "attribute": "bleeding",
                   "dotMode": "standardattack",
-                  "dotValue": 12
+                  "dotValue": 13
                },
                {
                   "parameter": "attackspeed",
-                  "add": -7.5,
+                  "add": -8,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -13,
                   "rate": true
                }
             ],
@@ -1101,11 +1251,16 @@ export const skillsjson = [
                   "parameter": "attribute",
                   "attribute": "bleeding",
                   "dotMode": "standardattack",
-                  "dotValue": 12
+                  "dotValue": 13
                },
                {
                   "parameter": "attackspeed",
-                  "add": -8,
+                  "add": -8.5,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -13,
                   "rate": true
                }
             ],
@@ -1134,11 +1289,16 @@ export const skillsjson = [
                   "parameter": "attribute",
                   "attribute": "bleeding",
                   "dotMode": "standardattack",
-                  "dotValue": 12
+                  "dotValue": 14
                },
                {
                   "parameter": "attackspeed",
-                  "add": -8.5,
+                  "add": -9,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -14,
                   "rate": true
                }
             ],
@@ -1167,11 +1327,16 @@ export const skillsjson = [
                   "parameter": "attribute",
                   "attribute": "bleeding",
                   "dotMode": "standardattack",
-                  "dotValue": 12
+                  "dotValue": 14
                },
                {
                   "parameter": "attackspeed",
-                  "add": -9,
+                  "add": -9.5,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -14,
                   "rate": true
                }
             ],
@@ -1189,8 +1354,6 @@ export const skillsjson = [
             "minAttack": 70,
             "maxAttack": 71,
             "dotTick": 1.5,
-            "probability": 95,
-            "probabilityPVP": 95,
             "consumedFP": 80,
             "cooldown": 3,
             "duration": 15,
@@ -1200,11 +1363,16 @@ export const skillsjson = [
                   "parameter": "attribute",
                   "attribute": "bleeding",
                   "dotMode": "standardattack",
-                  "dotValue": 13
+                  "dotValue": 15
                },
                {
                   "parameter": "attackspeed",
-                  "add": -9.5,
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
                   "rate": true
                }
             ],
@@ -1258,7 +1426,7 @@ export const skillsjson = [
       },
       "icon": "meronekeenwh.png",
       "class": 764,
-      "level": 18,
+      "level": 15,
       "element": "none",
       "magic": false,
       "requirements": [
@@ -1275,9 +1443,10 @@ export const skillsjson = [
       "skillPoints": 2,
       "levels": [
          {
+            "damageMultiplier": 0.8,
             "minAttack": 4,
             "maxAttack": 5,
-            "consumedFP": 25,
+            "consumedFP": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -1289,9 +1458,10 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.8,
             "minAttack": 2,
             "maxAttack": 3,
-            "consumedFP": 25,
+            "consumedFP": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -1303,9 +1473,10 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.8,
             "minAttack": 3,
             "maxAttack": 4,
-            "consumedFP": 26,
+            "consumedFP": 16,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -1317,9 +1488,10 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.8,
             "minAttack": 3,
             "maxAttack": 4,
-            "consumedFP": 26,
+            "consumedFP": 16,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -1331,9 +1503,10 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.8,
             "minAttack": 3,
             "maxAttack": 4,
-            "consumedFP": 30,
+            "consumedFP": 20,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -1345,9 +1518,10 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.8,
             "minAttack": 3,
             "maxAttack": 4,
-            "consumedFP": 30,
+            "consumedFP": 20,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -1359,9 +1533,10 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.8,
             "minAttack": 4,
             "maxAttack": 5,
-            "consumedFP": 33,
+            "consumedFP": 23,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -1373,9 +1548,10 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.8,
             "minAttack": 4,
             "maxAttack": 5,
-            "consumedFP": 33,
+            "consumedFP": 23,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -1387,9 +1563,10 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.8,
             "minAttack": 4,
             "maxAttack": 5,
-            "consumedFP": 37,
+            "consumedFP": 27,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -1401,9 +1578,10 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.8,
             "minAttack": 4,
             "maxAttack": 5,
-            "consumedFP": 37,
+            "consumedFP": 27,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -1415,9 +1593,10 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.8,
             "minAttack": 5,
             "maxAttack": 6,
-            "consumedFP": 41,
+            "consumedFP": 31,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -1429,9 +1608,10 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.8,
             "minAttack": 5,
             "maxAttack": 6,
-            "consumedFP": 41,
+            "consumedFP": 31,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -1443,9 +1623,10 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.8,
             "minAttack": 5,
             "maxAttack": 6,
-            "consumedFP": 45,
+            "consumedFP": 35,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -1457,9 +1638,10 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.8,
             "minAttack": 5,
             "maxAttack": 6,
-            "consumedFP": 45,
+            "consumedFP": 35,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -1471,9 +1653,10 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.8,
             "minAttack": 5,
             "maxAttack": 6,
-            "consumedFP": 49,
+            "consumedFP": 39,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -1485,9 +1668,10 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.8,
             "minAttack": 5,
             "maxAttack": 6,
-            "consumedFP": 49,
+            "consumedFP": 39,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -1499,9 +1683,10 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.8,
             "minAttack": 5,
             "maxAttack": 6,
-            "consumedFP": 54,
+            "consumedFP": 44,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -1513,9 +1698,10 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.8,
             "minAttack": 5,
             "maxAttack": 6,
-            "consumedFP": 54,
+            "consumedFP": 44,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -1527,9 +1713,10 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 5,
-            "maxAttack": 6,
-            "consumedFP": 60,
+            "damageMultiplier": 0.8,
+            "minAttack": 6,
+            "maxAttack": 7,
+            "consumedFP": 40,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -1541,9 +1728,10 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 6,
-            "maxAttack": 7,
-            "consumedFP": 60,
+            "damageMultiplier": 0.8,
+            "minAttack": 7,
+            "maxAttack": 8,
+            "consumedFP": 45,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -1618,7 +1806,7 @@ export const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 1,
                   "rate": true
                }
@@ -1631,7 +1819,7 @@ export const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 2,
                   "rate": true
                }
@@ -1644,7 +1832,7 @@ export const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 3,
                   "rate": true
                }
@@ -1657,7 +1845,7 @@ export const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 4,
                   "rate": true
                }
@@ -1670,7 +1858,7 @@ export const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 5,
                   "rate": true
                }
@@ -1683,7 +1871,7 @@ export const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 6,
                   "rate": true
                }
@@ -1696,7 +1884,7 @@ export const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 7,
                   "rate": true
                }
@@ -1709,7 +1897,7 @@ export const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 8,
                   "rate": true
                }
@@ -1722,7 +1910,7 @@ export const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 9,
                   "rate": true
                }
@@ -1735,7 +1923,7 @@ export const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 10,
                   "rate": true
                }
@@ -1748,7 +1936,7 @@ export const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 11,
                   "rate": true
                }
@@ -1761,7 +1949,7 @@ export const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 12,
                   "rate": true
                }
@@ -1774,7 +1962,7 @@ export const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 13,
                   "rate": true
                }
@@ -1787,7 +1975,7 @@ export const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 14,
                   "rate": true
                }
@@ -1800,7 +1988,7 @@ export const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 15,
                   "rate": true
                }
@@ -1813,7 +2001,7 @@ export const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 16,
                   "rate": true
                }
@@ -1826,7 +2014,7 @@ export const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 17,
                   "rate": true
                }
@@ -1839,7 +2027,7 @@ export const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 18,
                   "rate": true
                }
@@ -1852,7 +2040,7 @@ export const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 19,
                   "rate": true
                }
@@ -1865,7 +2053,7 @@ export const skillsjson = [
             "durationPVP": 300,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 20,
                   "rate": true
                }
@@ -2230,25 +2418,25 @@ export const skillsjson = [
          "th": "Wind Cutter"
       },
       "description": {
-         "en": "Ranged, wind attack.",
-         "ar": "Ranged, wind attack.",
+         "en": "Ranged, wind attack. Chance to reduce the attack speed & casting time of the target.",
+         "ar": "Ranged, wind attack. Chance to reduce the attack speed & casting time of the target.",
          "br": "Ataque de vento a distancia.",
          "cns": "\u7528\u950b\u5229\u7684\u98ce\u5203\u523a\u70c8\u5bf9\u65b9\u7684\u8eab\u4f53\u3002",
          "de": "Den Gegner durch starken Wind, so scharf wie ein Messer, Schaden zuf\u00fcgen.",
          "fi": "Et\u00e4 tuulihy\u00f6kk\u00e4ys.",
-         "fil": "Ranged, wind attack.",
+         "fil": "Ranged, wind attack. Chance to reduce the attack speed & casting time of the target.",
          "fr": "Propulse une lame de vent sur l'ennemi, s'apparentant \u00e0 un violent coup d'\u00e9p\u00e9e",
-         "it": "Ranged, wind attack.",
+         "it": "Ranged, wind attack. Chance to reduce the attack speed & casting time of the target.",
          "kr": "\uce7c\ub0a0\ucc98\ub7fc \ub0a0\uce74\ub85c\uc6b4 \ubc14\ub78c\uc744 \ub0a0\ub824 \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
-         "nl": "Ranged, wind attack.",
+         "nl": "Ranged, wind attack. Chance to reduce the attack speed & casting time of the target.",
          "pl": "Tnie przeciwnika silnym wiatrem.",
          "ru": "\u0410\u0442\u0430\u043a\u0430 \u0434\u0430\u043b\u044c\u043d\u0435\u0433\u043e \u0431\u043e\u044f. \u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0443\u0440\u043e\u043d \u0432\u0435\u0442\u0440\u043e\u043c.",
-         "sw": "Ranged, wind attack.",
-         "th": "Ranged, wind attack."
+         "sw": "Ranged, wind attack. Chance to reduce the attack speed & casting time of the target.",
+         "th": "Ranged, wind attack. Chance to reduce the attack speed & casting time of the target."
       },
       "icon": "magwindcutter.png",
       "class": 9581,
-      "level": 30,
+      "level": 40,
       "element": "wind",
       "magic": true,
       "requirements": [
@@ -2268,7 +2456,6 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "dotTick": 1,
             "consumedMP": 40,
             "casting": 1,
             "duration": 15,
@@ -2277,7 +2464,7 @@ export const skillsjson = [
                {
                   "parameter": "firedefense",
                   "add": -6,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -2294,7 +2481,6 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "dotTick": 1,
             "consumedMP": 40,
             "casting": 1,
             "duration": 15,
@@ -2303,7 +2489,7 @@ export const skillsjson = [
                {
                   "parameter": "firedefense",
                   "add": -7,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -2320,7 +2506,6 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "dotTick": 1,
             "consumedMP": 42,
             "casting": 1,
             "duration": 15,
@@ -2329,7 +2514,7 @@ export const skillsjson = [
                {
                   "parameter": "firedefense",
                   "add": -8,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -2346,7 +2531,6 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "dotTick": 1,
             "consumedMP": 42,
             "casting": 1,
             "duration": 15,
@@ -2355,7 +2539,7 @@ export const skillsjson = [
                {
                   "parameter": "firedefense",
                   "add": -9,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -2372,7 +2556,6 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "dotTick": 1,
             "consumedMP": 44,
             "casting": 1,
             "duration": 15,
@@ -2381,7 +2564,7 @@ export const skillsjson = [
                {
                   "parameter": "firedefense",
                   "add": -10,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -2398,7 +2581,6 @@ export const skillsjson = [
          {
             "minAttack": 55,
             "maxAttack": 56,
-            "dotTick": 1,
             "consumedMP": 44,
             "casting": 1,
             "duration": 15,
@@ -2407,7 +2589,7 @@ export const skillsjson = [
                {
                   "parameter": "firedefense",
                   "add": -11,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -2424,7 +2606,6 @@ export const skillsjson = [
          {
             "minAttack": 55,
             "maxAttack": 56,
-            "dotTick": 1,
             "consumedMP": 46,
             "casting": 1,
             "duration": 15,
@@ -2433,7 +2614,7 @@ export const skillsjson = [
                {
                   "parameter": "firedefense",
                   "add": -12,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -2450,7 +2631,6 @@ export const skillsjson = [
          {
             "minAttack": 55,
             "maxAttack": 56,
-            "dotTick": 1,
             "consumedMP": 46,
             "casting": 1,
             "duration": 15,
@@ -2459,7 +2639,7 @@ export const skillsjson = [
                {
                   "parameter": "firedefense",
                   "add": -13,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -2476,7 +2656,6 @@ export const skillsjson = [
          {
             "minAttack": 55,
             "maxAttack": 56,
-            "dotTick": 1,
             "consumedMP": 48,
             "casting": 1,
             "duration": 15,
@@ -2485,7 +2664,7 @@ export const skillsjson = [
                {
                   "parameter": "firedefense",
                   "add": -14,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -2502,7 +2681,6 @@ export const skillsjson = [
          {
             "minAttack": 55,
             "maxAttack": 56,
-            "dotTick": 1,
             "consumedMP": 48,
             "casting": 1,
             "duration": 15,
@@ -2511,7 +2689,7 @@ export const skillsjson = [
                {
                   "parameter": "firedefense",
                   "add": -15,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -2528,7 +2706,6 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "dotTick": 1,
             "consumedMP": 50,
             "casting": 1,
             "duration": 15,
@@ -2537,7 +2714,7 @@ export const skillsjson = [
                {
                   "parameter": "firedefense",
                   "add": -16,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -2554,7 +2731,6 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "dotTick": 1,
             "consumedMP": 50,
             "casting": 1,
             "duration": 15,
@@ -2563,7 +2739,7 @@ export const skillsjson = [
                {
                   "parameter": "firedefense",
                   "add": -17,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -2580,7 +2756,6 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "dotTick": 1,
             "consumedMP": 53,
             "casting": 1,
             "duration": 15,
@@ -2589,7 +2764,7 @@ export const skillsjson = [
                {
                   "parameter": "firedefense",
                   "add": -18,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -2606,7 +2781,6 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "dotTick": 1,
             "consumedMP": 53,
             "casting": 1,
             "duration": 15,
@@ -2615,7 +2789,7 @@ export const skillsjson = [
                {
                   "parameter": "firedefense",
                   "add": -19,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -2632,7 +2806,6 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "dotTick": 1,
             "consumedMP": 55,
             "casting": 1,
             "duration": 15,
@@ -2641,7 +2814,7 @@ export const skillsjson = [
                {
                   "parameter": "firedefense",
                   "add": -20,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -2658,7 +2831,6 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "dotTick": 1,
             "consumedMP": 55,
             "casting": 1,
             "duration": 15,
@@ -2667,7 +2839,7 @@ export const skillsjson = [
                {
                   "parameter": "firedefense",
                   "add": -21,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -2684,7 +2856,6 @@ export const skillsjson = [
          {
             "minAttack": 59,
             "maxAttack": 60,
-            "dotTick": 1,
             "consumedMP": 57,
             "casting": 1,
             "duration": 15,
@@ -2693,7 +2864,7 @@ export const skillsjson = [
                {
                   "parameter": "firedefense",
                   "add": -22,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -2710,7 +2881,6 @@ export const skillsjson = [
          {
             "minAttack": 59,
             "maxAttack": 60,
-            "dotTick": 1,
             "consumedMP": 57,
             "casting": 1,
             "duration": 15,
@@ -2719,7 +2889,7 @@ export const skillsjson = [
                {
                   "parameter": "firedefense",
                   "add": -23,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -2736,7 +2906,6 @@ export const skillsjson = [
          {
             "minAttack": 59,
             "maxAttack": 60,
-            "dotTick": 1,
             "consumedMP": 60,
             "casting": 1,
             "duration": 15,
@@ -2745,7 +2914,7 @@ export const skillsjson = [
                {
                   "parameter": "firedefense",
                   "add": -24,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -2762,7 +2931,6 @@ export const skillsjson = [
          {
             "minAttack": 59,
             "maxAttack": 60,
-            "dotTick": 1,
             "consumedMP": 60,
             "casting": 1,
             "duration": 15,
@@ -2771,7 +2939,7 @@ export const skillsjson = [
                {
                   "parameter": "firedefense",
                   "add": -25,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -2826,7 +2994,7 @@ export const skillsjson = [
       "icon": "ragbowicearr.png",
       "class": 9295,
       "level": 60,
-      "element": "none",
+      "element": "water",
       "magic": false,
       "requirements": [
          {
@@ -2844,8 +3012,8 @@ export const skillsjson = [
       "skillPoints": 3,
       "levels": [
          {
-            "minAttack": 105,
-            "maxAttack": 106,
+            "minAttack": 115,
+            "maxAttack": 116,
             "probability": 32,
             "probabilityPVP": 1,
             "consumedMP": 40,
@@ -2868,15 +3036,22 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 3.52,
+                  "scale": 5.32,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.02,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 106,
-            "maxAttack": 107,
+            "minAttack": 116,
+            "maxAttack": 117,
             "probability": 34,
             "probabilityPVP": 2,
             "consumedMP": 42,
@@ -2899,15 +3074,22 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 3.54,
+                  "scale": 5.34,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.04,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 107,
-            "maxAttack": 108,
+            "minAttack": 117,
+            "maxAttack": 118,
             "probability": 36,
             "probabilityPVP": 3,
             "consumedMP": 44,
@@ -2930,15 +3112,22 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 3.56,
+                  "scale": 5.36,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.06,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 108,
-            "maxAttack": 109,
+            "minAttack": 118,
+            "maxAttack": 119,
             "probability": 38,
             "probabilityPVP": 4,
             "consumedMP": 46,
@@ -2961,15 +3150,22 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 3.58,
+                  "scale": 5.38,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.08,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 109,
-            "maxAttack": 110,
+            "minAttack": 119,
+            "maxAttack": 120,
             "probability": 40,
             "probabilityPVP": 5,
             "consumedMP": 48,
@@ -2992,15 +3188,22 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 3.6,
+                  "scale": 5.4,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.1,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 110,
-            "maxAttack": 111,
+            "minAttack": 120,
+            "maxAttack": 121,
             "probability": 42,
             "probabilityPVP": 6,
             "consumedMP": 50,
@@ -3023,15 +3226,22 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 3.62,
+                  "scale": 5.42,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.12,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 111,
-            "maxAttack": 112,
+            "minAttack": 121,
+            "maxAttack": 122,
             "probability": 44,
             "probabilityPVP": 8,
             "consumedMP": 52,
@@ -3054,15 +3264,22 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 3.64,
+                  "scale": 5.44,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.14,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 112,
-            "maxAttack": 113,
+            "minAttack": 122,
+            "maxAttack": 123,
             "probability": 46,
             "probabilityPVP": 10,
             "consumedMP": 54,
@@ -3085,15 +3302,22 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 3.66,
+                  "scale": 5.46,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.16,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 115,
-            "maxAttack": 116,
+            "minAttack": 125,
+            "maxAttack": 126,
             "probability": 48,
             "probabilityPVP": 12,
             "consumedMP": 56,
@@ -3116,15 +3340,22 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 3.68,
+                  "scale": 5.48,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.18,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 119,
-            "maxAttack": 120,
+            "minAttack": 129,
+            "maxAttack": 130,
             "probability": 50,
             "probabilityPVP": 15,
             "consumedMP": 58,
@@ -3147,7 +3378,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 3.7,
+                  "scale": 5.5,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.2,
                   "pvp": true,
                   "pve": true
                }
@@ -3176,18 +3414,18 @@ export const skillsjson = [
       },
       "description": {
          "en": "Drains life from an enemy.",
-         "ar": "Drains life from an enemy.",
-         "br": "Drains life from an enemy.",
-         "cns": "Drains life from an enemy.",
-         "de": "Drains life from an enemy.",
-         "fi": "Drains life from an enemy.",
+         "ar": "\u062a\u0633\u062a\u0646\u0632\u0641 \u0627\u0644\u062d\u064a\u0627\u0629 \u0645\u0646 \u0627\u0644\u062e\u0635\u0645.",
+         "br": "Drena a vida de um inimigo.",
+         "cns": "\u5438\u53d6\u5bf9\u65b9\u7684\u751f\u547d\u3002",
+         "de": "Vom Feind Lebensenergie absaugen.",
+         "fi": "Imee vihollisesta elinvoiman.",
          "fil": "Drains life from an enemy.",
-         "fr": "Drains life from an enemy.",
-         "it": "Drains life from an enemy.",
-         "kr": "Drains life from an enemy.",
+         "fr": "Aspire les PV de l'ennemi",
+         "it": "Succhia i punti ferita dell'avversario.",
+         "kr": "\ub300\uc0c1\uc758 \uc0dd\uba85\ub825\uc744 \ud761\uc218\ud569\ub2c8\ub2e4.",
          "nl": "Drains life from an enemy.",
-         "pl": "Drains life from an enemy.",
-         "ru": "Drains life from an enemy.",
+         "pl": "Tnie przeciwnika i kradnie jego si\u0142\u0119 \u017cyciow\u0105 z rany.",
+         "ru": "\u0412\u044b\u0441\u0430\u0441\u044b\u0432\u0430\u0435\u0442 \u0436\u0438\u0437\u043d\u044c \u0438\u0437 \u0432\u0440\u0430\u0433\u0430.",
          "sw": "Drains life from an enemy.",
          "th": "Drains life from an enemy."
       },
@@ -3226,7 +3464,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.02,
+                  "scale": 2.82,
                   "pvp": true,
                   "pve": true
                }
@@ -3249,7 +3487,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.04,
+                  "scale": 2.84,
                   "pvp": true,
                   "pve": true
                }
@@ -3272,7 +3510,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.06,
+                  "scale": 2.86,
                   "pvp": true,
                   "pve": true
                }
@@ -3295,7 +3533,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.08,
+                  "scale": 2.88,
                   "pvp": true,
                   "pve": true
                }
@@ -3318,7 +3556,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.1,
+                  "scale": 2.9,
                   "pvp": true,
                   "pve": true
                }
@@ -3341,7 +3579,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.12,
+                  "scale": 2.92,
                   "pvp": true,
                   "pve": true
                }
@@ -3364,7 +3602,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.14,
+                  "scale": 2.94,
                   "pvp": true,
                   "pve": true
                }
@@ -3387,7 +3625,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.16,
+                  "scale": 2.96,
                   "pvp": true,
                   "pve": true
                }
@@ -3410,7 +3648,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.18,
+                  "scale": 2.98,
                   "pvp": true,
                   "pve": true
                }
@@ -3433,7 +3671,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.2,
+                  "scale": 3,
                   "pvp": true,
                   "pve": true
                }
@@ -3456,7 +3694,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.22,
+                  "scale": 3.02,
                   "pvp": true,
                   "pve": true
                }
@@ -3479,7 +3717,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.24,
+                  "scale": 3.04,
                   "pvp": true,
                   "pve": true
                }
@@ -3502,7 +3740,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.26,
+                  "scale": 3.06,
                   "pvp": true,
                   "pve": true
                }
@@ -3525,7 +3763,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.28,
+                  "scale": 3.08,
                   "pvp": true,
                   "pve": true
                }
@@ -3548,7 +3786,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.3,
+                  "scale": 3.1,
                   "pvp": true,
                   "pve": true
                }
@@ -3571,7 +3809,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.32,
+                  "scale": 3.12,
                   "pvp": true,
                   "pve": true
                }
@@ -3594,7 +3832,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.34,
+                  "scale": 3.14,
                   "pvp": true,
                   "pve": true
                }
@@ -3617,7 +3855,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.36,
+                  "scale": 3.16,
                   "pvp": true,
                   "pve": true
                }
@@ -3640,7 +3878,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.38,
+                  "scale": 3.18,
                   "pvp": true,
                   "pve": true
                }
@@ -3663,7 +3901,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.4,
+                  "scale": 3.2,
                   "pvp": true,
                   "pve": true
                }
@@ -3691,21 +3929,21 @@ export const skillsjson = [
          "th": "Protect"
       },
       "description": {
-         "en": "Decreases the damage from physical attacks on a target.",
-         "ar": "Decreases the damage from physical attacks on a target.",
+         "en": "Decreases the damage from physical & magical attacks on a target.",
+         "ar": "Decreases the damage from physical & magical attacks on a target.",
          "br": "Concede maior prote\u00e7\u00e3o a dano de ataques f\u00edsicos.",
          "cns": "\u6682\u65f6\u63d0\u9ad8\u65bd\u6cd5\u5bf9\u8c61\u7684\u7269\u7406\u9632\u5fa1\u529b\u3002",
          "de": "Erh\u00f6ht die physische Verteidigung des angew\u00e4hlten Spielers.",
          "fi": "Laskee kohteen saamaa vahinkoa fyysisist\u00e4 hy\u00f6kk\u00e4yksist\u00e4.",
-         "fil": "Decreases the damage from physical attacks on a target.",
+         "fil": "Decreases the damage from physical & magical attacks on a target.",
          "fr": "Augmente la d\u00e9fense physique de la cible",
-         "it": "Decreases the damage from physical attacks on a target.",
+         "it": "Decreases the damage from physical & magical attacks on a target.",
          "kr": "\ub300\uc0c1\uc5d0\uac8c \uc2e0\uc131\ud55c \uacb0\uacc4\ub97c \uccd0\uc11c \ubb3c\ub9ac \ubc29\uc5b4\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
-         "nl": "Decreases the damage from physical attacks on a target.",
+         "nl": "Decreases the damage from physical & magical attacks on a target.",
          "pl": "Zwi\u0119ksza obron\u0119 celu.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0437\u0430\u0449\u0438\u0442\u0443 \u0432\u044b\u0431\u0440\u0430\u043d\u043d\u043e\u0439 \u0446\u0435\u043b\u0438 \u043e\u0442 \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u0430\u0442\u0430\u043a.",
-         "sw": "Decreases the damage from physical attacks on a target.",
-         "th": "Decreases the damage from physical attacks on a target."
+         "sw": "Decreases the damage from physical & magical attacks on a target.",
+         "th": "Decreases the damage from physical & magical attacks on a target."
       },
       "icon": "rinsupprotec.png",
       "class": 9389,
@@ -3733,6 +3971,11 @@ export const skillsjson = [
             "durationPVP": 160,
             "abilities": [
                {
+                  "parameter": "magicdefense",
+                  "add": 1,
+                  "rate": true
+               },
+               {
                   "parameter": "def",
                   "add": 1,
                   "rate": true
@@ -3743,6 +3986,14 @@ export const skillsjson = [
                   "parameter": "duration",
                   "stat": "int",
                   "scale": 1.5,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "magicdefense",
+                  "stat": "int",
+                  "scale": 0.02,
+                  "maximum": 9,
                   "pvp": true,
                   "pve": true
                },
@@ -3763,6 +4014,11 @@ export const skillsjson = [
             "durationPVP": 170,
             "abilities": [
                {
+                  "parameter": "magicdefense",
+                  "add": 2,
+                  "rate": true
+               },
+               {
                   "parameter": "def",
                   "add": 2,
                   "rate": true
@@ -3773,6 +4029,14 @@ export const skillsjson = [
                   "parameter": "duration",
                   "stat": "int",
                   "scale": 1.5,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "magicdefense",
+                  "stat": "int",
+                  "scale": 0.02,
+                  "maximum": 9,
                   "pvp": true,
                   "pve": true
                },
@@ -3793,6 +4057,11 @@ export const skillsjson = [
             "durationPVP": 180,
             "abilities": [
                {
+                  "parameter": "magicdefense",
+                  "add": 3,
+                  "rate": true
+               },
+               {
                   "parameter": "def",
                   "add": 3,
                   "rate": true
@@ -3803,6 +4072,14 @@ export const skillsjson = [
                   "parameter": "duration",
                   "stat": "int",
                   "scale": 1.5,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "magicdefense",
+                  "stat": "int",
+                  "scale": 0.02,
+                  "maximum": 9,
                   "pvp": true,
                   "pve": true
                },
@@ -3823,6 +4100,11 @@ export const skillsjson = [
             "durationPVP": 190,
             "abilities": [
                {
+                  "parameter": "magicdefense",
+                  "add": 4,
+                  "rate": true
+               },
+               {
                   "parameter": "def",
                   "add": 4,
                   "rate": true
@@ -3833,6 +4115,14 @@ export const skillsjson = [
                   "parameter": "duration",
                   "stat": "int",
                   "scale": 1.5,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "magicdefense",
+                  "stat": "int",
+                  "scale": 0.02,
+                  "maximum": 9,
                   "pvp": true,
                   "pve": true
                },
@@ -3853,6 +4143,11 @@ export const skillsjson = [
             "durationPVP": 200,
             "abilities": [
                {
+                  "parameter": "magicdefense",
+                  "add": 5,
+                  "rate": true
+               },
+               {
                   "parameter": "def",
                   "add": 5,
                   "rate": true
@@ -3863,6 +4158,14 @@ export const skillsjson = [
                   "parameter": "duration",
                   "stat": "int",
                   "scale": 1.5,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "magicdefense",
+                  "stat": "int",
+                  "scale": 0.02,
+                  "maximum": 9,
                   "pvp": true,
                   "pve": true
                },
@@ -3883,6 +4186,11 @@ export const skillsjson = [
             "durationPVP": 210,
             "abilities": [
                {
+                  "parameter": "magicdefense",
+                  "add": 6,
+                  "rate": true
+               },
+               {
                   "parameter": "def",
                   "add": 6,
                   "rate": true
@@ -3893,6 +4201,14 @@ export const skillsjson = [
                   "parameter": "duration",
                   "stat": "int",
                   "scale": 1.5,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "magicdefense",
+                  "stat": "int",
+                  "scale": 0.02,
+                  "maximum": 10,
                   "pvp": true,
                   "pve": true
                },
@@ -3913,6 +4229,11 @@ export const skillsjson = [
             "durationPVP": 220,
             "abilities": [
                {
+                  "parameter": "magicdefense",
+                  "add": 7,
+                  "rate": true
+               },
+               {
                   "parameter": "def",
                   "add": 7,
                   "rate": true
@@ -3923,6 +4244,14 @@ export const skillsjson = [
                   "parameter": "duration",
                   "stat": "int",
                   "scale": 1.5,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "magicdefense",
+                  "stat": "int",
+                  "scale": 0.02,
+                  "maximum": 10,
                   "pvp": true,
                   "pve": true
                },
@@ -3943,6 +4272,11 @@ export const skillsjson = [
             "durationPVP": 230,
             "abilities": [
                {
+                  "parameter": "magicdefense",
+                  "add": 8,
+                  "rate": true
+               },
+               {
                   "parameter": "def",
                   "add": 8,
                   "rate": true
@@ -3953,6 +4287,14 @@ export const skillsjson = [
                   "parameter": "duration",
                   "stat": "int",
                   "scale": 1.5,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "magicdefense",
+                  "stat": "int",
+                  "scale": 0.02,
+                  "maximum": 10,
                   "pvp": true,
                   "pve": true
                },
@@ -3973,6 +4315,11 @@ export const skillsjson = [
             "durationPVP": 240,
             "abilities": [
                {
+                  "parameter": "magicdefense",
+                  "add": 9,
+                  "rate": true
+               },
+               {
                   "parameter": "def",
                   "add": 9,
                   "rate": true
@@ -3983,6 +4330,14 @@ export const skillsjson = [
                   "parameter": "duration",
                   "stat": "int",
                   "scale": 1.5,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "magicdefense",
+                  "stat": "int",
+                  "scale": 0.02,
+                  "maximum": 10,
                   "pvp": true,
                   "pve": true
                },
@@ -4003,6 +4358,11 @@ export const skillsjson = [
             "durationPVP": 250,
             "abilities": [
                {
+                  "parameter": "magicdefense",
+                  "add": 10,
+                  "rate": true
+               },
+               {
                   "parameter": "def",
                   "add": 10,
                   "rate": true
@@ -4013,6 +4373,14 @@ export const skillsjson = [
                   "parameter": "duration",
                   "stat": "int",
                   "scale": 1.5,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "magicdefense",
+                  "stat": "int",
+                  "scale": 0.02,
+                  "maximum": 10,
                   "pvp": true,
                   "pve": true
                },
@@ -4066,7 +4434,7 @@ export const skillsjson = [
       },
       "icon": "meronesphit.png",
       "class": 764,
-      "level": 50,
+      "level": 35,
       "element": "none",
       "magic": false,
       "requirements": [
@@ -4087,7 +4455,7 @@ export const skillsjson = [
             "maxAttack": 21,
             "consumedFP": 55,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -4103,7 +4471,7 @@ export const skillsjson = [
             "maxAttack": 22,
             "consumedFP": 55,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -4119,7 +4487,7 @@ export const skillsjson = [
             "maxAttack": 23,
             "consumedFP": 57,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -4135,7 +4503,7 @@ export const skillsjson = [
             "maxAttack": 24,
             "consumedFP": 57,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -4151,7 +4519,7 @@ export const skillsjson = [
             "maxAttack": 25,
             "consumedFP": 60,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -4167,7 +4535,7 @@ export const skillsjson = [
             "maxAttack": 26,
             "consumedFP": 60,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -4183,7 +4551,7 @@ export const skillsjson = [
             "maxAttack": 27,
             "consumedFP": 62,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -4199,7 +4567,7 @@ export const skillsjson = [
             "maxAttack": 28,
             "consumedFP": 62,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -4215,7 +4583,7 @@ export const skillsjson = [
             "maxAttack": 29,
             "consumedFP": 64,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -4231,7 +4599,7 @@ export const skillsjson = [
             "maxAttack": 30,
             "consumedFP": 64,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -4247,7 +4615,7 @@ export const skillsjson = [
             "maxAttack": 31,
             "consumedFP": 66,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -4263,7 +4631,7 @@ export const skillsjson = [
             "maxAttack": 32,
             "consumedFP": 66,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -4279,7 +4647,7 @@ export const skillsjson = [
             "maxAttack": 33,
             "consumedFP": 68,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -4295,7 +4663,7 @@ export const skillsjson = [
             "maxAttack": 34,
             "consumedFP": 68,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -4311,7 +4679,7 @@ export const skillsjson = [
             "maxAttack": 35,
             "consumedFP": 70,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -4327,7 +4695,7 @@ export const skillsjson = [
             "maxAttack": 36,
             "consumedFP": 70,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -4343,7 +4711,7 @@ export const skillsjson = [
             "maxAttack": 37,
             "consumedFP": 75,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -4359,7 +4727,7 @@ export const skillsjson = [
             "maxAttack": 38,
             "consumedFP": 75,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -4375,7 +4743,7 @@ export const skillsjson = [
             "maxAttack": 39,
             "consumedFP": 80,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -4391,7 +4759,7 @@ export const skillsjson = [
             "maxAttack": 40,
             "consumedFP": 80,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -5081,21 +5449,21 @@ export const skillsjson = [
          "th": "Blazing Sword"
       },
       "description": {
-         "en": "Increases the accuracy with a Sword and increases power of the Sword.",
-         "ar": "\u0632\u064a\u0627\u062f\u0629 \u062f\u0642\u0629 \u0627\u0644\u0633\u064a\u0641 \u0648 \u062d\u062f\u062a\u0647.",
-         "br": "Aumenta a precis\u00e3o e o dano da Espada.",
-         "cns": "\u88c5\u5907\u5251\u65f6\uff0c\u5927\u5e45\u5ea6\u63d0\u9ad8\u5251\u7684\u547d\u4e2d\u7387\u53ca\u653b\u51fb\u529b\u3002",
-         "de": "Erh\u00f6ht die Angriffsst\u00e4rke und die Treffsicherheit deines Schwertes.",
-         "fi": "Kasvattaa tarkkuutta Miekan kanssa, sek\u00e4 lis\u00e4\u00e4 Miekan voimaa.",
-         "fil": "Increases the accuracy with a Sword and increases power of the Sword.",
-         "fr": "Augmente la puissance d'attaque et la pr\u00e9cision lors d'un combat \u00e0 l'\u00e9p\u00e9e",
-         "it": "Aumenta la precizione e la potenza d'attacco della spada.",
-         "kr": "\uc18c\ub4dc\uc758 \ub2a5\ub825\uc744 \uac15\ud654\uc2dc\ucf1c \uacf5\uaca9\ub825\uacfc \uba85\uc911\ub960\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
-         "nl": "Increases the accuracy with a Sword and increases power of the Sword.",
-         "pl": "Zwi\u0119ksza celno\u015b\u0107 i si\u0142\u0119 ataku Mieczy.",
-         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0442\u043e\u0447\u043d\u043e\u0441\u0442\u044c \u0438 \u0441\u0438\u043b\u0443 \u0443\u0434\u0430\u0440\u043e\u0432 \u043c\u0435\u0447\u043e\u043c.",
-         "sw": "Increases the accuracy with a Sword and increases power of the Sword.",
-         "th": "Increases the accuracy with a Sword and increases power of the Sword."
+         "en": "Increases Accuracy and increases power of the Sword.",
+         "ar": "Increases Accuracy and increases power of the Sword.",
+         "br": "Increases Accuracy and increases power of the Sword.",
+         "cns": "Increases Accuracy and increases power of the Sword.",
+         "de": "Increases Accuracy and increases power of the Sword.",
+         "fi": "Increases Accuracy and increases power of the Sword.",
+         "fil": "Increases Accuracy and increases power of the Sword.",
+         "fr": "Increases Accuracy and increases power of the Sword.",
+         "it": "Increases Accuracy and increases power of the Sword.",
+         "kr": "Increases Accuracy and increases power of the Sword.",
+         "nl": "Increases Accuracy and increases power of the Sword.",
+         "pl": "Increases Accuracy and increases power of the Sword.",
+         "ru": "Increases Accuracy and increases power of the Sword.",
+         "sw": "Increases Accuracy and increases power of the Sword.",
+         "th": "Increases Accuracy and increases power of the Sword."
       },
       "icon": "mersupblazin.png",
       "class": 764,
@@ -5498,21 +5866,21 @@ export const skillsjson = [
          "th": "Critical Swing"
       },
       "description": {
-         "en": "Increases chance of critical strike. ",
-         "ar": "Increases chance of critical strike. ",
-         "br": "Aumenta a chance de causar um acerto cr\u00edtico. ",
-         "cns": "\u6682\u65f6\u589e\u52a0\u98de\u8f6e\u7684\u7206\u51fb\u7387\u53ca\u7206\u51fb\u4f24\u5bb3\u3002",
-         "de": "Erh\u00f6ht die kritische Trefferrate mit dem Yoyo.",
-         "fi": "Increases chance of critical strike. ",
-         "fil": "Increases chance of critical strike. ",
-         "fr": "Augmente les chances d'infliger un coup critique",
-         "it": "Increases chance of critical strike. ",
-         "kr": "\uc694\uc694\uc758 \ub2a5\ub825\uc744 \uac15\ud654 \uc2dc\ucf1c \uc801\uc5d0 \ub300\ud55c \ud06c\ub9ac\ud2f0\uceec \ud655\ub960\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
-         "nl": "Increases chance of critical strike. ",
-         "pl": "Zwi\u0119ksza szans\u0119 na Cios Krytyczny.",
-         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0432\u0435\u0440\u043e\u044f\u0442\u043d\u043e\u0441\u0442\u044c \u043d\u0430\u043d\u0435\u0441\u0442\u0438 \u043a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0443\u0440\u043e\u043d.",
-         "sw": "Increases chance of critical strike. ",
-         "th": "Increases chance of critical strike. "
+         "en": "Increases chance of critical strike.",
+         "ar": "Increases chance of critical strike.",
+         "br": "Increases chance of critical strike.",
+         "cns": "Increases chance of critical strike.",
+         "de": "Increases chance of critical strike.",
+         "fi": "Increases chance of critical strike.",
+         "fil": "Increases chance of critical strike.",
+         "fr": "Increases chance of critical strike.",
+         "it": "Increases chance of critical strike.",
+         "kr": "Increases chance of critical strike.",
+         "nl": "Increases chance of critical strike.",
+         "pl": "Increases chance of critical strike.",
+         "ru": "Increases chance of critical strike.",
+         "sw": "Increases chance of critical strike.",
+         "th": "Increases chance of critical strike."
       },
       "icon": "jstsupswing.png",
       "class": 3545,
@@ -5817,8 +6185,8 @@ export const skillsjson = [
          {
             "minAttack": 166,
             "maxAttack": 167,
-            "consumedMP": 112,
-            "cooldown": 12,
+            "consumedMP": 132,
+            "cooldown": 15,
             "casting": 0.5,
             "spellRange": 8,
             "scalingParameters": [
@@ -5834,8 +6202,8 @@ export const skillsjson = [
          {
             "minAttack": 167,
             "maxAttack": 168,
-            "consumedMP": 114,
-            "cooldown": 12,
+            "consumedMP": 134,
+            "cooldown": 15,
             "casting": 0.5,
             "spellRange": 8,
             "scalingParameters": [
@@ -5851,8 +6219,8 @@ export const skillsjson = [
          {
             "minAttack": 168,
             "maxAttack": 169,
-            "consumedMP": 116,
-            "cooldown": 12,
+            "consumedMP": 136,
+            "cooldown": 15,
             "casting": 0.5,
             "spellRange": 8,
             "scalingParameters": [
@@ -5868,8 +6236,8 @@ export const skillsjson = [
          {
             "minAttack": 169,
             "maxAttack": 170,
-            "consumedMP": 118,
-            "cooldown": 12,
+            "consumedMP": 138,
+            "cooldown": 15,
             "casting": 0.5,
             "spellRange": 8,
             "scalingParameters": [
@@ -5885,8 +6253,8 @@ export const skillsjson = [
          {
             "minAttack": 170,
             "maxAttack": 171,
-            "consumedMP": 120,
-            "cooldown": 12,
+            "consumedMP": 140,
+            "cooldown": 15,
             "casting": 0.5,
             "spellRange": 8,
             "scalingParameters": [
@@ -5902,8 +6270,8 @@ export const skillsjson = [
          {
             "minAttack": 171,
             "maxAttack": 172,
-            "consumedMP": 122,
-            "cooldown": 12,
+            "consumedMP": 142,
+            "cooldown": 15,
             "casting": 0.5,
             "spellRange": 8,
             "scalingParameters": [
@@ -5919,8 +6287,8 @@ export const skillsjson = [
          {
             "minAttack": 172,
             "maxAttack": 173,
-            "consumedMP": 124,
-            "cooldown": 12,
+            "consumedMP": 144,
+            "cooldown": 15,
             "casting": 0.5,
             "spellRange": 8,
             "scalingParameters": [
@@ -5936,8 +6304,8 @@ export const skillsjson = [
          {
             "minAttack": 173,
             "maxAttack": 174,
-            "consumedMP": 126,
-            "cooldown": 12,
+            "consumedMP": 146,
+            "cooldown": 15,
             "casting": 0.5,
             "spellRange": 8,
             "scalingParameters": [
@@ -5953,8 +6321,8 @@ export const skillsjson = [
          {
             "minAttack": 174,
             "maxAttack": 175,
-            "consumedMP": 128,
-            "cooldown": 12,
+            "consumedMP": 148,
+            "cooldown": 15,
             "casting": 0.5,
             "spellRange": 8,
             "scalingParameters": [
@@ -5970,8 +6338,8 @@ export const skillsjson = [
          {
             "minAttack": 179,
             "maxAttack": 180,
-            "consumedMP": 130,
-            "cooldown": 12,
+            "consumedMP": 150,
+            "cooldown": 15,
             "casting": 0.5,
             "spellRange": 8,
             "scalingParameters": [
@@ -6029,8 +6397,8 @@ export const skillsjson = [
       "magic": true,
       "requirements": [
          {
-            "skill": 6034,
-            "level": 3
+            "skill": 997,
+            "level": 7
          }
       ],
       "weapon": "staff",
@@ -6204,64 +6572,6 @@ export const skillsjson = [
       ]
    },
    {
-      "id": 950,
-      "name": {
-         "en": "Toggle Buff",
-         "ar": "Toggle Buff",
-         "br": "Alternar Buff",
-         "cns": "Buff\u4f5c\u7528",
-         "de": "Toggle Buff",
-         "fi": "Toggle Buff",
-         "fil": "Toggle Buff",
-         "fr": "Vitesse modifi\u00e9e",
-         "it": "Toggle Buff",
-         "kr": "\ud1a0\uae00 \ubc84\ud504",
-         "nl": "Toggle Buff",
-         "pl": "Toggle Buff",
-         "ru": "\u0412\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435 \u044d\u0444\u0444\u0435\u043a\u0442\u043e\u0432",
-         "sw": "Toggle Buff",
-         "th": "Toggle Buff"
-      },
-      "description": {
-         "en": "",
-         "ar": "",
-         "br": "",
-         "cns": "",
-         "de": "",
-         "fi": "",
-         "fil": "",
-         "fr": "",
-         "it": "",
-         "kr": "",
-         "nl": "",
-         "pl": "",
-         "ru": "",
-         "sw": "",
-         "th": ""
-      },
-      "icon": "jstyoybackst.png",
-      "level": 1,
-      "element": "none",
-      "magic": false,
-      "requirements": [],
-      "combo": "general",
-      "debuff": false,
-      "flying": true,
-      "passive": false,
-      "target": "currentplayer",
-      "levels": [
-         {
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 20,
-                  "rate": true
-               }
-            ]
-         }
-      ]
-   },
-   {
       "id": 964,
       "name": {
          "en": "Circle Healing",
@@ -6322,111 +6632,6 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "hp",
-                  "add": 100,
-                  "rate": false
-               }
-            ],
-            "spellRange": 16,
-            "scalingParameters": [
-               {
-                  "parameter": "hp",
-                  "stat": "int",
-                  "scale": 5.52,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedMP": 45,
-            "casting": 0.98,
-            "abilities": [
-               {
-                  "parameter": "hp",
-                  "add": 120,
-                  "rate": false
-               }
-            ],
-            "spellRange": 16,
-            "scalingParameters": [
-               {
-                  "parameter": "hp",
-                  "stat": "int",
-                  "scale": 5.54,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedMP": 50,
-            "casting": 0.96,
-            "abilities": [
-               {
-                  "parameter": "hp",
-                  "add": 140,
-                  "rate": false
-               }
-            ],
-            "spellRange": 16,
-            "scalingParameters": [
-               {
-                  "parameter": "hp",
-                  "stat": "int",
-                  "scale": 5.56,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedMP": 50,
-            "casting": 0.94,
-            "abilities": [
-               {
-                  "parameter": "hp",
-                  "add": 160,
-                  "rate": false
-               }
-            ],
-            "spellRange": 16,
-            "scalingParameters": [
-               {
-                  "parameter": "hp",
-                  "stat": "int",
-                  "scale": 5.58,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedMP": 55,
-            "casting": 0.92,
-            "abilities": [
-               {
-                  "parameter": "hp",
-                  "add": 180,
-                  "rate": false
-               }
-            ],
-            "spellRange": 16,
-            "scalingParameters": [
-               {
-                  "parameter": "hp",
-                  "stat": "int",
-                  "scale": 5.6,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedMP": 55,
-            "casting": 0.9,
-            "abilities": [
-               {
-                  "parameter": "hp",
                   "add": 200,
                   "rate": false
                }
@@ -6436,15 +6641,15 @@ export const skillsjson = [
                {
                   "parameter": "hp",
                   "stat": "int",
-                  "scale": 5.62,
+                  "scale": 5.02,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "consumedMP": 60,
-            "casting": 0.88,
+            "consumedMP": 45,
+            "casting": 0.98,
             "abilities": [
                {
                   "parameter": "hp",
@@ -6457,36 +6662,15 @@ export const skillsjson = [
                {
                   "parameter": "hp",
                   "stat": "int",
-                  "scale": 5.64,
+                  "scale": 5.04,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "consumedMP": 60,
-            "casting": 0.86,
-            "abilities": [
-               {
-                  "parameter": "hp",
-                  "add": 230,
-                  "rate": false
-               }
-            ],
-            "spellRange": 16,
-            "scalingParameters": [
-               {
-                  "parameter": "hp",
-                  "stat": "int",
-                  "scale": 5.66,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedMP": 65,
-            "casting": 0.84,
+            "consumedMP": 50,
+            "casting": 0.96,
             "abilities": [
                {
                   "parameter": "hp",
@@ -6499,36 +6683,15 @@ export const skillsjson = [
                {
                   "parameter": "hp",
                   "stat": "int",
-                  "scale": 5.68,
+                  "scale": 5.06,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "consumedMP": 65,
-            "casting": 0.82,
-            "abilities": [
-               {
-                  "parameter": "hp",
-                  "add": 250,
-                  "rate": false
-               }
-            ],
-            "spellRange": 16,
-            "scalingParameters": [
-               {
-                  "parameter": "hp",
-                  "stat": "int",
-                  "scale": 5.7,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedMP": 67,
-            "casting": 0.8,
+            "consumedMP": 50,
+            "casting": 0.94,
             "abilities": [
                {
                   "parameter": "hp",
@@ -6541,36 +6704,15 @@ export const skillsjson = [
                {
                   "parameter": "hp",
                   "stat": "int",
-                  "scale": 5.72,
+                  "scale": 5.08,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "consumedMP": 67,
-            "casting": 0.78,
-            "abilities": [
-               {
-                  "parameter": "hp",
-                  "add": 270,
-                  "rate": false
-               }
-            ],
-            "spellRange": 16,
-            "scalingParameters": [
-               {
-                  "parameter": "hp",
-                  "stat": "int",
-                  "scale": 5.74,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedMP": 72,
-            "casting": 0.76,
+            "consumedMP": 55,
+            "casting": 0.92,
             "abilities": [
                {
                   "parameter": "hp",
@@ -6583,36 +6725,15 @@ export const skillsjson = [
                {
                   "parameter": "hp",
                   "stat": "int",
-                  "scale": 5.76,
+                  "scale": 5.1,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "consumedMP": 72,
-            "casting": 0.74,
-            "abilities": [
-               {
-                  "parameter": "hp",
-                  "add": 290,
-                  "rate": false
-               }
-            ],
-            "spellRange": 16,
-            "scalingParameters": [
-               {
-                  "parameter": "hp",
-                  "stat": "int",
-                  "scale": 5.78,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedMP": 75,
-            "casting": 0.72,
+            "consumedMP": 55,
+            "casting": 0.9,
             "abilities": [
                {
                   "parameter": "hp",
@@ -6625,36 +6746,15 @@ export const skillsjson = [
                {
                   "parameter": "hp",
                   "stat": "int",
-                  "scale": 5.8,
+                  "scale": 5.12,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "consumedMP": 75,
-            "casting": 0.7,
-            "abilities": [
-               {
-                  "parameter": "hp",
-                  "add": 310,
-                  "rate": false
-               }
-            ],
-            "spellRange": 16,
-            "scalingParameters": [
-               {
-                  "parameter": "hp",
-                  "stat": "int",
-                  "scale": 5.82,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedMP": 79,
-            "casting": 0.7,
+            "consumedMP": 60,
+            "casting": 0.88,
             "abilities": [
                {
                   "parameter": "hp",
@@ -6667,15 +6767,15 @@ export const skillsjson = [
                {
                   "parameter": "hp",
                   "stat": "int",
-                  "scale": 5.84,
+                  "scale": 5.14,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "consumedMP": 79,
-            "casting": 0.7,
+            "consumedMP": 60,
+            "casting": 0.86,
             "abilities": [
                {
                   "parameter": "hp",
@@ -6688,15 +6788,15 @@ export const skillsjson = [
                {
                   "parameter": "hp",
                   "stat": "int",
-                  "scale": 5.86,
+                  "scale": 5.16,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "consumedMP": 85,
-            "casting": 0.7,
+            "consumedMP": 65,
+            "casting": 0.84,
             "abilities": [
                {
                   "parameter": "hp",
@@ -6709,15 +6809,15 @@ export const skillsjson = [
                {
                   "parameter": "hp",
                   "stat": "int",
-                  "scale": 5.88,
+                  "scale": 5.18,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "consumedMP": 85,
-            "casting": 0.6,
+            "consumedMP": 65,
+            "casting": 0.82,
             "abilities": [
                {
                   "parameter": "hp",
@@ -6730,7 +6830,217 @@ export const skillsjson = [
                {
                   "parameter": "hp",
                   "stat": "int",
-                  "scale": 5.9,
+                  "scale": 5.2,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedMP": 67,
+            "casting": 0.8,
+            "abilities": [
+               {
+                  "parameter": "hp",
+                  "add": 360,
+                  "rate": false
+               }
+            ],
+            "spellRange": 16,
+            "scalingParameters": [
+               {
+                  "parameter": "hp",
+                  "stat": "int",
+                  "scale": 5.22,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedMP": 67,
+            "casting": 0.78,
+            "abilities": [
+               {
+                  "parameter": "hp",
+                  "add": 370,
+                  "rate": false
+               }
+            ],
+            "spellRange": 16,
+            "scalingParameters": [
+               {
+                  "parameter": "hp",
+                  "stat": "int",
+                  "scale": 5.24,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedMP": 72,
+            "casting": 0.76,
+            "abilities": [
+               {
+                  "parameter": "hp",
+                  "add": 380,
+                  "rate": false
+               }
+            ],
+            "spellRange": 16,
+            "scalingParameters": [
+               {
+                  "parameter": "hp",
+                  "stat": "int",
+                  "scale": 5.26,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedMP": 72,
+            "casting": 0.74,
+            "abilities": [
+               {
+                  "parameter": "hp",
+                  "add": 390,
+                  "rate": false
+               }
+            ],
+            "spellRange": 16,
+            "scalingParameters": [
+               {
+                  "parameter": "hp",
+                  "stat": "int",
+                  "scale": 5.28,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedMP": 75,
+            "casting": 0.72,
+            "abilities": [
+               {
+                  "parameter": "hp",
+                  "add": 400,
+                  "rate": false
+               }
+            ],
+            "spellRange": 16,
+            "scalingParameters": [
+               {
+                  "parameter": "hp",
+                  "stat": "int",
+                  "scale": 5.3,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedMP": 75,
+            "casting": 0.7,
+            "abilities": [
+               {
+                  "parameter": "hp",
+                  "add": 410,
+                  "rate": false
+               }
+            ],
+            "spellRange": 16,
+            "scalingParameters": [
+               {
+                  "parameter": "hp",
+                  "stat": "int",
+                  "scale": 5.32,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedMP": 79,
+            "casting": 0.7,
+            "abilities": [
+               {
+                  "parameter": "hp",
+                  "add": 420,
+                  "rate": false
+               }
+            ],
+            "spellRange": 16,
+            "scalingParameters": [
+               {
+                  "parameter": "hp",
+                  "stat": "int",
+                  "scale": 5.34,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedMP": 79,
+            "casting": 0.7,
+            "abilities": [
+               {
+                  "parameter": "hp",
+                  "add": 430,
+                  "rate": false
+               }
+            ],
+            "spellRange": 16,
+            "scalingParameters": [
+               {
+                  "parameter": "hp",
+                  "stat": "int",
+                  "scale": 5.36,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedMP": 85,
+            "casting": 0.7,
+            "abilities": [
+               {
+                  "parameter": "hp",
+                  "add": 440,
+                  "rate": false
+               }
+            ],
+            "spellRange": 16,
+            "scalingParameters": [
+               {
+                  "parameter": "hp",
+                  "stat": "int",
+                  "scale": 5.38,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedMP": 85,
+            "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "hp",
+                  "add": 450,
+                  "rate": false
+               }
+            ],
+            "spellRange": 16,
+            "scalingParameters": [
+               {
+                  "parameter": "hp",
+                  "stat": "int",
+                  "scale": 5.4,
                   "pvp": true,
                   "pve": true
                }
@@ -6776,13 +7086,13 @@ export const skillsjson = [
       },
       "icon": "magrockcrash.png",
       "class": 9581,
-      "level": 25,
+      "level": 40,
       "element": "earth",
       "magic": true,
       "requirements": [
          {
-            "skill": 5458,
-            "level": 5
+            "skill": 6034,
+            "level": 7
          }
       ],
       "weapon": "wandorstaff",
@@ -6796,7 +7106,6 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "dotTick": 1,
             "consumedMP": 40,
             "casting": 1,
             "duration": 15,
@@ -6805,382 +7114,7 @@ export const skillsjson = [
                {
                   "parameter": "winddefense",
                   "add": -6,
-                  "rate": false
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "int",
-                  "scale": 2.52,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 53,
-            "maxAttack": 54,
-            "dotTick": 1,
-            "consumedMP": 40,
-            "casting": 1,
-            "duration": 15,
-            "durationPVP": 15,
-            "abilities": [
-               {
-                  "parameter": "winddefense",
-                  "add": -7,
-                  "rate": false
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "int",
-                  "scale": 2.54,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 53,
-            "maxAttack": 54,
-            "dotTick": 1,
-            "consumedMP": 42,
-            "casting": 1,
-            "duration": 15,
-            "durationPVP": 15,
-            "abilities": [
-               {
-                  "parameter": "winddefense",
-                  "add": -8,
-                  "rate": false
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "int",
-                  "scale": 2.56,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 53,
-            "maxAttack": 54,
-            "dotTick": 1,
-            "consumedMP": 42,
-            "casting": 1,
-            "duration": 15,
-            "durationPVP": 15,
-            "abilities": [
-               {
-                  "parameter": "winddefense",
-                  "add": -9,
-                  "rate": false
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "int",
-                  "scale": 2.58,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 53,
-            "maxAttack": 54,
-            "dotTick": 1,
-            "consumedMP": 44,
-            "casting": 1,
-            "duration": 15,
-            "durationPVP": 15,
-            "abilities": [
-               {
-                  "parameter": "winddefense",
-                  "add": -10,
-                  "rate": false
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "int",
-                  "scale": 2.6,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 55,
-            "maxAttack": 56,
-            "dotTick": 1,
-            "consumedMP": 44,
-            "casting": 1,
-            "duration": 15,
-            "durationPVP": 15,
-            "abilities": [
-               {
-                  "parameter": "winddefense",
-                  "add": -11,
-                  "rate": false
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "int",
-                  "scale": 2.62,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 55,
-            "maxAttack": 56,
-            "dotTick": 1,
-            "consumedMP": 46,
-            "casting": 1,
-            "duration": 15,
-            "durationPVP": 15,
-            "abilities": [
-               {
-                  "parameter": "winddefense",
-                  "add": -12,
-                  "rate": false
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "int",
-                  "scale": 2.64,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 55,
-            "maxAttack": 56,
-            "dotTick": 1,
-            "consumedMP": 46,
-            "casting": 1,
-            "duration": 15,
-            "durationPVP": 15,
-            "abilities": [
-               {
-                  "parameter": "winddefense",
-                  "add": -13,
-                  "rate": false
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "int",
-                  "scale": 2.66,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 55,
-            "maxAttack": 56,
-            "dotTick": 1,
-            "consumedMP": 48,
-            "casting": 1,
-            "duration": 15,
-            "durationPVP": 15,
-            "abilities": [
-               {
-                  "parameter": "winddefense",
-                  "add": -14,
-                  "rate": false
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "int",
-                  "scale": 2.68,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 55,
-            "maxAttack": 56,
-            "dotTick": 1,
-            "consumedMP": 48,
-            "casting": 1,
-            "duration": 15,
-            "durationPVP": 15,
-            "abilities": [
-               {
-                  "parameter": "winddefense",
-                  "add": -15,
-                  "rate": false
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "int",
-                  "scale": 2.7,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 57,
-            "maxAttack": 58,
-            "dotTick": 1,
-            "consumedMP": 50,
-            "casting": 1,
-            "duration": 15,
-            "durationPVP": 15,
-            "abilities": [
-               {
-                  "parameter": "winddefense",
-                  "add": -16,
-                  "rate": false
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "int",
-                  "scale": 2.72,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 57,
-            "maxAttack": 58,
-            "dotTick": 1,
-            "consumedMP": 50,
-            "casting": 1,
-            "duration": 15,
-            "durationPVP": 15,
-            "abilities": [
-               {
-                  "parameter": "winddefense",
-                  "add": -17,
-                  "rate": false
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "int",
-                  "scale": 2.74,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 57,
-            "maxAttack": 58,
-            "dotTick": 1,
-            "consumedMP": 53,
-            "casting": 1,
-            "duration": 15,
-            "durationPVP": 15,
-            "abilities": [
-               {
-                  "parameter": "winddefense",
-                  "add": -18,
-                  "rate": false
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "int",
-                  "scale": 2.76,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 57,
-            "maxAttack": 58,
-            "dotTick": 1,
-            "consumedMP": 53,
-            "casting": 1,
-            "duration": 15,
-            "durationPVP": 15,
-            "abilities": [
-               {
-                  "parameter": "winddefense",
-                  "add": -19,
-                  "rate": false
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "int",
-                  "scale": 2.78,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 57,
-            "maxAttack": 58,
-            "dotTick": 1,
-            "consumedMP": 55,
-            "casting": 1,
-            "duration": 15,
-            "durationPVP": 15,
-            "abilities": [
-               {
-                  "parameter": "winddefense",
-                  "add": -20,
-                  "rate": false
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "int",
-                  "scale": 2.8,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 58,
-            "maxAttack": 59,
-            "dotTick": 1,
-            "consumedMP": 55,
-            "casting": 1,
-            "duration": 15,
-            "durationPVP": 15,
-            "abilities": [
-               {
-                  "parameter": "winddefense",
-                  "add": -21,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -7194,18 +7128,17 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 58,
-            "maxAttack": 59,
-            "dotTick": 1,
-            "consumedMP": 57,
+            "minAttack": 53,
+            "maxAttack": 54,
+            "consumedMP": 40,
             "casting": 1,
             "duration": 15,
             "durationPVP": 15,
             "abilities": [
                {
                   "parameter": "winddefense",
-                  "add": -22,
-                  "rate": false
+                  "add": -7,
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -7219,18 +7152,17 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 58,
-            "maxAttack": 59,
-            "dotTick": 1,
-            "consumedMP": 57,
+            "minAttack": 53,
+            "maxAttack": 54,
+            "consumedMP": 42,
             "casting": 1,
             "duration": 15,
             "durationPVP": 15,
             "abilities": [
                {
                   "parameter": "winddefense",
-                  "add": -23,
-                  "rate": false
+                  "add": -8,
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -7244,18 +7176,17 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 58,
-            "maxAttack": 59,
-            "dotTick": 1,
-            "consumedMP": 60,
+            "minAttack": 53,
+            "maxAttack": 54,
+            "consumedMP": 42,
             "casting": 1,
             "duration": 15,
             "durationPVP": 15,
             "abilities": [
                {
                   "parameter": "winddefense",
-                  "add": -24,
-                  "rate": false
+                  "add": -9,
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -7269,9 +7200,368 @@ export const skillsjson = [
             ]
          },
          {
+            "minAttack": 53,
+            "maxAttack": 54,
+            "consumedMP": 44,
+            "casting": 1,
+            "duration": 15,
+            "durationPVP": 15,
+            "abilities": [
+               {
+                  "parameter": "winddefense",
+                  "add": -10,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.9,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 55,
+            "maxAttack": 56,
+            "consumedMP": 44,
+            "casting": 1,
+            "duration": 15,
+            "durationPVP": 15,
+            "abilities": [
+               {
+                  "parameter": "winddefense",
+                  "add": -11,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.92,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 55,
+            "maxAttack": 56,
+            "consumedMP": 46,
+            "casting": 1,
+            "duration": 15,
+            "durationPVP": 15,
+            "abilities": [
+               {
+                  "parameter": "winddefense",
+                  "add": -12,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.94,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 55,
+            "maxAttack": 56,
+            "consumedMP": 46,
+            "casting": 1,
+            "duration": 15,
+            "durationPVP": 15,
+            "abilities": [
+               {
+                  "parameter": "winddefense",
+                  "add": -13,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.96,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 55,
+            "maxAttack": 56,
+            "consumedMP": 48,
+            "casting": 1,
+            "duration": 15,
+            "durationPVP": 15,
+            "abilities": [
+               {
+                  "parameter": "winddefense",
+                  "add": -14,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.98,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 55,
+            "maxAttack": 56,
+            "consumedMP": 48,
+            "casting": 1,
+            "duration": 15,
+            "durationPVP": 15,
+            "abilities": [
+               {
+                  "parameter": "winddefense",
+                  "add": -15,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 57,
+            "maxAttack": 58,
+            "consumedMP": 50,
+            "casting": 1,
+            "duration": 15,
+            "durationPVP": 15,
+            "abilities": [
+               {
+                  "parameter": "winddefense",
+                  "add": -16,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.02,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 57,
+            "maxAttack": 58,
+            "consumedMP": 50,
+            "casting": 1,
+            "duration": 15,
+            "durationPVP": 15,
+            "abilities": [
+               {
+                  "parameter": "winddefense",
+                  "add": -17,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.04,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 57,
+            "maxAttack": 58,
+            "consumedMP": 53,
+            "casting": 1,
+            "duration": 15,
+            "durationPVP": 15,
+            "abilities": [
+               {
+                  "parameter": "winddefense",
+                  "add": -18,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.06,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 57,
+            "maxAttack": 58,
+            "consumedMP": 53,
+            "casting": 1,
+            "duration": 15,
+            "durationPVP": 15,
+            "abilities": [
+               {
+                  "parameter": "winddefense",
+                  "add": -19,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.08,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 57,
+            "maxAttack": 58,
+            "consumedMP": 55,
+            "casting": 1,
+            "duration": 15,
+            "durationPVP": 15,
+            "abilities": [
+               {
+                  "parameter": "winddefense",
+                  "add": -20,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.1,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 58,
+            "maxAttack": 59,
+            "consumedMP": 55,
+            "casting": 1,
+            "duration": 15,
+            "durationPVP": 15,
+            "abilities": [
+               {
+                  "parameter": "winddefense",
+                  "add": -21,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.12,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 58,
+            "maxAttack": 59,
+            "consumedMP": 57,
+            "casting": 1,
+            "duration": 15,
+            "durationPVP": 15,
+            "abilities": [
+               {
+                  "parameter": "winddefense",
+                  "add": -22,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.14,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 58,
+            "maxAttack": 59,
+            "consumedMP": 57,
+            "casting": 1,
+            "duration": 15,
+            "durationPVP": 15,
+            "abilities": [
+               {
+                  "parameter": "winddefense",
+                  "add": -23,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.16,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 58,
+            "maxAttack": 59,
+            "consumedMP": 60,
+            "casting": 1,
+            "duration": 15,
+            "durationPVP": 15,
+            "abilities": [
+               {
+                  "parameter": "winddefense",
+                  "add": -24,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.18,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
             "minAttack": 59,
             "maxAttack": 60,
-            "dotTick": 1,
             "consumedMP": 60,
             "casting": 1,
             "duration": 15,
@@ -7280,14 +7570,14 @@ export const skillsjson = [
                {
                   "parameter": "winddefense",
                   "add": -25,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 2.9,
+                  "scale": 3.2,
                   "pvp": true,
                   "pve": true
                }
@@ -7315,21 +7605,21 @@ export const skillsjson = [
          "th": "Cannon Ball"
       },
       "description": {
-         "en": "Increases the DEX of the target.",
-         "ar": "Increases the DEX of the target.",
+         "en": "Increases DEX of the target.",
+         "ar": "Increases DEX of the target.",
          "br": "Aumenta a destreza.",
          "cns": "\u6682\u65f6\u63d0\u9ad8\u65bd\u6cd5\u5bf9\u8c61\u7684\u654f\u6377\u3002",
          "de": "Erh\u00f6ht die Bereitwilligkeit des angew\u00e4hlten Spielers.",
          "fi": "Kasvattaa kohteen Ketteryytt\u00e4.",
-         "fil": "Increases the DEX of the target.",
+         "fil": "Increases DEX of the target.",
          "fr": "Augmente la dext\u00e9rit\u00e9 de la cible",
-         "it": "Increases the DEX of the target.",
+         "it": "Increases DEX of the target.",
          "kr": "\ub300\uc0c1\uc758 \ubbfc\ucca9\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
-         "nl": "Increases the DEX of the target.",
+         "nl": "Increases DEX of the target.",
          "pl": "Zwi\u0119ksza DEX celu.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u043b\u043e\u0432\u043a\u043e\u0441\u0442\u044c \u0446\u0435\u043b\u0438.",
-         "sw": "Increases the DEX of the target.",
-         "th": "Increases the DEX of the target."
+         "sw": "Increases DEX of the target.",
+         "th": "Increases DEX of the target."
       },
       "icon": "asschecannon.png",
       "class": 8962,
@@ -8679,7 +8969,7 @@ export const skillsjson = [
       "name": {
          "en": "Burningfield",
          "ar": "Burningfield",
-         "br": "Campo em Chamas",
+         "br": "Campo de Chamas",
          "cns": "\u706b\u9677\u9631",
          "de": "Burning Field",
          "fi": "Burningfield",
@@ -8722,8 +9012,9 @@ export const skillsjson = [
       "target": "area",
       "levels": [
          {
-            "minAttack": 10,
-            "maxAttack": 11,
+            "damageMultiplier": 0.35,
+            "minAttack": 106,
+            "maxAttack": 107,
             "dotTick": 1,
             "duration": 6,
             "durationPVP": 6,
@@ -8732,22 +9023,16 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 1.52,
-                  "pvp": true,
-                  "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "dex",
-                  "scale": 0.1,
+                  "scale": 5.52,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 10,
-            "maxAttack": 11,
+            "damageMultiplier": 0.35,
+            "minAttack": 107,
+            "maxAttack": 108,
             "dotTick": 1,
             "duration": 6,
             "durationPVP": 6,
@@ -8756,22 +9041,16 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 1.54,
-                  "pvp": true,
-                  "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "dex",
-                  "scale": 0.1,
+                  "scale": 5.54,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 11,
-            "maxAttack": 12,
+            "damageMultiplier": 0.35,
+            "minAttack": 108,
+            "maxAttack": 109,
             "dotTick": 1,
             "duration": 6,
             "durationPVP": 6,
@@ -8780,22 +9059,16 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 1.56,
-                  "pvp": true,
-                  "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "dex",
-                  "scale": 0.1,
+                  "scale": 5.56,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 11,
-            "maxAttack": 12,
+            "damageMultiplier": 0.35,
+            "minAttack": 109,
+            "maxAttack": 110,
             "dotTick": 1,
             "duration": 6,
             "durationPVP": 6,
@@ -8804,22 +9077,16 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 1.58,
-                  "pvp": true,
-                  "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "dex",
-                  "scale": 0.1,
+                  "scale": 5.58,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 12,
-            "maxAttack": 13,
+            "damageMultiplier": 0.35,
+            "minAttack": 110,
+            "maxAttack": 111,
             "dotTick": 1,
             "duration": 6,
             "durationPVP": 6,
@@ -8828,14 +9095,97 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 1.6,
+                  "scale": 5.6,
                   "pvp": true,
                   "pve": true
-               },
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.35,
+            "minAttack": 111,
+            "maxAttack": 112,
+            "dotTick": 1,
+            "duration": 6,
+            "durationPVP": 6,
+            "spellRange": 4,
+            "scalingParameters": [
                {
-                  "parameter": "duration",
+                  "parameter": "attack",
                   "stat": "dex",
-                  "scale": 0.1,
+                  "scale": 5.62,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.35,
+            "minAttack": 112,
+            "maxAttack": 113,
+            "dotTick": 1,
+            "duration": 6,
+            "durationPVP": 6,
+            "spellRange": 4,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 5.64,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.35,
+            "minAttack": 113,
+            "maxAttack": 114,
+            "dotTick": 1,
+            "duration": 6,
+            "durationPVP": 6,
+            "spellRange": 4,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 5.66,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.35,
+            "minAttack": 114,
+            "maxAttack": 115,
+            "dotTick": 1,
+            "duration": 6,
+            "durationPVP": 6,
+            "spellRange": 4,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 5.68,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.35,
+            "minAttack": 115,
+            "maxAttack": 116,
+            "dotTick": 1,
+            "duration": 6,
+            "durationPVP": 6,
+            "spellRange": 4,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 5.7,
                   "pvp": true,
                   "pve": true
                }
@@ -9441,30 +9791,30 @@ export const skillsjson = [
          "th": "Piercing Serpent"
       },
       "description": {
-         "en": "Fires a piercing beam at the target. ",
-         "ar": "Fires a piercing beam at the target. ",
-         "br": "Atira um raio penetrante no alvo.",
-         "cns": "\u5c06\u5143\u6c14\u96c6\u4e2d\u5230\u62f3\u5957\u4e0a\uff0c\u7784\u51c6\u5904\u4e8e\u540c\u4e00\u6761\u7ebf\u4e0a\u7684\u654c\u4eba\u731b\u529b\u53d1\u5c04\u3002",
-         "de": "Einen Angriff gegen den Feind, in dem man Geisteskraft aus dem Knuckle schie\u00dft.",
-         "fi": "Ampuu l\u00e4p\u00e4isev\u00e4n s\u00e4teen kohteeseen.",
-         "fil": "Fires a piercing beam at the target. ",
-         "fr": "D\u00e9charge la force du Moine sur les ennemis lui faisant face",
-         "it": "Fires a piercing beam at the target. ",
-         "kr": "\ub108\ud074\ud574\uba38\uc5d0 \uc21c\uac04\uc801\uc73c\ub85c \uae30\ub97c \ubaa8\uc558\ub2e4\uac00 \uc804\ubc29\uc758 \uc801\ub4e4\uc744 \ud5a5\ud574 \ubc1c\uc0ac\ud558\uc5ec \uac00\uaca9\ud569\ub2c8\ub2e4.",
-         "nl": "Fires a piercing beam at the target. ",
-         "pl": "Przebija wszystkich wrog\u00f3w przed tob\u0105 za pomoc\u0105 promienia energii.",
-         "ru": "\u0420\u0435\u0437\u043a\u0438\u0439 \u0440\u044b\u0432\u043e\u043a \u0432\u043f\u0435\u0440\u0435\u0434 \u0438 \u043c\u043e\u0449\u043d\u044b\u0439 \u0443\u0434\u0430\u0440.",
-         "sw": "Fires a piercing beam at the target. ",
-         "th": "Fires a piercing beam at the target. "
+         "en": "Fires a piercing beam at the target.",
+         "ar": "Fires a piercing beam at the target.",
+         "br": "Fires a piercing beam at the target.",
+         "cns": "Fires a piercing beam at the target.",
+         "de": "Fires a piercing beam at the target.",
+         "fi": "Fires a piercing beam at the target.",
+         "fil": "Fires a piercing beam at the target.",
+         "fr": "Fires a piercing beam at the target.",
+         "it": "Fires a piercing beam at the target.",
+         "kr": "Fires a piercing beam at the target.",
+         "nl": "Fires a piercing beam at the target.",
+         "pl": "Fires a piercing beam at the target.",
+         "ru": "Fires a piercing beam at the target.",
+         "sw": "Fires a piercing beam at the target.",
+         "th": "Fires a piercing beam at the target."
       },
       "icon": "bilpiercingserpent.png",
       "class": 7424,
-      "level": 70,
+      "level": 60,
       "element": "none",
-      "magic": false,
+      "magic": true,
       "requirements": [
          {
-            "skill": 8813,
+            "skill": 6451,
             "level": 5
          }
       ],
@@ -9473,164 +9823,154 @@ export const skillsjson = [
       "debuff": true,
       "flying": true,
       "passive": false,
-      "target": "line",
+      "target": "single",
       "skillPoints": 3,
       "levels": [
          {
-            "minAttack": 110,
-            "maxAttack": 111,
-            "consumedFP": 50,
+            "minAttack": 120,
+            "maxAttack": 121,
+            "consumedMP": 40,
             "casting": 1,
-            "spellRange": 4,
             "scalingParameters": [
                {
                   "parameter": "attack",
-                  "stat": "str",
-                  "scale": 4.52,
+                  "stat": "int",
+                  "scale": 3.72,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 111,
-            "maxAttack": 112,
-            "consumedFP": 55,
+            "minAttack": 121,
+            "maxAttack": 122,
+            "consumedMP": 40,
             "casting": 1,
-            "spellRange": 4,
             "scalingParameters": [
                {
                   "parameter": "attack",
-                  "stat": "str",
-                  "scale": 4.54,
+                  "stat": "int",
+                  "scale": 3.74,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 112,
-            "maxAttack": 113,
-            "consumedFP": 60,
+            "minAttack": 122,
+            "maxAttack": 123,
+            "consumedMP": 40,
             "casting": 1,
-            "spellRange": 4,
             "scalingParameters": [
                {
                   "parameter": "attack",
-                  "stat": "str",
-                  "scale": 4.56,
+                  "stat": "int",
+                  "scale": 3.76,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 113,
-            "maxAttack": 114,
-            "consumedFP": 65,
+            "minAttack": 123,
+            "maxAttack": 124,
+            "consumedMP": 40,
             "casting": 1,
-            "spellRange": 4,
             "scalingParameters": [
                {
                   "parameter": "attack",
-                  "stat": "str",
-                  "scale": 4.58,
+                  "stat": "int",
+                  "scale": 3.78,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 114,
-            "maxAttack": 115,
-            "consumedFP": 70,
+            "minAttack": 124,
+            "maxAttack": 125,
+            "consumedMP": 40,
             "casting": 1,
-            "spellRange": 4,
             "scalingParameters": [
                {
                   "parameter": "attack",
-                  "stat": "str",
-                  "scale": 4.6,
+                  "stat": "int",
+                  "scale": 3.8,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 115,
-            "maxAttack": 116,
-            "consumedFP": 75,
+            "minAttack": 125,
+            "maxAttack": 126,
+            "consumedMP": 45,
             "casting": 1,
-            "spellRange": 4,
             "scalingParameters": [
                {
                   "parameter": "attack",
-                  "stat": "str",
-                  "scale": 4.62,
+                  "stat": "int",
+                  "scale": 3.82,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 116,
-            "maxAttack": 117,
-            "consumedFP": 80,
+            "minAttack": 126,
+            "maxAttack": 127,
+            "consumedMP": 50,
             "casting": 1,
-            "spellRange": 4,
             "scalingParameters": [
                {
                   "parameter": "attack",
-                  "stat": "str",
-                  "scale": 4.64,
+                  "stat": "int",
+                  "scale": 3.84,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 117,
-            "maxAttack": 118,
-            "consumedFP": 85,
+            "minAttack": 127,
+            "maxAttack": 128,
+            "consumedMP": 65,
             "casting": 1,
-            "spellRange": 4,
             "scalingParameters": [
                {
                   "parameter": "attack",
-                  "stat": "str",
-                  "scale": 4.66,
+                  "stat": "int",
+                  "scale": 3.86,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 118,
-            "maxAttack": 119,
-            "consumedFP": 90,
+            "minAttack": 128,
+            "maxAttack": 129,
+            "consumedMP": 70,
             "casting": 1,
-            "spellRange": 4,
             "scalingParameters": [
                {
                   "parameter": "attack",
-                  "stat": "str",
-                  "scale": 4.68,
+                  "stat": "int",
+                  "scale": 3.88,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 119,
-            "maxAttack": 120,
-            "consumedFP": 100,
+            "minAttack": 129,
+            "maxAttack": 130,
+            "consumedMP": 80,
             "casting": 1,
-            "spellRange": 4,
             "scalingParameters": [
                {
                   "parameter": "attack",
-                  "stat": "str",
-                  "scale": 4.7,
+                  "stat": "int",
+                  "scale": 3.9,
                   "pvp": true,
                   "pve": true
                }
@@ -10232,7 +10572,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": -9,
+                  "add": -10,
                   "rate": true
                },
                {
@@ -10263,7 +10603,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": -10,
+                  "add": -12,
                   "rate": true
                },
                {
@@ -10294,7 +10634,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": -10,
+                  "add": -15,
                   "rate": true
                },
                {
@@ -10852,7 +11192,7 @@ export const skillsjson = [
       "skillPoints": 3,
       "levels": [
          {
-            "consumedMP": 40,
+            "consumedMP": 70,
             "casting": 0.6,
             "duration": 300,
             "durationPVP": 300,
@@ -10874,7 +11214,7 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedMP": 42,
+            "consumedMP": 72,
             "casting": 0.6,
             "duration": 300,
             "durationPVP": 300,
@@ -10896,7 +11236,7 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedMP": 44,
+            "consumedMP": 74,
             "casting": 0.6,
             "duration": 300,
             "durationPVP": 300,
@@ -10918,7 +11258,7 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedMP": 46,
+            "consumedMP": 76,
             "casting": 0.6,
             "duration": 300,
             "durationPVP": 300,
@@ -10940,7 +11280,7 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedMP": 48,
+            "consumedMP": 78,
             "casting": 0.6,
             "duration": 300,
             "durationPVP": 300,
@@ -10962,7 +11302,7 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedMP": 50,
+            "consumedMP": 80,
             "casting": 0.6,
             "duration": 300,
             "durationPVP": 300,
@@ -10984,7 +11324,7 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedMP": 52,
+            "consumedMP": 82,
             "casting": 0.6,
             "duration": 300,
             "durationPVP": 300,
@@ -11006,7 +11346,7 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedMP": 54,
+            "consumedMP": 84,
             "casting": 0.6,
             "duration": 300,
             "durationPVP": 300,
@@ -11028,7 +11368,7 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedMP": 56,
+            "consumedMP": 86,
             "casting": 0.6,
             "duration": 300,
             "durationPVP": 300,
@@ -11050,7 +11390,7 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedMP": 60,
+            "consumedMP": 90,
             "casting": 0.6,
             "duration": 300,
             "durationPVP": 300,
@@ -11078,7 +11418,7 @@ export const skillsjson = [
       "name": {
          "en": "Strongwind",
          "ar": "Strongwind",
-         "br": "Vento Forte",
+         "br": "Furac\u00e3o",
          "cns": "\u9f99\u5377\u98d3\u98ce",
          "de": "Strongwind",
          "fi": "Strongwind",
@@ -11093,21 +11433,21 @@ export const skillsjson = [
          "th": "Strongwind"
       },
       "description": {
-         "en": "Ranged, wind attack that moves the enemy.",
-         "ar": "Ranged, wind attack that moves the enemy.",
+         "en": "Ranged, wind attack that moves the enemy. Chance to reduce the targets healing capabilities.",
+         "ar": "Ranged, wind attack that moves the enemy. Chance to reduce the targets healing capabilities.",
          "br": "Ataque de vento a distancia que empurra o inimigo.",
          "cns": "\u501f\u52a9\u6cd5\u529b\u4ea7\u751f\u9f99\u5377\u98ce\uff0c\u7ed9\u5bf9\u65b9\u9020\u6210\u8f83\u9ad8\u7684\u4f24\u5bb3\uff0c\u5e76\u6709\u6982\u7387\u5c06\u5bf9\u65b9\u51fb\u9000\u3002",
          "de": "Dem Gegner durch einen starken Wind Schaden zuf\u00fcgen. Der Gegner wird dabei zur\u00fcckgesto\u00dfen.",
          "fi": "Et\u00e4 tuulihy\u00f6kk\u00e4ys joka liikuttaa vihollista.",
-         "fil": "Ranged, wind attack that moves the enemy.",
+         "fil": "Ranged, wind attack that moves the enemy. Chance to reduce the targets healing capabilities.",
          "fr": "Invoque un vent fort causant des dommages \u00e0 l'ennemi et le faisant reculer",
-         "it": "Ranged, wind attack that moves the enemy.",
+         "it": "Ranged, wind attack that moves the enemy. Chance to reduce the targets healing capabilities.",
          "kr": "\uac15\ud55c \ubc14\ub78c\uc73c\ub85c \uc801\uc5d0\uac8c \ub0a0\ub824 \uacf5\uaca9\ud569\ub2c8\ub2e4. \uc774\ub54c \uc801\uc744 \ubc18\ub300 \ubc29\ud5a5\uc73c\ub85c \ubc00\uc5b4\ub0c5\ub2c8\ub2e4.",
-         "nl": "Ranged, wind attack that moves the enemy.",
+         "nl": "Ranged, wind attack that moves the enemy. Chance to reduce the targets healing capabilities.",
          "pl": "Odpycha wroga pot\u0119\u017cnym podmuchem.",
          "ru": "\u0410\u0442\u0430\u043a\u0430 \u0434\u0430\u043b\u044c\u043d\u0435\u0433\u043e \u0431\u043e\u044f, \u043e\u0442\u0431\u0440\u0430\u0441\u044b\u0432\u0430\u044e\u0449\u0430\u044f \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430.",
-         "sw": "Ranged, wind attack that moves the enemy.",
-         "th": "Ranged, wind attack that moves the enemy."
+         "sw": "Ranged, wind attack that moves the enemy. Chance to reduce the targets healing capabilities.",
+         "th": "Ranged, wind attack that moves the enemy. Chance to reduce the targets healing capabilities."
       },
       "icon": "magwindstrong.png",
       "class": 9581,
@@ -11981,280 +12321,280 @@ export const skillsjson = [
       "skillPoints": 2,
       "levels": [
          {
-            "minAttack": 8,
-            "maxAttack": 9,
+            "minAttack": 10,
+            "maxAttack": 11,
+            "consumedFP": 10,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 2.02,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 10,
+            "maxAttack": 11,
+            "consumedFP": 10,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 2.04,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 10,
+            "maxAttack": 11,
+            "consumedFP": 11,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 2.06,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 10,
+            "maxAttack": 11,
+            "consumedFP": 13,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 2.08,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 10,
+            "maxAttack": 11,
+            "consumedFP": 16,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 2.1,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 10,
+            "maxAttack": 11,
+            "consumedFP": 16,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 2.12,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 10,
+            "maxAttack": 11,
             "consumedFP": 20,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 1.42,
+                  "scale": 2.14,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 8,
-            "maxAttack": 9,
+            "minAttack": 10,
+            "maxAttack": 11,
             "consumedFP": 20,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 1.44,
+                  "scale": 2.16,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 8,
-            "maxAttack": 9,
+            "minAttack": 10,
+            "maxAttack": 11,
             "consumedFP": 23,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 1.46,
+                  "scale": 2.18,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 8,
-            "maxAttack": 9,
+            "minAttack": 10,
+            "maxAttack": 11,
             "consumedFP": 23,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 1.48,
+                  "scale": 2.2,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 8,
-            "maxAttack": 9,
+            "minAttack": 10,
+            "maxAttack": 11,
             "consumedFP": 26,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 1.5,
+                  "scale": 2.22,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 8,
-            "maxAttack": 9,
+            "minAttack": 10,
+            "maxAttack": 11,
             "consumedFP": 26,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 1.52,
+                  "scale": 2.24,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 8,
-            "maxAttack": 9,
+            "minAttack": 10,
+            "maxAttack": 11,
             "consumedFP": 30,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 1.54,
+                  "scale": 2.26,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 8,
-            "maxAttack": 9,
+            "minAttack": 10,
+            "maxAttack": 11,
             "consumedFP": 30,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 1.56,
+                  "scale": 2.28,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 8,
-            "maxAttack": 9,
+            "minAttack": 10,
+            "maxAttack": 11,
             "consumedFP": 33,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 1.58,
+                  "scale": 2.3,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 8,
-            "maxAttack": 9,
+            "minAttack": 11,
+            "maxAttack": 12,
             "consumedFP": 33,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 1.6,
+                  "scale": 2.32,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 8,
-            "maxAttack": 9,
+            "minAttack": 12,
+            "maxAttack": 13,
             "consumedFP": 36,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 1.62,
+                  "scale": 2.34,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 8,
-            "maxAttack": 9,
+            "minAttack": 13,
+            "maxAttack": 14,
             "consumedFP": 36,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 1.64,
+                  "scale": 2.36,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 8,
-            "maxAttack": 9,
+            "minAttack": 14,
+            "maxAttack": 15,
             "consumedFP": 40,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 1.66,
+                  "scale": 2.38,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 8,
-            "maxAttack": 9,
+            "minAttack": 15,
+            "maxAttack": 16,
             "consumedFP": 40,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 1.68,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 8,
-            "maxAttack": 9,
-            "consumedFP": 43,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 1.7,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 8,
-            "maxAttack": 9,
-            "consumedFP": 43,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 1.72,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 8,
-            "maxAttack": 9,
-            "consumedFP": 46,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 1.74,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 8,
-            "maxAttack": 9,
-            "consumedFP": 46,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 1.76,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 8,
-            "maxAttack": 9,
-            "consumedFP": 50,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 1.78,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 9,
-            "maxAttack": 10,
-            "consumedFP": 50,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 1.8,
+                  "scale": 2.4,
                   "pvp": true,
                   "pve": true
                }
@@ -12300,7 +12640,7 @@ export const skillsjson = [
       },
       "icon": "acrsupbowmaster.png",
       "class": 9098,
-      "level": 20,
+      "level": 30,
       "element": "none",
       "magic": false,
       "requirements": [
@@ -12747,6 +13087,245 @@ export const skillsjson = [
       ]
    },
    {
+      "id": 2201,
+      "name": {
+         "en": "Sandstorm",
+         "ar": "Sandstorm",
+         "br": "Tempestade de Areia",
+         "cns": "\u98ce\u6c99\u541e\u566c",
+         "de": "Sandstorm",
+         "fi": "Sandstorm",
+         "fil": "Sandstorm",
+         "fr": "Temp\u00eate de sable",
+         "it": "Sandstorm",
+         "kr": "\uc0cc\ub4dc \uc2a4\ud1b0",
+         "nl": "Zandstorm",
+         "pl": "Burza Piaskowa",
+         "ru": "\u0421\u0430\u043c\u0443\u043c",
+         "sw": "Sandstorm",
+         "th": "Sandstorm"
+      },
+      "description": {
+         "en": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "ar": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "br": "Causa danos nos inimigos ao redor com uma tempestade de areia e tem chance de reduzir a Precis\u00e3o do alvo.",
+         "cns": "\u98ce\u4e0e\u571f\u5f62\u6210\u7684\u6c99\u5c18\u66b4\uff0c\u4ee4\u5176\u4e2d\u7684\u76ee\u6807\u53d7\u5230\u5267\u70c8\u653b\u51fb\u3002\u6709\u51e0\u7387\u964d\u4f4e\u76ee\u6807\u547d\u4e2d\u3002",
+         "de": "Mehreren Gegnern durch Herbeirufen eines Sandsturms Schaden zuf\u00fcgen. Kleine Chance die Genauigkeit zu verringern.",
+         "fi": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "fil": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "fr": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "it": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "kr": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "nl": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "pl": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "ru": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "sw": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "th": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy."
+      },
+      "icon": "elemulsanstm.png",
+      "level": 1,
+      "element": "none",
+      "magic": false,
+      "requirements": [],
+      "combo": "general",
+      "debuff": true,
+      "flying": true,
+      "passive": false,
+      "target": "area",
+      "levels": [
+         {
+            "minAttack": 136,
+            "maxAttack": 137,
+            "probability": 50,
+            "probabilityPVP": 50,
+            "consumedMP": 112,
+            "cooldown": 14,
+            "casting": 0.5,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "hitrate",
+                  "add": -5,
+                  "rate": true
+               }
+            ],
+            "spellRange": 8
+         },
+         {
+            "minAttack": 137,
+            "maxAttack": 138,
+            "probability": 55,
+            "probabilityPVP": 55,
+            "consumedMP": 114,
+            "cooldown": 14,
+            "casting": 0.5,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "hitrate",
+                  "add": -5,
+                  "rate": true
+               }
+            ],
+            "spellRange": 8
+         },
+         {
+            "minAttack": 138,
+            "maxAttack": 139,
+            "probability": 60,
+            "probabilityPVP": 60,
+            "consumedMP": 116,
+            "cooldown": 14,
+            "casting": 0.5,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "hitrate",
+                  "add": -5,
+                  "rate": true
+               }
+            ],
+            "spellRange": 8
+         },
+         {
+            "minAttack": 139,
+            "maxAttack": 140,
+            "probability": 65,
+            "probabilityPVP": 65,
+            "consumedMP": 118,
+            "cooldown": 14,
+            "casting": 0.5,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "hitrate",
+                  "add": -10,
+                  "rate": true
+               }
+            ],
+            "spellRange": 8
+         },
+         {
+            "minAttack": 140,
+            "maxAttack": 141,
+            "probability": 70,
+            "probabilityPVP": 70,
+            "consumedMP": 120,
+            "cooldown": 14,
+            "casting": 0.5,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "hitrate",
+                  "add": -15,
+                  "rate": true
+               }
+            ],
+            "spellRange": 8
+         },
+         {
+            "minAttack": 141,
+            "maxAttack": 142,
+            "probability": 75,
+            "probabilityPVP": 75,
+            "consumedMP": 122,
+            "cooldown": 14,
+            "casting": 0.5,
+            "duration": 11,
+            "durationPVP": 11,
+            "abilities": [
+               {
+                  "parameter": "hitrate",
+                  "add": -20,
+                  "rate": true
+               }
+            ],
+            "spellRange": 8
+         },
+         {
+            "minAttack": 142,
+            "maxAttack": 143,
+            "probability": 76,
+            "probabilityPVP": 76,
+            "consumedMP": 124,
+            "cooldown": 14,
+            "casting": 0.5,
+            "duration": 12,
+            "durationPVP": 12,
+            "abilities": [
+               {
+                  "parameter": "hitrate",
+                  "add": -25,
+                  "rate": true
+               }
+            ],
+            "spellRange": 8
+         },
+         {
+            "minAttack": 143,
+            "maxAttack": 144,
+            "probability": 77,
+            "probabilityPVP": 77,
+            "consumedMP": 126,
+            "cooldown": 14,
+            "casting": 0.5,
+            "duration": 13,
+            "durationPVP": 13,
+            "abilities": [
+               {
+                  "parameter": "hitrate",
+                  "add": -30,
+                  "rate": true
+               }
+            ],
+            "spellRange": 8
+         },
+         {
+            "minAttack": 144,
+            "maxAttack": 145,
+            "probability": 78,
+            "probabilityPVP": 78,
+            "consumedMP": 128,
+            "cooldown": 14,
+            "casting": 0.5,
+            "duration": 14,
+            "durationPVP": 14,
+            "abilities": [
+               {
+                  "parameter": "hitrate",
+                  "add": -35,
+                  "rate": true
+               }
+            ],
+            "spellRange": 8
+         },
+         {
+            "minAttack": 145,
+            "maxAttack": 146,
+            "probability": 80,
+            "probabilityPVP": 80,
+            "consumedMP": 130,
+            "cooldown": 14,
+            "casting": 0.5,
+            "duration": 15,
+            "durationPVP": 15,
+            "abilities": [
+               {
+                  "parameter": "hitrate",
+                  "add": -40,
+                  "rate": true
+               }
+            ],
+            "spellRange": 8
+         }
+      ]
+   },
+   {
       "id": 2418,
       "name": {
          "en": "Blindside",
@@ -12784,7 +13363,7 @@ export const skillsjson = [
       },
       "icon": "meroneblinds.png",
       "class": 764,
-      "level": 24,
+      "level": 25,
       "element": "none",
       "magic": false,
       "requirements": [
@@ -13390,8 +13969,8 @@ export const skillsjson = [
       "target": "single",
       "levels": [
          {
-            "duration": 5,
-            "durationPVP": 5,
+            "duration": 2,
+            "durationPVP": 2,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -13940,7 +14519,7 @@ export const skillsjson = [
       "description": {
          "en": "Steal penya from a target while in Dark Illusion. Attack from behind.",
          "ar": "Steal penya from a target while in Dark Illusion. Attack from behind.",
-         "br": "Um ataque que rouba Penya de um alvo durante uma Ilus\u00e3o das Trevas. \u00c9 necess\u00e1rio atacar por tr\u00e1s do alvo.",
+         "br": "Um ataque que rouba Penya de um alvo durante uma Ilus\u00e3o Sombria. \u00c9 necess\u00e1rio atacar por tr\u00e1s do alvo.",
          "cns": "\u9700\u5904\u4e8e\u6f5c\u884c\u72b6\u6001\u4e14\u53ea\u80fd\u5728\u80cc\u540e\u4f7f\u7528\uff0c\u7ed9\u4e88\u81f4\u547d\u4f24\u5bb3\u7684\u540c\u65f6\u6709\u4e00\u5b9a\u51e0\u7387\u7a83\u53d6\u5bf9\u65b9\u7684\u91d1\u5e01\u3002",
          "de": "Stiehlt Penya vom Gegner w\u00e4hrend man Dark Illusion benutzt. Du solltest hinter dem angew\u00e4hlten Ziel stehen.",
          "fi": "Steal penya from a target while in Dark Illusion. Attack from behind.",
@@ -13976,7 +14555,7 @@ export const skillsjson = [
          {
             "minAttack": 35,
             "maxAttack": 36,
-            "consumedFP": 45,
+            "consumedFP": 10,
             "cooldown": 10,
             "scalingParameters": [
                {
@@ -13991,7 +14570,7 @@ export const skillsjson = [
          {
             "minAttack": 35,
             "maxAttack": 36,
-            "consumedFP": 46,
+            "consumedFP": 10,
             "cooldown": 10,
             "scalingParameters": [
                {
@@ -14006,7 +14585,7 @@ export const skillsjson = [
          {
             "minAttack": 36,
             "maxAttack": 37,
-            "consumedFP": 47,
+            "consumedFP": 10,
             "cooldown": 10,
             "scalingParameters": [
                {
@@ -14021,7 +14600,7 @@ export const skillsjson = [
          {
             "minAttack": 36,
             "maxAttack": 37,
-            "consumedFP": 48,
+            "consumedFP": 10,
             "cooldown": 10,
             "scalingParameters": [
                {
@@ -14036,7 +14615,7 @@ export const skillsjson = [
          {
             "minAttack": 37,
             "maxAttack": 38,
-            "consumedFP": 49,
+            "consumedFP": 10,
             "cooldown": 10,
             "scalingParameters": [
                {
@@ -14051,7 +14630,7 @@ export const skillsjson = [
          {
             "minAttack": 37,
             "maxAttack": 38,
-            "consumedFP": 50,
+            "consumedFP": 10,
             "cooldown": 10,
             "scalingParameters": [
                {
@@ -14066,7 +14645,7 @@ export const skillsjson = [
          {
             "minAttack": 38,
             "maxAttack": 39,
-            "consumedFP": 51,
+            "consumedFP": 10,
             "cooldown": 10,
             "scalingParameters": [
                {
@@ -14081,7 +14660,7 @@ export const skillsjson = [
          {
             "minAttack": 38,
             "maxAttack": 39,
-            "consumedFP": 52,
+            "consumedFP": 10,
             "cooldown": 10,
             "scalingParameters": [
                {
@@ -14096,7 +14675,7 @@ export const skillsjson = [
          {
             "minAttack": 39,
             "maxAttack": 40,
-            "consumedFP": 53,
+            "consumedFP": 10,
             "cooldown": 10,
             "scalingParameters": [
                {
@@ -14111,7 +14690,7 @@ export const skillsjson = [
          {
             "minAttack": 39,
             "maxAttack": 40,
-            "consumedFP": 54,
+            "consumedFP": 10,
             "cooldown": 10,
             "scalingParameters": [
                {
@@ -14126,7 +14705,7 @@ export const skillsjson = [
          {
             "minAttack": 40,
             "maxAttack": 41,
-            "consumedFP": 56,
+            "consumedFP": 11,
             "cooldown": 10,
             "scalingParameters": [
                {
@@ -14141,7 +14720,7 @@ export const skillsjson = [
          {
             "minAttack": 40,
             "maxAttack": 41,
-            "consumedFP": 58,
+            "consumedFP": 11,
             "cooldown": 10,
             "scalingParameters": [
                {
@@ -14156,7 +14735,7 @@ export const skillsjson = [
          {
             "minAttack": 41,
             "maxAttack": 42,
-            "consumedFP": 60,
+            "consumedFP": 12,
             "cooldown": 10,
             "scalingParameters": [
                {
@@ -14171,7 +14750,7 @@ export const skillsjson = [
          {
             "minAttack": 41,
             "maxAttack": 42,
-            "consumedFP": 62,
+            "consumedFP": 12,
             "cooldown": 10,
             "scalingParameters": [
                {
@@ -14186,7 +14765,7 @@ export const skillsjson = [
          {
             "minAttack": 42,
             "maxAttack": 43,
-            "consumedFP": 64,
+            "consumedFP": 13,
             "cooldown": 10,
             "scalingParameters": [
                {
@@ -14201,7 +14780,7 @@ export const skillsjson = [
          {
             "minAttack": 42,
             "maxAttack": 43,
-            "consumedFP": 66,
+            "consumedFP": 13,
             "cooldown": 10,
             "scalingParameters": [
                {
@@ -14216,7 +14795,7 @@ export const skillsjson = [
          {
             "minAttack": 43,
             "maxAttack": 44,
-            "consumedFP": 68,
+            "consumedFP": 14,
             "cooldown": 10,
             "scalingParameters": [
                {
@@ -14231,7 +14810,7 @@ export const skillsjson = [
          {
             "minAttack": 43,
             "maxAttack": 44,
-            "consumedFP": 70,
+            "consumedFP": 14,
             "cooldown": 10,
             "scalingParameters": [
                {
@@ -14246,7 +14825,7 @@ export const skillsjson = [
          {
             "minAttack": 44,
             "maxAttack": 45,
-            "consumedFP": 72,
+            "consumedFP": 15,
             "cooldown": 10,
             "scalingParameters": [
                {
@@ -14261,7 +14840,7 @@ export const skillsjson = [
          {
             "minAttack": 44,
             "maxAttack": 45,
-            "consumedFP": 74,
+            "consumedFP": 15,
             "cooldown": 10,
             "scalingParameters": [
                {
@@ -14280,13 +14859,13 @@ export const skillsjson = [
       "name": {
          "en": "Pain Dealer",
          "ar": "Pain Dealer",
-         "br": "Distribuidor de Dor",
+         "br": "Emiss\u00e3o de Dor",
          "cns": "\u788e\u7532",
          "de": "Pain Dealer",
          "fi": "Pain Dealer",
          "fil": "Pain Dealer",
          "fr": "Marchand de douleur",
-         "it": "Pain Dealer",
+         "it": "Mercante di dolore",
          "kr": "\ud398\uc778 \ub51c\ub7ec",
          "nl": "Pain Dealer",
          "pl": "Bolesna Rana",
@@ -14295,21 +14874,21 @@ export const skillsjson = [
          "th": "Pain Dealer"
       },
       "description": {
-         "en": "Powerful, downward strike. Lowers the defense of the target. Requires two-handed axe.",
-         "ar": "Powerful, downward strike. Lowers the defense of the target. Requires two-handed axe.",
-         "br": "Um golpe potente para baixo. Diminui a defesa do alvo. Exige um machado de duas m\u00e3os.",
-         "cns": "\u7528\u65a7\u51fb\u88c2\u654c\u4eba\u7684\u76d4\u7532\uff0c\u77ed\u65f6\u95f4\u5185\u964d\u4f4e\u5bf9\u65b9\u9632\u5fa1\u529b\u3002",
-         "de": "Verringert die gegnerische Verteidigung kurzzeitig beim Angriff, wenn man eine Axt verwendet.",
-         "fi": "Voimakas, alasp\u00e4in suuntautuva isku. Alentaa kohteen puolustusta. Vaatii kahden k\u00e4den kirveen.",
-         "fil": "Powerful, downward strike. Lowers the defense of the target. Requires two-handed axe.",
-         "fr": "Coup de hache qui r\u00e9duit la d\u00e9fense de l'ennemi en plus d'administrer des dommages",
-         "it": "Powerful, downward strike. Lowers the defense of the target. Requires two-handed axe.",
-         "kr": "\uc5d1\uc2a4\ub85c \uc801\uc758 \uac11\uc637\uc744 \ub0b4\ub824\ucc0d\uc5b4 \uc77c\uc2dc\uc801\uc73c\ub85c \ubc29\uc5b4\ub825\uc744 \ud558\ub77d\uc2dc\ud0b5\ub2c8\ub2e4.",
-         "nl": "Powerful, downward strike. Lowers the defense of the target. Requires two-handed axe.",
-         "pl": "Potwornie bolesny cios, obni\u017caj\u0105cy si\u0142\u0119 obrony celu. Wymaga Halabardy.",
-         "ru": "\u0421\u0438\u043b\u044c\u043d\u044b\u0439 \u0443\u0434\u0430\u0440, \u0441\u043d\u0438\u0436\u0430\u044e\u0449\u0438\u0439 \u0437\u0430\u0449\u0438\u0442\u0443 \u0446\u0435\u043b\u0438. \u0414\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f \u0434\u0432\u0443\u0440\u0443\u0447\u043d\u044b\u0439 \u0442\u043e\u043f\u043e\u0440 \u0438\u043b\u0438 \u0441\u0435\u043a\u0438\u0440\u0430.",
-         "sw": "Powerful, downward strike. Lowers the defense of the target. Requires two-handed axe.",
-         "th": "Powerful, downward strike. Lowers the defense of the target. Requires two-handed axe."
+         "en": "Powerful, downward strike. Lowers the defense of the target. Requires a two-handed weapon.",
+         "ar": "Powerful, downward strike. Lowers the defense of the target. Requires a two-handed weapon.",
+         "br": "Powerful, downward strike. Lowers the defense of the target. Requires a two-handed weapon.",
+         "cns": "Powerful, downward strike. Lowers the defense of the target. Requires a two-handed weapon.",
+         "de": "Powerful, downward strike. Lowers the defense of the target. Requires a two-handed weapon.",
+         "fi": "Powerful, downward strike. Lowers the defense of the target. Requires a two-handed weapon.",
+         "fil": "Powerful, downward strike. Lowers the defense of the target. Requires a two-handed weapon.",
+         "fr": "Powerful, downward strike. Lowers the defense of the target. Requires a two-handed weapon.",
+         "it": "Powerful, downward strike. Lowers the defense of the target. Requires a two-handed weapon.",
+         "kr": "Powerful, downward strike. Lowers the defense of the target. Requires a two-handed weapon.",
+         "nl": "Powerful, downward strike. Lowers the defense of the target. Requires a two-handed weapon.",
+         "pl": "Powerful, downward strike. Lowers the defense of the target. Requires a two-handed weapon.",
+         "ru": "Powerful, downward strike. Lowers the defense of the target. Requires a two-handed weapon.",
+         "sw": "Powerful, downward strike. Lowers the defense of the target. Requires a two-handed weapon.",
+         "th": "Powerful, downward strike. Lowers the defense of the target. Requires a two-handed weapon."
       },
       "icon": "knttaxpaidea.png",
       "class": 5330,
@@ -14322,7 +14901,6 @@ export const skillsjson = [
             "level": 3
          }
       ],
-      "weapon": "axe",
       "combo": "general",
       "debuff": true,
       "flying": true,
@@ -14334,14 +14912,19 @@ export const skillsjson = [
             "minAttack": 86,
             "maxAttack": 87,
             "consumedFP": 56,
-            "cooldown": 31,
+            "cooldown": 40,
             "casting": 1.25,
-            "duration": 60,
-            "durationPVP": 60,
+            "duration": 8,
+            "durationPVP": 8,
             "abilities": [
                {
                   "parameter": "def",
-                  "add": -8,
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 1,
                   "rate": true
                }
             ],
@@ -14349,7 +14932,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.02,
+                  "scale": 5.02,
                   "pvp": true,
                   "pve": true
                }
@@ -14359,14 +14942,19 @@ export const skillsjson = [
             "minAttack": 88,
             "maxAttack": 89,
             "consumedFP": 59,
-            "cooldown": 31,
+            "cooldown": 39,
             "casting": 1.25,
-            "duration": 60,
-            "durationPVP": 60,
+            "duration": 10,
+            "durationPVP": 10,
             "abilities": [
                {
                   "parameter": "def",
-                  "add": -10,
+                  "add": -11,
+                  "rate": true
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 1,
                   "rate": true
                }
             ],
@@ -14374,7 +14962,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.04,
+                  "scale": 5.04,
                   "pvp": true,
                   "pve": true
                }
@@ -14384,14 +14972,19 @@ export const skillsjson = [
             "minAttack": 90,
             "maxAttack": 91,
             "consumedFP": 62,
-            "cooldown": 29,
+            "cooldown": 38,
             "casting": 1.25,
-            "duration": 60,
-            "durationPVP": 60,
+            "duration": 15,
+            "durationPVP": 15,
             "abilities": [
                {
                   "parameter": "def",
-                  "add": -16,
+                  "add": -12,
+                  "rate": true
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 1,
                   "rate": true
                }
             ],
@@ -14399,7 +14992,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.06,
+                  "scale": 5.06,
                   "pvp": true,
                   "pve": true
                }
@@ -14409,14 +15002,19 @@ export const skillsjson = [
             "minAttack": 92,
             "maxAttack": 93,
             "consumedFP": 65,
-            "cooldown": 27,
+            "cooldown": 37,
             "casting": 1.25,
-            "duration": 60,
-            "durationPVP": 60,
+            "duration": 20,
+            "durationPVP": 20,
             "abilities": [
                {
                   "parameter": "def",
-                  "add": -21,
+                  "add": -13,
+                  "rate": true
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 2,
                   "rate": true
                }
             ],
@@ -14424,7 +15022,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.08,
+                  "scale": 5.08,
                   "pvp": true,
                   "pve": true
                }
@@ -14434,14 +15032,19 @@ export const skillsjson = [
             "minAttack": 94,
             "maxAttack": 95,
             "consumedFP": 68,
-            "cooldown": 25,
+            "cooldown": 36,
             "casting": 1.25,
-            "duration": 60,
-            "durationPVP": 60,
+            "duration": 25,
+            "durationPVP": 25,
             "abilities": [
                {
                   "parameter": "def",
-                  "add": -26,
+                  "add": -14,
+                  "rate": true
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 2,
                   "rate": true
                }
             ],
@@ -14449,7 +15052,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.1,
+                  "scale": 5.1,
                   "pvp": true,
                   "pve": true
                }
@@ -14459,14 +15062,19 @@ export const skillsjson = [
             "minAttack": 96,
             "maxAttack": 97,
             "consumedFP": 71,
-            "cooldown": 23,
+            "cooldown": 35,
             "casting": 1.25,
-            "duration": 60,
-            "durationPVP": 60,
+            "duration": 30,
+            "durationPVP": 30,
             "abilities": [
                {
                   "parameter": "def",
-                  "add": -29,
+                  "add": -15,
+                  "rate": true
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 3,
                   "rate": true
                }
             ],
@@ -14474,7 +15082,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.12,
+                  "scale": 5.12,
                   "pvp": true,
                   "pve": true
                }
@@ -14484,14 +15092,19 @@ export const skillsjson = [
             "minAttack": 98,
             "maxAttack": 99,
             "consumedFP": 74,
-            "cooldown": 21,
+            "cooldown": 34,
             "casting": 1.25,
-            "duration": 60,
-            "durationPVP": 60,
+            "duration": 35,
+            "durationPVP": 35,
             "abilities": [
                {
                   "parameter": "def",
-                  "add": -32,
+                  "add": -16,
+                  "rate": true
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 3,
                   "rate": true
                }
             ],
@@ -14499,7 +15112,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.14,
+                  "scale": 5.14,
                   "pvp": true,
                   "pve": true
                }
@@ -14509,14 +15122,19 @@ export const skillsjson = [
             "minAttack": 100,
             "maxAttack": 101,
             "consumedFP": 77,
-            "cooldown": 19,
+            "cooldown": 33,
             "casting": 1.25,
-            "duration": 60,
-            "durationPVP": 60,
+            "duration": 40,
+            "durationPVP": 40,
             "abilities": [
                {
                   "parameter": "def",
-                  "add": -34,
+                  "add": -17,
+                  "rate": true
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 4,
                   "rate": true
                }
             ],
@@ -14524,7 +15142,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.16,
+                  "scale": 5.16,
                   "pvp": true,
                   "pve": true
                }
@@ -14534,14 +15152,19 @@ export const skillsjson = [
             "minAttack": 102,
             "maxAttack": 103,
             "consumedFP": 80,
-            "cooldown": 17,
+            "cooldown": 32,
             "casting": 1.25,
-            "duration": 60,
-            "durationPVP": 60,
+            "duration": 45,
+            "durationPVP": 45,
             "abilities": [
                {
                   "parameter": "def",
-                  "add": -37,
+                  "add": -18,
+                  "rate": true
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 4,
                   "rate": true
                }
             ],
@@ -14549,7 +15172,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.18,
+                  "scale": 5.18,
                   "pvp": true,
                   "pve": true
                }
@@ -14559,14 +15182,19 @@ export const skillsjson = [
             "minAttack": 104,
             "maxAttack": 105,
             "consumedFP": 83,
-            "cooldown": 15,
+            "cooldown": 30,
             "casting": 1.25,
             "duration": 60,
             "durationPVP": 60,
             "abilities": [
                {
                   "parameter": "def",
-                  "add": -40,
+                  "add": -20,
+                  "rate": true
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 5,
                   "rate": true
                }
             ],
@@ -14574,7 +15202,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.2,
+                  "scale": 5.2,
                   "pvp": true,
                   "pve": true
                }
@@ -14620,7 +15248,7 @@ export const skillsjson = [
       },
       "icon": "assknutampin.png",
       "class": 8962,
-      "level": 20,
+      "level": 15,
       "element": "none",
       "magic": false,
       "requirements": [
@@ -14638,300 +15266,320 @@ export const skillsjson = [
       "skillPoints": 2,
       "levels": [
          {
-            "minAttack": 38,
-            "maxAttack": 39,
+            "minAttack": 19,
+            "maxAttack": 20,
             "consumedFP": 20,
+            "cooldown": 0.5,
             "casting": 1,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.52,
+                  "scale": 4.02,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 38,
-            "maxAttack": 39,
+            "minAttack": 20,
+            "maxAttack": 21,
             "consumedFP": 20,
+            "cooldown": 0.5,
             "casting": 1,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.54,
+                  "scale": 4.04,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 39,
-            "maxAttack": 40,
+            "minAttack": 20,
+            "maxAttack": 21,
             "consumedFP": 20,
+            "cooldown": 0.5,
             "casting": 1,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.56,
+                  "scale": 4.06,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 39,
-            "maxAttack": 40,
+            "minAttack": 21,
+            "maxAttack": 22,
             "consumedFP": 20,
+            "cooldown": 0.5,
             "casting": 1,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.58,
+                  "scale": 4.08,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 41,
-            "maxAttack": 42,
+            "minAttack": 21,
+            "maxAttack": 22,
             "consumedFP": 22,
+            "cooldown": 0.5,
             "casting": 1,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.6,
+                  "scale": 4.1,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 41,
-            "maxAttack": 42,
+            "minAttack": 22,
+            "maxAttack": 23,
             "consumedFP": 22,
+            "cooldown": 0.5,
             "casting": 1,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.62,
+                  "scale": 4.12,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 42,
-            "maxAttack": 43,
+            "minAttack": 22,
+            "maxAttack": 23,
             "consumedFP": 22,
+            "cooldown": 0.5,
             "casting": 1,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.64,
+                  "scale": 4.14,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 42,
-            "maxAttack": 43,
+            "minAttack": 23,
+            "maxAttack": 24,
             "consumedFP": 22,
+            "cooldown": 0.5,
             "casting": 1,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.66,
+                  "scale": 4.16,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 43,
-            "maxAttack": 44,
+            "minAttack": 23,
+            "maxAttack": 24,
             "consumedFP": 24,
+            "cooldown": 0.5,
             "casting": 1,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.68,
+                  "scale": 4.18,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 43,
-            "maxAttack": 44,
+            "minAttack": 24,
+            "maxAttack": 25,
             "consumedFP": 24,
+            "cooldown": 0.5,
             "casting": 1,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.7,
+                  "scale": 4.2,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 44,
-            "maxAttack": 45,
+            "minAttack": 24,
+            "maxAttack": 25,
             "consumedFP": 24,
+            "cooldown": 0.5,
             "casting": 1,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.72,
+                  "scale": 4.22,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 44,
-            "maxAttack": 45,
+            "minAttack": 25,
+            "maxAttack": 26,
             "consumedFP": 24,
+            "cooldown": 0.5,
             "casting": 1,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.74,
+                  "scale": 4.24,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 45,
-            "maxAttack": 46,
+            "minAttack": 25,
+            "maxAttack": 26,
             "consumedFP": 26,
+            "cooldown": 0.5,
             "casting": 1,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.76,
+                  "scale": 4.26,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 45,
-            "maxAttack": 46,
+            "minAttack": 26,
+            "maxAttack": 27,
             "consumedFP": 26,
+            "cooldown": 0.5,
             "casting": 1,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.78,
+                  "scale": 4.28,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 46,
-            "maxAttack": 47,
+            "minAttack": 26,
+            "maxAttack": 27,
             "consumedFP": 26,
+            "cooldown": 0.5,
             "casting": 1,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.8,
+                  "scale": 4.3,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 46,
-            "maxAttack": 47,
+            "minAttack": 27,
+            "maxAttack": 28,
             "consumedFP": 26,
+            "cooldown": 0.5,
             "casting": 1,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.82,
+                  "scale": 4.32,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 47,
-            "maxAttack": 48,
+            "minAttack": 27,
+            "maxAttack": 28,
             "consumedFP": 28,
+            "cooldown": 0.5,
             "casting": 1,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.84,
+                  "scale": 4.34,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 47,
-            "maxAttack": 48,
+            "minAttack": 28,
+            "maxAttack": 29,
             "consumedFP": 28,
+            "cooldown": 0.5,
             "casting": 1,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.86,
+                  "scale": 4.36,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 49,
-            "maxAttack": 50,
+            "minAttack": 28,
+            "maxAttack": 29,
             "consumedFP": 30,
+            "cooldown": 0.5,
             "casting": 1,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.88,
+                  "scale": 4.38,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 49,
-            "maxAttack": 50,
+            "minAttack": 29,
+            "maxAttack": 30,
             "consumedFP": 30,
+            "cooldown": 0.5,
             "casting": 1,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.9,
+                  "scale": 4.4,
                   "pvp": true,
                   "pve": true
                }
@@ -14996,9 +15644,9 @@ export const skillsjson = [
                   "rate": true
                },
                {
-                  "parameter": "damage",
-                  "add": 600,
-                  "rate": false
+                  "parameter": "attack",
+                  "add": 30,
+                  "rate": true
                }
             ]
          }
@@ -15403,9 +16051,9 @@ export const skillsjson = [
       "description": {
          "en": "Increases maximum HP of the target.",
          "ar": "Increases maximum HP of the target.",
-         "br": "Increases maximum HP of the target.",
-         "cns": "Increases maximum HP of the target.",
-         "de": "Increases maximum HP of the target.",
+         "br": "Aumenta a quantidade de vida (HP) m\u00e1xima.",
+         "cns": "\u53ec\u5524\u5723\u7075\u9644\u8eab\uff0c\u4f7f\u65bd\u6cd5\u5bf9\u8c61\u7684\u751f\u547d\u503c\u5927\u5e45\u5ea6\u63d0\u5347\u3002",
+         "de": "Erh\u00f6ht die maximale HP des Ziels.",
          "fi": "Increases maximum HP of the target.",
          "fil": "Increases maximum HP of the target.",
          "fr": "Increases maximum HP of the target.",
@@ -15534,7 +16182,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "maxhp",
-                  "add": 2,
+                  "add": 3,
                   "rate": true
                }
             ],
@@ -15624,7 +16272,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "maxhp",
-                  "add": 3,
+                  "add": 4,
                   "rate": true
                }
             ],
@@ -15714,7 +16362,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "maxhp",
-                  "add": 4,
+                  "add": 5,
                   "rate": true
                }
             ],
@@ -15774,7 +16422,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "maxhp",
-                  "add": 5,
+                  "add": 6,
                   "rate": true
                }
             ],
@@ -15804,7 +16452,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "maxhp",
-                  "add": 5,
+                  "add": 6,
                   "rate": true
                }
             ],
@@ -15834,7 +16482,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "maxhp",
-                  "add": 6,
+                  "add": 7,
                   "rate": true
                }
             ],
@@ -15864,7 +16512,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "maxhp",
-                  "add": 6,
+                  "add": 7,
                   "rate": true
                }
             ],
@@ -15894,7 +16542,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "maxhp",
-                  "add": 6,
+                  "add": 8,
                   "rate": true
                }
             ],
@@ -15924,7 +16572,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "maxhp",
-                  "add": 7,
+                  "add": 8,
                   "rate": true
                }
             ],
@@ -15954,7 +16602,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "maxhp",
-                  "add": 8,
+                  "add": 9,
                   "rate": true
                }
             ],
@@ -16058,21 +16706,21 @@ export const skillsjson = [
          "th": "Lightning Ball"
       },
       "description": {
-         "en": "Damages the enemy with a ball of static.",
-         "ar": "Damages the enemy with a ball of static.",
+         "en": "Damages the enemy with a ball of static. Chance to reduce the targets defense.",
+         "ar": "Damages the enemy with a ball of static. Chance to reduce the targets defense.",
          "br": "Causa danos no inimigo com uma bola de est\u00e1tica.",
          "cns": "\u53ec\u5524\u9b54\u7535\u5e03\u6210\u7535\u7f51\u653b\u51fb\u5bf9\u65b9\u3002",
          "de": "Dem Gegner durch statische Energie Schaden zuf\u00fcgen.",
-         "fi": "Damages the enemy with a ball of static.",
-         "fil": "Damages the enemy with a ball of static.",
+         "fi": "Damages the enemy with a ball of static. Chance to reduce the targets defense.",
+         "fil": "Damages the enemy with a ball of static. Chance to reduce the targets defense.",
          "fr": "Lance une d\u00e9charge d'\u00e9lectricit\u00e9 sur l'ennemi",
-         "it": "Damages the enemy with a ball of static.",
+         "it": "Damages the enemy with a ball of static. Chance to reduce the targets defense.",
          "kr": "\uc8fc\uc704\uc758 \uc815\uc804\uae30\ub97c \ubaa8\uc544 \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
-         "nl": "Damages the enemy with a ball of static.",
+         "nl": "Damages the enemy with a ball of static. Chance to reduce the targets defense.",
          "pl": "Zadaje przeciwnikowi obra\u017cenia za pomoc\u0105 Kuli Statycznej Energii.",
          "ru": "\u0421\u0442\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0435 \u044d\u043b\u0435\u043a\u0442\u0440\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0441\u043e\u0431\u0438\u0440\u0430\u0435\u0442\u0441\u044f \u0432 \u043d\u0435\u0431\u043e\u043b\u044c\u0448\u043e\u0439 \u0448\u0430\u0440, \u043d\u0430\u043d\u043e\u0441\u044f\u0449\u0438\u0439 \u0443\u0440\u043e\u043d \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443.",
-         "sw": "Damages the enemy with a ball of static.",
-         "th": "Damages the enemy with a ball of static."
+         "sw": "Damages the enemy with a ball of static. Chance to reduce the targets defense.",
+         "th": "Damages the enemy with a ball of static. Chance to reduce the targets defense."
       },
       "icon": "magelelgtbal.png",
       "class": 9581,
@@ -16096,8 +16744,17 @@ export const skillsjson = [
          {
             "minAttack": 41,
             "maxAttack": 42,
+            "probability": 10,
+            "probabilityPVP": 10,
             "consumedMP": 25,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "def",
+                  "add": -1,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -16112,8 +16769,17 @@ export const skillsjson = [
          {
             "minAttack": 41,
             "maxAttack": 42,
+            "probability": 11,
+            "probabilityPVP": 11,
             "consumedMP": 25,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "def",
+                  "add": -1,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -16128,8 +16794,17 @@ export const skillsjson = [
          {
             "minAttack": 41,
             "maxAttack": 42,
+            "probability": 11,
+            "probabilityPVP": 11,
             "consumedMP": 25,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "def",
+                  "add": -2,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -16144,8 +16819,17 @@ export const skillsjson = [
          {
             "minAttack": 41,
             "maxAttack": 42,
+            "probability": 12,
+            "probabilityPVP": 12,
             "consumedMP": 27,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "def",
+                  "add": -2,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -16160,8 +16844,17 @@ export const skillsjson = [
          {
             "minAttack": 42,
             "maxAttack": 43,
+            "probability": 12,
+            "probabilityPVP": 12,
             "consumedMP": 27,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "def",
+                  "add": -3,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -16176,8 +16869,17 @@ export const skillsjson = [
          {
             "minAttack": 42,
             "maxAttack": 43,
+            "probability": 13,
+            "probabilityPVP": 13,
             "consumedMP": 27,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "def",
+                  "add": -3,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -16192,8 +16894,17 @@ export const skillsjson = [
          {
             "minAttack": 42,
             "maxAttack": 43,
+            "probability": 13,
+            "probabilityPVP": 13,
             "consumedMP": 29,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "def",
+                  "add": -4,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -16208,8 +16919,17 @@ export const skillsjson = [
          {
             "minAttack": 42,
             "maxAttack": 43,
+            "probability": 14,
+            "probabilityPVP": 14,
             "consumedMP": 29,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "def",
+                  "add": -4,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -16224,8 +16944,17 @@ export const skillsjson = [
          {
             "minAttack": 44,
             "maxAttack": 45,
+            "probability": 14,
+            "probabilityPVP": 14,
             "consumedMP": 29,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "def",
+                  "add": -5,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -16240,8 +16969,17 @@ export const skillsjson = [
          {
             "minAttack": 44,
             "maxAttack": 45,
+            "probability": 15,
+            "probabilityPVP": 15,
             "consumedMP": 31,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "def",
+                  "add": -5,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -16256,8 +16994,17 @@ export const skillsjson = [
          {
             "minAttack": 44,
             "maxAttack": 45,
+            "probability": 15,
+            "probabilityPVP": 15,
             "consumedMP": 31,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "def",
+                  "add": -6,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -16272,8 +17019,17 @@ export const skillsjson = [
          {
             "minAttack": 44,
             "maxAttack": 45,
+            "probability": 16,
+            "probabilityPVP": 16,
             "consumedMP": 31,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "def",
+                  "add": -6,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -16288,8 +17044,17 @@ export const skillsjson = [
          {
             "minAttack": 46,
             "maxAttack": 47,
+            "probability": 16,
+            "probabilityPVP": 16,
             "consumedMP": 33,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "def",
+                  "add": -7,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -16304,8 +17069,17 @@ export const skillsjson = [
          {
             "minAttack": 46,
             "maxAttack": 47,
+            "probability": 17,
+            "probabilityPVP": 17,
             "consumedMP": 33,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "def",
+                  "add": -7,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -16320,8 +17094,17 @@ export const skillsjson = [
          {
             "minAttack": 46,
             "maxAttack": 47,
+            "probability": 17,
+            "probabilityPVP": 17,
             "consumedMP": 35,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "def",
+                  "add": -8,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -16336,8 +17119,17 @@ export const skillsjson = [
          {
             "minAttack": 49,
             "maxAttack": 50,
+            "probability": 18,
+            "probabilityPVP": 18,
             "consumedMP": 35,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "def",
+                  "add": -8,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -16352,8 +17144,17 @@ export const skillsjson = [
          {
             "minAttack": 49,
             "maxAttack": 50,
+            "probability": 18,
+            "probabilityPVP": 18,
             "consumedMP": 38,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "def",
+                  "add": -9,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -16368,8 +17169,17 @@ export const skillsjson = [
          {
             "minAttack": 49,
             "maxAttack": 50,
+            "probability": 19,
+            "probabilityPVP": 19,
             "consumedMP": 38,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "def",
+                  "add": -9,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -16384,8 +17194,17 @@ export const skillsjson = [
          {
             "minAttack": 49,
             "maxAttack": 50,
+            "probability": 19,
+            "probabilityPVP": 19,
             "consumedMP": 40,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "def",
+                  "add": -9,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -16400,8 +17219,17 @@ export const skillsjson = [
          {
             "minAttack": 49,
             "maxAttack": 50,
+            "probability": 20,
+            "probabilityPVP": 20,
             "consumedMP": 40,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "def",
+                  "add": -10,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -16462,19 +17290,19 @@ export const skillsjson = [
             "level": 4
          }
       ],
-      "weapon": "sword",
       "combo": "general",
       "debuff": true,
       "flying": true,
       "passive": false,
-      "target": "line",
+      "target": "single",
       "skillPoints": 3,
       "levels": [
          {
+            "damageMultiplier": 0.5,
             "minAttack": 181,
             "maxAttack": 182,
-            "probability": 16,
-            "probabilityPVP": 16,
+            "probability": 10,
+            "probabilityPVP": 10,
             "consumedFP": 82,
             "casting": 1.5,
             "duration": 15,
@@ -16486,22 +17314,22 @@ export const skillsjson = [
                   "rate": true
                }
             ],
-            "spellRange": 6,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.02,
+                  "scale": 5.52,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 182,
             "maxAttack": 183,
-            "probability": 17,
-            "probabilityPVP": 17,
+            "probability": 12,
+            "probabilityPVP": 12,
             "consumedFP": 84,
             "casting": 1.5,
             "duration": 15,
@@ -16513,22 +17341,22 @@ export const skillsjson = [
                   "rate": true
                }
             ],
-            "spellRange": 6,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.04,
+                  "scale": 5.54,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 183,
             "maxAttack": 184,
-            "probability": 18,
-            "probabilityPVP": 18,
+            "probability": 13,
+            "probabilityPVP": 13,
             "consumedFP": 86,
             "casting": 1.5,
             "duration": 15,
@@ -16540,22 +17368,22 @@ export const skillsjson = [
                   "rate": true
                }
             ],
-            "spellRange": 6,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.06,
+                  "scale": 5.56,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 184,
             "maxAttack": 185,
-            "probability": 19,
-            "probabilityPVP": 19,
+            "probability": 14,
+            "probabilityPVP": 14,
             "consumedFP": 88,
             "casting": 1.5,
             "duration": 15,
@@ -16567,22 +17395,22 @@ export const skillsjson = [
                   "rate": true
                }
             ],
-            "spellRange": 6,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.08,
+                  "scale": 5.58,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 185,
             "maxAttack": 186,
-            "probability": 20,
-            "probabilityPVP": 20,
+            "probability": 15,
+            "probabilityPVP": 15,
             "consumedFP": 90,
             "casting": 1.5,
             "duration": 15,
@@ -16594,22 +17422,22 @@ export const skillsjson = [
                   "rate": true
                }
             ],
-            "spellRange": 6,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.1,
+                  "scale": 5.6,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 186,
             "maxAttack": 187,
-            "probability": 21,
-            "probabilityPVP": 21,
+            "probability": 16,
+            "probabilityPVP": 16,
             "consumedFP": 92,
             "casting": 1.5,
             "duration": 15,
@@ -16621,22 +17449,22 @@ export const skillsjson = [
                   "rate": true
                }
             ],
-            "spellRange": 6,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.12,
+                  "scale": 5.62,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 187,
             "maxAttack": 188,
-            "probability": 22,
-            "probabilityPVP": 22,
+            "probability": 17,
+            "probabilityPVP": 17,
             "consumedFP": 94,
             "casting": 1.5,
             "duration": 15,
@@ -16648,22 +17476,22 @@ export const skillsjson = [
                   "rate": true
                }
             ],
-            "spellRange": 6,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.14,
+                  "scale": 5.64,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 189,
             "maxAttack": 190,
-            "probability": 23,
-            "probabilityPVP": 23,
+            "probability": 18,
+            "probabilityPVP": 18,
             "consumedFP": 96,
             "casting": 1.5,
             "duration": 15,
@@ -16675,22 +17503,22 @@ export const skillsjson = [
                   "rate": true
                }
             ],
-            "spellRange": 6,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.16,
+                  "scale": 5.66,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 190,
             "maxAttack": 191,
-            "probability": 24,
-            "probabilityPVP": 24,
+            "probability": 19,
+            "probabilityPVP": 19,
             "consumedFP": 98,
             "casting": 1.5,
             "duration": 15,
@@ -16702,22 +17530,22 @@ export const skillsjson = [
                   "rate": true
                }
             ],
-            "spellRange": 6,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.18,
+                  "scale": 5.68,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 191,
             "maxAttack": 192,
-            "probability": 25,
-            "probabilityPVP": 25,
+            "probability": 20,
+            "probabilityPVP": 20,
             "consumedFP": 100,
             "casting": 1.5,
             "duration": 15,
@@ -16729,12 +17557,11 @@ export const skillsjson = [
                   "rate": true
                }
             ],
-            "spellRange": 6,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.2,
+                  "scale": 5.7,
                   "pvp": true,
                   "pve": true
                }
@@ -16747,7 +17574,7 @@ export const skillsjson = [
       "name": {
          "en": "Sneaker",
          "ar": "\u0627\u0644\u0641\u062e",
-         "br": "Sneaker",
+         "br": "Rede",
          "cns": "\u7ea0\u7f20\u5929\u7f51",
          "de": "Sneaker",
          "fi": "Sneaker",
@@ -16780,7 +17607,7 @@ export const skillsjson = [
       },
       "icon": "meronesenake.png",
       "class": 764,
-      "level": 20,
+      "level": 30,
       "element": "none",
       "magic": false,
       "requirements": [
@@ -17129,7 +17956,7 @@ export const skillsjson = [
          "fi": "Charge",
          "fil": "Charge",
          "fr": "Justice",
-         "it": "Charge",
+         "it": "Azione",
          "kr": "\ucc28\uc9c0",
          "nl": "Charge",
          "pl": "Szar\u017ca",
@@ -17146,7 +17973,7 @@ export const skillsjson = [
          "fi": "Voimakas, yl\u00f6sp\u00e4in suuntautuva isku. Tainnuttaa vihollisen.",
          "fil": "Powerful, upward strike. Stuns the enemy.",
          "fr": "Coup d'\u00e9p\u00e9e qui inflige des dommages fixes \u00e0 l'ennemi, quel que soit son niveau",
-         "it": "Powerful, upward strike. Stuns the enemy.",
+         "it": "Potente colpo verso l'alto. Stordisce il bersaglio.",
          "kr": "\ud558\ub298\uc744 \uac00\ub97c\ub4ef\ud55c \uae30\uc138\ub85c \uc18c\ub4dc\ub97c \uc704\ub85c \ud718\ub458\ub7ec \uc804\ubc29\uc758 \uc801\uc744 \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
          "nl": "Powerful, upward strike. Stuns the enemy.",
          "pl": "Szar\u017cuje wroga i og\u0142usza go.",
@@ -17165,7 +17992,6 @@ export const skillsjson = [
             "level": 3
          }
       ],
-      "weapon": "sword",
       "combo": "general",
       "debuff": true,
       "flying": true,
@@ -17174,8 +18000,8 @@ export const skillsjson = [
       "skillPoints": 3,
       "levels": [
          {
-            "minAttack": 101,
-            "maxAttack": 102,
+            "minAttack": 130,
+            "maxAttack": 131,
             "consumedFP": 40,
             "cooldown": 28,
             "casting": 1.25,
@@ -17191,15 +18017,15 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.02,
+                  "scale": 5.52,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 103,
-            "maxAttack": 104,
+            "minAttack": 131,
+            "maxAttack": 132,
             "consumedFP": 42,
             "cooldown": 26,
             "casting": 1.25,
@@ -17215,15 +18041,15 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.04,
+                  "scale": 5.54,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 105,
-            "maxAttack": 106,
+            "minAttack": 132,
+            "maxAttack": 133,
             "consumedFP": 44,
             "cooldown": 24,
             "casting": 1.25,
@@ -17239,15 +18065,15 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.06,
+                  "scale": 5.56,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 107,
-            "maxAttack": 108,
+            "minAttack": 133,
+            "maxAttack": 134,
             "consumedFP": 46,
             "cooldown": 22,
             "casting": 1.25,
@@ -17263,15 +18089,15 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.08,
+                  "scale": 5.58,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 109,
-            "maxAttack": 110,
+            "minAttack": 134,
+            "maxAttack": 135,
             "consumedFP": 48,
             "cooldown": 20,
             "casting": 1.25,
@@ -17287,15 +18113,15 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.1,
+                  "scale": 5.6,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 111,
-            "maxAttack": 112,
+            "minAttack": 135,
+            "maxAttack": 136,
             "consumedFP": 50,
             "cooldown": 18,
             "casting": 1.25,
@@ -17311,15 +18137,15 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.12,
+                  "scale": 5.62,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 113,
-            "maxAttack": 114,
+            "minAttack": 136,
+            "maxAttack": 137,
             "consumedFP": 52,
             "cooldown": 16,
             "casting": 1.25,
@@ -17335,15 +18161,15 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.14,
+                  "scale": 5.64,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 115,
-            "maxAttack": 116,
+            "minAttack": 137,
+            "maxAttack": 138,
             "consumedFP": 54,
             "cooldown": 14,
             "casting": 1.25,
@@ -17359,15 +18185,15 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.16,
+                  "scale": 5.66,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 117,
-            "maxAttack": 118,
+            "minAttack": 138,
+            "maxAttack": 139,
             "consumedFP": 56,
             "cooldown": 12,
             "casting": 1.25,
@@ -17383,15 +18209,15 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.18,
+                  "scale": 5.68,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 119,
-            "maxAttack": 120,
+            "minAttack": 139,
+            "maxAttack": 140,
             "consumedFP": 58,
             "cooldown": 10,
             "casting": 1.25,
@@ -17407,9 +18233,88 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.2,
+                  "scale": 5.7,
                   "pvp": true,
                   "pve": true
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "id": 2965,
+      "name": {
+         "en": "Flame Geyser",
+         "ar": "Flame Geyser",
+         "br": "G\u00eaiser Flamejante",
+         "cns": "\u5730\u72f1\u706b\u82b1",
+         "de": "Hot Air",
+         "fi": "Flame Geysel",
+         "fil": "Flame Geyser",
+         "fr": "Br\u00fblure",
+         "it": "Flame Geyser",
+         "kr": "\ud30c\uc774\uc5b4 \ubd80\uba54\ub791",
+         "nl": "Flame Geyser",
+         "pl": "Ognisty Gejzer",
+         "ru": "\u041e\u0433\u043d\u0435\u043d\u043d\u044b\u0439 \u0432\u0443\u043b\u043a\u0430\u043d",
+         "sw": "Flame Geyser",
+         "th": "Flame Geyser"
+      },
+      "description": {
+         "en": "Damages the enemy continuously with a geyser of flame.",
+         "ar": "Damages the enemy continuously with a geyser of flame.",
+         "br": "Um g\u00eaiser de chamas que causa danos cont\u00ednuos ao inimigo.",
+         "cns": "\u5f15\u53d1\u5730\u70ed\u55b7\u6d41\u7ed9\u5bf9\u65b9\u9020\u6210\u6301\u7eed\u4f24\u5bb3\u3002",
+         "de": "Den Gegner durch den Geist des Feuers wiederholt Schaden zuf\u00fcgen.",
+         "fi": "Vahingoittaa jatkuvasti vihollista tulisuihkulla.",
+         "fil": "Damages the enemy continuously with a geyser of flame.",
+         "fr": "Attaque bas\u00e9e sur le feu qui inflige des d\u00e9g\u00e2ts continus \u00e0 l'ennemi",
+         "it": "Damages the enemy continuously with a geyser of flame.",
+         "kr": "\ub728\uac70\uc6b4 \ubd88\uae30\uc6b4\uc73c\ub85c \uc801\uc5d0\uac8c \uc9c0\uc18d\uc801\uc778 \ud53c\ud574\ub97c \uc90d\ub2c8\ub2e4.",
+         "nl": "Damages the enemy continuously with a geyser of flame.",
+         "pl": "Otacza wroga gejzerem ognia, zadaj\u0105c ci\u0105g\u0142e obra\u017cenia.",
+         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u044b\u0439 \u0443\u0440\u043e\u043d \u043e\u0433\u043d\u0435\u043c.",
+         "sw": "Damages the enemy continuously with a geyser of flame.",
+         "th": "Damages the enemy continuously with a geyser of flame."
+      },
+      "icon": "magfirehotair.png",
+      "level": 1,
+      "element": "fire",
+      "magic": true,
+      "requirements": [],
+      "combo": "general",
+      "debuff": true,
+      "flying": true,
+      "passive": false,
+      "target": "single",
+      "levels": [
+         {
+            "minAttack": 30,
+            "maxAttack": 31,
+            "dotTick": 1,
+            "duration": 8,
+            "durationPVP": 8,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "bleeding",
+                  "dotMode": "standardattack",
+                  "dotValue": 70
+               }
+            ]
+         },
+         {
+            "minAttack": 44,
+            "maxAttack": 45,
+            "dotTick": 1,
+            "duration": 8,
+            "durationPVP": 8,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "bleeding",
+                  "dotMode": "standardattack",
+                  "dotValue": 70
                }
             ]
          }
@@ -17420,34 +18325,34 @@ export const skillsjson = [
       "name": {
          "en": "Stun Group",
          "ar": "Stun Group",
-         "br": "Grupo de Atordoamento",
-         "cns": "\u5b9a\u8eab(\u53cc)",
+         "br": "Stun Group",
+         "cns": "Stun Group",
          "de": "Stun Group",
          "fi": "Stun Group",
          "fil": "Stun Group",
-         "fr": "Etourdissement collectif",
+         "fr": "Stun Group",
          "it": "Stun Group",
-         "kr": "\uae30\uc808",
+         "kr": "Stun Group",
          "nl": "Stun Group",
          "pl": "Stun Group",
-         "ru": "\u0413\u0440\u0443\u043f\u043f\u043e\u0432\u043e\u0435 \u043e\u0433\u043b\u0443\u0448\u0435\u043d\u0438\u0435",
+         "ru": "Stun Group",
          "sw": "Stun Group",
          "th": "Stun Group"
       },
       "description": {
          "en": "You are stunned and cannot move.",
          "ar": "You are stunned and cannot move.",
-         "br": "Voc\u00ea est\u00e1 atordoado e n\u00e3o pode se mover.",
-         "cns": "\u65e0\u6cd5\u79fb\u52a8\u7684\u72b6\u6001",
-         "de": "Du bist bet\u00e4ubt und kannst dich nicht bewegen.",
+         "br": "You are stunned and cannot move.",
+         "cns": "You are stunned and cannot move.",
+         "de": "You are stunned and cannot move.",
          "fi": "You are stunned and cannot move.",
          "fil": "You are stunned and cannot move.",
-         "fr": "Le groupe est \u00e9tourdi et ne peut bouger",
+         "fr": "You are stunned and cannot move.",
          "it": "You are stunned and cannot move.",
-         "kr": "\uc6c0\uc9c1\uc77c \uc218 \uc5c6\ub294 \uc2a4\ud134 \uc0c1\ud0dc\uc785\ub2c8\ub2e4.",
+         "kr": "You are stunned and cannot move.",
          "nl": "You are stunned and cannot move.",
          "pl": "You are stunned and cannot move.",
-         "ru": "\u0412\u044b \u043e\u0433\u043b\u0443\u0448\u0435\u043d\u044b \u0438 \u043d\u0435 \u043c\u043e\u0436\u0435\u0442\u0435 \u0434\u0432\u0438\u0433\u0430\u0442\u044c\u0441\u044f.",
+         "ru": "You are stunned and cannot move.",
          "sw": "You are stunned and cannot move.",
          "th": "You are stunned and cannot move."
       },
@@ -17573,7 +18478,7 @@ export const skillsjson = [
       },
       "icon": "maglightshock.png",
       "class": 9581,
-      "level": 30,
+      "level": 40,
       "element": "electricity",
       "magic": true,
       "requirements": [
@@ -17593,7 +18498,6 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "dotTick": 1,
             "consumedMP": 40,
             "casting": 1,
             "duration": 15,
@@ -17602,7 +18506,7 @@ export const skillsjson = [
                {
                   "parameter": "earthdefense",
                   "add": -6,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -17619,7 +18523,6 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "dotTick": 1,
             "consumedMP": 40,
             "casting": 1,
             "duration": 15,
@@ -17628,7 +18531,7 @@ export const skillsjson = [
                {
                   "parameter": "earthdefense",
                   "add": -7,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -17645,7 +18548,6 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "dotTick": 1,
             "consumedMP": 42,
             "casting": 1,
             "duration": 15,
@@ -17654,7 +18556,7 @@ export const skillsjson = [
                {
                   "parameter": "earthdefense",
                   "add": -8,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -17671,7 +18573,6 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "dotTick": 1,
             "consumedMP": 42,
             "casting": 1,
             "duration": 15,
@@ -17680,7 +18581,7 @@ export const skillsjson = [
                {
                   "parameter": "earthdefense",
                   "add": -9,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -17697,7 +18598,6 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "dotTick": 1,
             "consumedMP": 44,
             "casting": 1,
             "duration": 15,
@@ -17706,7 +18606,7 @@ export const skillsjson = [
                {
                   "parameter": "earthdefense",
                   "add": -10,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -17723,7 +18623,6 @@ export const skillsjson = [
          {
             "minAttack": 55,
             "maxAttack": 56,
-            "dotTick": 1,
             "consumedMP": 44,
             "casting": 1,
             "duration": 15,
@@ -17732,7 +18631,7 @@ export const skillsjson = [
                {
                   "parameter": "earthdefense",
                   "add": -11,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -17749,7 +18648,6 @@ export const skillsjson = [
          {
             "minAttack": 55,
             "maxAttack": 56,
-            "dotTick": 1,
             "consumedMP": 46,
             "casting": 1,
             "duration": 15,
@@ -17758,7 +18656,7 @@ export const skillsjson = [
                {
                   "parameter": "earthdefense",
                   "add": -12,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -17775,7 +18673,6 @@ export const skillsjson = [
          {
             "minAttack": 55,
             "maxAttack": 56,
-            "dotTick": 1,
             "consumedMP": 46,
             "casting": 1,
             "duration": 15,
@@ -17784,7 +18681,7 @@ export const skillsjson = [
                {
                   "parameter": "earthdefense",
                   "add": -13,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -17801,7 +18698,6 @@ export const skillsjson = [
          {
             "minAttack": 55,
             "maxAttack": 56,
-            "dotTick": 1,
             "consumedMP": 48,
             "casting": 1,
             "duration": 15,
@@ -17810,7 +18706,7 @@ export const skillsjson = [
                {
                   "parameter": "earthdefense",
                   "add": -14,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -17827,7 +18723,6 @@ export const skillsjson = [
          {
             "minAttack": 55,
             "maxAttack": 56,
-            "dotTick": 1,
             "consumedMP": 48,
             "casting": 1,
             "duration": 15,
@@ -17836,7 +18731,7 @@ export const skillsjson = [
                {
                   "parameter": "earthdefense",
                   "add": -15,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -17853,7 +18748,6 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "dotTick": 1,
             "consumedMP": 50,
             "casting": 1,
             "duration": 15,
@@ -17862,7 +18756,7 @@ export const skillsjson = [
                {
                   "parameter": "earthdefense",
                   "add": -16,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -17879,7 +18773,6 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "dotTick": 1,
             "consumedMP": 50,
             "casting": 1,
             "duration": 15,
@@ -17888,7 +18781,7 @@ export const skillsjson = [
                {
                   "parameter": "earthdefense",
                   "add": -17,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -17905,7 +18798,6 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "dotTick": 1,
             "consumedMP": 53,
             "casting": 1,
             "duration": 15,
@@ -17914,7 +18806,7 @@ export const skillsjson = [
                {
                   "parameter": "earthdefense",
                   "add": -18,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -17931,7 +18823,6 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "dotTick": 1,
             "consumedMP": 53,
             "casting": 1,
             "duration": 15,
@@ -17940,7 +18831,7 @@ export const skillsjson = [
                {
                   "parameter": "earthdefense",
                   "add": -19,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -17957,7 +18848,6 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "dotTick": 1,
             "consumedMP": 55,
             "casting": 1,
             "duration": 15,
@@ -17966,7 +18856,7 @@ export const skillsjson = [
                {
                   "parameter": "earthdefense",
                   "add": -20,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -17983,7 +18873,6 @@ export const skillsjson = [
          {
             "minAttack": 59,
             "maxAttack": 60,
-            "dotTick": 1,
             "consumedMP": 55,
             "casting": 1,
             "duration": 15,
@@ -17992,7 +18881,7 @@ export const skillsjson = [
                {
                   "parameter": "earthdefense",
                   "add": -21,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -18009,7 +18898,6 @@ export const skillsjson = [
          {
             "minAttack": 59,
             "maxAttack": 60,
-            "dotTick": 1,
             "consumedMP": 57,
             "casting": 1,
             "duration": 15,
@@ -18018,7 +18906,7 @@ export const skillsjson = [
                {
                   "parameter": "earthdefense",
                   "add": -22,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -18035,7 +18923,6 @@ export const skillsjson = [
          {
             "minAttack": 59,
             "maxAttack": 60,
-            "dotTick": 1,
             "consumedMP": 57,
             "casting": 1,
             "duration": 15,
@@ -18044,7 +18931,7 @@ export const skillsjson = [
                {
                   "parameter": "earthdefense",
                   "add": -23,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -18061,7 +18948,6 @@ export const skillsjson = [
          {
             "minAttack": 59,
             "maxAttack": 60,
-            "dotTick": 1,
             "consumedMP": 60,
             "casting": 1,
             "duration": 15,
@@ -18070,7 +18956,7 @@ export const skillsjson = [
                {
                   "parameter": "earthdefense",
                   "add": -24,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -18087,7 +18973,6 @@ export const skillsjson = [
          {
             "minAttack": 59,
             "maxAttack": 60,
-            "dotTick": 1,
             "consumedMP": 60,
             "casting": 1,
             "duration": 15,
@@ -18096,7 +18981,7 @@ export const skillsjson = [
                {
                   "parameter": "earthdefense",
                   "add": -25,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -18132,21 +19017,21 @@ export const skillsjson = [
          "th": "Baraqijal Esna"
       },
       "description": {
-         "en": "Decreases defense of the target.",
-         "ar": "Decreases defense of the target.",
-         "br": "Diminui a defesa do alvo.",
-         "cns": "\u9001\u53bb\u661f\u5149\u7684\u8bc5\u5492\uff0c\u63d0\u5347\u5bf9\u65b9\u7684\u653b\u51fb\uff0c\u4f46\u964d\u4f4e\u5bf9\u65b9\u7684\u9632\u5fa1\u529b\u3002",
-         "de": "Erh\u00f6hen der Angriffsst\u00e4rke durch das Senken der Verteidigungsst\u00e4rke. Du wendest Fl\u00fcche an.",
-         "fi": "Laskee kohteen puolustusta.",
-         "fil": "Decreases defense of the target.",
-         "fr": "Inflige un ch\u00e2timent \u00e0 l'ennemi r\u00e9duisant sa d\u00e9fense et augmentant son attaque",
-         "it": "Decreases defense of the target.",
-         "kr": "\uc800\uc8fc\uc758 \ud798\uc73c\ub85c \uc801\uc744 \ubb34\ubaa8\ud558\uac8c \ub9cc\ub4e4\uc5b4 \ubc29\uc5b4\ub825\uc744 \ud558\ub77d\uc2dc\ud0a4\uace0, \uacf5\uaca9\ub825\uc740 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
-         "nl": "Vermindert de verdediging van het doelwit.",
-         "pl": "Przeklina cel, zmniejszaj\u0105c jego obron\u0119.",
-         "ru": "\u0421\u043d\u0438\u0436\u0430\u0435\u0442 \u0437\u0430\u0449\u0438\u0442\u0443 \u0432\u044b\u0431\u0440\u0430\u043d\u043d\u043e\u0433\u043e \u0432\u0440\u0430\u0433\u0430.",
-         "sw": "Decreases defense of the target.",
-         "th": "Decreases defense of the target."
+         "en": "Increases damage dealt to the target, but also increases targets attack.",
+         "ar": "Increases damage dealt to the target, but also increases targets attack.",
+         "br": "Increases damage dealt to the target, but also increases targets attack.",
+         "cns": "Increases damage dealt to the target, but also increases targets attack.",
+         "de": "Increases damage dealt to the target, but also increases targets attack.",
+         "fi": "Increases damage dealt to the target, but also increases targets attack.",
+         "fil": "Increases damage dealt to the target, but also increases targets attack.",
+         "fr": "Increases damage dealt to the target, but also increases targets attack.",
+         "it": "Increases damage dealt to the target, but also increases targets attack.",
+         "kr": "Increases damage dealt to the target, but also increases targets attack.",
+         "nl": "Increases damage dealt to the target, but also increases targets attack.",
+         "pl": "Increases damage dealt to the target, but also increases targets attack.",
+         "ru": "Increases damage dealt to the target, but also increases targets attack.",
+         "sw": "Increases damage dealt to the target, but also increases targets attack.",
+         "th": "Increases damage dealt to the target, but also increases targets attack."
       },
       "icon": "bilbaraqijalesna.png",
       "class": 7424,
@@ -18155,8 +19040,8 @@ export const skillsjson = [
       "magic": true,
       "requirements": [
          {
-            "skill": 6017,
-            "level": 3
+            "skill": 1432,
+            "level": 2
          }
       ],
       "weapon": "knuckle",
@@ -18178,8 +19063,8 @@ export const skillsjson = [
             "durationPVP": 45,
             "abilities": [
                {
-                  "parameter": "def",
-                  "add": -21,
+                  "parameter": "incomingdamage",
+                  "add": 1,
                   "rate": true
                },
                {
@@ -18216,8 +19101,8 @@ export const skillsjson = [
             "durationPVP": 45,
             "abilities": [
                {
-                  "parameter": "def",
-                  "add": -22,
+                  "parameter": "incomingdamage",
+                  "add": 2,
                   "rate": true
                },
                {
@@ -18254,8 +19139,8 @@ export const skillsjson = [
             "durationPVP": 45,
             "abilities": [
                {
-                  "parameter": "def",
-                  "add": -23,
+                  "parameter": "incomingdamage",
+                  "add": 3,
                   "rate": true
                },
                {
@@ -18292,8 +19177,8 @@ export const skillsjson = [
             "durationPVP": 45,
             "abilities": [
                {
-                  "parameter": "def",
-                  "add": -24,
+                  "parameter": "incomingdamage",
+                  "add": 4,
                   "rate": true
                },
                {
@@ -18330,8 +19215,8 @@ export const skillsjson = [
             "durationPVP": 45,
             "abilities": [
                {
-                  "parameter": "def",
-                  "add": -25,
+                  "parameter": "incomingdamage",
+                  "add": 5,
                   "rate": true
                },
                {
@@ -18368,8 +19253,8 @@ export const skillsjson = [
             "durationPVP": 45,
             "abilities": [
                {
-                  "parameter": "def",
-                  "add": -26,
+                  "parameter": "incomingdamage",
+                  "add": 6,
                   "rate": true
                },
                {
@@ -18406,8 +19291,8 @@ export const skillsjson = [
             "durationPVP": 45,
             "abilities": [
                {
-                  "parameter": "def",
-                  "add": -27,
+                  "parameter": "incomingdamage",
+                  "add": 7,
                   "rate": true
                },
                {
@@ -18444,8 +19329,8 @@ export const skillsjson = [
             "durationPVP": 45,
             "abilities": [
                {
-                  "parameter": "def",
-                  "add": -28,
+                  "parameter": "incomingdamage",
+                  "add": 8,
                   "rate": true
                },
                {
@@ -18482,8 +19367,8 @@ export const skillsjson = [
             "durationPVP": 45,
             "abilities": [
                {
-                  "parameter": "def",
-                  "add": -29,
+                  "parameter": "incomingdamage",
+                  "add": 9,
                   "rate": true
                },
                {
@@ -18520,8 +19405,8 @@ export const skillsjson = [
             "durationPVP": 45,
             "abilities": [
                {
-                  "parameter": "def",
-                  "add": -30,
+                  "parameter": "incomingdamage",
+                  "add": 10,
                   "rate": true
                },
                {
@@ -18588,7 +19473,7 @@ export const skillsjson = [
       },
       "icon": "acryoycross.png",
       "class": 9098,
-      "level": 30,
+      "level": 35,
       "element": "none",
       "magic": false,
       "requirements": [
@@ -19092,13 +19977,13 @@ export const skillsjson = [
       "name": {
          "en": "Silent Strike",
          "ar": "Silent Strike",
-         "br": "Golpe Silencioso",
+         "br": "Corte Silencioso",
          "cns": "\u6781\u901f\u7a81\u523a",
          "de": "Silent Strike",
          "fi": "Silent Strike",
          "fil": "Silent Strike",
          "fr": "Lac\u00e9ration",
-         "it": "Silent Strike",
+         "it": "Cicatrice",
          "kr": "\uc0ac\uc77c\ub7f0\ud2b8 \uc2a4\ud2b8\ub77c\uc774\ud06c",
          "nl": "Silent Strike",
          "pl": "Ciche Ci\u0119cie",
@@ -19107,21 +19992,21 @@ export const skillsjson = [
          "th": "Silent Strike"
       },
       "description": {
-         "en": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
-         "ar": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
-         "br": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
-         "cns": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
-         "de": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
-         "fi": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
-         "fil": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
-         "fr": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
-         "it": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
-         "kr": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
-         "nl": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
-         "pl": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
-         "ru": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
-         "sw": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand.",
-         "th": "A fast, sliding strike. Stuns the target. Requires two weapons and a Sword in the main hand."
+         "en": "Pounces on the enemy from afar. Stuns the target. Requires two weapons.",
+         "ar": "Pounces on the enemy from afar. Stuns the target. Requires two weapons.",
+         "br": "Pounces on the enemy from afar. Stuns the target. Requires two weapons.",
+         "cns": "Pounces on the enemy from afar. Stuns the target. Requires two weapons.",
+         "de": "Pounces on the enemy from afar. Stuns the target. Requires two weapons.",
+         "fi": "Pounces on the enemy from afar. Stuns the target. Requires two weapons.",
+         "fil": "Pounces on the enemy from afar. Stuns the target. Requires two weapons.",
+         "fr": "Pounces on the enemy from afar. Stuns the target. Requires two weapons.",
+         "it": "Pounces on the enemy from afar. Stuns the target. Requires two weapons.",
+         "kr": "Pounces on the enemy from afar. Stuns the target. Requires two weapons.",
+         "nl": "Pounces on the enemy from afar. Stuns the target. Requires two weapons.",
+         "pl": "Pounces on the enemy from afar. Stuns the target. Requires two weapons.",
+         "ru": "Pounces on the enemy from afar. Stuns the target. Requires two weapons.",
+         "sw": "Pounces on the enemy from afar. Stuns the target. Requires two weapons.",
+         "th": "Pounces on the enemy from afar. Stuns the target. Requires two weapons."
       },
       "icon": "blddswsilent.png",
       "class": 2246,
@@ -19134,10 +20019,9 @@ export const skillsjson = [
             "level": 3
          }
       ],
-      "weapon": "sword",
       "combo": "general",
       "debuff": true,
-      "flying": true,
+      "flying": false,
       "passive": false,
       "target": "single",
       "skillPoints": 3,
@@ -19162,7 +20046,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.52,
+                  "scale": 4.02,
                   "pvp": true,
                   "pve": true
                }
@@ -19172,7 +20056,7 @@ export const skillsjson = [
             "minAttack": 121,
             "maxAttack": 122,
             "probability": 30,
-            "probabilityPVP": 30,
+            "probabilityPVP": 21,
             "consumedFP": 42,
             "cooldown": 10,
             "casting": 1.25,
@@ -19188,7 +20072,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.54,
+                  "scale": 4.04,
                   "pvp": true,
                   "pve": true
                }
@@ -19198,7 +20082,7 @@ export const skillsjson = [
             "minAttack": 122,
             "maxAttack": 123,
             "probability": 35,
-            "probabilityPVP": 30,
+            "probabilityPVP": 22,
             "consumedFP": 44,
             "cooldown": 10,
             "casting": 1.25,
@@ -19214,7 +20098,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.56,
+                  "scale": 4.06,
                   "pvp": true,
                   "pve": true
                }
@@ -19224,7 +20108,7 @@ export const skillsjson = [
             "minAttack": 123,
             "maxAttack": 124,
             "probability": 40,
-            "probabilityPVP": 35,
+            "probabilityPVP": 23,
             "consumedFP": 46,
             "cooldown": 10,
             "casting": 1.25,
@@ -19240,7 +20124,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.58,
+                  "scale": 4.08,
                   "pvp": true,
                   "pve": true
                }
@@ -19250,7 +20134,7 @@ export const skillsjson = [
             "minAttack": 124,
             "maxAttack": 125,
             "probability": 50,
-            "probabilityPVP": 40,
+            "probabilityPVP": 24,
             "consumedFP": 48,
             "cooldown": 10,
             "casting": 1.25,
@@ -19266,7 +20150,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.6,
+                  "scale": 4.1,
                   "pvp": true,
                   "pve": true
                }
@@ -19276,7 +20160,7 @@ export const skillsjson = [
             "minAttack": 125,
             "maxAttack": 126,
             "probability": 60,
-            "probabilityPVP": 45,
+            "probabilityPVP": 25,
             "consumedFP": 50,
             "cooldown": 10,
             "casting": 1.25,
@@ -19292,7 +20176,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.62,
+                  "scale": 4.12,
                   "pvp": true,
                   "pve": true
                }
@@ -19302,7 +20186,7 @@ export const skillsjson = [
             "minAttack": 126,
             "maxAttack": 127,
             "probability": 70,
-            "probabilityPVP": 50,
+            "probabilityPVP": 26,
             "consumedFP": 52,
             "cooldown": 10,
             "casting": 1.25,
@@ -19318,7 +20202,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.64,
+                  "scale": 4.14,
                   "pvp": true,
                   "pve": true
                }
@@ -19328,7 +20212,7 @@ export const skillsjson = [
             "minAttack": 127,
             "maxAttack": 128,
             "probability": 80,
-            "probabilityPVP": 60,
+            "probabilityPVP": 27,
             "consumedFP": 54,
             "cooldown": 10,
             "casting": 1.25,
@@ -19344,7 +20228,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.66,
+                  "scale": 4.16,
                   "pvp": true,
                   "pve": true
                }
@@ -19354,7 +20238,7 @@ export const skillsjson = [
             "minAttack": 128,
             "maxAttack": 129,
             "probability": 90,
-            "probabilityPVP": 70,
+            "probabilityPVP": 28,
             "consumedFP": 56,
             "cooldown": 9,
             "casting": 1.25,
@@ -19370,7 +20254,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.68,
+                  "scale": 4.18,
                   "pvp": true,
                   "pve": true
                }
@@ -19379,6 +20263,7 @@ export const skillsjson = [
          {
             "minAttack": 129,
             "maxAttack": 130,
+            "probabilityPVP": 30,
             "consumedFP": 58,
             "cooldown": 8,
             "casting": 1.25,
@@ -19394,7 +20279,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.7,
+                  "scale": 4.2,
                   "pvp": true,
                   "pve": true
                }
@@ -19407,7 +20292,7 @@ export const skillsjson = [
       "name": {
          "en": "Fast Walker",
          "ar": "Fast Walker",
-         "br": "Passos Leves",
+         "br": "Passos Ligeiros",
          "cns": "\u75be\u884c",
          "de": "Fast Walker",
          "fi": "Fast Walker",
@@ -19459,9 +20344,100 @@ export const skillsjson = [
       "levels": [
          {
             "consumedFP": 45,
-            "cooldown": 20,
+            "cooldown": 25,
             "duration": 5,
             "durationPVP": 5,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": 2,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 47,
+            "cooldown": 25,
+            "duration": 5.5,
+            "durationPVP": 5.5,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": 4,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 47,
+            "cooldown": 25,
+            "duration": 6,
+            "durationPVP": 6,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": 5,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 49,
+            "cooldown": 25,
+            "duration": 6.5,
+            "durationPVP": 6.5,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": 6,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 49,
+            "cooldown": 25,
+            "duration": 7,
+            "durationPVP": 7,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": 8,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 51,
+            "cooldown": 25,
+            "duration": 7.5,
+            "durationPVP": 7.5,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": 9,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 51,
+            "cooldown": 25,
+            "duration": 8,
+            "durationPVP": 8,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": 10,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 53,
+            "cooldown": 25,
+            "duration": 8.5,
+            "durationPVP": 8.5,
             "abilities": [
                {
                   "parameter": "speed",
@@ -19471,10 +20447,10 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedFP": 47,
-            "cooldown": 20,
-            "duration": 5.5,
-            "durationPVP": 5.5,
+            "consumedFP": 53,
+            "cooldown": 25,
+            "duration": 9,
+            "durationPVP": 9,
             "abilities": [
                {
                   "parameter": "speed",
@@ -19484,10 +20460,23 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedFP": 47,
-            "cooldown": 20,
-            "duration": 6,
-            "durationPVP": 6,
+            "consumedFP": 55,
+            "cooldown": 25,
+            "duration": 9.5,
+            "durationPVP": 9.5,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": 15,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 55,
+            "cooldown": 25,
+            "duration": 10,
+            "durationPVP": 10,
             "abilities": [
                {
                   "parameter": "speed",
@@ -19497,10 +20486,10 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedFP": 49,
-            "cooldown": 20,
-            "duration": 6.5,
-            "durationPVP": 6.5,
+            "consumedFP": 57,
+            "cooldown": 25,
+            "duration": 12.5,
+            "durationPVP": 12.5,
             "abilities": [
                {
                   "parameter": "speed",
@@ -19510,10 +20499,10 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedFP": 49,
-            "cooldown": 20,
-            "duration": 7,
-            "durationPVP": 7,
+            "consumedFP": 57,
+            "cooldown": 25,
+            "duration": 13,
+            "durationPVP": 13,
             "abilities": [
                {
                   "parameter": "speed",
@@ -19523,10 +20512,10 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedFP": 51,
-            "cooldown": 20,
-            "duration": 7.5,
-            "durationPVP": 7.5,
+            "consumedFP": 59,
+            "cooldown": 25,
+            "duration": 14.5,
+            "durationPVP": 14.5,
             "abilities": [
                {
                   "parameter": "speed",
@@ -19536,10 +20525,23 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedFP": 51,
-            "cooldown": 20,
-            "duration": 8,
-            "durationPVP": 8,
+            "consumedFP": 59,
+            "cooldown": 25,
+            "duration": 15,
+            "durationPVP": 15,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": 23,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 61,
+            "cooldown": 25,
+            "duration": 16.5,
+            "durationPVP": 16.5,
             "abilities": [
                {
                   "parameter": "speed",
@@ -19549,10 +20551,10 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedFP": 53,
-            "cooldown": 20,
-            "duration": 8.5,
-            "durationPVP": 8.5,
+            "consumedFP": 61,
+            "cooldown": 25,
+            "duration": 17,
+            "durationPVP": 17,
             "abilities": [
                {
                   "parameter": "speed",
@@ -19562,10 +20564,23 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedFP": 53,
-            "cooldown": 20,
-            "duration": 9,
-            "durationPVP": 9,
+            "consumedFP": 63,
+            "cooldown": 25,
+            "duration": 18.5,
+            "durationPVP": 18.5,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": 27,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 63,
+            "cooldown": 25,
+            "duration": 20,
+            "durationPVP": 20,
             "abilities": [
                {
                   "parameter": "speed",
@@ -19575,208 +20590,15 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedFP": 55,
-            "cooldown": 20,
-            "duration": 9.5,
-            "durationPVP": 9.5,
+            "consumedFP": 65,
+            "cooldown": 25,
+            "duration": 25,
+            "durationPVP": 25,
             "abilities": [
                {
                   "parameter": "speed",
                   "add": 30,
                   "rate": true
-               }
-            ]
-         },
-         {
-            "consumedFP": 55,
-            "cooldown": 20,
-            "duration": 10,
-            "durationPVP": 10,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 32,
-                  "rate": true
-               }
-            ]
-         },
-         {
-            "consumedFP": 57,
-            "cooldown": 20,
-            "duration": 10.5,
-            "durationPVP": 10.5,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 34,
-                  "rate": true
-               }
-            ]
-         },
-         {
-            "consumedFP": 57,
-            "cooldown": 20,
-            "duration": 11,
-            "durationPVP": 11,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 36,
-                  "rate": true
-               }
-            ]
-         },
-         {
-            "consumedFP": 59,
-            "cooldown": 20,
-            "duration": 11.5,
-            "durationPVP": 11.5,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 38,
-                  "rate": true
-               }
-            ]
-         },
-         {
-            "consumedFP": 59,
-            "cooldown": 20,
-            "duration": 12,
-            "durationPVP": 12,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 40,
-                  "rate": true
-               }
-            ]
-         },
-         {
-            "consumedFP": 61,
-            "cooldown": 20,
-            "duration": 12.5,
-            "durationPVP": 12.5,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 42,
-                  "rate": true
-               }
-            ]
-         },
-         {
-            "consumedFP": 61,
-            "cooldown": 20,
-            "duration": 13,
-            "durationPVP": 13,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 44,
-                  "rate": true
-               }
-            ]
-         },
-         {
-            "consumedFP": 63,
-            "cooldown": 20,
-            "duration": 13.5,
-            "durationPVP": 13.5,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 46,
-                  "rate": true
-               }
-            ]
-         },
-         {
-            "consumedFP": 63,
-            "cooldown": 20,
-            "duration": 15,
-            "durationPVP": 15,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 48,
-                  "rate": true
-               }
-            ]
-         },
-         {
-            "consumedFP": 65,
-            "cooldown": 20,
-            "duration": 20,
-            "durationPVP": 20,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 50,
-                  "rate": true
-               }
-            ]
-         }
-      ]
-   },
-   {
-      "id": 3462,
-      "name": {
-         "en": "Toggle Buff",
-         "ar": "Toggle Buff",
-         "br": "Alternar Buff",
-         "cns": "Buff\u4f5c\u7528",
-         "de": "Toggle Buff",
-         "fi": "Toggle Buff",
-         "fil": "Toggle Buff",
-         "fr": "Vitesse modifi\u00e9e",
-         "it": "Toggle Buff",
-         "kr": "\ud1a0\uae00 \ubc84\ud504",
-         "nl": "Toggle Buff",
-         "pl": "Toggle Buff",
-         "ru": "\u0412\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435 \u044d\u0444\u0444\u0435\u043a\u0442\u043e\u0432",
-         "sw": "Toggle Buff",
-         "th": "Toggle Buff"
-      },
-      "description": {
-         "en": "",
-         "ar": "",
-         "br": "",
-         "cns": "",
-         "de": "",
-         "fi": "",
-         "fil": "",
-         "fr": "",
-         "it": "",
-         "kr": "",
-         "nl": "",
-         "pl": "",
-         "ru": "",
-         "sw": "",
-         "th": ""
-      },
-      "icon": "jstyoybackst.png",
-      "level": 1,
-      "element": "none",
-      "magic": false,
-      "requirements": [],
-      "combo": "general",
-      "debuff": false,
-      "flying": true,
-      "passive": false,
-      "target": "currentplayer",
-      "levels": [
-         {
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 20,
-                  "rate": true
-               },
-               {
-                  "parameter": "fprecovery",
-                  "add": 5,
-                  "rate": false
                }
             ]
          }
@@ -19787,7 +20609,7 @@ export const skillsjson = [
       "name": {
          "en": "Stonehand",
          "ar": "Stonehand",
-         "br": "M\u00e3o Pesada",
+         "br": "Punho de Pedra",
          "cns": "\u5723\u62f3\u672f",
          "de": "Stonehand",
          "fi": "Stonehand",
@@ -20560,7 +21382,7 @@ export const skillsjson = [
       "description": {
          "en": "A powerful, ranged attack.",
          "ar": "\u062a\u0631\u0633\u0644 \u0645\u0648\u062c\u0629 \u0637\u0627\u0626\u0631\u0629 \u0645\u0646 \u0627\u0644\u0637\u0627\u0642\u0629 \u0646\u062d\u0648 \u0627\u0644\u062e\u0635\u0645.",
-         "br": "Um potente ataque a distancia.",
+         "br": "Um potente ataque \u00e0 dist\u00e2ncia.",
          "cns": "\u5c06\u805a\u96c6\u7684\u6597\u6c14\u5316\u505a\u65e0\u6570\u5229\u5203\u51b2\u51fb\u5bf9\u65b9\u3002",
          "de": "Ein Hieb gegen den Gegner mit der Waffe, geladen mit Geisteskraft. ",
          "fi": "Voimakas, ranged hy\u00f6kk\u00e4ys.",
@@ -20595,14 +21417,14 @@ export const skillsjson = [
          {
             "minAttack": 45,
             "maxAttack": 46,
-            "consumedFP": 55,
+            "consumedFP": 25,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.52,
+                  "scale": 3.62,
                   "pvp": true,
                   "pve": true
                }
@@ -20611,14 +21433,14 @@ export const skillsjson = [
          {
             "minAttack": 46,
             "maxAttack": 47,
-            "consumedFP": 55,
+            "consumedFP": 25,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.54,
+                  "scale": 3.64,
                   "pvp": true,
                   "pve": true
                }
@@ -20627,14 +21449,14 @@ export const skillsjson = [
          {
             "minAttack": 47,
             "maxAttack": 48,
-            "consumedFP": 57,
+            "consumedFP": 27,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.56,
+                  "scale": 3.66,
                   "pvp": true,
                   "pve": true
                }
@@ -20643,14 +21465,14 @@ export const skillsjson = [
          {
             "minAttack": 48,
             "maxAttack": 49,
-            "consumedFP": 57,
+            "consumedFP": 27,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.58,
+                  "scale": 3.68,
                   "pvp": true,
                   "pve": true
                }
@@ -20659,14 +21481,14 @@ export const skillsjson = [
          {
             "minAttack": 49,
             "maxAttack": 50,
-            "consumedFP": 60,
+            "consumedFP": 30,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.6,
+                  "scale": 3.7,
                   "pvp": true,
                   "pve": true
                }
@@ -20675,14 +21497,14 @@ export const skillsjson = [
          {
             "minAttack": 50,
             "maxAttack": 51,
-            "consumedFP": 60,
+            "consumedFP": 30,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.62,
+                  "scale": 3.72,
                   "pvp": true,
                   "pve": true
                }
@@ -20691,14 +21513,14 @@ export const skillsjson = [
          {
             "minAttack": 51,
             "maxAttack": 52,
-            "consumedFP": 62,
+            "consumedFP": 32,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.64,
+                  "scale": 3.74,
                   "pvp": true,
                   "pve": true
                }
@@ -20707,14 +21529,14 @@ export const skillsjson = [
          {
             "minAttack": 52,
             "maxAttack": 53,
-            "consumedFP": 62,
+            "consumedFP": 32,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.66,
+                  "scale": 3.76,
                   "pvp": true,
                   "pve": true
                }
@@ -20723,14 +21545,14 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "consumedFP": 64,
+            "consumedFP": 34,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.68,
+                  "scale": 3.78,
                   "pvp": true,
                   "pve": true
                }
@@ -20739,14 +21561,14 @@ export const skillsjson = [
          {
             "minAttack": 54,
             "maxAttack": 55,
-            "consumedFP": 64,
+            "consumedFP": 34,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.7,
+                  "scale": 3.8,
                   "pvp": true,
                   "pve": true
                }
@@ -20755,14 +21577,14 @@ export const skillsjson = [
          {
             "minAttack": 55,
             "maxAttack": 56,
-            "consumedFP": 66,
+            "consumedFP": 36,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.72,
+                  "scale": 3.82,
                   "pvp": true,
                   "pve": true
                }
@@ -20771,14 +21593,14 @@ export const skillsjson = [
          {
             "minAttack": 56,
             "maxAttack": 57,
-            "consumedFP": 66,
+            "consumedFP": 36,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.74,
+                  "scale": 3.84,
                   "pvp": true,
                   "pve": true
                }
@@ -20787,14 +21609,14 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "consumedFP": 68,
+            "consumedFP": 38,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.76,
+                  "scale": 3.86,
                   "pvp": true,
                   "pve": true
                }
@@ -20803,14 +21625,14 @@ export const skillsjson = [
          {
             "minAttack": 58,
             "maxAttack": 59,
-            "consumedFP": 68,
+            "consumedFP": 38,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.78,
+                  "scale": 3.88,
                   "pvp": true,
                   "pve": true
                }
@@ -20819,14 +21641,14 @@ export const skillsjson = [
          {
             "minAttack": 59,
             "maxAttack": 60,
-            "consumedFP": 70,
+            "consumedFP": 40,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.8,
+                  "scale": 3.9,
                   "pvp": true,
                   "pve": true
                }
@@ -20835,14 +21657,14 @@ export const skillsjson = [
          {
             "minAttack": 60,
             "maxAttack": 61,
-            "consumedFP": 70,
+            "consumedFP": 40,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.82,
+                  "scale": 3.92,
                   "pvp": true,
                   "pve": true
                }
@@ -20851,14 +21673,14 @@ export const skillsjson = [
          {
             "minAttack": 61,
             "maxAttack": 62,
-            "consumedFP": 75,
+            "consumedFP": 45,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.84,
+                  "scale": 3.94,
                   "pvp": true,
                   "pve": true
                }
@@ -20867,14 +21689,14 @@ export const skillsjson = [
          {
             "minAttack": 62,
             "maxAttack": 63,
-            "consumedFP": 75,
+            "consumedFP": 45,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.86,
+                  "scale": 3.96,
                   "pvp": true,
                   "pve": true
                }
@@ -20883,14 +21705,14 @@ export const skillsjson = [
          {
             "minAttack": 63,
             "maxAttack": 64,
-            "consumedFP": 80,
+            "consumedFP": 50,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.88,
+                  "scale": 3.98,
                   "pvp": true,
                   "pve": true
                }
@@ -20899,14 +21721,14 @@ export const skillsjson = [
          {
             "minAttack": 64,
             "maxAttack": 65,
-            "consumedFP": 80,
+            "consumedFP": 50,
             "casting": 1.25,
-            "spellRange": 4,
+            "spellRange": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.9,
+                  "scale": 4,
                   "pvp": true,
                   "pve": true
                }
@@ -20919,34 +21741,34 @@ export const skillsjson = [
       "name": {
          "en": "Low Attack",
          "ar": "Low Attack",
-         "br": "Ataque Lento",
-         "cns": "\u865a\u5f31",
+         "br": "Low Attack",
+         "cns": "Low Attack",
          "de": "Low Attack",
          "fi": "Low Attack",
          "fil": "Low Attack",
-         "fr": "Lenteur",
+         "fr": "Low Attack",
          "it": "Low Attack",
-         "kr": "\ub85c\uc5b4\ud0dd",
+         "kr": "Low Attack",
          "nl": "Low Attack",
          "pl": "Low Attack",
-         "ru": "\u0417\u0430\u043c\u0435\u0434\u043b\u0435\u043d\u0438\u0435 \u0430\u0442\u0430\u043a\u0438",
+         "ru": "Low Attack",
          "sw": "Low Attack",
          "th": "Low Attack"
       },
       "description": {
          "en": "Decreases attack speed and cool down time",
          "ar": "Decreases attack speed and cool down time",
-         "br": "Diminui a velocidade de ataque e tempo de resfriamento",
-         "cns": "\u964d\u4f4e\u7269\u7406\u653b\u51fb\u548c\u6cd5\u672f\u653b\u51fb\u7684\u901f\u5ea6\u3002",
-         "de": "Verringern der Angriffsst\u00e4rke und die Pause.",
+         "br": "Decreases attack speed and cool down time",
+         "cns": "Decreases attack speed and cool down time",
+         "de": "Decreases attack speed and cool down time",
          "fi": "Decreases attack speed and cool down time",
          "fil": "Decreases attack speed and cool down time",
-         "fr": "Diminue la vitesse d'attaque",
+         "fr": "Decreases attack speed and cool down time",
          "it": "Decreases attack speed and cool down time",
-         "kr": "\uacf5\uaca9\uc18d\ub3c4\uc640 \uc2dc\uc804\uc18d\ub3c4\uac00 \uc800\ud558\ub429\ub2c8\ub2e4.",
+         "kr": "Decreases attack speed and cool down time",
          "nl": "Decreases attack speed and cool down time",
          "pl": "Decreases attack speed and cool down time",
-         "ru": "\u0421\u043a\u043e\u0440\u043e\u0441\u0442\u044c \u0430\u0442\u0430\u043a\u0438 \u0438 \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f \u0443\u043c\u0435\u043d\u0438\u0439 \u0441\u043d\u0438\u0436\u0435\u043d\u0430.",
+         "ru": "Decreases attack speed and cool down time",
          "sw": "Decreases attack speed and cool down time",
          "th": "Decreases attack speed and cool down time"
       },
@@ -21221,7 +22043,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "criticalchance",
-                  "add": 11,
+                  "add": 12,
                   "rate": true
                }
             ],
@@ -21243,7 +22065,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "criticalchance",
-                  "add": 12,
+                  "add": 14,
                   "rate": true
                }
             ],
@@ -21265,7 +22087,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "criticalchance",
-                  "add": 13,
+                  "add": 16,
                   "rate": true
                }
             ],
@@ -21287,7 +22109,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "criticalchance",
-                  "add": 14,
+                  "add": 18,
                   "rate": true
                }
             ],
@@ -21309,7 +22131,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "criticalchance",
-                  "add": 15,
+                  "add": 20,
                   "rate": true
                }
             ],
@@ -21383,8 +22205,17 @@ export const skillsjson = [
          {
             "minAttack": 41,
             "maxAttack": 42,
+            "probability": 10,
+            "probabilityPVP": 10,
             "consumedMP": 25,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "hprestoration",
+                  "add": -1,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -21399,8 +22230,17 @@ export const skillsjson = [
          {
             "minAttack": 41,
             "maxAttack": 42,
+            "probability": 11,
+            "probabilityPVP": 11,
             "consumedMP": 25,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "hprestoration",
+                  "add": -1,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -21415,8 +22255,17 @@ export const skillsjson = [
          {
             "minAttack": 41,
             "maxAttack": 42,
+            "probability": 11,
+            "probabilityPVP": 11,
             "consumedMP": 25,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "hprestoration",
+                  "add": -2,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -21431,8 +22280,17 @@ export const skillsjson = [
          {
             "minAttack": 41,
             "maxAttack": 42,
+            "probability": 12,
+            "probabilityPVP": 12,
             "consumedMP": 27,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "hprestoration",
+                  "add": -2,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -21447,8 +22305,17 @@ export const skillsjson = [
          {
             "minAttack": 42,
             "maxAttack": 43,
+            "probability": 12,
+            "probabilityPVP": 12,
             "consumedMP": 27,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "hprestoration",
+                  "add": -3,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -21463,8 +22330,17 @@ export const skillsjson = [
          {
             "minAttack": 42,
             "maxAttack": 43,
+            "probability": 13,
+            "probabilityPVP": 13,
             "consumedMP": 27,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "hprestoration",
+                  "add": -3,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -21479,8 +22355,17 @@ export const skillsjson = [
          {
             "minAttack": 42,
             "maxAttack": 43,
+            "probability": 13,
+            "probabilityPVP": 13,
             "consumedMP": 29,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "hprestoration",
+                  "add": -4,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -21495,8 +22380,17 @@ export const skillsjson = [
          {
             "minAttack": 42,
             "maxAttack": 43,
+            "probability": 14,
+            "probabilityPVP": 14,
             "consumedMP": 29,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "hprestoration",
+                  "add": -4,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -21511,8 +22405,17 @@ export const skillsjson = [
          {
             "minAttack": 44,
             "maxAttack": 45,
+            "probability": 14,
+            "probabilityPVP": 14,
             "consumedMP": 29,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "hprestoration",
+                  "add": -5,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -21527,8 +22430,17 @@ export const skillsjson = [
          {
             "minAttack": 44,
             "maxAttack": 45,
+            "probability": 15,
+            "probabilityPVP": 15,
             "consumedMP": 31,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "hprestoration",
+                  "add": -5,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -21543,8 +22455,17 @@ export const skillsjson = [
          {
             "minAttack": 44,
             "maxAttack": 45,
+            "probability": 15,
+            "probabilityPVP": 15,
             "consumedMP": 31,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "hprestoration",
+                  "add": -6,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -21559,8 +22480,17 @@ export const skillsjson = [
          {
             "minAttack": 44,
             "maxAttack": 45,
+            "probability": 16,
+            "probabilityPVP": 16,
             "consumedMP": 31,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "hprestoration",
+                  "add": -6,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -21575,8 +22505,17 @@ export const skillsjson = [
          {
             "minAttack": 46,
             "maxAttack": 47,
+            "probability": 16,
+            "probabilityPVP": 16,
             "consumedMP": 33,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "hprestoration",
+                  "add": -7,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -21591,8 +22530,17 @@ export const skillsjson = [
          {
             "minAttack": 46,
             "maxAttack": 47,
+            "probability": 17,
+            "probabilityPVP": 17,
             "consumedMP": 33,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "hprestoration",
+                  "add": -7,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -21607,8 +22555,17 @@ export const skillsjson = [
          {
             "minAttack": 46,
             "maxAttack": 47,
+            "probability": 17,
+            "probabilityPVP": 17,
             "consumedMP": 35,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "hprestoration",
+                  "add": -8,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -21623,8 +22580,17 @@ export const skillsjson = [
          {
             "minAttack": 49,
             "maxAttack": 50,
+            "probability": 18,
+            "probabilityPVP": 18,
             "consumedMP": 35,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "hprestoration",
+                  "add": -8,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -21639,8 +22605,17 @@ export const skillsjson = [
          {
             "minAttack": 49,
             "maxAttack": 50,
+            "probability": 18,
+            "probabilityPVP": 18,
             "consumedMP": 38,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "hprestoration",
+                  "add": -9,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -21655,8 +22630,17 @@ export const skillsjson = [
          {
             "minAttack": 49,
             "maxAttack": 50,
+            "probability": 19,
+            "probabilityPVP": 19,
             "consumedMP": 38,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "hprestoration",
+                  "add": -9,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -21671,8 +22655,17 @@ export const skillsjson = [
          {
             "minAttack": 49,
             "maxAttack": 50,
+            "probability": 19,
+            "probabilityPVP": 19,
             "consumedMP": 40,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "hprestoration",
+                  "add": -9,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -21687,8 +22680,17 @@ export const skillsjson = [
          {
             "minAttack": 49,
             "maxAttack": 50,
+            "probability": 20,
+            "probabilityPVP": 20,
             "consumedMP": 40,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "hprestoration",
+                  "add": -10,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -21707,7 +22709,7 @@ export const skillsjson = [
       "name": {
          "en": "Void",
          "ar": "Void",
-         "br": "Vazio",
+         "br": "V\u00e1cuo",
          "cns": "\u98ce\u4e4b\u771f\u7a7a",
          "de": "Void",
          "fi": "Void",
@@ -21931,9 +22933,9 @@ export const skillsjson = [
       "description": {
          "en": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
          "ar": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
-         "br": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
-         "cns": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
-         "de": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
+         "br": "Causa danos nos inimigos ao redor com uma tempestade de areia e tem chance de reduzir a Precis\u00e3o do alvo.",
+         "cns": "\u98ce\u4e0e\u571f\u5f62\u6210\u7684\u6c99\u5c18\u66b4\uff0c\u4ee4\u5176\u4e2d\u7684\u76ee\u6807\u53d7\u5230\u5267\u70c8\u653b\u51fb\u3002\u6709\u51e0\u7387\u964d\u4f4e\u76ee\u6807\u547d\u4e2d\u3002",
+         "de": "Mehreren Gegnern durch Herbeirufen eines Sandsturms Schaden zuf\u00fcgen. Kleine Chance die Genauigkeit zu verringern.",
          "fi": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
          "fil": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
          "fr": "Damages surrounding enemies with a sandstorm. Chance to reduce Accuracy.",
@@ -21974,7 +22976,7 @@ export const skillsjson = [
             "probability": 50,
             "probabilityPVP": 50,
             "consumedMP": 112,
-            "cooldown": 10,
+            "cooldown": 14,
             "casting": 0.5,
             "duration": 10,
             "durationPVP": 10,
@@ -22002,7 +23004,7 @@ export const skillsjson = [
             "probability": 55,
             "probabilityPVP": 55,
             "consumedMP": 114,
-            "cooldown": 10,
+            "cooldown": 14,
             "casting": 0.5,
             "duration": 10,
             "durationPVP": 10,
@@ -22030,7 +23032,7 @@ export const skillsjson = [
             "probability": 60,
             "probabilityPVP": 60,
             "consumedMP": 116,
-            "cooldown": 10,
+            "cooldown": 14,
             "casting": 0.5,
             "duration": 10,
             "durationPVP": 10,
@@ -22058,7 +23060,7 @@ export const skillsjson = [
             "probability": 65,
             "probabilityPVP": 65,
             "consumedMP": 118,
-            "cooldown": 10,
+            "cooldown": 14,
             "casting": 0.5,
             "duration": 10,
             "durationPVP": 10,
@@ -22086,7 +23088,7 @@ export const skillsjson = [
             "probability": 70,
             "probabilityPVP": 70,
             "consumedMP": 120,
-            "cooldown": 10,
+            "cooldown": 14,
             "casting": 0.5,
             "duration": 10,
             "durationPVP": 10,
@@ -22114,7 +23116,7 @@ export const skillsjson = [
             "probability": 75,
             "probabilityPVP": 75,
             "consumedMP": 122,
-            "cooldown": 10,
+            "cooldown": 14,
             "casting": 0.5,
             "duration": 11,
             "durationPVP": 11,
@@ -22142,7 +23144,7 @@ export const skillsjson = [
             "probability": 76,
             "probabilityPVP": 76,
             "consumedMP": 124,
-            "cooldown": 10,
+            "cooldown": 14,
             "casting": 0.5,
             "duration": 12,
             "durationPVP": 12,
@@ -22170,7 +23172,7 @@ export const skillsjson = [
             "probability": 77,
             "probabilityPVP": 77,
             "consumedMP": 126,
-            "cooldown": 10,
+            "cooldown": 14,
             "casting": 0.5,
             "duration": 13,
             "durationPVP": 13,
@@ -22198,7 +23200,7 @@ export const skillsjson = [
             "probability": 78,
             "probabilityPVP": 78,
             "consumedMP": 128,
-            "cooldown": 10,
+            "cooldown": 14,
             "casting": 0.5,
             "duration": 14,
             "durationPVP": 14,
@@ -22226,7 +23228,7 @@ export const skillsjson = [
             "probability": 80,
             "probabilityPVP": 80,
             "consumedMP": 130,
-            "cooldown": 10,
+            "cooldown": 14,
             "casting": 0.5,
             "duration": 15,
             "durationPVP": 15,
@@ -22251,11 +23253,292 @@ export const skillsjson = [
       ]
    },
    {
+      "id": 3714,
+      "name": {
+         "en": "Heart of Fury",
+         "ar": "Heart of Fury",
+         "br": "Heart of Fury",
+         "cns": "Heart of Fury",
+         "de": "Heart of Fury",
+         "fi": "Heart of Fury",
+         "fil": "Heart of Fury",
+         "fr": "Heart of Fury",
+         "it": "Heart of Fury",
+         "kr": "Heart of Fury",
+         "nl": "Heart of Fury",
+         "pl": "Heart of Fury",
+         "ru": "Heart of Fury",
+         "sw": "Heart of Fury",
+         "th": "Heart of Fury"
+      },
+      "description": {
+         "en": "Increases fighting cababilities at the cost of 5% of your maximum FP each strike. Damage will increase by 15% of your maximum FP.",
+         "ar": "Increases fighting cababilities at the cost of 5% of your maximum FP each strike. Damage will increase by 15% of your maximum FP.",
+         "br": "Increases fighting cababilities at the cost of 5% of your maximum FP each strike. Damage will increase by 15% of your maximum FP.",
+         "cns": "Increases fighting cababilities at the cost of 5% of your maximum FP each strike. Damage will increase by 15% of your maximum FP.",
+         "de": "Increases fighting cababilities at the cost of 5% of your maximum FP each strike. Damage will increase by 15% of your maximum FP.",
+         "fi": "Increases fighting cababilities at the cost of 5% of your maximum FP each strike. Damage will increase by 15% of your maximum FP.",
+         "fil": "Increases fighting cababilities at the cost of 5% of your maximum FP each strike. Damage will increase by 15% of your maximum FP.",
+         "fr": "Increases fighting cababilities at the cost of 5% of your maximum FP each strike. Damage will increase by 15% of your maximum FP.",
+         "it": "Increases fighting cababilities at the cost of 5% of your maximum FP each strike. Damage will increase by 15% of your maximum FP.",
+         "kr": "Increases fighting cababilities at the cost of 5% of your maximum FP each strike. Damage will increase by 15% of your maximum FP.",
+         "nl": "Increases fighting cababilities at the cost of 5% of your maximum FP each strike. Damage will increase by 15% of your maximum FP.",
+         "pl": "Increases fighting cababilities at the cost of 5% of your maximum FP each strike. Damage will increase by 15% of your maximum FP.",
+         "ru": "Increases fighting cababilities at the cost of 5% of your maximum FP each strike. Damage will increase by 15% of your maximum FP.",
+         "sw": "Increases fighting cababilities at the cost of 5% of your maximum FP each strike. Damage will increase by 15% of your maximum FP.",
+         "th": "Increases fighting cababilities at the cost of 5% of your maximum FP each strike. Damage will increase by 15% of your maximum FP."
+      },
+      "icon": "mersupfury.png",
+      "class": 5330,
+      "level": 60,
+      "element": "none",
+      "magic": false,
+      "requirements": [],
+      "combo": "general",
+      "debuff": false,
+      "flying": true,
+      "passive": false,
+      "target": "currentplayer",
+      "skillPoints": 3,
+      "levels": [
+         {
+            "consumedFP": 72,
+            "casting": 1.5,
+            "duration": 300,
+            "durationPVP": 300,
+            "abilities": [
+               {
+                  "parameter": "spiritstrike",
+                  "add": 1,
+                  "rate": true
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": 5,
+                  "rate": true
+               },
+               {
+                  "parameter": "criticalchance",
+                  "add": 1,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 74,
+            "casting": 1.5,
+            "duration": 300,
+            "durationPVP": 300,
+            "abilities": [
+               {
+                  "parameter": "spiritstrike",
+                  "add": 2,
+                  "rate": true
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": 5,
+                  "rate": true
+               },
+               {
+                  "parameter": "criticalchance",
+                  "add": 2,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 76,
+            "casting": 1.5,
+            "duration": 300,
+            "durationPVP": 300,
+            "abilities": [
+               {
+                  "parameter": "spiritstrike",
+                  "add": 3,
+                  "rate": true
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": 5,
+                  "rate": true
+               },
+               {
+                  "parameter": "criticalchance",
+                  "add": 3,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 78,
+            "casting": 1.5,
+            "duration": 300,
+            "durationPVP": 300,
+            "abilities": [
+               {
+                  "parameter": "spiritstrike",
+                  "add": 4,
+                  "rate": true
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": 5,
+                  "rate": true
+               },
+               {
+                  "parameter": "criticalchance",
+                  "add": 4,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 80,
+            "casting": 1.5,
+            "duration": 300,
+            "durationPVP": 300,
+            "abilities": [
+               {
+                  "parameter": "spiritstrike",
+                  "add": 5,
+                  "rate": true
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": 5,
+                  "rate": true
+               },
+               {
+                  "parameter": "criticalchance",
+                  "add": 5,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 82,
+            "casting": 1.5,
+            "duration": 300,
+            "durationPVP": 300,
+            "abilities": [
+               {
+                  "parameter": "spiritstrike",
+                  "add": 7,
+                  "rate": true
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": 6,
+                  "rate": true
+               },
+               {
+                  "parameter": "criticalchance",
+                  "add": 6,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 84,
+            "casting": 1.5,
+            "duration": 300,
+            "durationPVP": 300,
+            "abilities": [
+               {
+                  "parameter": "spiritstrike",
+                  "add": 9,
+                  "rate": true
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": 7,
+                  "rate": true
+               },
+               {
+                  "parameter": "criticalchance",
+                  "add": 7,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 86,
+            "casting": 1.5,
+            "duration": 300,
+            "durationPVP": 300,
+            "abilities": [
+               {
+                  "parameter": "spiritstrike",
+                  "add": 11,
+                  "rate": true
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": 8,
+                  "rate": true
+               },
+               {
+                  "parameter": "criticalchance",
+                  "add": 8,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 88,
+            "casting": 1.5,
+            "duration": 300,
+            "durationPVP": 300,
+            "abilities": [
+               {
+                  "parameter": "spiritstrike",
+                  "add": 13,
+                  "rate": true
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": 9,
+                  "rate": true
+               },
+               {
+                  "parameter": "criticalchance",
+                  "add": 9,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 90,
+            "casting": 1.5,
+            "duration": 300,
+            "durationPVP": 300,
+            "abilities": [
+               {
+                  "parameter": "spiritstrike",
+                  "add": 15,
+                  "rate": true
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": 10,
+                  "rate": true
+               },
+               {
+                  "parameter": "criticalchance",
+                  "add": 10,
+                  "rate": true
+               }
+            ]
+         }
+      ]
+   },
+   {
       "id": 3721,
       "name": {
          "en": "Cat's Reflex",
          "ar": "Cat's Reflex",
-         "br": "Reflexo",
+         "br": "Reflexos de Gato",
          "cns": "\u8eb2\u907f\u672f",
          "de": "Cats Reflex",
          "fi": "Cat's Reflex",
@@ -22312,7 +23595,7 @@ export const skillsjson = [
             "durationPVP": 150,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 1,
                   "rate": true
                }
@@ -22326,7 +23609,7 @@ export const skillsjson = [
                   "pve": true
                },
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "stat": "int",
                   "scale": 0.02,
                   "maximum": 8,
@@ -22342,7 +23625,7 @@ export const skillsjson = [
             "durationPVP": 150,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 1,
                   "rate": true
                }
@@ -22356,7 +23639,7 @@ export const skillsjson = [
                   "pve": true
                },
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "stat": "int",
                   "scale": 0.02,
                   "maximum": 8,
@@ -22372,7 +23655,7 @@ export const skillsjson = [
             "durationPVP": 150,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 2,
                   "rate": true
                }
@@ -22386,7 +23669,7 @@ export const skillsjson = [
                   "pve": true
                },
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "stat": "int",
                   "scale": 0.02,
                   "maximum": 8,
@@ -22402,7 +23685,7 @@ export const skillsjson = [
             "durationPVP": 150,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 2,
                   "rate": true
                }
@@ -22416,7 +23699,7 @@ export const skillsjson = [
                   "pve": true
                },
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "stat": "int",
                   "scale": 0.02,
                   "maximum": 8,
@@ -22432,7 +23715,7 @@ export const skillsjson = [
             "durationPVP": 150,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 3,
                   "rate": true
                }
@@ -22446,7 +23729,7 @@ export const skillsjson = [
                   "pve": true
                },
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "stat": "int",
                   "scale": 0.02,
                   "maximum": 8,
@@ -22462,7 +23745,7 @@ export const skillsjson = [
             "durationPVP": 150,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 3,
                   "rate": true
                }
@@ -22476,7 +23759,7 @@ export const skillsjson = [
                   "pve": true
                },
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "stat": "int",
                   "scale": 0.02,
                   "maximum": 9,
@@ -22492,7 +23775,7 @@ export const skillsjson = [
             "durationPVP": 150,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 4,
                   "rate": true
                }
@@ -22506,7 +23789,7 @@ export const skillsjson = [
                   "pve": true
                },
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "stat": "int",
                   "scale": 0.02,
                   "maximum": 9,
@@ -22522,7 +23805,7 @@ export const skillsjson = [
             "durationPVP": 150,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 4,
                   "rate": true
                }
@@ -22536,7 +23819,7 @@ export const skillsjson = [
                   "pve": true
                },
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "stat": "int",
                   "scale": 0.02,
                   "maximum": 9,
@@ -22552,7 +23835,7 @@ export const skillsjson = [
             "durationPVP": 150,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 5,
                   "rate": true
                }
@@ -22566,7 +23849,7 @@ export const skillsjson = [
                   "pve": true
                },
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "stat": "int",
                   "scale": 0.02,
                   "maximum": 9,
@@ -22582,7 +23865,7 @@ export const skillsjson = [
             "durationPVP": 150,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 5,
                   "rate": true
                }
@@ -22596,7 +23879,7 @@ export const skillsjson = [
                   "pve": true
                },
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "stat": "int",
                   "scale": 0.02,
                   "maximum": 9,
@@ -22612,7 +23895,7 @@ export const skillsjson = [
             "durationPVP": 160,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 6,
                   "rate": true
                }
@@ -22626,7 +23909,7 @@ export const skillsjson = [
                   "pve": true
                },
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "stat": "int",
                   "scale": 0.02,
                   "maximum": 9,
@@ -22642,7 +23925,7 @@ export const skillsjson = [
             "durationPVP": 170,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 6,
                   "rate": true
                }
@@ -22656,7 +23939,7 @@ export const skillsjson = [
                   "pve": true
                },
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "stat": "int",
                   "scale": 0.02,
                   "maximum": 9,
@@ -22672,7 +23955,7 @@ export const skillsjson = [
             "durationPVP": 180,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 7,
                   "rate": true
                }
@@ -22686,7 +23969,7 @@ export const skillsjson = [
                   "pve": true
                },
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "stat": "int",
                   "scale": 0.02,
                   "maximum": 9,
@@ -22702,7 +23985,7 @@ export const skillsjson = [
             "durationPVP": 190,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 7,
                   "rate": true
                }
@@ -22716,7 +23999,7 @@ export const skillsjson = [
                   "pve": true
                },
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "stat": "int",
                   "scale": 0.02,
                   "maximum": 9,
@@ -22732,7 +24015,7 @@ export const skillsjson = [
             "durationPVP": 200,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 8,
                   "rate": true
                }
@@ -22746,7 +24029,7 @@ export const skillsjson = [
                   "pve": true
                },
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "stat": "int",
                   "scale": 0.02,
                   "maximum": 9,
@@ -22762,7 +24045,7 @@ export const skillsjson = [
             "durationPVP": 210,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 8,
                   "rate": true
                }
@@ -22776,7 +24059,7 @@ export const skillsjson = [
                   "pve": true
                },
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "stat": "int",
                   "scale": 0.02,
                   "maximum": 10,
@@ -22792,7 +24075,7 @@ export const skillsjson = [
             "durationPVP": 220,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 8,
                   "rate": true
                }
@@ -22806,7 +24089,7 @@ export const skillsjson = [
                   "pve": true
                },
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "stat": "int",
                   "scale": 0.02,
                   "maximum": 10,
@@ -22822,7 +24105,7 @@ export const skillsjson = [
             "durationPVP": 230,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 9,
                   "rate": true
                }
@@ -22836,7 +24119,7 @@ export const skillsjson = [
                   "pve": true
                },
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "stat": "int",
                   "scale": 0.02,
                   "maximum": 10,
@@ -22852,7 +24135,7 @@ export const skillsjson = [
             "durationPVP": 240,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 9,
                   "rate": true
                }
@@ -22866,7 +24149,7 @@ export const skillsjson = [
                   "pve": true
                },
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "stat": "int",
                   "scale": 0.02,
                   "maximum": 10,
@@ -22882,7 +24165,7 @@ export const skillsjson = [
             "durationPVP": 250,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": 10,
                   "rate": true
                }
@@ -22896,7 +24179,7 @@ export const skillsjson = [
                   "pve": true
                },
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "stat": "int",
                   "scale": 0.02,
                   "maximum": 10,
@@ -23287,38 +24570,38 @@ export const skillsjson = [
    {
       "id": 3827,
       "name": {
-         "en": "Empower Weapon",
-         "ar": "Empower Weapon",
+         "en": "Empower weapon",
+         "ar": "Empower weapon",
          "br": "Arma Elementalista",
          "cns": "\u6218\u795e\u9644\u4f53",
          "de": "Empower Weapon",
          "fi": "Empower Weapon",
-         "fil": "Empower Weapon",
+         "fil": "Empower weapon",
          "fr": "Arme enchant\u00e9e",
          "it": "Incanto Rafforzato",
          "kr": "\uc784\ud30c\uc6cc \uc6e8\ud3f0",
-         "nl": "Empower Weapon",
+         "nl": "Empower weapon",
          "pl": "Wzmocnienie \u017bywio\u0142u",
          "ru": "\u041e\u0440\u0443\u0436\u0438\u0435 \u0441\u0442\u0438\u0445\u0438\u0439",
-         "sw": "Empower Weapon",
-         "th": "Empower Weapon"
+         "sw": "Empower weapon",
+         "th": "Empower weapon"
       },
       "description": {
-         "en": "Uses the element of a Weapon to boost your attack power.",
-         "ar": "Uses the element of a Weapon to boost your attack power.",
+         "en": "Uses the element of a weapon to boost your attack power.",
+         "ar": "Uses the element of a weapon to boost your attack power.",
          "br": "Usa o elemento da Arma para aumentar o seu dano.",
          "cns": "\u4f9d\u9760\u6218\u795e\u8d50\u4e88\u7684\u795e\u529b\uff0c\u5927\u5e45\u5ea6\u589e\u5f3a\u6b66\u5668\u4e0a\u7684\u5c5e\u6027\u653b\u51fb\u529b\u3002",
          "de": "Zur vor\u00fcbergehenden Verst\u00e4rkung der F\u00e4higkeiten und der Attribute der Waffen.",
          "fi": "K\u00e4ytt\u00e4\u00e4 Aseen luonnonvoimaa lis\u00e4t\u00e4ksesi hy\u00f6kk\u00e4ys voimaasi.",
-         "fil": "Uses the element of a Weapon to boost your attack power.",
+         "fil": "Uses the element of a weapon to boost your attack power.",
          "fr": "Augmente les d\u00e9g\u00e2ts produits par l'enchantement de l'arme \u00e9quip\u00e9e",
          "it": "Aumenta i danni provocati dall'incanto dell'arma usata.",
          "kr": "\uc18d\uc131 \ubb34\uae30\ub97c \ucc29\uc6a9 \uc2dc \uacf5\uaca9\ub825\uc744 \uc77c\uc2dc\uc801\uc73c\ub85c \uac15\ud654\uc2dc\ud0b5\ub2c8\ub2e4.",
-         "nl": "Uses the element of a Weapon to boost your attack power.",
+         "nl": "Uses the element of a weapon to boost your attack power.",
          "pl": "Zwi\u0119ksza si\u0142\u0119 ataku, wykorzystuj\u0105c \u017cywio\u0142 zawarty w twojej broni. (Bro\u0144 musi posiada\u0107 \u017cywio\u0142.)",
          "ru": "\u0423\u0441\u0438\u043b\u0438\u0432\u0430\u0435\u0442 \u0430\u0440\u043a\u0430\u043d, \u043d\u0430\u043d\u0435\u0441\u0435\u043d\u043d\u044b\u0439 \u043d\u0430 \u043e\u0440\u0443\u0436\u0438\u0435.",
-         "sw": "Uses the element of a Weapon to boost your attack power.",
-         "th": "Uses the element of a Weapon to boost your attack power."
+         "sw": "Uses the element of a weapon to boost your attack power.",
+         "th": "Uses the element of a weapon to boost your attack power."
       },
       "icon": "mersupimpowe.png",
       "class": 764,
@@ -23669,7 +24952,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.02,
+                  "scale": 4.52,
                   "pvp": true,
                   "pve": true
                }
@@ -23684,7 +24967,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.04,
+                  "scale": 4.54,
                   "pvp": true,
                   "pve": true
                }
@@ -23699,7 +24982,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.06,
+                  "scale": 4.56,
                   "pvp": true,
                   "pve": true
                }
@@ -23714,7 +24997,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.08,
+                  "scale": 4.58,
                   "pvp": true,
                   "pve": true
                }
@@ -23729,7 +25012,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.1,
+                  "scale": 4.6,
                   "pvp": true,
                   "pve": true
                }
@@ -23744,7 +25027,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.12,
+                  "scale": 4.62,
                   "pvp": true,
                   "pve": true
                }
@@ -23759,7 +25042,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.14,
+                  "scale": 4.64,
                   "pvp": true,
                   "pve": true
                }
@@ -23774,7 +25057,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.16,
+                  "scale": 4.66,
                   "pvp": true,
                   "pve": true
                }
@@ -23789,7 +25072,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.18,
+                  "scale": 4.68,
                   "pvp": true,
                   "pve": true
                }
@@ -23804,7 +25087,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.2,
+                  "scale": 4.7,
                   "pvp": true,
                   "pve": true
                }
@@ -24092,277 +25375,277 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "speed",
+                  "add": 1,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 2,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "speed",
+                  "stat": "int",
+                  "scale": 0.04,
+                  "maximum": 19,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedMP": 30,
+            "casting": 1,
+            "duration": 150,
+            "durationPVP": 150,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": 2,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 2,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "speed",
+                  "stat": "int",
+                  "scale": 0.04,
+                  "maximum": 19,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedMP": 30,
+            "casting": 1,
+            "duration": 150,
+            "durationPVP": 150,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": 3,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 2,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "speed",
+                  "stat": "int",
+                  "scale": 0.04,
+                  "maximum": 19,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedMP": 30,
+            "casting": 1,
+            "duration": 150,
+            "durationPVP": 150,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": 4,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 2,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "speed",
+                  "stat": "int",
+                  "scale": 0.04,
+                  "maximum": 19,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedMP": 30,
+            "casting": 1,
+            "duration": 150,
+            "durationPVP": 150,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": 5,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 2,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "speed",
+                  "stat": "int",
+                  "scale": 0.04,
+                  "maximum": 19,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedMP": 30,
+            "casting": 1,
+            "duration": 150,
+            "durationPVP": 150,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": 6,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 2,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "speed",
+                  "stat": "int",
+                  "scale": 0.04,
+                  "maximum": 19,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedMP": 30,
+            "casting": 1,
+            "duration": 150,
+            "durationPVP": 150,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": 7,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 2,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "speed",
+                  "stat": "int",
+                  "scale": 0.04,
+                  "maximum": 19,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedMP": 30,
+            "casting": 1,
+            "duration": 150,
+            "durationPVP": 150,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": 8,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 2,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "speed",
+                  "stat": "int",
+                  "scale": 0.04,
+                  "maximum": 19,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedMP": 30,
+            "casting": 1,
+            "duration": 150,
+            "durationPVP": 150,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": 9,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 2,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "speed",
+                  "stat": "int",
+                  "scale": 0.04,
+                  "maximum": 19,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedMP": 30,
+            "casting": 1,
+            "duration": 150,
+            "durationPVP": 150,
+            "abilities": [
+               {
+                  "parameter": "speed",
                   "add": 10,
-                  "rate": true
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 2,
-                  "pvp": true,
-                  "pve": true
-               },
-               {
-                  "parameter": "speed",
-                  "stat": "int",
-                  "scale": 0.04,
-                  "maximum": 19,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedMP": 30,
-            "casting": 1,
-            "duration": 150,
-            "durationPVP": 150,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 11,
-                  "rate": true
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 2,
-                  "pvp": true,
-                  "pve": true
-               },
-               {
-                  "parameter": "speed",
-                  "stat": "int",
-                  "scale": 0.04,
-                  "maximum": 19,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedMP": 30,
-            "casting": 1,
-            "duration": 150,
-            "durationPVP": 150,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 12,
-                  "rate": true
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 2,
-                  "pvp": true,
-                  "pve": true
-               },
-               {
-                  "parameter": "speed",
-                  "stat": "int",
-                  "scale": 0.04,
-                  "maximum": 19,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedMP": 30,
-            "casting": 1,
-            "duration": 150,
-            "durationPVP": 150,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 13,
-                  "rate": true
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 2,
-                  "pvp": true,
-                  "pve": true
-               },
-               {
-                  "parameter": "speed",
-                  "stat": "int",
-                  "scale": 0.04,
-                  "maximum": 19,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedMP": 30,
-            "casting": 1,
-            "duration": 150,
-            "durationPVP": 150,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 14,
-                  "rate": true
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 2,
-                  "pvp": true,
-                  "pve": true
-               },
-               {
-                  "parameter": "speed",
-                  "stat": "int",
-                  "scale": 0.04,
-                  "maximum": 19,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedMP": 30,
-            "casting": 1,
-            "duration": 150,
-            "durationPVP": 150,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 15,
-                  "rate": true
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 2,
-                  "pvp": true,
-                  "pve": true
-               },
-               {
-                  "parameter": "speed",
-                  "stat": "int",
-                  "scale": 0.04,
-                  "maximum": 19,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedMP": 30,
-            "casting": 1,
-            "duration": 150,
-            "durationPVP": 150,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 16,
-                  "rate": true
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 2,
-                  "pvp": true,
-                  "pve": true
-               },
-               {
-                  "parameter": "speed",
-                  "stat": "int",
-                  "scale": 0.04,
-                  "maximum": 19,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedMP": 30,
-            "casting": 1,
-            "duration": 150,
-            "durationPVP": 150,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 17,
-                  "rate": true
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 2,
-                  "pvp": true,
-                  "pve": true
-               },
-               {
-                  "parameter": "speed",
-                  "stat": "int",
-                  "scale": 0.04,
-                  "maximum": 19,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedMP": 30,
-            "casting": 1,
-            "duration": 150,
-            "durationPVP": 150,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 18,
-                  "rate": true
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 2,
-                  "pvp": true,
-                  "pve": true
-               },
-               {
-                  "parameter": "speed",
-                  "stat": "int",
-                  "scale": 0.04,
-                  "maximum": 19,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedMP": 30,
-            "casting": 1,
-            "duration": 150,
-            "durationPVP": 150,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 19,
                   "rate": true
                }
             ],
@@ -24392,7 +25675,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": 20,
+                  "add": 11,
                   "rate": true
                }
             ],
@@ -24422,7 +25705,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": 21,
+                  "add": 12,
                   "rate": true
                }
             ],
@@ -24452,7 +25735,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": 22,
+                  "add": 13,
                   "rate": true
                }
             ],
@@ -24482,7 +25765,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": 23,
+                  "add": 14,
                   "rate": true
                }
             ],
@@ -24512,7 +25795,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": 24,
+                  "add": 15,
                   "rate": true
                }
             ],
@@ -24542,7 +25825,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": 26,
+                  "add": 16,
                   "rate": true
                }
             ],
@@ -24572,7 +25855,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": 28,
+                  "add": 17,
                   "rate": true
                }
             ],
@@ -24602,7 +25885,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": 30,
+                  "add": 18,
                   "rate": true
                }
             ],
@@ -24632,7 +25915,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": 35,
+                  "add": 19,
                   "rate": true
                }
             ],
@@ -24662,7 +25945,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": 40,
+                  "add": 20,
                   "rate": true
                }
             ],
@@ -24724,7 +26007,7 @@ export const skillsjson = [
       },
       "icon": "magfirestrike.png",
       "class": 9581,
-      "level": 30,
+      "level": 40,
       "element": "fire",
       "magic": true,
       "requirements": [
@@ -24744,7 +26027,6 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "dotTick": 1.5,
             "consumedMP": 40,
             "casting": 1,
             "duration": 15,
@@ -24753,7 +26035,7 @@ export const skillsjson = [
                {
                   "parameter": "waterdefense",
                   "add": -6,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -24770,7 +26052,6 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "dotTick": 1.5,
             "consumedMP": 40,
             "casting": 1,
             "duration": 15,
@@ -24779,7 +26060,7 @@ export const skillsjson = [
                {
                   "parameter": "waterdefense",
                   "add": -7,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -24796,7 +26077,6 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "dotTick": 1.5,
             "consumedMP": 42,
             "casting": 1,
             "duration": 15,
@@ -24805,7 +26085,7 @@ export const skillsjson = [
                {
                   "parameter": "waterdefense",
                   "add": -8,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -24822,7 +26102,6 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "dotTick": 1.5,
             "consumedMP": 42,
             "casting": 1,
             "duration": 15,
@@ -24831,7 +26110,7 @@ export const skillsjson = [
                {
                   "parameter": "waterdefense",
                   "add": -9,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -24848,7 +26127,6 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "dotTick": 1.5,
             "consumedMP": 44,
             "casting": 1,
             "duration": 15,
@@ -24857,7 +26135,7 @@ export const skillsjson = [
                {
                   "parameter": "waterdefense",
                   "add": -10,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -24874,7 +26152,6 @@ export const skillsjson = [
          {
             "minAttack": 55,
             "maxAttack": 56,
-            "dotTick": 1.5,
             "consumedMP": 44,
             "casting": 1,
             "duration": 15,
@@ -24883,7 +26160,7 @@ export const skillsjson = [
                {
                   "parameter": "waterdefense",
                   "add": -11,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -24900,7 +26177,6 @@ export const skillsjson = [
          {
             "minAttack": 55,
             "maxAttack": 56,
-            "dotTick": 1.5,
             "consumedMP": 46,
             "casting": 1,
             "duration": 15,
@@ -24909,7 +26185,7 @@ export const skillsjson = [
                {
                   "parameter": "waterdefense",
                   "add": -12,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -24926,7 +26202,6 @@ export const skillsjson = [
          {
             "minAttack": 55,
             "maxAttack": 56,
-            "dotTick": 1.5,
             "consumedMP": 46,
             "casting": 1,
             "duration": 15,
@@ -24935,7 +26210,7 @@ export const skillsjson = [
                {
                   "parameter": "waterdefense",
                   "add": -13,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -24952,7 +26227,6 @@ export const skillsjson = [
          {
             "minAttack": 55,
             "maxAttack": 56,
-            "dotTick": 1.5,
             "consumedMP": 48,
             "casting": 1,
             "duration": 15,
@@ -24961,7 +26235,7 @@ export const skillsjson = [
                {
                   "parameter": "waterdefense",
                   "add": -14,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -24978,7 +26252,6 @@ export const skillsjson = [
          {
             "minAttack": 55,
             "maxAttack": 56,
-            "dotTick": 1.5,
             "consumedMP": 48,
             "casting": 1,
             "duration": 15,
@@ -24987,7 +26260,7 @@ export const skillsjson = [
                {
                   "parameter": "waterdefense",
                   "add": -15,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -25004,7 +26277,6 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "dotTick": 1.5,
             "consumedMP": 50,
             "casting": 1,
             "duration": 15,
@@ -25013,7 +26285,7 @@ export const skillsjson = [
                {
                   "parameter": "waterdefense",
                   "add": -16,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -25030,7 +26302,6 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "dotTick": 1.5,
             "consumedMP": 50,
             "casting": 1,
             "duration": 15,
@@ -25039,7 +26310,7 @@ export const skillsjson = [
                {
                   "parameter": "waterdefense",
                   "add": -17,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -25056,7 +26327,6 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "dotTick": 1.5,
             "consumedMP": 53,
             "casting": 1,
             "duration": 15,
@@ -25065,7 +26335,7 @@ export const skillsjson = [
                {
                   "parameter": "waterdefense",
                   "add": -18,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -25082,7 +26352,6 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "dotTick": 1.5,
             "consumedMP": 53,
             "casting": 1,
             "duration": 15,
@@ -25091,7 +26360,7 @@ export const skillsjson = [
                {
                   "parameter": "waterdefense",
                   "add": -19,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -25108,7 +26377,6 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "dotTick": 1.5,
             "consumedMP": 55,
             "casting": 1,
             "duration": 15,
@@ -25117,7 +26385,7 @@ export const skillsjson = [
                {
                   "parameter": "waterdefense",
                   "add": -20,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -25134,7 +26402,6 @@ export const skillsjson = [
          {
             "minAttack": 59,
             "maxAttack": 60,
-            "dotTick": 1.5,
             "consumedMP": 55,
             "casting": 1,
             "duration": 15,
@@ -25143,7 +26410,7 @@ export const skillsjson = [
                {
                   "parameter": "waterdefense",
                   "add": -21,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -25160,7 +26427,6 @@ export const skillsjson = [
          {
             "minAttack": 59,
             "maxAttack": 60,
-            "dotTick": 1.5,
             "consumedMP": 57,
             "casting": 1,
             "duration": 15,
@@ -25169,7 +26435,7 @@ export const skillsjson = [
                {
                   "parameter": "waterdefense",
                   "add": -22,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -25186,7 +26452,6 @@ export const skillsjson = [
          {
             "minAttack": 59,
             "maxAttack": 60,
-            "dotTick": 1.5,
             "consumedMP": 57,
             "casting": 1,
             "duration": 15,
@@ -25195,7 +26460,7 @@ export const skillsjson = [
                {
                   "parameter": "waterdefense",
                   "add": -23,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -25212,7 +26477,6 @@ export const skillsjson = [
          {
             "minAttack": 59,
             "maxAttack": 60,
-            "dotTick": 1.5,
             "consumedMP": 60,
             "casting": 1,
             "duration": 15,
@@ -25221,7 +26485,7 @@ export const skillsjson = [
                {
                   "parameter": "waterdefense",
                   "add": -24,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -25238,7 +26502,6 @@ export const skillsjson = [
          {
             "minAttack": 59,
             "maxAttack": 60,
-            "dotTick": 1.5,
             "consumedMP": 60,
             "casting": 1,
             "duration": 15,
@@ -25247,7 +26510,7 @@ export const skillsjson = [
                {
                   "parameter": "waterdefense",
                   "add": -25,
-                  "rate": false
+                  "rate": true
                }
             ],
             "spellRange": 15,
@@ -25285,9 +26548,9 @@ export const skillsjson = [
       "description": {
          "en": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
          "ar": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
-         "br": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
-         "cns": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
-         "de": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
+         "br": "Aumenta os sentidos e a conex\u00e3o com a natureza para aumentar a Defesa M\u00e1gica e o Alcance do Arco.",
+         "cns": "\u63d0\u5347\u81ea\u8eab\u5f13\u7bad\u5c04\u7a0b\u548c\u9b54\u6cd5\u9632\u5fa1\u529b\u3002",
+         "de": "Sch\u00e4rft die Sinne f\u00fcr die Natur, um die Magieabwehr und Bogenreichweite zu erh\u00f6hen.",
          "fi": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
          "fil": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
          "fr": "Heightens the users senses with nature to increase Magic Defense & Bow Range.",
@@ -25326,8 +26589,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "magicdefense",
-                  "add": 120,
-                  "rate": false
+                  "add": 1,
+                  "rate": true
                },
                {
                   "parameter": "bowrange",
@@ -25353,8 +26616,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "magicdefense",
-                  "add": 140,
-                  "rate": false
+                  "add": 2,
+                  "rate": true
                },
                {
                   "parameter": "bowrange",
@@ -25380,8 +26643,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "magicdefense",
-                  "add": 160,
-                  "rate": false
+                  "add": 3,
+                  "rate": true
                },
                {
                   "parameter": "bowrange",
@@ -25407,8 +26670,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "magicdefense",
-                  "add": 180,
-                  "rate": false
+                  "add": 4,
+                  "rate": true
                },
                {
                   "parameter": "bowrange",
@@ -25434,8 +26697,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "magicdefense",
-                  "add": 200,
-                  "rate": false
+                  "add": 5,
+                  "rate": true
                },
                {
                   "parameter": "bowrange",
@@ -25461,8 +26724,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "magicdefense",
-                  "add": 220,
-                  "rate": false
+                  "add": 7,
+                  "rate": true
                },
                {
                   "parameter": "bowrange",
@@ -25488,8 +26751,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "magicdefense",
-                  "add": 240,
-                  "rate": false
+                  "add": 9,
+                  "rate": true
                },
                {
                   "parameter": "bowrange",
@@ -25515,8 +26778,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "magicdefense",
-                  "add": 260,
-                  "rate": false
+                  "add": 11,
+                  "rate": true
                },
                {
                   "parameter": "bowrange",
@@ -25542,8 +26805,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "magicdefense",
-                  "add": 280,
-                  "rate": false
+                  "add": 13,
+                  "rate": true
                },
                {
                   "parameter": "bowrange",
@@ -25569,8 +26832,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "magicdefense",
-                  "add": 300,
-                  "rate": false
+                  "add": 15,
+                  "rate": true
                },
                {
                   "parameter": "bowrange",
@@ -25647,6 +26910,7 @@ export const skillsjson = [
       "skillPoints": 2,
       "levels": [
          {
+            "damageMultiplier": 0.5,
             "minAttack": 16,
             "maxAttack": 17,
             "dotTick": 0.5,
@@ -25666,6 +26930,7 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 17,
             "maxAttack": 18,
             "dotTick": 0.5,
@@ -25685,6 +26950,7 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 18,
             "maxAttack": 19,
             "dotTick": 0.5,
@@ -25704,6 +26970,7 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 19,
             "maxAttack": 20,
             "dotTick": 0.5,
@@ -25723,6 +26990,7 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 20,
             "maxAttack": 21,
             "dotTick": 0.5,
@@ -25742,6 +27010,7 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 21,
             "maxAttack": 22,
             "dotTick": 0.5,
@@ -25761,6 +27030,7 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 22,
             "maxAttack": 23,
             "dotTick": 0.5,
@@ -25780,6 +27050,7 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 23,
             "maxAttack": 24,
             "dotTick": 0.5,
@@ -25799,6 +27070,7 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 24,
             "maxAttack": 25,
             "dotTick": 0.5,
@@ -25818,6 +27090,7 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 25,
             "maxAttack": 26,
             "dotTick": 0.5,
@@ -25837,6 +27110,7 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 26,
             "maxAttack": 27,
             "dotTick": 0.5,
@@ -25856,6 +27130,7 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 27,
             "maxAttack": 28,
             "dotTick": 0.5,
@@ -25875,6 +27150,7 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 28,
             "maxAttack": 29,
             "dotTick": 0.5,
@@ -25894,6 +27170,7 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 29,
             "maxAttack": 30,
             "dotTick": 0.5,
@@ -25913,6 +27190,7 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 30,
             "maxAttack": 31,
             "dotTick": 0.5,
@@ -25932,6 +27210,7 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 31,
             "maxAttack": 32,
             "dotTick": 0.5,
@@ -25951,6 +27230,7 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 32,
             "maxAttack": 33,
             "dotTick": 0.5,
@@ -25970,6 +27250,7 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 33,
             "maxAttack": 34,
             "dotTick": 0.5,
@@ -25989,6 +27270,7 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 34,
             "maxAttack": 35,
             "dotTick": 0.5,
@@ -26008,6 +27290,7 @@ export const skillsjson = [
             ]
          },
          {
+            "damageMultiplier": 0.5,
             "minAttack": 35,
             "maxAttack": 36,
             "dotTick": 0.5,
@@ -26085,7 +27368,7 @@ export const skillsjson = [
          {
             "minAttack": 20,
             "maxAttack": 21,
-            "consumedFP": 15,
+            "consumedFP": 30,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -26099,7 +27382,7 @@ export const skillsjson = [
          {
             "minAttack": 20,
             "maxAttack": 21,
-            "consumedFP": 15,
+            "consumedFP": 30,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -26113,7 +27396,7 @@ export const skillsjson = [
          {
             "minAttack": 20,
             "maxAttack": 21,
-            "consumedFP": 15,
+            "consumedFP": 30,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -26127,7 +27410,7 @@ export const skillsjson = [
          {
             "minAttack": 22,
             "maxAttack": 23,
-            "consumedFP": 18,
+            "consumedFP": 32,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -26141,7 +27424,7 @@ export const skillsjson = [
          {
             "minAttack": 23,
             "maxAttack": 24,
-            "consumedFP": 18,
+            "consumedFP": 34,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -26155,7 +27438,7 @@ export const skillsjson = [
          {
             "minAttack": 24,
             "maxAttack": 25,
-            "consumedFP": 18,
+            "consumedFP": 36,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -26169,7 +27452,7 @@ export const skillsjson = [
          {
             "minAttack": 25,
             "maxAttack": 26,
-            "consumedFP": 20,
+            "consumedFP": 38,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -26183,7 +27466,7 @@ export const skillsjson = [
          {
             "minAttack": 26,
             "maxAttack": 27,
-            "consumedFP": 20,
+            "consumedFP": 40,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -26197,7 +27480,7 @@ export const skillsjson = [
          {
             "minAttack": 27,
             "maxAttack": 28,
-            "consumedFP": 22,
+            "consumedFP": 42,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -26211,7 +27494,7 @@ export const skillsjson = [
          {
             "minAttack": 28,
             "maxAttack": 29,
-            "consumedFP": 22,
+            "consumedFP": 45,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -26221,6 +27504,86 @@ export const skillsjson = [
                   "pve": true
                }
             ]
+         }
+      ]
+   },
+   {
+      "id": 4201,
+      "name": {
+         "en": "Mental Strike",
+         "ar": "Mental Strike",
+         "br": "Pancada Mental",
+         "cns": "\u7075\u6ce2\u72c2\u60f3",
+         "de": "Mental Strike",
+         "fi": "Mental Strike",
+         "fil": "Mental Strike",
+         "fr": "Fouet mental",
+         "it": "Mental Strike",
+         "kr": "\uba58\ud0c8 \uc2a4\ud2b8\ub77c\uc774\ud06c",
+         "nl": "Mental Strike",
+         "pl": "Psychiczny Atak",
+         "ru": "\u041f\u0441\u0438-\u0443\u0434\u0430\u0440",
+         "sw": "Mental Strike",
+         "th": "Mental Strike"
+      },
+      "description": {
+         "en": "Ranged Mental attack.",
+         "ar": "Ranged Mental attack.",
+         "br": "Ataque mental a dist\u00e2ncia.",
+         "cns": "\u7ed9\u5bf9\u8c61\u65bd\u52a0\u65e0\u5c5e\u6027\u7684\u7cbe\u795e\u538b\u529b\u3002",
+         "de": "Dem Gegner mit mentaler Kraft Schaden zuf\u00fcgen.",
+         "fi": "Ranged Mental attack.",
+         "fil": "Ranged Mental attack.",
+         "fr": "Inflige une attaque mentale \u00e0 l'ennemi",
+         "it": "Ranged Mental attack.",
+         "kr": "\uc815\uc2e0\ub825\uc744 \uc774\uc6a9\ud558\uc5ec \uc801\uc5d0\uac8c \ubb34\uc18d\uc131 \uacf5\uaca9\uc744 \uac00\ud569\ub2c8\ub2e4.",
+         "nl": "Ranged Mental attack.",
+         "pl": "Atakuje umys\u0142 wroga by zada\u0107 b\u00f3l.",
+         "ru": "\u0410\u0442\u0430\u043a\u0430 \u0434\u0430\u043b\u044c\u043d\u0435\u0433\u043e \u0431\u043e\u044f. \u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d \u043f\u0441\u0438-\u044d\u043d\u0435\u0440\u0433\u0438\u0435\u0439.",
+         "sw": "Ranged Mental attack.",
+         "th": "Ranged Mental attack."
+      },
+      "icon": "magmagmental.png",
+      "level": 1,
+      "element": "none",
+      "magic": true,
+      "requirements": [],
+      "combo": "general",
+      "debuff": true,
+      "flying": true,
+      "passive": false,
+      "target": "area",
+      "skillPoints": 1,
+      "levels": [
+         {
+            "minAttack": 43,
+            "maxAttack": 44,
+            "consumedMP": 35,
+            "casting": 0.6
+         },
+         {
+            "minAttack": 44,
+            "maxAttack": 46,
+            "consumedMP": 38,
+            "casting": 0.6
+         },
+         {
+            "minAttack": 45,
+            "maxAttack": 47,
+            "consumedMP": 38,
+            "casting": 0.6
+         },
+         {
+            "minAttack": 46,
+            "maxAttack": 49,
+            "consumedMP": 40,
+            "casting": 0.6
+         },
+         {
+            "minAttack": 47,
+            "maxAttack": 50,
+            "consumedMP": 40,
+            "casting": 0.6
          }
       ]
    },
@@ -26235,7 +27598,7 @@ export const skillsjson = [
          "fi": "Blade Dance",
          "fil": "Blade Dance",
          "fr": "Danse de lames",
-         "it": "Blade Dance",
+         "it": "Danzaspada",
          "kr": "\ube14\ub808\uc774\ub4dc \ub304\uc2a4",
          "nl": "Zwaardendans",
          "pl": "Taniec Mieczy",
@@ -26244,21 +27607,21 @@ export const skillsjson = [
          "th": "Blade Dance"
       },
       "description": {
-         "en": "Strikes at multiple enemies. Requires two Swords.",
-         "ar": "Strikes at multiple enemies. Requires two Swords.",
-         "br": "Golpeia v\u00e1rios inimigos. Exige duas espadas.",
-         "cns": "\u6325\u821e\u624b\u4e2d\u7684\u5251\u653b\u51fb\u5468\u56f4\u6240\u6709\u654c\u4eba\u3002",
-         "de": "Durch kurzes Tanzen ausgel\u00f6ster Schlag in einen gegnerischen Bereich.",
-         "fi": "Iskee useaa vihollista. Vaatii kaksi Miekkaa.",
-         "fil": "Strikes at multiple enemies. Requires two Swords.",
-         "fr": "Danse mortelle qui inflige des d\u00e9g\u00e2ts \u00e0 tous les ennemis \u00e0 proximit\u00e9 (n\u00e9cessite une \u00e9p\u00e9e en main droite)",
-         "it": "Strikes at multiple enemies. Requires two Swords.",
-         "kr": "\ucda4\uc744 \ucd94\ub4ef \uc18c\ub4dc\ub97c \ud718\ub458\ub7ec \uc8fc\uc704\uc5d0 \uc788\ub294 \uc801\ub4e4\uc744 \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
-         "nl": "Strikes at multiple enemies. Requires two Swords.",
-         "pl": "Atakuje wszystkich wrog\u00f3w wok\u00f3\u0142 ciebie. Wymaga dw\u00f3ch mieczy.",
-         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0443\u0440\u043e\u043d \u0441\u0440\u0430\u0437\u0443 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u043c \u0432\u0440\u0430\u0433\u0430\u043c. \u0414\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0440\u0435\u0431\u0443\u044e\u0442\u0441\u044f \u0434\u0432\u0430 \u043c\u0435\u0447\u0430.",
-         "sw": "Strikes at multiple enemies. Requires two Swords.",
-         "th": "Strikes at multiple enemies. Requires two Swords."
+         "en": "Rapidly strikes the blades at multiple enemies. Requires two weapons.",
+         "ar": "Rapidly strikes the blades at multiple enemies. Requires two weapons.",
+         "br": "Rapidly strikes the blades at multiple enemies. Requires two weapons.",
+         "cns": "Rapidly strikes the blades at multiple enemies. Requires two weapons.",
+         "de": "Rapidly strikes the blades at multiple enemies. Requires two weapons.",
+         "fi": "Rapidly strikes the blades at multiple enemies. Requires two weapons.",
+         "fil": "Rapidly strikes the blades at multiple enemies. Requires two weapons.",
+         "fr": "Rapidly strikes the blades at multiple enemies. Requires two weapons.",
+         "it": "Rapidly strikes the blades at multiple enemies. Requires two weapons.",
+         "kr": "Rapidly strikes the blades at multiple enemies. Requires two weapons.",
+         "nl": "Rapidly strikes the blades at multiple enemies. Requires two weapons.",
+         "pl": "Rapidly strikes the blades at multiple enemies. Requires two weapons.",
+         "ru": "Rapidly strikes the blades at multiple enemies. Requires two weapons.",
+         "sw": "Rapidly strikes the blades at multiple enemies. Requires two weapons.",
+         "th": "Rapidly strikes the blades at multiple enemies. Requires two weapons."
       },
       "icon": "blddswblddan.png",
       "class": 2246,
@@ -26271,7 +27634,6 @@ export const skillsjson = [
             "level": 5
          }
       ],
-      "weapon": "sword",
       "combo": "general",
       "debuff": true,
       "flying": true,
@@ -26280,6 +27642,7 @@ export const skillsjson = [
       "skillPoints": 3,
       "levels": [
          {
+            "damageMultiplier": 0.6,
             "minAttack": 111,
             "maxAttack": 112,
             "consumedFP": 56,
@@ -26289,13 +27652,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.02,
+                  "scale": 4.82,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 0.6,
             "minAttack": 113,
             "maxAttack": 114,
             "consumedFP": 59,
@@ -26305,13 +27669,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.04,
+                  "scale": 4.84,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 0.6,
             "minAttack": 115,
             "maxAttack": 116,
             "consumedFP": 62,
@@ -26321,13 +27686,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.06,
+                  "scale": 4.86,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 0.6,
             "minAttack": 117,
             "maxAttack": 118,
             "consumedFP": 65,
@@ -26337,13 +27703,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.08,
+                  "scale": 4.88,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 0.6,
             "minAttack": 119,
             "maxAttack": 120,
             "consumedFP": 68,
@@ -26353,13 +27720,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.1,
+                  "scale": 4.9,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 0.6,
             "minAttack": 121,
             "maxAttack": 122,
             "consumedFP": 71,
@@ -26369,13 +27737,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.12,
+                  "scale": 4.92,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 0.6,
             "minAttack": 123,
             "maxAttack": 124,
             "consumedFP": 74,
@@ -26385,13 +27754,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.14,
+                  "scale": 4.94,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 0.6,
             "minAttack": 125,
             "maxAttack": 126,
             "consumedFP": 77,
@@ -26401,13 +27771,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.16,
+                  "scale": 4.96,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 0.6,
             "minAttack": 127,
             "maxAttack": 128,
             "consumedFP": 80,
@@ -26417,13 +27788,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.18,
+                  "scale": 4.98,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 0.6,
             "minAttack": 129,
             "maxAttack": 130,
             "consumedFP": 83,
@@ -26433,7 +27805,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.2,
+                  "scale": 5,
                   "pvp": true,
                   "pve": true
                }
@@ -26452,7 +27824,7 @@ export const skillsjson = [
          "fi": "Berserk",
          "fil": "Berserk",
          "fr": "Furie",
-         "it": "Berserk",
+         "it": "Furia",
          "kr": "\ubc84\uc11c\ud06c",
          "nl": "Berserk",
          "pl": "Berserk",
@@ -26496,15 +27868,15 @@ export const skillsjson = [
       "skillPoints": 3,
       "levels": [
          {
-            "consumedFP": 56,
-            "cooldown": 60,
+            "consumedFP": 150,
+            "cooldown": 40,
             "casting": 1.25,
             "duration": 10,
             "durationPVP": 10,
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 2.5,
+                  "add": 6,
                   "rate": true
                },
                {
@@ -26515,15 +27887,15 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedFP": 59,
-            "cooldown": 60,
+            "consumedFP": 150,
+            "cooldown": 40,
             "casting": 1.25,
             "duration": 15,
             "durationPVP": 15,
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 3.5,
+                  "add": 7,
                   "rate": true
                },
                {
@@ -26534,15 +27906,15 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedFP": 62,
-            "cooldown": 60,
+            "consumedFP": 150,
+            "cooldown": 40,
             "casting": 1.25,
             "duration": 15,
             "durationPVP": 15,
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 4.5,
+                  "add": 8,
                   "rate": true
                },
                {
@@ -26553,15 +27925,15 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedFP": 65,
-            "cooldown": 60,
+            "consumedFP": 150,
+            "cooldown": 40,
             "casting": 1.25,
             "duration": 20,
             "durationPVP": 20,
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 5.5,
+                  "add": 9,
                   "rate": true
                },
                {
@@ -26572,15 +27944,15 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedFP": 68,
-            "cooldown": 60,
+            "consumedFP": 150,
+            "cooldown": 40,
             "casting": 1.25,
             "duration": 20,
             "durationPVP": 20,
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 6.5,
+                  "add": 10,
                   "rate": true
                },
                {
@@ -26591,15 +27963,15 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedFP": 71,
-            "cooldown": 60,
+            "consumedFP": 150,
+            "cooldown": 40,
             "casting": 1.25,
             "duration": 25,
             "durationPVP": 25,
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 7.5,
+                  "add": 11,
                   "rate": true
                },
                {
@@ -26610,15 +27982,15 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedFP": 74,
-            "cooldown": 60,
+            "consumedFP": 150,
+            "cooldown": 40,
             "casting": 1.25,
             "duration": 25,
             "durationPVP": 25,
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 8.5,
+                  "add": 12,
                   "rate": true
                },
                {
@@ -26629,15 +28001,15 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedFP": 77,
-            "cooldown": 60,
+            "consumedFP": 150,
+            "cooldown": 40,
             "casting": 1.25,
             "duration": 30,
             "durationPVP": 30,
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 9.5,
+                  "add": 13,
                   "rate": true
                },
                {
@@ -26648,15 +28020,15 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedFP": 80,
-            "cooldown": 60,
+            "consumedFP": 150,
+            "cooldown": 40,
             "casting": 1.25,
             "duration": 30,
             "durationPVP": 30,
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 10.5,
+                  "add": 14,
                   "rate": true
                },
                {
@@ -26667,15 +28039,15 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedFP": 83,
-            "cooldown": 60,
+            "consumedFP": 150,
+            "cooldown": 40,
             "casting": 1.25,
             "duration": 35,
             "durationPVP": 35,
             "abilities": [
                {
                   "parameter": "attackspeed",
-                  "add": 11,
+                  "add": 15,
                   "rate": true
                },
                {
@@ -26707,45 +28079,46 @@ export const skillsjson = [
          "th": "Belial Smashing"
       },
       "description": {
-         "en": "Sliding, crushing attack.",
-         "ar": "Sliding, crushing attack.",
-         "br": "Um ataque deslizante e esmagador.",
-         "cns": "\u805a\u96c6\u529b\u91cf\uff0c\u7528\u62f3\u5934\u51b2\u51fb\u5bf9\u65b9\uff0c\u9020\u6210\u4f24\u5bb3\u3002",
-         "de": "Einen Angriff mit dem Knuckle starten und auf den Gegner einst\u00fcrmen.",
-         "fi": "Liukuva, murskaava hy\u00f6kk\u00e4ys.",
-         "fil": "Sliding, crushing attack.",
-         "fr": "Pr\u00e9cipite le Moine sur l'ennemi pour lui administrer un rapide coup de poing",
-         "it": "Sliding, crushing attack.",
-         "kr": "\ub108\ud074\ud574\uba38\ub85c \uc801\uc744 \ud5a5\ud574 \ub3cc\uc9c4\ud558\uba70 \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
-         "nl": "Sliding, crushing attack.",
-         "pl": "\u015alizgowy, rozbijaj\u0105cy atak.",
-         "ru": "\u0420\u0435\u0437\u043a\u0438\u0439 \u0441\u043e\u043a\u0440\u0443\u0448\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0443\u0434\u0430\u0440.",
-         "sw": "Sliding, crushing attack.",
-         "th": "Sliding, crushing attack."
+         "en": "Deals five powerful blows to the enemy.",
+         "ar": "Deals five powerful blows to the enemy.",
+         "br": "Deals five powerful blows to the enemy.",
+         "cns": "Deals five powerful blows to the enemy.",
+         "de": "Deals five powerful blows to the enemy.",
+         "fi": "Deals five powerful blows to the enemy.",
+         "fil": "Deals five powerful blows to the enemy.",
+         "fr": "Deals five powerful blows to the enemy.",
+         "it": "Deals five powerful blows to the enemy.",
+         "kr": "Deals five powerful blows to the enemy.",
+         "nl": "Deals five powerful blows to the enemy.",
+         "pl": "Deals five powerful blows to the enemy.",
+         "ru": "Deals five powerful blows to the enemy.",
+         "sw": "Deals five powerful blows to the enemy.",
+         "th": "Deals five powerful blows to the enemy."
       },
       "icon": "bilbelialsmeshing.png",
       "class": 7424,
-      "level": 60,
+      "level": 65,
       "element": "none",
       "magic": false,
       "requirements": [
          {
-            "skill": 6451,
-            "level": 5
+            "skill": 6017,
+            "level": 3
          }
       ],
       "weapon": "knuckle",
       "combo": "general",
       "debuff": true,
-      "flying": true,
+      "flying": false,
       "passive": false,
       "target": "single",
       "skillPoints": 3,
       "levels": [
          {
-            "minAttack": 101,
-            "maxAttack": 102,
-            "consumedFP": 30,
+            "minAttack": 20,
+            "maxAttack": 21,
+            "consumedFP": 120,
+            "cooldown": 20,
             "casting": 1,
             "scalingParameters": [
                {
@@ -26758,9 +28131,10 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 103,
-            "maxAttack": 104,
-            "consumedFP": 34,
+            "minAttack": 21,
+            "maxAttack": 22,
+            "consumedFP": 122,
+            "cooldown": 19,
             "casting": 1,
             "scalingParameters": [
                {
@@ -26773,9 +28147,10 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 105,
-            "maxAttack": 106,
-            "consumedFP": 38,
+            "minAttack": 22,
+            "maxAttack": 23,
+            "consumedFP": 124,
+            "cooldown": 19,
             "casting": 1,
             "scalingParameters": [
                {
@@ -26788,9 +28163,10 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 107,
-            "maxAttack": 108,
-            "consumedFP": 42,
+            "minAttack": 23,
+            "maxAttack": 24,
+            "consumedFP": 126,
+            "cooldown": 18,
             "casting": 1,
             "scalingParameters": [
                {
@@ -26803,9 +28179,10 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 119,
-            "maxAttack": 120,
-            "consumedFP": 46,
+            "minAttack": 24,
+            "maxAttack": 25,
+            "consumedFP": 128,
+            "cooldown": 18,
             "casting": 1,
             "scalingParameters": [
                {
@@ -26818,9 +28195,10 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 121,
-            "maxAttack": 122,
-            "consumedFP": 50,
+            "minAttack": 25,
+            "maxAttack": 26,
+            "consumedFP": 130,
+            "cooldown": 17,
             "casting": 1,
             "scalingParameters": [
                {
@@ -26833,9 +28211,10 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 123,
-            "maxAttack": 124,
-            "consumedFP": 54,
+            "minAttack": 26,
+            "maxAttack": 27,
+            "consumedFP": 132,
+            "cooldown": 17,
             "casting": 1,
             "scalingParameters": [
                {
@@ -26848,9 +28227,10 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 125,
-            "maxAttack": 126,
-            "consumedFP": 58,
+            "minAttack": 27,
+            "maxAttack": 28,
+            "consumedFP": 134,
+            "cooldown": 16,
             "casting": 1,
             "scalingParameters": [
                {
@@ -26863,9 +28243,10 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 127,
-            "maxAttack": 128,
-            "consumedFP": 62,
+            "minAttack": 28,
+            "maxAttack": 29,
+            "consumedFP": 136,
+            "cooldown": 16,
             "casting": 1,
             "scalingParameters": [
                {
@@ -26878,9 +28259,10 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 129,
-            "maxAttack": 130,
-            "consumedFP": 66,
+            "minAttack": 29,
+            "maxAttack": 30,
+            "consumedFP": 138,
+            "cooldown": 15,
             "casting": 1,
             "scalingParameters": [
                {
@@ -26914,21 +28296,21 @@ export const skillsjson = [
          "th": "Smite Axe"
       },
       "description": {
-         "en": "Increases Defense and increases power of the Axe.",
-         "ar": "Increases Defense and increases power of the Axe.",
-         "br": "Increases Defense and increases power of the Axe.",
-         "cns": "Increases Defense and increases power of the Axe.",
-         "de": "Increases Defense and increases power of the Axe.",
-         "fi": "Increases Defense and increases power of the Axe.",
-         "fil": "Increases Defense and increases power of the Axe.",
-         "fr": "Increases Defense and increases power of the Axe.",
-         "it": "Increases Defense and increases power of the Axe.",
-         "kr": "Increases Defense and increases power of the Axe.",
-         "nl": "Increases Defense and increases power of the Axe.",
-         "pl": "Increases Defense and increases power of the Axe.",
-         "ru": "Increases Defense and increases power of the Axe.",
-         "sw": "Increases Defense and increases power of the Axe.",
-         "th": "Increases Defense and increases power of the Axe."
+         "en": "Increases Accuracy and increases power of the Axe.",
+         "ar": "Increases Accuracy and increases power of the Axe.",
+         "br": "Increases Accuracy and increases power of the Axe.",
+         "cns": "Increases Accuracy and increases power of the Axe.",
+         "de": "Increases Accuracy and increases power of the Axe.",
+         "fi": "Increases Accuracy and increases power of the Axe.",
+         "fil": "Increases Accuracy and increases power of the Axe.",
+         "fr": "Increases Accuracy and increases power of the Axe.",
+         "it": "Increases Accuracy and increases power of the Axe.",
+         "kr": "Increases Accuracy and increases power of the Axe.",
+         "nl": "Increases Accuracy and increases power of the Axe.",
+         "pl": "Increases Accuracy and increases power of the Axe.",
+         "ru": "Increases Accuracy and increases power of the Axe.",
+         "sw": "Increases Accuracy and increases power of the Axe.",
+         "th": "Increases Accuracy and increases power of the Axe."
       },
       "icon": "mersupsmitea.png",
       "class": 764,
@@ -26961,7 +28343,7 @@ export const skillsjson = [
                   "rate": false
                },
                {
-                  "parameter": "def",
+                  "parameter": "hitrate",
                   "add": 1,
                   "rate": true
                }
@@ -26979,7 +28361,7 @@ export const skillsjson = [
                   "rate": false
                },
                {
-                  "parameter": "def",
+                  "parameter": "hitrate",
                   "add": 1,
                   "rate": true
                }
@@ -26997,7 +28379,7 @@ export const skillsjson = [
                   "rate": false
                },
                {
-                  "parameter": "def",
+                  "parameter": "hitrate",
                   "add": 2,
                   "rate": true
                }
@@ -27015,7 +28397,7 @@ export const skillsjson = [
                   "rate": false
                },
                {
-                  "parameter": "def",
+                  "parameter": "hitrate",
                   "add": 2,
                   "rate": true
                }
@@ -27033,7 +28415,7 @@ export const skillsjson = [
                   "rate": false
                },
                {
-                  "parameter": "def",
+                  "parameter": "hitrate",
                   "add": 3,
                   "rate": true
                }
@@ -27051,7 +28433,7 @@ export const skillsjson = [
                   "rate": false
                },
                {
-                  "parameter": "def",
+                  "parameter": "hitrate",
                   "add": 3,
                   "rate": true
                }
@@ -27069,7 +28451,7 @@ export const skillsjson = [
                   "rate": false
                },
                {
-                  "parameter": "def",
+                  "parameter": "hitrate",
                   "add": 4,
                   "rate": true
                }
@@ -27087,7 +28469,7 @@ export const skillsjson = [
                   "rate": false
                },
                {
-                  "parameter": "def",
+                  "parameter": "hitrate",
                   "add": 4,
                   "rate": true
                }
@@ -27105,7 +28487,7 @@ export const skillsjson = [
                   "rate": false
                },
                {
-                  "parameter": "def",
+                  "parameter": "hitrate",
                   "add": 5,
                   "rate": true
                }
@@ -27123,7 +28505,7 @@ export const skillsjson = [
                   "rate": false
                },
                {
-                  "parameter": "def",
+                  "parameter": "hitrate",
                   "add": 5,
                   "rate": true
                }
@@ -27141,7 +28523,7 @@ export const skillsjson = [
                   "rate": false
                },
                {
-                  "parameter": "def",
+                  "parameter": "hitrate",
                   "add": 6,
                   "rate": true
                }
@@ -27159,7 +28541,7 @@ export const skillsjson = [
                   "rate": false
                },
                {
-                  "parameter": "def",
+                  "parameter": "hitrate",
                   "add": 6,
                   "rate": true
                }
@@ -27177,7 +28559,7 @@ export const skillsjson = [
                   "rate": false
                },
                {
-                  "parameter": "def",
+                  "parameter": "hitrate",
                   "add": 7,
                   "rate": true
                }
@@ -27195,7 +28577,7 @@ export const skillsjson = [
                   "rate": false
                },
                {
-                  "parameter": "def",
+                  "parameter": "hitrate",
                   "add": 7,
                   "rate": true
                }
@@ -27213,7 +28595,7 @@ export const skillsjson = [
                   "rate": false
                },
                {
-                  "parameter": "def",
+                  "parameter": "hitrate",
                   "add": 8,
                   "rate": true
                }
@@ -27231,7 +28613,7 @@ export const skillsjson = [
                   "rate": false
                },
                {
-                  "parameter": "def",
+                  "parameter": "hitrate",
                   "add": 8,
                   "rate": true
                }
@@ -27249,7 +28631,7 @@ export const skillsjson = [
                   "rate": false
                },
                {
-                  "parameter": "def",
+                  "parameter": "hitrate",
                   "add": 9,
                   "rate": true
                }
@@ -27267,7 +28649,7 @@ export const skillsjson = [
                   "rate": false
                },
                {
-                  "parameter": "def",
+                  "parameter": "hitrate",
                   "add": 9,
                   "rate": true
                }
@@ -27285,7 +28667,7 @@ export const skillsjson = [
                   "rate": false
                },
                {
-                  "parameter": "def",
+                  "parameter": "hitrate",
                   "add": 10,
                   "rate": true
                }
@@ -27303,7 +28685,7 @@ export const skillsjson = [
                   "rate": false
                },
                {
-                  "parameter": "def",
+                  "parameter": "hitrate",
                   "add": 10,
                   "rate": true
                }
@@ -27314,21 +28696,21 @@ export const skillsjson = [
    {
       "id": 4688,
       "name": {
-         "en": "Fire Master",
-         "ar": "Fire Master",
+         "en": "Fire Mastery",
+         "ar": "Fire Mastery",
          "br": "Mestre do Fogo",
          "cns": "\u706b\u7cfb\u4fee\u70bc",
          "de": "Fire Master",
-         "fi": "Fire Master",
-         "fil": "Fire Master",
+         "fi": "Fire Mastery",
+         "fil": "Fire Mastery",
          "fr": "Ma\u00eetre du feu",
-         "it": "Fire Master",
+         "it": "Fire Mastery",
          "kr": "\ud30c\uc774\uc5b4 \ub9c8\uc2a4\ud130",
          "nl": "Vuurmeester",
          "pl": "Mistrz Ognia",
          "ru": "\u0412\u043b\u0430\u0441\u0442\u0435\u043b\u0438\u043d \u043e\u0433\u043d\u044f",
-         "sw": "Fire Master",
-         "th": "Fire Master"
+         "sw": "Fire Mastery",
+         "th": "Fire Mastery"
       },
       "description": {
          "en": "Increases the striking power of fire spells,",
@@ -27518,25 +28900,25 @@ export const skillsjson = [
          "th": "Water Well"
       },
       "description": {
-         "en": "Splashes the enemy with a water attack. The enemy takes damage over time.",
-         "ar": "Splashes the enemy with a water attack. The enemy takes damage over time.",
-         "br": "Atinge o inimigo com uma ataque de \u00e1gua. Causa dano com o passar do tempo.",
-         "cns": "\u5f62\u6210\u5f3a\u529b\u7684\u6c34\u67f1\u4f24\u5bb3\u654c\u4eba\uff0c\u8ba9\u5bf9\u65b9\u53d7\u5230\u51b0\u51bb\uff0c\u964d\u4f4e\u5bf9\u7535\u7cfb\u653b\u51fb\u7684\u62b5\u6297\u529b\u3002",
-         "de": "Dem Gegner durch eine sehr gro\u00dfe Wassermenge Schaden zuf\u00fcgen. Der Gegner wird dabei nass.",
-         "fi": "Splashes the enemy with a water attack. The enemy takes damage over time.",
-         "fil": "Splashes the enemy with a water attack. The enemy takes damage over time.",
-         "fr": "Invoque une colonne d'eau sur l'ennemi, infligeant des d\u00e9g\u00e2ts et r\u00e9duisant sa r\u00e9sistance aux attaques bas\u00e9es sur l'\u00e9lectricit\u00e9 pendant une courte p\u00e9riode",
-         "it": "Splashes the enemy with a water attack. The enemy takes damage over time.",
-         "kr": "\ubb3c\uae30\ub465\uc774 \uc19f\uad6c\uccd0 \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4. \uc774\ub54c \uc801\uc740 \uc816\uc5b4\uc788\ub294 \uc0c1\ud0dc\uac00 \ub429\ub2c8\ub2e4.",
-         "nl": "Splashes the enemy with a water attack. The enemy takes damage over time.",
-         "pl": "Wylewa na wroga olbrzymi\u0105 ilo\u015b\u0107 wody. Mokry cel b\u0119dzie chwilowo bardziej podatny na ataki Elektryczne.",
-         "ru": "\u041d\u0430 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430 \u043e\u0431\u0440\u0443\u0448\u0438\u0432\u0430\u044e\u0442\u0441\u044f \u0441\u0442\u0440\u0443\u0438 \u0432\u043e\u0434\u044b, \u043d\u0430\u043d\u043e\u0441\u044f\u0449\u0438\u0435 \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u044b\u0439 \u0443\u0440\u043e\u043d.",
-         "sw": "Splashes the enemy with a water attack. The enemy takes damage over time.",
-         "th": "Splashes the enemy with a water attack. The enemy takes damage over time."
+         "en": "Splashes the enemy with a water attack.",
+         "ar": "Splashes the enemy with a water attack.",
+         "br": "Splashes the enemy with a water attack.",
+         "cns": "Splashes the enemy with a water attack.",
+         "de": "Splashes the enemy with a water attack.",
+         "fi": "Splashes the enemy with a water attack.",
+         "fil": "Splashes the enemy with a water attack.",
+         "fr": "Splashes the enemy with a water attack.",
+         "it": "Splashes the enemy with a water attack.",
+         "kr": "Splashes the enemy with a water attack.",
+         "nl": "Splashes the enemy with a water attack.",
+         "pl": "Splashes the enemy with a water attack.",
+         "ru": "Splashes the enemy with a water attack.",
+         "sw": "Splashes the enemy with a water attack.",
+         "th": "Splashes the enemy with a water attack."
       },
       "icon": "magspringwater.png",
       "class": 9581,
-      "level": 30,
+      "level": 40,
       "element": "water",
       "magic": true,
       "requirements": [
@@ -27556,7 +28938,6 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "dotTick": 1,
             "consumedMP": 40,
             "casting": 1,
             "duration": 15,
@@ -27565,7 +28946,7 @@ export const skillsjson = [
                {
                   "parameter": "electricitydefense",
                   "add": -6,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -27581,7 +28962,6 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "dotTick": 1,
             "consumedMP": 40,
             "casting": 1,
             "duration": 15,
@@ -27590,7 +28970,7 @@ export const skillsjson = [
                {
                   "parameter": "electricitydefense",
                   "add": -7,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -27606,7 +28986,6 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "dotTick": 1,
             "consumedMP": 42,
             "casting": 1,
             "duration": 15,
@@ -27615,7 +28994,7 @@ export const skillsjson = [
                {
                   "parameter": "electricitydefense",
                   "add": -8,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -27631,7 +29010,6 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "dotTick": 1,
             "consumedMP": 42,
             "casting": 1,
             "duration": 15,
@@ -27640,7 +29018,7 @@ export const skillsjson = [
                {
                   "parameter": "electricitydefense",
                   "add": -9,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -27656,7 +29034,6 @@ export const skillsjson = [
          {
             "minAttack": 53,
             "maxAttack": 54,
-            "dotTick": 1,
             "consumedMP": 44,
             "casting": 1,
             "duration": 15,
@@ -27665,7 +29042,7 @@ export const skillsjson = [
                {
                   "parameter": "electricitydefense",
                   "add": -10,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -27681,7 +29058,6 @@ export const skillsjson = [
          {
             "minAttack": 55,
             "maxAttack": 56,
-            "dotTick": 1,
             "consumedMP": 44,
             "casting": 1,
             "duration": 15,
@@ -27690,7 +29066,7 @@ export const skillsjson = [
                {
                   "parameter": "electricitydefense",
                   "add": -11,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -27706,7 +29082,6 @@ export const skillsjson = [
          {
             "minAttack": 55,
             "maxAttack": 56,
-            "dotTick": 1,
             "consumedMP": 46,
             "casting": 1,
             "duration": 15,
@@ -27715,7 +29090,7 @@ export const skillsjson = [
                {
                   "parameter": "electricitydefense",
                   "add": -12,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -27731,7 +29106,6 @@ export const skillsjson = [
          {
             "minAttack": 55,
             "maxAttack": 56,
-            "dotTick": 1,
             "consumedMP": 46,
             "casting": 1,
             "duration": 15,
@@ -27740,7 +29114,7 @@ export const skillsjson = [
                {
                   "parameter": "electricitydefense",
                   "add": -13,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -27756,7 +29130,6 @@ export const skillsjson = [
          {
             "minAttack": 55,
             "maxAttack": 56,
-            "dotTick": 1,
             "consumedMP": 48,
             "casting": 1,
             "duration": 15,
@@ -27765,7 +29138,7 @@ export const skillsjson = [
                {
                   "parameter": "electricitydefense",
                   "add": -14,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -27781,7 +29154,6 @@ export const skillsjson = [
          {
             "minAttack": 55,
             "maxAttack": 56,
-            "dotTick": 1,
             "consumedMP": 48,
             "casting": 1,
             "duration": 15,
@@ -27790,7 +29162,7 @@ export const skillsjson = [
                {
                   "parameter": "electricitydefense",
                   "add": -15,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -27806,7 +29178,6 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "dotTick": 1,
             "consumedMP": 50,
             "casting": 1,
             "duration": 15,
@@ -27815,7 +29186,7 @@ export const skillsjson = [
                {
                   "parameter": "electricitydefense",
                   "add": -16,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -27831,7 +29202,6 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "dotTick": 1,
             "consumedMP": 50,
             "casting": 1,
             "duration": 15,
@@ -27840,7 +29210,7 @@ export const skillsjson = [
                {
                   "parameter": "electricitydefense",
                   "add": -17,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -27856,7 +29226,6 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "dotTick": 1,
             "consumedMP": 53,
             "casting": 1,
             "duration": 15,
@@ -27865,7 +29234,7 @@ export const skillsjson = [
                {
                   "parameter": "electricitydefense",
                   "add": -18,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -27881,7 +29250,6 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "dotTick": 1,
             "consumedMP": 53,
             "casting": 1,
             "duration": 15,
@@ -27890,7 +29258,7 @@ export const skillsjson = [
                {
                   "parameter": "electricitydefense",
                   "add": -19,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -27906,7 +29274,6 @@ export const skillsjson = [
          {
             "minAttack": 57,
             "maxAttack": 58,
-            "dotTick": 1,
             "consumedMP": 55,
             "casting": 1,
             "duration": 15,
@@ -27915,7 +29282,7 @@ export const skillsjson = [
                {
                   "parameter": "electricitydefense",
                   "add": -20,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -27931,7 +29298,6 @@ export const skillsjson = [
          {
             "minAttack": 59,
             "maxAttack": 60,
-            "dotTick": 1,
             "consumedMP": 55,
             "casting": 1,
             "duration": 15,
@@ -27940,7 +29306,7 @@ export const skillsjson = [
                {
                   "parameter": "electricitydefense",
                   "add": -21,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -27956,7 +29322,6 @@ export const skillsjson = [
          {
             "minAttack": 59,
             "maxAttack": 60,
-            "dotTick": 1,
             "consumedMP": 57,
             "casting": 1,
             "duration": 15,
@@ -27965,7 +29330,7 @@ export const skillsjson = [
                {
                   "parameter": "electricitydefense",
                   "add": -22,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -27981,7 +29346,6 @@ export const skillsjson = [
          {
             "minAttack": 59,
             "maxAttack": 60,
-            "dotTick": 1,
             "consumedMP": 57,
             "casting": 1,
             "duration": 15,
@@ -27990,7 +29354,7 @@ export const skillsjson = [
                {
                   "parameter": "electricitydefense",
                   "add": -23,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -28006,7 +29370,6 @@ export const skillsjson = [
          {
             "minAttack": 59,
             "maxAttack": 60,
-            "dotTick": 1,
             "consumedMP": 60,
             "casting": 1,
             "duration": 15,
@@ -28015,7 +29378,7 @@ export const skillsjson = [
                {
                   "parameter": "electricitydefense",
                   "add": -24,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -28031,7 +29394,6 @@ export const skillsjson = [
          {
             "minAttack": 59,
             "maxAttack": 60,
-            "dotTick": 1,
             "consumedMP": 60,
             "casting": 1,
             "duration": 15,
@@ -28040,7 +29402,7 @@ export const skillsjson = [
                {
                   "parameter": "electricitydefense",
                   "add": -25,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -28346,7 +29708,7 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 45,
+            "minAttack": 44,
             "maxAttack": 46,
             "consumedMP": 38,
             "casting": 0.6,
@@ -28361,7 +29723,7 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 46,
+            "minAttack": 45,
             "maxAttack": 47,
             "consumedMP": 38,
             "casting": 0.6,
@@ -28376,7 +29738,7 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 48,
+            "minAttack": 46,
             "maxAttack": 49,
             "consumedMP": 40,
             "casting": 0.6,
@@ -28391,7 +29753,7 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 49,
+            "minAttack": 47,
             "maxAttack": 50,
             "consumedMP": 40,
             "casting": 0.6,
@@ -28874,7 +30236,7 @@ export const skillsjson = [
       },
       "icon": "meronesmaste.png",
       "class": 764,
-      "level": 30,
+      "level": 40,
       "element": "none",
       "magic": false,
       "requirements": [
@@ -29175,9 +30537,9 @@ export const skillsjson = [
       "description": {
          "en": "Fires three arrows at once. Stuns the target.",
          "ar": "Fires three arrows at once. Stuns the target.",
-         "br": "Fires three arrows at once. Stuns the target.",
-         "cns": "Fires three arrows at once. Stuns the target.",
-         "de": "Fires three arrows at once. Stuns the target.",
+         "br": "Lan\u00e7a tr\u00eas flechas de uma s\u00f3 vez e atordoa o alvo.",
+         "cns": "\u540c\u65f6\u53d1\u5c04\u51fa24\u652f\u5f13\u7bad\uff0c\u5a01\u529b\u5927\u5927\u52a0\u5f3a\u7684\u653b\u51fb\uff0c\u5e76\u51fb\u6655\u76ee\u6807\u3002",
+         "de": "Schie\u00dft drei Pfeile gleichzeitig. Bet\u00e4ubt das Ziel.",
          "fi": "Fires three arrows at once. Stuns the target.",
          "fil": "Fires three arrows at once. Stuns the target.",
          "fr": "Fires three arrows at once. Stuns the target.",
@@ -29217,9 +30579,9 @@ export const skillsjson = [
             "minAttack": 136,
             "maxAttack": 137,
             "consumedMP": 55,
-            "cooldown": 8,
-            "duration": 1.5,
-            "durationPVP": 1.5,
+            "cooldown": 15,
+            "duration": 1,
+            "durationPVP": 1,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -29241,9 +30603,9 @@ export const skillsjson = [
             "minAttack": 137,
             "maxAttack": 138,
             "consumedMP": 60,
-            "cooldown": 8,
-            "duration": 1.5,
-            "durationPVP": 1.5,
+            "cooldown": 15,
+            "duration": 1,
+            "durationPVP": 1,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -29265,9 +30627,9 @@ export const skillsjson = [
             "minAttack": 138,
             "maxAttack": 139,
             "consumedMP": 65,
-            "cooldown": 8,
-            "duration": 1.5,
-            "durationPVP": 1.5,
+            "cooldown": 15,
+            "duration": 1,
+            "durationPVP": 1,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -29289,9 +30651,9 @@ export const skillsjson = [
             "minAttack": 139,
             "maxAttack": 140,
             "consumedMP": 70,
-            "cooldown": 8,
-            "duration": 1.5,
-            "durationPVP": 1.5,
+            "cooldown": 14,
+            "duration": 1,
+            "durationPVP": 1,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -29313,9 +30675,9 @@ export const skillsjson = [
             "minAttack": 140,
             "maxAttack": 141,
             "consumedMP": 75,
-            "cooldown": 8,
-            "duration": 1.5,
-            "durationPVP": 1.5,
+            "cooldown": 13,
+            "duration": 1,
+            "durationPVP": 1,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -29337,9 +30699,9 @@ export const skillsjson = [
             "minAttack": 141,
             "maxAttack": 142,
             "consumedMP": 80,
-            "cooldown": 8,
-            "duration": 1.5,
-            "durationPVP": 1.5,
+            "cooldown": 12,
+            "duration": 1,
+            "durationPVP": 1,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -29361,9 +30723,9 @@ export const skillsjson = [
             "minAttack": 142,
             "maxAttack": 143,
             "consumedMP": 85,
-            "cooldown": 8,
-            "duration": 1.5,
-            "durationPVP": 1.5,
+            "cooldown": 11,
+            "duration": 1,
+            "durationPVP": 1,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -29385,9 +30747,9 @@ export const skillsjson = [
             "minAttack": 143,
             "maxAttack": 144,
             "consumedMP": 90,
-            "cooldown": 8,
-            "duration": 1.5,
-            "durationPVP": 1.5,
+            "cooldown": 10,
+            "duration": 1,
+            "durationPVP": 1,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -29409,9 +30771,9 @@ export const skillsjson = [
             "minAttack": 144,
             "maxAttack": 145,
             "consumedMP": 95,
-            "cooldown": 8,
-            "duration": 1.5,
-            "durationPVP": 1.5,
+            "cooldown": 9,
+            "duration": 1,
+            "durationPVP": 1,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -29434,8 +30796,8 @@ export const skillsjson = [
             "maxAttack": 150,
             "consumedMP": 100,
             "cooldown": 8,
-            "duration": 1.5,
-            "durationPVP": 1.5,
+            "duration": 1,
+            "durationPVP": 1,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -29507,83 +30869,83 @@ export const skillsjson = [
       "levels": [
          {
             "consumedFP": 2,
-            "cooldown": 10
+            "cooldown": 9
+         },
+         {
+            "consumedFP": 3,
+            "cooldown": 9
          },
          {
             "consumedFP": 4,
-            "cooldown": 10
+            "cooldown": 9
+         },
+         {
+            "consumedFP": 5,
+            "cooldown": 9
+         },
+         {
+            "consumedFP": 5,
+            "cooldown": 9
+         },
+         {
+            "consumedFP": 5,
+            "cooldown": 9
+         },
+         {
+            "consumedFP": 5,
+            "cooldown": 9
+         },
+         {
+            "consumedFP": 5,
+            "cooldown": 9
+         },
+         {
+            "consumedFP": 5,
+            "cooldown": 9
+         },
+         {
+            "consumedFP": 5,
+            "cooldown": 9
+         },
+         {
+            "consumedFP": 5,
+            "cooldown": 9
          },
          {
             "consumedFP": 6,
-            "cooldown": 10
+            "cooldown": 9
+         },
+         {
+            "consumedFP": 6,
+            "cooldown": 9
+         },
+         {
+            "consumedFP": 7,
+            "cooldown": 7
+         },
+         {
+            "consumedFP": 7,
+            "cooldown": 7
          },
          {
             "consumedFP": 8,
-            "cooldown": 10
+            "cooldown": 7
+         },
+         {
+            "consumedFP": 8,
+            "cooldown": 6
+         },
+         {
+            "consumedFP": 9,
+            "cooldown": 6
+         },
+         {
+            "consumedFP": 9,
+            "cooldown": 6
          },
          {
             "consumedFP": 10,
-            "cooldown": 10
-         },
-         {
-            "consumedFP": 12,
-            "cooldown": 10
-         },
-         {
-            "consumedFP": 14,
-            "cooldown": 10
-         },
-         {
-            "consumedFP": 16,
-            "cooldown": 10
-         },
-         {
-            "consumedFP": 18,
-            "cooldown": 10
-         },
-         {
-            "consumedFP": 20,
-            "cooldown": 10
-         },
-         {
-            "consumedFP": 22,
-            "cooldown": 10
-         },
-         {
-            "consumedFP": 24,
-            "cooldown": 10
-         },
-         {
-            "consumedFP": 26,
-            "cooldown": 10
-         },
-         {
-            "consumedFP": 28,
-            "cooldown": 10
-         },
-         {
-            "consumedFP": 30,
-            "cooldown": 10
-         },
-         {
-            "consumedFP": 32,
-            "cooldown": 10
-         },
-         {
-            "consumedFP": 34,
-            "cooldown": 10
-         },
-         {
-            "consumedFP": 36,
-            "cooldown": 10
-         },
-         {
-            "consumedFP": 38,
-            "cooldown": 10
-         },
-         {
-            "consumedFP": 40,
-            "cooldown": 10
+            "cooldown": 4
          }
       ]
    },
@@ -29607,21 +30969,21 @@ export const skillsjson = [
          "th": "Asalraalaikum"
       },
       "description": {
-         "en": "Fully concentrated strike. Consumes 100% MP.",
-         "ar": "Fully concentrated strike. Consumes 100% MP.",
-         "br": "Um ataque altamente concentrado que consome TODA a sua mana para causar um dano poderoso.",
-         "cns": "\u6d88\u8017\u5168\u90e8\u7684\u9b54\u529b\u7ed9\u5bf9\u65b9\u9020\u6210\u81f4\u6b7b\u7684\u6253\u51fb\u3002",
-         "de": "Den Gegner mit voller Konzentration angreifen. Der MP verbrauch liegt bei 100%",
-         "fi": "T\u00e4ysin keskitetty isku. Kuluttaa 100% MP.",
-         "fil": "Fully concentrated strike. Consumes 100% MP.",
-         "fr": "Technique martiale mill\u00e9naire qui utilise tous les PM du Moine pour d\u00e9livrer un coup d'une extr\u00eame violence",
-         "it": "Fully concentrated strike. Consumes 100% MP.",
-         "kr": "\ubaa8\ub4e0 \uc815\uc2e0\uc744 \ub108\ud074\ud574\uba38\uc758 \ud55c \uc810\uc5d0 \uc9d1\uc911\ud558\uc5ec \uc801\uc744 \ud0c0\uaca9\ud569\ub2c8\ub2e4. \uc774\ub54c MP\ub294 \ubaa8\ub450 \uc18c\ubaa8\ub429\ub2c8\ub2e4.",
-         "nl": "Fully concentrated strike. Consumes 100% MP.",
-         "pl": "Atak wymagaj\u0105cy pe\u0142nej koncentracji - konsumuje 100% MP by zada\u0107 olbrzymie obra\u017cenia. Im wi\u0119cej MP poch\u0142onie, tym wi\u0119ksze obra\u017cenia.",
-         "ru": "\u041c\u043e\u0433\u0443\u0447\u0438\u0439 \u0443\u0434\u0430\u0440, \u0442\u0440\u0435\u0431\u0443\u044e\u0449\u0438\u0439 \u0430\u0431\u0441\u043e\u043b\u044e\u0442\u043d\u043e\u0439 \u0441\u043e\u0441\u0440\u0435\u0434\u043e\u0442\u043e\u0447\u0435\u043d\u043d\u043e\u0441\u0442\u0438. \u041e\u0442\u043d\u0438\u043c\u0430\u0435\u0442 \u0432\u0441\u044e \u043c\u0430\u043d\u0443 \u0431\u0435\u0437 \u043e\u0441\u0442\u0430\u0442\u043a\u0430.",
-         "sw": "Fully concentrated strike. Consumes 100% MP.",
-         "th": "Fully concentrated strike. Consumes 100% MP."
+         "en": "Fully concentrated strike. Always Consumes 100% MP.",
+         "ar": "Fully concentrated strike. Always Consumes 100% MP.",
+         "br": "Fully concentrated strike. Always Consumes 100% MP.",
+         "cns": "Fully concentrated strike. Always Consumes 100% MP.",
+         "de": "Fully concentrated strike. Always Consumes 100% MP.",
+         "fi": "Fully concentrated strike. Always Consumes 100% MP.",
+         "fil": "Fully concentrated strike. Always Consumes 100% MP.",
+         "fr": "Fully concentrated strike. Always Consumes 100% MP.",
+         "it": "Fully concentrated strike. Always Consumes 100% MP.",
+         "kr": "Fully concentrated strike. Always Consumes 100% MP.",
+         "nl": "Fully concentrated strike. Always Consumes 100% MP.",
+         "pl": "Fully concentrated strike. Always Consumes 100% MP.",
+         "ru": "Fully concentrated strike. Always Consumes 100% MP.",
+         "sw": "Fully concentrated strike. Always Consumes 100% MP.",
+         "th": "Fully concentrated strike. Always Consumes 100% MP."
       },
       "icon": "bilasalraalaikum.png",
       "class": 7424,
@@ -29644,9 +31006,10 @@ export const skillsjson = [
       "skillPoints": 3,
       "levels": [
          {
-            "minAttack": 101,
-            "maxAttack": 102,
-            "consumedFP": 100,
+            "damageMultiplier": 0.8,
+            "minAttack": 91,
+            "maxAttack": 92,
+            "consumedFP": 182,
             "cooldown": 15,
             "casting": 0.625,
             "scalingParameters": [
@@ -29660,9 +31023,10 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 103,
-            "maxAttack": 104,
-            "consumedFP": 104,
+            "damageMultiplier": 0.8,
+            "minAttack": 93,
+            "maxAttack": 94,
+            "consumedFP": 184,
             "cooldown": 15,
             "casting": 0.625,
             "scalingParameters": [
@@ -29676,9 +31040,10 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 105,
-            "maxAttack": 106,
-            "consumedFP": 108,
+            "damageMultiplier": 0.8,
+            "minAttack": 95,
+            "maxAttack": 96,
+            "consumedFP": 186,
             "cooldown": 15,
             "casting": 0.625,
             "scalingParameters": [
@@ -29692,9 +31057,10 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 107,
-            "maxAttack": 108,
-            "consumedFP": 112,
+            "damageMultiplier": 0.8,
+            "minAttack": 97,
+            "maxAttack": 98,
+            "consumedFP": 188,
             "cooldown": 15,
             "casting": 0.625,
             "scalingParameters": [
@@ -29708,9 +31074,10 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 109,
-            "maxAttack": 110,
-            "consumedFP": 116,
+            "damageMultiplier": 0.8,
+            "minAttack": 99,
+            "maxAttack": 100,
+            "consumedFP": 190,
             "cooldown": 15,
             "casting": 0.625,
             "scalingParameters": [
@@ -29724,9 +31091,10 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 111,
-            "maxAttack": 112,
-            "consumedFP": 120,
+            "damageMultiplier": 0.8,
+            "minAttack": 101,
+            "maxAttack": 102,
+            "consumedFP": 192,
             "cooldown": 15,
             "casting": 0.625,
             "scalingParameters": [
@@ -29740,9 +31108,10 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 113,
-            "maxAttack": 114,
-            "consumedFP": 124,
+            "damageMultiplier": 0.8,
+            "minAttack": 103,
+            "maxAttack": 104,
+            "consumedFP": 194,
             "cooldown": 15,
             "casting": 0.625,
             "scalingParameters": [
@@ -29756,9 +31125,10 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 115,
-            "maxAttack": 116,
-            "consumedFP": 128,
+            "damageMultiplier": 0.8,
+            "minAttack": 105,
+            "maxAttack": 106,
+            "consumedFP": 196,
             "cooldown": 15,
             "casting": 0.625,
             "scalingParameters": [
@@ -29772,9 +31142,10 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 117,
-            "maxAttack": 118,
-            "consumedFP": 132,
+            "damageMultiplier": 0.8,
+            "minAttack": 107,
+            "maxAttack": 108,
+            "consumedFP": 198,
             "cooldown": 15,
             "casting": 0.625,
             "scalingParameters": [
@@ -29788,9 +31159,10 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 119,
-            "maxAttack": 120,
-            "consumedFP": 136,
+            "damageMultiplier": 0.8,
+            "minAttack": 109,
+            "maxAttack": 110,
+            "consumedFP": 200,
             "cooldown": 15,
             "casting": 0.625,
             "scalingParameters": [
@@ -29808,26 +31180,26 @@ export const skillsjson = [
    {
       "id": 5162,
       "name": {
-         "en": "Vital stab",
-         "ar": "Vital stab",
-         "br": "Ataque Vital",
-         "cns": "\u6697\u6740",
-         "de": "Fatal Stab",
-         "fi": "Vital stab",
-         "fil": "Vital stab",
-         "fr": "Ex\u00e9cution",
-         "it": "Vital stab",
-         "kr": "\ud63c\uc2e0\uc758 \uc77c\uaca9",
-         "nl": "Vital stab",
-         "pl": "Vital stab",
-         "ru": "\u0423\u0434\u0430\u0440 \u0432 \u0441\u043b\u0430\u0431\u043e\u0435 \u043c\u0435\u0441\u0442\u043e",
-         "sw": "Vital stab",
-         "th": "Vital stab"
+         "en": "Vital Stab",
+         "ar": "Vital Stab",
+         "br": "Vital Stab",
+         "cns": "Vital Stab",
+         "de": "Vital Stab",
+         "fi": "Vital Stab",
+         "fil": "Vital Stab",
+         "fr": "Vital Stab",
+         "it": "Vital Stab",
+         "kr": "Vital Stab",
+         "nl": "Vital Stab",
+         "pl": "Vital Stab",
+         "ru": "Vital Stab",
+         "sw": "Vital Stab",
+         "th": "Vital Stab"
       },
       "description": {
          "en": "Surprise attack while in Dark Illusion.",
          "ar": "Surprise attack while in Dark Illusion.",
-         "br": "Um ataque surpresa enquanto estiver usando a Ilus\u00e3o das Trevas.",
+         "br": "Um ataque surpresa enquanto estiver usando a Ilus\u00e3o Sombria.",
          "cns": "\u4ece\u6f5c\u884c\u72b6\u6001\u4e0b\u73b0\u8eab\uff0c\u7ed9\u4e88\u5bf9\u65b9\u81f4\u547d\u4e00\u51fb\uff0c\u6709\u4e00\u5b9a\u51e0\u7387\u9020\u6210\u53cc\u500d\u4f24\u5bb3\u3002",
          "de": "Einen \u00dcberraschungsangriff aus der Dunkelheit starten. Dark Illusion wird ben\u00f6tigt.",
          "fi": "Surprise attack while in Dark Illusion.",
@@ -29867,10 +31239,9 @@ export const skillsjson = [
          {
             "minAttack": 128,
             "maxAttack": 129,
-            "probability": 4,
-            "probabilityPVP": 4,
+            "probability": 24,
+            "probabilityPVP": 24,
             "consumedFP": 90,
-            "cooldown": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -29884,10 +31255,9 @@ export const skillsjson = [
          {
             "minAttack": 130,
             "maxAttack": 131,
-            "probability": 8,
-            "probabilityPVP": 8,
+            "probability": 28,
+            "probabilityPVP": 28,
             "consumedFP": 93,
-            "cooldown": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -29901,10 +31271,9 @@ export const skillsjson = [
          {
             "minAttack": 132,
             "maxAttack": 133,
-            "probability": 12,
-            "probabilityPVP": 12,
+            "probability": 32,
+            "probabilityPVP": 32,
             "consumedFP": 96,
-            "cooldown": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -29918,10 +31287,9 @@ export const skillsjson = [
          {
             "minAttack": 134,
             "maxAttack": 135,
-            "probability": 16,
-            "probabilityPVP": 16,
+            "probability": 36,
+            "probabilityPVP": 36,
             "consumedFP": 99,
-            "cooldown": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -29935,10 +31303,9 @@ export const skillsjson = [
          {
             "minAttack": 136,
             "maxAttack": 137,
-            "probability": 20,
-            "probabilityPVP": 20,
+            "probability": 40,
+            "probabilityPVP": 40,
             "consumedFP": 102,
-            "cooldown": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -29952,10 +31319,9 @@ export const skillsjson = [
          {
             "minAttack": 138,
             "maxAttack": 139,
-            "probability": 24,
-            "probabilityPVP": 24,
+            "probability": 44,
+            "probabilityPVP": 44,
             "consumedFP": 105,
-            "cooldown": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -29969,10 +31335,9 @@ export const skillsjson = [
          {
             "minAttack": 140,
             "maxAttack": 141,
-            "probability": 28,
-            "probabilityPVP": 28,
+            "probability": 48,
+            "probabilityPVP": 48,
             "consumedFP": 108,
-            "cooldown": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -29986,10 +31351,9 @@ export const skillsjson = [
          {
             "minAttack": 142,
             "maxAttack": 143,
-            "probability": 32,
-            "probabilityPVP": 32,
+            "probability": 52,
+            "probabilityPVP": 52,
             "consumedFP": 111,
-            "cooldown": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -30003,10 +31367,9 @@ export const skillsjson = [
          {
             "minAttack": 144,
             "maxAttack": 145,
-            "probability": 36,
-            "probabilityPVP": 36,
+            "probability": 56,
+            "probabilityPVP": 56,
             "consumedFP": 114,
-            "cooldown": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -30020,10 +31383,9 @@ export const skillsjson = [
          {
             "minAttack": 146,
             "maxAttack": 147,
-            "probability": 40,
-            "probabilityPVP": 40,
+            "probability": 60,
+            "probabilityPVP": 60,
             "consumedFP": 117,
-            "cooldown": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
@@ -30056,21 +31418,21 @@ export const skillsjson = [
          "th": "Electric Shock"
       },
       "description": {
-         "en": "Damage surrounding enemies with electricity. Defense of the enemies decreases.",
-         "ar": "Damage surrounding enemies with electricity. Defense of the enemies decreases.",
-         "br": "Causa dano aos inimigos ao redor com eletricidade. A defesa dos inimigos ser\u00e1 reduzida.",
-         "cns": "\u4ee5\u96f7\u7535\u7ec7\u5c31\u7684\u7f51\u7b3c\u7f69\u4f4f\u76ee\u6807\uff0c\u8303\u56f4\u5185\u7684\u5bf9\u8c61\u7684\u9632\u5fa1\u529b\u964d\u4f4e\u3002",
-         "de": "Allen Gegnern durch die Generation einer starken Elektrowelle Schaden zuf\u00fcgen. Die Verteidigung der Gegner wird gesenkt.",
-         "fi": "Damage surrounding enemies with electricity. Defense of the enemies decreases.",
-         "fil": "Damage surrounding enemies with electricity. Defense of the enemies decreases.",
-         "fr": "Couvre la zone autour de l'El\u00e9mentaliste d'un puissant champ \u00e9lectrique, infligeant al\u00e9atoirement des d\u00e9g\u00e2ts aux ennemis alentours",
-         "it": "Damage surrounding enemies with electricity. Defense of the enemies decreases.",
-         "kr": "\uac15\ub825\ud55c \uc804\uae30 \ud30c\uc7a5\uc744 \uc77c\uc73c\ucf1c \uc8fc\ubcc0\uc758 \ubaa8\ub4e0 \uc801\ub4e4\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4. \uc774\ub54c \uc801\uc758 \ubc29\uc5b4\ub825\uc774 \uc77c\uc815\ub7c9 \uac10\uc18c\ud569\ub2c8\ub2e4.",
-         "nl": "Damage surrounding enemies with electricity. Defense of the enemies decreases.",
-         "pl": "Atakuje wszystkie cele wok\u00f3\u0142 ciebie przeskakuj\u0105cym wy\u0142adowaniem. Obrona celu spadnie.",
-         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0432\u0441\u0435\u043c \u043d\u0430\u0445\u043e\u0434\u044f\u0449\u0438\u043c\u0441\u044f \u043f\u043e\u0431\u043b\u0438\u0437\u043e\u0441\u0442\u0438 \u0432\u0440\u0430\u0433\u0430\u043c \u0443\u0440\u043e\u043d \u043c\u043e\u043b\u043d\u0438\u0435\u0439 \u0438 \u0441\u043d\u0438\u0436\u0430\u0435\u0442 \u0438\u0445 \u0437\u0430\u0449\u0438\u0442\u0443.",
-         "sw": "Damage surrounding enemies with electricity. Defense of the enemies decreases.",
-         "th": "Damage surrounding enemies with electricity. Defense of the enemies decreases."
+         "en": "Damage surrounding enemies with electricity. Magic Resistance of the enemies decreases.",
+         "ar": "Damage surrounding enemies with electricity. Magic Resistance of the enemies decreases.",
+         "br": "Damage surrounding enemies with electricity. Magic Resistance of the enemies decreases.",
+         "cns": "Damage surrounding enemies with electricity. Magic Resistance of the enemies decreases.",
+         "de": "Damage surrounding enemies with electricity. Magic Resistance of the enemies decreases.",
+         "fi": "Damage surrounding enemies with electricity. Magic Resistance of the enemies decreases.",
+         "fil": "Damage surrounding enemies with electricity. Magic Resistance of the enemies decreases.",
+         "fr": "Damage surrounding enemies with electricity. Magic Resistance of the enemies decreases.",
+         "it": "Damage surrounding enemies with electricity. Magic Resistance of the enemies decreases.",
+         "kr": "Damage surrounding enemies with electricity. Magic Resistance of the enemies decreases.",
+         "nl": "Damage surrounding enemies with electricity. Magic Resistance of the enemies decreases.",
+         "pl": "Damage surrounding enemies with electricity. Magic Resistance of the enemies decreases.",
+         "ru": "Damage surrounding enemies with electricity. Magic Resistance of the enemies decreases.",
+         "sw": "Damage surrounding enemies with electricity. Magic Resistance of the enemies decreases.",
+         "th": "Damage surrounding enemies with electricity. Magic Resistance of the enemies decreases."
       },
       "icon": "eleeleeleshk.png",
       "class": 9150,
@@ -30096,133 +31458,8 @@ export const skillsjson = [
             "maxAttack": 101,
             "consumedMP": 72,
             "casting": 0.6,
-            "duration": 2,
-            "durationPVP": 2,
-            "abilities": [
-               {
-                  "parameter": "magicdefense",
-                  "add": -1,
-                  "rate": true
-               }
-            ],
-            "spellRange": 6,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "int",
-                  "scale": 4.52,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 101,
-            "maxAttack": 102,
-            "consumedMP": 74,
-            "casting": 0.6,
-            "duration": 2,
-            "durationPVP": 2,
-            "abilities": [
-               {
-                  "parameter": "magicdefense",
-                  "add": -2,
-                  "rate": true
-               }
-            ],
-            "spellRange": 6,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "int",
-                  "scale": 4.54,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 102,
-            "maxAttack": 103,
-            "consumedMP": 76,
-            "casting": 0.6,
-            "duration": 2,
-            "durationPVP": 2,
-            "abilities": [
-               {
-                  "parameter": "magicdefense",
-                  "add": -3,
-                  "rate": true
-               }
-            ],
-            "spellRange": 6,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "int",
-                  "scale": 4.56,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 103,
-            "maxAttack": 104,
-            "consumedMP": 78,
-            "casting": 0.6,
-            "duration": 2,
-            "durationPVP": 2,
-            "abilities": [
-               {
-                  "parameter": "magicdefense",
-                  "add": -4,
-                  "rate": true
-               }
-            ],
-            "spellRange": 6,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "int",
-                  "scale": 4.58,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 104,
-            "maxAttack": 105,
-            "consumedMP": 80,
-            "casting": 0.6,
-            "duration": 2,
-            "durationPVP": 2,
-            "abilities": [
-               {
-                  "parameter": "magicdefense",
-                  "add": -5,
-                  "rate": true
-               }
-            ],
-            "spellRange": 6,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "int",
-                  "scale": 4.6,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 105,
-            "maxAttack": 106,
-            "consumedMP": 82,
-            "casting": 0.6,
-            "duration": 2,
-            "durationPVP": 2,
+            "duration": 5,
+            "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "magicdefense",
@@ -30235,19 +31472,19 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 4.62,
+                  "scale": 3.52,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 106,
-            "maxAttack": 107,
-            "consumedMP": 84,
+            "minAttack": 101,
+            "maxAttack": 102,
+            "consumedMP": 74,
             "casting": 0.6,
-            "duration": 2,
-            "durationPVP": 2,
+            "duration": 5,
+            "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "magicdefense",
@@ -30260,19 +31497,19 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 4.64,
+                  "scale": 3.54,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 107,
-            "maxAttack": 108,
-            "consumedMP": 86,
+            "minAttack": 102,
+            "maxAttack": 103,
+            "consumedMP": 76,
             "casting": 0.6,
-            "duration": 2,
-            "durationPVP": 2,
+            "duration": 5,
+            "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "magicdefense",
@@ -30285,19 +31522,19 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 4.66,
+                  "scale": 3.56,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 108,
-            "maxAttack": 109,
-            "consumedMP": 88,
+            "minAttack": 103,
+            "maxAttack": 104,
+            "consumedMP": 78,
             "casting": 0.6,
-            "duration": 2,
-            "durationPVP": 2,
+            "duration": 5,
+            "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "magicdefense",
@@ -30310,19 +31547,19 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 4.68,
+                  "scale": 3.58,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 109,
-            "maxAttack": 110,
-            "consumedMP": 90,
+            "minAttack": 104,
+            "maxAttack": 105,
+            "consumedMP": 80,
             "casting": 0.6,
-            "duration": 2,
-            "durationPVP": 2,
+            "duration": 5,
+            "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "magicdefense",
@@ -30335,7 +31572,132 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 4.7,
+                  "scale": 3.6,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 105,
+            "maxAttack": 106,
+            "consumedMP": 82,
+            "casting": 0.6,
+            "duration": 5,
+            "durationPVP": 5,
+            "abilities": [
+               {
+                  "parameter": "magicdefense",
+                  "add": -11,
+                  "rate": true
+               }
+            ],
+            "spellRange": 6,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.62,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 106,
+            "maxAttack": 107,
+            "consumedMP": 84,
+            "casting": 0.6,
+            "duration": 5,
+            "durationPVP": 5,
+            "abilities": [
+               {
+                  "parameter": "magicdefense",
+                  "add": -12,
+                  "rate": true
+               }
+            ],
+            "spellRange": 6,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.64,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 107,
+            "maxAttack": 108,
+            "consumedMP": 86,
+            "casting": 0.6,
+            "duration": 5,
+            "durationPVP": 5,
+            "abilities": [
+               {
+                  "parameter": "magicdefense",
+                  "add": -13,
+                  "rate": true
+               }
+            ],
+            "spellRange": 6,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.66,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 108,
+            "maxAttack": 109,
+            "consumedMP": 88,
+            "casting": 0.6,
+            "duration": 5,
+            "durationPVP": 5,
+            "abilities": [
+               {
+                  "parameter": "magicdefense",
+                  "add": -14,
+                  "rate": true
+               }
+            ],
+            "spellRange": 6,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.68,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 109,
+            "maxAttack": 110,
+            "consumedMP": 90,
+            "casting": 0.6,
+            "duration": 5,
+            "durationPVP": 5,
+            "abilities": [
+               {
+                  "parameter": "magicdefense",
+                  "add": -15,
+                  "rate": true
+               }
+            ],
+            "spellRange": 6,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.7,
                   "pvp": true,
                   "pve": true
                }
@@ -30418,7 +31780,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 2.02,
+                  "scale": 1.92,
                   "pvp": true,
                   "pve": true
                }
@@ -30444,7 +31806,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 2.04,
+                  "scale": 1.94,
                   "pvp": true,
                   "pve": true
                }
@@ -30470,7 +31832,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 2.06,
+                  "scale": 1.96,
                   "pvp": true,
                   "pve": true
                }
@@ -30496,7 +31858,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 2.08,
+                  "scale": 1.98,
                   "pvp": true,
                   "pve": true
                }
@@ -30522,7 +31884,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 2.1,
+                  "scale": 2,
                   "pvp": true,
                   "pve": true
                }
@@ -30548,7 +31910,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 2.12,
+                  "scale": 2.02,
                   "pvp": true,
                   "pve": true
                }
@@ -30574,7 +31936,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 2.14,
+                  "scale": 2.04,
                   "pvp": true,
                   "pve": true
                }
@@ -30600,7 +31962,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 2.16,
+                  "scale": 2.06,
                   "pvp": true,
                   "pve": true
                }
@@ -30626,7 +31988,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 2.18,
+                  "scale": 2.08,
                   "pvp": true,
                   "pve": true
                }
@@ -30652,7 +32014,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 2.2,
+                  "scale": 2.1,
                   "pvp": true,
                   "pve": true
                }
@@ -30678,7 +32040,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 2.22,
+                  "scale": 2.12,
                   "pvp": true,
                   "pve": true
                }
@@ -30704,7 +32066,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 2.24,
+                  "scale": 2.14,
                   "pvp": true,
                   "pve": true
                }
@@ -30730,7 +32092,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 2.26,
+                  "scale": 2.16,
                   "pvp": true,
                   "pve": true
                }
@@ -30756,7 +32118,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 2.28,
+                  "scale": 2.18,
                   "pvp": true,
                   "pve": true
                }
@@ -30782,7 +32144,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 2.3,
+                  "scale": 2.2,
                   "pvp": true,
                   "pve": true
                }
@@ -30808,7 +32170,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 2.32,
+                  "scale": 2.22,
                   "pvp": true,
                   "pve": true
                }
@@ -30834,7 +32196,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 2.34,
+                  "scale": 2.24,
                   "pvp": true,
                   "pve": true
                }
@@ -30860,7 +32222,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 2.36,
+                  "scale": 2.26,
                   "pvp": true,
                   "pve": true
                }
@@ -30886,15 +32248,15 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 2.38,
+                  "scale": 2.28,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 49,
-            "maxAttack": 50,
+            "minAttack": 44,
+            "maxAttack": 45,
             "probability": 20,
             "probabilityPVP": 20,
             "consumedMP": 40,
@@ -30912,7 +32274,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 2.4,
+                  "scale": 2.3,
                   "pvp": true,
                   "pve": true
                }
@@ -30940,21 +32302,21 @@ export const skillsjson = [
          "th": "Power Swing"
       },
       "description": {
-         "en": "To strike a blow at the enemy by flourishing a Weapon. Requires a two-handed Weapon.",
-         "ar": "To strike a blow at the enemy by flourishing a Weapon. Requires a two-handed Weapon.",
+         "en": "To strike a blow at the enemy by flourishing a weapon. Requires a two-handed weapon.",
+         "ar": "To strike a blow at the enemy by flourishing a weapon. Requires a two-handed weapon.",
          "br": "Golpeia o inimigo brandindo uma arma. Exige uma arma de duas m\u00e3os.",
          "cns": "\u7528\u6b66\u5668\u6a2a\u626b\u5468\u56f4\u7684\u654c\u4eba\uff0c\u5e76\u5c06\u4ed6\u4eec\u9707\u9000\u3002",
          "de": "Ein Hieb gegen den Gegner, indem man mit der Waffe weit ausholt.",
          "fi": "Iskee iskun viholliseen kukoistamalla Aseen. Vaatii kahden k\u00e4den Aseen.",
-         "fil": "To strike a blow at the enemy by flourishing a Weapon. Requires a two-handed Weapon.",
+         "fil": "To strike a blow at the enemy by flourishing a weapon. Requires a two-handed weapon.",
          "fr": "Frappe circulaire destructrice qui inflige de lourds dommages et repousse tous les ennemis \u00e0 proximit\u00e9",
          "it": "Colpo circolare che infligge gravi danni e respinge gli avversari vicino.",
          "kr": "\ubb34\uae30\ub97c \uc788\ub294 \ud798\uaecf \ud718\ub458\ub7ec \uc8fc\uc704\uc758 \uc801\ub4e4\uc744 \ub0a0\ub824\ubc84\ub9bd\ub2c8\ub2e4.",
-         "nl": "To strike a blow at the enemy by flourishing a Weapon. Requires a two-handed Weapon.",
+         "nl": "To strike a blow at the enemy by flourishing a weapon. Requires a two-handed weapon.",
          "pl": "Odrzuca wrog\u00f3w przed tob\u0105 za pomoc\u0105 pot\u0119\u017cnego zamachu. Wymaga dwur\u0119cznej broni.",
          "ru": "\u041c\u043e\u0449\u043d\u044b\u0439 \u0443\u0434\u0430\u0440, \u043e\u0442\u0431\u0440\u0430\u0441\u044b\u0432\u0430\u044e\u0449\u0438\u0439 \u0432\u0440\u0430\u0433\u0430. \u0414\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f \u0434\u0432\u0443\u0440\u0443\u0447\u043d\u043e\u0435 \u043e\u0440\u0443\u0436\u0438\u0435.",
-         "sw": "To strike a blow at the enemy by flourishing a Weapon. Requires a two-handed Weapon.",
-         "th": "To strike a blow at the enemy by flourishing a Weapon. Requires a two-handed Weapon."
+         "sw": "To strike a blow at the enemy by flourishing a weapon. Requires a two-handed weapon.",
+         "th": "To strike a blow at the enemy by flourishing a weapon. Requires a two-handed weapon."
       },
       "icon": "knttwopwswng.png",
       "class": 5330,
@@ -30975,170 +32337,180 @@ export const skillsjson = [
       "skillPoints": 3,
       "levels": [
          {
-            "minAttack": 131,
-            "maxAttack": 132,
-            "consumedFP": 80,
-            "cooldown": 10,
-            "casting": 1.25,
-            "spellRange": 5,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 6.52,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 133,
-            "maxAttack": 134,
-            "consumedFP": 84,
-            "cooldown": 10,
-            "casting": 1.25,
-            "spellRange": 5,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 6.54,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 135,
-            "maxAttack": 136,
-            "consumedFP": 88,
-            "cooldown": 10,
-            "casting": 1.25,
-            "spellRange": 5,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 6.56,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 137,
-            "maxAttack": 138,
-            "consumedFP": 92,
-            "cooldown": 10,
-            "casting": 1.25,
-            "spellRange": 5,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 6.58,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 139,
-            "maxAttack": 140,
-            "consumedFP": 96,
-            "cooldown": 10,
-            "casting": 1.25,
-            "spellRange": 5,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 6.6,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 141,
-            "maxAttack": 142,
-            "consumedFP": 100,
-            "cooldown": 10,
-            "casting": 1.25,
-            "spellRange": 5,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 6.62,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 143,
-            "maxAttack": 144,
-            "consumedFP": 104,
-            "cooldown": 10,
-            "casting": 1.25,
-            "spellRange": 5,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 6.64,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 145,
-            "maxAttack": 146,
+            "damageMultiplier": 1.2,
+            "minAttack": 190,
+            "maxAttack": 191,
             "consumedFP": 108,
-            "cooldown": 10,
+            "cooldown": 12,
             "casting": 1.25,
             "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 6.66,
+                  "scale": 8.02,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 147,
-            "maxAttack": 148,
+            "damageMultiplier": 1.2,
+            "minAttack": 191,
+            "maxAttack": 192,
             "consumedFP": 112,
-            "cooldown": 10,
+            "cooldown": 12,
             "casting": 1.25,
             "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 6.68,
+                  "scale": 8.04,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 149,
-            "maxAttack": 150,
+            "damageMultiplier": 1.2,
+            "minAttack": 192,
+            "maxAttack": 193,
             "consumedFP": 116,
-            "cooldown": 10,
+            "cooldown": 12,
             "casting": 1.25,
             "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 6.7,
+                  "scale": 8.06,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 1.2,
+            "minAttack": 193,
+            "maxAttack": 194,
+            "consumedFP": 122,
+            "cooldown": 12,
+            "casting": 1.25,
+            "spellRange": 5,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 8.08,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 1.2,
+            "minAttack": 194,
+            "maxAttack": 195,
+            "consumedFP": 126,
+            "cooldown": 12,
+            "casting": 1.25,
+            "spellRange": 5,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 8.1,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 1.2,
+            "minAttack": 195,
+            "maxAttack": 196,
+            "consumedFP": 130,
+            "cooldown": 12,
+            "casting": 1.25,
+            "spellRange": 5,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 8.12,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 1.2,
+            "minAttack": 196,
+            "maxAttack": 197,
+            "consumedFP": 134,
+            "cooldown": 12,
+            "casting": 1.25,
+            "spellRange": 5,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 8.14,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 1.2,
+            "minAttack": 197,
+            "maxAttack": 198,
+            "consumedFP": 138,
+            "cooldown": 12,
+            "casting": 1.25,
+            "spellRange": 5,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 8.16,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 1.2,
+            "minAttack": 198,
+            "maxAttack": 199,
+            "consumedFP": 142,
+            "cooldown": 12,
+            "casting": 1.25,
+            "spellRange": 5,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 8.18,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 1.2,
+            "minAttack": 199,
+            "maxAttack": 200,
+            "consumedFP": 146,
+            "cooldown": 12,
+            "casting": 1.25,
+            "spellRange": 5,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 8.2,
                   "pvp": true,
                   "pve": true
                }
@@ -31207,8 +32579,8 @@ export const skillsjson = [
             "dotTick": 2.9,
             "consumedMP": 30,
             "casting": 0.6,
-            "duration": 9,
-            "durationPVP": 9,
+            "duration": 1,
+            "durationPVP": 1,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -31234,8 +32606,8 @@ export const skillsjson = [
             "dotTick": 2.8,
             "consumedMP": 30,
             "casting": 0.6,
-            "duration": 9.5,
-            "durationPVP": 9.5,
+            "duration": 1,
+            "durationPVP": 1,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -31261,8 +32633,8 @@ export const skillsjson = [
             "dotTick": 2.7,
             "consumedMP": 32,
             "casting": 0.6,
-            "duration": 10,
-            "durationPVP": 10,
+            "duration": 1,
+            "durationPVP": 1,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -31288,8 +32660,8 @@ export const skillsjson = [
             "dotTick": 2.6,
             "consumedMP": 32,
             "casting": 0.6,
-            "duration": 10.5,
-            "durationPVP": 10.5,
+            "duration": 1,
+            "durationPVP": 1,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -31315,8 +32687,8 @@ export const skillsjson = [
             "dotTick": 2.5,
             "consumedMP": 34,
             "casting": 0.6,
-            "duration": 11,
-            "durationPVP": 11,
+            "duration": 1,
+            "durationPVP": 1,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -31342,8 +32714,8 @@ export const skillsjson = [
             "dotTick": 2.4,
             "consumedMP": 34,
             "casting": 0.6,
-            "duration": 11.5,
-            "durationPVP": 11.5,
+            "duration": 1.5,
+            "durationPVP": 1.5,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -31369,8 +32741,8 @@ export const skillsjson = [
             "dotTick": 2.3,
             "consumedMP": 36,
             "casting": 0.6,
-            "duration": 12,
-            "durationPVP": 12,
+            "duration": 2,
+            "durationPVP": 2,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -31396,8 +32768,8 @@ export const skillsjson = [
             "dotTick": 2.2,
             "consumedMP": 36,
             "casting": 0.6,
-            "duration": 12.5,
-            "durationPVP": 12.5,
+            "duration": 2.5,
+            "durationPVP": 2.5,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -31423,8 +32795,8 @@ export const skillsjson = [
             "dotTick": 2.1,
             "consumedMP": 38,
             "casting": 0.6,
-            "duration": 13,
-            "durationPVP": 13,
+            "duration": 3,
+            "durationPVP": 3,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -31450,8 +32822,8 @@ export const skillsjson = [
             "dotTick": 2,
             "consumedMP": 38,
             "casting": 0.6,
-            "duration": 14,
-            "durationPVP": 14,
+            "duration": 4,
+            "durationPVP": 4,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -31477,8 +32849,8 @@ export const skillsjson = [
             "dotTick": 1.9,
             "consumedMP": 41,
             "casting": 0.6,
-            "duration": 15,
-            "durationPVP": 15,
+            "duration": 5,
+            "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -31504,8 +32876,8 @@ export const skillsjson = [
             "dotTick": 1.8,
             "consumedMP": 41,
             "casting": 0.6,
-            "duration": 16,
-            "durationPVP": 16,
+            "duration": 6,
+            "durationPVP": 6,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -31531,8 +32903,8 @@ export const skillsjson = [
             "dotTick": 1.7,
             "consumedMP": 42,
             "casting": 0.6,
-            "duration": 17,
-            "durationPVP": 17,
+            "duration": 7,
+            "durationPVP": 7,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -31558,8 +32930,8 @@ export const skillsjson = [
             "dotTick": 1.6,
             "consumedMP": 42,
             "casting": 0.6,
-            "duration": 18,
-            "durationPVP": 18,
+            "duration": 8,
+            "durationPVP": 8,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -31585,8 +32957,8 @@ export const skillsjson = [
             "dotTick": 1.5,
             "consumedMP": 44,
             "casting": 0.6,
-            "duration": 19,
-            "durationPVP": 19,
+            "duration": 9,
+            "durationPVP": 9,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -31612,8 +32984,8 @@ export const skillsjson = [
             "dotTick": 1.4,
             "consumedMP": 44,
             "casting": 0.6,
-            "duration": 20,
-            "durationPVP": 20,
+            "duration": 10,
+            "durationPVP": 10,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -31639,8 +33011,8 @@ export const skillsjson = [
             "dotTick": 1.3,
             "consumedMP": 44,
             "casting": 0.6,
-            "duration": 21,
-            "durationPVP": 21,
+            "duration": 11,
+            "durationPVP": 11,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -31666,8 +33038,8 @@ export const skillsjson = [
             "dotTick": 1.2,
             "consumedMP": 47,
             "casting": 0.6,
-            "duration": 22,
-            "durationPVP": 22,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -31693,8 +33065,8 @@ export const skillsjson = [
             "dotTick": 1.1,
             "consumedMP": 47,
             "casting": 0.6,
-            "duration": 23,
-            "durationPVP": 23,
+            "duration": 13,
+            "durationPVP": 13,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -31720,8 +33092,8 @@ export const skillsjson = [
             "dotTick": 1,
             "consumedMP": 50,
             "casting": 0.6,
-            "duration": 25,
-            "durationPVP": 25,
+            "duration": 15,
+            "durationPVP": 15,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -32200,8 +33572,8 @@ export const skillsjson = [
       "name": {
          "en": "Poison Sting",
          "ar": "Poison Sting",
-         "br": "Poison Sting",
-         "cns": "Poison Sting",
+         "br": "Picada de Veneno",
+         "cns": "\u4e2d\u6bd2",
          "de": "Poison Sting",
          "fi": "Poison Sting",
          "fil": "Poison Sting",
@@ -32243,67 +33615,92 @@ export const skillsjson = [
       "target": "single",
       "levels": [
          {
-            "dotTick": 2,
+            "dotTick": 1.5,
             "duration": 15,
             "durationPVP": 15,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "poison",
-                  "dotMode": "fixedvalue",
-                  "dotValue": 15
+                  "dotMode": "standardattack",
+                  "dotValue": 20
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -30,
+                  "rate": true
                }
             ]
          },
          {
-            "dotTick": 2,
+            "dotTick": 1.5,
             "duration": 15,
             "durationPVP": 15,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "poison",
-                  "dotMode": "fixedvalue",
-                  "dotValue": 17
+                  "dotMode": "standardattack",
+                  "dotValue": 20
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -30,
+                  "rate": true
                }
             ]
          },
          {
-            "dotTick": 2,
+            "dotTick": 1.5,
             "duration": 15,
             "durationPVP": 15,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "poison",
-                  "dotMode": "fixedvalue",
-                  "dotValue": 19
+                  "dotMode": "standardattack",
+                  "dotValue": 20
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -30,
+                  "rate": true
                }
             ]
          },
          {
-            "dotTick": 2,
+            "dotTick": 1.5,
             "duration": 15,
             "durationPVP": 15,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "poison",
-                  "dotMode": "fixedvalue",
-                  "dotValue": 21
+                  "dotMode": "standardattack",
+                  "dotValue": 20
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -30,
+                  "rate": true
                }
             ]
          },
          {
-            "dotTick": 2,
+            "dotTick": 1.5,
             "duration": 15,
             "durationPVP": 15,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "poison",
-                  "dotMode": "fixedvalue",
-                  "dotValue": 23
+                  "dotMode": "standardattack",
+                  "dotValue": 20
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -30,
+                  "rate": true
                }
             ]
          }
@@ -32345,7 +33742,7 @@ export const skillsjson = [
          "sw": "Decreases attack speed and cool down time",
          "th": "Decreases attack speed and cool down time"
       },
-      "icon": "magspekestone.png",
+      "icon": "elewatpoicld.png",
       "level": 1,
       "element": "none",
       "magic": true,
@@ -32476,7 +33873,7 @@ export const skillsjson = [
       },
       "icon": "mershiepanbar.png",
       "class": 764,
-      "level": 15,
+      "level": 20,
       "element": "none",
       "magic": false,
       "requirements": [],
@@ -32496,8 +33893,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "def",
-                  "add": 5,
-                  "rate": false
+                  "add": 1,
+                  "rate": true
                },
                {
                   "parameter": "rangedblock",
@@ -32514,8 +33911,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "def",
-                  "add": 10,
-                  "rate": false
+                  "add": 2,
+                  "rate": true
                },
                {
                   "parameter": "rangedblock",
@@ -32532,8 +33929,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "def",
-                  "add": 15,
-                  "rate": false
+                  "add": 3,
+                  "rate": true
                },
                {
                   "parameter": "rangedblock",
@@ -32550,8 +33947,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "def",
-                  "add": 20,
-                  "rate": false
+                  "add": 4,
+                  "rate": true
                },
                {
                   "parameter": "rangedblock",
@@ -32568,8 +33965,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "def",
-                  "add": 25,
-                  "rate": false
+                  "add": 5,
+                  "rate": true
                },
                {
                   "parameter": "rangedblock",
@@ -32586,8 +33983,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "def",
-                  "add": 30,
-                  "rate": false
+                  "add": 6,
+                  "rate": true
                },
                {
                   "parameter": "rangedblock",
@@ -32604,8 +34001,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "def",
-                  "add": 35,
-                  "rate": false
+                  "add": 7,
+                  "rate": true
                },
                {
                   "parameter": "rangedblock",
@@ -32622,8 +34019,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "def",
-                  "add": 40,
-                  "rate": false
+                  "add": 8,
+                  "rate": true
                },
                {
                   "parameter": "rangedblock",
@@ -32640,8 +34037,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "def",
-                  "add": 45,
-                  "rate": false
+                  "add": 9,
+                  "rate": true
                },
                {
                   "parameter": "rangedblock",
@@ -32658,8 +34055,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "def",
-                  "add": 50,
-                  "rate": false
+                  "add": 10,
+                  "rate": true
                },
                {
                   "parameter": "rangedblock",
@@ -32676,8 +34073,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "def",
-                  "add": 55,
-                  "rate": false
+                  "add": 11,
+                  "rate": true
                },
                {
                   "parameter": "rangedblock",
@@ -32694,8 +34091,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "def",
-                  "add": 60,
-                  "rate": false
+                  "add": 12,
+                  "rate": true
                },
                {
                   "parameter": "rangedblock",
@@ -32712,8 +34109,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "def",
-                  "add": 65,
-                  "rate": false
+                  "add": 13,
+                  "rate": true
                },
                {
                   "parameter": "rangedblock",
@@ -32730,8 +34127,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "def",
-                  "add": 70,
-                  "rate": false
+                  "add": 14,
+                  "rate": true
                },
                {
                   "parameter": "rangedblock",
@@ -32748,8 +34145,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "def",
-                  "add": 75,
-                  "rate": false
+                  "add": 15,
+                  "rate": true
                },
                {
                   "parameter": "rangedblock",
@@ -32766,8 +34163,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "def",
-                  "add": 80,
-                  "rate": false
+                  "add": 16,
+                  "rate": true
                },
                {
                   "parameter": "rangedblock",
@@ -32784,8 +34181,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "def",
-                  "add": 85,
-                  "rate": false
+                  "add": 17,
+                  "rate": true
                },
                {
                   "parameter": "rangedblock",
@@ -32802,8 +34199,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "def",
-                  "add": 90,
-                  "rate": false
+                  "add": 18,
+                  "rate": true
                },
                {
                   "parameter": "rangedblock",
@@ -32820,8 +34217,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "def",
-                  "add": 95,
-                  "rate": false
+                  "add": 19,
+                  "rate": true
                },
                {
                   "parameter": "rangedblock",
@@ -32838,8 +34235,8 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "def",
-                  "add": 100,
-                  "rate": false
+                  "add": 20,
+                  "rate": true
                },
                {
                   "parameter": "rangedblock",
@@ -32870,21 +34267,21 @@ export const skillsjson = [
          "th": "Rage"
       },
       "description": {
-         "en": "Increases striking power, sacrificing a lot of Defense. Requires a two-handed Weapon.",
-         "ar": "Increases striking power, sacrificing a lot of Defense. Requires a two-handed Weapon.",
-         "br": "Sacrifica parte da defesa para aumentar o poder de ataque. Requer uma arma de duas m\u00e3os.",
-         "cns": "\u4e00\u65f6\u95f4\u964d\u4f4e\u9632\u5fa1\u529b\u548c\u547d\u4e2d\u7387\u6765\u5927\u5e45\u63d0\u9ad8\u653b\u51fb\u529b\u548cHP\u3002",
-         "de": "Erh\u00f6ht die Angriffsst\u00e4rke und HP durch die Konzentration auf den Angriff. Verteidigung und Treffsicherheit werden gesenkt.",
-         "fi": "Kasvattaa iskuvoimaa, uhraten paljon Puolustusta. Vaatii kahden k\u00e4den Aseen.",
-         "fil": "Increases striking power, sacrificing a lot of Defense. Requires a two-handed Weapon.",
-         "fr": "Augmente l'attaque et les PV au d\u00e9triment de la d\u00e9fense et de la pr\u00e9cision du Chevalier",
-         "it": "Aumenta l'attacco e i punti ferita a scapito della difesa e della precisione del Cavaliere.",
-         "kr": "\uacf5\uaca9\uc5d0 \uc804\ub150\ud558\uc5ec \ubc29\uc5b4\ub825\uacfc \uba85\uc911\ub960\uc744 \uac10\uc18c\uc2dc\ud0a4\uace0 \uacf5\uaca9\ub825\uacfc HP\ub97c \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
-         "nl": "Increases striking power, sacrificing a lot of Defense. Requires a two-handed Weapon.",
-         "pl": "Zwi\u0119ksza si\u0142\u0119 ataku kosztem obni\u017cenia w\u0142asnej obrony. Wymaga dwur\u0119cznej broni.",
-         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u0438\u043b\u0443 \u0430\u0442\u0430\u043a\u0438, \u0432\u0437\u0430\u043c\u0435\u043d \u0441\u0438\u043b\u044c\u043d\u043e \u043f\u043e\u043d\u0438\u0436\u0430\u044f \u0437\u0430\u0449\u0438\u0442\u0443. \u0414\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f \u0434\u0432\u0443\u0440\u0443\u0447\u043d\u043e\u0435 \u043e\u0440\u0443\u0436\u0438\u0435.",
-         "sw": "Increases striking power, sacrificing a lot of Defense. Requires a two-handed Weapon.",
-         "th": "Increases striking power, sacrificing a lot of Defense. Requires a two-handed Weapon."
+         "en": "Increases striking power. Become more vulnerable to all incoming attacks.",
+         "ar": "Increases striking power. Become more vulnerable to all incoming attacks.",
+         "br": "Increases striking power. Become more vulnerable to all incoming attacks.",
+         "cns": "Increases striking power. Become more vulnerable to all incoming attacks.",
+         "de": "Increases striking power. Become more vulnerable to all incoming attacks.",
+         "fi": "Increases striking power. Become more vulnerable to all incoming attacks.",
+         "fil": "Increases striking power. Become more vulnerable to all incoming attacks.",
+         "fr": "Increases striking power. Become more vulnerable to all incoming attacks.",
+         "it": "Increases striking power. Become more vulnerable to all incoming attacks.",
+         "kr": "Increases striking power. Become more vulnerable to all incoming attacks.",
+         "nl": "Increases striking power. Become more vulnerable to all incoming attacks.",
+         "pl": "Increases striking power. Become more vulnerable to all incoming attacks.",
+         "ru": "Increases striking power. Become more vulnerable to all incoming attacks.",
+         "sw": "Increases striking power. Become more vulnerable to all incoming attacks.",
+         "th": "Increases striking power. Become more vulnerable to all incoming attacks."
       },
       "icon": "kntsuprage.png",
       "class": 5330,
@@ -32912,147 +34309,17 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": 1,
-                  "rate": true
-               },
-               {
-                  "parameter": "def",
-                  "add": -35,
-                  "rate": true
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "duration",
-                  "stat": "str",
-                  "scale": 2,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedFP": 44,
-            "casting": 1.25,
-            "duration": 300,
-            "durationPVP": 300,
-            "abilities": [
-               {
-                  "parameter": "attack",
-                  "add": 2,
-                  "rate": true
-               },
-               {
-                  "parameter": "def",
-                  "add": -35,
-                  "rate": true
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "duration",
-                  "stat": "str",
-                  "scale": 2,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedFP": 44,
-            "casting": 1.25,
-            "duration": 300,
-            "durationPVP": 300,
-            "abilities": [
-               {
-                  "parameter": "attack",
-                  "add": 3,
-                  "rate": true
-               },
-               {
-                  "parameter": "def",
-                  "add": -35,
-                  "rate": true
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "duration",
-                  "stat": "str",
-                  "scale": 2,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedFP": 48,
-            "casting": 1.25,
-            "duration": 300,
-            "durationPVP": 300,
-            "abilities": [
-               {
-                  "parameter": "attack",
-                  "add": 4,
-                  "rate": true
-               },
-               {
-                  "parameter": "def",
-                  "add": -35,
-                  "rate": true
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "duration",
-                  "stat": "str",
-                  "scale": 2,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedFP": 48,
-            "casting": 1.25,
-            "duration": 300,
-            "durationPVP": 300,
-            "abilities": [
-               {
-                  "parameter": "attack",
                   "add": 5,
                   "rate": true
                },
                {
-                  "parameter": "def",
-                  "add": -35,
-                  "rate": true
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "duration",
-                  "stat": "str",
-                  "scale": 2,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "consumedFP": 53,
-            "casting": 1.25,
-            "duration": 300,
-            "durationPVP": 300,
-            "abilities": [
-               {
-                  "parameter": "attack",
-                  "add": 6,
+                  "parameter": "incomingdamage",
+                  "add": 30,
                   "rate": true
                },
                {
-                  "parameter": "def",
-                  "add": -35,
+                  "parameter": "maxhp",
+                  "add": -20,
                   "rate": true
                }
             ],
@@ -33067,7 +34334,7 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedFP": 53,
+            "consumedFP": 44,
             "casting": 1.25,
             "duration": 300,
             "durationPVP": 300,
@@ -33078,8 +34345,13 @@ export const skillsjson = [
                   "rate": true
                },
                {
-                  "parameter": "def",
-                  "add": -35,
+                  "parameter": "incomingdamage",
+                  "add": 30,
+                  "rate": true
+               },
+               {
+                  "parameter": "maxhp",
+                  "add": -20,
                   "rate": true
                }
             ],
@@ -33094,7 +34366,7 @@ export const skillsjson = [
             ]
          },
          {
-            "consumedFP": 58,
+            "consumedFP": 44,
             "casting": 1.25,
             "duration": 300,
             "durationPVP": 300,
@@ -33105,8 +34377,141 @@ export const skillsjson = [
                   "rate": true
                },
                {
-                  "parameter": "def",
-                  "add": -35,
+                  "parameter": "incomingdamage",
+                  "add": 30,
+                  "rate": true
+               },
+               {
+                  "parameter": "maxhp",
+                  "add": -20,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "duration",
+                  "stat": "str",
+                  "scale": 2,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 48,
+            "casting": 1.25,
+            "duration": 300,
+            "durationPVP": 300,
+            "abilities": [
+               {
+                  "parameter": "attack",
+                  "add": 9,
+                  "rate": true
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 30,
+                  "rate": true
+               },
+               {
+                  "parameter": "maxhp",
+                  "add": -20,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "duration",
+                  "stat": "str",
+                  "scale": 2,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 48,
+            "casting": 1.25,
+            "duration": 300,
+            "durationPVP": 300,
+            "abilities": [
+               {
+                  "parameter": "attack",
+                  "add": 10,
+                  "rate": true
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 30,
+                  "rate": true
+               },
+               {
+                  "parameter": "maxhp",
+                  "add": -20,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "duration",
+                  "stat": "str",
+                  "scale": 2,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 53,
+            "casting": 1.25,
+            "duration": 300,
+            "durationPVP": 300,
+            "abilities": [
+               {
+                  "parameter": "attack",
+                  "add": 11,
+                  "rate": true
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 30,
+                  "rate": true
+               },
+               {
+                  "parameter": "maxhp",
+                  "add": -20,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "duration",
+                  "stat": "str",
+                  "scale": 2,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 53,
+            "casting": 1.25,
+            "duration": 300,
+            "durationPVP": 300,
+            "abilities": [
+               {
+                  "parameter": "attack",
+                  "add": 12,
+                  "rate": true
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 30,
+                  "rate": true
+               },
+               {
+                  "parameter": "maxhp",
+                  "add": -20,
                   "rate": true
                }
             ],
@@ -33128,12 +34533,49 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": 9,
+                  "add": 13,
                   "rate": true
                },
                {
-                  "parameter": "def",
-                  "add": -35,
+                  "parameter": "incomingdamage",
+                  "add": 30,
+                  "rate": true
+               },
+               {
+                  "parameter": "maxhp",
+                  "add": -20,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "duration",
+                  "stat": "str",
+                  "scale": 2,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "consumedFP": 58,
+            "casting": 1.25,
+            "duration": 300,
+            "durationPVP": 300,
+            "abilities": [
+               {
+                  "parameter": "attack",
+                  "add": 14,
+                  "rate": true
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 30,
+                  "rate": true
+               },
+               {
+                  "parameter": "maxhp",
+                  "add": -20,
                   "rate": true
                }
             ],
@@ -33155,12 +34597,17 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": 10,
+                  "add": 15,
                   "rate": true
                },
                {
-                  "parameter": "def",
-                  "add": -35,
+                  "parameter": "incomingdamage",
+                  "add": 30,
+                  "rate": true
+               },
+               {
+                  "parameter": "maxhp",
+                  "add": -20,
                   "rate": true
                }
             ],
@@ -33224,8 +34671,8 @@ export const skillsjson = [
       "target": "area",
       "levels": [
          {
-            "duration": 5,
-            "durationPVP": 5,
+            "duration": 4,
+            "durationPVP": 4,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -33235,8 +34682,8 @@ export const skillsjson = [
             "spellRange": 15
          },
          {
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 4,
+            "durationPVP": 4,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -33246,8 +34693,8 @@ export const skillsjson = [
             "spellRange": 16
          },
          {
-            "duration": 7,
-            "durationPVP": 7,
+            "duration": 4,
+            "durationPVP": 4,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -33257,8 +34704,8 @@ export const skillsjson = [
             "spellRange": 17
          },
          {
-            "duration": 8,
-            "durationPVP": 8,
+            "duration": 4,
+            "durationPVP": 4,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -33268,8 +34715,19 @@ export const skillsjson = [
             "spellRange": 18
          },
          {
-            "duration": 9,
-            "durationPVP": 9,
+            "duration": 4,
+            "durationPVP": 4,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "stun"
+               }
+            ],
+            "spellRange": 18
+         },
+         {
+            "duration": 5,
+            "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -33277,6 +34735,65 @@ export const skillsjson = [
                }
             ],
             "spellRange": 19
+         }
+      ]
+   },
+   {
+      "id": 5973,
+      "name": {
+         "en": "Shade's Support",
+         "ar": "Shade's Support",
+         "br": "Shade's Support",
+         "cns": "Shade's Support",
+         "de": "Shade's Support",
+         "fi": "Shade's Support",
+         "fil": "Shade's Support",
+         "fr": "Shade's Support",
+         "it": "Shade's Support",
+         "kr": "Shade's Support",
+         "nl": "Shade's Support",
+         "pl": "Shade's Support",
+         "ru": "Shade's Support",
+         "sw": "Shade's Support",
+         "th": "Shade's Support"
+      },
+      "description": {
+         "en": "Protects the monster from stun and rooting de-buffs.",
+         "ar": "Protects the monster from stun and rooting de-buffs.",
+         "br": "Protects the monster from stun and rooting de-buffs.",
+         "cns": "Protects the monster from stun and rooting de-buffs.",
+         "de": "Protects the monster from stun and rooting de-buffs.",
+         "fi": "Protects the monster from stun and rooting de-buffs.",
+         "fil": "Protects the monster from stun and rooting de-buffs.",
+         "fr": "Protects the monster from stun and rooting de-buffs.",
+         "it": "Protects the monster from stun and rooting de-buffs.",
+         "kr": "Protects the monster from stun and rooting de-buffs.",
+         "nl": "Protects the monster from stun and rooting de-buffs.",
+         "pl": "Protects the monster from stun and rooting de-buffs.",
+         "ru": "Protects the monster from stun and rooting de-buffs.",
+         "sw": "Protects the monster from stun and rooting de-buffs.",
+         "th": "Protects the monster from stun and rooting de-buffs."
+      },
+      "icon": "stunimmunity.png",
+      "level": 1,
+      "element": "none",
+      "magic": false,
+      "requirements": [],
+      "combo": "general",
+      "debuff": false,
+      "flying": true,
+      "passive": false,
+      "target": "currentplayer",
+      "levels": [
+         {
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attributeimmunity",
+                  "attribute": "stunandrooting"
+               }
+            ]
          }
       ]
    },
@@ -33346,7 +34863,7 @@ export const skillsjson = [
             "scalingParameters": [
                {
                   "parameter": "duration",
-                  "stat": "str",
+                  "stat": "int",
                   "scale": 2,
                   "pvp": true,
                   "pve": true
@@ -33368,7 +34885,7 @@ export const skillsjson = [
             "scalingParameters": [
                {
                   "parameter": "duration",
-                  "stat": "str",
+                  "stat": "int",
                   "scale": 2,
                   "pvp": true,
                   "pve": true
@@ -33383,14 +34900,14 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "knuckleattack",
-                  "add": 90,
+                  "add": 100,
                   "rate": false
                }
             ],
             "scalingParameters": [
                {
                   "parameter": "duration",
-                  "stat": "str",
+                  "stat": "int",
                   "scale": 2,
                   "pvp": true,
                   "pve": true
@@ -33405,14 +34922,14 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "knuckleattack",
-                  "add": 110,
+                  "add": 120,
                   "rate": false
                }
             ],
             "scalingParameters": [
                {
                   "parameter": "duration",
-                  "stat": "str",
+                  "stat": "int",
                   "scale": 2,
                   "pvp": true,
                   "pve": true
@@ -33427,14 +34944,14 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "knuckleattack",
-                  "add": 130,
+                  "add": 150,
                   "rate": false
                }
             ],
             "scalingParameters": [
                {
                   "parameter": "duration",
-                  "stat": "str",
+                  "stat": "int",
                   "scale": 2,
                   "pvp": true,
                   "pve": true
@@ -33449,14 +34966,14 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "knuckleattack",
-                  "add": 160,
+                  "add": 180,
                   "rate": false
                }
             ],
             "scalingParameters": [
                {
                   "parameter": "duration",
-                  "stat": "str",
+                  "stat": "int",
                   "scale": 2,
                   "pvp": true,
                   "pve": true
@@ -33471,14 +34988,14 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "knuckleattack",
-                  "add": 190,
+                  "add": 200,
                   "rate": false
                }
             ],
             "scalingParameters": [
                {
                   "parameter": "duration",
-                  "stat": "str",
+                  "stat": "int",
                   "scale": 2,
                   "pvp": true,
                   "pve": true
@@ -33493,14 +35010,14 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "knuckleattack",
-                  "add": 220,
+                  "add": 230,
                   "rate": false
                }
             ],
             "scalingParameters": [
                {
                   "parameter": "duration",
-                  "stat": "str",
+                  "stat": "int",
                   "scale": 2,
                   "pvp": true,
                   "pve": true
@@ -33515,14 +35032,14 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "knuckleattack",
-                  "add": 235,
+                  "add": 240,
                   "rate": false
                }
             ],
             "scalingParameters": [
                {
                   "parameter": "duration",
-                  "stat": "str",
+                  "stat": "int",
                   "scale": 2,
                   "pvp": true,
                   "pve": true
@@ -33544,7 +35061,7 @@ export const skillsjson = [
             "scalingParameters": [
                {
                   "parameter": "duration",
-                  "stat": "str",
+                  "stat": "int",
                   "scale": 2,
                   "pvp": true,
                   "pve": true
@@ -33755,7 +35272,7 @@ export const skillsjson = [
          {
             "minAttack": 124,
             "maxAttack": 125,
-            "consumedMP": 110,
+            "consumedMP": 120,
             "casting": 0.6,
             "spellRange": 4,
             "scalingParameters": [
@@ -33808,13 +35325,13 @@ export const skillsjson = [
       },
       "icon": "maglooting.png",
       "class": 9581,
-      "level": 30,
+      "level": 25,
       "element": "earth",
       "magic": true,
       "requirements": [
          {
-            "skill": 997,
-            "level": 7
+            "skill": 5458,
+            "level": 5
          }
       ],
       "weapon": "wandorstaff",
@@ -33830,8 +35347,8 @@ export const skillsjson = [
             "probabilityPVP": 2,
             "consumedMP": 30,
             "casting": 0.6,
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "speed",
@@ -33845,8 +35362,8 @@ export const skillsjson = [
             "probabilityPVP": 4,
             "consumedMP": 30,
             "casting": 0.6,
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "speed",
@@ -33860,8 +35377,8 @@ export const skillsjson = [
             "probabilityPVP": 6,
             "consumedMP": 32,
             "casting": 0.6,
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "speed",
@@ -33875,8 +35392,8 @@ export const skillsjson = [
             "probabilityPVP": 8,
             "consumedMP": 32,
             "casting": 0.6,
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "speed",
@@ -33890,8 +35407,8 @@ export const skillsjson = [
             "probabilityPVP": 10,
             "consumedMP": 34,
             "casting": 0.6,
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "speed",
@@ -33905,8 +35422,8 @@ export const skillsjson = [
             "probabilityPVP": 12,
             "consumedMP": 34,
             "casting": 0.6,
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "speed",
@@ -33920,8 +35437,8 @@ export const skillsjson = [
             "probabilityPVP": 14,
             "consumedMP": 36,
             "casting": 0.6,
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "speed",
@@ -33935,8 +35452,8 @@ export const skillsjson = [
             "probabilityPVP": 16,
             "consumedMP": 36,
             "casting": 0.6,
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "speed",
@@ -33950,8 +35467,8 @@ export const skillsjson = [
             "probabilityPVP": 18,
             "consumedMP": 38,
             "casting": 0.6,
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "speed",
@@ -33965,8 +35482,8 @@ export const skillsjson = [
             "probabilityPVP": 20,
             "consumedMP": 38,
             "casting": 0.6,
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "speed",
@@ -33980,8 +35497,8 @@ export const skillsjson = [
             "probabilityPVP": 22,
             "consumedMP": 41,
             "casting": 0.6,
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "speed",
@@ -33995,8 +35512,8 @@ export const skillsjson = [
             "probabilityPVP": 24,
             "consumedMP": 41,
             "casting": 0.6,
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "speed",
@@ -34010,8 +35527,8 @@ export const skillsjson = [
             "probabilityPVP": 26,
             "consumedMP": 42,
             "casting": 0.6,
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "speed",
@@ -34025,8 +35542,8 @@ export const skillsjson = [
             "probabilityPVP": 28,
             "consumedMP": 42,
             "casting": 0.6,
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "speed",
@@ -34040,8 +35557,8 @@ export const skillsjson = [
             "probabilityPVP": 30,
             "consumedMP": 44,
             "casting": 0.6,
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "speed",
@@ -34055,8 +35572,8 @@ export const skillsjson = [
             "probabilityPVP": 35,
             "consumedMP": 44,
             "casting": 0.6,
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "speed",
@@ -34070,8 +35587,8 @@ export const skillsjson = [
             "probabilityPVP": 40,
             "consumedMP": 44,
             "casting": 0.6,
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "speed",
@@ -34085,8 +35602,8 @@ export const skillsjson = [
             "probabilityPVP": 45,
             "consumedMP": 47,
             "casting": 0.6,
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "speed",
@@ -34100,8 +35617,8 @@ export const skillsjson = [
             "probabilityPVP": 55,
             "consumedMP": 47,
             "casting": 0.6,
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "speed",
@@ -34115,8 +35632,8 @@ export const skillsjson = [
             "probabilityPVP": 65,
             "consumedMP": 50,
             "casting": 0.6,
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "speed",
@@ -34132,17 +35649,17 @@ export const skillsjson = [
       "name": {
          "en": "Bleeding",
          "ar": "Bleeding",
-         "br": "Sangramento",
-         "cns": "\u51fa\u88402",
+         "br": "Bleeding",
+         "cns": "Bleeding",
          "de": "Bleeding",
          "fi": "Bleeding",
          "fil": "Bleeding",
-         "fr": "Saigner \u00e0 blanc",
+         "fr": "Bleeding",
          "it": "Bleeding",
-         "kr": "\ucd9c\ud608",
-         "nl": "Bloeden",
+         "kr": "Bleeding",
+         "nl": "Bleeding",
          "pl": "Bleeding",
-         "ru": "\u041a\u0440\u043e\u0432\u043e\u0442\u0435\u0447\u0435\u043d\u0438\u0435",
+         "ru": "Bleeding",
          "sw": "Bleeding",
          "th": "Bleeding"
       },
@@ -34175,132 +35692,232 @@ export const skillsjson = [
       "target": "single",
       "levels": [
          {
-            "dotTick": 2,
-            "duration": 12,
-            "durationPVP": 12,
+            "dotTick": 1.5,
+            "duration": 5,
+            "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "bleeding",
-                  "dotMode": "fixedvalue",
-                  "dotValue": 8
+                  "dotMode": "standardattack",
+                  "dotValue": 25
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
+                  "rate": true
                }
             ]
          },
          {
-            "dotTick": 2,
-            "duration": 14,
-            "durationPVP": 14,
+            "dotTick": 1.5,
+            "duration": 5,
+            "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "bleeding",
-                  "dotMode": "fixedvalue",
-                  "dotValue": 16
+                  "dotMode": "standardattack",
+                  "dotValue": 25
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
+                  "rate": true
                }
             ]
          },
          {
-            "dotTick": 2,
-            "duration": 16,
-            "durationPVP": 16,
+            "dotTick": 1.5,
+            "duration": 5,
+            "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "bleeding",
-                  "dotMode": "fixedvalue",
-                  "dotValue": 24
+                  "dotMode": "standardattack",
+                  "dotValue": 25
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
+                  "rate": true
                }
             ]
          },
          {
-            "dotTick": 2,
-            "duration": 18,
-            "durationPVP": 18,
+            "dotTick": 1.5,
+            "duration": 5,
+            "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "bleeding",
-                  "dotMode": "fixedvalue",
-                  "dotValue": 32
+                  "dotMode": "standardattack",
+                  "dotValue": 25
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
+                  "rate": true
                }
             ]
          },
          {
-            "dotTick": 2,
-            "duration": 20,
-            "durationPVP": 20,
+            "dotTick": 1.5,
+            "duration": 5,
+            "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "bleeding",
-                  "dotMode": "fixedvalue",
-                  "dotValue": 40
+                  "dotMode": "standardattack",
+                  "dotValue": 25
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
+                  "rate": true
                }
             ]
          },
          {
-            "dotTick": 2,
-            "duration": 22,
-            "durationPVP": 22,
+            "dotTick": 1.5,
+            "duration": 5,
+            "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "bleeding",
-                  "dotMode": "fixedvalue",
-                  "dotValue": 48
+                  "dotMode": "standardattack",
+                  "dotValue": 25
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
+                  "rate": true
                }
             ]
          },
          {
-            "dotTick": 2,
-            "duration": 24,
-            "durationPVP": 24,
+            "dotTick": 1.5,
+            "duration": 5,
+            "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "bleeding",
-                  "dotMode": "fixedvalue",
-                  "dotValue": 56
+                  "dotMode": "standardattack",
+                  "dotValue": 25
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
+                  "rate": true
                }
             ]
          },
          {
-            "dotTick": 2,
-            "duration": 26,
-            "durationPVP": 26,
+            "dotTick": 1.5,
+            "duration": 5,
+            "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "bleeding",
-                  "dotMode": "fixedvalue",
-                  "dotValue": 64
+                  "dotMode": "standardattack",
+                  "dotValue": 25
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
+                  "rate": true
                }
             ]
          },
          {
-            "dotTick": 2,
-            "duration": 28,
-            "durationPVP": 28,
+            "dotTick": 1.5,
+            "duration": 5,
+            "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "bleeding",
-                  "dotMode": "fixedvalue",
-                  "dotValue": 72
+                  "dotMode": "standardattack",
+                  "dotValue": 25
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
+                  "rate": true
                }
             ]
          },
          {
-            "dotTick": 2,
-            "duration": 30,
-            "durationPVP": 30,
+            "dotTick": 1.5,
+            "duration": 5,
+            "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "bleeding",
-                  "dotMode": "fixedvalue",
-                  "dotValue": 80
+                  "dotMode": "standardattack",
+                  "dotValue": 25
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
+                  "rate": true
                }
             ]
          }
@@ -34365,7 +35982,7 @@ export const skillsjson = [
          {
             "minAttack": 101,
             "maxAttack": 102,
-            "dotTick": 3,
+            "dotTick": 1,
             "probability": 60,
             "probabilityPVP": 60,
             "consumedMP": 42,
@@ -34376,178 +35993,8 @@ export const skillsjson = [
                {
                   "parameter": "attribute",
                   "attribute": "poison",
-                  "dotMode": "standardattack",
-                  "dotValue": 7
-               },
-               {
-                  "parameter": "hprestoration",
-                  "add": -12,
-                  "rate": true
-               }
-            ],
-            "spellRange": 15,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "dex",
-                  "scale": 4.02,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 103,
-            "maxAttack": 104,
-            "dotTick": 3,
-            "probability": 64,
-            "probabilityPVP": 64,
-            "consumedMP": 44,
-            "cooldown": 10,
-            "duration": 12,
-            "durationPVP": 12,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "poison",
-                  "dotMode": "standardattack",
-                  "dotValue": 7
-               },
-               {
-                  "parameter": "hprestoration",
-                  "add": -14,
-                  "rate": true
-               }
-            ],
-            "spellRange": 15,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "dex",
-                  "scale": 4.04,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 105,
-            "maxAttack": 106,
-            "dotTick": 3,
-            "probability": 68,
-            "probabilityPVP": 68,
-            "consumedMP": 46,
-            "cooldown": 10,
-            "duration": 12,
-            "durationPVP": 12,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "poison",
-                  "dotMode": "standardattack",
-                  "dotValue": 7
-               },
-               {
-                  "parameter": "hprestoration",
-                  "add": -16,
-                  "rate": true
-               }
-            ],
-            "spellRange": 15,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "dex",
-                  "scale": 4.06,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 107,
-            "maxAttack": 108,
-            "dotTick": 3,
-            "probability": 72,
-            "probabilityPVP": 72,
-            "consumedMP": 48,
-            "cooldown": 10,
-            "duration": 12,
-            "durationPVP": 12,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "poison",
-                  "dotMode": "standardattack",
-                  "dotValue": 8
-               },
-               {
-                  "parameter": "hprestoration",
-                  "add": -18,
-                  "rate": true
-               }
-            ],
-            "spellRange": 15,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "dex",
-                  "scale": 4.08,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 109,
-            "maxAttack": 110,
-            "dotTick": 3,
-            "probability": 76,
-            "probabilityPVP": 76,
-            "consumedMP": 50,
-            "cooldown": 10,
-            "duration": 12,
-            "durationPVP": 12,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "poison",
-                  "dotMode": "standardattack",
-                  "dotValue": 8
-               },
-               {
-                  "parameter": "hprestoration",
-                  "add": -20,
-                  "rate": true
-               }
-            ],
-            "spellRange": 15,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "dex",
-                  "scale": 4.1,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 111,
-            "maxAttack": 112,
-            "dotTick": 3,
-            "probability": 80,
-            "probabilityPVP": 80,
-            "consumedMP": 52,
-            "cooldown": 10,
-            "duration": 12,
-            "durationPVP": 12,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "poison",
-                  "dotMode": "standardattack",
-                  "dotValue": 8
+                  "dotMode": "currentdamage",
+                  "dotValue": 2
                },
                {
                   "parameter": "hprestoration",
@@ -34560,19 +36007,19 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.12,
+                  "scale": 5.02,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 113,
-            "maxAttack": 114,
-            "dotTick": 3,
-            "probability": 84,
-            "probabilityPVP": 84,
-            "consumedMP": 54,
+            "minAttack": 103,
+            "maxAttack": 104,
+            "dotTick": 1,
+            "probability": 64,
+            "probabilityPVP": 64,
+            "consumedMP": 44,
             "cooldown": 10,
             "duration": 12,
             "durationPVP": 12,
@@ -34580,8 +36027,8 @@ export const skillsjson = [
                {
                   "parameter": "attribute",
                   "attribute": "poison",
-                  "dotMode": "standardattack",
-                  "dotValue": 9
+                  "dotMode": "currentdamage",
+                  "dotValue": 4
                },
                {
                   "parameter": "hprestoration",
@@ -34594,19 +36041,19 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.14,
+                  "scale": 5.04,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 115,
-            "maxAttack": 116,
-            "dotTick": 3,
-            "probability": 88,
-            "probabilityPVP": 88,
-            "consumedMP": 56,
+            "minAttack": 105,
+            "maxAttack": 106,
+            "dotTick": 1,
+            "probability": 68,
+            "probabilityPVP": 68,
+            "consumedMP": 46,
             "cooldown": 10,
             "duration": 12,
             "durationPVP": 12,
@@ -34614,8 +36061,8 @@ export const skillsjson = [
                {
                   "parameter": "attribute",
                   "attribute": "poison",
-                  "dotMode": "standardattack",
-                  "dotValue": 9
+                  "dotMode": "currentdamage",
+                  "dotValue": 6
                },
                {
                   "parameter": "hprestoration",
@@ -34628,28 +36075,28 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.16,
+                  "scale": 5.06,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 117,
-            "maxAttack": 118,
-            "dotTick": 3,
-            "probability": 94,
-            "probabilityPVP": 94,
-            "consumedMP": 58,
+            "minAttack": 107,
+            "maxAttack": 108,
+            "dotTick": 1,
+            "probability": 72,
+            "probabilityPVP": 72,
+            "consumedMP": 48,
             "cooldown": 10,
-            "duration": 15,
-            "durationPVP": 15,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "poison",
-                  "dotMode": "standardattack",
-                  "dotValue": 10
+                  "dotMode": "currentdamage",
+                  "dotValue": 8
                },
                {
                   "parameter": "hprestoration",
@@ -34662,25 +36109,27 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.18,
+                  "scale": 5.08,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 119,
-            "maxAttack": 120,
-            "dotTick": 3,
-            "consumedMP": 60,
+            "minAttack": 109,
+            "maxAttack": 110,
+            "dotTick": 1,
+            "probability": 76,
+            "probabilityPVP": 76,
+            "consumedMP": 50,
             "cooldown": 10,
-            "duration": 18,
-            "durationPVP": 18,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "poison",
-                  "dotMode": "standardattack",
+                  "dotMode": "currentdamage",
                   "dotValue": 10
                },
                {
@@ -34694,7 +36143,175 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.2,
+                  "scale": 5.1,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 111,
+            "maxAttack": 112,
+            "dotTick": 1,
+            "probability": 80,
+            "probabilityPVP": 80,
+            "consumedMP": 52,
+            "cooldown": 10,
+            "duration": 12,
+            "durationPVP": 12,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "poison",
+                  "dotMode": "currentdamage",
+                  "dotValue": 11
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -32,
+                  "rate": true
+               }
+            ],
+            "spellRange": 15,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 5.12,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 113,
+            "maxAttack": 114,
+            "dotTick": 1,
+            "probability": 84,
+            "probabilityPVP": 84,
+            "consumedMP": 54,
+            "cooldown": 10,
+            "duration": 12,
+            "durationPVP": 12,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "poison",
+                  "dotMode": "currentdamage",
+                  "dotValue": 12
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -34,
+                  "rate": true
+               }
+            ],
+            "spellRange": 15,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 5.14,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 115,
+            "maxAttack": 116,
+            "dotTick": 1,
+            "probability": 88,
+            "probabilityPVP": 88,
+            "consumedMP": 56,
+            "cooldown": 10,
+            "duration": 12,
+            "durationPVP": 12,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "poison",
+                  "dotMode": "currentdamage",
+                  "dotValue": 13
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -36,
+                  "rate": true
+               }
+            ],
+            "spellRange": 15,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 5.16,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 117,
+            "maxAttack": 118,
+            "dotTick": 1,
+            "probability": 94,
+            "probabilityPVP": 94,
+            "consumedMP": 58,
+            "cooldown": 10,
+            "duration": 15,
+            "durationPVP": 15,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "poison",
+                  "dotMode": "currentdamage",
+                  "dotValue": 14
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -38,
+                  "rate": true
+               }
+            ],
+            "spellRange": 15,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 5.18,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 119,
+            "maxAttack": 120,
+            "dotTick": 1,
+            "consumedMP": 60,
+            "cooldown": 10,
+            "duration": 18,
+            "durationPVP": 18,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "poison",
+                  "dotMode": "currentdamage",
+                  "dotValue": 15
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -40,
+                  "rate": true
+               }
+            ],
+            "spellRange": 15,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 5.2,
                   "pvp": true,
                   "pve": true
                }
@@ -34905,8 +36522,9 @@ export const skillsjson = [
       "skillPoints": 3,
       "levels": [
          {
-            "minAttack": 101,
-            "maxAttack": 102,
+            "damageMultiplier": 0.85,
+            "minAttack": 91,
+            "maxAttack": 92,
             "consumedMP": 62,
             "casting": 0.6,
             "spellRange": 15,
@@ -34914,15 +36532,16 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 4.52,
+                  "scale": 4.82,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 103,
-            "maxAttack": 104,
+            "damageMultiplier": 0.85,
+            "minAttack": 93,
+            "maxAttack": 94,
             "consumedMP": 64,
             "casting": 0.6,
             "spellRange": 15,
@@ -34930,15 +36549,16 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 4.54,
+                  "scale": 4.84,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 105,
-            "maxAttack": 106,
+            "damageMultiplier": 0.85,
+            "minAttack": 95,
+            "maxAttack": 96,
             "consumedMP": 66,
             "casting": 0.6,
             "spellRange": 15,
@@ -34946,15 +36566,16 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 4.56,
+                  "scale": 4.86,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 107,
-            "maxAttack": 108,
+            "damageMultiplier": 0.85,
+            "minAttack": 97,
+            "maxAttack": 98,
             "consumedMP": 68,
             "casting": 0.6,
             "spellRange": 15,
@@ -34962,15 +36583,16 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 4.58,
+                  "scale": 4.88,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 109,
-            "maxAttack": 110,
+            "damageMultiplier": 0.85,
+            "minAttack": 99,
+            "maxAttack": 100,
             "consumedMP": 70,
             "casting": 0.6,
             "spellRange": 15,
@@ -34978,15 +36600,16 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 4.6,
+                  "scale": 4.9,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 111,
-            "maxAttack": 112,
+            "damageMultiplier": 0.85,
+            "minAttack": 101,
+            "maxAttack": 102,
             "consumedMP": 72,
             "casting": 0.6,
             "spellRange": 15,
@@ -34994,15 +36617,16 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 4.62,
+                  "scale": 4.92,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 113,
-            "maxAttack": 114,
+            "damageMultiplier": 0.85,
+            "minAttack": 103,
+            "maxAttack": 104,
             "consumedMP": 74,
             "casting": 0.6,
             "spellRange": 15,
@@ -35010,15 +36634,16 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 4.64,
+                  "scale": 4.94,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 115,
-            "maxAttack": 116,
+            "damageMultiplier": 0.85,
+            "minAttack": 105,
+            "maxAttack": 106,
             "consumedMP": 76,
             "casting": 0.6,
             "spellRange": 15,
@@ -35026,15 +36651,16 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 4.66,
+                  "scale": 4.96,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 117,
-            "maxAttack": 118,
+            "damageMultiplier": 0.85,
+            "minAttack": 107,
+            "maxAttack": 108,
             "consumedMP": 78,
             "casting": 0.6,
             "spellRange": 15,
@@ -35042,23 +36668,24 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 4.68,
+                  "scale": 4.98,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 118,
-            "maxAttack": 119,
-            "consumedMP": 80,
+            "damageMultiplier": 0.85,
+            "minAttack": 109,
+            "maxAttack": 110,
+            "consumedMP": 100,
             "casting": 0.6,
             "spellRange": 15,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 4.7,
+                  "scale": 5,
                   "pvp": true,
                   "pve": true
                }
@@ -35105,7 +36732,7 @@ export const skillsjson = [
       "icon": "ragbowflamea.png",
       "class": 9295,
       "level": 60,
-      "element": "none",
+      "element": "fire",
       "triggerSkill": 1143,
       "magic": false,
       "requirements": [],
@@ -35121,7 +36748,6 @@ export const skillsjson = [
          {
             "minAttack": 106,
             "maxAttack": 107,
-            "dotTick": 1,
             "consumedMP": 40,
             "cooldown": 5,
             "spellRange": 5,
@@ -35129,7 +36755,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.52,
+                  "scale": 5.02,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.02,
                   "pvp": true,
                   "pve": true
                }
@@ -35138,7 +36771,6 @@ export const skillsjson = [
          {
             "minAttack": 107,
             "maxAttack": 108,
-            "dotTick": 1,
             "consumedMP": 42,
             "cooldown": 5,
             "spellRange": 5,
@@ -35146,7 +36778,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.54,
+                  "scale": 5.04,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.04,
                   "pvp": true,
                   "pve": true
                }
@@ -35155,7 +36794,6 @@ export const skillsjson = [
          {
             "minAttack": 108,
             "maxAttack": 109,
-            "dotTick": 1,
             "consumedMP": 44,
             "cooldown": 5,
             "spellRange": 5,
@@ -35163,7 +36801,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.56,
+                  "scale": 5.06,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.06,
                   "pvp": true,
                   "pve": true
                }
@@ -35172,7 +36817,6 @@ export const skillsjson = [
          {
             "minAttack": 109,
             "maxAttack": 110,
-            "dotTick": 1,
             "consumedMP": 46,
             "cooldown": 5,
             "spellRange": 5,
@@ -35180,7 +36824,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.58,
+                  "scale": 5.08,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.08,
                   "pvp": true,
                   "pve": true
                }
@@ -35189,7 +36840,6 @@ export const skillsjson = [
          {
             "minAttack": 110,
             "maxAttack": 111,
-            "dotTick": 1,
             "consumedMP": 48,
             "cooldown": 5,
             "spellRange": 5,
@@ -35197,7 +36847,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.6,
+                  "scale": 5.1,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.1,
                   "pvp": true,
                   "pve": true
                }
@@ -35206,7 +36863,6 @@ export const skillsjson = [
          {
             "minAttack": 111,
             "maxAttack": 112,
-            "dotTick": 1,
             "consumedMP": 50,
             "cooldown": 5,
             "spellRange": 5,
@@ -35214,7 +36870,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.62,
+                  "scale": 5.12,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.12,
                   "pvp": true,
                   "pve": true
                }
@@ -35223,7 +36886,6 @@ export const skillsjson = [
          {
             "minAttack": 112,
             "maxAttack": 113,
-            "dotTick": 1,
             "consumedMP": 52,
             "cooldown": 5,
             "spellRange": 5,
@@ -35231,7 +36893,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.64,
+                  "scale": 5.14,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.14,
                   "pvp": true,
                   "pve": true
                }
@@ -35240,7 +36909,6 @@ export const skillsjson = [
          {
             "minAttack": 113,
             "maxAttack": 114,
-            "dotTick": 1,
             "consumedMP": 54,
             "cooldown": 5,
             "spellRange": 5,
@@ -35248,7 +36916,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.66,
+                  "scale": 5.16,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.16,
                   "pvp": true,
                   "pve": true
                }
@@ -35257,7 +36932,6 @@ export const skillsjson = [
          {
             "minAttack": 114,
             "maxAttack": 115,
-            "dotTick": 1,
             "consumedMP": 56,
             "cooldown": 5,
             "spellRange": 5,
@@ -35265,7 +36939,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.68,
+                  "scale": 5.18,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.18,
                   "pvp": true,
                   "pve": true
                }
@@ -35274,15 +36955,21 @@ export const skillsjson = [
          {
             "minAttack": 115,
             "maxAttack": 116,
-            "dotTick": 1,
             "consumedMP": 58,
-            "cooldown": 5,
+            "cooldown": 4,
             "spellRange": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 4.7,
+                  "scale": 5.2,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.2,
                   "pvp": true,
                   "pve": true
                }
@@ -35293,21 +36980,21 @@ export const skillsjson = [
    {
       "id": 6320,
       "name": {
-         "en": "Earth Master",
-         "ar": "Earth Master",
+         "en": "Earth Mastery",
+         "ar": "Earth Mastery",
          "br": "Mestre da Terra",
          "cns": "\u5730\u7cfb\u4fee\u70bc",
          "de": "Earth Master",
-         "fi": "Earth Master",
-         "fil": "Earth Master",
+         "fi": "Earth Mastery",
+         "fil": "Earth Mastery",
          "fr": "Ma\u00eetre de la terre",
-         "it": "Earth Master",
+         "it": "Earth Mastery",
          "kr": "\uc5b4\uc2a4 \ub9c8\uc2a4\ud130",
-         "nl": "Earth Master",
+         "nl": "Earth Mastery",
          "pl": "Mistrz Ziemi",
          "ru": "\u0412\u043b\u0430\u0441\u0442\u0435\u043b\u0438\u043d \u0437\u0435\u043c\u043b\u0438",
-         "sw": "Earth Master",
-         "th": "Earth Master"
+         "sw": "Earth Mastery",
+         "th": "Earth Mastery"
       },
       "description": {
          "en": "Increases the striking power of earth spells.",
@@ -35912,7 +37599,7 @@ export const skillsjson = [
       },
       "icon": "assheapreven.png",
       "class": 8962,
-      "level": 30,
+      "level": 45,
       "element": "none",
       "magic": true,
       "requirements": [
@@ -36283,7 +37970,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "autohp",
-                  "add": 10,
+                  "add": 11,
                   "rate": false
                }
             ],
@@ -36306,7 +37993,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "autohp",
-                  "add": 10,
+                  "add": 12,
                   "rate": false
                }
             ],
@@ -36329,7 +38016,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "autohp",
-                  "add": 10,
+                  "add": 13,
                   "rate": false
                }
             ],
@@ -36352,7 +38039,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "autohp",
-                  "add": 10,
+                  "add": 14,
                   "rate": false
                }
             ],
@@ -36375,7 +38062,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "autohp",
-                  "add": 10,
+                  "add": 15,
                   "rate": false
                }
             ],
@@ -36396,7 +38083,7 @@ export const skillsjson = [
       "name": {
          "en": "Power Fist",
          "ar": "Power Fist",
-         "br": "Soco Concentrado",
+         "br": "Soco Poderoso",
          "cns": "\u795e\u5149\u7834",
          "de": "Power Fist",
          "fi": "Power Fist",
@@ -36411,25 +38098,25 @@ export const skillsjson = [
          "th": "Power Fist"
       },
       "description": {
-         "en": "Concentrated power strike.",
-         "ar": "Concentrated power strike.",
-         "br": "Um potente golpe concentrado.",
-         "cns": "\u5c06\u795e\u7075\u8d50\u4e88\u7684\u5723\u529b\u96c6\u4e2d\u5728\u62f3\u5957\u4e0a\u91cd\u521b\u654c\u4eba\u3002",
-         "de": "Ein Hieb gegen den Gegner durch Konzentration auf den Knuckle.",
-         "fi": "Keskitetty voimaisku.",
-         "fil": "Concentrated power strike.",
-         "fr": "Inflige un violent coup de poing \u00e0 l'ennemi",
-         "it": "Concentrated power strike.",
-         "kr": "\ub108\ud074\ud574\uba38\uc5d0 \uc628 \ubab8\uc758 \ud798\uc744 \uc2e4\uc5b4 \uc801\uc744 \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
-         "nl": "Concentrated power strike.",
-         "pl": "Skoncentrowany uderzenie pi\u0119\u015bci\u0105.",
-         "ru": "\u041c\u043e\u0449\u043d\u044b\u0439 \u0438 \u0440\u0435\u0437\u043a\u0438\u0439 \u0443\u0434\u0430\u0440 \u043f\u0435\u0440\u0447\u0430\u0442\u043a\u043e\u0439.",
-         "sw": "Concentrated power strike.",
-         "th": "Concentrated power strike."
+         "en": "Three concentrated power strikes.",
+         "ar": "Three concentrated power strikes.",
+         "br": "Three concentrated power strikes.",
+         "cns": "Three concentrated power strikes.",
+         "de": "Three concentrated power strikes.",
+         "fi": "Three concentrated power strikes.",
+         "fil": "Three concentrated power strikes.",
+         "fr": "Three concentrated power strikes.",
+         "it": "Three concentrated power strikes.",
+         "kr": "Three concentrated power strikes.",
+         "nl": "Three concentrated power strikes.",
+         "pl": "Three concentrated power strikes.",
+         "ru": "Three concentrated power strikes.",
+         "sw": "Three concentrated power strikes.",
+         "th": "Three concentrated power strikes."
       },
       "icon": "assknupowerf.png",
       "class": 8962,
-      "level": 35,
+      "level": 45,
       "element": "none",
       "magic": false,
       "requirements": [
@@ -36441,15 +38128,187 @@ export const skillsjson = [
       "weapon": "knuckle",
       "combo": "general",
       "debuff": true,
-      "flying": true,
+      "flying": false,
       "passive": false,
       "target": "single",
       "skillPoints": 2,
       "levels": [
          {
-            "minAttack": 40,
-            "maxAttack": 41,
+            "damageMultiplier": 0.85,
+            "minAttack": 20,
+            "maxAttack": 21,
             "consumedFP": 30,
+            "cooldown": 7,
+            "casting": 1,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.02,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.85,
+            "minAttack": 21,
+            "maxAttack": 22,
+            "consumedFP": 33,
+            "cooldown": 7,
+            "casting": 1,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.04,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.85,
+            "minAttack": 22,
+            "maxAttack": 23,
+            "consumedFP": 33,
+            "cooldown": 7,
+            "casting": 1,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.06,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.85,
+            "minAttack": 23,
+            "maxAttack": 24,
+            "consumedFP": 36,
+            "cooldown": 7,
+            "casting": 1,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.08,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.85,
+            "minAttack": 24,
+            "maxAttack": 25,
+            "consumedFP": 36,
+            "cooldown": 7,
+            "casting": 1,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.1,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.85,
+            "minAttack": 25,
+            "maxAttack": 26,
+            "consumedFP": 39,
+            "cooldown": 7,
+            "casting": 1,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.12,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.85,
+            "minAttack": 26,
+            "maxAttack": 27,
+            "consumedFP": 39,
+            "cooldown": 7,
+            "casting": 1,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.14,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.85,
+            "minAttack": 27,
+            "maxAttack": 28,
+            "consumedFP": 42,
+            "cooldown": 7,
+            "casting": 1,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.16,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.85,
+            "minAttack": 28,
+            "maxAttack": 29,
+            "consumedFP": 42,
+            "cooldown": 7,
+            "casting": 1,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.18,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.85,
+            "minAttack": 29,
+            "maxAttack": 20,
+            "consumedFP": 45,
+            "cooldown": 7,
+            "casting": 1,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.2,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.85,
+            "minAttack": 30,
+            "maxAttack": 31,
+            "consumedFP": 45,
+            "cooldown": 7,
             "casting": 1,
             "scalingParameters": [
                {
@@ -36462,9 +38321,11 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 41,
-            "maxAttack": 42,
-            "consumedFP": 33,
+            "damageMultiplier": 0.85,
+            "minAttack": 31,
+            "maxAttack": 32,
+            "consumedFP": 48,
+            "cooldown": 7,
             "casting": 1,
             "scalingParameters": [
                {
@@ -36477,9 +38338,11 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 42,
-            "maxAttack": 43,
-            "consumedFP": 33,
+            "damageMultiplier": 0.85,
+            "minAttack": 32,
+            "maxAttack": 33,
+            "consumedFP": 48,
+            "cooldown": 7,
             "casting": 1,
             "scalingParameters": [
                {
@@ -36492,9 +38355,11 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 43,
-            "maxAttack": 44,
-            "consumedFP": 36,
+            "damageMultiplier": 0.85,
+            "minAttack": 33,
+            "maxAttack": 34,
+            "consumedFP": 51,
+            "cooldown": 7,
             "casting": 1,
             "scalingParameters": [
                {
@@ -36507,9 +38372,11 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 44,
-            "maxAttack": 45,
-            "consumedFP": 36,
+            "damageMultiplier": 0.85,
+            "minAttack": 34,
+            "maxAttack": 35,
+            "consumedFP": 51,
+            "cooldown": 7,
             "casting": 1,
             "scalingParameters": [
                {
@@ -36522,9 +38389,11 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 45,
-            "maxAttack": 46,
-            "consumedFP": 39,
+            "damageMultiplier": 0.85,
+            "minAttack": 35,
+            "maxAttack": 36,
+            "consumedFP": 54,
+            "cooldown": 7,
             "casting": 1,
             "scalingParameters": [
                {
@@ -36537,9 +38406,11 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 46,
-            "maxAttack": 47,
-            "consumedFP": 39,
+            "damageMultiplier": 0.85,
+            "minAttack": 36,
+            "maxAttack": 37,
+            "consumedFP": 54,
+            "cooldown": 7,
             "casting": 1,
             "scalingParameters": [
                {
@@ -36552,9 +38423,11 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 47,
-            "maxAttack": 48,
-            "consumedFP": 42,
+            "damageMultiplier": 0.85,
+            "minAttack": 37,
+            "maxAttack": 38,
+            "consumedFP": 57,
+            "cooldown": 7,
             "casting": 1,
             "scalingParameters": [
                {
@@ -36567,9 +38440,11 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 48,
-            "maxAttack": 49,
-            "consumedFP": 42,
+            "damageMultiplier": 0.85,
+            "minAttack": 38,
+            "maxAttack": 39,
+            "consumedFP": 57,
+            "cooldown": 7,
             "casting": 1,
             "scalingParameters": [
                {
@@ -36582,9 +38457,11 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 49,
-            "maxAttack": 50,
-            "consumedFP": 45,
+            "damageMultiplier": 0.85,
+            "minAttack": 39,
+            "maxAttack": 40,
+            "consumedFP": 60,
+            "cooldown": 7,
             "casting": 1,
             "scalingParameters": [
                {
@@ -36595,177 +38472,27 @@ export const skillsjson = [
                   "pve": true
                }
             ]
-         },
-         {
-            "minAttack": 50,
-            "maxAttack": 51,
-            "consumedFP": 45,
-            "casting": 1,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 4.42,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 51,
-            "maxAttack": 52,
-            "consumedFP": 48,
-            "casting": 1,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 4.44,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 52,
-            "maxAttack": 53,
-            "consumedFP": 48,
-            "casting": 1,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 4.46,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 53,
-            "maxAttack": 54,
-            "consumedFP": 51,
-            "casting": 1,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 4.48,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 54,
-            "maxAttack": 55,
-            "consumedFP": 51,
-            "casting": 1,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 4.5,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 55,
-            "maxAttack": 56,
-            "consumedFP": 54,
-            "casting": 1,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 4.52,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 56,
-            "maxAttack": 57,
-            "consumedFP": 54,
-            "casting": 1,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 4.54,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 57,
-            "maxAttack": 58,
-            "consumedFP": 57,
-            "casting": 1,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 4.56,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 58,
-            "maxAttack": 59,
-            "consumedFP": 57,
-            "casting": 1,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 4.58,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 59,
-            "maxAttack": 60,
-            "consumedFP": 60,
-            "casting": 1,
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 4.6,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
          }
       ]
    },
    {
       "id": 6482,
       "name": {
-         "en": "Yo-Yo mastery",
-         "ar": "Yo-Yo mastery",
+         "en": "Yo-Yo Mastery",
+         "ar": "Yo-Yo Mastery",
          "br": "Maestria do Ioi\u00f4",
          "cns": "\u8f6e\u672f\u9886\u609f",
          "de": "Yoyo Mastery",
-         "fi": "Yo-Yo mastery",
-         "fil": "Yo-Yo mastery",
+         "fi": "Yo-Yo Mastery",
+         "fil": "Yo-Yo Mastery",
          "fr": "Ma\u00eetre du yo-yo",
-         "it": "Yo-Yo mastery",
+         "it": "Yo-Yo Mastery",
          "kr": "\uc694\uc694 \ub9c8\uc2a4\ud130\ub9ac",
-         "nl": "Yo-Yo mastery",
+         "nl": "Yo-Yo Mastery",
          "pl": "Mistrzostwo Yo-Yo",
          "ru": "\u0419\u043e-\u0419\u043e\u0434\u0430",
-         "sw": "Yo-Yo mastery",
-         "th": "Yo-Yo mastery"
+         "sw": "Yo-Yo Mastery",
+         "th": "Yo-Yo Mastery"
       },
       "description": {
          "en": "Increases damage done with a Yo-yo.",
@@ -36786,7 +38513,7 @@ export const skillsjson = [
       },
       "icon": "acrsupyoymaster.png",
       "class": 9098,
-      "level": 20,
+      "level": 30,
       "element": "none",
       "magic": false,
       "requirements": [
@@ -37065,25 +38792,25 @@ export const skillsjson = [
          "th": "Shield Bash"
       },
       "description": {
-         "en": "Attack your target with your shield. This attack has a chance to stun your enemy. Requires a shield.",
-         "ar": "Attack your target with your shield. This attack has a chance to stun your enemy. Requires a shield.",
-         "br": "Ataque seu alvo com o seu escudo. Esse ataque tem chance de atordoar o seu inimigo. Exige um escudo.",
-         "cns": "\u7528\u4f60\u7684\u76fe\u724c\u653b\u51fb\u4f60\u7684\u76ee\u6807\u3002\u8fd9\u6b21\u653b\u51fb\u6709\u673a\u4f1a\u51fb\u660f\u4f60\u7684\u654c\u4eba\u3002",
-         "de": "Schlage mit deinem Schild zu. Kann das Ziel bet\u00e4uben. Ein Schild muss ausger\u00fcstet sein.",
-         "fi": "Attack your target with your shield. This attack has a chance to stun your enemy. Requires a shield.",
-         "fil": "Attack your target with your shield. This attack has a chance to stun your enemy. Requires a shield.",
-         "fr": "Frappe la cible avec le bouclier, l'\u00e9tourdissant pour quelques instants",
-         "it": "Attack your target with your shield. This attack has a chance to stun your enemy. Requires a shield.",
-         "kr": "\ub300\uc0c1\uc744 \ubc29\ud328\ub85c \ud0c0\uaca9\ud558\uba70, \uc77c\uc815\ud655\ub960\ub85c \uc2a4\ud134 \uc0c1\ud0dc\ub85c \ub9cc\ub4e0\ub2e4.",
-         "nl": "Attack your target with your shield. This attack has a chance to stun your enemy. Requires a shield.",
-         "pl": "Pr\u00f3buje og\u0142uszy\u0107 cel za pomoc\u0105 silnego uderzenia tarcz\u0105. Wymaga Tarczy.",
-         "ru": "\u0423\u0434\u0430\u0440 \u0449\u0438\u0442\u043e\u043c, \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u044e\u0449\u0438\u0439 \u0441 \u043d\u0435\u043a\u043e\u0442\u043e\u0440\u043e\u0439 \u0432\u0435\u0440\u043e\u044f\u0442\u043d\u043e\u0441\u0442\u044c\u044e \u043e\u0433\u043b\u0443\u0448\u0438\u0442\u044c \u0446\u0435\u043b\u044c.",
-         "sw": "Attack your target with your shield. This attack has a chance to stun your enemy. Requires a shield.",
-         "th": "Attack your target with your shield. This attack has a chance to stun your enemy. Requires a shield."
+         "en": "Attacks the target with a shield. This attack has a chance to stun your enemy. Requires a shield.",
+         "ar": "Attacks the target with a shield. This attack has a chance to stun your enemy. Requires a shield.",
+         "br": "Attacks the target with a shield. This attack has a chance to stun your enemy. Requires a shield.",
+         "cns": "Attacks the target with a shield. This attack has a chance to stun your enemy. Requires a shield.",
+         "de": "Attacks the target with a shield. This attack has a chance to stun your enemy. Requires a shield.",
+         "fi": "Attacks the target with a shield. This attack has a chance to stun your enemy. Requires a shield.",
+         "fil": "Attacks the target with a shield. This attack has a chance to stun your enemy. Requires a shield.",
+         "fr": "Attacks the target with a shield. This attack has a chance to stun your enemy. Requires a shield.",
+         "it": "Attacks the target with a shield. This attack has a chance to stun your enemy. Requires a shield.",
+         "kr": "Attacks the target with a shield. This attack has a chance to stun your enemy. Requires a shield.",
+         "nl": "Attacks the target with a shield. This attack has a chance to stun your enemy. Requires a shield.",
+         "pl": "Attacks the target with a shield. This attack has a chance to stun your enemy. Requires a shield.",
+         "ru": "Attacks the target with a shield. This attack has a chance to stun your enemy. Requires a shield.",
+         "sw": "Attacks the target with a shield. This attack has a chance to stun your enemy. Requires a shield.",
+         "th": "Attacks the target with a shield. This attack has a chance to stun your enemy. Requires a shield."
       },
       "icon": "mershiebash.png",
       "class": 764,
-      "level": 18,
+      "level": 25,
       "element": "none",
       "magic": false,
       "requirements": [
@@ -38076,34 +39803,34 @@ export const skillsjson = [
       "name": {
          "en": "Burningfield",
          "ar": "Burningfield",
-         "br": "Burningfield",
-         "cns": "Burningfield",
-         "de": "Burningfield",
+         "br": "Campo de Chamas",
+         "cns": "\u706b\u9677\u9631",
+         "de": "Burning Field",
          "fi": "Burningfield",
          "fil": "Burningfield",
-         "fr": "Burningfield",
+         "fr": "Mer de flammes",
          "it": "Burningfield",
-         "kr": "Burningfield",
+         "kr": "\ubc84\ub2dd\ud544\ub4dc",
          "nl": "Burningfield",
-         "pl": "Burningfield",
-         "ru": "Burningfield",
+         "pl": "P\u0142on\u0105ce Pole",
+         "ru": "\u0413\u043e\u0440\u044f\u0449\u0430\u044f \u0437\u0435\u043c\u043b\u044f",
          "sw": "Burningfield",
          "th": "Burningfield"
       },
       "description": {
          "en": "Does damage to the enemy over a period of time",
          "ar": "Does damage to the enemy over a period of time",
-         "br": "Does damage to the enemy over a period of time",
-         "cns": "Does damage to the enemy over a period of time",
-         "de": "Does damage to the enemy over a period of time",
+         "br": "Causa dano ao inimigo ao longo de um per\u00edodo de tempo.",
+         "cns": "\u5c06\u6307\u5b9a\u7684\u5730\u533a\u53d8\u6210\u706b\u6d77\uff0c\u5bf9\u654c\u4eba\u65bd\u52a0\u6301\u7eed\u653b\u51fb\u3002",
+         "de": "Den Gegner kontinuierlich mit einer Feuerflut angreifen.",
          "fi": "Does damage to the enemy over a period of time",
          "fil": "Does damage to the enemy over a period of time",
-         "fr": "Does damage to the enemy over a period of time",
+         "fr": "Englouti une zone sous une mer de flammes, infligeant des d\u00e9g\u00e2ts p\u00e9riodiques aux ennemis s'y trouvant",
          "it": "Does damage to the enemy over a period of time",
-         "kr": "Does damage to the enemy over a period of time",
+         "kr": "\uc9c0\uc815\ub41c \uc9c0\uc5ed\uc744 \ubd88\ubc14\ub2e4\ub85c \ub9cc\ub4e4\uc5b4 \uc801\ub4e4\uc5d0\uac8c \uc9c0\uc18d\uc801\uc778 \uacf5\uaca9\uc744 \ud569\ub2c8\ub2e4.",
          "nl": "Does damage to the enemy over a period of time",
-         "pl": "Does damage to the enemy over a period of time",
-         "ru": "Does damage to the enemy over a period of time",
+         "pl": "Podpala ziemi\u0119 by zadawa\u0107 ci\u0105g\u0142e obra\u017cenia wrogom w zasi\u0119gu.",
+         "ru": "\u041f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a \u043f\u043e\u043b\u0443\u0447\u0430\u0435\u0442 \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u044b\u0439 \u0443\u0440\u043e\u043d.",
          "sw": "Does damage to the enemy over a period of time",
          "th": "Does damage to the enemy over a period of time"
       },
@@ -38131,7 +39858,7 @@ export const skillsjson = [
             "maxAttack": 21,
             "dotTick": 2,
             "consumedMP": 72,
-            "cooldown": 5,
+            "cooldown": 10,
             "casting": 0.6,
             "duration": 5,
             "durationPVP": 5,
@@ -38143,13 +39870,6 @@ export const skillsjson = [
                   "scale": 2.82,
                   "pvp": true,
                   "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 0.05,
-                  "pvp": true,
-                  "pve": true
                }
             ]
          },
@@ -38158,7 +39878,7 @@ export const skillsjson = [
             "maxAttack": 21,
             "dotTick": 2,
             "consumedMP": 74,
-            "cooldown": 5,
+            "cooldown": 10,
             "casting": 0.6,
             "duration": 5,
             "durationPVP": 5,
@@ -38170,13 +39890,6 @@ export const skillsjson = [
                   "scale": 2.84,
                   "pvp": true,
                   "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 0.05,
-                  "pvp": true,
-                  "pve": true
                }
             ]
          },
@@ -38185,7 +39898,7 @@ export const skillsjson = [
             "maxAttack": 22,
             "dotTick": 2,
             "consumedMP": 76,
-            "cooldown": 5,
+            "cooldown": 10,
             "casting": 0.6,
             "duration": 5,
             "durationPVP": 5,
@@ -38197,13 +39910,6 @@ export const skillsjson = [
                   "scale": 2.86,
                   "pvp": true,
                   "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 0.05,
-                  "pvp": true,
-                  "pve": true
                }
             ]
          },
@@ -38212,7 +39918,7 @@ export const skillsjson = [
             "maxAttack": 22,
             "dotTick": 2,
             "consumedMP": 78,
-            "cooldown": 5,
+            "cooldown": 10,
             "casting": 0.6,
             "duration": 5,
             "durationPVP": 5,
@@ -38224,13 +39930,6 @@ export const skillsjson = [
                   "scale": 2.88,
                   "pvp": true,
                   "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 0.05,
-                  "pvp": true,
-                  "pve": true
                }
             ]
          },
@@ -38239,7 +39938,7 @@ export const skillsjson = [
             "maxAttack": 23,
             "dotTick": 2,
             "consumedMP": 80,
-            "cooldown": 5,
+            "cooldown": 10,
             "casting": 0.6,
             "duration": 5,
             "durationPVP": 5,
@@ -38251,13 +39950,6 @@ export const skillsjson = [
                   "scale": 2.9,
                   "pvp": true,
                   "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 0.05,
-                  "pvp": true,
-                  "pve": true
                }
             ]
          },
@@ -38266,7 +39958,7 @@ export const skillsjson = [
             "maxAttack": 25,
             "dotTick": 2,
             "consumedMP": 82,
-            "cooldown": 5,
+            "cooldown": 10,
             "casting": 0.6,
             "duration": 5,
             "durationPVP": 5,
@@ -38278,13 +39970,6 @@ export const skillsjson = [
                   "scale": 2.92,
                   "pvp": true,
                   "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 0.05,
-                  "pvp": true,
-                  "pve": true
                }
             ]
          },
@@ -38293,7 +39978,7 @@ export const skillsjson = [
             "maxAttack": 27,
             "dotTick": 2,
             "consumedMP": 84,
-            "cooldown": 5,
+            "cooldown": 10,
             "casting": 0.6,
             "duration": 5,
             "durationPVP": 5,
@@ -38305,13 +39990,6 @@ export const skillsjson = [
                   "scale": 2.94,
                   "pvp": true,
                   "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 0.05,
-                  "pvp": true,
-                  "pve": true
                }
             ]
          },
@@ -38320,7 +39998,7 @@ export const skillsjson = [
             "maxAttack": 30,
             "dotTick": 2,
             "consumedMP": 86,
-            "cooldown": 5,
+            "cooldown": 10,
             "casting": 0.6,
             "duration": 6,
             "durationPVP": 6,
@@ -38332,13 +40010,6 @@ export const skillsjson = [
                   "scale": 2.96,
                   "pvp": true,
                   "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 0.05,
-                  "pvp": true,
-                  "pve": true
                }
             ]
          },
@@ -38347,7 +40018,7 @@ export const skillsjson = [
             "maxAttack": 32,
             "dotTick": 2,
             "consumedMP": 88,
-            "cooldown": 5,
+            "cooldown": 10,
             "casting": 0.6,
             "duration": 7,
             "durationPVP": 7,
@@ -38359,13 +40030,6 @@ export const skillsjson = [
                   "scale": 2.98,
                   "pvp": true,
                   "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 0.05,
-                  "pvp": true,
-                  "pve": true
                }
             ]
          },
@@ -38374,7 +40038,7 @@ export const skillsjson = [
             "maxAttack": 35,
             "dotTick": 2,
             "consumedMP": 90,
-            "cooldown": 5,
+            "cooldown": 10,
             "casting": 0.6,
             "duration": 8,
             "durationPVP": 8,
@@ -38384,13 +40048,6 @@ export const skillsjson = [
                   "parameter": "attack",
                   "stat": "int",
                   "scale": 3,
-                  "pvp": true,
-                  "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 0.05,
                   "pvp": true,
                   "pve": true
                }
@@ -38462,7 +40119,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 5.52,
+                  "scale": 5.22,
                   "pvp": true,
                   "pve": true
                }
@@ -38477,7 +40134,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 5.54,
+                  "scale": 5.24,
                   "pvp": true,
                   "pve": true
                }
@@ -38492,7 +40149,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 5.56,
+                  "scale": 5.26,
                   "pvp": true,
                   "pve": true
                }
@@ -38507,7 +40164,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 5.58,
+                  "scale": 5.28,
                   "pvp": true,
                   "pve": true
                }
@@ -38522,7 +40179,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 5.6,
+                  "scale": 5.3,
                   "pvp": true,
                   "pve": true
                }
@@ -38537,7 +40194,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 5.62,
+                  "scale": 5.32,
                   "pvp": true,
                   "pve": true
                }
@@ -38552,7 +40209,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 5.64,
+                  "scale": 5.34,
                   "pvp": true,
                   "pve": true
                }
@@ -38567,7 +40224,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 5.66,
+                  "scale": 5.36,
                   "pvp": true,
                   "pve": true
                }
@@ -38582,7 +40239,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 5.68,
+                  "scale": 5.38,
                   "pvp": true,
                   "pve": true
                }
@@ -38597,7 +40254,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 5.7,
+                  "scale": 5.4,
                   "pvp": true,
                   "pve": true
                }
@@ -38665,96 +40322,6 @@ export const skillsjson = [
                },
                {
                   "parameter": "hprestoration",
-                  "add": -12,
-                  "rate": true
-               }
-            ]
-         },
-         {
-            "dotTick": 1.5,
-            "duration": 10,
-            "durationPVP": 10,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "poison",
-                  "dotMode": "standardattack",
-                  "dotValue": 11
-               },
-               {
-                  "parameter": "hprestoration",
-                  "add": -14,
-                  "rate": true
-               }
-            ]
-         },
-         {
-            "dotTick": 1.5,
-            "duration": 10,
-            "durationPVP": 10,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "poison",
-                  "dotMode": "standardattack",
-                  "dotValue": 11
-               },
-               {
-                  "parameter": "hprestoration",
-                  "add": -16,
-                  "rate": true
-               }
-            ]
-         },
-         {
-            "dotTick": 1.5,
-            "duration": 10,
-            "durationPVP": 10,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "poison",
-                  "dotMode": "standardattack",
-                  "dotValue": 12
-               },
-               {
-                  "parameter": "hprestoration",
-                  "add": -18,
-                  "rate": true
-               }
-            ]
-         },
-         {
-            "dotTick": 1.5,
-            "duration": 15,
-            "durationPVP": 15,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "poison",
-                  "dotMode": "standardattack",
-                  "dotValue": 12
-               },
-               {
-                  "parameter": "hprestoration",
-                  "add": -20,
-                  "rate": true
-               }
-            ]
-         },
-         {
-            "dotTick": 1.5,
-            "duration": 15,
-            "durationPVP": 15,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "poison",
-                  "dotMode": "standardattack",
-                  "dotValue": 13
-               },
-               {
-                  "parameter": "hprestoration",
                   "add": -22,
                   "rate": true
                }
@@ -38762,6 +40329,78 @@ export const skillsjson = [
          },
          {
             "dotTick": 1.5,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "poison",
+                  "dotMode": "standardattack",
+                  "dotValue": 11
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -24,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "dotTick": 1.5,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "poison",
+                  "dotMode": "standardattack",
+                  "dotValue": 11
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -26,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "dotTick": 1.5,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "poison",
+                  "dotMode": "standardattack",
+                  "dotValue": 12
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -28,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "dotTick": 1.5,
+            "duration": 15,
+            "durationPVP": 15,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "poison",
+                  "dotMode": "standardattack",
+                  "dotValue": 12
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -30,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "dotTick": 1.5,
             "duration": 15,
             "durationPVP": 15,
             "abilities": [
@@ -38773,7 +40412,25 @@ export const skillsjson = [
                },
                {
                   "parameter": "hprestoration",
-                  "add": -24,
+                  "add": -32,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "dotTick": 1.5,
+            "duration": 15,
+            "durationPVP": 15,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "poison",
+                  "dotMode": "standardattack",
+                  "dotValue": 13
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -34,
                   "rate": true
                }
             ]
@@ -38791,7 +40448,7 @@ export const skillsjson = [
                },
                {
                   "parameter": "hprestoration",
-                  "add": -26,
+                  "add": -36,
                   "rate": true
                }
             ]
@@ -38809,7 +40466,7 @@ export const skillsjson = [
                },
                {
                   "parameter": "hprestoration",
-                  "add": -28,
+                  "add": -38,
                   "rate": true
                }
             ]
@@ -38827,7 +40484,7 @@ export const skillsjson = [
                },
                {
                   "parameter": "hprestoration",
-                  "add": -30,
+                  "add": -40,
                   "rate": true
                }
             ]
@@ -39244,7 +40901,7 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": 16.5,
+                  "add": 15,
                   "rate": true
                },
                {
@@ -39286,7 +40943,7 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": 17.5,
+                  "add": 15,
                   "rate": true
                },
                {
@@ -40040,7 +41697,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.22,
+                  "scale": 2.52,
                   "pvp": true,
                   "pve": true
                }
@@ -40057,7 +41714,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.24,
+                  "scale": 2.54,
                   "pvp": true,
                   "pve": true
                }
@@ -40074,7 +41731,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.26,
+                  "scale": 2.56,
                   "pvp": true,
                   "pve": true
                }
@@ -40091,7 +41748,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.28,
+                  "scale": 2.58,
                   "pvp": true,
                   "pve": true
                }
@@ -40108,7 +41765,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.3,
+                  "scale": 2.6,
                   "pvp": true,
                   "pve": true
                }
@@ -40125,7 +41782,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.32,
+                  "scale": 2.62,
                   "pvp": true,
                   "pve": true
                }
@@ -40142,7 +41799,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.34,
+                  "scale": 2.64,
                   "pvp": true,
                   "pve": true
                }
@@ -40159,7 +41816,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.36,
+                  "scale": 2.66,
                   "pvp": true,
                   "pve": true
                }
@@ -40176,7 +41833,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.38,
+                  "scale": 2.68,
                   "pvp": true,
                   "pve": true
                }
@@ -40193,7 +41850,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.4,
+                  "scale": 2.7,
                   "pvp": true,
                   "pve": true
                }
@@ -40210,7 +41867,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.42,
+                  "scale": 2.72,
                   "pvp": true,
                   "pve": true
                }
@@ -40227,7 +41884,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.44,
+                  "scale": 2.74,
                   "pvp": true,
                   "pve": true
                }
@@ -40244,7 +41901,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.46,
+                  "scale": 2.76,
                   "pvp": true,
                   "pve": true
                }
@@ -40261,7 +41918,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.48,
+                  "scale": 2.78,
                   "pvp": true,
                   "pve": true
                }
@@ -40278,7 +41935,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.5,
+                  "scale": 2.8,
                   "pvp": true,
                   "pve": true
                }
@@ -40295,7 +41952,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.52,
+                  "scale": 2.82,
                   "pvp": true,
                   "pve": true
                }
@@ -40312,7 +41969,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.54,
+                  "scale": 2.84,
                   "pvp": true,
                   "pve": true
                }
@@ -40329,7 +41986,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.56,
+                  "scale": 2.86,
                   "pvp": true,
                   "pve": true
                }
@@ -40346,7 +42003,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.58,
+                  "scale": 2.88,
                   "pvp": true,
                   "pve": true
                }
@@ -40363,7 +42020,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.6,
+                  "scale": 2.9,
                   "pvp": true,
                   "pve": true
                }
@@ -40374,42 +42031,42 @@ export const skillsjson = [
    {
       "id": 7023,
       "name": {
-         "en": "Sneak Stab",
-         "ar": "Sneak Stab",
+         "en": "Multi-Stab",
+         "ar": "Multi-Stab",
          "br": "Golpe Furtivo",
          "cns": "\u80cc\u540e\u7a81\u88ad",
          "de": "Back Step",
-         "fi": "Sneak Stab",
-         "fil": "Sneak Stab",
+         "fi": "Multi-Stab",
+         "fil": "Multi-Stab",
          "fr": "Fourberie",
-         "it": "Sneak Stab",
+         "it": "Multi-Stab",
          "kr": "\ubc31 \uc2a4\ud15d",
-         "nl": "Sneak Stab",
-         "pl": "Sneak Stab",
+         "nl": "Multi-Stab",
+         "pl": "Multi-Stab",
          "ru": "\u0423\u0434\u0430\u0440 \u0432 \u0441\u043f\u0438\u043d\u0443",
-         "sw": "Sneak Stab",
-         "th": "Sneak Stab"
+         "sw": "Multi-Stab",
+         "th": "Multi-Stab"
       },
       "description": {
-         "en": "Attack a target from behind. Chance to stun target.",
-         "ar": "Attack a target from behind. Chance to stun target.",
+         "en": "Strikes the enemy multiple times with the Yo-Yo.",
+         "ar": "Strikes the enemy multiple times with the Yo-Yo.",
          "br": "Um ataque por tr\u00e1s que possui chance de atordoar o alvo.",
          "cns": "\u53ea\u80fd\u5728\u5bf9\u65b9\u80cc\u540e\u4f7f\u7528\uff0c\u4e00\u5b9a\u51e0\u7387\u51fb\u6655\u5bf9\u65b9\u3002",
          "de": "Greife einen Gegner von hinten mit einem Yoyo an. Der Gegner kann dabei bet\u00e4ubt werden.",
-         "fi": "Attack a target from behind. Chance to stun target.",
-         "fil": "Attack a target from behind. Chance to stun target.",
+         "fi": "Strikes the enemy multiple times with the Yo-Yo.",
+         "fil": "Strikes the enemy multiple times with the Yo-Yo.",
          "fr": "Attaque surprise dans le dos de l'ennemi, infligeant de lourd d\u00e9g\u00e2ts et pouvant \u00e9tourdir la cible",
-         "it": "Attack a target from behind. Chance to stun target.",
+         "it": "Strikes the enemy multiple times with the Yo-Yo.",
          "kr": "\uc694\uc694\ub85c \ubc30\ud6c4\ub97c \uc2b5\uaca9\ud569\ub2c8\ub2e4. \uc774\ub54c \uc801\uc740 \uc77c\uc815 \ud655\ub960\ub85c \uc2a4\ud134 \uc0c1\ud0dc\uac00 \ub429\ub2c8\ub2e4. \uc801\uc758 \ub4a4\uc5d0\uc11c\ub9cc \uc0ac\uc6a9 \uac00\ub2a5\ud569\ub2c8\ub2e4.",
-         "nl": "Attack a target from behind. Chance to stun target.",
-         "pl": "Attack a target from behind. Chance to stun target.",
+         "nl": "Strikes the enemy multiple times with the Yo-Yo.",
+         "pl": "Strikes the enemy multiple times with the Yo-Yo.",
          "ru": "\u0423\u0434\u0430\u0440 \u0432 \u0441\u043f\u0438\u043d\u0443, \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u044e\u0449\u0438\u0439 \u043e\u0433\u043b\u0443\u0448\u0438\u0442\u044c \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430.",
-         "sw": "Attack a target from behind. Chance to stun target.",
-         "th": "Attack a target from behind. Chance to stun target."
+         "sw": "Strikes the enemy multiple times with the Yo-Yo.",
+         "th": "Strikes the enemy multiple times with the Yo-Yo."
       },
       "icon": "jstyoybackst.png",
       "class": 3545,
-      "level": 70,
+      "level": 60,
       "element": "none",
       "magic": false,
       "requirements": [
@@ -40421,256 +42078,246 @@ export const skillsjson = [
       "weapon": "yoyo",
       "combo": "general",
       "debuff": true,
-      "flying": true,
+      "flying": false,
       "passive": false,
       "target": "single",
       "skillPoints": 3,
       "levels": [
          {
-            "minAttack": 126,
-            "maxAttack": 127,
-            "probability": 20,
-            "probabilityPVP": 20,
+            "damageMultiplier": 0.35,
+            "minAttack": 26,
+            "maxAttack": 27,
+            "consumedFP": 68,
+            "duration": 5,
+            "durationPVP": 5,
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 3.52,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 1.52,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.35,
+            "minAttack": 27,
+            "maxAttack": 28,
             "consumedFP": 70,
-            "cooldown": 3,
             "duration": 5,
             "durationPVP": 5,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "stun"
-               }
-            ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.02,
+                  "scale": 3.54,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 1.54,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 127,
-            "maxAttack": 128,
-            "probability": 25,
-            "probabilityPVP": 25,
+            "damageMultiplier": 0.35,
+            "minAttack": 28,
+            "maxAttack": 29,
             "consumedFP": 72,
-            "cooldown": 3,
             "duration": 5,
             "durationPVP": 5,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "stun"
-               }
-            ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.04,
+                  "scale": 3.56,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 1.56,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 128,
-            "maxAttack": 129,
-            "probability": 30,
-            "probabilityPVP": 30,
+            "damageMultiplier": 0.35,
+            "minAttack": 29,
+            "maxAttack": 30,
             "consumedFP": 74,
-            "cooldown": 3,
             "duration": 5,
             "durationPVP": 5,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "stun"
-               }
-            ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.06,
+                  "scale": 3.58,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 1.58,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 129,
-            "maxAttack": 130,
-            "probability": 35,
-            "probabilityPVP": 35,
+            "damageMultiplier": 0.35,
+            "minAttack": 30,
+            "maxAttack": 31,
             "consumedFP": 76,
-            "cooldown": 3,
             "duration": 5,
             "durationPVP": 5,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "stun"
-               }
-            ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.08,
+                  "scale": 3.6,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 1.6,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 130,
-            "maxAttack": 131,
-            "probability": 40,
-            "probabilityPVP": 40,
+            "damageMultiplier": 0.35,
+            "minAttack": 31,
+            "maxAttack": 32,
             "consumedFP": 78,
-            "cooldown": 3,
             "duration": 5,
             "durationPVP": 5,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "stun"
-               }
-            ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.1,
+                  "scale": 3.62,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 1.62,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 131,
-            "maxAttack": 132,
-            "probability": 45,
-            "probabilityPVP": 45,
+            "damageMultiplier": 0.35,
+            "minAttack": 32,
+            "maxAttack": 33,
             "consumedFP": 80,
-            "cooldown": 3,
             "duration": 5,
             "durationPVP": 5,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "stun"
-               }
-            ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.12,
+                  "scale": 3.64,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 1.64,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 132,
-            "maxAttack": 133,
-            "probability": 50,
-            "probabilityPVP": 50,
+            "damageMultiplier": 0.35,
+            "minAttack": 33,
+            "maxAttack": 34,
             "consumedFP": 82,
-            "cooldown": 3,
             "duration": 5,
             "durationPVP": 5,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "stun"
-               }
-            ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.14,
+                  "scale": 3.66,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 1.66,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 133,
-            "maxAttack": 134,
-            "probability": 55,
-            "probabilityPVP": 55,
+            "damageMultiplier": 0.35,
+            "minAttack": 34,
+            "maxAttack": 35,
             "consumedFP": 84,
-            "cooldown": 3,
             "duration": 5,
             "durationPVP": 5,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "stun"
-               }
-            ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.16,
+                  "scale": 3.68,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 1.68,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 134,
-            "maxAttack": 135,
-            "probability": 60,
-            "probabilityPVP": 60,
+            "damageMultiplier": 0.35,
+            "minAttack": 35,
+            "maxAttack": 36,
             "consumedFP": 86,
-            "cooldown": 3,
             "duration": 5,
             "durationPVP": 5,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "stun"
-               }
-            ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.18,
+                  "scale": 3.7,
                   "pvp": true,
                   "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 135,
-            "maxAttack": 136,
-            "probability": 65,
-            "probabilityPVP": 65,
-            "consumedFP": 88,
-            "cooldown": 3,
-            "duration": 5,
-            "durationPVP": 5,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "stun"
-               }
-            ],
-            "scalingParameters": [
+               },
                {
                   "parameter": "attack",
-                  "stat": "str",
-                  "scale": 4.2,
+                  "stat": "dex",
+                  "scale": 1.7,
                   "pvp": true,
                   "pve": true
                }
@@ -40741,7 +42388,7 @@ export const skillsjson = [
             "minAttack": 136,
             "maxAttack": 137,
             "consumedMP": 112,
-            "cooldown": 10,
+            "cooldown": 12,
             "casting": 0.5,
             "spellRange": 8,
             "scalingParameters": [
@@ -40758,7 +42405,7 @@ export const skillsjson = [
             "minAttack": 137,
             "maxAttack": 138,
             "consumedMP": 114,
-            "cooldown": 10,
+            "cooldown": 12,
             "casting": 0.5,
             "spellRange": 8,
             "scalingParameters": [
@@ -40775,7 +42422,7 @@ export const skillsjson = [
             "minAttack": 138,
             "maxAttack": 139,
             "consumedMP": 116,
-            "cooldown": 10,
+            "cooldown": 12,
             "casting": 0.5,
             "spellRange": 8,
             "scalingParameters": [
@@ -40792,7 +42439,7 @@ export const skillsjson = [
             "minAttack": 139,
             "maxAttack": 140,
             "consumedMP": 118,
-            "cooldown": 10,
+            "cooldown": 12,
             "casting": 0.5,
             "spellRange": 8,
             "scalingParameters": [
@@ -40809,7 +42456,7 @@ export const skillsjson = [
             "minAttack": 140,
             "maxAttack": 141,
             "consumedMP": 120,
-            "cooldown": 10,
+            "cooldown": 12,
             "casting": 0.5,
             "spellRange": 8,
             "scalingParameters": [
@@ -40826,7 +42473,7 @@ export const skillsjson = [
             "minAttack": 141,
             "maxAttack": 142,
             "consumedMP": 122,
-            "cooldown": 10,
+            "cooldown": 12,
             "casting": 0.5,
             "spellRange": 8,
             "scalingParameters": [
@@ -40843,7 +42490,7 @@ export const skillsjson = [
             "minAttack": 142,
             "maxAttack": 143,
             "consumedMP": 124,
-            "cooldown": 10,
+            "cooldown": 12,
             "casting": 0.5,
             "spellRange": 8,
             "scalingParameters": [
@@ -40860,7 +42507,7 @@ export const skillsjson = [
             "minAttack": 143,
             "maxAttack": 144,
             "consumedMP": 126,
-            "cooldown": 10,
+            "cooldown": 12,
             "casting": 0.5,
             "spellRange": 8,
             "scalingParameters": [
@@ -40877,7 +42524,7 @@ export const skillsjson = [
             "minAttack": 144,
             "maxAttack": 145,
             "consumedMP": 128,
-            "cooldown": 10,
+            "cooldown": 12,
             "casting": 0.5,
             "spellRange": 8,
             "scalingParameters": [
@@ -40894,7 +42541,7 @@ export const skillsjson = [
             "minAttack": 145,
             "maxAttack": 146,
             "consumedMP": 130,
-            "cooldown": 10,
+            "cooldown": 12,
             "casting": 0.5,
             "spellRange": 8,
             "scalingParameters": [
@@ -40973,7 +42620,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.02,
+                  "scale": 4.22,
                   "pvp": true,
                   "pve": true
                }
@@ -40988,7 +42635,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.04,
+                  "scale": 4.24,
                   "pvp": true,
                   "pve": true
                }
@@ -41003,7 +42650,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.06,
+                  "scale": 4.26,
                   "pvp": true,
                   "pve": true
                }
@@ -41018,7 +42665,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.08,
+                  "scale": 4.28,
                   "pvp": true,
                   "pve": true
                }
@@ -41033,7 +42680,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.1,
+                  "scale": 4.3,
                   "pvp": true,
                   "pve": true
                }
@@ -41048,7 +42695,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.12,
+                  "scale": 4.32,
                   "pvp": true,
                   "pve": true
                }
@@ -41063,7 +42710,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.14,
+                  "scale": 4.34,
                   "pvp": true,
                   "pve": true
                }
@@ -41078,7 +42725,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.16,
+                  "scale": 4.36,
                   "pvp": true,
                   "pve": true
                }
@@ -41093,7 +42740,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.18,
+                  "scale": 4.38,
                   "pvp": true,
                   "pve": true
                }
@@ -41108,7 +42755,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 4.2,
+                  "scale": 4.4,
                   "pvp": true,
                   "pve": true
                }
@@ -41191,7 +42838,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 5.02,
+                  "scale": 6.02,
                   "pvp": true,
                   "pve": true
                }
@@ -41217,7 +42864,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 5.04,
+                  "scale": 6.04,
                   "pvp": true,
                   "pve": true
                }
@@ -41243,7 +42890,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 5.06,
+                  "scale": 6.06,
                   "pvp": true,
                   "pve": true
                }
@@ -41269,7 +42916,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 5.08,
+                  "scale": 6.08,
                   "pvp": true,
                   "pve": true
                }
@@ -41295,7 +42942,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 5.1,
+                  "scale": 6.1,
                   "pvp": true,
                   "pve": true
                }
@@ -41321,7 +42968,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 5.12,
+                  "scale": 6.12,
                   "pvp": true,
                   "pve": true
                }
@@ -41347,7 +42994,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 5.14,
+                  "scale": 6.14,
                   "pvp": true,
                   "pve": true
                }
@@ -41373,7 +43020,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 5.16,
+                  "scale": 6.16,
                   "pvp": true,
                   "pve": true
                }
@@ -41399,7 +43046,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 5.18,
+                  "scale": 6.18,
                   "pvp": true,
                   "pve": true
                }
@@ -41425,7 +43072,263 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 5.2,
+                  "scale": 6.2,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "id": 7208,
+      "name": {
+         "en": "Grand Rage",
+         "ar": "Grand Rage",
+         "br": "Grand Rage",
+         "cns": "Grand Rage",
+         "de": "Grand Rage",
+         "fi": "Grand Rage",
+         "fil": "Grand Rage",
+         "fr": "Grand Rage",
+         "it": "Grand Rage",
+         "kr": "Grand Rage",
+         "nl": "Grand Rage",
+         "pl": "Grand Rage",
+         "ru": "Grand Rage",
+         "sw": "Grand Rage",
+         "th": "Grand Rage"
+      },
+      "description": {
+         "en": "Strong One-Handed attack that converts 5% of the damage you deal into FP stolen from the enemy.",
+         "ar": "Strong One-Handed attack that converts 5% of the damage you deal into FP stolen from the enemy.",
+         "br": "Strong One-Handed attack that converts 5% of the damage you deal into FP stolen from the enemy.",
+         "cns": "Strong One-Handed attack that converts 5% of the damage you deal into FP stolen from the enemy.",
+         "de": "Strong One-Handed attack that converts 5% of the damage you deal into FP stolen from the enemy.",
+         "fi": "Strong One-Handed attack that converts 5% of the damage you deal into FP stolen from the enemy.",
+         "fil": "Strong One-Handed attack that converts 5% of the damage you deal into FP stolen from the enemy.",
+         "fr": "Strong One-Handed attack that converts 5% of the damage you deal into FP stolen from the enemy.",
+         "it": "Strong One-Handed attack that converts 5% of the damage you deal into FP stolen from the enemy.",
+         "kr": "Strong One-Handed attack that converts 5% of the damage you deal into FP stolen from the enemy.",
+         "nl": "Strong One-Handed attack that converts 5% of the damage you deal into FP stolen from the enemy.",
+         "pl": "Strong One-Handed attack that converts 5% of the damage you deal into FP stolen from the enemy.",
+         "ru": "Strong One-Handed attack that converts 5% of the damage you deal into FP stolen from the enemy.",
+         "sw": "Strong One-Handed attack that converts 5% of the damage you deal into FP stolen from the enemy.",
+         "th": "Strong One-Handed attack that converts 5% of the damage you deal into FP stolen from the enemy."
+      },
+      "icon": "lordkgrandrage.png",
+      "class": 5330,
+      "level": 65,
+      "element": "none",
+      "magic": false,
+      "requirements": [
+         {
+            "skill": 3714,
+            "level": 4
+         }
+      ],
+      "combo": "general",
+      "debuff": true,
+      "flying": true,
+      "passive": false,
+      "target": "single",
+      "skillPoints": 3,
+      "levels": [
+         {
+            "minAttack": 106,
+            "maxAttack": 120,
+            "abilities": [
+               {
+                  "parameter": "stealfp",
+                  "add": 5,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 5.52,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 108,
+            "maxAttack": 123,
+            "abilities": [
+               {
+                  "parameter": "stealfp",
+                  "add": 5,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 5.54,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 110,
+            "maxAttack": 125,
+            "abilities": [
+               {
+                  "parameter": "stealfp",
+                  "add": 5,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 5.56,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 112,
+            "maxAttack": 128,
+            "abilities": [
+               {
+                  "parameter": "stealfp",
+                  "add": 5,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 5.58,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 114,
+            "maxAttack": 130,
+            "abilities": [
+               {
+                  "parameter": "stealfp",
+                  "add": 5,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 5.6,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 116,
+            "maxAttack": 132,
+            "abilities": [
+               {
+                  "parameter": "stealfp",
+                  "add": 5,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 5.62,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 118,
+            "maxAttack": 134,
+            "abilities": [
+               {
+                  "parameter": "stealfp",
+                  "add": 5,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 5.64,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 120,
+            "maxAttack": 136,
+            "abilities": [
+               {
+                  "parameter": "stealfp",
+                  "add": 5,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 5.66,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 122,
+            "maxAttack": 138,
+            "abilities": [
+               {
+                  "parameter": "stealfp",
+                  "add": 5,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 5.68,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 139,
+            "maxAttack": 140,
+            "abilities": [
+               {
+                  "parameter": "stealfp",
+                  "add": 5,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 5.7,
                   "pvp": true,
                   "pve": true
                }
@@ -41436,36 +43339,36 @@ export const skillsjson = [
    {
       "id": 7214,
       "name": {
-         "en": "Krrr's poison",
-         "ar": "Krrr's poison",
+         "en": "Krrr's Poison",
+         "ar": "Krrr's Poison",
          "br": "Veneno de Krrr",
          "cns": "\u9b54\u97f3\u4f20\u8111",
          "de": "Krrrs Poison",
-         "fi": "Krrr's poison",
-         "fil": "Krrr's poison",
+         "fi": "Krrr's Poison",
+         "fil": "Krrr's Poison",
          "fr": "Poison de Krrr",
-         "it": "Krrr's poison",
+         "it": "Krrr's Poison",
          "kr": "\ud06c\ub974\ub989\uc758 \ub3c5",
          "nl": "Krrr's vergif",
-         "pl": "Krrr's poison",
+         "pl": "Krrr's Poison",
          "ru": "\u042f\u0434 \u041a\u0440-\u0440\u0430",
-         "sw": "Krrr's poison",
-         "th": "Krrr's poison"
+         "sw": "Krrr's Poison",
+         "th": "Krrr's Poison"
       },
       "description": {
          "en": "Damages an enemy over a period of time.",
          "ar": "Damages an enemy over a period of time.",
-         "br": "Causa dano por um per\u00edodo de tempo limitado.",
-         "cns": "\u65bd\u653e\u540e\u4f7f\u76ee\u6807\u4e00\u5b9a\u65f6\u95f4\u5185\u53d7\u5230\u6301\u7eed\u7684\u6bd2\u4f24\u5bb3\u3002",
-         "de": "Den Gegner kontinuierlich durch Blutung f\u00fcr eine bestimmte Zeit Schaden zuf\u00fcgen.",
+         "br": "Damages an enemy over a period of time.",
+         "cns": "Damages an enemy over a period of time.",
+         "de": "Damages an enemy over a period of time.",
          "fi": "Damages an enemy over a period of time.",
          "fil": "Damages an enemy over a period of time.",
-         "fr": "Poison qui inflige des d\u00e9g\u00e2ts en continu",
+         "fr": "Damages an enemy over a period of time.",
          "it": "Damages an enemy over a period of time.",
-         "kr": "\uc77c\uc815 \uc2dc\uac04\ub3d9\uc548 \ucd9c\ud608\ub85c \uc778\ud55c \uc9c0\uc18d\uc801\uc778 \ud53c\ud574\ub97c \uc785\ud799\ub2c8\ub2e4.",
+         "kr": "Damages an enemy over a period of time.",
          "nl": "Damages an enemy over a period of time.",
          "pl": "Damages an enemy over a period of time.",
-         "ru": "\u0412\u044b \u043f\u043e\u043b\u0443\u0447\u0430\u0435\u0442\u0435 \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u044b\u0439 \u0443\u0440\u043e\u043d.",
+         "ru": "Damages an enemy over a period of time.",
          "sw": "Damages an enemy over a period of time.",
          "th": "Damages an enemy over a period of time."
       },
@@ -41481,15 +43384,20 @@ export const skillsjson = [
       "target": "single",
       "levels": [
          {
-            "dotTick": 1,
+            "dotTick": 1.5,
             "duration": 30,
             "durationPVP": 30,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "poison",
-                  "dotMode": "fixedvalue",
-                  "dotValue": 150
+                  "dotMode": "standardattack",
+                  "dotValue": 15
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -30,
+                  "rate": true
                }
             ]
          }
@@ -41506,7 +43414,7 @@ export const skillsjson = [
          "fi": "Hawk Attack",
          "fil": "Hawk Attack",
          "fr": "Frappe du faucon",
-         "it": "Hawk Attack",
+         "it": "Attacco del falco",
          "kr": "\ud638\ud06c \uc5b4\ud0dd",
          "nl": "Hawk Attack",
          "pl": "Atak Jastrz\u0119bia",
@@ -41515,21 +43423,21 @@ export const skillsjson = [
          "th": "Hawk Attack"
       },
       "description": {
-         "en": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
-         "ar": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
-         "br": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
-         "cns": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
-         "de": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
-         "fi": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
-         "fil": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
-         "fr": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
-         "it": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
-         "kr": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
-         "nl": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
-         "pl": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
-         "ru": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
-         "sw": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand.",
-         "th": "Powerful, downward strike. Blinds the target. Requires two weapons and an Axe in the main hand."
+         "en": "Powerful, downward strike. Lowers targets accuracy. Requires two weapons.",
+         "ar": "Powerful, downward strike. Lowers targets accuracy. Requires two weapons.",
+         "br": "Powerful, downward strike. Lowers targets accuracy. Requires two weapons.",
+         "cns": "Powerful, downward strike. Lowers targets accuracy. Requires two weapons.",
+         "de": "Powerful, downward strike. Lowers targets accuracy. Requires two weapons.",
+         "fi": "Powerful, downward strike. Lowers targets accuracy. Requires two weapons.",
+         "fil": "Powerful, downward strike. Lowers targets accuracy. Requires two weapons.",
+         "fr": "Powerful, downward strike. Lowers targets accuracy. Requires two weapons.",
+         "it": "Powerful, downward strike. Lowers targets accuracy. Requires two weapons.",
+         "kr": "Powerful, downward strike. Lowers targets accuracy. Requires two weapons.",
+         "nl": "Powerful, downward strike. Lowers targets accuracy. Requires two weapons.",
+         "pl": "Powerful, downward strike. Lowers targets accuracy. Requires two weapons.",
+         "ru": "Powerful, downward strike. Lowers targets accuracy. Requires two weapons.",
+         "sw": "Powerful, downward strike. Lowers targets accuracy. Requires two weapons.",
+         "th": "Powerful, downward strike. Lowers targets accuracy. Requires two weapons."
       },
       "icon": "blddaxhawatt.png",
       "class": 2246,
@@ -41542,7 +43450,6 @@ export const skillsjson = [
             "level": 5
          }
       ],
-      "weapon": "axe",
       "combo": "general",
       "debuff": true,
       "flying": true,
@@ -41551,258 +43458,278 @@ export const skillsjson = [
       "skillPoints": 3,
       "levels": [
          {
+            "damageMultiplier": 1.25,
             "minAttack": 120,
             "maxAttack": 121,
             "probability": 25,
             "probabilityPVP": 20,
-            "consumedFP": 40,
+            "consumedFP": 90,
             "cooldown": 10,
             "casting": 1.25,
-            "duration": 4,
-            "durationPVP": 4,
+            "duration": 20,
+            "durationPVP": 20,
             "abilities": [
                {
-                  "parameter": "attribute",
-                  "attribute": "hitrate"
+                  "parameter": "hitrate",
+                  "add": -5,
+                  "rate": true
                }
             ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.52,
+                  "scale": 5.02,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 1.25,
             "minAttack": 121,
             "maxAttack": 122,
             "probability": 30,
             "probabilityPVP": 25,
-            "consumedFP": 42,
+            "consumedFP": 92,
             "cooldown": 10,
             "casting": 1.25,
-            "duration": 4.2,
-            "durationPVP": 4.2,
+            "duration": 20,
+            "durationPVP": 20,
             "abilities": [
                {
-                  "parameter": "attribute",
-                  "attribute": "hitrate"
+                  "parameter": "hitrate",
+                  "add": -10,
+                  "rate": true
                }
             ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.54,
+                  "scale": 5.04,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 1.25,
             "minAttack": 122,
             "maxAttack": 123,
             "probability": 35,
             "probabilityPVP": 30,
-            "consumedFP": 44,
+            "consumedFP": 94,
             "cooldown": 10,
             "casting": 1.25,
-            "duration": 4.3,
-            "durationPVP": 4.3,
+            "duration": 20,
+            "durationPVP": 20,
             "abilities": [
                {
-                  "parameter": "attribute",
-                  "attribute": "hitrate"
+                  "parameter": "hitrate",
+                  "add": -15,
+                  "rate": true
                }
             ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.56,
+                  "scale": 5.06,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 1.25,
             "minAttack": 123,
             "maxAttack": 124,
             "probability": 40,
             "probabilityPVP": 35,
-            "consumedFP": 46,
+            "consumedFP": 96,
             "cooldown": 10,
             "casting": 1.25,
-            "duration": 4.4,
-            "durationPVP": 4.4,
+            "duration": 20,
+            "durationPVP": 20,
             "abilities": [
                {
-                  "parameter": "attribute",
-                  "attribute": "hitrate"
+                  "parameter": "hitrate",
+                  "add": -20,
+                  "rate": true
                }
             ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.58,
+                  "scale": 5.08,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 1.25,
             "minAttack": 124,
             "maxAttack": 125,
             "probability": 50,
             "probabilityPVP": 40,
-            "consumedFP": 48,
+            "consumedFP": 98,
             "cooldown": 10,
             "casting": 1.25,
-            "duration": 4.5,
-            "durationPVP": 4.5,
+            "duration": 20,
+            "durationPVP": 20,
             "abilities": [
                {
-                  "parameter": "attribute",
-                  "attribute": "hitrate"
+                  "parameter": "hitrate",
+                  "add": -25,
+                  "rate": true
                }
             ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.6,
+                  "scale": 5.1,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 1.25,
             "minAttack": 125,
             "maxAttack": 126,
             "probability": 60,
             "probabilityPVP": 50,
-            "consumedFP": 50,
+            "consumedFP": 90,
             "cooldown": 10,
             "casting": 1.25,
-            "duration": 4.6,
-            "durationPVP": 4.6,
+            "duration": 20,
+            "durationPVP": 20,
             "abilities": [
                {
-                  "parameter": "attribute",
-                  "attribute": "hitrate"
+                  "parameter": "hitrate",
+                  "add": -30,
+                  "rate": true
                }
             ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.62,
+                  "scale": 5.12,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 1.25,
             "minAttack": 126,
             "maxAttack": 127,
             "probability": 70,
             "probabilityPVP": 60,
-            "consumedFP": 52,
+            "consumedFP": 92,
             "cooldown": 10,
             "casting": 1.25,
-            "duration": 4.7,
-            "durationPVP": 4.7,
+            "duration": 20,
+            "durationPVP": 20,
             "abilities": [
                {
-                  "parameter": "attribute",
-                  "attribute": "hitrate"
+                  "parameter": "hitrate",
+                  "add": -35,
+                  "rate": true
                }
             ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.64,
+                  "scale": 5.14,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 1.25,
             "minAttack": 127,
             "maxAttack": 128,
             "probability": 80,
             "probabilityPVP": 70,
-            "consumedFP": 54,
+            "consumedFP": 94,
             "cooldown": 10,
             "casting": 1.25,
-            "duration": 4.8,
-            "durationPVP": 4.8,
+            "duration": 20,
+            "durationPVP": 20,
             "abilities": [
                {
-                  "parameter": "attribute",
-                  "attribute": "hitrate"
+                  "parameter": "hitrate",
+                  "add": -40,
+                  "rate": true
                }
             ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.66,
+                  "scale": 5.16,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 1.25,
             "minAttack": 128,
             "maxAttack": 129,
             "probability": 90,
             "probabilityPVP": 80,
-            "consumedFP": 56,
+            "consumedFP": 96,
             "cooldown": 9,
             "casting": 1.25,
-            "duration": 4.9,
-            "durationPVP": 4.9,
+            "duration": 20,
+            "durationPVP": 20,
             "abilities": [
                {
-                  "parameter": "attribute",
-                  "attribute": "hitrate"
+                  "parameter": "hitrate",
+                  "add": -45,
+                  "rate": true
                }
             ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.68,
+                  "scale": 5.18,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
+            "damageMultiplier": 1.25,
             "minAttack": 129,
             "maxAttack": 130,
-            "consumedFP": 58,
+            "consumedFP": 98,
             "cooldown": 8,
             "casting": 1.25,
-            "duration": 5,
-            "durationPVP": 5,
+            "duration": 20,
+            "durationPVP": 20,
             "abilities": [
                {
-                  "parameter": "attribute",
-                  "attribute": "hitrate"
+                  "parameter": "hitrate",
+                  "add": -50,
+                  "rate": true
                }
             ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.7,
+                  "scale": 5.2,
                   "pvp": true,
                   "pve": true
                }
@@ -41815,17 +43742,17 @@ export const skillsjson = [
       "name": {
          "en": "Bleeding",
          "ar": "Bleeding",
-         "br": "Sangramento",
-         "cns": "\u51fa\u88402",
+         "br": "Bleeding",
+         "cns": "Bleeding",
          "de": "Bleeding",
          "fi": "Bleeding",
          "fil": "Bleeding",
-         "fr": "Saigner \u00e0 blanc",
+         "fr": "Bleeding",
          "it": "Bleeding",
-         "kr": "\ucd9c\ud608",
-         "nl": "Bloeden",
+         "kr": "Bleeding",
+         "nl": "Bleeding",
          "pl": "Bleeding",
-         "ru": "\u041a\u0440\u043e\u0432\u043e\u0442\u0435\u0447\u0435\u043d\u0438\u0435",
+         "ru": "Bleeding",
          "sw": "Bleeding",
          "th": "Bleeding"
       },
@@ -41994,7 +43921,7 @@ export const skillsjson = [
       "name": {
          "en": "Blinkpool",
          "ar": "Blinkpool",
-         "br": "Blinkpool",
+         "br": "Salto M\u00e1gico",
          "cns": "\u7a7a\u95f4\u8f6c\u6362",
          "de": "Blinkpool",
          "fi": "Blinkpool",
@@ -42047,82 +43974,82 @@ export const skillsjson = [
          {
             "consumedMP": 22,
             "cooldown": 3,
-            "spellRange": 14
+            "spellRange": 10
          },
          {
             "consumedMP": 22,
             "cooldown": 3,
-            "spellRange": 14
+            "spellRange": 10
          },
          {
             "consumedMP": 23,
             "cooldown": 3,
-            "spellRange": 14
+            "spellRange": 11
          },
          {
             "consumedMP": 23,
             "cooldown": 3,
-            "spellRange": 15
+            "spellRange": 11
          },
          {
             "consumedMP": 24,
             "cooldown": 3,
-            "spellRange": 15
+            "spellRange": 12
          },
          {
             "consumedMP": 24,
             "cooldown": 3,
+            "spellRange": 12
+         },
+         {
+            "consumedMP": 25,
+            "cooldown": 3,
+            "spellRange": 13
+         },
+         {
+            "consumedMP": 25,
+            "cooldown": 3,
+            "spellRange": 13
+         },
+         {
+            "consumedMP": 25,
+            "cooldown": 3,
+            "spellRange": 14
+         },
+         {
+            "consumedMP": 27,
+            "cooldown": 3,
+            "spellRange": 14
+         },
+         {
+            "consumedMP": 27,
+            "cooldown": 3,
             "spellRange": 15
          },
          {
-            "consumedMP": 25,
+            "consumedMP": 27,
             "cooldown": 3,
             "spellRange": 15
-         },
-         {
-            "consumedMP": 25,
-            "cooldown": 3,
-            "spellRange": 16
-         },
-         {
-            "consumedMP": 25,
-            "cooldown": 3,
-            "spellRange": 16
-         },
-         {
-            "consumedMP": 27,
-            "cooldown": 3,
-            "spellRange": 16
-         },
-         {
-            "consumedMP": 27,
-            "cooldown": 3,
-            "spellRange": 16
-         },
-         {
-            "consumedMP": 27,
-            "cooldown": 3,
-            "spellRange": 17
          },
          {
             "consumedMP": 28,
             "cooldown": 3,
-            "spellRange": 17
+            "spellRange": 16
          },
          {
             "consumedMP": 29,
             "cooldown": 3,
-            "spellRange": 17
+            "spellRange": 16
          },
          {
             "consumedMP": 30,
             "cooldown": 3,
-            "spellRange": 18
+            "spellRange": 17
          },
          {
             "consumedMP": 31,
             "cooldown": 3,
-            "spellRange": 18
+            "spellRange": 17
          },
          {
             "consumedMP": 31,
@@ -42132,7 +44059,7 @@ export const skillsjson = [
          {
             "consumedMP": 32,
             "cooldown": 3,
-            "spellRange": 19
+            "spellRange": 18
          },
          {
             "consumedMP": 32,
@@ -42147,11 +44074,91 @@ export const skillsjson = [
       ]
    },
    {
+      "id": 7392,
+      "name": {
+         "en": "Keenwheel",
+         "ar": "Keenwheel",
+         "br": "Voragem",
+         "cns": "\u5207\u88c2\u98ce\u8f6e",
+         "de": "Keenwheel",
+         "fi": "Keenwheel",
+         "fil": "Keenwheel",
+         "fr": "Fr\u00e9n\u00e9sie",
+         "it": "Attacco Circolare",
+         "kr": "\ud0a8\ud720",
+         "nl": "Keenwheel",
+         "pl": "Wiruj\u0105ce Ci\u0119cie",
+         "ru": "\u0412\u0435\u0440\u0442\u0443\u0448\u043a\u0430",
+         "sw": "Keenwheel",
+         "th": "Keenwheel"
+      },
+      "description": {
+         "en": "A continuous spinning attack.",
+         "ar": "A continuous spinning attack.",
+         "br": "Um ataque girat\u00f3rio cont\u00ednuo.",
+         "cns": "\u5faa\u73af\u6280\u80fd\uff0c\u9ad8\u901f\u65cb\u8f6c\u81ea\u5df1\u7684\u8eab\u4f53\uff0c\u5229\u7528\u8f6c\u52a8\u65f6\u4ea7\u751f\u7684\u79bb\u5fc3\u529b\u8fde\u7eed\u653b\u51fb\u5bf9\u65b9\u3002",
+         "de": "Ein Kreiselskill, um den Feind mehrmals schnell hintereinander zu treffen. ",
+         "fi": "Jatkuva py\u00f6riv\u00e4 hy\u00f6kk\u00e4ys.",
+         "fil": "A continuous spinning attack.",
+         "fr": "Attaque circulaire qui frappe l'ennemi \u00e0 trois reprises",
+         "it": "Un attacco circolare che colpisce l'avversario tre volte.",
+         "kr": "\uc11c\ud074\uc2a4\ud0ac\ub85c \ubab8\uc744 \uae09\uc18d\uc73c\ub85c \ud68c\uc804\ud558\uba70 \uc0c1\ub300\ub97c \uc5f0\uc18d \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
+         "nl": "A continuous spinning attack.",
+         "pl": "Tnie przeciwnika wielokrotnie, poprzez wirowanie wok\u00f3\u0142 w\u0142asnej osi.",
+         "ru": "\u041f\u0440\u043e\u0434\u043e\u043b\u0436\u0438\u0442\u0435\u043b\u044c\u043d\u0430\u044f \u043a\u0440\u0443\u0433\u043e\u0432\u0430\u044f \u0430\u0442\u0430\u043a\u0430.",
+         "sw": "A continuous spinning attack.",
+         "th": "A continuous spinning attack."
+      },
+      "icon": "meronekeenwh.png",
+      "level": 1,
+      "element": "none",
+      "magic": false,
+      "requirements": [],
+      "combo": "circle",
+      "debuff": false,
+      "flying": true,
+      "passive": false,
+      "target": "area",
+      "skillPoints": 1,
+      "levels": [
+         {
+            "damageMultiplier": 0.01,
+            "minAttack": 1,
+            "maxAttack": 1,
+            "consumedFP": 15
+         },
+         {
+            "damageMultiplier": 0.01,
+            "minAttack": 1,
+            "maxAttack": 1,
+            "consumedFP": 15
+         },
+         {
+            "damageMultiplier": 0.01,
+            "minAttack": 1,
+            "maxAttack": 1,
+            "consumedFP": 16
+         },
+         {
+            "damageMultiplier": 0.01,
+            "minAttack": 1,
+            "maxAttack": 1,
+            "consumedFP": 16
+         },
+         {
+            "damageMultiplier": 0.01,
+            "minAttack": 1,
+            "maxAttack": 1,
+            "consumedFP": 20
+         }
+      ]
+   },
+   {
       "id": 7395,
       "name": {
          "en": "Dark Illusion",
          "ar": "Dark Illusion",
-         "br": "Ilus\u00e3o das Trevas",
+         "br": "Ilus\u00e3o Sombria",
          "cns": "\u6f5c\u884c",
          "de": "Dark Illusion",
          "fi": "Dark Illusion",
@@ -42184,7 +44191,7 @@ export const skillsjson = [
       },
       "icon": "acrsupillusi.png",
       "class": 9098,
-      "level": 30,
+      "level": 35,
       "element": "none",
       "magic": false,
       "requirements": [
@@ -42420,8 +44427,8 @@ export const skillsjson = [
          {
             "consumedFP": 32,
             "cooldown": 20,
-            "duration": 13,
-            "durationPVP": 13,
+            "duration": 13.5,
+            "durationPVP": 13.5,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -42432,8 +44439,8 @@ export const skillsjson = [
          {
             "consumedFP": 35,
             "cooldown": 20,
-            "duration": 14,
-            "durationPVP": 14,
+            "duration": 15,
+            "durationPVP": 15,
             "abilities": [
                {
                   "parameter": "attribute",
@@ -42765,158 +44772,13 @@ export const skillsjson = [
             "maxAttack": 17,
             "probability": 32,
             "probabilityPVP": 32,
-            "consumedFP": 20,
+            "consumedFP": 16,
             "duration": 5,
             "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "speed",
                   "add": -2,
-                  "rate": true
-               },
-               {
-                  "parameter": "attribute",
-                  "attribute": "slow"
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 1.82,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 17,
-            "maxAttack": 18,
-            "probability": 34,
-            "probabilityPVP": 34,
-            "consumedFP": 20,
-            "duration": 5,
-            "durationPVP": 5,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": -4,
-                  "rate": true
-               },
-               {
-                  "parameter": "attribute",
-                  "attribute": "slow"
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 1.84,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 17,
-            "maxAttack": 18,
-            "probability": 36,
-            "probabilityPVP": 36,
-            "consumedFP": 23,
-            "duration": 5,
-            "durationPVP": 5,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": -6,
-                  "rate": true
-               },
-               {
-                  "parameter": "attribute",
-                  "attribute": "slow"
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 1.86,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 17,
-            "maxAttack": 18,
-            "probability": 38,
-            "probabilityPVP": 38,
-            "consumedFP": 23,
-            "duration": 5,
-            "durationPVP": 5,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": -8,
-                  "rate": true
-               },
-               {
-                  "parameter": "attribute",
-                  "attribute": "slow"
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 1.88,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 17,
-            "maxAttack": 18,
-            "probability": 40,
-            "probabilityPVP": 40,
-            "consumedFP": 26,
-            "duration": 5,
-            "durationPVP": 5,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": -10,
-                  "rate": true
-               },
-               {
-                  "parameter": "attribute",
-                  "attribute": "slow"
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 1.9,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 17,
-            "maxAttack": 18,
-            "probability": 42,
-            "probabilityPVP": 42,
-            "consumedFP": 26,
-            "duration": 5,
-            "durationPVP": 5,
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": -12,
                   "rate": true
                },
                {
@@ -42935,17 +44797,17 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 18,
-            "maxAttack": 19,
-            "probability": 44,
-            "probabilityPVP": 44,
-            "consumedFP": 30,
+            "minAttack": 17,
+            "maxAttack": 18,
+            "probability": 34,
+            "probabilityPVP": 34,
+            "consumedFP": 16,
             "duration": 5,
             "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": -14,
+                  "add": -4,
                   "rate": true
                },
                {
@@ -42964,17 +44826,17 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 18,
-            "maxAttack": 19,
-            "probability": 46,
-            "probabilityPVP": 46,
-            "consumedFP": 30,
+            "minAttack": 17,
+            "maxAttack": 18,
+            "probability": 36,
+            "probabilityPVP": 36,
+            "consumedFP": 17,
             "duration": 5,
             "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": -16,
+                  "add": -6,
                   "rate": true
                },
                {
@@ -42993,17 +44855,17 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 18,
-            "maxAttack": 19,
-            "probability": 48,
-            "probabilityPVP": 48,
-            "consumedFP": 33,
+            "minAttack": 17,
+            "maxAttack": 18,
+            "probability": 38,
+            "probabilityPVP": 38,
+            "consumedFP": 17,
             "duration": 5,
             "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": -18,
+                  "add": -8,
                   "rate": true
                },
                {
@@ -43022,17 +44884,17 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 18,
-            "maxAttack": 19,
-            "probability": 50,
-            "probabilityPVP": 50,
-            "consumedFP": 33,
+            "minAttack": 17,
+            "maxAttack": 18,
+            "probability": 40,
+            "probabilityPVP": 40,
+            "consumedFP": 18,
             "duration": 5,
             "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": -20,
+                  "add": -10,
                   "rate": true
                },
                {
@@ -43051,17 +44913,17 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 18,
-            "maxAttack": 19,
-            "probability": 52,
-            "probabilityPVP": 52,
-            "consumedFP": 36,
+            "minAttack": 17,
+            "maxAttack": 18,
+            "probability": 42,
+            "probabilityPVP": 42,
+            "consumedFP": 18,
             "duration": 5,
             "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": -22,
+                  "add": -12,
                   "rate": true
                },
                {
@@ -43082,15 +44944,15 @@ export const skillsjson = [
          {
             "minAttack": 18,
             "maxAttack": 19,
-            "probability": 54,
-            "probabilityPVP": 54,
-            "consumedFP": 36,
+            "probability": 44,
+            "probabilityPVP": 44,
+            "consumedFP": 19,
             "duration": 5,
             "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": -24,
+                  "add": -14,
                   "rate": true
                },
                {
@@ -43111,15 +44973,15 @@ export const skillsjson = [
          {
             "minAttack": 18,
             "maxAttack": 19,
-            "probability": 56,
-            "probabilityPVP": 56,
-            "consumedFP": 40,
+            "probability": 46,
+            "probabilityPVP": 46,
+            "consumedFP": 19,
             "duration": 5,
             "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": -26,
+                  "add": -16,
                   "rate": true
                },
                {
@@ -43140,15 +45002,15 @@ export const skillsjson = [
          {
             "minAttack": 18,
             "maxAttack": 19,
-            "probability": 58,
-            "probabilityPVP": 58,
-            "consumedFP": 40,
+            "probability": 48,
+            "probabilityPVP": 48,
+            "consumedFP": 20,
             "duration": 5,
             "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": -28,
+                  "add": -18,
                   "rate": true
                },
                {
@@ -43167,17 +45029,17 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 19,
-            "maxAttack": 20,
-            "probability": 60,
-            "probabilityPVP": 60,
-            "consumedFP": 43,
+            "minAttack": 18,
+            "maxAttack": 19,
+            "probability": 50,
+            "probabilityPVP": 50,
+            "consumedFP": 20,
             "duration": 5,
             "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": -30,
+                  "add": -20,
                   "rate": true
                },
                {
@@ -43196,17 +45058,17 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 20,
-            "maxAttack": 21,
-            "probability": 62,
-            "probabilityPVP": 62,
-            "consumedFP": 43,
+            "minAttack": 18,
+            "maxAttack": 19,
+            "probability": 52,
+            "probabilityPVP": 52,
+            "consumedFP": 21,
             "duration": 5,
             "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": -32,
+                  "add": -22,
                   "rate": true
                },
                {
@@ -43225,17 +45087,17 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 21,
-            "maxAttack": 22,
-            "probability": 64,
-            "probabilityPVP": 64,
-            "consumedFP": 46,
+            "minAttack": 19,
+            "maxAttack": 10,
+            "probability": 54,
+            "probabilityPVP": 54,
+            "consumedFP": 21,
             "duration": 5,
             "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": -34,
+                  "add": -24,
                   "rate": true
                },
                {
@@ -43254,17 +45116,17 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 22,
-            "maxAttack": 23,
-            "probability": 66,
-            "probabilityPVP": 66,
-            "consumedFP": 46,
+            "minAttack": 20,
+            "maxAttack": 21,
+            "probability": 56,
+            "probabilityPVP": 56,
+            "consumedFP": 22,
             "duration": 5,
             "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": -36,
+                  "add": -26,
                   "rate": true
                },
                {
@@ -43283,17 +45145,17 @@ export const skillsjson = [
             ]
          },
          {
-            "minAttack": 23,
-            "maxAttack": 24,
-            "probability": 68,
-            "probabilityPVP": 68,
-            "consumedFP": 50,
+            "minAttack": 21,
+            "maxAttack": 22,
+            "probability": 58,
+            "probabilityPVP": 58,
+            "consumedFP": 22,
             "duration": 5,
             "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "speed",
-                  "add": -38,
+                  "add": -28,
                   "rate": true
                },
                {
@@ -43312,11 +45174,156 @@ export const skillsjson = [
             ]
          },
          {
+            "minAttack": 22,
+            "maxAttack": 23,
+            "probability": 60,
+            "probabilityPVP": 60,
+            "consumedFP": 23,
+            "duration": 5,
+            "durationPVP": 5,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": -30,
+                  "rate": true
+               },
+               {
+                  "parameter": "attribute",
+                  "attribute": "slow"
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 2.2,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 23,
+            "maxAttack": 24,
+            "probability": 62,
+            "probabilityPVP": 62,
+            "consumedFP": 23,
+            "duration": 5,
+            "durationPVP": 5,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": -32,
+                  "rate": true
+               },
+               {
+                  "parameter": "attribute",
+                  "attribute": "slow"
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 2.22,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
             "minAttack": 24,
             "maxAttack": 25,
+            "probability": 64,
+            "probabilityPVP": 64,
+            "consumedFP": 24,
+            "duration": 5,
+            "durationPVP": 5,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": -34,
+                  "rate": true
+               },
+               {
+                  "parameter": "attribute",
+                  "attribute": "slow"
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 2.24,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 25,
+            "maxAttack": 26,
+            "probability": 66,
+            "probabilityPVP": 66,
+            "consumedFP": 24,
+            "duration": 5,
+            "durationPVP": 5,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": -36,
+                  "rate": true
+               },
+               {
+                  "parameter": "attribute",
+                  "attribute": "slow"
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 2.26,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 26,
+            "maxAttack": 27,
+            "probability": 68,
+            "probabilityPVP": 68,
+            "consumedFP": 25,
+            "duration": 5,
+            "durationPVP": 5,
+            "abilities": [
+               {
+                  "parameter": "speed",
+                  "add": -38,
+                  "rate": true
+               },
+               {
+                  "parameter": "attribute",
+                  "attribute": "slow"
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 2.28,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 27,
+            "maxAttack": 28,
             "probability": 70,
             "probabilityPVP": 70,
-            "consumedFP": 50,
+            "consumedFP": 25,
             "duration": 5,
             "durationPVP": 5,
             "abilities": [
@@ -43334,7 +45341,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.2,
+                  "scale": 2.3,
                   "pvp": true,
                   "pve": true
                }
@@ -43621,21 +45628,21 @@ export const skillsjson = [
    {
       "id": 7442,
       "name": {
-         "en": "Wind Master",
-         "ar": "Wind Master",
+         "en": "Wind Mastery",
+         "ar": "Wind Mastery",
          "br": "Mestre do Vento",
          "cns": "\u98ce\u7cfb\u4fee\u70bc",
          "de": "Wind Master",
-         "fi": "Wind Master",
-         "fil": "Wind Master",
+         "fi": "Wind Mastery",
+         "fil": "Wind Mastery",
          "fr": "Ma\u00eetre du vent",
-         "it": "Wind Master",
+         "it": "Wind Mastery",
          "kr": "\uc708\ub4dc \ub9c8\uc2a4\ud130",
          "nl": "Windmeester",
          "pl": "Mistrz Wiatru",
          "ru": "\u0412\u043b\u0430\u0441\u0442\u0435\u043b\u0438\u043d \u0432\u0435\u0442\u0440\u0430",
-         "sw": "Wind Master",
-         "th": "Wind Master"
+         "sw": "Wind Mastery",
+         "th": "Wind Mastery"
       },
       "description": {
          "en": "Increases the striking power of wind spells.",
@@ -43812,7 +45819,7 @@ export const skillsjson = [
          "ar": "Steal HP",
          "br": "Roubar HP",
          "cns": "\u5438\u8840",
-         "de": "Steal HP",
+         "de": "HP stehlen",
          "fi": "Steal HP",
          "fil": "Steal HP",
          "fr": "Siphon de vie",
@@ -44213,21 +46220,21 @@ export const skillsjson = [
          "th": "Heap Up"
       },
       "description": {
-         "en": "Increases the physical strength of the target.",
-         "ar": "Increases the physical strength of the target.",
+         "en": "Increases STR of the target.",
+         "ar": "Increases STR of the target.",
          "br": "Aumenta a resist\u00eancia f\u00edsica e a quantidade de vida.",
          "cns": "\u6682\u65f6\u63d0\u9ad8\u65bd\u6cd5\u5bf9\u8c61\u7684\u4f53\u8d28\u3002",
          "de": "Erh\u00f6ht die physische St\u00e4rke des angew\u00e4hlten Spielers.",
          "fi": "Kasvattaa kohteen fyysist\u00e4 voimaa.",
-         "fil": "Increases the physical strength of the target.",
+         "fil": "Increases STR of the target.",
          "fr": "Augmente l'endurance de la cible",
-         "it": "Increases the physical strength of the target.",
+         "it": "Increases STR of the target.",
          "kr": "\ub300\uc0c1\uc758 \uccb4\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
-         "nl": "Increases the physical strength of the target.",
+         "nl": "Increases STR of the target.",
          "pl": "Zwi\u0119ksza STA celu.",
          "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0432\u044b\u043d\u043e\u0441\u043b\u0438\u0432\u043e\u0441\u0442\u044c \u0446\u0435\u043b\u0438.",
-         "sw": "Increases the physical strength of the target.",
-         "th": "Increases the physical strength of the target."
+         "sw": "Increases STR of the target.",
+         "th": "Increases STR of the target."
       },
       "icon": "asscheheapup.png",
       "class": 8962,
@@ -44556,7 +46563,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "sta",
-                  "add": 12,
+                  "add": 11,
                   "rate": false
                }
             ],
@@ -44586,7 +46593,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "sta",
-                  "add": 14,
+                  "add": 12,
                   "rate": false
                }
             ],
@@ -44616,7 +46623,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "sta",
-                  "add": 16,
+                  "add": 13,
                   "rate": false
                }
             ],
@@ -44646,7 +46653,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "sta",
-                  "add": 18,
+                  "add": 14,
                   "rate": false
                }
             ],
@@ -44676,7 +46683,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "sta",
-                  "add": 20,
+                  "add": 15,
                   "rate": false
                }
             ],
@@ -44706,7 +46713,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "sta",
-                  "add": 22,
+                  "add": 16,
                   "rate": false
                }
             ],
@@ -44736,7 +46743,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "sta",
-                  "add": 24,
+                  "add": 17,
                   "rate": false
                }
             ],
@@ -44766,7 +46773,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "sta",
-                  "add": 26,
+                  "add": 18,
                   "rate": false
                }
             ],
@@ -44796,7 +46803,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "sta",
-                  "add": 28,
+                  "add": 19,
                   "rate": false
                }
             ],
@@ -44826,7 +46833,7 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "sta",
-                  "add": 30,
+                  "add": 20,
                   "rate": false
                }
             ],
@@ -44872,9 +46879,9 @@ export const skillsjson = [
       "description": {
          "en": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
          "ar": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
-         "br": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
-         "cns": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
-         "de": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
+         "br": "Causa danos nos inimigos ao redor com uma tempestade de gelo e tem chance de atordoar o alvo.",
+         "cns": "\u501f\u52a9\u81ea\u7136\u754c\u6c34\u571f\u4e4b\u529b\u5f15\u53d1\u7684\u96ea\u5d29\uff0c\u6e05\u626b\u4e00\u5207\uff0c\u4e00\u5b9a\u51e0\u7387\u4f7f\u88ab\u6253\u4e2d\u7684\u76ee\u6807\u9677\u5165\u7729\u6655\u4e4b\u4e2d\u3002",
+         "de": "Mehreren Gegnern Schaden zuf\u00fcgen, indem man einen Blizzard herbeiruft. Kleine Chance die Gegner dabei zu bet\u00e4uben.",
          "fi": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
          "fil": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
          "fr": "Damages surrounding enemies with a snowstorm. Chance to Stun.",
@@ -45246,7 +47253,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.02,
+                  "scale": 4.02,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 1.02,
                   "pvp": true,
                   "pve": true
                }
@@ -45262,7 +47276,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.04,
+                  "scale": 4.04,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 1.04,
                   "pvp": true,
                   "pve": true
                }
@@ -45278,7 +47299,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.06,
+                  "scale": 4.06,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 1.06,
                   "pvp": true,
                   "pve": true
                }
@@ -45294,7 +47322,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.08,
+                  "scale": 4.08,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 1.08,
                   "pvp": true,
                   "pve": true
                }
@@ -45310,7 +47345,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.1,
+                  "scale": 4.1,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 1.1,
                   "pvp": true,
                   "pve": true
                }
@@ -45326,7 +47368,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.12,
+                  "scale": 4.12,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 1.12,
                   "pvp": true,
                   "pve": true
                }
@@ -45342,7 +47391,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.14,
+                  "scale": 4.14,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 1.14,
                   "pvp": true,
                   "pve": true
                }
@@ -45358,7 +47414,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.16,
+                  "scale": 4.16,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 1.16,
                   "pvp": true,
                   "pve": true
                }
@@ -45374,7 +47437,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.18,
+                  "scale": 4.18,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 1.18,
                   "pvp": true,
                   "pve": true
                }
@@ -45390,7 +47460,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.2,
+                  "scale": 4.2,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 1.2,
                   "pvp": true,
                   "pve": true
                }
@@ -45406,7 +47483,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.22,
+                  "scale": 4.22,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 1.22,
                   "pvp": true,
                   "pve": true
                }
@@ -45422,7 +47506,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.24,
+                  "scale": 4.24,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 1.24,
                   "pvp": true,
                   "pve": true
                }
@@ -45438,7 +47529,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.26,
+                  "scale": 4.26,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 1.26,
                   "pvp": true,
                   "pve": true
                }
@@ -45454,7 +47552,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.28,
+                  "scale": 4.28,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 1.28,
                   "pvp": true,
                   "pve": true
                }
@@ -45470,7 +47575,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.3,
+                  "scale": 4.3,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 1.3,
                   "pvp": true,
                   "pve": true
                }
@@ -45486,7 +47598,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.32,
+                  "scale": 4.32,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 1.32,
                   "pvp": true,
                   "pve": true
                }
@@ -45502,7 +47621,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.34,
+                  "scale": 4.34,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 1.34,
                   "pvp": true,
                   "pve": true
                }
@@ -45518,7 +47644,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.36,
+                  "scale": 4.36,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 1.36,
                   "pvp": true,
                   "pve": true
                }
@@ -45534,7 +47667,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.38,
+                  "scale": 4.38,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 1.38,
                   "pvp": true,
                   "pve": true
                }
@@ -45550,7 +47690,14 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.4,
+                  "scale": 4.4,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 1.4,
                   "pvp": true,
                   "pve": true
                }
@@ -45797,9 +47944,9 @@ export const skillsjson = [
       "description": {
          "en": "Increased arrow strike.",
          "ar": "Increased arrow strike.",
-         "br": "Increased arrow strike.",
-         "cns": "Increased arrow strike.",
-         "de": "Increased arrow strike.",
+         "br": "Um tiro perfurante de grande impacto.",
+         "cns": "\u5f3a\u529b\u7684\u5c04\u51fb\u80fd\u591f\u8d2f\u7a7f\u540c\u4e00\u76f4\u7ebf\u4e0a\u7684\u591a\u4e2a\u654c\u4eba\u3002\u63d0\u5347\u5f13\u7bad\u4f24\u5bb3\u3002",
+         "de": "Verst\u00e4rkter Pfeilangriff.",
          "fi": "Increased arrow strike.",
          "fil": "Increased arrow strike.",
          "fr": "Increased arrow strike.",
@@ -45832,150 +47979,150 @@ export const skillsjson = [
       "skillPoints": 3,
       "levels": [
          {
-            "minAttack": 105,
-            "maxAttack": 106,
+            "minAttack": 135,
+            "maxAttack": 136,
             "consumedMP": 42,
             "cooldown": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 5.02,
+                  "scale": 6.02,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 106,
-            "maxAttack": 107,
+            "minAttack": 136,
+            "maxAttack": 137,
             "consumedMP": 44,
             "cooldown": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 5.04,
+                  "scale": 6.04,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 107,
-            "maxAttack": 108,
+            "minAttack": 137,
+            "maxAttack": 138,
             "consumedMP": 46,
             "cooldown": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 5.06,
+                  "scale": 6.06,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 108,
-            "maxAttack": 109,
+            "minAttack": 138,
+            "maxAttack": 139,
             "consumedMP": 48,
             "cooldown": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 5.08,
+                  "scale": 6.08,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 109,
-            "maxAttack": 110,
+            "minAttack": 139,
+            "maxAttack": 140,
             "consumedMP": 50,
             "cooldown": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 5.1,
+                  "scale": 6.1,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 110,
-            "maxAttack": 111,
+            "minAttack": 140,
+            "maxAttack": 141,
             "consumedMP": 52,
             "cooldown": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 5.12,
+                  "scale": 6.12,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 111,
-            "maxAttack": 112,
+            "minAttack": 141,
+            "maxAttack": 142,
             "consumedMP": 54,
             "cooldown": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 5.14,
+                  "scale": 6.14,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 112,
-            "maxAttack": 113,
+            "minAttack": 142,
+            "maxAttack": 143,
             "consumedMP": 56,
             "cooldown": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 5.16,
+                  "scale": 6.16,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 113,
-            "maxAttack": 114,
+            "minAttack": 143,
+            "maxAttack": 144,
             "consumedMP": 58,
             "cooldown": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 5.18,
+                  "scale": 6.18,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 114,
-            "maxAttack": 115,
+            "minAttack": 144,
+            "maxAttack": 145,
             "consumedMP": 60,
             "cooldown": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 5.2,
+                  "scale": 6.2,
                   "pvp": true,
                   "pve": true
                }
@@ -46045,7 +48192,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 0.82,
+                  "scale": 0.42,
                   "pvp": true,
                   "pve": true
                }
@@ -46059,7 +48206,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 0.84,
+                  "scale": 0.44,
                   "pvp": true,
                   "pve": true
                }
@@ -46073,7 +48220,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 0.86,
+                  "scale": 0.46,
                   "pvp": true,
                   "pve": true
                }
@@ -46087,7 +48234,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 0.88,
+                  "scale": 0.48,
                   "pvp": true,
                   "pve": true
                }
@@ -46101,7 +48248,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 0.9,
+                  "scale": 0.5,
                   "pvp": true,
                   "pve": true
                }
@@ -46115,7 +48262,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 0.92,
+                  "scale": 0.52,
                   "pvp": true,
                   "pve": true
                }
@@ -46129,7 +48276,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 0.94,
+                  "scale": 0.54,
                   "pvp": true,
                   "pve": true
                }
@@ -46143,7 +48290,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 0.96,
+                  "scale": 0.56,
                   "pvp": true,
                   "pve": true
                }
@@ -46157,7 +48304,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 0.98,
+                  "scale": 0.58,
                   "pvp": true,
                   "pve": true
                }
@@ -46171,7 +48318,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 1,
+                  "scale": 0.6,
                   "pvp": true,
                   "pve": true
                }
@@ -46199,21 +48346,21 @@ export const skillsjson = [
          "th": "Burn"
       },
       "description": {
-         "en": "Damages your target continuously over time.",
-         "ar": "Damages your target continuously over time.",
+         "en": "Damages the target continuously over time.",
+         "ar": "Damages the target continuously over time.",
          "br": "Causa dano ao seu alvo continuamente com o tempo.",
          "cns": "\u5728\u4e00\u5b9a\u65f6\u95f4\u5185\uff0c\u53d7\u5230\u6301\u7eed\u6027\u7684\u4f24\u5bb3\u3002",
          "de": "F\u00fcgt dem Ziel \u00fcber einen gewissen Zeitraum nach und nach Schaden zu.",
-         "fi": "Damages your target continuously over time.",
-         "fil": "Damages your target continuously over time.",
+         "fi": "Damages the target continuously over time.",
+         "fil": "Damages the target continuously over time.",
          "fr": "Inflige de gros d\u00e9g\u00e2ts de feu au cours du temps.",
-         "it": "Damages your target continuously over time.",
+         "it": "Damages the target continuously over time.",
          "kr": "\uc77c\uc815 \uc2dc\uac04\ub3d9\uc548 \ub300\uc0c1\uc5d0\uac8c \uc9c0\uc18d\uc801\uc778 \ud53c\ud574\ub97c \uc785\ud799\ub2c8\ub2e4.",
-         "nl": "Damages your target continuously over time.",
+         "nl": "Damages the target continuously over time.",
          "pl": "Cel otrzymuje ci\u0105g\u0142e obra\u017cenia.",
          "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u044b\u0439 \u0443\u0440\u043e\u043d.",
-         "sw": "Damages your target continuously over time.",
-         "th": "Damages your target continuously over time."
+         "sw": "Damages the target continuously over time.",
+         "th": "Damages the target continuously over time."
       },
       "icon": "burn.png",
       "level": 1,
@@ -46306,7 +48453,7 @@ export const skillsjson = [
             "maxAttack": 42,
             "probability": 50,
             "probabilityPVP": 50,
-            "consumedMP": 62,
+            "consumedMP": 82,
             "casting": 0.6,
             "duration": 6,
             "durationPVP": 6,
@@ -46337,7 +48484,7 @@ export const skillsjson = [
             "maxAttack": 44,
             "probability": 60,
             "probabilityPVP": 60,
-            "consumedMP": 64,
+            "consumedMP": 84,
             "casting": 0.6,
             "duration": 7,
             "durationPVP": 7,
@@ -46368,7 +48515,7 @@ export const skillsjson = [
             "maxAttack": 46,
             "probability": 65,
             "probabilityPVP": 65,
-            "consumedMP": 66,
+            "consumedMP": 86,
             "casting": 0.6,
             "duration": 8,
             "durationPVP": 8,
@@ -46399,7 +48546,7 @@ export const skillsjson = [
             "maxAttack": 48,
             "probability": 70,
             "probabilityPVP": 70,
-            "consumedMP": 68,
+            "consumedMP": 88,
             "casting": 0.6,
             "duration": 9,
             "durationPVP": 9,
@@ -46430,7 +48577,7 @@ export const skillsjson = [
             "maxAttack": 50,
             "probability": 75,
             "probabilityPVP": 75,
-            "consumedMP": 70,
+            "consumedMP": 90,
             "casting": 0.6,
             "duration": 10,
             "durationPVP": 10,
@@ -46461,7 +48608,7 @@ export const skillsjson = [
             "maxAttack": 52,
             "probability": 80,
             "probabilityPVP": 80,
-            "consumedMP": 72,
+            "consumedMP": 92,
             "casting": 0.6,
             "duration": 11,
             "durationPVP": 11,
@@ -46492,7 +48639,7 @@ export const skillsjson = [
             "maxAttack": 54,
             "probability": 85,
             "probabilityPVP": 85,
-            "consumedMP": 74,
+            "consumedMP": 94,
             "casting": 0.6,
             "duration": 12,
             "durationPVP": 12,
@@ -46523,7 +48670,7 @@ export const skillsjson = [
             "maxAttack": 56,
             "probability": 90,
             "probabilityPVP": 90,
-            "consumedMP": 76,
+            "consumedMP": 96,
             "casting": 0.6,
             "duration": 13,
             "durationPVP": 13,
@@ -46554,7 +48701,7 @@ export const skillsjson = [
             "maxAttack": 58,
             "probability": 95,
             "probabilityPVP": 95,
-            "consumedMP": 78,
+            "consumedMP": 98,
             "casting": 0.6,
             "duration": 14,
             "durationPVP": 14,
@@ -46583,7 +48730,7 @@ export const skillsjson = [
          {
             "minAttack": 59,
             "maxAttack": 60,
-            "consumedMP": 80,
+            "consumedMP": 100,
             "casting": 0.6,
             "duration": 15,
             "durationPVP": 15,
@@ -46631,21 +48778,21 @@ export const skillsjson = [
          "th": "Holycross"
       },
       "description": {
-         "en": "Target enemy takes double damage for a limited time.",
-         "ar": "Target enemy takes double damage for a limited time.",
+         "en": "Target enemy takes double damage in the next attack.",
+         "ar": "Target enemy takes double damage in the next attack.",
          "br": "Faz o alvo receber o dobro de dano por um tempo limitado.",
          "cns": "\u4f7f\u654c\u4eba\u65e0\u6761\u4ef6\u53d7\u5230\u53cc\u500d\u4f24\u5bb3\u3002",
          "de": "L\u00e4sst den Gegner zweifachen Schaden durch Einschr\u00e4nkungen erleiden.",
          "fi": "Kohde vihollinen ottaa rajoitetun ajan kaksinkertaista vahinkoa.",
-         "fil": "Target enemy takes double damage for a limited time.",
+         "fil": "Target enemy takes double damage in the next attack.",
          "fr": "Multiplie par deux les d\u00e9g\u00e2ts inflig\u00e9s par le prochain coup port\u00e9 \u00e0 la cible",
-         "it": "Target enemy takes double damage for a limited time.",
+         "it": "Target enemy takes double damage in the next attack.",
          "kr": "\uc801\uc5d0\uac8c \uc2e0\uc131\ud55c \uc18d\ubc15\uc744 \uac78\uc5b4 \ub2e4\uc74c \uacf5\uaca9\uc73c\ub85c 2\ubc30\uc758 \ub370\ubbf8\uc9c0\ub97c \uc785\ub3c4\ub85d \ub9cc\ub4ed\ub2c8\ub2e4.",
-         "nl": "Target enemy takes double damage for a limited time.",
+         "nl": "Target enemy takes double damage in the next attack.",
          "pl": "Cel otrzymuje podw\u00f3jne obra\u017cenia na pewien czas.",
          "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u043c\u044b\u0439 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0443 \u0443\u0440\u043e\u043d \u0443\u0434\u0432\u0430\u0438\u0432\u0430\u0435\u0442\u0441\u044f.",
-         "sw": "Target enemy takes double damage for a limited time.",
-         "th": "Target enemy takes double damage for a limited time."
+         "sw": "Target enemy takes double damage in the next attack.",
+         "th": "Target enemy takes double damage in the next attack."
       },
       "icon": "rinsupcross.png",
       "class": 9389,
@@ -46728,15 +48875,15 @@ export const skillsjson = [
          {
             "minAttack": 40,
             "maxAttack": 41,
-            "consumedMP": 70,
-            "cooldown": 15,
+            "consumedMP": 90,
+            "cooldown": 20,
             "casting": 0.1,
             "duration": 30,
             "durationPVP": 30,
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": -6,
+                  "add": -15,
                   "rate": true
                }
             ],
@@ -46754,15 +48901,15 @@ export const skillsjson = [
          {
             "minAttack": 41,
             "maxAttack": 42,
-            "consumedMP": 71,
-            "cooldown": 15,
+            "consumedMP": 91,
+            "cooldown": 20,
             "casting": 0.1,
             "duration": 30,
             "durationPVP": 30,
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": -7,
+                  "add": -17,
                   "rate": true
                }
             ],
@@ -46780,15 +48927,15 @@ export const skillsjson = [
          {
             "minAttack": 42,
             "maxAttack": 43,
-            "consumedMP": 72,
-            "cooldown": 15,
+            "consumedMP": 92,
+            "cooldown": 20,
             "casting": 0.1,
             "duration": 30,
             "durationPVP": 30,
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": -8,
+                  "add": -18,
                   "rate": true
                }
             ],
@@ -46806,15 +48953,15 @@ export const skillsjson = [
          {
             "minAttack": 43,
             "maxAttack": 44,
-            "consumedMP": 73,
-            "cooldown": 15,
+            "consumedMP": 93,
+            "cooldown": 20,
             "casting": 0.1,
             "duration": 30,
             "durationPVP": 30,
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": -9,
+                  "add": -19,
                   "rate": true
                }
             ],
@@ -46832,15 +48979,15 @@ export const skillsjson = [
          {
             "minAttack": 44,
             "maxAttack": 45,
-            "consumedMP": 74,
-            "cooldown": 15,
+            "consumedMP": 94,
+            "cooldown": 20,
             "casting": 0.1,
             "duration": 30,
             "durationPVP": 30,
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": -10,
+                  "add": -20,
                   "rate": true
                }
             ],
@@ -46858,15 +49005,15 @@ export const skillsjson = [
          {
             "minAttack": 45,
             "maxAttack": 46,
-            "consumedMP": 75,
-            "cooldown": 15,
+            "consumedMP": 100,
+            "cooldown": 20,
             "casting": 0.1,
             "duration": 30,
             "durationPVP": 30,
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": -11,
+                  "add": -21,
                   "rate": true
                }
             ],
@@ -46884,15 +49031,15 @@ export const skillsjson = [
          {
             "minAttack": 46,
             "maxAttack": 47,
-            "consumedMP": 76,
-            "cooldown": 15,
+            "consumedMP": 110,
+            "cooldown": 20,
             "casting": 0.1,
             "duration": 30,
             "durationPVP": 30,
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": -12,
+                  "add": -22,
                   "rate": true
                }
             ],
@@ -46910,15 +49057,15 @@ export const skillsjson = [
          {
             "minAttack": 47,
             "maxAttack": 48,
-            "consumedMP": 90,
-            "cooldown": 15,
+            "consumedMP": 120,
+            "cooldown": 20,
             "casting": 0.1,
             "duration": 30,
             "durationPVP": 30,
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": -13,
+                  "add": -23,
                   "rate": true
                }
             ],
@@ -46936,15 +49083,15 @@ export const skillsjson = [
          {
             "minAttack": 48,
             "maxAttack": 49,
-            "consumedMP": 100,
-            "cooldown": 15,
+            "consumedMP": 130,
+            "cooldown": 19,
             "casting": 0.1,
             "duration": 30,
             "durationPVP": 30,
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": -14,
+                  "add": -24,
                   "rate": true
                }
             ],
@@ -46962,15 +49109,15 @@ export const skillsjson = [
          {
             "minAttack": 49,
             "maxAttack": 50,
-            "consumedMP": 120,
-            "cooldown": 15,
+            "consumedMP": 150,
+            "cooldown": 18,
             "casting": 0.1,
             "duration": 30,
             "durationPVP": 30,
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": -15,
+                  "add": -25,
                   "rate": true
                }
             ],
@@ -46980,6 +49127,858 @@ export const skillsjson = [
                   "parameter": "attack",
                   "stat": "int",
                   "scale": 4.7,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "id": 8203,
+      "name": {
+         "en": "Moon Beam",
+         "ar": "Moon Beam",
+         "br": "Moon Beam",
+         "cns": "Moon Beam",
+         "de": "Moon Beam",
+         "fi": "Moon Beam",
+         "fil": "Moon Beam",
+         "fr": "Moon Beam",
+         "it": "Moon Beam",
+         "kr": "Moon Beam",
+         "nl": "Moon Beam",
+         "pl": "Moon Beam",
+         "ru": "Moon Beam",
+         "sw": "Moon Beam",
+         "th": "Moon Beam"
+      },
+      "description": {
+         "en": "Calls upon the moon to weaken the target. All damage done to the target while this de-buff is active is increased.",
+         "ar": "Calls upon the moon to weaken the target. All damage done to the target while this de-buff is active is increased.",
+         "br": "Calls upon the moon to weaken the target. All damage done to the target while this de-buff is active is increased.",
+         "cns": "Calls upon the moon to weaken the target. All damage done to the target while this de-buff is active is increased.",
+         "de": "Calls upon the moon to weaken the target. All damage done to the target while this de-buff is active is increased.",
+         "fi": "Calls upon the moon to weaken the target. All damage done to the target while this de-buff is active is increased.",
+         "fil": "Calls upon the moon to weaken the target. All damage done to the target while this de-buff is active is increased.",
+         "fr": "Calls upon the moon to weaken the target. All damage done to the target while this de-buff is active is increased.",
+         "it": "Calls upon the moon to weaken the target. All damage done to the target while this de-buff is active is increased.",
+         "kr": "Calls upon the moon to weaken the target. All damage done to the target while this de-buff is active is increased.",
+         "nl": "Calls upon the moon to weaken the target. All damage done to the target while this de-buff is active is increased.",
+         "pl": "Calls upon the moon to weaken the target. All damage done to the target while this de-buff is active is increased.",
+         "ru": "Calls upon the moon to weaken the target. All damage done to the target while this de-buff is active is increased.",
+         "sw": "Calls upon the moon to weaken the target. All damage done to the target while this de-buff is active is increased.",
+         "th": "Calls upon the moon to weaken the target. All damage done to the target while this de-buff is active is increased."
+      },
+      "icon": "asschemoonbeam.png",
+      "class": 8962,
+      "level": 15,
+      "element": "none",
+      "magic": true,
+      "requirements": [],
+      "weapon": "stick",
+      "combo": "general",
+      "debuff": true,
+      "flying": true,
+      "passive": false,
+      "target": "single",
+      "skillPoints": 2,
+      "levels": [
+         {
+            "damageMultiplier": 0.12,
+            "minAttack": 35,
+            "maxAttack": 36,
+            "dotTick": 1,
+            "consumedMP": 40,
+            "cooldown": 10,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "moonbeam",
+                  "dotMode": "currentdamage",
+                  "dotValue": 100
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 1,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.82,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 0.03,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.12,
+            "minAttack": 35,
+            "maxAttack": 36,
+            "dotTick": 1,
+            "consumedMP": 40,
+            "cooldown": 9,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "moonbeam",
+                  "dotMode": "currentdamage",
+                  "dotValue": 100
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 2,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.84,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 0.03,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.12,
+            "minAttack": 36,
+            "maxAttack": 37,
+            "dotTick": 1,
+            "consumedMP": 42,
+            "cooldown": 9,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "moonbeam",
+                  "dotMode": "currentdamage",
+                  "dotValue": 100
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 2,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.86,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 0.03,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.12,
+            "minAttack": 36,
+            "maxAttack": 37,
+            "dotTick": 1,
+            "consumedMP": 42,
+            "cooldown": 9,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "moonbeam",
+                  "dotMode": "currentdamage",
+                  "dotValue": 100
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 2,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.88,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 0.03,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.12,
+            "minAttack": 37,
+            "maxAttack": 38,
+            "dotTick": 1,
+            "consumedMP": 44,
+            "cooldown": 8,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "moonbeam",
+                  "dotMode": "currentdamage",
+                  "dotValue": 100
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 3,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.9,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 0.03,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.12,
+            "minAttack": 37,
+            "maxAttack": 38,
+            "dotTick": 1,
+            "consumedMP": 44,
+            "cooldown": 8,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "moonbeam",
+                  "dotMode": "currentdamage",
+                  "dotValue": 100
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 3,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.92,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 0.03,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.12,
+            "minAttack": 38,
+            "maxAttack": 39,
+            "dotTick": 1,
+            "consumedMP": 46,
+            "cooldown": 8,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "moonbeam",
+                  "dotMode": "currentdamage",
+                  "dotValue": 100
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 3,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.94,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 0.03,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.12,
+            "minAttack": 38,
+            "maxAttack": 39,
+            "dotTick": 1,
+            "consumedMP": 46,
+            "cooldown": 8,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "moonbeam",
+                  "dotMode": "currentdamage",
+                  "dotValue": 100
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 4,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.96,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 0.03,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.12,
+            "minAttack": 39,
+            "maxAttack": 40,
+            "dotTick": 1,
+            "consumedMP": 48,
+            "cooldown": 8,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "moonbeam",
+                  "dotMode": "currentdamage",
+                  "dotValue": 100
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 4,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 2.98,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 0.03,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.12,
+            "minAttack": 39,
+            "maxAttack": 40,
+            "dotTick": 1,
+            "consumedMP": 48,
+            "cooldown": 7,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "moonbeam",
+                  "dotMode": "currentdamage",
+                  "dotValue": 100
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 4,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 0.03,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.12,
+            "minAttack": 40,
+            "maxAttack": 41,
+            "dotTick": 1,
+            "consumedMP": 50,
+            "cooldown": 7,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "moonbeam",
+                  "dotMode": "currentdamage",
+                  "dotValue": 100
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 5,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.02,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 0.03,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.12,
+            "minAttack": 40,
+            "maxAttack": 41,
+            "dotTick": 1,
+            "consumedMP": 50,
+            "cooldown": 7,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "moonbeam",
+                  "dotMode": "currentdamage",
+                  "dotValue": 100
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 5,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.04,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 0.03,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.12,
+            "minAttack": 41,
+            "maxAttack": 42,
+            "dotTick": 1,
+            "consumedMP": 52,
+            "cooldown": 7,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "moonbeam",
+                  "dotMode": "currentdamage",
+                  "dotValue": 100
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 5,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.06,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 0.03,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.12,
+            "minAttack": 41,
+            "maxAttack": 42,
+            "dotTick": 1,
+            "consumedMP": 52,
+            "cooldown": 7,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "moonbeam",
+                  "dotMode": "currentdamage",
+                  "dotValue": 100
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 6,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.08,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 0.03,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.12,
+            "minAttack": 42,
+            "maxAttack": 43,
+            "dotTick": 1,
+            "consumedMP": 54,
+            "cooldown": 6,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "moonbeam",
+                  "dotMode": "currentdamage",
+                  "dotValue": 100
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 6,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.1,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 0.03,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.12,
+            "minAttack": 43,
+            "maxAttack": 44,
+            "dotTick": 1,
+            "consumedMP": 54,
+            "cooldown": 6,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "moonbeam",
+                  "dotMode": "currentdamage",
+                  "dotValue": 100
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 6,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.12,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 0.03,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.12,
+            "minAttack": 44,
+            "maxAttack": 45,
+            "dotTick": 1,
+            "consumedMP": 56,
+            "cooldown": 6,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "moonbeam",
+                  "dotMode": "currentdamage",
+                  "dotValue": 100
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 7,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.14,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 0.03,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.12,
+            "minAttack": 45,
+            "maxAttack": 46,
+            "dotTick": 1,
+            "consumedMP": 56,
+            "cooldown": 6,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "moonbeam",
+                  "dotMode": "currentdamage",
+                  "dotValue": 100
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 7,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.16,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 0.03,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.12,
+            "minAttack": 47,
+            "maxAttack": 48,
+            "dotTick": 1,
+            "consumedMP": 58,
+            "cooldown": 6,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "moonbeam",
+                  "dotMode": "currentdamage",
+                  "dotValue": 100
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 7,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.18,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 0.03,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.12,
+            "minAttack": 49,
+            "maxAttack": 50,
+            "dotTick": 1,
+            "consumedMP": 60,
+            "cooldown": 5,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "moonbeam",
+                  "dotMode": "currentdamage",
+                  "dotValue": 100
+               },
+               {
+                  "parameter": "incomingdamage",
+                  "add": 8,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "int",
+                  "scale": 3.2,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "duration",
+                  "stat": "int",
+                  "scale": 0.03,
                   "pvp": true,
                   "pve": true
                }
@@ -47007,21 +50006,21 @@ export const skillsjson = [
          "th": "Merkaba Hanzelrusha"
       },
       "description": {
-         "en": "Enemies take damage in an area around you.",
-         "ar": "Enemies take damage in an area around you.",
+         "en": "Enemies take damage over time in an area around you.",
+         "ar": "Enemies take damage over time in an area around you.",
          "br": "Os inimigos sofrem danos em uma \u00e1rea ao seu redor.",
          "cns": "\u5728\u5723\u4e4b\u5149\u7167\u5c04\u4e0b\u5f62\u6210\u5177\u6709\u5723\u529b\u7684\u9886\u57df\uff0c\u6253\u51fb\u8e0f\u5165\u9886\u57df\u7684\u654c\u4eba\u3002",
          "de": "Zieht einen heiligen Bereich um dich. Gegner erleiden in diesem Bereich Schaden.",
          "fi": "L\u00e4heiset viholliset ottavat vahinkoa.",
-         "fil": "Enemies take damage in an area around you.",
+         "fil": "Enemies take damage over time in an area around you.",
          "fr": "Attaque ancestrale qui inflige des d\u00e9g\u00e2ts \u00e0 r\u00e9p\u00e9tition \u00e0 tous les ennemis situ\u00e9s \u00e0 proximit\u00e9 du Pr\u00eatre",
-         "it": "Enemies take damage in an area around you.",
+         "it": "Enemies take damage over time in an area around you.",
          "kr": "\uc790\uc2e0\uc758 \uc8fc\ubcc0\uc5d0 \uc131\uc2a4\ub7ec\uc6b4 \uc601\uc5ed\uc744 \ud615\uc131\ud558\uc5ec \ubc94\uc704\uc548\uc5d0 \ub4e4\uc5b4\uc624\ub294 \uc801\uc5d0\uac8c \ub370\ubbf8\uc9c0\ub97c \uc90d\ub2c8\ub2e4.",
-         "nl": "Enemies take damage in an area around you.",
+         "nl": "Enemies take damage over time in an area around you.",
          "pl": "Stwarza na ziemi pole energii, kt\u00f3re zadaje obra\u017cenia co pewien czas wszystkim wrogom w zasi\u0119gu.",
          "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0443\u0440\u043e\u043d \u043f\u043e \u043e\u0431\u043b\u0430\u0441\u0442\u0438.",
-         "sw": "Enemies take damage in an area around you.",
-         "th": "Enemies take damage in an area around you."
+         "sw": "Enemies take damage over time in an area around you.",
+         "th": "Enemies take damage over time in an area around you."
       },
       "icon": "rinsupanzelr.png",
       "class": 9389,
@@ -47044,11 +50043,12 @@ export const skillsjson = [
       "skillPoints": 3,
       "levels": [
          {
-            "minAttack": 116,
-            "maxAttack": 117,
-            "dotTick": 1.5,
+            "damageMultiplier": 0.55,
+            "minAttack": 90,
+            "maxAttack": 91,
+            "dotTick": 0.75,
             "consumedMP": 65,
-            "cooldown": 9.5,
+            "cooldown": 8.5,
             "casting": 0.625,
             "duration": 10,
             "durationPVP": 10,
@@ -47057,18 +50057,19 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 3.02,
+                  "scale": 3.82,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 118,
-            "maxAttack": 119,
-            "dotTick": 1.5,
+            "damageMultiplier": 0.55,
+            "minAttack": 91,
+            "maxAttack": 92,
+            "dotTick": 0.75,
             "consumedMP": 70,
-            "cooldown": 9.5,
+            "cooldown": 8.5,
             "casting": 0.625,
             "duration": 10,
             "durationPVP": 10,
@@ -47077,18 +50078,19 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 3.04,
+                  "scale": 3.84,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 120,
-            "maxAttack": 121,
-            "dotTick": 1.5,
+            "damageMultiplier": 0.55,
+            "minAttack": 92,
+            "maxAttack": 93,
+            "dotTick": 0.75,
             "consumedMP": 75,
-            "cooldown": 9.5,
+            "cooldown": 8.5,
             "casting": 0.625,
             "duration": 10,
             "durationPVP": 10,
@@ -47097,18 +50099,19 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 3.06,
+                  "scale": 3.86,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 122,
-            "maxAttack": 123,
-            "dotTick": 1.5,
+            "damageMultiplier": 0.55,
+            "minAttack": 93,
+            "maxAttack": 94,
+            "dotTick": 0.75,
             "consumedMP": 80,
-            "cooldown": 9.5,
+            "cooldown": 8.5,
             "casting": 0.625,
             "duration": 10,
             "durationPVP": 10,
@@ -47117,18 +50120,19 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 3.08,
+                  "scale": 3.88,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 124,
-            "maxAttack": 125,
-            "dotTick": 1.5,
+            "damageMultiplier": 0.55,
+            "minAttack": 94,
+            "maxAttack": 95,
+            "dotTick": 0.75,
             "consumedMP": 85,
-            "cooldown": 9.5,
+            "cooldown": 8.5,
             "casting": 0.625,
             "duration": 10,
             "durationPVP": 10,
@@ -47137,18 +50141,19 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 3.1,
+                  "scale": 3.9,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 125,
-            "maxAttack": 126,
-            "dotTick": 1.5,
+            "damageMultiplier": 0.55,
+            "minAttack": 95,
+            "maxAttack": 96,
+            "dotTick": 0.75,
             "consumedMP": 90,
-            "cooldown": 9,
+            "cooldown": 8,
             "casting": 0.625,
             "duration": 10,
             "durationPVP": 10,
@@ -47157,18 +50162,19 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 3.12,
+                  "scale": 3.92,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 126,
-            "maxAttack": 127,
-            "dotTick": 1.5,
+            "damageMultiplier": 0.55,
+            "minAttack": 96,
+            "maxAttack": 97,
+            "dotTick": 0.75,
             "consumedMP": 95,
-            "cooldown": 8.5,
+            "cooldown": 7.5,
             "casting": 0.625,
             "duration": 10,
             "durationPVP": 10,
@@ -47177,18 +50183,19 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 3.14,
+                  "scale": 3.94,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 127,
-            "maxAttack": 128,
-            "dotTick": 1.5,
+            "damageMultiplier": 0.55,
+            "minAttack": 97,
+            "maxAttack": 98,
+            "dotTick": 0.75,
             "consumedMP": 100,
-            "cooldown": 8.5,
+            "cooldown": 7.5,
             "casting": 0.625,
             "duration": 10,
             "durationPVP": 10,
@@ -47197,18 +50204,19 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 3.16,
+                  "scale": 3.96,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 128,
-            "maxAttack": 129,
-            "dotTick": 1.5,
+            "damageMultiplier": 0.55,
+            "minAttack": 98,
+            "maxAttack": 99,
+            "dotTick": 0.75,
             "consumedMP": 105,
-            "cooldown": 8,
+            "cooldown": 7,
             "casting": 0.625,
             "duration": 10,
             "durationPVP": 10,
@@ -47217,18 +50225,19 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 3.18,
+                  "scale": 3.98,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 129,
-            "maxAttack": 130,
-            "dotTick": 1.5,
+            "damageMultiplier": 0.55,
+            "minAttack": 99,
+            "maxAttack": 100,
+            "dotTick": 0.75,
             "consumedMP": 115,
-            "cooldown": 8,
+            "cooldown": 7,
             "casting": 0.625,
             "duration": 10,
             "durationPVP": 10,
@@ -47237,7 +50246,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "int",
-                  "scale": 3.2,
+                  "scale": 4,
                   "pvp": true,
                   "pve": true
                }
@@ -47256,7 +50265,7 @@ export const skillsjson = [
          "fi": "Cross Strike",
          "fil": "Cross Strike",
          "fr": "Mutilation",
-         "it": "Cross Strike",
+         "it": "Devastazione",
          "kr": "\ud06c\ub85c\uc2a4 \uc2a4\ud2b8\ub77c\uc774\ud06c",
          "nl": "Cross Strike",
          "pl": "Krzy\u017cowe Ci\u0119cie",
@@ -47265,21 +50274,21 @@ export const skillsjson = [
          "th": "Cross Strike"
       },
       "description": {
-         "en": "Powerful strike using two Weapons.",
-         "ar": "Powerful strike using two Weapons.",
+         "en": "Powerful strike using two weapons.",
+         "ar": "Powerful strike using two weapons.",
          "br": "Um golpe poderoso usando as duas armas.",
          "cns": "\u5c06\u53cc\u6b66\u5668\u4ea4\u9519\u5288\u5411\u5bf9\u65b9\uff0c\u5728\u5bf9\u65b9\u8eab\u4f53\u4e0a\u7559\u4e0b\u6c38\u6052\u7684\u5341\u5b57\u8bb0\u53f7",
          "de": "Den Gegner mit zwei Einhandwaffen angreifen.",
          "fi": "Voimakas isku k\u00e4ytt\u00e4en kahta Asetta.",
-         "fil": "Powerful strike using two Weapons.",
+         "fil": "Powerful strike using two weapons.",
          "fr": "Attaque meurtri\u00e8re qui utilise les deux armes de l'Assassin pour infliger le maximum de d\u00e9g\u00e2ts",
-         "it": "Powerful strike using two Weapons.",
+         "it": "Attacco mortale che utilizza le due armi dell'Assassino.",
          "kr": "\uc591\uc190\uc758 \ubb34\uae30\ub97c X\uc790\ub85c \uad50\ucc28\uc2dc\ud0a4\uba70 \uc801\uc744 \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
-         "nl": "Powerful strike using two Weapons.",
+         "nl": "Powerful strike using two weapons.",
          "pl": "Tnie przeciwnika na krzy\u017c za pomoc\u0105 dw\u00f3ch broni.",
          "ru": "\u0423\u0434\u0430\u0440 \u0434\u0432\u0443\u043c\u044f \u043a\u043b\u0438\u043d\u043a\u0430\u043c\u0438 \u043e\u0434\u043d\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u043e.",
-         "sw": "Powerful strike using two Weapons.",
-         "th": "Powerful strike using two Weapons."
+         "sw": "Powerful strike using two weapons.",
+         "th": "Powerful strike using two weapons."
       },
       "icon": "blddblcross.png",
       "class": 2246,
@@ -47300,160 +50309,180 @@ export const skillsjson = [
       "skillPoints": 3,
       "levels": [
          {
-            "minAttack": 121,
-            "maxAttack": 122,
+            "damageMultiplier": 1.25,
+            "flyBackProbability": 30,
+            "minAttack": 210,
+            "maxAttack": 211,
             "consumedFP": 90,
-            "cooldown": 8,
+            "cooldown": 29,
             "casting": 1.25,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 6.52,
+                  "scale": 7.02,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 123,
-            "maxAttack": 124,
+            "damageMultiplier": 1.25,
+            "flyBackProbability": 35,
+            "minAttack": 211,
+            "maxAttack": 212,
             "consumedFP": 93,
-            "cooldown": 8,
+            "cooldown": 28,
             "casting": 1.25,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 6.54,
+                  "scale": 7.04,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 125,
-            "maxAttack": 126,
+            "damageMultiplier": 1.25,
+            "flyBackProbability": 40,
+            "minAttack": 212,
+            "maxAttack": 213,
             "consumedFP": 96,
-            "cooldown": 8,
+            "cooldown": 27,
             "casting": 1.25,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 6.56,
+                  "scale": 7.06,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 127,
-            "maxAttack": 128,
+            "damageMultiplier": 1.25,
+            "flyBackProbability": 45,
+            "minAttack": 213,
+            "maxAttack": 214,
             "consumedFP": 99,
-            "cooldown": 8,
+            "cooldown": 26,
             "casting": 1.25,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 6.58,
+                  "scale": 7.08,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 129,
-            "maxAttack": 130,
+            "damageMultiplier": 1.25,
+            "flyBackProbability": 50,
+            "minAttack": 214,
+            "maxAttack": 215,
             "consumedFP": 102,
-            "cooldown": 8,
+            "cooldown": 25,
             "casting": 1.25,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 6.6,
+                  "scale": 7.1,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 131,
-            "maxAttack": 132,
+            "damageMultiplier": 1.25,
+            "flyBackProbability": 60,
+            "minAttack": 215,
+            "maxAttack": 216,
             "consumedFP": 105,
-            "cooldown": 8,
+            "cooldown": 24,
             "casting": 1.25,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 6.62,
+                  "scale": 7.12,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 133,
-            "maxAttack": 134,
+            "damageMultiplier": 1.25,
+            "flyBackProbability": 70,
+            "minAttack": 216,
+            "maxAttack": 217,
             "consumedFP": 108,
-            "cooldown": 8,
+            "cooldown": 23,
             "casting": 1.25,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 6.64,
+                  "scale": 7.14,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 135,
-            "maxAttack": 136,
+            "damageMultiplier": 1.25,
+            "flyBackProbability": 80,
+            "minAttack": 217,
+            "maxAttack": 218,
             "consumedFP": 111,
-            "cooldown": 8,
+            "cooldown": 22,
             "casting": 1.25,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 6.66,
+                  "scale": 7.16,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 137,
-            "maxAttack": 138,
+            "damageMultiplier": 1.25,
+            "flyBackProbability": 90,
+            "minAttack": 218,
+            "maxAttack": 219,
             "consumedFP": 114,
-            "cooldown": 8,
+            "cooldown": 21,
             "casting": 1.25,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 6.68,
+                  "scale": 7.18,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 144,
-            "maxAttack": 145,
+            "damageMultiplier": 1.25,
+            "flyBackProbability": 100,
+            "minAttack": 219,
+            "maxAttack": 220,
             "consumedFP": 117,
-            "cooldown": 8,
+            "cooldown": 20,
             "casting": 1.25,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 6.7,
+                  "scale": 7.2,
                   "pvp": true,
                   "pve": true
                }
@@ -47514,9 +50543,9 @@ export const skillsjson = [
             "durationPVP": 60,
             "abilities": [
                {
-                  "parameter": "def",
-                  "add": 300,
-                  "rate": false
+                  "parameter": "incomingdamage",
+                  "add": -30,
+                  "rate": true
                }
             ]
          }
@@ -47728,7 +50757,7 @@ export const skillsjson = [
          {
             "minAttack": 99,
             "maxAttack": 100,
-            "consumedMP": 100,
+            "consumedMP": 120,
             "casting": 0.6,
             "spellRange": 5,
             "scalingParameters": [
@@ -47746,21 +50775,21 @@ export const skillsjson = [
    {
       "id": 8454,
       "name": {
-         "en": "Water Master",
-         "ar": "Water Master",
+         "en": "Water Mastery",
+         "ar": "Water Mastery",
          "br": "Mestre da \u00c1gua",
          "cns": "\u6c34\u7cfb\u4fee\u70bc",
          "de": "Water Master",
-         "fi": "Water Master",
-         "fil": "Water Master",
+         "fi": "Water Mastery",
+         "fil": "Water Mastery",
          "fr": "Ma\u00eetre de l'eau",
-         "it": "Water Master",
+         "it": "Water Mastery",
          "kr": "\uc6cc\ud130 \ub9c8\uc2a4\ud130",
-         "nl": "Water Master",
+         "nl": "Water Mastery",
          "pl": "Mistrz Wody",
          "ru": "\u0412\u043b\u0430\u0441\u0442\u0435\u043b\u0438\u043d \u0432\u043e\u0434\u044b",
-         "sw": "Water Master",
-         "th": "Water Master"
+         "sw": "Water Mastery",
+         "th": "Water Mastery"
       },
       "description": {
          "en": "Increases striking power of water spells.",
@@ -47991,13 +51020,13 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "hp",
-                  "add": 50,
+                  "add": 150,
                   "rate": false
                },
                {
                   "parameter": "explostdecreaseatrevival",
                   "add": 100,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -48016,13 +51045,13 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "hp",
-                  "add": 60,
+                  "add": 200,
                   "rate": false
                },
                {
                   "parameter": "explostdecreaseatrevival",
                   "add": 99,
-                  "rate": false
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -48041,13 +51070,13 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "hp",
-                  "add": 70,
+                  "add": 250,
                   "rate": false
                },
                {
                   "parameter": "explostdecreaseatrevival",
-                  "add": 99,
-                  "rate": false
+                  "add": 95,
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -48066,13 +51095,13 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "hp",
-                  "add": 80,
+                  "add": 300,
                   "rate": false
                },
                {
                   "parameter": "explostdecreaseatrevival",
-                  "add": 98,
-                  "rate": false
+                  "add": 90,
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -48091,13 +51120,13 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "hp",
-                  "add": 90,
+                  "add": 350,
                   "rate": false
                },
                {
                   "parameter": "explostdecreaseatrevival",
-                  "add": 97,
-                  "rate": false
+                  "add": 85,
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -48116,13 +51145,13 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "hp",
-                  "add": 100,
+                  "add": 400,
                   "rate": false
                },
                {
                   "parameter": "explostdecreaseatrevival",
-                  "add": 97,
-                  "rate": false
+                  "add": 80,
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -48141,13 +51170,13 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "hp",
-                  "add": 110,
+                  "add": 450,
                   "rate": false
                },
                {
                   "parameter": "explostdecreaseatrevival",
-                  "add": 95,
-                  "rate": false
+                  "add": 75,
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -48166,13 +51195,13 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "hp",
-                  "add": 120,
+                  "add": 500,
                   "rate": false
                },
                {
                   "parameter": "explostdecreaseatrevival",
-                  "add": 95,
-                  "rate": false
+                  "add": 70,
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -48191,13 +51220,13 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "hp",
-                  "add": 130,
+                  "add": 1000,
                   "rate": false
                },
                {
                   "parameter": "explostdecreaseatrevival",
-                  "add": 92,
-                  "rate": false
+                  "add": 65,
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -48216,13 +51245,13 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "hp",
-                  "add": 140,
+                  "add": 1500,
                   "rate": false
                },
                {
                   "parameter": "explostdecreaseatrevival",
-                  "add": 92,
-                  "rate": false
+                  "add": 60,
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -48241,13 +51270,13 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "hp",
-                  "add": 150,
+                  "add": 2000,
                   "rate": false
                },
                {
                   "parameter": "explostdecreaseatrevival",
-                  "add": 88,
-                  "rate": false
+                  "add": 55,
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -48266,13 +51295,13 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "hp",
-                  "add": 160,
+                  "add": 2500,
                   "rate": false
                },
                {
                   "parameter": "explostdecreaseatrevival",
-                  "add": 88,
-                  "rate": false
+                  "add": 50,
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -48291,13 +51320,13 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "hp",
-                  "add": 170,
+                  "add": 5000,
                   "rate": false
                },
                {
                   "parameter": "explostdecreaseatrevival",
-                  "add": 85,
-                  "rate": false
+                  "add": 45,
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -48316,13 +51345,13 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "hp",
-                  "add": 180,
+                  "add": 10000,
                   "rate": false
                },
                {
                   "parameter": "explostdecreaseatrevival",
-                  "add": 85,
-                  "rate": false
+                  "add": 40,
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -48341,13 +51370,13 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "hp",
-                  "add": 190,
+                  "add": 15000,
                   "rate": false
                },
                {
                   "parameter": "explostdecreaseatrevival",
-                  "add": 81,
-                  "rate": false
+                  "add": 35,
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -48366,13 +51395,13 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "hp",
-                  "add": 200,
+                  "add": 20000,
                   "rate": false
                },
                {
                   "parameter": "explostdecreaseatrevival",
-                  "add": 81,
-                  "rate": false
+                  "add": 30,
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -48391,13 +51420,13 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "hp",
-                  "add": 210,
+                  "add": 25000,
                   "rate": false
                },
                {
                   "parameter": "explostdecreaseatrevival",
-                  "add": 76,
-                  "rate": false
+                  "add": 25,
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -48416,13 +51445,13 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "hp",
-                  "add": 220,
+                  "add": 30000,
                   "rate": false
                },
                {
                   "parameter": "explostdecreaseatrevival",
-                  "add": 76,
-                  "rate": false
+                  "add": 20,
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -48441,13 +51470,13 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "hp",
-                  "add": 230,
+                  "add": 45000,
                   "rate": false
                },
                {
                   "parameter": "explostdecreaseatrevival",
-                  "add": 70,
-                  "rate": false
+                  "add": 15,
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -48466,13 +51495,13 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "hp",
-                  "add": 240,
+                  "add": 60000,
                   "rate": false
                },
                {
                   "parameter": "explostdecreaseatrevival",
-                  "add": 60,
-                  "rate": false
+                  "add": 10,
+                  "rate": true
                }
             ],
             "scalingParameters": [
@@ -48913,8 +51942,8 @@ export const skillsjson = [
          {
             "minAttack": 106,
             "maxAttack": 107,
-            "consumedMP": 30,
-            "cooldown": 15,
+            "consumedMP": 80,
+            "cooldown": 25,
             "duration": 10,
             "durationPVP": 10,
             "abilities": [
@@ -48937,8 +51966,8 @@ export const skillsjson = [
          {
             "minAttack": 108,
             "maxAttack": 109,
-            "consumedMP": 32,
-            "cooldown": 15,
+            "consumedMP": 82,
+            "cooldown": 25,
             "duration": 12,
             "durationPVP": 12,
             "abilities": [
@@ -48961,8 +51990,8 @@ export const skillsjson = [
          {
             "minAttack": 110,
             "maxAttack": 111,
-            "consumedMP": 34,
-            "cooldown": 15,
+            "consumedMP": 84,
+            "cooldown": 25,
             "duration": 14,
             "durationPVP": 14,
             "abilities": [
@@ -48985,8 +52014,8 @@ export const skillsjson = [
          {
             "minAttack": 112,
             "maxAttack": 113,
-            "consumedMP": 36,
-            "cooldown": 15,
+            "consumedMP": 86,
+            "cooldown": 25,
             "duration": 16,
             "durationPVP": 16,
             "abilities": [
@@ -49009,8 +52038,8 @@ export const skillsjson = [
          {
             "minAttack": 114,
             "maxAttack": 115,
-            "consumedMP": 38,
-            "cooldown": 15,
+            "consumedMP": 88,
+            "cooldown": 25,
             "duration": 18,
             "durationPVP": 18,
             "abilities": [
@@ -49033,8 +52062,8 @@ export const skillsjson = [
          {
             "minAttack": 116,
             "maxAttack": 117,
-            "consumedMP": 40,
-            "cooldown": 15,
+            "consumedMP": 90,
+            "cooldown": 25,
             "duration": 20,
             "durationPVP": 20,
             "abilities": [
@@ -49057,8 +52086,8 @@ export const skillsjson = [
          {
             "minAttack": 118,
             "maxAttack": 119,
-            "consumedMP": 42,
-            "cooldown": 15,
+            "consumedMP": 92,
+            "cooldown": 25,
             "duration": 22,
             "durationPVP": 22,
             "abilities": [
@@ -49081,8 +52110,8 @@ export const skillsjson = [
          {
             "minAttack": 120,
             "maxAttack": 121,
-            "consumedMP": 44,
-            "cooldown": 15,
+            "consumedMP": 94,
+            "cooldown": 25,
             "duration": 24,
             "durationPVP": 24,
             "abilities": [
@@ -49105,8 +52134,8 @@ export const skillsjson = [
          {
             "minAttack": 122,
             "maxAttack": 123,
-            "consumedMP": 46,
-            "cooldown": 15,
+            "consumedMP": 96,
+            "cooldown": 25,
             "duration": 28,
             "durationPVP": 28,
             "abilities": [
@@ -49129,8 +52158,8 @@ export const skillsjson = [
          {
             "minAttack": 124,
             "maxAttack": 125,
-            "consumedMP": 48,
-            "cooldown": 15,
+            "consumedMP": 100,
+            "cooldown": 25,
             "duration": 30,
             "durationPVP": 30,
             "abilities": [
@@ -49190,13 +52219,13 @@ export const skillsjson = [
       },
       "icon": "bilbloodfist.png",
       "class": 7424,
-      "level": 65,
+      "level": 70,
       "element": "none",
       "magic": false,
       "requirements": [
          {
             "skill": 4448,
-            "level": 2
+            "level": 5
          }
       ],
       "weapon": "knuckle",
@@ -49208,12 +52237,159 @@ export const skillsjson = [
       "skillPoints": 3,
       "levels": [
          {
-            "minAttack": 71,
-            "maxAttack": 72,
-            "dotTick": 2,
-            "probability": 5,
-            "probabilityPVP": 5,
+            "minAttack": 90,
+            "maxAttack": 91,
+            "dotTick": 1.5,
             "consumedFP": 40,
+            "cooldown": 3,
+            "casting": 1,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "bleeding",
+                  "dotMode": "standardattack",
+                  "dotValue": 10
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.02,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 91,
+            "maxAttack": 92,
+            "dotTick": 1.5,
+            "consumedFP": 45,
+            "cooldown": 3,
+            "casting": 1,
+            "duration": 12,
+            "durationPVP": 12,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "bleeding",
+                  "dotMode": "standardattack",
+                  "dotValue": 10
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.04,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 92,
+            "maxAttack": 93,
+            "dotTick": 1.5,
+            "consumedFP": 50,
+            "cooldown": 3,
+            "casting": 1,
+            "duration": 13,
+            "durationPVP": 13,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "bleeding",
+                  "dotMode": "standardattack",
+                  "dotValue": 10
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.06,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 93,
+            "maxAttack": 94,
+            "dotTick": 1.5,
+            "consumedFP": 55,
+            "cooldown": 3,
+            "casting": 1,
+            "duration": 14,
+            "durationPVP": 14,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "bleeding",
+                  "dotMode": "standardattack",
+                  "dotValue": 10
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.08,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 94,
+            "maxAttack": 95,
+            "dotTick": 1.5,
+            "consumedFP": 60,
+            "cooldown": 3,
             "casting": 1,
             "duration": 15,
             "durationPVP": 15,
@@ -49222,26 +52398,183 @@ export const skillsjson = [
                   "parameter": "attribute",
                   "attribute": "bleeding",
                   "dotMode": "standardattack",
-                  "dotValue": 8
+                  "dotValue": 10
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
+                  "rate": true
                }
             ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.52,
+                  "scale": 4.1,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 73,
-            "maxAttack": 74,
-            "dotTick": 2,
-            "probability": 10,
-            "probabilityPVP": 10,
-            "consumedFP": 45,
+            "minAttack": 95,
+            "maxAttack": 96,
+            "dotTick": 1.5,
+            "consumedFP": 65,
+            "cooldown": 3,
+            "casting": 1,
+            "duration": 16,
+            "durationPVP": 16,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "bleeding",
+                  "dotMode": "standardattack",
+                  "dotValue": 11
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.12,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 96,
+            "maxAttack": 97,
+            "dotTick": 1.5,
+            "consumedFP": 70,
+            "cooldown": 3,
+            "casting": 1,
+            "duration": 17,
+            "durationPVP": 17,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "bleeding",
+                  "dotMode": "standardattack",
+                  "dotValue": 12
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.14,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 97,
+            "maxAttack": 98,
+            "dotTick": 1.5,
+            "consumedFP": 75,
+            "cooldown": 3,
+            "casting": 1,
+            "duration": 18,
+            "durationPVP": 18,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "bleeding",
+                  "dotMode": "standardattack",
+                  "dotValue": 13
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.16,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 98,
+            "maxAttack": 99,
+            "dotTick": 1.5,
+            "consumedFP": 80,
+            "cooldown": 3,
+            "casting": 1,
+            "duration": 19,
+            "durationPVP": 19,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "bleeding",
+                  "dotMode": "standardattack",
+                  "dotValue": 14
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 4.18,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "minAttack": 99,
+            "maxAttack": 100,
+            "dotTick": 1.5,
+            "consumedFP": 90,
+            "cooldown": 3,
             "casting": 1,
             "duration": 20,
             "durationPVP": 20,
@@ -49250,238 +52583,24 @@ export const skillsjson = [
                   "parameter": "attribute",
                   "attribute": "bleeding",
                   "dotMode": "standardattack",
-                  "dotValue": 8
+                  "dotValue": 15
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
+                  "rate": true
                }
             ],
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 3.54,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 75,
-            "maxAttack": 76,
-            "dotTick": 2,
-            "probability": 15,
-            "probabilityPVP": 15,
-            "consumedFP": 50,
-            "casting": 1,
-            "duration": 25,
-            "durationPVP": 25,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "bleeding",
-                  "dotMode": "standardattack",
-                  "dotValue": 8
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 3.56,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 77,
-            "maxAttack": 78,
-            "dotTick": 2,
-            "probability": 20,
-            "probabilityPVP": 20,
-            "consumedFP": 55,
-            "casting": 1,
-            "duration": 30,
-            "durationPVP": 30,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "bleeding",
-                  "dotMode": "standardattack",
-                  "dotValue": 8
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 3.58,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 79,
-            "maxAttack": 80,
-            "dotTick": 2,
-            "probability": 25,
-            "probabilityPVP": 25,
-            "consumedFP": 60,
-            "casting": 1,
-            "duration": 35,
-            "durationPVP": 35,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "bleeding",
-                  "dotMode": "standardattack",
-                  "dotValue": 9
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 3.6,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 81,
-            "maxAttack": 82,
-            "dotTick": 2,
-            "probability": 30,
-            "probabilityPVP": 30,
-            "consumedFP": 65,
-            "casting": 1,
-            "duration": 40,
-            "durationPVP": 40,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "bleeding",
-                  "dotMode": "standardattack",
-                  "dotValue": 9
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 3.62,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 83,
-            "maxAttack": 84,
-            "dotTick": 2,
-            "probability": 35,
-            "probabilityPVP": 35,
-            "consumedFP": 70,
-            "casting": 1,
-            "duration": 45,
-            "durationPVP": 45,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "bleeding",
-                  "dotMode": "standardattack",
-                  "dotValue": 9
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 3.64,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 85,
-            "maxAttack": 86,
-            "dotTick": 2,
-            "probability": 40,
-            "probabilityPVP": 40,
-            "consumedFP": 75,
-            "casting": 1,
-            "duration": 50,
-            "durationPVP": 50,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "bleeding",
-                  "dotMode": "standardattack",
-                  "dotValue": 9
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 3.66,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 87,
-            "maxAttack": 88,
-            "dotTick": 2,
-            "probability": 45,
-            "probabilityPVP": 45,
-            "consumedFP": 80,
-            "casting": 1,
-            "duration": 55,
-            "durationPVP": 55,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "bleeding",
-                  "dotMode": "standardattack",
-                  "dotValue": 9
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 3.68,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 89,
-            "maxAttack": 90,
-            "dotTick": 2,
-            "probability": 50,
-            "probabilityPVP": 50,
-            "consumedFP": 90,
-            "casting": 1,
-            "duration": 60,
-            "durationPVP": 60,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "bleeding",
-                  "dotMode": "standardattack",
-                  "dotValue": 10
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 3.7,
+                  "scale": 4.2,
                   "pvp": true,
                   "pve": true
                }
@@ -49500,7 +52619,7 @@ export const skillsjson = [
          "fi": "Power Stomp",
          "fil": "Power Stomp",
          "fr": "Doloire f\u00e9roce",
-         "it": "Power Stomp",
+         "it": "Alabarda feroce",
          "kr": "\ud30c\uc6cc \uc2a4\ud140\ud504",
          "nl": "Power Stomp",
          "pl": "Pot\u0119\u017cne Tupni\u0119cie",
@@ -49509,21 +52628,21 @@ export const skillsjson = [
          "th": "Power Stomp"
       },
       "description": {
-         "en": "Pounds the ground, stunning nearby enemies. Requires two-handed axe.",
-         "ar": "Pounds the ground, stunning nearby enemies. Requires two-handed axe.",
-         "br": "Pisoteia o ch\u00e3o, atordoando inimigos pr\u00f3ximos. Exige um machado de duas m\u00e3os.",
-         "cns": "\u7528\u65a7\u67c4\u6253\u51fb\u5730\u9762\u5236\u9020\u51b2\u51fb\u6ce2\u653b\u51fb\u5468\u56f4\u654c\u4eba\uff0c\u4e00\u5b9a\u51e0\u7387\u5c06\u5bf9\u65b9\u6253\u6655\u3002",
-         "de": "Wirft den Gegner zu Boden, indem man mit der Axt auf die Erde schl\u00e4gt. Chance, den Gegner zu bet\u00e4uben.",
-         "fi": "Iskee maata tainuttaen l\u00e4heiset viholliset. Vaatii kahden k\u00e4den kirveen.",
-         "fil": "Pounds the ground, stunning nearby enemies. Requires two-handed axe.",
-         "fr": "Coup de hache surpuissant qui inflige des d\u00e9g\u00e2ts et peut \u00e9tourdir tous les ennemis \u00e0 proximit\u00e9",
-         "it": "Pounds the ground, stunning nearby enemies. Requires two-handed axe.",
-         "kr": "\uc591\uc190\ub3c4\ub07c\ub85c \uc9c0\uba74\uc744 \uac15\ud558\uac8c \ub0b4\ub9ac\uccd0\uc11c \uc8fc\ubcc0\uc758 \uc801\ub4e4\uc744 \ud0c0\uaca9\ud569\ub2c8\ub2e4. \uc774\ub54c \uc801\ub4e4\uc744 \uc77c\uc815 \ud655\ub960\ub85c \uc2a4\ud134 \uc0c1\ud0dc\ub85c \ub9cc\ub4ed\ub2c8\ub2e4.",
-         "nl": "Pounds the ground, stunning nearby enemies. Requires two-handed axe.",
-         "pl": "Uderza ziemi\u0119 z olbrzymi\u0105 si\u0142\u0105, wywo\u0142uj\u0105c\u0105 og\u0142uszenie u wrog\u00f3w wok\u00f3\u0142 ciebie. Wymaga Halabardy.",
-         "ru": "\u0423\u0434\u0430\u0440 \u0432 \u0437\u0435\u043c\u043b\u044e, \u043e\u0433\u043b\u0443\u0448\u0430\u044e\u0449\u0438\u0439 \u0441\u0442\u043e\u044f\u0449\u0438\u0445 \u043f\u043e\u0431\u043b\u0438\u0437\u043e\u0441\u0442\u0438 \u0432\u0440\u0430\u0433\u043e\u0432. \u0414\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f \u0434\u0432\u0443\u0440\u0443\u0447\u043d\u044b\u0439 \u0442\u043e\u043f\u043e\u0440 \u0438\u043b\u0438 \u0441\u0435\u043a\u0438\u0440\u0430.",
-         "sw": "Pounds the ground, stunning nearby enemies. Requires two-handed axe.",
-         "th": "Pounds the ground, stunning nearby enemies. Requires two-handed axe."
+         "en": "Pounds the ground, stunning nearby enemies. Requires a two-handed weapon.",
+         "ar": "Pounds the ground, stunning nearby enemies. Requires a two-handed weapon.",
+         "br": "Pounds the ground, stunning nearby enemies. Requires a two-handed weapon.",
+         "cns": "Pounds the ground, stunning nearby enemies. Requires a two-handed weapon.",
+         "de": "Pounds the ground, stunning nearby enemies. Requires a two-handed weapon.",
+         "fi": "Pounds the ground, stunning nearby enemies. Requires a two-handed weapon.",
+         "fil": "Pounds the ground, stunning nearby enemies. Requires a two-handed weapon.",
+         "fr": "Pounds the ground, stunning nearby enemies. Requires a two-handed weapon.",
+         "it": "Pounds the ground, stunning nearby enemies. Requires a two-handed weapon.",
+         "kr": "Pounds the ground, stunning nearby enemies. Requires a two-handed weapon.",
+         "nl": "Pounds the ground, stunning nearby enemies. Requires a two-handed weapon.",
+         "pl": "Pounds the ground, stunning nearby enemies. Requires a two-handed weapon.",
+         "ru": "Pounds the ground, stunning nearby enemies. Requires a two-handed weapon.",
+         "sw": "Pounds the ground, stunning nearby enemies. Requires a two-handed weapon.",
+         "th": "Pounds the ground, stunning nearby enemies. Requires a two-handed weapon."
       },
       "icon": "knttaxpwstum.png",
       "class": 5330,
@@ -49536,7 +52655,6 @@ export const skillsjson = [
             "level": 4
          }
       ],
-      "weapon": "axe",
       "combo": "general",
       "debuff": true,
       "flying": true,
@@ -49828,7 +52946,7 @@ export const skillsjson = [
       "description": {
          "en": "A surprise attack that does more damage during Dark Illusion.",
          "ar": "A surprise attack that does more damage during Dark Illusion.",
-         "br": "Ataque surpresa que causa mais dano durante a Ilus\u00e3o das Trevas.",
+         "br": "Ataque surpresa que causa mais dano durante a Ilus\u00e3o Sombria.",
          "cns": "\u5077\u88ad\u5bf9\u65b9\uff0c\u5728\u6f5c\u884c\u72b6\u6001\u4e0b\u5a01\u529b\u66f4\u5927\uff0c\u65bd\u5c55\u6280\u80fd\u540e\u6f5c\u884c\u72b6\u6001\u4f1a\u88ab\u89e3\u9664\u3002",
          "de": "Ein \u00dcberraschungsangriff. Durch den Status von Dark Illusion wird die Angriffsst\u00e4rke erh\u00f6ht.",
          "fi": "A surprise attack that does more damage during Dark Illusion.",
@@ -49844,7 +52962,7 @@ export const skillsjson = [
       },
       "icon": "acrbowsilent.png",
       "class": 9098,
-      "level": 30,
+      "level": 35,
       "element": "none",
       "magic": false,
       "requirements": [
@@ -49871,7 +52989,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 1.82,
+                  "scale": 2.82,
                   "pvp": true,
                   "pve": true
                }
@@ -49886,7 +53004,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 1.84,
+                  "scale": 2.84,
                   "pvp": true,
                   "pve": true
                }
@@ -49901,7 +53019,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 1.86,
+                  "scale": 2.86,
                   "pvp": true,
                   "pve": true
                }
@@ -49916,7 +53034,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 1.88,
+                  "scale": 2.88,
                   "pvp": true,
                   "pve": true
                }
@@ -49931,7 +53049,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 1.9,
+                  "scale": 2.9,
                   "pvp": true,
                   "pve": true
                }
@@ -49946,7 +53064,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 1.92,
+                  "scale": 2.92,
                   "pvp": true,
                   "pve": true
                }
@@ -49961,7 +53079,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 1.94,
+                  "scale": 2.94,
                   "pvp": true,
                   "pve": true
                }
@@ -49976,7 +53094,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 1.96,
+                  "scale": 2.96,
                   "pvp": true,
                   "pve": true
                }
@@ -49991,7 +53109,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 1.98,
+                  "scale": 2.98,
                   "pvp": true,
                   "pve": true
                }
@@ -50006,7 +53124,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2,
+                  "scale": 3,
                   "pvp": true,
                   "pve": true
                }
@@ -50021,7 +53139,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.02,
+                  "scale": 3.02,
                   "pvp": true,
                   "pve": true
                }
@@ -50036,7 +53154,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.04,
+                  "scale": 3.04,
                   "pvp": true,
                   "pve": true
                }
@@ -50051,7 +53169,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.06,
+                  "scale": 3.06,
                   "pvp": true,
                   "pve": true
                }
@@ -50066,7 +53184,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.08,
+                  "scale": 3.08,
                   "pvp": true,
                   "pve": true
                }
@@ -50081,7 +53199,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.1,
+                  "scale": 3.1,
                   "pvp": true,
                   "pve": true
                }
@@ -50096,7 +53214,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.12,
+                  "scale": 3.12,
                   "pvp": true,
                   "pve": true
                }
@@ -50111,7 +53229,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.14,
+                  "scale": 3.14,
                   "pvp": true,
                   "pve": true
                }
@@ -50126,7 +53244,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.16,
+                  "scale": 3.16,
                   "pvp": true,
                   "pve": true
                }
@@ -50141,7 +53259,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.18,
+                  "scale": 3.18,
                   "pvp": true,
                   "pve": true
                }
@@ -50156,7 +53274,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "dex",
-                  "scale": 2.2,
+                  "scale": 3.2,
                   "pvp": true,
                   "pve": true
                }
@@ -50184,21 +53302,21 @@ export const skillsjson = [
          "th": "Swordwind"
       },
       "description": {
-         "en": "Ranged, wind attack.",
-         "ar": "Ranged, wind attack.",
-         "br": "Ranged, wind attack.",
-         "cns": "Ranged, wind attack.",
-         "de": "Ranged, wind attack.",
-         "fi": "Ranged, wind attack.",
-         "fil": "Ranged, wind attack.",
-         "fr": "Ranged, wind attack.",
-         "it": "Ranged, wind attack.",
-         "kr": "Ranged, wind attack.",
-         "nl": "Ranged, wind attack.",
-         "pl": "Ranged, wind attack.",
-         "ru": "Ranged, wind attack.",
-         "sw": "Ranged, wind attack.",
-         "th": "Ranged, wind attack."
+         "en": "Ranged, wind attack. Chance to reduce the attack speed & casting time of the target.",
+         "ar": "Ranged, wind attack. Chance to reduce the attack speed & casting time of the target.",
+         "br": "Ataque de vento a distancia.",
+         "cns": "\u7528\u950b\u5229\u7684\u98ce\u5203\u523a\u70c8\u5bf9\u65b9\u7684\u8eab\u4f53\u3002",
+         "de": "Den Gegner durch starken Wind, so scharf wie ein Messer, Schaden zuf\u00fcgen.",
+         "fi": "Et\u00e4 tuulihy\u00f6kk\u00e4ys.",
+         "fil": "Ranged, wind attack. Chance to reduce the attack speed & casting time of the target.",
+         "fr": "Propulse une lame de vent sur l'ennemi, s'apparentant \u00e0 un violent coup d'\u00e9p\u00e9e",
+         "it": "Ranged, wind attack. Chance to reduce the attack speed & casting time of the target.",
+         "kr": "\uce7c\ub0a0\ucc98\ub7fc \ub0a0\uce74\ub85c\uc6b4 \ubc14\ub78c\uc744 \ub0a0\ub824 \uc801\uc744 \uacf5\uaca9\ud569\ub2c8\ub2e4.",
+         "nl": "Ranged, wind attack. Chance to reduce the attack speed & casting time of the target.",
+         "pl": "Tnie przeciwnika silnym wiatrem.",
+         "ru": "\u0410\u0442\u0430\u043a\u0430 \u0434\u0430\u043b\u044c\u043d\u0435\u0433\u043e \u0431\u043e\u044f. \u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0443\u0440\u043e\u043d \u0432\u0435\u0442\u0440\u043e\u043c.",
+         "sw": "Ranged, wind attack. Chance to reduce the attack speed & casting time of the target.",
+         "th": "Ranged, wind attack. Chance to reduce the attack speed & casting time of the target."
       },
       "icon": "magwindswordw.png",
       "class": 9581,
@@ -50222,8 +53340,22 @@ export const skillsjson = [
          {
             "minAttack": 41,
             "maxAttack": 42,
+            "probability": 10,
+            "probabilityPVP": 10,
             "consumedMP": 25,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "attackspeed",
+                  "add": -1,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -1,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -50238,8 +53370,22 @@ export const skillsjson = [
          {
             "minAttack": 41,
             "maxAttack": 42,
+            "probability": 11,
+            "probabilityPVP": 11,
             "consumedMP": 25,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "attackspeed",
+                  "add": -1,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -1,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -50254,8 +53400,22 @@ export const skillsjson = [
          {
             "minAttack": 41,
             "maxAttack": 42,
+            "probability": 11,
+            "probabilityPVP": 11,
             "consumedMP": 25,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "attackspeed",
+                  "add": -2,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -2,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -50270,8 +53430,22 @@ export const skillsjson = [
          {
             "minAttack": 41,
             "maxAttack": 42,
+            "probability": 12,
+            "probabilityPVP": 12,
             "consumedMP": 27,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "attackspeed",
+                  "add": -2,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -2,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -50286,8 +53460,22 @@ export const skillsjson = [
          {
             "minAttack": 42,
             "maxAttack": 43,
+            "probability": 12,
+            "probabilityPVP": 12,
             "consumedMP": 27,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "attackspeed",
+                  "add": -2.5,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -3,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -50302,8 +53490,22 @@ export const skillsjson = [
          {
             "minAttack": 42,
             "maxAttack": 43,
+            "probability": 13,
+            "probabilityPVP": 13,
             "consumedMP": 27,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "attackspeed",
+                  "add": -2.5,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -3,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -50318,8 +53520,22 @@ export const skillsjson = [
          {
             "minAttack": 42,
             "maxAttack": 43,
+            "probability": 13,
+            "probabilityPVP": 13,
             "consumedMP": 29,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "attackspeed",
+                  "add": -3,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -4,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -50334,8 +53550,22 @@ export const skillsjson = [
          {
             "minAttack": 42,
             "maxAttack": 43,
+            "probability": 14,
+            "probabilityPVP": 14,
             "consumedMP": 29,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "attackspeed",
+                  "add": -3,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -4,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -50350,8 +53580,22 @@ export const skillsjson = [
          {
             "minAttack": 44,
             "maxAttack": 45,
+            "probability": 14,
+            "probabilityPVP": 14,
             "consumedMP": 29,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "attackspeed",
+                  "add": -3.5,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -5,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -50366,8 +53610,22 @@ export const skillsjson = [
          {
             "minAttack": 44,
             "maxAttack": 45,
+            "probability": 15,
+            "probabilityPVP": 15,
             "consumedMP": 31,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "attackspeed",
+                  "add": -3.5,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -5,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -50382,8 +53640,22 @@ export const skillsjson = [
          {
             "minAttack": 44,
             "maxAttack": 45,
+            "probability": 15,
+            "probabilityPVP": 15,
             "consumedMP": 31,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "attackspeed",
+                  "add": -4,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -6,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -50398,8 +53670,22 @@ export const skillsjson = [
          {
             "minAttack": 44,
             "maxAttack": 45,
+            "probability": 16,
+            "probabilityPVP": 16,
             "consumedMP": 31,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "attackspeed",
+                  "add": -4,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -6,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -50414,8 +53700,22 @@ export const skillsjson = [
          {
             "minAttack": 46,
             "maxAttack": 47,
+            "probability": 16,
+            "probabilityPVP": 16,
             "consumedMP": 33,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "attackspeed",
+                  "add": -4.5,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -7,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -50430,8 +53730,22 @@ export const skillsjson = [
          {
             "minAttack": 46,
             "maxAttack": 47,
+            "probability": 17,
+            "probabilityPVP": 17,
             "consumedMP": 33,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "attackspeed",
+                  "add": -4.5,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -7,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -50446,8 +53760,22 @@ export const skillsjson = [
          {
             "minAttack": 46,
             "maxAttack": 47,
+            "probability": 17,
+            "probabilityPVP": 17,
             "consumedMP": 35,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "attackspeed",
+                  "add": -5,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -8,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -50462,8 +53790,22 @@ export const skillsjson = [
          {
             "minAttack": 49,
             "maxAttack": 50,
+            "probability": 18,
+            "probabilityPVP": 18,
             "consumedMP": 35,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "attackspeed",
+                  "add": -5.5,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -8,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -50478,8 +53820,22 @@ export const skillsjson = [
          {
             "minAttack": 49,
             "maxAttack": 50,
+            "probability": 18,
+            "probabilityPVP": 18,
             "consumedMP": 38,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "attackspeed",
+                  "add": -6,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -9,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -50494,8 +53850,22 @@ export const skillsjson = [
          {
             "minAttack": 49,
             "maxAttack": 50,
+            "probability": 19,
+            "probabilityPVP": 19,
             "consumedMP": 38,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "attackspeed",
+                  "add": -6.5,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -9,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -50510,8 +53880,22 @@ export const skillsjson = [
          {
             "minAttack": 49,
             "maxAttack": 50,
+            "probability": 19,
+            "probabilityPVP": 19,
             "consumedMP": 40,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "attackspeed",
+                  "add": -7,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -9,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -50526,8 +53910,22 @@ export const skillsjson = [
          {
             "minAttack": 49,
             "maxAttack": 50,
+            "probability": 20,
+            "probabilityPVP": 20,
             "consumedMP": 40,
             "casting": 0.6,
+            "abilities": [
+               {
+                  "parameter": "attackspeed",
+                  "add": -7.5,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -10,
+                  "rate": true
+               }
+            ],
             "spellRange": 15,
             "scalingParameters": [
                {
@@ -50579,7 +53977,7 @@ export const skillsjson = [
       },
       "icon": "meroneamaster.png",
       "class": 764,
-      "level": 30,
+      "level": 40,
       "element": "none",
       "magic": false,
       "requirements": [
@@ -50880,17 +54278,17 @@ export const skillsjson = [
       "description": {
          "en": "Increases striking power of a target.",
          "ar": "Increases striking power of a target.",
-         "br": "Aumenta o poder de for\u00e7a.",
-         "cns": "\u6682\u65f6\u63d0\u9ad8\u65bd\u6cd5\u5bf9\u8c61\u7684\u653b\u51fb\u529b\u3002",
-         "de": "Erh\u00f6ht die Angriffsst\u00e4rke des angew\u00e4hlten Spielers.",
-         "fi": "Kasvattaa kohteen iskuvoimaa.",
+         "br": "Increases striking power of a target.",
+         "cns": "Increases striking power of a target.",
+         "de": "Increases striking power of a target.",
+         "fi": "Increases striking power of a target.",
          "fil": "Increases striking power of a target.",
-         "fr": "Augmente fortement la puissance d'attaque de la cible",
+         "fr": "Increases striking power of a target.",
          "it": "Increases striking power of a target.",
-         "kr": "\ub300\uc0c1\uc5d0\uac8c \uc2e0\uc131\ud55c \ud798\uc744 \ubd88\uc5b4\ub123\uc5b4 \uacf5\uaca9\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
+         "kr": "Increases striking power of a target.",
          "nl": "Increases striking power of a target.",
-         "pl": "Zwi\u0119ksza STR celu.",
-         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0441\u0438\u043b\u0443 \u0446\u0435\u043b\u0438.",
+         "pl": "Increases striking power of a target.",
+         "ru": "Increases striking power of a target.",
          "sw": "Increases striking power of a target.",
          "th": "Increases striking power of a target."
       },
@@ -51211,69 +54609,6 @@ export const skillsjson = [
                   "maximum": 200,
                   "pvp": true,
                   "pve": true
-               }
-            ]
-         }
-      ]
-   },
-   {
-      "id": 9216,
-      "name": {
-         "en": "Toggle Buff",
-         "ar": "Toggle Buff",
-         "br": "Alternar Buff",
-         "cns": "Buff\u4f5c\u7528",
-         "de": "Toggle Buff",
-         "fi": "Toggle Buff",
-         "fil": "Toggle Buff",
-         "fr": "Vitesse modifi\u00e9e",
-         "it": "Toggle Buff",
-         "kr": "\ud1a0\uae00 \ubc84\ud504",
-         "nl": "Toggle Buff",
-         "pl": "Toggle Buff",
-         "ru": "\u0412\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435 \u044d\u0444\u0444\u0435\u043a\u0442\u043e\u0432",
-         "sw": "Toggle Buff",
-         "th": "Toggle Buff"
-      },
-      "description": {
-         "en": "",
-         "ar": "",
-         "br": "",
-         "cns": "",
-         "de": "",
-         "fi": "",
-         "fil": "",
-         "fr": "",
-         "it": "",
-         "kr": "",
-         "nl": "",
-         "pl": "",
-         "ru": "",
-         "sw": "",
-         "th": ""
-      },
-      "icon": "jstyoybackst.png",
-      "level": 1,
-      "element": "none",
-      "magic": false,
-      "requirements": [],
-      "combo": "general",
-      "debuff": false,
-      "flying": true,
-      "passive": false,
-      "target": "currentplayer",
-      "levels": [
-         {
-            "abilities": [
-               {
-                  "parameter": "speed",
-                  "add": 20,
-                  "rate": true
-               },
-               {
-                  "parameter": "mprecovery",
-                  "add": 5,
-                  "rate": false
                }
             ]
          }
@@ -51630,24 +54965,11 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -5.5,
+                  "add": -10,
                   "rate": true
-               }
-            ]
-         },
-         {
-            "dotTick": 1.5,
-            "duration": 10,
-            "durationPVP": 10,
-            "abilities": [
-               {
-                  "parameter": "attribute",
-                  "attribute": "bleeding",
-                  "dotMode": "standardattack",
-                  "dotValue": 11
                },
                {
-                  "parameter": "attackspeed",
+                  "parameter": "decreasedcastingtime",
                   "add": -6,
                   "rate": true
                }
@@ -51666,7 +54988,35 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -6.5,
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -7,
+                  "rate": true
+               }
+            ]
+         },
+         {
+            "dotTick": 1.5,
+            "duration": 10,
+            "durationPVP": 10,
+            "abilities": [
+               {
+                  "parameter": "attribute",
+                  "attribute": "bleeding",
+                  "dotMode": "standardattack",
+                  "dotValue": 11
+               },
+               {
+                  "parameter": "attackspeed",
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -8,
                   "rate": true
                }
             ]
@@ -51684,7 +55034,12 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -7,
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -9,
                   "rate": true
                }
             ]
@@ -51702,7 +55057,12 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -7.5,
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -10,
                   "rate": true
                }
             ]
@@ -51720,7 +55080,12 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -8,
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -11,
                   "rate": true
                }
             ]
@@ -51738,7 +55103,12 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -8.5,
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -12,
                   "rate": true
                }
             ]
@@ -51756,7 +55126,12 @@ export const skillsjson = [
                },
                {
                   "parameter": "attackspeed",
-                  "add": -9,
+                  "add": -10,
+                  "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -13,
                   "rate": true
                }
             ]
@@ -51776,6 +55151,11 @@ export const skillsjson = [
                   "parameter": "attackspeed",
                   "add": -9.5,
                   "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -14,
+                  "rate": true
                }
             ]
          },
@@ -51794,6 +55174,11 @@ export const skillsjson = [
                   "parameter": "attackspeed",
                   "add": -10,
                   "rate": true
+               },
+               {
+                  "parameter": "decreasedcastingtime",
+                  "add": -15,
+                  "rate": true
                }
             ]
          }
@@ -51810,7 +55195,7 @@ export const skillsjson = [
          "fi": "Spring Attack",
          "fil": "Spring Attack",
          "fr": "Heurtoir",
-         "it": "Spring Attack",
+         "it": "Frenesia",
          "kr": "\uc2a4\ud504\ub9c1 \uc5b4\ud14d",
          "nl": "Spring Attack",
          "pl": "Spr\u0119\u017cysty Atak",
@@ -51819,21 +55204,21 @@ export const skillsjson = [
          "th": "Spring Attack"
       },
       "description": {
-         "en": "Strikes at an enemy multiple times. Requires two weapons.",
-         "ar": "Strikes at an enemy multiple times. Requires two weapons.",
-         "br": "Golpeia v\u00e1rias vezes o inimigo. Exige dois machados.",
-         "cns": "\u6325\u821e\u624b\u4e2d\u7684\u65a7\u5934\u5411\u5bf9\u65b9\u53d1\u52a8\u56db\u8fde\u51fb\uff0c\u9020\u6210\u9ad8\u4e8e\u666e\u901a\u653b\u51fb\u7684\u4f24\u5bb3\u3002",
-         "de": "Einen Hieb gegen den Gegner durch wiederholendes Schwingen der Axt.",
-         "fi": "Iskee vihollista monta kertaa. Vaatii kaksi asetta.",
-         "fil": "Strikes at an enemy multiple times. Requires two weapons.",
-         "fr": "Inflige quatre frappes puissantes \u00e0 la hache \u00e0 la cible (n\u00e9cessite une hache en main droite)",
-         "it": "Strikes at an enemy multiple times. Requires two weapons.",
-         "kr": "\uc5d1\uc2a4\ub97c \ub9c8\uad6c \ud718\ub458\ub7ec \uc801\uc744 \uc5f0\uc18d \ud0c0\uaca9\ud569\ub2c8\ub2e4.",
-         "nl": "Strikes at an enemy multiple times. Requires two weapons.",
-         "pl": "Uderza wielokrotnie przeciwnika za pomoc\u0105 specjalnej kombinacji cios\u00f3w. Wymaga dw\u00f3ch broni.",
-         "ru": "\u041d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0431\u044b\u0441\u0442\u0440\u044b\u0445 \u0443\u0434\u0430\u0440\u043e\u0432 \u043f\u043e \u0432\u0440\u0430\u0433\u0443. \u0414\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0440\u0435\u0431\u0443\u044e\u0442\u0441\u044f \u0434\u0432\u0430 \u0442\u043e\u043f\u043e\u0440\u0430.",
-         "sw": "Strikes at an enemy multiple times. Requires two weapons.",
-         "th": "Strikes at an enemy multiple times. Requires two weapons."
+         "en": "Strikes at an enemy multiple times. Each hit has a chance to deal double damage. Requires two weapons.",
+         "ar": "Strikes at an enemy multiple times. Each hit has a chance to deal double damage. Requires two weapons.",
+         "br": "Strikes at an enemy multiple times. Each hit has a chance to deal double damage. Requires two weapons.",
+         "cns": "Strikes at an enemy multiple times. Each hit has a chance to deal double damage. Requires two weapons.",
+         "de": "Strikes at an enemy multiple times. Each hit has a chance to deal double damage. Requires two weapons.",
+         "fi": "Strikes at an enemy multiple times. Each hit has a chance to deal double damage. Requires two weapons.",
+         "fil": "Strikes at an enemy multiple times. Each hit has a chance to deal double damage. Requires two weapons.",
+         "fr": "Strikes at an enemy multiple times. Each hit has a chance to deal double damage. Requires two weapons.",
+         "it": "Strikes at an enemy multiple times. Each hit has a chance to deal double damage. Requires two weapons.",
+         "kr": "Strikes at an enemy multiple times. Each hit has a chance to deal double damage. Requires two weapons.",
+         "nl": "Strikes at an enemy multiple times. Each hit has a chance to deal double damage. Requires two weapons.",
+         "pl": "Strikes at an enemy multiple times. Each hit has a chance to deal double damage. Requires two weapons.",
+         "ru": "Strikes at an enemy multiple times. Each hit has a chance to deal double damage. Requires two weapons.",
+         "sw": "Strikes at an enemy multiple times. Each hit has a chance to deal double damage. Requires two weapons.",
+         "th": "Strikes at an enemy multiple times. Each hit has a chance to deal double damage. Requires two weapons."
       },
       "icon": "blddaxspring.png",
       "class": 2246,
@@ -51854,160 +55239,260 @@ export const skillsjson = [
       "skillPoints": 3,
       "levels": [
          {
-            "minAttack": 30,
-            "maxAttack": 31,
+            "damageMultiplier": 0.95,
+            "minAttack": 15,
+            "maxAttack": 16,
+            "probability": 2,
+            "probabilityPVP": 1,
             "consumedFP": 40,
-            "cooldown": 9,
+            "cooldown": 20,
             "casting": 1.25,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.02,
+                  "scale": 4.02,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 2.02,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 31,
-            "maxAttack": 32,
+            "damageMultiplier": 0.95,
+            "minAttack": 16,
+            "maxAttack": 17,
+            "probability": 4,
+            "probabilityPVP": 2,
             "consumedFP": 42,
-            "cooldown": 8,
+            "cooldown": 20,
             "casting": 1.25,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.04,
+                  "scale": 4.04,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 2.04,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 32,
-            "maxAttack": 33,
+            "damageMultiplier": 0.95,
+            "minAttack": 17,
+            "maxAttack": 18,
+            "probability": 6,
+            "probabilityPVP": 2,
             "consumedFP": 44,
-            "cooldown": 7,
+            "cooldown": 20,
             "casting": 1.25,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.06,
+                  "scale": 4.06,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 2.06,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 33,
-            "maxAttack": 34,
+            "damageMultiplier": 0.95,
+            "minAttack": 18,
+            "maxAttack": 19,
+            "probability": 8,
+            "probabilityPVP": 3,
             "consumedFP": 46,
-            "cooldown": 6,
+            "cooldown": 20,
             "casting": 1.25,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.08,
+                  "scale": 4.08,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 2.08,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 34,
-            "maxAttack": 35,
+            "damageMultiplier": 0.95,
+            "minAttack": 19,
+            "maxAttack": 20,
+            "probability": 10,
+            "probabilityPVP": 3,
             "consumedFP": 48,
-            "cooldown": 6,
+            "cooldown": 20,
             "casting": 1.25,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.1,
+                  "scale": 4.1,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 2.1,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 35,
-            "maxAttack": 36,
+            "damageMultiplier": 0.95,
+            "minAttack": 20,
+            "maxAttack": 21,
+            "probability": 11,
+            "probabilityPVP": 3,
             "consumedFP": 50,
-            "cooldown": 5,
+            "cooldown": 19,
             "casting": 1.25,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.12,
+                  "scale": 4.12,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 2.12,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 36,
-            "maxAttack": 37,
+            "damageMultiplier": 0.95,
+            "minAttack": 21,
+            "maxAttack": 22,
+            "probability": 12,
+            "probabilityPVP": 4,
             "consumedFP": 52,
-            "cooldown": 5,
+            "cooldown": 18,
             "casting": 1.25,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.14,
+                  "scale": 4.14,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 2.14,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 37,
-            "maxAttack": 38,
+            "damageMultiplier": 0.95,
+            "minAttack": 22,
+            "maxAttack": 23,
+            "probability": 13,
+            "probabilityPVP": 4,
             "consumedFP": 54,
-            "cooldown": 4.5,
+            "cooldown": 17,
             "casting": 1.25,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.16,
+                  "scale": 4.16,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 2.16,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 38,
-            "maxAttack": 39,
+            "damageMultiplier": 0.95,
+            "minAttack": 23,
+            "maxAttack": 24,
+            "probability": 14,
+            "probabilityPVP": 4,
             "consumedFP": 56,
-            "cooldown": 4.5,
+            "cooldown": 16,
             "casting": 1.25,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.18,
+                  "scale": 4.18,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 2.18,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 39,
-            "maxAttack": 40,
+            "damageMultiplier": 0.95,
+            "minAttack": 24,
+            "maxAttack": 25,
+            "probability": 15,
+            "probabilityPVP": 5,
             "consumedFP": 100,
-            "cooldown": 4,
+            "cooldown": 15,
             "casting": 1.25,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 5.2,
+                  "scale": 4.2,
+                  "pvp": true,
+                  "pve": true
+               },
+               {
+                  "parameter": "attack",
+                  "stat": "dex",
+                  "scale": 2.2,
                   "pvp": true,
                   "pve": true
                }
@@ -52020,7 +55505,7 @@ export const skillsjson = [
       "name": {
          "en": "Poison Cloud",
          "ar": "Poison Cloud",
-         "br": "Nuvem Venenosa",
+         "br": "N\u00e9voa Venenosa",
          "cns": "\u6bd2\u4e91\u5bc6\u5e03",
          "de": "Poison Cloud",
          "fi": "Poison Cloud",
@@ -52073,9 +55558,9 @@ export const skillsjson = [
          {
             "minAttack": 106,
             "maxAttack": 107,
-            "dotTick": 1,
+            "dotTick": 1.5,
             "consumedMP": 72,
-            "cooldown": 6,
+            "cooldown": 10,
             "casting": 0.6,
             "duration": 5,
             "durationPVP": 5,
@@ -52084,7 +55569,12 @@ export const skillsjson = [
                   "parameter": "attribute",
                   "attribute": "poison",
                   "dotMode": "currentdamage",
-                  "dotValue": 10
+                  "dotValue": 25
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -22,
+                  "rate": true
                }
             ],
             "spellRange": 6,
@@ -52095,31 +55585,29 @@ export const skillsjson = [
                   "scale": 4.52,
                   "pvp": true,
                   "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 0.1,
-                  "pvp": true,
-                  "pve": true
                }
             ]
          },
          {
             "minAttack": 108,
             "maxAttack": 109,
-            "dotTick": 1,
+            "dotTick": 1.5,
             "consumedMP": 74,
-            "cooldown": 6,
+            "cooldown": 10,
             "casting": 0.6,
-            "duration": 6,
-            "durationPVP": 6,
+            "duration": 5,
+            "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "poison",
                   "dotMode": "currentdamage",
-                  "dotValue": 10
+                  "dotValue": 25
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -24,
+                  "rate": true
                }
             ],
             "spellRange": 6,
@@ -52130,31 +55618,29 @@ export const skillsjson = [
                   "scale": 4.54,
                   "pvp": true,
                   "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 0.1,
-                  "pvp": true,
-                  "pve": true
                }
             ]
          },
          {
             "minAttack": 110,
             "maxAttack": 111,
-            "dotTick": 1,
+            "dotTick": 1.5,
             "consumedMP": 76,
-            "cooldown": 6,
+            "cooldown": 10,
             "casting": 0.6,
-            "duration": 7,
-            "durationPVP": 7,
+            "duration": 5,
+            "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "poison",
                   "dotMode": "currentdamage",
-                  "dotValue": 10
+                  "dotValue": 25
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -26,
+                  "rate": true
                }
             ],
             "spellRange": 6,
@@ -52165,31 +55651,29 @@ export const skillsjson = [
                   "scale": 4.56,
                   "pvp": true,
                   "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 0.1,
-                  "pvp": true,
-                  "pve": true
                }
             ]
          },
          {
             "minAttack": 112,
             "maxAttack": 113,
-            "dotTick": 1,
+            "dotTick": 1.5,
             "consumedMP": 78,
-            "cooldown": 6,
+            "cooldown": 10,
             "casting": 0.6,
-            "duration": 8,
-            "durationPVP": 8,
+            "duration": 5,
+            "durationPVP": 5,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "poison",
                   "dotMode": "currentdamage",
-                  "dotValue": 10
+                  "dotValue": 25
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -28,
+                  "rate": true
                }
             ],
             "spellRange": 6,
@@ -52200,31 +55684,29 @@ export const skillsjson = [
                   "scale": 4.58,
                   "pvp": true,
                   "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 0.1,
-                  "pvp": true,
-                  "pve": true
                }
             ]
          },
          {
             "minAttack": 114,
             "maxAttack": 115,
-            "dotTick": 1,
+            "dotTick": 1.5,
             "consumedMP": 80,
-            "cooldown": 6,
+            "cooldown": 10,
             "casting": 0.6,
-            "duration": 9,
-            "durationPVP": 9,
+            "duration": 6,
+            "durationPVP": 6,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "poison",
                   "dotMode": "currentdamage",
-                  "dotValue": 10
+                  "dotValue": 25
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -30,
+                  "rate": true
                }
             ],
             "spellRange": 6,
@@ -52235,31 +55717,29 @@ export const skillsjson = [
                   "scale": 4.6,
                   "pvp": true,
                   "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 0.1,
-                  "pvp": true,
-                  "pve": true
                }
             ]
          },
          {
             "minAttack": 116,
             "maxAttack": 117,
-            "dotTick": 1,
+            "dotTick": 1.5,
             "consumedMP": 82,
-            "cooldown": 6,
+            "cooldown": 10,
             "casting": 0.6,
-            "duration": 10,
-            "durationPVP": 10,
+            "duration": 7,
+            "durationPVP": 7,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "poison",
                   "dotMode": "currentdamage",
-                  "dotValue": 10
+                  "dotValue": 25
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -32,
+                  "rate": true
                }
             ],
             "spellRange": 6,
@@ -52270,31 +55750,29 @@ export const skillsjson = [
                   "scale": 4.62,
                   "pvp": true,
                   "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 0.1,
-                  "pvp": true,
-                  "pve": true
                }
             ]
          },
          {
             "minAttack": 118,
             "maxAttack": 119,
-            "dotTick": 1,
+            "dotTick": 1.5,
             "consumedMP": 84,
-            "cooldown": 6,
+            "cooldown": 10,
             "casting": 0.6,
-            "duration": 11,
-            "durationPVP": 11,
+            "duration": 8,
+            "durationPVP": 8,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "poison",
                   "dotMode": "currentdamage",
-                  "dotValue": 10
+                  "dotValue": 25
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -34,
+                  "rate": true
                }
             ],
             "spellRange": 6,
@@ -52305,31 +55783,29 @@ export const skillsjson = [
                   "scale": 4.64,
                   "pvp": true,
                   "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 0.1,
-                  "pvp": true,
-                  "pve": true
                }
             ]
          },
          {
             "minAttack": 120,
             "maxAttack": 121,
-            "dotTick": 1,
+            "dotTick": 1.5,
             "consumedMP": 86,
-            "cooldown": 6,
+            "cooldown": 10,
             "casting": 0.6,
-            "duration": 12,
-            "durationPVP": 12,
+            "duration": 9,
+            "durationPVP": 9,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "poison",
                   "dotMode": "currentdamage",
-                  "dotValue": 10
+                  "dotValue": 25
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -36,
+                  "rate": true
                }
             ],
             "spellRange": 6,
@@ -52340,31 +55816,29 @@ export const skillsjson = [
                   "scale": 4.66,
                   "pvp": true,
                   "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 0.1,
-                  "pvp": true,
-                  "pve": true
                }
             ]
          },
          {
             "minAttack": 122,
             "maxAttack": 123,
-            "dotTick": 1,
+            "dotTick": 1.5,
             "consumedMP": 88,
-            "cooldown": 6,
+            "cooldown": 10,
             "casting": 0.6,
-            "duration": 13,
-            "durationPVP": 13,
+            "duration": 10,
+            "durationPVP": 10,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "poison",
                   "dotMode": "currentdamage",
-                  "dotValue": 10
+                  "dotValue": 25
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -38,
+                  "rate": true
                }
             ],
             "spellRange": 6,
@@ -52375,31 +55849,29 @@ export const skillsjson = [
                   "scale": 4.68,
                   "pvp": true,
                   "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 0.1,
-                  "pvp": true,
-                  "pve": true
                }
             ]
          },
          {
             "minAttack": 124,
             "maxAttack": 125,
-            "dotTick": 1,
+            "dotTick": 1.5,
             "consumedMP": 90,
-            "cooldown": 6,
+            "cooldown": 10,
             "casting": 0.6,
-            "duration": 14,
-            "durationPVP": 14,
+            "duration": 12,
+            "durationPVP": 12,
             "abilities": [
                {
                   "parameter": "attribute",
                   "attribute": "poison",
                   "dotMode": "currentdamage",
-                  "dotValue": 10
+                  "dotValue": 25
+               },
+               {
+                  "parameter": "hprestoration",
+                  "add": -40,
+                  "rate": true
                }
             ],
             "spellRange": 6,
@@ -52408,13 +55880,6 @@ export const skillsjson = [
                   "parameter": "attack",
                   "stat": "int",
                   "scale": 4.7,
-                  "pvp": true,
-                  "pve": true
-               },
-               {
-                  "parameter": "duration",
-                  "stat": "int",
-                  "scale": 0.1,
                   "pvp": true,
                   "pve": true
                }
@@ -52472,140 +55937,140 @@ export const skillsjson = [
       "skillPoints": 1,
       "levels": [
          {
-            "minAttack": 10,
-            "maxAttack": 11,
+            "minAttack": 9,
+            "maxAttack": 10,
             "consumedFP": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 0.82,
+                  "scale": 1.02,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 10,
-            "maxAttack": 11,
+            "minAttack": 11,
+            "maxAttack": 12,
             "consumedFP": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 0.84,
+                  "scale": 1.04,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 10,
-            "maxAttack": 11,
+            "minAttack": 13,
+            "maxAttack": 14,
             "consumedFP": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 0.86,
+                  "scale": 1.06,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 10,
-            "maxAttack": 11,
+            "minAttack": 15,
+            "maxAttack": 16,
             "consumedFP": 5,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 0.88,
+                  "scale": 1.08,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 12,
-            "maxAttack": 13,
+            "minAttack": 17,
+            "maxAttack": 18,
             "consumedFP": 8,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 0.9,
+                  "scale": 1.1,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 12,
-            "maxAttack": 13,
+            "minAttack": 19,
+            "maxAttack": 20,
             "consumedFP": 8,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 0.92,
+                  "scale": 1.12,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 12,
-            "maxAttack": 13,
+            "minAttack": 21,
+            "maxAttack": 22,
             "consumedFP": 8,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 0.94,
+                  "scale": 1.14,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 12,
-            "maxAttack": 13,
+            "minAttack": 23,
+            "maxAttack": 24,
             "consumedFP": 8,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 0.96,
+                  "scale": 1.16,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 12,
-            "maxAttack": 13,
+            "minAttack": 25,
+            "maxAttack": 26,
             "consumedFP": 10,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 0.98,
+                  "scale": 1.18,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 14,
-            "maxAttack": 15,
+            "minAttack": 27,
+            "maxAttack": 28,
             "consumedFP": 10,
             "scalingParameters": [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 1,
+                  "scale": 1.2,
                   "pvp": true,
                   "pve": true
                }
@@ -52635,17 +56100,17 @@ export const skillsjson = [
       "description": {
          "en": "Prevents an enemy from approaching.",
          "ar": "Prevents an enemy from approaching.",
-         "br": "Evita que um inimigo se aproxime.",
-         "cns": "\u8ff7\u60d1\u5bf9\u65b9\u7684\u773c\u775b\u4e00\u5b9a\u51e0\u7387\u4f7f\u5176\u5728\u7279\u5b9a\u65f6\u95f4\u5185\u65e0\u6cd5\u79fb\u52a8\u3002",
-         "de": "Das Ann\u00e4hern des Gegners verhindern indem man Konfusion einsetzt.",
+         "br": "Prevents an enemy from approaching.",
+         "cns": "Prevents an enemy from approaching.",
+         "de": "Prevents an enemy from approaching.",
          "fi": "Prevents an enemy from approaching.",
          "fil": "Prevents an enemy from approaching.",
-         "fr": "Jette le mauvais oeil sur l'ennemi, ce qui a une forte chance de l'immobiliser pour une courte p\u00e9riode",
+         "fr": "Prevents an enemy from approaching.",
          "it": "Prevents an enemy from approaching.",
-         "kr": "\uc801\uc758 \ub208\uc744 \ud63c\ub780\uc2dc\ucf1c \uc6c0\uc9c1\uc774\uc9c0 \ubabb\ud558\uac8c \ub9cc\ub4ed\ub2c8\ub2e4.",
+         "kr": "Prevents an enemy from approaching.",
          "nl": "Prevents an enemy from approaching.",
-         "pl": "Chwyta cel i powstrzymuje go przed zbli\u017ceniem si\u0119.",
-         "ru": "\u041f\u043e\u0437\u0432\u043e\u043b\u044f\u0435\u0442 \u0434\u0435\u0440\u0436\u0430\u0442\u044c \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u0430 \u043d\u0430 \u0440\u0430\u0441\u0441\u0442\u043e\u044f\u043d\u0438\u0438.",
+         "pl": "Prevents an enemy from approaching.",
+         "ru": "Prevents an enemy from approaching.",
          "sw": "Prevents an enemy from approaching.",
          "th": "Prevents an enemy from approaching."
       },
@@ -52919,6 +56384,162 @@ export const skillsjson = [
       ]
    },
    {
+      "id": 9730,
+      "name": {
+         "en": "null"
+      },
+      "description": {
+         "en": "Enemies take damage over time in an area around you.",
+         "ar": "Enemies take damage over time in an area around you.",
+         "br": "Os inimigos sofrem danos em uma \u00e1rea ao seu redor.",
+         "cns": "\u5728\u5723\u4e4b\u5149\u7167\u5c04\u4e0b\u5f62\u6210\u5177\u6709\u5723\u529b\u7684\u9886\u57df\uff0c\u6253\u51fb\u8e0f\u5165\u9886\u57df\u7684\u654c\u4eba\u3002",
+         "de": "Zieht einen heiligen Bereich um dich. Gegner erleiden in diesem Bereich Schaden.",
+         "fi": "L\u00e4heiset viholliset ottavat vahinkoa.",
+         "fil": "Enemies take damage over time in an area around you.",
+         "fr": "Attaque ancestrale qui inflige des d\u00e9g\u00e2ts \u00e0 r\u00e9p\u00e9tition \u00e0 tous les ennemis situ\u00e9s \u00e0 proximit\u00e9 du Pr\u00eatre",
+         "it": "Enemies take damage over time in an area around you.",
+         "kr": "\uc790\uc2e0\uc758 \uc8fc\ubcc0\uc5d0 \uc131\uc2a4\ub7ec\uc6b4 \uc601\uc5ed\uc744 \ud615\uc131\ud558\uc5ec \ubc94\uc704\uc548\uc5d0 \ub4e4\uc5b4\uc624\ub294 \uc801\uc5d0\uac8c \ub370\ubbf8\uc9c0\ub97c \uc90d\ub2c8\ub2e4.",
+         "nl": "Enemies take damage over time in an area around you.",
+         "pl": "Stwarza na ziemi pole energii, kt\u00f3re zadaje obra\u017cenia co pewien czas wszystkim wrogom w zasi\u0119gu.",
+         "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0443\u0440\u043e\u043d \u043f\u043e \u043e\u0431\u043b\u0430\u0441\u0442\u0438.",
+         "sw": "Enemies take damage over time in an area around you.",
+         "th": "Enemies take damage over time in an area around you."
+      },
+      "icon": "rinsupanzelr.png",
+      "level": 1,
+      "element": "none",
+      "magic": false,
+      "requirements": [],
+      "combo": "general",
+      "debuff": true,
+      "flying": true,
+      "passive": false,
+      "target": "area",
+      "skillPoints": 1,
+      "levels": [
+         {
+            "damageMultiplier": 9,
+            "minAttack": 90,
+            "maxAttack": 91,
+            "dotTick": 0.75,
+            "consumedMP": 65,
+            "cooldown": 8.5,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "spellRange": 5
+         },
+         {
+            "damageMultiplier": 9,
+            "minAttack": 91,
+            "maxAttack": 92,
+            "dotTick": 0.75,
+            "consumedMP": 70,
+            "cooldown": 8.5,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "spellRange": 5
+         },
+         {
+            "damageMultiplier": 9,
+            "minAttack": 92,
+            "maxAttack": 93,
+            "dotTick": 0.75,
+            "consumedMP": 75,
+            "cooldown": 8.5,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "spellRange": 5
+         },
+         {
+            "damageMultiplier": 9,
+            "minAttack": 93,
+            "maxAttack": 94,
+            "dotTick": 0.75,
+            "consumedMP": 80,
+            "cooldown": 8.5,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "spellRange": 5
+         },
+         {
+            "damageMultiplier": 9,
+            "minAttack": 94,
+            "maxAttack": 95,
+            "dotTick": 0.75,
+            "consumedMP": 85,
+            "cooldown": 8.5,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "spellRange": 5
+         },
+         {
+            "damageMultiplier": 9,
+            "minAttack": 95,
+            "maxAttack": 96,
+            "dotTick": 0.75,
+            "consumedMP": 90,
+            "cooldown": 8,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "spellRange": 5
+         },
+         {
+            "damageMultiplier": 9,
+            "minAttack": 96,
+            "maxAttack": 97,
+            "dotTick": 0.75,
+            "consumedMP": 95,
+            "cooldown": 7.5,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "spellRange": 5
+         },
+         {
+            "damageMultiplier": 9,
+            "minAttack": 97,
+            "maxAttack": 98,
+            "dotTick": 0.75,
+            "consumedMP": 100,
+            "cooldown": 7.5,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "spellRange": 5
+         },
+         {
+            "damageMultiplier": 9,
+            "minAttack": 98,
+            "maxAttack": 99,
+            "dotTick": 0.75,
+            "consumedMP": 105,
+            "cooldown": 7,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "spellRange": 5
+         },
+         {
+            "damageMultiplier": 9,
+            "minAttack": 99,
+            "maxAttack": 100,
+            "dotTick": 0.75,
+            "consumedMP": 115,
+            "cooldown": 7,
+            "casting": 0.625,
+            "duration": 10,
+            "durationPVP": 10,
+            "spellRange": 5
+         }
+      ]
+   },
+   {
       "id": 9740,
       "name": {
          "en": "Armor Penetrate",
@@ -52929,7 +56550,7 @@ export const skillsjson = [
          "fi": "Armor Penetrate",
          "fil": "Armor Penetrate",
          "fr": "Perc\u00e9e d'armure",
-         "it": "Armor Penetrate",
+         "it": "Armatura bucata",
          "kr": "\uc544\uba38 \ud398\ub108\ud2b8\ub808\uc774\ud2b8",
          "nl": "Armor Penetrate",
          "pl": "Przebicie Pancerza",
@@ -52938,21 +56559,21 @@ export const skillsjson = [
          "th": "Armor Penetrate"
       },
       "description": {
-         "en": "Strikes at the enemy and lowers their Melee Block Rate.",
-         "ar": "Strikes at the enemy and lowers their Melee Block Rate.",
+         "en": "Strikes at the enemy and lowers their Block Rate.",
+         "ar": "Strikes at the enemy and lowers their Block Rate.",
          "br": "Ataca o inimigo reduzindo sua taxa de Bloqueio Corpo a Corpo.",
          "cns": "\u653b\u51fb\u5bf9\u65b9\u5f31\u70b9\uff0c\u964d\u4f4e\u5bf9\u65b9\u7684\u9632\u5fa1\u80fd\u529b\u3002",
          "de": "Verwirren des Gegners. Die Verteidigung des Gegners wird geschw\u00e4cht.",
          "fi": "Iskee vihollista ja laskee kohteen l\u00e4hitaistelu Block Ratea.",
-         "fil": "Strikes at the enemy and lowers their Melee Block Rate.",
+         "fil": "Strikes at the enemy and lowers their Block Rate.",
          "fr": "Attaque de m\u00eal\u00e9e qui ignore 50% de la d\u00e9fense de l'ennemi",
-         "it": "Strikes at the enemy and lowers their Melee Block Rate.",
+         "it": "Colpo che ignora met\u00e0 della difesa del bersaglio.",
          "kr": "\uc801\uc758 \ubc29\uc5b4\uac00 \uc57d\ud55c \ubd80\ubd84\uc744 \ub178\ub824\uc11c \ud0c0\uaca9\ud569\ub2c8\ub2e4. \uc774\ub54c \uc801\uc758 \ubc29\uc5b4\ub825\uc758 \uc77c\ubd80\uac00 \ubb34\uc2dc\ub429\ub2c8\ub2e4.",
-         "nl": "Strikes at the enemy and lowers their Melee Block Rate.",
+         "nl": "Strikes at the enemy and lowers their Block Rate.",
          "pl": "Przebija pancerz wroga, obni\u017caj\u0105c jego szans\u0119 na Blok.",
          "ru": "\u041d\u0430\u043d\u043e\u0441\u0438\u0442 \u0432\u0440\u0430\u0433\u0443 \u0443\u0440\u043e\u043d \u0438 \u0441\u043d\u0438\u0436\u0430\u0435\u0442 \u0435\u0433\u043e \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u044c \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0430\u0442\u0430\u043a\u0438 \u0431\u043b\u0438\u0436\u043d\u0435\u0433\u043e \u0431\u043e\u044f.",
-         "sw": "Strikes at the enemy and lowers their Melee Block Rate.",
-         "th": "Strikes at the enemy and lowers their Melee Block Rate."
+         "sw": "Strikes at the enemy and lowers their Block Rate.",
+         "th": "Strikes at the enemy and lowers their Block Rate."
       },
       "icon": "blddblarmpen.png",
       "class": 2246,
@@ -52968,18 +56589,20 @@ export const skillsjson = [
       "skillPoints": 3,
       "levels": [
          {
-            "minAttack": 81,
-            "maxAttack": 82,
+            "damageMultiplier": 0.6,
+            "minAttack": 61,
+            "maxAttack": 62,
             "probability": 40,
-            "probabilityPVP": 40,
+            "probabilityPVP": 5,
             "consumedFP": 40,
+            "cooldown": 0.2,
             "casting": 1.25,
             "duration": 10,
             "durationPVP": 10,
             "abilities": [
                {
-                  "parameter": "meleeblock",
-                  "add": -31,
+                  "parameter": "block",
+                  "add": -4,
                   "rate": true
                }
             ],
@@ -52987,25 +56610,27 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.52,
+                  "scale": 2.82,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 83,
-            "maxAttack": 84,
+            "damageMultiplier": 0.6,
+            "minAttack": 63,
+            "maxAttack": 64,
             "probability": 40,
-            "probabilityPVP": 40,
+            "probabilityPVP": 10,
             "consumedFP": 42,
+            "cooldown": 0.2,
             "casting": 1.25,
             "duration": 10,
             "durationPVP": 10,
             "abilities": [
                {
-                  "parameter": "meleeblock",
-                  "add": -32,
+                  "parameter": "block",
+                  "add": -6,
                   "rate": true
                }
             ],
@@ -53013,25 +56638,27 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.54,
+                  "scale": 2.84,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 85,
-            "maxAttack": 86,
+            "damageMultiplier": 0.6,
+            "minAttack": 65,
+            "maxAttack": 66,
             "probability": 40,
-            "probabilityPVP": 40,
+            "probabilityPVP": 15,
             "consumedFP": 44,
+            "cooldown": 0.2,
             "casting": 1.25,
             "duration": 10,
             "durationPVP": 10,
             "abilities": [
                {
-                  "parameter": "meleeblock",
-                  "add": -33,
+                  "parameter": "block",
+                  "add": -8,
                   "rate": true
                }
             ],
@@ -53039,25 +56666,27 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.56,
+                  "scale": 2.86,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 87,
-            "maxAttack": 88,
+            "damageMultiplier": 0.6,
+            "minAttack": 67,
+            "maxAttack": 68,
             "probability": 40,
-            "probabilityPVP": 40,
+            "probabilityPVP": 20,
             "consumedFP": 46,
+            "cooldown": 0.2,
             "casting": 1.25,
             "duration": 10,
             "durationPVP": 10,
             "abilities": [
                {
-                  "parameter": "meleeblock",
-                  "add": -34,
+                  "parameter": "block",
+                  "add": -10,
                   "rate": true
                }
             ],
@@ -53065,24 +56694,138 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.58,
+                  "scale": 2.88,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 89,
-            "maxAttack": 90,
+            "damageMultiplier": 0.6,
+            "minAttack": 69,
+            "maxAttack": 70,
             "probability": 50,
-            "probabilityPVP": 50,
+            "probabilityPVP": 25,
             "consumedFP": 48,
+            "cooldown": 0.2,
             "casting": 1.25,
             "duration": 15,
             "durationPVP": 15,
             "abilities": [
                {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
+                  "add": -15,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 2.9,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.6,
+            "minAttack": 71,
+            "maxAttack": 72,
+            "probability": 60,
+            "probabilityPVP": 30,
+            "consumedFP": 50,
+            "cooldown": 0.2,
+            "casting": 1.25,
+            "duration": 16,
+            "durationPVP": 16,
+            "abilities": [
+               {
+                  "parameter": "block",
+                  "add": -20,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 2.92,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.6,
+            "minAttack": 73,
+            "maxAttack": 74,
+            "probability": 70,
+            "probabilityPVP": 30,
+            "consumedFP": 52,
+            "cooldown": 0.2,
+            "casting": 1.25,
+            "duration": 17,
+            "durationPVP": 17,
+            "abilities": [
+               {
+                  "parameter": "block",
+                  "add": -25,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 2.94,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.6,
+            "minAttack": 75,
+            "maxAttack": 76,
+            "probability": 80,
+            "probabilityPVP": 30,
+            "consumedFP": 54,
+            "cooldown": 0.2,
+            "casting": 1.25,
+            "duration": 18,
+            "durationPVP": 18,
+            "abilities": [
+               {
+                  "parameter": "block",
+                  "add": -30,
+                  "rate": true
+               }
+            ],
+            "scalingParameters": [
+               {
+                  "parameter": "attack",
+                  "stat": "str",
+                  "scale": 2.96,
+                  "pvp": true,
+                  "pve": true
+               }
+            ]
+         },
+         {
+            "damageMultiplier": 0.6,
+            "minAttack": 77,
+            "maxAttack": 78,
+            "probability": 90,
+            "probabilityPVP": 30,
+            "consumedFP": 56,
+            "cooldown": 0.2,
+            "casting": 1.25,
+            "duration": 19,
+            "durationPVP": 19,
+            "abilities": [
+               {
+                  "parameter": "block",
                   "add": -35,
                   "rate": true
                }
@@ -53091,126 +56834,25 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.6,
+                  "scale": 2.98,
                   "pvp": true,
                   "pve": true
                }
             ]
          },
          {
-            "minAttack": 91,
-            "maxAttack": 92,
-            "probability": 60,
-            "probabilityPVP": 60,
-            "consumedFP": 50,
+            "damageMultiplier": 0.6,
+            "minAttack": 79,
+            "maxAttack": 80,
+            "probabilityPVP": 30,
+            "consumedFP": 58,
+            "cooldown": 0.2,
             "casting": 1.25,
             "duration": 20,
             "durationPVP": 20,
             "abilities": [
                {
-                  "parameter": "meleeblock",
-                  "add": -36,
-                  "rate": true
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 2.62,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 93,
-            "maxAttack": 94,
-            "probability": 70,
-            "probabilityPVP": 70,
-            "consumedFP": 52,
-            "casting": 1.25,
-            "duration": 30,
-            "durationPVP": 30,
-            "abilities": [
-               {
-                  "parameter": "meleeblock",
-                  "add": -37,
-                  "rate": true
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 2.64,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 95,
-            "maxAttack": 96,
-            "probability": 80,
-            "probabilityPVP": 80,
-            "consumedFP": 54,
-            "casting": 1.25,
-            "duration": 40,
-            "durationPVP": 40,
-            "abilities": [
-               {
-                  "parameter": "meleeblock",
-                  "add": -38,
-                  "rate": true
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 2.66,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 97,
-            "maxAttack": 98,
-            "probability": 90,
-            "probabilityPVP": 90,
-            "consumedFP": 56,
-            "casting": 1.25,
-            "duration": 50,
-            "durationPVP": 50,
-            "abilities": [
-               {
-                  "parameter": "meleeblock",
-                  "add": -39,
-                  "rate": true
-               }
-            ],
-            "scalingParameters": [
-               {
-                  "parameter": "attack",
-                  "stat": "str",
-                  "scale": 2.68,
-                  "pvp": true,
-                  "pve": true
-               }
-            ]
-         },
-         {
-            "minAttack": 99,
-            "maxAttack": 100,
-            "consumedFP": 58,
-            "casting": 1.25,
-            "duration": 60,
-            "durationPVP": 60,
-            "abilities": [
-               {
-                  "parameter": "meleeblock",
+                  "parameter": "block",
                   "add": -40,
                   "rate": true
                }
@@ -53219,7 +56861,7 @@ export const skillsjson = [
                {
                   "parameter": "attack",
                   "stat": "str",
-                  "scale": 2.7,
+                  "scale": 3,
                   "pvp": true,
                   "pve": true
                }
@@ -54164,21 +57806,21 @@ export const skillsjson = [
          "th": "Guard"
       },
       "description": {
-         "en": "Increases defense by lowering attack power. Requires a weapon to be equipped.",
-         "ar": "\u0627\u0646\u0642\u0627\u0635 \u0637\u0627\u0642\u0629 \u0627\u0644\u062f\u0641\u0627\u0639 \u0644\u0632\u064a\u0627\u062f\u0629 \u0637\u0627\u0642\u0629 \u0627\u0644\u0647\u062c\u0648\u0645. \u062a\u0633\u062a\u0644\u0632\u0645 \u0633\u0644\u0627\u062d\u064b\u0627 \u0645\u0639\u064a\u0651\u0646\u0627.",
-         "br": "Aumenta a defesa reduzindo o poder de ataque. Exige uma espada de duas m\u00e3os.",
-         "cns": "\u6682\u65f6\u964d\u4f4e\u6b66\u5668\u7684\u653b\u51fb\u80fd\u529b\uff0c\u96c6\u4e2d\u7cbe\u795e\u63d0\u5347\u9632\u5fa1\u3002",
-         "de": "Erh\u00f6ht die Verteidigung bei Senkung der Angriffsst\u00e4rke.",
-         "fi": "Increases defense by lowering attack power. Requires a weapon to be equipped.",
-         "fil": "Increases defense by lowering attack power. Requires a weapon to be equipped.",
-         "fr": "Augmente la d\u00e9fense au d\u00e9triment de l'attaque du Chevalier",
-         "it": "Aumenta la difesa a scapito dell'attacco del Cavaliere.",
-         "kr": "\ubc29\uc5b4\uc5d0 \uc804\ub150\ud558\uc5ec \uacf5\uaca9\ub825\uc744 \uac10\uc18c\uc2dc\ud0a4\uace0 \ubc29\uc5b4\ub825\uc744 \uc0c1\uc2b9\uc2dc\ud0b5\ub2c8\ub2e4.",
-         "nl": "Increases defense by lowering attack power. Requires a weapon to be equipped.",
-         "pl": "Masywnie zwi\u0119ksza twoj\u0105 obron\u0119 kosztem obni\u017cenia si\u0142y ataku. Wymaga dwur\u0119cznej broni.",
-         "ru": "\u041f\u043e\u0432\u044b\u0448\u0430\u0435\u0442 \u0437\u0430\u0449\u0438\u0442\u0443, \u043d\u043e \u0441\u043d\u0438\u0436\u0430\u0435\u0442 \u0441\u0438\u043b\u0443 \u0430\u0442\u0430\u043a\u0438. \u0414\u043b\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f \u0434\u0432\u0443\u0440\u0443\u0447\u043d\u044b\u0439 \u043c\u0435\u0447 \u0438\u043b\u0438 \u0441\u0435\u043a\u0438\u0440\u0430.",
-         "sw": "Increases defense by lowering attack power. Requires a weapon to be equipped.",
-         "th": "Increases defense by lowering attack power. Requires a weapon to be equipped."
+         "en": "Decreases all inmcoming damage from enemies by sacrificing attack power. Requires a weapon to be equipped.",
+         "ar": "Decreases all inmcoming damage from enemies by sacrificing attack power. Requires a weapon to be equipped.",
+         "br": "Decreases all inmcoming damage from enemies by sacrificing attack power. Requires a weapon to be equipped.",
+         "cns": "Decreases all inmcoming damage from enemies by sacrificing attack power. Requires a weapon to be equipped.",
+         "de": "Decreases all inmcoming damage from enemies by sacrificing attack power. Requires a weapon to be equipped.",
+         "fi": "Decreases all inmcoming damage from enemies by sacrificing attack power. Requires a weapon to be equipped.",
+         "fil": "Decreases all inmcoming damage from enemies by sacrificing attack power. Requires a weapon to be equipped.",
+         "fr": "Decreases all inmcoming damage from enemies by sacrificing attack power. Requires a weapon to be equipped.",
+         "it": "Decreases all inmcoming damage from enemies by sacrificing attack power. Requires a weapon to be equipped.",
+         "kr": "Decreases all inmcoming damage from enemies by sacrificing attack power. Requires a weapon to be equipped.",
+         "nl": "Decreases all inmcoming damage from enemies by sacrificing attack power. Requires a weapon to be equipped.",
+         "pl": "Decreases all inmcoming damage from enemies by sacrificing attack power. Requires a weapon to be equipped.",
+         "ru": "Decreases all inmcoming damage from enemies by sacrificing attack power. Requires a weapon to be equipped.",
+         "sw": "Decreases all inmcoming damage from enemies by sacrificing attack power. Requires a weapon to be equipped.",
+         "th": "Decreases all inmcoming damage from enemies by sacrificing attack power. Requires a weapon to be equipped."
       },
       "icon": "kntsupguard.png",
       "class": 5330,
@@ -54202,17 +57844,12 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": -20,
+                  "add": -25,
                   "rate": true
                },
                {
-                  "parameter": "def",
-                  "add": 10,
-                  "rate": true
-               },
-               {
-                  "parameter": "magicdefense",
-                  "add": 10,
+                  "parameter": "incomingdamage",
+                  "add": -24,
                   "rate": true
                }
             ]
@@ -54226,17 +57863,12 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": -20,
+                  "add": -25,
                   "rate": true
                },
                {
-                  "parameter": "def",
-                  "add": 13,
-                  "rate": true
-               },
-               {
-                  "parameter": "magicdefense",
-                  "add": 13,
+                  "parameter": "incomingdamage",
+                  "add": -24,
                   "rate": true
                }
             ]
@@ -54250,17 +57882,12 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": -20,
+                  "add": -25,
                   "rate": true
                },
                {
-                  "parameter": "def",
-                  "add": 16,
-                  "rate": true
-               },
-               {
-                  "parameter": "magicdefense",
-                  "add": 16,
+                  "parameter": "incomingdamage",
+                  "add": -26,
                   "rate": true
                }
             ]
@@ -54274,17 +57901,12 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": -20,
+                  "add": -25,
                   "rate": true
                },
                {
-                  "parameter": "def",
-                  "add": 19,
-                  "rate": true
-               },
-               {
-                  "parameter": "magicdefense",
-                  "add": 19,
+                  "parameter": "incomingdamage",
+                  "add": -28,
                   "rate": true
                }
             ]
@@ -54298,17 +57920,12 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": -20,
+                  "add": -25,
                   "rate": true
                },
                {
-                  "parameter": "def",
-                  "add": 21,
-                  "rate": true
-               },
-               {
-                  "parameter": "magicdefense",
-                  "add": 21,
+                  "parameter": "incomingdamage",
+                  "add": -30,
                   "rate": true
                }
             ]
@@ -54322,17 +57939,12 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": -20,
+                  "add": -25,
                   "rate": true
                },
                {
-                  "parameter": "def",
-                  "add": 24,
-                  "rate": true
-               },
-               {
-                  "parameter": "magicdefense",
-                  "add": 24,
+                  "parameter": "incomingdamage",
+                  "add": -32,
                   "rate": true
                }
             ]
@@ -54346,17 +57958,12 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": -20,
+                  "add": -25,
                   "rate": true
                },
                {
-                  "parameter": "def",
-                  "add": 27,
-                  "rate": true
-               },
-               {
-                  "parameter": "magicdefense",
-                  "add": 27,
+                  "parameter": "incomingdamage",
+                  "add": -34,
                   "rate": true
                }
             ]
@@ -54370,17 +57977,12 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": -20,
+                  "add": -25,
                   "rate": true
                },
                {
-                  "parameter": "def",
-                  "add": 30,
-                  "rate": true
-               },
-               {
-                  "parameter": "magicdefense",
-                  "add": 30,
+                  "parameter": "incomingdamage",
+                  "add": -36,
                   "rate": true
                }
             ]
@@ -54394,17 +57996,12 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": -20,
+                  "add": -25,
                   "rate": true
                },
                {
-                  "parameter": "def",
-                  "add": 35,
-                  "rate": true
-               },
-               {
-                  "parameter": "magicdefense",
-                  "add": 35,
+                  "parameter": "incomingdamage",
+                  "add": -38,
                   "rate": true
                }
             ]
@@ -54418,17 +58015,12 @@ export const skillsjson = [
             "abilities": [
                {
                   "parameter": "attack",
-                  "add": -20,
+                  "add": -25,
                   "rate": true
                },
                {
-                  "parameter": "def",
-                  "add": 40,
-                  "rate": true
-               },
-               {
-                  "parameter": "magicdefense",
-                  "add": 40,
+                  "parameter": "incomingdamage",
+                  "add": -40,
                   "rate": true
                }
             ]

@@ -39,7 +39,7 @@ export const setsjson = [
             "equipped": 3,
             "ability": {
                "parameter": "hitrate",
-               "add": 15,
+               "add": 20,
                "rate": true
             }
          },
@@ -55,7 +55,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "dex",
-               "add": 7,
+               "add": 10,
                "rate": false
             }
          },
@@ -323,7 +323,7 @@ export const setsjson = [
             "equipped": 3,
             "ability": {
                "parameter": "speed",
-               "add": 20,
+               "add": 10,
                "rate": true
             }
          },
@@ -391,8 +391,8 @@ export const setsjson = [
          {
             "equipped": 4,
             "ability": {
-               "parameter": "pvpdamagereduction",
-               "add": 5,
+               "parameter": "criticalresist",
+               "add": 10,
                "rate": true
             }
          },
@@ -415,8 +415,8 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "def",
-               "add": 5,
+               "parameter": "magicdefense",
+               "add": 7,
                "rate": true
             }
          },
@@ -424,7 +424,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "def",
-               "add": 5,
+               "add": 7,
                "rate": true
             }
          }
@@ -553,9 +553,9 @@ export const setsjson = [
          {
             "equipped": 2,
             "ability": {
-               "parameter": "str",
-               "add": 15,
-               "rate": false
+               "parameter": "attackspeed",
+               "add": 10,
+               "rate": true
             }
          },
          {
@@ -598,7 +598,7 @@ export const setsjson = [
          {
             "equipped": 4,
             "ability": {
-               "parameter": "dex",
+               "parameter": "str",
                "add": 10,
                "rate": false
             }
@@ -700,7 +700,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "dex",
-               "add": 7,
+               "add": 10,
                "rate": false
             }
          },
@@ -753,7 +753,7 @@ export const setsjson = [
             "equipped": 3,
             "ability": {
                "parameter": "criticalchance",
-               "add": 15,
+               "add": 20,
                "rate": true
             }
          },
@@ -768,9 +768,9 @@ export const setsjson = [
          {
             "equipped": 2,
             "ability": {
-               "parameter": "str",
-               "add": 15,
-               "rate": false
+               "parameter": "attackspeed",
+               "add": 10,
+               "rate": true
             }
          },
          {
@@ -814,7 +814,7 @@ export const setsjson = [
             "equipped": 4,
             "ability": {
                "parameter": "criticaldamage",
-               "add": 40,
+               "add": 45,
                "rate": true
             }
          },
@@ -890,8 +890,8 @@ export const setsjson = [
          {
             "equipped": 4,
             "ability": {
-               "parameter": "pvpdamagereduction",
-               "add": 5,
+               "parameter": "criticalresist",
+               "add": 10,
                "rate": true
             }
          },
@@ -914,8 +914,8 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "def",
-               "add": 5,
+               "parameter": "magicdefense",
+               "add": 7,
                "rate": true
             }
          },
@@ -923,7 +923,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "def",
-               "add": 5,
+               "add": 7,
                "rate": true
             }
          }
@@ -984,7 +984,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "int",
-               "add": 7,
+               "add": 10,
                "rate": false
             }
          },
@@ -1053,7 +1053,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "int",
-               "add": 5,
+               "add": 7,
                "rate": false
             }
          },
@@ -1061,7 +1061,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "str",
-               "add": 5,
+               "add": 7,
                "rate": false
             }
          },
@@ -1130,7 +1130,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "decreasedmpconsumption",
-               "add": 20,
+               "add": 25,
                "rate": true
             }
          },
@@ -1251,8 +1251,8 @@ export const setsjson = [
          {
             "equipped": 4,
             "ability": {
-               "parameter": "pvpdamagereduction",
-               "add": 5,
+               "parameter": "criticalresist",
+               "add": 10,
                "rate": true
             }
          },
@@ -1275,8 +1275,8 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "def",
-               "add": 5,
+               "parameter": "magicdefense",
+               "add": 7,
                "rate": true
             }
          },
@@ -1284,7 +1284,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "def",
-               "add": 5,
+               "add": 7,
                "rate": true
             }
          }
@@ -1413,8 +1413,8 @@ export const setsjson = [
          {
             "equipped": 2,
             "ability": {
-               "parameter": "dex",
-               "add": 7,
+               "parameter": "maxfp",
+               "add": 250,
                "rate": false
             }
          },
@@ -1482,9 +1482,9 @@ export const setsjson = [
          {
             "equipped": 2,
             "ability": {
-               "parameter": "maxmp",
-               "add": 20,
-               "rate": true
+               "parameter": "int",
+               "add": 10,
+               "rate": false
             }
          },
          {
@@ -1604,8 +1604,8 @@ export const setsjson = [
          {
             "equipped": 4,
             "ability": {
-               "parameter": "pvpdamagereduction",
-               "add": 5,
+               "parameter": "criticalresist",
+               "add": 10,
                "rate": true
             }
          },
@@ -1628,8 +1628,8 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "def",
-               "add": 5,
+               "parameter": "magicdefense",
+               "add": 7,
                "rate": true
             }
          },
@@ -1637,7 +1637,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "def",
-               "add": 5,
+               "add": 7,
                "rate": true
             }
          }
@@ -1835,8 +1835,8 @@ export const setsjson = [
          {
             "equipped": 4,
             "ability": {
-               "parameter": "pvpdamagereduction",
-               "add": 5,
+               "parameter": "criticalresist",
+               "add": 10,
                "rate": true
             }
          },
@@ -1859,8 +1859,8 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "def",
-               "add": 5,
+               "parameter": "magicdefense",
+               "add": 7,
                "rate": true
             }
          },
@@ -1868,7 +1868,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "def",
-               "add": 5,
+               "add": 7,
                "rate": true
             }
          }
@@ -1981,8 +1981,8 @@ export const setsjson = [
          {
             "equipped": 4,
             "ability": {
-               "parameter": "pvpdamagereduction",
-               "add": 5,
+               "parameter": "criticalresist",
+               "add": 10,
                "rate": true
             }
          },
@@ -2005,8 +2005,8 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "def",
-               "add": 5,
+               "parameter": "magicdefense",
+               "add": 7,
                "rate": true
             }
          },
@@ -2014,7 +2014,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "def",
-               "add": 5,
+               "add": 7,
                "rate": true
             }
          }
@@ -2152,7 +2152,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "sta",
-               "add": 7,
+               "add": 10,
                "rate": false
             }
          },
@@ -2221,7 +2221,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "int",
-               "add": 7,
+               "add": 10,
                "rate": false
             }
          },
@@ -2266,7 +2266,7 @@ export const setsjson = [
             "equipped": 4,
             "ability": {
                "parameter": "maxhp",
-               "add": 10,
+               "add": 15,
                "rate": true
             }
          },
@@ -2358,9 +2358,9 @@ export const setsjson = [
          {
             "equipped": 2,
             "ability": {
-               "parameter": "str",
-               "add": 15,
-               "rate": false
+               "parameter": "attackspeed",
+               "add": 10,
+               "rate": true
             }
          },
          {
@@ -2688,7 +2688,7 @@ export const setsjson = [
             "equipped": 4,
             "ability": {
                "parameter": "decreasedcastingtime",
-               "add": 10,
+               "add": 12,
                "rate": true
             }
          },
@@ -2756,7 +2756,7 @@ export const setsjson = [
          {
             "equipped": 4,
             "ability": {
-               "parameter": "dex",
+               "parameter": "str",
                "add": 10,
                "rate": false
             }
@@ -2834,7 +2834,7 @@ export const setsjson = [
             "equipped": 4,
             "ability": {
                "parameter": "attackspeed",
-               "add": 10,
+               "add": 15,
                "rate": true
             }
          },
@@ -2910,8 +2910,8 @@ export const setsjson = [
          {
             "equipped": 4,
             "ability": {
-               "parameter": "pvpdamagereduction",
-               "add": 5,
+               "parameter": "criticalresist",
+               "add": 10,
                "rate": true
             }
          },
@@ -2934,8 +2934,8 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "def",
-               "add": 5,
+               "parameter": "magicdefense",
+               "add": 7,
                "rate": true
             }
          },
@@ -2943,7 +2943,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "def",
-               "add": 5,
+               "add": 7,
                "rate": true
             }
          }
@@ -2987,9 +2987,9 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "dex",
-               "add": 5,
-               "rate": false
+               "parameter": "criticalchance",
+               "add": 10,
+               "rate": true
             }
          },
          {
@@ -3057,7 +3057,7 @@ export const setsjson = [
             "equipped": 3,
             "ability": {
                "parameter": "speed",
-               "add": 20,
+               "add": 10,
                "rate": true
             }
          },
@@ -3142,7 +3142,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "sta",
-               "add": 7,
+               "add": 10,
                "rate": false
             }
          },
@@ -3264,7 +3264,7 @@ export const setsjson = [
             "equipped": 3,
             "ability": {
                "parameter": "speed",
-               "add": 20,
+               "add": 10,
                "rate": true
             }
          },
@@ -3410,7 +3410,7 @@ export const setsjson = [
             "equipped": 3,
             "ability": {
                "parameter": "int",
-               "add": 7,
+               "add": 5,
                "rate": false
             }
          },
@@ -3479,7 +3479,7 @@ export const setsjson = [
             "equipped": 3,
             "ability": {
                "parameter": "criticalchance",
-               "add": 15,
+               "add": 20,
                "rate": true
             }
          },
@@ -3494,9 +3494,9 @@ export const setsjson = [
          {
             "equipped": 2,
             "ability": {
-               "parameter": "str",
-               "add": 15,
-               "rate": false
+               "parameter": "attackspeed",
+               "add": 10,
+               "rate": true
             }
          },
          {
@@ -3547,8 +3547,8 @@ export const setsjson = [
          {
             "equipped": 4,
             "ability": {
-               "parameter": "pvpdamagereduction",
-               "add": 5,
+               "parameter": "criticalresist",
+               "add": 10,
                "rate": true
             }
          },
@@ -3571,8 +3571,8 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "def",
-               "add": 5,
+               "parameter": "magicdefense",
+               "add": 7,
                "rate": true
             }
          },
@@ -3580,7 +3580,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "def",
-               "add": 5,
+               "add": 7,
                "rate": true
             }
          }
@@ -3710,7 +3710,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "int",
-               "add": 7,
+               "add": 10,
                "rate": false
             }
          },
@@ -3839,8 +3839,8 @@ export const setsjson = [
          {
             "equipped": 4,
             "ability": {
-               "parameter": "pvpdamagereduction",
-               "add": 5,
+               "parameter": "criticalresist",
+               "add": 10,
                "rate": true
             }
          },
@@ -3863,8 +3863,8 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "def",
-               "add": 5,
+               "parameter": "magicdefense",
+               "add": 7,
                "rate": true
             }
          },
@@ -3872,7 +3872,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "def",
-               "add": 5,
+               "add": 7,
                "rate": true
             }
          }
@@ -3933,7 +3933,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "sta",
-               "add": 7,
+               "add": 10,
                "rate": false
             }
          },
@@ -3978,7 +3978,7 @@ export const setsjson = [
             "equipped": 4,
             "ability": {
                "parameter": "maxhp",
-               "add": 10,
+               "add": 15,
                "rate": true
             }
          },
@@ -4054,8 +4054,8 @@ export const setsjson = [
          {
             "equipped": 4,
             "ability": {
-               "parameter": "pvpdamagereduction",
-               "add": 5,
+               "parameter": "criticalresist",
+               "add": 10,
                "rate": true
             }
          },
@@ -4078,8 +4078,8 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "def",
-               "add": 5,
+               "parameter": "magicdefense",
+               "add": 7,
                "rate": true
             }
          },
@@ -4087,7 +4087,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "def",
-               "add": 5,
+               "add": 7,
                "rate": true
             }
          }
@@ -4355,7 +4355,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "int",
-               "add": 5,
+               "add": 7,
                "rate": false
             }
          },
@@ -4363,7 +4363,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "str",
-               "add": 5,
+               "add": 7,
                "rate": false
             }
          },
@@ -4415,9 +4415,9 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "dex",
-               "add": 5,
-               "rate": false
+               "parameter": "criticalchance",
+               "add": 10,
+               "rate": true
             }
          },
          {
@@ -4485,7 +4485,7 @@ export const setsjson = [
             "equipped": 3,
             "ability": {
                "parameter": "speed",
-               "add": 20,
+               "add": 10,
                "rate": true
             }
          },
@@ -4622,8 +4622,8 @@ export const setsjson = [
          {
             "equipped": 4,
             "ability": {
-               "parameter": "pvpdamagereduction",
-               "add": 5,
+               "parameter": "criticalresist",
+               "add": 10,
                "rate": true
             }
          },
@@ -4646,8 +4646,8 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "def",
-               "add": 5,
+               "parameter": "magicdefense",
+               "add": 7,
                "rate": true
             }
          },
@@ -4655,7 +4655,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "def",
-               "add": 5,
+               "add": 7,
                "rate": true
             }
          }
@@ -4692,16 +4692,16 @@ export const setsjson = [
             "equipped": 4,
             "ability": {
                "parameter": "attackspeed",
-               "add": 10,
+               "add": 15,
                "rate": true
             }
          },
          {
             "equipped": 3,
             "ability": {
-               "parameter": "str",
-               "add": 5,
-               "rate": false
+               "parameter": "criticalchance",
+               "add": 7,
+               "rate": true
             }
          },
          {
@@ -4899,7 +4899,7 @@ export const setsjson = [
             "equipped": 4,
             "ability": {
                "parameter": "decreasedcastingtime",
-               "add": 10,
+               "add": 12,
                "rate": true
             }
          },
@@ -5069,7 +5069,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "sta",
-               "add": 7,
+               "add": 10,
                "rate": false
             }
          },
@@ -5121,8 +5121,8 @@ export const setsjson = [
          {
             "equipped": 4,
             "ability": {
-               "parameter": "pvpdamagereduction",
-               "add": 5,
+               "parameter": "criticalresist",
+               "add": 10,
                "rate": true
             }
          },
@@ -5145,8 +5145,8 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "def",
-               "add": 5,
+               "parameter": "magicdefense",
+               "add": 7,
                "rate": true
             }
          },
@@ -5154,7 +5154,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "def",
-               "add": 5,
+               "add": 7,
                "rate": true
             }
          }
@@ -5283,8 +5283,8 @@ export const setsjson = [
          {
             "equipped": 2,
             "ability": {
-               "parameter": "dex",
-               "add": 7,
+               "parameter": "maxfp",
+               "add": 250,
                "rate": false
             }
          },
@@ -5405,8 +5405,8 @@ export const setsjson = [
          {
             "equipped": 4,
             "ability": {
-               "parameter": "pvpdamagereduction",
-               "add": 5,
+               "parameter": "criticalresist",
+               "add": 10,
                "rate": true
             }
          },
@@ -5429,8 +5429,8 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "def",
-               "add": 5,
+               "parameter": "magicdefense",
+               "add": 7,
                "rate": true
             }
          },
@@ -5438,7 +5438,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "def",
-               "add": 5,
+               "add": 7,
                "rate": true
             }
          }
@@ -5499,7 +5499,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "decreasedmpconsumption",
-               "add": 20,
+               "add": 25,
                "rate": true
             }
          },
@@ -5560,7 +5560,7 @@ export const setsjson = [
             "equipped": 3,
             "ability": {
                "parameter": "int",
-               "add": 7,
+               "add": 5,
                "rate": false
             }
          },
@@ -5628,8 +5628,8 @@ export const setsjson = [
          {
             "equipped": 4,
             "ability": {
-               "parameter": "pvpdamagereduction",
-               "add": 5,
+               "parameter": "criticalresist",
+               "add": 10,
                "rate": true
             }
          },
@@ -5652,8 +5652,8 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "def",
-               "add": 5,
+               "parameter": "magicdefense",
+               "add": 7,
                "rate": true
             }
          },
@@ -5661,7 +5661,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "def",
-               "add": 5,
+               "add": 7,
                "rate": true
             }
          }
@@ -5722,7 +5722,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "str",
-               "add": 7,
+               "add": 10,
                "rate": false
             }
          },
@@ -5774,8 +5774,8 @@ export const setsjson = [
          {
             "equipped": 4,
             "ability": {
-               "parameter": "pvpdamagereduction",
-               "add": 5,
+               "parameter": "criticalresist",
+               "add": 10,
                "rate": true
             }
          },
@@ -5798,8 +5798,8 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "def",
-               "add": 5,
+               "parameter": "magicdefense",
+               "add": 7,
                "rate": true
             }
          },
@@ -5807,7 +5807,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "def",
-               "add": 5,
+               "add": 7,
                "rate": true
             }
          }
@@ -5868,7 +5868,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "int",
-               "add": 7,
+               "add": 10,
                "rate": false
             }
          },
@@ -5913,7 +5913,7 @@ export const setsjson = [
             "equipped": 4,
             "ability": {
                "parameter": "criticaldamage",
-               "add": 40,
+               "add": 45,
                "rate": true
             }
          },
@@ -6083,7 +6083,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "dex",
-               "add": 7,
+               "add": 10,
                "rate": false
             }
          },
@@ -6343,7 +6343,7 @@ export const setsjson = [
             "equipped": 4,
             "ability": {
                "parameter": "attackspeed",
-               "add": 10,
+               "add": 15,
                "rate": true
             }
          },
@@ -6419,8 +6419,8 @@ export const setsjson = [
          {
             "equipped": 4,
             "ability": {
-               "parameter": "pvpdamagereduction",
-               "add": 5,
+               "parameter": "criticalresist",
+               "add": 10,
                "rate": true
             }
          },
@@ -6443,8 +6443,8 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "def",
-               "add": 5,
+               "parameter": "magicdefense",
+               "add": 7,
                "rate": true
             }
          },
@@ -6452,7 +6452,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "def",
-               "add": 5,
+               "add": 7,
                "rate": true
             }
          }
@@ -6590,7 +6590,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "str",
-               "add": 7,
+               "add": 10,
                "rate": false
             }
          },
@@ -6865,9 +6865,9 @@ export const setsjson = [
          {
             "equipped": 2,
             "ability": {
-               "parameter": "maxmp",
-               "add": 20,
-               "rate": true
+               "parameter": "int",
+               "add": 10,
+               "rate": false
             }
          },
          {
@@ -6885,7 +6885,7 @@ export const setsjson = [
       "name": {
          "en": "Alext Set",
          "ar": "Alext Set",
-         "br": "Conjunto Alex",
+         "br": "Conjunto Alext",
          "cns": "\u675f\u5dfe\u5957\u88c5",
          "de": "Alext Set",
          "fi": "Alext Set",
@@ -6919,7 +6919,7 @@ export const setsjson = [
             "equipped": 3,
             "ability": {
                "parameter": "hitrate",
-               "add": 15,
+               "add": 20,
                "rate": true
             }
          },
@@ -6935,7 +6935,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "dex",
-               "add": 7,
+               "add": 10,
                "rate": false
             }
          },
@@ -6980,16 +6980,16 @@ export const setsjson = [
             "equipped": 4,
             "ability": {
                "parameter": "attackspeed",
-               "add": 10,
+               "add": 15,
                "rate": true
             }
          },
          {
             "equipped": 3,
             "ability": {
-               "parameter": "str",
-               "add": 5,
-               "rate": false
+               "parameter": "criticalchance",
+               "add": 7,
+               "rate": true
             }
          },
          {
