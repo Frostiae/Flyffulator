@@ -74,6 +74,8 @@ export class Vagrant extends Mover {
         this.attack = 0;
         this.criticalDamage = 0;
         this.hitrate = 1;
+        this.meleeBlock = 0;
+        this.rangedBlock = 0;
 
         this.forceUpdate = 0;
     }

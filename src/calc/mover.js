@@ -20,6 +20,8 @@ export class Mover {
         this.attack = this.getAttack();
         this.criticalDamage = this.getCriticalDamage();
         this.hitrate = this.getHitrate();
+        this.meleeBlock = this.getBlock();
+        this.rangedBlock = this.getBlock(true);
         return this;
     }
 
@@ -81,6 +83,24 @@ export class Mover {
         defense += this.getEquipmentDefense();
         defense *= 1 + (this.getExtraParam('def', true) / 100);
         return defense;
+    }
+
+    getBlock(ranged=false) {
+        // CMover::GetBlockFactor
+        let extra = this.getExtraParam('block');
+        if (ranged) {
+            extra += this.getExtraParam('rangedblock');
+        } else {
+            extra += this.getExtraParam('meleeblock');
+        }
+
+        let fBlockA = 0;    // Originally used for calculating pvp block damage
+        let fBlockB = (this.dex + 2) * this.dex;
+        if (fBlockB > 10) fBlockB = 10;
+        extra += fBlockA + fBlockB;
+
+        let nBR = Math.floor((this.dex / 8.0) * this.constants.block + extra);
+        return nBR;
     }
 
     getAspd() {

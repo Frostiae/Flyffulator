@@ -28,9 +28,9 @@
       <h5>Parry</h5>
       <p v-cloak>{{ character.ref.parry + '%' || "N/A" }}</p>
       <h5>Melee Block</h5>
-      <p>N/A</p>
+      <p v-cloak>{{ character.ref.meleeBlock + '%' || "N/A" }}</p>
       <h5>Ranged Block</h5>
-      <p>N/A</p>
+      <p v-cloak>{{ character.ref.rangedBlock + '%' || "N/A" }}</p>
     </div>
   </div>
 </template>
