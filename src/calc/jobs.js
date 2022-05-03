@@ -338,7 +338,7 @@ export class Jester extends Acrobat {
                 Utils.getSkillByName("Bow Mastery")
             ],
             'attackSpeed': 82.0,
-            'hps': 2,
+            'hps': 2.6,
             'HP': 1.5,
             'MP': 0.5,
             'FP': 1.0,
@@ -396,7 +396,7 @@ export class Ranger extends Acrobat {
                 Utils.getSkillByName("Bow Mastery")
             ],
             'attackSpeed': 77.0,
-            'hps': 2,
+            'hps': 2.14,
             'HP': 1.6,
             'MP': 1.2,
             'FP': 0.6,

@@ -78,6 +78,7 @@ export class Mover {
         // TODO: Use the formula?
         let defense = Math.floor(((((this.level * 2) + (this.sta / 2)) / 2.8) - 4) + ((this.sta - 14) * this.constants.Def));
         defense += this.getExtraParam('def');
+        defense += this.getEquipmentDefense();
         defense *= 1 + (this.getExtraParam('def', true) / 100);
         return defense;
     }
@@ -85,7 +86,7 @@ export class Mover {
     getAspd() {
         const weaponAspd = Utils.getWeaponSpeed(this.mainhand);
         let a = Math.floor(this.constants.attackSpeed + (weaponAspd * (4.0 * this.dex + this.level / 8.0)) - 3.0);
-        if (a >= 187.5) a = Math.floor(187.5);
+        if (a >= 187.5) a = 187;
 
         const index = Math.floor(Math.min(Math.max(a / 10, 0), 17));
         const arr = [
@@ -180,6 +181,28 @@ export class Mover {
         let hit = this.dex / 4;
         hit += this.getExtraParam('hitrate', true);
         return hit;
+    }
+
+    getEquipmentDefense() {
+        var nValue = 0;
+        var min = 0;
+        var max = 0;
+
+        if (this.offhand && this.offhand.subcategory == "shield") {    
+            min += this.offhand.minDefense;
+            max += this.offhand.maxDefense;
+        }
+
+        if (this.armor) {
+            this.armor.parts.forEach(part => {
+                let item = Utils.getItemById(part);
+                min += item.minDefense;
+                max += item.maxDefense;
+            });
+        }
+
+        nValue = max - min;
+        return min + (nValue / 2);
     }
 
     weaponAttack() {
@@ -563,7 +586,7 @@ export class Mover {
         switch (skill.id) {
             case 6206: // Spirit bomb
                 // TODO: Check this in CAttackArbiter::GetDamageMultiplier()
-                final *= 2.25;
+                final *= 2.25;  // Should be 1.5
                 break;
             case 7156: // Hit of Penya
                 final *= 4.0;
