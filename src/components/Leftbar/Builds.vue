@@ -110,6 +110,9 @@ export default {
         const newEquipment = {
           mainhand: this.character.mainhand?.id,
           armor: this.character.armor?.id,
+          armorUpgrade: this.character.armorUpgrade,
+          mainhandUpgrade: this.character.mainhandUpgrade,
+          offhandUpgrade: this.character.offhandUpgrade,
           offhand: this.character.offhand?.id,
           earringR: this.character.earringR?.id,
           earringL: this.character.earringL?.id,

@@ -8,6 +8,12 @@ export class Vagrant extends Mover {
         this.jobId = jobId || jobId || 9686;
         this.weapon_img = img || "woodensword.png";
         this.armor = armor || null;
+        this.armorUpgrade = 0;
+        this.armorUpgradeBonus = null;
+        this.mainhandUpgrade = 0;
+        this.mainhandUpgradeBonus = null;
+        this.offhandUpgrade = 0;
+        this.offhandUpgradeBonus = null;
         this.mainhand = mainhand || Utils.getItemByName("Wooden Sword");
         this.offhand = offhand || null;
         this.earringR = null;
@@ -81,7 +87,7 @@ export class Vagrant extends Mover {
     }
 
     get health() {
-        let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.1125 + this.level * (this.level + 1) * this.sta * 0.00225);
+        let health = Math.floor(150 + this.level * 18 + this.sta * this.level * 0.18);
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
         health += this.getExtraParam('maxhp', false);
         return Math.floor(health);
@@ -135,7 +141,7 @@ export class Assist extends Vagrant {
     }
 
     get health() {
-        let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.175 + this.level * (this.level + 1) * this.sta * 0.0035);
+        let health = Math.floor(150 + this.level * 28 + this.sta * this.level * 0.28);
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
         health += this.getExtraParam('maxhp', false);
         return Math.floor(health);
@@ -188,7 +194,7 @@ export class Billposter extends Assist {
     }
 
     get health() {
-        let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.225 + this.level * (this.level + 1) * this.sta * 0.0045);
+        let health = Math.floor(150 + this.level * 36 + this.sta * this.level * 0.36);
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
         health += this.getExtraParam('maxhp', false);
         return Math.floor(health);
@@ -244,7 +250,7 @@ export class Ringmaster extends Assist {
     }
 
     get health() {
-        let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.2 + this.level * (this.level + 1) * this.sta * 0.004);
+        let health = Math.floor(150 + this.level * 32 + this.sta * this.level * 0.32);
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
         health += this.getExtraParam('maxhp', false);
         return Math.floor(health);
@@ -302,7 +308,7 @@ export class Acrobat extends Vagrant {
     }
 
     get health() {
-        let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.175 + this.level * (this.level + 1) * this.sta * 0.0035);
+        let health = Math.floor(150 + this.level * 28 + this.sta * this.level * 0.28);
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
         health += this.getExtraParam('maxhp', false);
         return Math.floor(health);
@@ -360,7 +366,7 @@ export class Jester extends Acrobat {
     }
 
     get health() {
-        let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.1875 + this.level * (this.level + 1) * this.sta * 0.00375);
+        let health = Math.floor(150 + this.level * 30 + this.sta * this.level * 0.3);
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
         health += this.getExtraParam('maxhp', false);
         return Math.floor(health);
@@ -418,7 +424,7 @@ export class Ranger extends Acrobat {
     }
 
     get health() {
-        let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.2 + this.level * (this.level + 1) * this.sta * 0.004);
+        let health = Math.floor(150 + this.level * 32 + this.sta * this.level * 0.32);
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
         health += this.getExtraParam('maxhp', false);
         return Math.floor(health);
@@ -471,7 +477,7 @@ export class Magician extends Vagrant {
     }
 
     get health() {
-        let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.175 + this.level * (this.level + 1) * this.sta * 0.0035);
+        let health = Math.floor(150 + this.level * 28 + this.sta * this.level * 0.28);
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
         health += this.getExtraParam('maxhp', false);
         return Math.floor(health);
@@ -524,7 +530,7 @@ export class Psykeeper extends Magician {
     }
 
     get health() {
-        let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.1875 + this.level * (this.level + 1) * this.sta * 0.00375);
+        let health = Math.floor(150 + this.level * 30 + this.sta * this.level * 0.3);
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
         health += this.getExtraParam('maxhp', false);
         return Math.floor(health);
@@ -582,7 +588,7 @@ export class Elementor extends Magician {
     }
 
     get health() {
-        let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.1875 + this.level * (this.level + 1) * this.sta * 0.00375);
+        let health = Math.floor(150 + this.level * 30 + this.sta * this.level * 0.3);
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
         health += this.getExtraParam('maxhp', false);
         return Math.floor(health);
@@ -637,7 +643,7 @@ export class Mercenary extends Vagrant {
     }
 
     get health() {
-        let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.1875 + this.level * (this.level + 1) * this.sta * 0.00375);
+        let health = Math.floor(150 + this.level * 30 + this.sta * this.level * 0.3);
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
         health += this.getExtraParam('maxhp', false);
         return Math.floor(health);
@@ -695,7 +701,7 @@ export class Blade extends Mercenary {
     }
 
     get health() {
-        let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.1875 + this.level * (this.level + 1) * this.sta * 0.00375);
+        let health = Math.floor(150 + this.level * 30 + this.sta * this.level * 0.3);
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
         health += this.getExtraParam('maxhp', false);
         return Math.floor(health);
@@ -752,7 +758,7 @@ export class Knight extends Mercenary {
     }
 
     get health() {
-        let health = Math.floor(80 + this.sta * 10.0 + this.level * (this.level + 1) * 0.25 + this.level * (this.level + 1) * this.sta * 0.005);
+        let health = Math.floor(150 + this.level * 40 + this.sta * this.level * 0.4);
         health *= 1 + (this.getExtraParam('maxhp', true) / 100);
         health += this.getExtraParam('maxhp', false);
         return Math.floor(health);

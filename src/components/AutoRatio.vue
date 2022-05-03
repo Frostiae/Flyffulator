@@ -197,7 +197,10 @@ export default {
     '$root.character.ref.assistBuffs'() { this.getTheoreticalAADPS(); },
     '$root.character.ref.selfBuffs'() { this.getTheoreticalAADPS(); },
     '$root.character.ref.mainhand'() { this.getTheoreticalAADPS(); },
-    '$root.character.ref.armor'() { this.getTheoreticalAADPS(); }
+    '$root.character.ref.armor'() { this.getTheoreticalAADPS(); },
+    '$root.character.ref.armorUpgrade'() { this.getTheoreticalAADPS(); },
+    '$root.character.ref.mainhandUpgrade'() { this.getTheoreticalAADPS(); },
+    '$root.character.ref.offhandUpgrade'() { this.getTheoreticalAADPS(); },
   },
   methods: {
     updateTheme() {

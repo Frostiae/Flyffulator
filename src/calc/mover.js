@@ -9,6 +9,10 @@ export class Mover {
     applyData(json) { Object.assign(this, json); } // Importing a character
 
     update() {
+        this.armorUpgradeBonus = Utils.getUpgradeBonus(this.armorUpgrade);
+        this.mainhandUpgradeBonus = Utils.getUpgradeBonus(this.mainhandUpgrade);
+        this.offhandUpgradeBonus = Utils.getUpgradeBonus(this.offhandUpgrade);
+
         this.applyBaseGearStats();
         this.applyAssistBuffs();
         this.applySelfBuffs();
@@ -82,20 +86,21 @@ export class Mover {
         defense += this.getExtraParam('def');
         defense += this.getEquipmentDefense();
         defense *= 1 + (this.getExtraParam('def', true) / 100);
-        return defense;
+        return Math.floor(defense);
     }
 
     getBlock(ranged=false) {
         // CMover::GetBlockFactor
-        let extra = this.getExtraParam('block');
+        let extra = this.getExtraParam('block', true);
         if (ranged) {
-            extra += this.getExtraParam('rangedblock');
+            extra += this.getExtraParam('rangedblock', true);
         } else {
-            extra += this.getExtraParam('meleeblock');
+            extra += this.getExtraParam('meleeblock', true);
         }
 
         let fBlockA = 0;    // Originally used for calculating pvp block damage
         let fBlockB = (this.dex + 2) * this.dex;
+        // TODO: This is incorrect, check formula
         if (fBlockB > 10) fBlockB = 10;
         extra += fBlockA + fBlockB;
 
@@ -150,8 +155,16 @@ export class Mover {
         let pnMax = 4 * 2;
 
         if (this.mainhand) {
-            pnMin = this.mainhand.minAttack * 2;
-            pnMax = this.mainhand.maxAttack * 2;
+            pnMin = this.mainhand.minAttack;
+            pnMax = this.mainhand.maxAttack;
+
+            if (this.mainhandUpgradeBonus != null) {
+                pnMin *= 1 + this.mainhandUpgradeBonus.weaponAttack / 100;
+                pnMax *= 1 + this.mainhandUpgradeBonus.weaponAttack / 100;
+            }
+
+            pnMin *= 2;
+            pnMax *= 2;
         }
 
         let plus = this.weaponAttack();
@@ -211,13 +224,26 @@ export class Mover {
         if (this.offhand && this.offhand.subcategory == "shield") {    
             min += this.offhand.minDefense;
             max += this.offhand.maxDefense;
+
+            if (this.offhandUpgradeBonus != null) {
+                min *= 1 + this.offhandUpgradeBonus.shieldDefense / 100;
+                max *= 1 + this.offhandUpgradeBonus.shieldDefense / 100;
+            }
         }
 
         if (this.armor) {
             this.armor.parts.forEach(part => {
                 let item = Utils.getItemById(part);
-                min += item.minDefense;
-                max += item.maxDefense;
+                let _min = item.minDefense;
+                let _max = item.maxDefense;
+                
+                if (this.armorUpgradeBonus != null) {
+                    _min *= 1 + this.armorUpgradeBonus.suitDefense / 100;
+                    _max *= 1 + this.armorUpgradeBonus.suitDefense / 100;
+                }
+                
+                min += _min;
+                max += _max;
             });
         }
 
@@ -287,6 +313,12 @@ export class Mover {
             if (params.includes(ability.parameter) && ability.rate == rate) {
                 add += ability.add * 4; // 4 card piercing slots
             }
+        }
+
+        // Armor upgrade set effects
+        if (this.armorUpgradeBonus != null) {
+            const bonus = this.armorUpgradeBonus.setAbilities.find(a => params.includes(a.parameter) && a.rate == rate);
+            if (bonus) add += bonus.add;
         }
 
         return add;
@@ -564,6 +596,11 @@ export class Mover {
         if (this.mainhand) {
             weaponMin = this.mainhand.minAttack;
             weaponMax = this.mainhand.maxAttack;
+
+            if (this.mainhandUpgradeBonus != null) {
+                weaponMin *= 1 + this.mainhandUpgradeBonus.weaponAttack / 100;
+                weaponMax *= 1 + this.mainhandUpgradeBonus.weaponAttack / 100;
+            }
         }
 
         const stat = params.scalingParameters[0].stat;

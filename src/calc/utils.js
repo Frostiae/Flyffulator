@@ -5,6 +5,7 @@ import { setsjson } from "../assets/flyff/sets.js";
 import { itemsjson } from "../assets/flyff/items.js";
 import { skillsjson } from "../assets/flyff/skills.js";
 import { monstersjson } from "../assets/flyff/monsters.js";
+import { upgradesjson } from "../assets/flyff/upgradeBonus.js";
 
 export class Utils {
     constructor() {
@@ -16,6 +17,7 @@ export class Utils {
     static items = itemsjson;
     static jobs = jobsjson;
     static sets = setsjson;
+    static upgradeBonus = upgradesjson;
 
     static addedStr = 0;
     static addedSta = 0;
@@ -63,6 +65,8 @@ export class Utils {
     static getJewelery(subcategory) { return this.items.filter(item => item.category == "jewelry" && item.subcategory == subcategory); }
     static getPiercingCards() { return this.items.filter(item => item.subcategory == "piercingcard"); }
     static getShields() { return this.items.filter(item => item.subcategory == "shield"); }
+
+    static getUpgradeBonus(upgradeLevel) { return this.upgradeBonus[upgradeLevel - 1] || null; }
     
     static getJobWeapons(jobId) {
         const jobs = [jobId, this.getParentJobId(jobId)]
@@ -123,7 +127,7 @@ export class Utils {
 
     getMonstersAtLevel(level, skill=null) {
         level = parseInt(level);
-        let ignoreRanks = ['super', 'boss', 'giant'];
+        let ignoreRanks = ['super', 'boss', 'giant', 'violet'];
         
         let index = this.monsters.findIndex(monster => monster.level >= level + 1)
         

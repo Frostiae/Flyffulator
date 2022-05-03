@@ -20,6 +20,18 @@
         </tr>
 
         <tr>
+          <td><h5>Armor upgrade</h5></td>
+          <td>
+            <select v-model="character.armorUpgrade" id="equipment-select" :disabled=!character.armor>
+              <option disabled value="">Select an upgrade level...</option>
+              <option v-for="(e, i) in 11" :value="i" :key="i">
+                +{{ i }}
+              </option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
           <td><h5>Mainhand</h5></td>
           <td>
             <select v-model="character.mainhand" id="equipment-select">
@@ -30,6 +42,18 @@
             </select>
           </td>
           <td></td>
+        </tr>
+
+        <tr>
+          <td><h5>Mainhand upgrade</h5></td>
+          <td>
+            <select v-model="character.mainhandUpgrade" id="equipment-select">
+              <option disabled value="">Select an upgrade level...</option>
+              <option v-for="(e, i) in 11" :value="i" :key="i">
+                +{{ i }}
+              </option>
+            </select>
+          </td>
         </tr>
 
         <tr>
@@ -44,6 +68,18 @@
           </td>
           <td>
             <button class="btn-plus" @click="character.offhand = null">x</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td><h5>Offhand upgrade</h5></td>
+          <td>
+            <select v-model="character.offhandUpgrade" id="equipment-select" :disabled=!character.offhand>
+              <option disabled value="">Select an upgrade level...</option>
+              <option v-for="(e, i) in 11" :value="i" :key="i">
+                +{{ i }}
+              </option>
+            </select>
           </td>
         </tr>
 
@@ -190,6 +226,9 @@ export default {
     applyEquip(equipment) {
       setTimeout(() => {
         this.character.armor = this.byId(this.armors, equipment.armor);
+        this.character.armorUpgrade = equipment.armorUpgrade;
+        this.character.mainhandUpgrade = equipment.mainhandUpgrade;
+        this.character.offhandUpgrade = equipment.offhandUpgrade;
         this.character.mainhand = this.byId(this.weapons, equipment.mainhand) || Utils.getItemByName("Wooden Sword");
         
         this.character.offhand = this.byId(this.offhands.concat(this.weapons), equipment.offhand);
