@@ -78,7 +78,10 @@ export class Mover {
         }
     }
 
-    get parry() { return this.dex / 2; }
+    get parry() {
+        let parry = this.dex / 2;
+        return parry > 100 ? 100 : parry; 
+    }
 
     get defense() {
         // TODO: Use the formula?
@@ -213,7 +216,7 @@ export class Mover {
         // This is just the value displayed in the stats window, basically not used anywhere else
         let hit = this.dex / 4;
         hit += this.getExtraParam('hitrate', true);
-        return hit;
+        return hit > 100 ? 100 : hit;
     }
 
     getEquipmentDefense() {
