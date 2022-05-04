@@ -50,7 +50,7 @@ export default {
           } else {
               this.skill = Object.keys(this.character.skillsRawDamage)[this.skillindex];
               if (this.skill) {
-                  this.damage = this.character.skillsRawDamage[this.skill].toFixed(0) - 20;  // - 20 is because of training dummy defense
+                  this.damage = this.character.getDamage(null, this.skillindex).toFixed(0);
               } else {
                 this.skill = "None"
                 this.damage = "N/A"

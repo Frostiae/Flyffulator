@@ -523,7 +523,7 @@ export class Mover {
      */
     getDamage(opponent = Moverutils.trainingDummy, skillIndex = null) {
         // TODO: Incorporate element vs element calculation for skills (CAttackArbiter::PostCalcDamage)
-
+        if (opponent == null) opponent = Moverutils.trainingDummy;
         var deltaFactor;
         if (opponent.level === 0) {
             deltaFactor = 1;
@@ -655,7 +655,7 @@ export class Mover {
         switch (skill.id) {
             case 6206: // Spirit bomb
                 // TODO: Check this in CAttackArbiter::GetDamageMultiplier()
-                final *= 1.75;  // Should be 1.5
+                final *= 1.85;  // Should be 1.5
                 break;
             case 7156: // Hit of Penya
                 final *= 4.0;
