@@ -5,7 +5,7 @@
     <div class="stats">
       <ul>
         <li v-for="buff in buffs" :value="buff" :key="buff.id">
-              <img :src="$root.getSkillIconUrl(buff.icon)" alt="" :title="buff.name.en">
+              <img :src="$root.getSkillIconUrl(buff.icon)" alt="" :title="getTooltip(buff)">
         </li>
       </ul>
     </div>
@@ -28,6 +28,32 @@ export default {
     updateBuffs() {
       this.buffs = [];
       this.buffs = this.character.activeSelfBuffs.concat(this.character.activeAssistBuffs);
+    },
+    getTooltip(buff) {
+      let tooltip = buff.name.en + "\n";
+      const level = buff.levels[buff.levels.length - 1];
+      if (level.abilities) {
+        level.abilities.forEach(ability => {
+          let effect = "";
+          effect += ability.parameter;
+          let add = ability.add;
+          if (level.scalingParameters) {
+            level.scalingParameters.forEach(scaling => {
+              if (scaling.parameter == ability.parameter) {
+                let extra = this.character.assistInt * scaling.scale;
+                if (extra > scaling.maximum) extra = scaling.maximum;
+                add += extra;
+              }
+            });
+          }
+          effect += "+" + add;
+          if (ability.rate) effect += "%";
+          effect += "\n";
+          tooltip += effect;
+        });
+      }
+
+      return tooltip;
     }
   },
   watch: {
