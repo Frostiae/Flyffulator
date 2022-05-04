@@ -10,7 +10,7 @@
             <td><h5>Class</h5></td>
             <td></td>
             <td>
-              <select name="class" @change="$root.updateJob()" id="job" v-model="$root.jobName">
+              <select name="class" @change="ChangeJob()" id="job" v-model="$root.jobName">
                 <option value="Vagrant">Vagrant</option>
                 <option value="Assist">Assist</option>
                 <option value="Billposter">Billposter</option>
@@ -140,6 +140,10 @@ export default {
     this.statpoints = this.character.ref.level * 2 - 2;
   },
   methods: {
+    ChangeJob() {
+      this.$root.updateJob();
+      this.RestatCharacter();
+    },
     ApplyStats() {
       if (this.addstr === "" || this.addsta === "" || this.adddex === "" || this.addint === "") {
         this.addstr = 0;

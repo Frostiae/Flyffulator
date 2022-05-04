@@ -49,7 +49,7 @@ export default {
         this.monsters = this.$root.monsters;
         this.updateDamage();
     },
-    '$root.character.ref.level'() { this.updateDisplay(); },
+    '$root.character.ref'() { this.updateDisplay(); },
     '$root.focusMonster'() { this.updateDamage(); }
   },
   methods: {
