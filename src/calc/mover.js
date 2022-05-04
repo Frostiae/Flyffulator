@@ -47,7 +47,11 @@ export class Mover {
                     Utils.getSkillByName('Patience'),
                     Utils.getSkillByName('Haste'),
                     Utils.getSkillByName('Cat\'s Reflex'),
-                    Utils.getSkillByName('Accuracy')
+                    Utils.getSkillByName('Accuracy'),
+                    Utils.getSkillByName('Protect'),
+                    Utils.getSkillByName('Spirit Fortune'),
+                    Utils.getSkillByName('Holyguard'),
+                    Utils.getSkillByName('Geburah Tiphreth')
                 ];
             }
 
@@ -400,9 +404,14 @@ export class Mover {
 
             abilities.forEach(ability => { // forEach here and not .find() because there might be multiple buffs with param
                 if (params.includes(ability.parameter) && level.scalingParameters.length > 1 && ability.rate == rate) {
-                    let extra = level.scalingParameters[1].scale * this.assistInt;
-                    extra = extra > level.scalingParameters[1].maximum ? level.scalingParameters[1].maximum : extra;
-                    add += ability.add + extra;
+                    level.scalingParameters.forEach(scaling => {
+                        if (params.includes(scaling.parameter)) {
+                            let extra = scaling.scale * this.assistInt;
+                            extra = extra > scaling.maximum ? scaling.maximum : extra;
+                            add += extra;
+                        }
+                    });
+                    add += ability.add;
                 } else if (params.includes(ability.parameter) && ability.rate == rate) {
                     add += ability.add;
                 }
