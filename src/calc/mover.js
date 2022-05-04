@@ -655,7 +655,7 @@ export class Mover {
         switch (skill.id) {
             case 6206: // Spirit bomb
                 // TODO: Check this in CAttackArbiter::GetDamageMultiplier()
-                final *= 2.25;  // Should be 1.5
+                final *= 1.75;  // Should be 1.5
                 break;
             case 7156: // Hit of Penya
                 final *= 4.0;
