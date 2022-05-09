@@ -563,10 +563,10 @@ export class Elementor extends Magician {
                 Utils.getSkillByName("Iceshark")
             ],
             'buffs': [Utils.getSkillByName("Lightning Mastery"),
-                Utils.getSkillByName("Fire Master"),
-                Utils.getSkillByName("Earth Master"),
-                Utils.getSkillByName("Wind Master"),
-                Utils.getSkillByName("Water Master")
+                Utils.getSkillByName("Fire Mastery"),
+                Utils.getSkillByName("Earth Mastery"),
+                Utils.getSkillByName("Wind Mastery"),
+                Utils.getSkillByName("Water Mastery")
             ],
             'attackSpeed': 67.0,
             'hps': 1,
