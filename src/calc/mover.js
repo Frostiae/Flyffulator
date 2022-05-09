@@ -502,12 +502,18 @@ export class Mover {
             dps = damage * hitsPerSec;
             this.dps.aa = dps;
         } else {
-            // TODO: Add dotTick support here
+            const maxLevel = this.constants.skills[skillIndex].levels.slice(-1)[0];
             damage = this.getDamage(monster, skillIndex);
+            
             const frames = 55;
             const hitsPerSec = (30 / frames) * (this.DCT / 100);
-            let cooldown = this.constants.skills[skillIndex].levels.slice(-1)[0].cooldown;
+            let cooldown = maxLevel.cooldown;
+
             if (!cooldown) cooldown = 0;
+            if (maxLevel.dotTick != undefined) {
+                let dot = maxLevel.duration / maxLevel.dotTick;
+                damage *= dot;  // Make all the hits over the duration into one per cooldown
+            }
 
             dps = damage * (hitsPerSec / (cooldown + 1))
             this.dps[skillIndex] = dps;
