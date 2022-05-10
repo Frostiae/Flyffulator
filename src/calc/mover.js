@@ -260,32 +260,53 @@ export class Mover {
 
     weaponAttack() {
         let weapon = this.mainhand.subcategory;
-        var nATK = 0;
+        let nATK = 0;
+        let levelFactor = 0;
+        let statValue = 0;
+        let addValue = 0;
+
         switch (weapon) {
+            case 'sword':
+            case 'yoyo':
+                levelFactor = 1.1;
+                statValue = this.str - 12;
+                break;
             case 'axe':
-                nATK =  Math.floor(((this.str - 12) * this.constants[weapon]) + ((this.level * 1.2)));
+                levelFactor = 1.2;
+                statValue = this.str - 12;
                 break;
             case 'staff':
-                nATK = Math.floor(((this.str - 10) * this.constants[weapon]) + ((this.level * 1.1)));
+                levelFactor = 1.1;
+                statValue = this.str - 10;
                 break;
             case 'stick':
-                nATK = Math.floor(((this.str - 10) * this.constants[weapon]) + ((this.level * 1.3)));
+                levelFactor = 1.3;
+                statValue = this.str - 10;
                 break;
             case 'knuckle':
-                nATK = Math.floor(((this.str - 10) * this.constants[weapon]) + ((this.level * 1.2)));
+                levelFactor = 1.2;
+                statValue = this.str - 10;
                 break;
             case 'wand':
-                nATK = Math.floor((this.int - 10) * this.constants[weapon] + this.level * 1.2);
+                levelFactor = 1.2;
+                statValue = this.int - 10;
                 break;
-            case 'bow': //  This is definitely incorrect for project M
-                nATK = Math.floor(((this.dex - 14) * this.constants[weapon] + (this.level * 1.3) * 0.7));
+            case 'bow':
+                levelFactor = 0.91;
+                statValue = this.dex - 14;
+                addValue = 0.14 * this.str;
                 break;
             default:
-                nATK = Math.floor(((this.str - 12) * this.constants[weapon]) + ((this.level * 1.1)));
+                levelFactor = 1.1;
+                statValue = this.str - 10;
                 break;
         }
 
-        nATK += this.getExtraParam(weapon + "attack");
+        let statAttack = statValue * this.constants[weapon];
+        let levelAttack = this.level * levelFactor;
+        nATK = Math.floor(statAttack + levelAttack + addValue);
+
+        nATK += this.getExtraParam(weapon + 'attack');
         return nATK;
     }
 
