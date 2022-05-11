@@ -40,7 +40,7 @@
 
           <tr>
             <td><h5>STR</h5></td>
-            <td><h5>{{character.ref.str}}</h5></td>
+            <td><h5>{{character.ref.str}} <span class="added-stats">{{assignedStats.str}}</span></h5></td>
             <td>
               <button class="btn-plus" @click="addstr--">-</button>
               <input class="charinput" type="number" v-model="addstr"/>
@@ -50,7 +50,7 @@
 
           <tr>
             <td><h5>STA</h5></td>
-            <td><h5>{{character.ref.sta}}</h5></td>
+            <td><h5>{{character.ref.sta}} <span class="added-stats">{{assignedStats.sta}}</span></h5></td>
             <td>
               <button class="btn-plus" @click="addsta--">-</button>
               <input class="charinput" type="number" v-model="addsta"/>
@@ -60,7 +60,7 @@
 
           <tr>
             <td><h5>DEX</h5></td>
-            <td><h5>{{character.ref.dex}}</h5></td>
+            <td><h5>{{character.ref.dex}} <span class="added-stats">{{assignedStats.dex}}</span></h5></td>
             <td>
               <button class="btn-plus" @click="adddex--">-</button>
               <input class="charinput" type="number" v-model="adddex"/>
@@ -70,7 +70,7 @@
 
           <tr>
             <td><h5>INT</h5></td>
-            <td><h5>{{character.ref.int}}</h5></td>
+            <td><h5>{{character.ref.int}} <span class="added-stats">{{assignedStats.int}}</span></h5></td>
             <td>
               <button class="btn-plus" @click="addint--">-</button>
               <input class="charinput" type="number" v-model="addint"/>
@@ -133,7 +133,8 @@ export default {
       assistint: 300,
       classbuffs: false,
       statpoints: 0,
-      totalstatpoints: 0
+      totalstatpoints: 0,
+      assignedStats: {str: 0, sta: 0, dex: 0, int: 0}
     }
   },
   mounted() {
@@ -165,6 +166,8 @@ export default {
       Utils.addedSta += this.addsta;
       Utils.addedDex += this.adddex;
       Utils.addedInt += this.addint;
+
+      this.assignedStats = {str: Utils.addedStr, sta: Utils.addedSta, dex: Utils.addedDex, int: Utils.addedInt };
 
       this.addstr = 0;
       this.addsta = 0;
@@ -268,5 +271,11 @@ export default {
 <style scoped lang='scss'>
 button#applystats, button#resetstats, button#restatstats {
   margin: 5px 15px 0px 15px;
+}
+
+.added-stats {
+  font-style: italic;
+  opacity: 0.5;
+  margin-left: 10px;
 }
 </style>
