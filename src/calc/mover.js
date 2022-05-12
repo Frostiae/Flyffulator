@@ -17,6 +17,11 @@ export class Mover {
         this.applyAssistBuffs();
         this.applySelfBuffs();
 
+        this.str = Math.floor(this.str);
+        this.sta = Math.floor(this.sta);
+        this.dex = Math.floor(this.dex);
+        this.int = Math.floor(this.int);
+
         this.skillsRawDamage = this.updateSkillDamage();
         this.criticalChance = this.getCriticalChance();
         this.aspd = this.getAspd();
