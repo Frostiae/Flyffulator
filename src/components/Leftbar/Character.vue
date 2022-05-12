@@ -33,7 +33,7 @@
             <td><h5>{{character.ref.level}}</h5></td>
             <td>
               <button class="btn-plus" @click="newlevel--">-</button>
-              <input class="charinput" type="number" v-model="newlevel"/>
+              <input class="charinput" :class="{'red-text' : newlevel > 120 }" type="number" v-model="newlevel"/>
               <button class="btn-plus" @click="newlevel++">+</button>
             </td>
           </tr>
@@ -99,7 +99,7 @@
           <tr>
             <td><h5>Stat points</h5></td>
             <td></td>
-            <td><h5>{{statpoints}}</h5></td>
+            <td><h5 :class="{'red-text' : statpoints < 0 }">{{statpoints}}</h5></td>
           </tr>
 
         </tbody>
@@ -151,6 +151,11 @@ export default {
         this.adddex = 0;
         this.addsta = 0;
         this.addint = 0;
+        return;
+      }
+
+      // Validate the character data
+      if (this.statpoints < 0 || this.newlevel > 120) {
         return;
       }
       
@@ -277,5 +282,9 @@ button#applystats, button#resetstats, button#restatstats {
   font-style: italic;
   opacity: 0.5;
   margin-left: 10px;
+}
+
+.red-text {
+  color: #ff6961
 }
 </style>
