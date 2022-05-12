@@ -82,19 +82,21 @@ export class Utils {
         if (!weapon) return 0;
         switch (weapon.attackSpeed) {
             case 'veryslow':
-                return 0.035;
+                return 0.025;
             case 'slow':
-                return 0.050;
+                return 0.045;
             case 'normal':
-                return 0.070;
+                return 0.060;
             case 'fast':
-                return 0.080;
+                return 0.075;
             case 'veryfast':
                 return 0.085;
             default:
                 return 0.17;
         }
     }
+
+    static clamp(num, min, max) { return Math.min(Math.max(num, min), max); }
 
     static getJobFromId(jobId) { return JobFactory.createJobFromId(jobId); }
 
