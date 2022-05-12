@@ -336,7 +336,7 @@ export class Jester extends Acrobat {
         armor = armor || Utils.getArmorByName("Neis Set");
         mainhand = mainhand || Utils.getItemByName("Legendary Golden Yo-Yo");
         constants = constants || {
-            'skills': [Utils.getSkillByName("Sneak Stab"),
+            'skills': [Utils.getSkillByName("Multi-Stab"),
                 Utils.getSkillByName("Vital stab"),
                 Utils.getSkillByName("Hit of Penya")
             ],
