@@ -117,28 +117,40 @@ export class Mover {
 
     getAspd() {
         const weaponAspd = Utils.getWeaponSpeed(this.mainhand);
-        let a = Math.floor(this.constants.attackSpeed + (weaponAspd * (4.0 * this.dex + this.level / 8.0)) - 3.0);
-        if (a >= 187.5) a = 187;
+        let statScale = 4.0 * this.dex + this.level / 8.0;
 
-        const index = Math.floor(Math.min(Math.max(a / 10, 0), 17));
-        const arr = [
+        const plusValue = [
             0.08, 0.16, 0.24, 0.32, 0.40,
             0.48, 0.56, 0.64, 0.72, 0.80,
             0.88, 0.96, 1.04, 1.12, 1.20,
             1.30, 1.38, 1.50
         ];
+        
+        const minBaseSpeed = 0.125;
+        const maxBaseSpeed = 2.0;
+        const baseSpeedScaling = 200.0;
+        
+        const baseDividend = baseSpeedScaling * minBaseSpeed;
+        const maxBaseScaledSpeed = baseSpeedScaling - baseDividend / maxBaseSpeed;
 
-        const plusValue = arr[index];
-        let fspeed = ((50.0 / (200.0 - a)) / 2.0) + plusValue;
+        const baseSpeed = Math.floor(Math.min(this.constants.attackSpeed + weaponAspd * statScale, maxBaseScaledSpeed));
 
-        fspeed = fspeed > 0.1 ? fspeed : 0.1;
-        fspeed = fspeed < 2.0 ? fspeed : 2.0;
+        let speed = baseDividend / (baseSpeedScaling - baseSpeed);
 
-        let final = fspeed * 100 / 2;
+        const plusValueIndex = Math.floor(Utils.clamp(baseSpeed / 10, 0, Math.floor(plusValue.length - 1)));
+        speed += plusValue[plusValueIndex];
 
-        final += this.getExtraParam('attackspeed', true);
-        final = final > 100 ? 100 : final;
-        return Math.floor(final);
+        const attackSpeed = this.getExtraParam('attackspeed', false) / 1000.0;
+        speed += attackSpeed;
+
+        const attackSpeedRate = this.getExtraParam('attackspeed', true);
+        if (attackSpeedRate > 0) {
+            speed += speed * attackSpeedRate / 100.0;
+        }
+
+        speed = Utils.clamp(speed, 0.1, 2.0);
+        let final = speed * 100.0 / 2.0;
+        return Math.floor(final > 100 ? 100 : final);
     }
 
     getCriticalChance() {
