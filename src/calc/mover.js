@@ -574,6 +574,7 @@ export class Mover {
             var damageCrit = this.getCriticalHit(opponent, damageNormal);   // Critical hit is calculated after defense in Flyff Universe
 
             damage = (damageNormal * (1 - this.criticalChance / 100) + damageCrit * (this.criticalChance / 100));
+            damage *= this.getDamageMultiplier(false);
         } else {    // Skills
             var skill = this.constants.skills[skillIndex];
 
@@ -584,15 +585,21 @@ export class Mover {
             }
 
             damage = Object.values(this.skillsRawDamage)[skillIndex];
+
+            const damageMultiplier = skill.levels[skill.levels.length - 1].damageMultiplier;
+            if (damageMultiplier != undefined) {
+                damage *= damageMultiplier;
+            }
+
             damage -= Moverutils.calcDamageDefense(defense, damage);
+            damage *= this.getDamageMultiplier(true);
         }
 
         damage *= deltaFactor;
-        damage *= this.getDamageMultiplier();
         return damage < 1 ? 1 : damage;
     }
 
-    getDamageMultiplier() {
+    getDamageMultiplier(skill=false) {
         let factor = 1.0;
 
         // Knight Swordcross calculation
@@ -602,7 +609,7 @@ export class Mover {
 
         // Blade offhand calculation
         // 2 Hits at 100% damage, 2 hits at 75% damage
-        if (this instanceof Blade) { factor *= 0.875; }
+        if (this instanceof Blade && !skill) { factor *= 0.875; }
 
         return factor;
     }
@@ -686,8 +693,13 @@ export class Mover {
                 break;
             case 7156: // Hit of Penya
                 final *= 4.0;
+                break;
             case 5041: // Asal
                 final += (((this.str / 10) * level) * (5 + this.mp / 10) + 150);
+                break;
+            case 7023: // Multi-Stab
+                final *= 7; // Hits 7 times in the animation
+                break;
         }
 
         switch (skill.element) {
