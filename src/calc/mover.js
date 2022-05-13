@@ -623,7 +623,7 @@ export class Mover {
             }
 
             damage -= Moverutils.calcDamageDefense(defense, damage);
-            damage *= this.getDamageMultiplier(true);
+            damage *= this.getDamageMultiplier(true);   // TODO: Try moving this up if inaccuracies remain after fixing MDef formula
         }
 
         damage *= deltaFactor;
@@ -666,7 +666,7 @@ export class Mover {
      * @param skill The skill to calculate raw damage for 
      */
     getSkillDmg(skill) {
-        const params = skill.levels.slice(-1)[0]; // Cannot use at() because of Safari compatibility
+        const maxLevel = skill.levels.slice(-1)[0]; // Cannot use at() because of Safari compatibility
         let weaponMin = 3;
         let weaponMax = 4;
 
@@ -680,7 +680,7 @@ export class Mover {
             }
         }
 
-        const stat = params.scalingParameters[0].stat;
+        const stat = maxLevel.scalingParameters[0].stat;
         var referStat = this.str;
         switch (stat) {
             case 'sta':
@@ -698,9 +698,9 @@ export class Mover {
 
         // CMover::GetMeleeSkillPower()
         const level = skill.levels.length;
-        const base = referStat * params.scalingParameters[0].scale;
-        let powerMin = ((weaponMin + (params.minAttack + 0) * 5 + base - 20) * (16 + level) / 13);
-        let powerMax = ((weaponMax + (params.maxAttack + 0) * 5 + base - 20) * (16 + level) / 13);
+        const base = referStat * maxLevel.scalingParameters[0].scale;
+        let powerMin = ((weaponMin + (maxLevel.minAttack + 0) * 5 + base - 20) * (16 + level) / 13);
+        let powerMax = ((weaponMax + (maxLevel.maxAttack + 0) * 5 + base - 20) * (16 + level) / 13);
 
         // Add all the extra attack from gear
         const extraFlatAttack = this.getExtraParam("attack");

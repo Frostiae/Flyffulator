@@ -33,6 +33,7 @@ export default class Moverutils {
         // dwNaturalArmor / 4
         var equipmentDefense = !magic ? armor / 4 : magicArmor / 4;
         
+        // TODO: This is incorrect for magic skills. Check the universe MDef PvE formula
         var defense = Math.floor(level * levelScale + (monster.sta * statScale + (monster.sta - 14) * 1.0) * staFactor - 4);
         defense += equipmentDefense;
 

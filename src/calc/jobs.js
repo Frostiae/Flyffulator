@@ -452,7 +452,7 @@ export class Magician extends Vagrant {
         armor = armor || Utils.getArmorByName("Teba Set");
         mainhand = mainhand || Utils.getItemByName("Opel Wand");
         constants = constants || {
-            'skills': [Utils.getSkillByName("Mental Strike"),
+            'skills': [ Utils.getSkillById(4729),   // Mental strike, there is 2 so using ID for this one
                 Utils.getSkillByName("Rock Crash"),
                 Utils.getSkillByName("Water Well")
             ],
