@@ -102,7 +102,7 @@ export class Mover {
 
     get parry() {
         let parry = this.dex / 2;
-        return parry > 100 ? 100 : parry; 
+        return parry;
     }
 
     get defense() {
@@ -127,7 +127,8 @@ export class Mover {
         
         const blockB = Utils.clamp(Math.floor((this.dex + attackerDex + 2) * ((this.dex - attackerDex) / 800.0)), 0, 10);
         const blockRate = Math.floor((this.dex / 8.0) * this.constants.block + extra);
-        return Math.max(blockB + blockRate, 0);
+        const final = Math.max(blockB + blockRate, 0);
+        return final > 100 ? 100 : final;
     }
 
     getAspd() {
