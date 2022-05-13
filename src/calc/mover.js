@@ -717,6 +717,10 @@ export class Mover {
         // BEGIN HARDCODING
         if (this instanceof Knight && this.mainhand.triggerSkillProbability) { final += final * (1.0 * (this.mainhand.triggerSkillProbability / 100)); } // Swordcross
 
+        if (maxLevel.probability != undefined) {
+            final *= maxLevel.probability / 100.0;
+        }
+
         switch (skill.id) {
             case 6206: // Spirit bomb
                 // TODO: Check this in CAttackArbiter::GetDamageMultiplier()
@@ -730,6 +734,9 @@ export class Mover {
                 break;
             case 7023: // Multi-Stab
                 final *= 7; // Hits 7 times in the animation
+                break;
+            case 1526: // Junk Arrow
+                final *= 4; // Hits 4 times
                 break;
         }
 

@@ -2,7 +2,7 @@
   <div class="extensivebasic" v-bind:id="active ? 'active' : ''" @click="updateMonsters(skillindex)">
     <h3>{{ title == "N/A" ? skill : title }}</h3>
     <p>{{ damage }}</p>
-    <h5>against a Training Dummy</h5>
+    <h5 style="opacity: 0.5;">against a Training Dummy</h5>
     <h5>{{ ttk }}</h5>
   </div>
 </template>
@@ -46,7 +46,7 @@ export default {
           
           if (this.skillindex == -1) {
               this.damage = this.character.getDamage().toFixed(0);
-              this.ttk = ttk.auto.toFixed(0) + 's to kill a ' + this.monster + ' (approximate)';
+              this.ttk = `Average of ${ttk.auto.toFixed(0)}s to kill a ${this.monster}`;
           } else {
               this.skill = Object.keys(this.character.skillsRawDamage)[this.skillindex];
               if (this.skill) {
@@ -57,9 +57,9 @@ export default {
               }
 
               this.ttk = "ttk: N/A"
-              if (this.skillindex == 0 && ttk.skill1) this.ttk = ttk.skill1.toFixed(0) + 's to kill a ' + this.monster + ' (approximate)';
-              if (this.skillindex == 1 && ttk.skill2) this.ttk = ttk.skill2.toFixed(0) + 's to kill a ' + this.monster + ' (approximate)';
-              if (this.skillindex == 2 && ttk.skill3) this.ttk = ttk.skill3.toFixed(0) + 's to kill a ' + this.monster + ' (approximate)';
+              if (this.skillindex == 0 && ttk.skill1) this.ttk = `Average of ${ttk.skill1.toFixed(0)}s to kill a ${this.monster}`;
+              if (this.skillindex == 1 && ttk.skill2) this.ttk = `Average of ${ttk.skill2.toFixed(0)}s to kill a ${this.monster}`;
+              if (this.skillindex == 2 && ttk.skill3) this.ttk = `Average of ${ttk.skill3.toFixed(0)}s to kill a ${this.monster}`;
           }
       }
     },
