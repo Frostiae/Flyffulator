@@ -70,8 +70,21 @@ export class Mover {
     }
 
     applySelfBuffs() {
+        // Empty the buffs and re-do the application if there are buffs above your level
+        if (this.activeSelfBuffs.find(b => b.level > this.level)) {
+            this.activeSelfBuffs = [];
+        }
+
+        // Check if there are buffs we can add that are not currently active
+        for (let buff of this.constants.buffs) {
+            if (buff.level <= this.level && !this.activeSelfBuffs.includes(buff)) {
+                this.activeSelfBuffs = [];
+                break;
+            }
+        }
+
         if (this.selfBuffs && this.activeSelfBuffs.length == 0) {
-            this.activeSelfBuffs = this.constants.buffs;
+            this.activeSelfBuffs = this.constants.buffs.filter(b => b.level <= this.level);
 
             this.str += this.selfBuffParam('str');
             this.sta += this.selfBuffParam('sta');
@@ -118,6 +131,9 @@ export class Mover {
     }
 
     getAspd() {
+        // TODO: This provides some inaccuracies because of the lack of exact attack speed values on weapons in the API.
+        // Currently a very close approximation if not exactly correct for most weapons, but some weapon types will need
+        // an API update to be exact as well.
         const weaponAspd = Utils.getWeaponSpeed(this.mainhand);
         let statScale = 4.0 * this.dex + this.level / 8.0;
 
