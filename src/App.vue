@@ -10,7 +10,7 @@
     <div class="content">
       <div class="basestats">
         <img :src="getImageUrl(character.ref.weapon_img)"/>
-        <top-stats/>
+        <!--<top-stats/>-->
       </div>
 
       <div class="extensivestats">
