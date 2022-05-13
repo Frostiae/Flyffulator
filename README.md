@@ -35,7 +35,7 @@ Flyffulator is a [website](https://flyffulator.com/) for [Flyff Universe](https:
   <img src="https://i.imgur.com/z54z0qT.gif" alt="flyffulator" width=75%>
 </p>
 
-This project originally used [Pyff](https://github.com/Frostiae/Pyff), a python wrapper for the [Flyff Universe](https://flyff-api.sniegu.fr/). The library used for rendering the all the charts is [ApexCharts](https://apexcharts.com/). We are also now using Vue3 as the front end framework.
+This project uses [Pyff](https://github.com/Frostiae/Pyff), a python wrapper for the [Flyff Universe](https://flyff-api.sniegu.fr/) API, [ApexCharts](https://apexcharts.com/) for chart and graph rendering, and is built in Vue3.
 
 ## Installation for development
 Clone the repository into any directory.
