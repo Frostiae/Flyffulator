@@ -138,7 +138,10 @@ export class Utils {
         
         let res = this.monsters.slice(Math.max(index - 10, 0), Math.min(index + 20, this.monsters.length))
         res = res.filter(function(monster) {
-            return !ignoreRanks.includes(monster.rank) && monster.experience > 0 && !monster.name.en.includes("Criminal");
+            return !ignoreRanks.includes(monster.rank) && monster.experience > 0 
+                && !monster.name.en.includes("Criminal")
+                && monster.spawns != undefined
+                && monster.spawns.length > 0;
         });
         
         res.forEach(monster => {
