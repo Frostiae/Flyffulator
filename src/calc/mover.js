@@ -564,6 +564,7 @@ export class Mover {
             if (!cooldown) cooldown = 0;
             if (maxLevel.dotTick != undefined) {
                 let dot = maxLevel.duration / maxLevel.dotTick;
+                // TODO: Not necessarily correct, i.e bleeding. Check Deadly Swing for example, but correct for Merkaba
                 damage *= dot;  // Make all the hits over the duration into one per cooldown
             }
 
@@ -717,10 +718,6 @@ export class Mover {
         // BEGIN HARDCODING
         if (this instanceof Knight && this.mainhand.triggerSkillProbability) { final += final * (1.0 * (this.mainhand.triggerSkillProbability / 100)); } // Swordcross
 
-        if (maxLevel.probability != undefined) {
-            final *= maxLevel.probability / 100.0;
-        }
-
         switch (skill.id) {
             case 6206: // Spirit bomb
                 // TODO: Check this in CAttackArbiter::GetDamageMultiplier()
@@ -736,6 +733,7 @@ export class Mover {
                 final *= 7; // Hits 7 times in the animation
                 break;
             case 1526: // Junk Arrow
+                final *= maxLevel.probability / 100.0;
                 final *= 4; // Hits 4 times
                 break;
         }
