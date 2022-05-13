@@ -110,14 +110,11 @@ export class Mover {
             extra += this.getExtraParam('meleeblock', true);
         }
 
-        let fBlockA = 0;    // Originally used for calculating pvp block damage
-        let fBlockB = (this.dex + 2) * this.dex;
-        // TODO: This is incorrect, check formula
-        if (fBlockB > 10) fBlockB = 10;
-        extra += fBlockA + fBlockB;
-
-        let nBR = Math.floor((this.dex / 8.0) * this.constants.block + extra);
-        return nBR;
+        const attackerDex = 15; // Fixed to 15 in the stat window in-game
+        
+        const blockB = Utils.clamp(Math.floor((this.dex + attackerDex + 2) * ((this.dex - attackerDex) / 800.0)), 0, 10);
+        const blockRate = Math.floor((this.dex / 8.0) * this.constants.block + extra);
+        return Math.max(blockB + blockRate, 0);
     }
 
     getAspd() {
