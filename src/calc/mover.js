@@ -75,6 +75,8 @@ export class Mover {
             this.activeSelfBuffs = [];
         }
 
+        
+
         // Check if there are buffs we can add that are not currently active
         for (let buff of this.constants.buffs) {
             if (buff.level <= this.level && !this.activeSelfBuffs.includes(buff)) {
@@ -84,7 +86,8 @@ export class Mover {
         }
 
         if (this.selfBuffs && this.activeSelfBuffs.length == 0) {
-            this.activeSelfBuffs = this.constants.buffs.filter(b => b.level <= this.level);
+            this.activeSelfBuffs = this.constants.buffs.filter(b => b.level <= this.level && //
+            this.applySelfBuffFilterBasedOnWeapon(b, this.mainhand.subcategory, this.offhand)); // filter buffs according weapon type
 
             this.str += this.selfBuffParam('str');
             this.sta += this.selfBuffParam('sta');
@@ -97,6 +100,18 @@ export class Mover {
             this.dex -= this.selfBuffParam('dex');
 
             this.activeSelfBuffs = [];
+        }
+    }
+
+    applySelfBuffFilterBasedOnWeapon(selfBuff, mainhandweapon, offhandweapon) {
+        if(selfBuff.weapon == null) { // some buffs have no weapon
+            return true;
+        }
+        if(offhandweapon != null && offhandweapon.subcategory != null && selfBuff.weapon.includes(offhandweapon.subcategory)) { // offhand logic for shield
+            return true;
+        }
+        if(selfBuff.weapon.includes(mainhandweapon)) { // main check
+            return true;
         }
     }
 
