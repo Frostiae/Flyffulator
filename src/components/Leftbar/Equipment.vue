@@ -37,7 +37,7 @@
             <select v-model="character.mainhand" id="equipment-select">
               <option disabled value="">Select a weapon...</option>
               <option v-for="weapon in weapons" :value="weapon" :key="weapon.id">
-                {{ weapon.name.en }}
+                Lv. {{ weapon.level }} {{ weapon.name.en }}
               </option>
             </select>
           </td>
@@ -62,7 +62,7 @@
             <select v-model="character.offhand" id="equipment-select" :disabled=!canUseOffhand>
               <option disabled value="">Select an offhand...</option>
               <option v-for="offhand in offhands" :value="offhand" :key="offhand.id">
-                {{ offhand.name.en }}
+                Lv. {{ offhand.level }} {{ offhand.name.en }}
               </option>
           </select>
           </td>
@@ -89,7 +89,7 @@
             <select v-model="character.earringR" id="equipment-select">
               <option disabled value="">Select an earring...</option>
               <option v-for="earring in earrings" :value="earring" :key="earring.id">
-                {{ earring.name.en }}
+                Lv. {{ earring.level }} {{ earring.name.en }}
               </option>
             </select>
           </td>
@@ -104,7 +104,7 @@
             <select v-model="character.earringL" id="equipment-select">
               <option disabled value="">Select an earring...</option>
               <option v-for="earring in earrings" :value="earring" :key="earring.id">
-                {{ earring.name.en }}
+                Lv. {{ earring.level }} {{ earring.name.en }}
               </option>
             </select>
           </td>
@@ -119,7 +119,7 @@
             <select v-model="character.necklace" id="equipment-select">
               <option disabled value="">Select a necklace...</option>
               <option v-for="necklace in necklaces" :value="necklace" :key="necklace.id">
-                {{ necklace.name.en }}
+                Lv. {{ necklace.level }} {{ necklace.name.en }}
               </option>
             </select>
           </td>
@@ -134,7 +134,7 @@
             <select v-model="character.ringR" id="equipment-select">
               <option disabled value="">Select a ring...</option>
               <option v-for="ring in rings" :value="ring" :key="ring.id">
-                {{ ring.name.en }}
+                Lv. {{ ring.level }} {{ ring.name.en }}
               </option>
             </select>
           </td>
@@ -149,7 +149,7 @@
             <select v-model="character.ringL" id="equipment-select">
               <option disabled value="">Select a ring...</option>
               <option v-for="ring in rings" :value="ring" :key="ring.id">
-                {{ ring.name.en }}
+                Lv. {{ ring.level }} {{ ring.name.en }}
               </option>
           </select>
           </td>
@@ -204,7 +204,7 @@ export default {
     this.rings = Utils.getJewelery("ring").sort(Utils.sortByName);
     this.necklaces = Utils.getJewelery("necklace").sort(Utils.sortByName);
     this.piercingCards = Utils.getPiercingCards().sort(Utils.sortByName);
-    this.shields = Utils.getShields().sort(Utils.sortByName);
+    this.shields = Utils.getShields().sort(Utils.sortByLevel);
 
     this.offhands = [...this.shields];
     if (this.character instanceof Blade) {
@@ -213,7 +213,7 @@ export default {
   },
   methods: {
     updateEquipment() {
-      this.weapons = Utils.getJobWeapons(this.character.jobId).sort(Utils.sortByName);
+      this.weapons = Utils.getJobWeapons(this.character.jobId).sort(Utils.sortByLevel);
       this.armors = Utils.getJobArmors(this.character.jobId).sort(Utils.sortByName);
 
       // Blades can use a shield or a weapon in their offhand

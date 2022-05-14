@@ -111,6 +111,17 @@ export class Utils {
         return 0;
     }
 
+    static sortByLevel(a, b) {
+        if (a.level < b.level) {
+            return -1;
+        }
+        if (a.level > b.level) {
+            return 1;
+        }
+
+        return 0;
+    }
+
     updateJob(character, job) {
         if (character.constructor.name != job) { 
             let stats = {
