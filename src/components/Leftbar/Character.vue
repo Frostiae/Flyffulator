@@ -33,8 +33,11 @@
             <td><h5>{{character.ref.level}}</h5></td>
             <td>
               <button class="btn-plus" @click="newlevel--">-</button>
-              <input class="charinput" type="number" v-model="newlevel"/>
+              <input class="charinput" :class="{'red-text' : newlevel > this.maxLevel }" type="number" v-model="newlevel"/>
               <button class="btn-plus" @click="newlevel++">+</button>
+            </td>
+            <td>
+              <button class="btn-plus" @click="newlevel = this.maxLevel">max</button>
             </td>
           </tr>
 
@@ -46,6 +49,9 @@
               <input class="charinput" type="number" v-model="addstr"/>
               <button class="btn-plus" @click="addstr++">+</button>
             </td>
+            <td>
+              <button class="btn-plus" @click="addstr = statpoints">++</button>
+            </td>
           </tr>
 
           <tr>
@@ -55,6 +61,9 @@
               <button class="btn-plus" @click="addsta--">-</button>
               <input class="charinput" type="number" v-model="addsta"/>
               <button class="btn-plus" @click="addsta++">+</button>
+            </td>
+            <td>
+              <button class="btn-plus" @click="addsta = statpoints">++</button>
             </td>
           </tr>
 
@@ -66,6 +75,9 @@
               <input class="charinput" type="number" v-model="adddex"/>
               <button class="btn-plus" @click="adddex++">+</button>
             </td>
+            <td>
+              <button class="btn-plus" @click="adddex = statpoints">++</button>
+            </td>
           </tr>
 
           <tr>
@@ -75,6 +87,9 @@
               <button class="btn-plus" @click="addint--">-</button>
               <input class="charinput" type="number" v-model="addint"/>
               <button class="btn-plus" @click="addint++">+</button>
+            </td>
+            <td>
+              <button class="btn-plus" @click="addint = statpoints">++</button>
             </td>
           </tr>
 
@@ -99,7 +114,7 @@
           <tr>
             <td><h5>Stat points</h5></td>
             <td></td>
-            <td><h5>{{statpoints}}</h5></td>
+            <td><h5 :class="{'red-text' : statpoints < 0 }">{{statpoints}}</h5></td>
           </tr>
 
         </tbody>
@@ -134,7 +149,8 @@ export default {
       classbuffs: false,
       statpoints: 0,
       totalstatpoints: 0,
-      assignedStats: {str: 0, sta: 0, dex: 0, int: 0}
+      assignedStats: {str: 0, sta: 0, dex: 0, int: 0},
+      maxLevel: Utils.maxLevel
     }
   },
   mounted() {
@@ -151,6 +167,11 @@ export default {
         this.adddex = 0;
         this.addsta = 0;
         this.addint = 0;
+        return;
+      }
+
+      // Validate the character data
+      if (this.statpoints < 0 || this.newlevel > Utils.maxLevel) {
         return;
       }
       
@@ -276,6 +297,9 @@ button#applystats, button#resetstats, button#restatstats {
 .added-stats {
   font-style: italic;
   opacity: 0.5;
-  margin-left: 10px;
+}
+
+.red-text {
+  color: #ff6961
 }
 </style>
