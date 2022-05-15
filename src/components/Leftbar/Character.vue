@@ -46,7 +46,7 @@
             <td><h5>{{character.ref.str}} <span class="added-stats">{{assignedStats.str}}</span></h5></td>
             <td>
               <button class="btn-plus" @click="addstr--">-</button>
-              <input class="charinput" type="number" v-model="addstr"/>
+              <input class="charinput" type="number" v-model="addstr" @keyup.enter="pressedEnter"/>
               <button class="btn-plus" @click="addstr++">+</button>
             </td>
             <td>
@@ -59,7 +59,7 @@
             <td><h5>{{character.ref.sta}} <span class="added-stats">{{assignedStats.sta}}</span></h5></td>
             <td>
               <button class="btn-plus" @click="addsta--">-</button>
-              <input class="charinput" type="number" v-model="addsta"/>
+              <input class="charinput" type="number" v-model="addsta" @keyup.enter="pressedEnter"/>
               <button class="btn-plus" @click="addsta++">+</button>
             </td>
             <td>
@@ -72,7 +72,7 @@
             <td><h5>{{character.ref.dex}} <span class="added-stats">{{assignedStats.dex}}</span></h5></td>
             <td>
               <button class="btn-plus" @click="adddex--">-</button>
-              <input class="charinput" type="number" v-model="adddex"/>
+              <input class="charinput" type="number" v-model="adddex" @keyup.enter="pressedEnter"/>
               <button class="btn-plus" @click="adddex++">+</button>
             </td>
             <td>
@@ -85,7 +85,7 @@
             <td><h5>{{character.ref.int}} <span class="added-stats">{{assignedStats.int}}</span></h5></td>
             <td>
               <button class="btn-plus" @click="addint--">-</button>
-              <input class="charinput" type="number" v-model="addint"/>
+              <input class="charinput" type="number" v-model="addint" @keyup.enter="pressedEnter"/>
               <button class="btn-plus" @click="addint++">+</button>
             </td>
             <td>
@@ -261,6 +261,8 @@ export default {
     },
     UpdateStatPoints() {
       this.statpoints = this.totalstatpoints - this.addstr - this.addsta - this.adddex - this.addint;
+    },pressedEnter() {
+      this.ApplyStats();
     }
   },
   watch: {
