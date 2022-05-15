@@ -612,7 +612,7 @@ export class Mover {
             var damageNormal = this.attack;
 
             if (opponent.levelScales) {
-                defense = Moverutils.calcMonsterDefense(opponent, false, this.level);
+                defense = Moverutils.calcMonsterDefense(opponent, this.level);
             } else {
                 defense = Moverutils.calcMonsterDefense(opponent);
             }
@@ -625,10 +625,16 @@ export class Mover {
         } else {    // Skills
             var skill = this.constants.skills[skillIndex];
 
+            /*
             if (opponent.levelScales) {
                 defense = Moverutils.calcMonsterDefense(opponent, skill.magic, this.level);
             } else {
                 defense = Moverutils.calcMonsterDefense(opponent, skill.magic);
+            */
+
+            let defense = 0;
+            if (skill.magic == false) {
+                defense = opponent.defense / 7 + 1;
             }
 
             damage = Object.values(this.skillsRawDamage)[skillIndex];
@@ -693,12 +699,15 @@ export class Mover {
             if (this.mainhandUpgradeBonus != null) {
                 weaponMin *= 1 + this.mainhandUpgradeBonus.weaponAttack / 100;
                 weaponMax *= 1 + this.mainhandUpgradeBonus.weaponAttack / 100;
+
+                const upgradeValue = Math.floor(Math.pow(this.mainhandUpgradeBonus.upgradeLevel, 1.5));
+                weaponMin += upgradeValue;
+                weaponMax += upgradeValue;
             }
         }
 
         // Calculate base damage based on scaling per stat
         const base = maxLevel.scalingParameters.reduce((total, current) => total += this[current.stat] * current.scale, 0);
-
     
         // CMover::GetMeleeSkillPower()
         const level = skill.levels.length;
@@ -717,13 +726,16 @@ export class Mover {
 
         let final = (powerMin + powerMax) / 2;
 
+        // TODO: CMover::PostCalcMagicSkill 1.1 modifier
+        // final *= 1.1;   // CMover::PostCalcMagicSkill
+
         // BEGIN HARDCODING
         if (this instanceof Knight && this.mainhand.triggerSkillProbability) { final += final * (1.0 * (this.mainhand.triggerSkillProbability / 100)); } // Swordcross
 
         switch (skill.id) {
             case 6206: // Spirit bomb
                 // TODO: Check this in CAttackArbiter::GetDamageMultiplier()
-                final *= 1.85;  // Should be 1.5
+                final *= 2.15;  // Should be 1.5
                 break;
             case 7156: // Hit of Penya
                 final *= 4.0;

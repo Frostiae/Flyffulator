@@ -22,18 +22,18 @@ export default class Moverutils {
         return deltaFactor;
     }
 
-    static calcMonsterDefense(monster, magic=false, monsterLevel=0) {
+    static calcMonsterDefense(monster, monsterLevel=0) {
+        // TODO: None of this is correct for wand auto attacks specifically (magic auto attacks)
+        // Would need to just use opponent.magicDefense / 7 + 1
         var staFactor = 0.75;
         var levelScale = 2.0 / 2.8;
         var statScale = 0.5 / 2.8;
         var level = monsterLevel == 0 ? monster.level : monsterLevel; 
         var armor = monsterLevel == 0 ? monster.defense : this.trainingDummy.defense * monsterLevel / 100;
-        var magicArmor = monsterLevel == 0 ? monster.magicDefense : this.trainingDummy.defense * monsterLevel / 100;
         
         // dwNaturalArmor / 4
-        var equipmentDefense = !magic ? armor / 4 : magicArmor / 4;
+        var equipmentDefense = armor / 4;
         
-        // TODO: This is incorrect for magic skills. Check the universe MDef PvE formula
         var defense = Math.floor(level * levelScale + (monster.sta * statScale + (monster.sta - 14) * 1.0) * staFactor - 4);
         defense += equipmentDefense;
 
