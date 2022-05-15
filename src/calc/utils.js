@@ -23,10 +23,12 @@ export class Utils {
     static addedSta = 0;
     static addedDex = 0;
     static addedInt = 0;
-
+    
     static assistInt = 300;
     static assistBuffs = false;
     static classBuffs = false;
+
+    static maxLevel = 120;
 
     // These parameters come in different names, so this object describes those. Used in getExtraParam() etc. in mover.js
     static globalParams = {
