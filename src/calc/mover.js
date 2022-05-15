@@ -136,7 +136,7 @@ export class Mover {
         // Currently a very close approximation if not exactly correct for most weapons, but some weapon types will need
         // an API update to be exact as well.
         const weaponAspd = Utils.getWeaponSpeed(this.mainhand);
-        let statScale = 4.0 * this.dex + this.level / 8.0;
+        const statScale = 4.0 * this.dex + this.level / 8.0;
 
         const plusValue = [
             0.08, 0.16, 0.24, 0.32, 0.40,
@@ -152,7 +152,7 @@ export class Mover {
         const baseDividend = baseSpeedScaling * minBaseSpeed;
         const maxBaseScaledSpeed = baseSpeedScaling - baseDividend / maxBaseSpeed;
 
-        const baseSpeed = Math.floor(Math.min(this.constants.attackSpeed + weaponAspd * statScale, maxBaseScaledSpeed));
+        const baseSpeed = Math.floor(Math.min(this.constants.attackSpeed + weaponAspd * statScale - 3, maxBaseScaledSpeed));
 
         let speed = baseDividend / (baseSpeedScaling - baseSpeed);
 
@@ -162,13 +162,16 @@ export class Mover {
         const attackSpeed = this.getExtraParam('attackspeed', false) / 1000.0;
         speed += attackSpeed;
 
-        const attackSpeedRate = this.getExtraParam('attackspeed', true);
-        if (attackSpeedRate > 0) {
-            speed += speed * attackSpeedRate / 100.0;
-        }
+        //const attackSpeedRate = this.getExtraParam('attackspeed', true);
+        //if (attackSpeedRate > 0) {
+        //    speed += speed * attackSpeedRate / 100.0;
+        //}
 
         speed = Utils.clamp(speed, 0.1, 2.0);
         let final = speed * 100.0 / 2.0;
+        const attackSpeedRate = this.getExtraParam('attackspeed', true);
+        final += attackSpeedRate;
+
         return Math.floor(final > 100 ? 100 : final);
     }
 
