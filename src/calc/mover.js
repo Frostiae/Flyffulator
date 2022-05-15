@@ -199,6 +199,10 @@ export class Mover {
             if (this.mainhandUpgradeBonus != null) {
                 pnMin *= 1 + this.mainhandUpgradeBonus.weaponAttack / 100;
                 pnMax *= 1 + this.mainhandUpgradeBonus.weaponAttack / 100;
+
+                const upgradeValue = Math.floor(Math.pow(this.mainhandUpgradeBonus.upgradeLevel, 1.5));
+                pnMin += upgradeValue;
+                pnMax += upgradeValue;
             }
 
             pnMin *= 2;
@@ -266,6 +270,10 @@ export class Mover {
             if (this.offhandUpgradeBonus != null) {
                 min *= 1 + this.offhandUpgradeBonus.shieldDefense / 100;
                 max *= 1 + this.offhandUpgradeBonus.shieldDefense / 100;
+
+                const upgradeValue = Math.floor(Math.pow(this.offhandUpgradeBonus.upgradeLevel, 1.5));
+                min += upgradeValue;
+                max += upgradeValue;
             }
         }
 
@@ -278,6 +286,10 @@ export class Mover {
                 if (this.armorUpgradeBonus != null) {
                     _min *= 1 + this.armorUpgradeBonus.suitDefense / 100;
                     _max *= 1 + this.armorUpgradeBonus.suitDefense / 100;
+
+                    const upgradeValue = Math.floor(Math.pow(this.armorUpgradeBonus.upgradeLevel, 1.5));
+                    _min += upgradeValue;
+                    _max += upgradeValue;
                 }
                 
                 min += _min;
