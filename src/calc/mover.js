@@ -682,9 +682,7 @@ export class Mover {
         }
 
         // Calculate base damage based on scaling per stat
-        const base = maxLevel.scalingParameters.reduce((total, current) => {
-            return total += this[current.stat] * current.scale
-        }, 0);
+        const base = maxLevel.scalingParameters.reduce((total, current) => total += this[current.stat] * current.scale, 0);
 
     
         // CMover::GetMeleeSkillPower()
