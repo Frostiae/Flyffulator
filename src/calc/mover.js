@@ -681,25 +681,14 @@ export class Mover {
             }
         }
 
-        const stat = maxLevel.scalingParameters[0].stat;
-        var referStat = this.str;
-        switch (stat) {
-            case 'sta':
-                referStat = this.sta;
-                break;
-            case 'dex':
-                referStat = this.dex;
-                break;
-            case 'int':
-                referStat = this.int;
-                break;
-            default:
-                referStat = this.str;
-        }
+        // Calculate base damage based on scaling per stat
+        const base = maxLevel.scalingParameters.reduce((total, current) => {
+            return total += this[current.stat] * current.scale
+        }, 0);
 
+    
         // CMover::GetMeleeSkillPower()
         const level = skill.levels.length;
-        const base = referStat * maxLevel.scalingParameters[0].scale;
         let powerMin = ((weaponMin + (maxLevel.minAttack + 0) * 5 + base - 20) * (16 + level) / 13);
         let powerMax = ((weaponMax + (maxLevel.maxAttack + 0) * 5 + base - 20) * (16 + level) / 13);
 
