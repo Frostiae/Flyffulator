@@ -156,6 +156,9 @@ export default {
   mounted() {
     this.statpoints = this.character.ref.level * 2 - 2;
   },
+  created: function () {
+    window.addEventListener('keyup', this.pressedEnter);
+  },
   methods: {
     ChangeJob() {
       this.$root.updateJob();
@@ -261,8 +264,10 @@ export default {
     },
     UpdateStatPoints() {
       this.statpoints = this.totalstatpoints - this.addstr - this.addsta - this.adddex - this.addint;
-    },pressedEnter() {
-      this.ApplyStats();
+    },pressedEnter(e) {
+      if(e.which === 13) {
+        this.ApplyStats();
+      }
     }
   },
   watch: {
