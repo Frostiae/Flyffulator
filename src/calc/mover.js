@@ -45,7 +45,6 @@ export class Mover {
         if (this.assistBuffs) {
             for (let buff of Moverutils.assistBuffs) {
                 if (this.activeBuffs.find(b => b.id == buff.id)) continue;
-                if (buff.level > this.level) continue;
                 buff.enabled = true;
                 this.activeBuffs.push(buff);
             }
@@ -71,7 +70,7 @@ export class Mover {
 
         // Remove any buffs above our level
         this.activeBuffs = this.activeBuffs.filter((val, index, arr) => {
-            return val.level <= this.level;
+            return val.level <= this.level || val.class == 9389 || val.class == 8962;
         });
     }
 

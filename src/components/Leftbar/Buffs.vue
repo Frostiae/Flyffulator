@@ -61,14 +61,6 @@ export default {
     }
   },
   watch: {
-    '$root.character.ref.activeAssistBuffs'() {
-      this.character = this.$root.character.ref;
-      this.updateBuffs();
-    },
-    '$root.character.ref.activeSelfBuffs'() {
-      this.character = this.$root.character.ref;
-      this.updateBuffs();
-    },
     '$root.character.ref.activeBuffs'() {
       this.character = this.$root.character.ref;
       this.updateBuffs();
