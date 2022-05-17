@@ -182,7 +182,7 @@ export class Mover {
         chance = chance < 0 ? 0 : chance;
 
         chance += this.getExtraParam('criticalchance', true);
-        return chance > 100 ? 100 : chance;
+        return chance;
     }
 
     getDCT() {
