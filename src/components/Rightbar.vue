@@ -55,7 +55,6 @@ export default {
   overflow-x: hidden;
   right: 0;
   top: 0;
-  border-radius: 15px 0px 0px 15px;
   width: 22vw;
   max-width: 330px;
   min-width: 180px;

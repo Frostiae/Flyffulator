@@ -82,19 +82,25 @@ export class Utils {
 
     static getWeaponSpeed(weapon) {
         if (!weapon) return 0;
-        switch (weapon.attackSpeed) {
-            case 'veryslow':
-                return 0.025;
-            case 'slow':
-                return 0.045;
-            case 'normal':
-                return 0.060;
-            case 'fast':
+        switch (weapon.subcategory) {
+            case 'knuckle':
+                return 0.07;
+            case 'axe':
+                return weapon.twoHanded ? 0.03 : 0.06;
+            case 'sword':
+                return weapon.twoHanded ? 0.035 : 0.085;
+            case 'bow':
+                return 0.07;
+            case 'yoyo':
                 return 0.075;
-            case 'veryfast':
-                return 0.085;
+            case 'stick':
+                return 0.05;
+            case 'staff':
+                return 0.045;
+            case 'wand':
+                return 0.025;
             default:
-                return 0.17;
+                return 0.075;
         }
     }
 

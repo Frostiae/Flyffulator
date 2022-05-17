@@ -64,10 +64,9 @@ table.stattable {
   left: 0;
   float: left;
   top: 0;
-  border-radius: 0px 15px 15px 0px;
   width: 22vw;
   max-width: 330px;
-  min-width: 290px;
+  min-width: 300px;
   overflow-y: auto;
   z-index: 1;
   transition: 0.3s;
