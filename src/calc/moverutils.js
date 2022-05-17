@@ -1,5 +1,21 @@
+import { Utils } from "./utils.js";
 export default class Moverutils {
     constructor() { }
+
+    static assistBuffs = [
+        Utils.getSkillByName('Cannon Ball'),
+        Utils.getSkillByName('Beef Up'),
+        Utils.getSkillByName('Heap Up'),
+        Utils.getSkillByName('Mental Sign'),
+        Utils.getSkillByName('Patience'),
+        Utils.getSkillByName('Haste'),
+        Utils.getSkillByName('Cat\'s Reflex'),
+        Utils.getSkillByName('Accuracy'),
+        Utils.getSkillByName('Protect'),
+        Utils.getSkillByName('Spirit Fortune'),
+        Utils.getSkillByName('Holyguard'),
+        Utils.getSkillByName('Geburah Tiphreth')
+    ];
 
     static trainingDummy = {
         "defense": 133,

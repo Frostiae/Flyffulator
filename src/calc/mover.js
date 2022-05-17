@@ -12,10 +12,9 @@ export class Mover {
         this.armorUpgradeBonus = Utils.getUpgradeBonus(this.armorUpgrade);
         this.mainhandUpgradeBonus = Utils.getUpgradeBonus(this.mainhandUpgrade);
         this.offhandUpgradeBonus = Utils.getUpgradeBonus(this.offhandUpgrade);
-
-        this.applyBaseGearStats();
-        this.applyAssistBuffs();
-        this.applySelfBuffs();
+        
+        this.applyBuffs();
+        this.applyBaseStats();
 
         this.str = Math.floor(this.str);
         this.sta = Math.floor(this.sta);
@@ -34,70 +33,46 @@ export class Mover {
         return this;
     }
 
-    applyBaseGearStats() {
-        this.str = 15 + Utils.addedStr + this.getExtraGearParam("str");
-        this.sta = 15 + Utils.addedSta + this.getExtraGearParam("sta");
-        this.dex = 15 + Utils.addedDex + this.getExtraGearParam("dex");
-        this.int = 15 + Utils.addedInt + this.getExtraGearParam("int");
+    applyBaseStats() {
+        this.str = 15 + Utils.addedStr + this.getExtraParam("str");
+        this.sta = 15 + Utils.addedSta + this.getExtraParam("sta");
+        this.dex = 15 + Utils.addedDex + this.getExtraParam("dex");
+        this.int = 15 + Utils.addedInt + this.getExtraParam("int");
     }
 
-    applyAssistBuffs() {
-        if (this.assistBuffs) { // Add buffs
-            if (this.activeAssistBuffs.length == 0) {
-                this.activeAssistBuffs = [
-                    Utils.getSkillByName('Cannon Ball'),
-                    Utils.getSkillByName('Beef Up'),
-                    Utils.getSkillByName('Heap Up'),
-                    Utils.getSkillByName('Mental Sign'),
-                    Utils.getSkillByName('Patience'),
-                    Utils.getSkillByName('Haste'),
-                    Utils.getSkillByName('Cat\'s Reflex'),
-                    Utils.getSkillByName('Accuracy'),
-                    Utils.getSkillByName('Protect'),
-                    Utils.getSkillByName('Spirit Fortune'),
-                    Utils.getSkillByName('Holyguard'),
-                    Utils.getSkillByName('Geburah Tiphreth')
-                ];
+    applyBuffs() {
+        // RM/Assist Buffs
+        if (this.assistBuffs) {
+            for (let buff of Moverutils.assistBuffs) {
+                if (this.activeBuffs.find(b => b.id == buff.id)) continue;
+                if (buff.level > this.level) continue;
+                buff.enabled = true;
+                this.activeBuffs.push(buff);
             }
-
-            this.str += this.assistBuffParam('str');
-            this.sta += this.assistBuffParam('sta');
-            this.int += this.assistBuffParam('int');
-            this.dex += this.assistBuffParam('dex');
-        } else if (!this.assistBuffs && this.activeAssistBuffs.length != 0) { // Remove buffs
-            this.activeAssistBuffs = [];
-        }
-    }
-
-    applySelfBuffs() {
-        // Empty the buffs and re-do the application if there are buffs above your level
-        if (this.activeSelfBuffs.find(b => b.level > this.level)) {
-            this.activeSelfBuffs = [];
+        } else {
+            this.activeBuffs = this.activeBuffs.filter((val, index, arr) => {
+                return !Moverutils.assistBuffs.find(b => b.id == val.id);
+            });
         }
 
-        // Check if there are buffs we can add that are not currently active
-        for (let buff of this.constants.buffs) {
-            if (buff.level <= this.level && !this.activeSelfBuffs.includes(buff)) {
-                this.activeSelfBuffs = [];
-                break;
+        // Self Buffs
+        if (this.selfBuffs) {
+            for (let buff of this.constants.buffs) {
+                if (this.activeBuffs.find(b => b.id == buff.id)) continue;
+                if (buff.level > this.level) continue;
+                buff.enabled = true;
+                this.activeBuffs.push(buff);
             }
+        } else {
+            this.activeBuffs = this.activeBuffs.filter((val, index, arr) => {
+                return !this.constants.buffs.find(b => b.id == val.id);
+            });
         }
 
-        if (this.selfBuffs && this.activeSelfBuffs.length == 0) {
-            this.activeSelfBuffs = this.constants.buffs.filter(b => b.level <= this.level);
-
-            this.str += this.selfBuffParam('str');
-            this.sta += this.selfBuffParam('sta');
-            this.int += this.selfBuffParam('int');
-            this.dex += this.selfBuffParam('dex');
-        } else if (!this.selfBuffs && this.activeSelfBuffs.length != 0) {
-            this.str -= this.selfBuffParam('str');
-            this.sta -= this.selfBuffParam('sta');
-            this.int -= this.selfBuffParam('int');
-            this.dex -= this.selfBuffParam('dex');
-
-            this.activeSelfBuffs = [];
-        }
+        // Remove any buffs above our level
+        this.activeBuffs = this.activeBuffs.filter((val, index, arr) => {
+            return val.level <= this.level;
+        });
     }
 
     get parry() {
@@ -152,7 +127,7 @@ export class Mover {
         const baseDividend = baseSpeedScaling * minBaseSpeed;
         const maxBaseScaledSpeed = baseSpeedScaling - baseDividend / maxBaseSpeed;
 
-        const baseSpeed = Math.floor(Math.min(this.constants.attackSpeed + weaponAspd * statScale - 3, maxBaseScaledSpeed));
+        const baseSpeed = Math.floor(Math.min(this.constants.attackSpeed + weaponAspd * statScale, maxBaseScaledSpeed));
 
         let speed = baseDividend / (baseSpeedScaling - baseSpeed);
 
@@ -365,7 +340,8 @@ export class Mover {
     }
 
     getExtraBuffParam(param, rate = false) {
-        return this.assistBuffParam(param, rate) + this.selfBuffParam(param, rate);
+        return this.buffParam(param, rate);
+        // return this.assistBuffParam(param, rate) + this.selfBuffParam(param, rate);
     }
 
     getExtraGearParam(param, rate = false) {
@@ -458,49 +434,34 @@ export class Mover {
     }
 
     /**
-     * Returns additions to a specific value from your active assist buffs
+     * Returns additions to a specific value from your active & enabled buffs
      * @param param The value to find additions for 
      */
-    assistBuffParam(param, rate = false) {
-        var add = 0;
-        var params = [param].concat(Utils.globalParams[param]);
+    buffParam(param, rate=false) {
+        let add = 0;
+        let params = [param].concat(Utils.globalParams[param]);
 
-        this.activeAssistBuffs.forEach(buff => {
-            let level = buff.levels.slice(-1)[0];
-            let abilities = level.abilities;
-
-            abilities.forEach(ability => { // forEach here and not .find() because there might be multiple buffs with param
-                if (params.includes(ability.parameter) && level.scalingParameters.length > 1 && ability.rate == rate) {
-                    level.scalingParameters.forEach(scaling => {
-                        if (params.includes(scaling.parameter)) {
-                            let extra = scaling.scale * this.assistInt;
-                            extra = extra > scaling.maximum ? scaling.maximum : extra;
-                            add += extra;
-                        }
-                    });
-                    add += ability.add;
-                } else if (params.includes(ability.parameter) && ability.rate == rate) {
-                    add += ability.add;
-                }
-            });
-        });
-        return add;
-    }
-
-    selfBuffParam(param, rate = false) {
-        var add = 0;
-        var params = [param].concat(Utils.globalParams[param]);
-
-        this.activeSelfBuffs.forEach(buff => {
-            let level = buff.levels.slice(-1)[0];
-            let abilities = level.abilities;
-
-            abilities.forEach(ability => {
+        for (let buff of this.activeBuffs) {
+            if (!buff.enabled) continue;    // Don't add disabled buffs
+            let maxLevel = buff.levels.slice(-1)[0];
+            let abilities = maxLevel.abilities;
+            
+            for (let ability of abilities) {
                 if (params.includes(ability.parameter) && ability.rate == rate) {
                     add += ability.add;
+
+                    if (maxLevel.scalingParameters != undefined && (buff.class == 9389 || buff.class == 8962)) {
+                        for (let scaling of maxLevel.scalingParameters) {
+                            if (params.includes(scaling.parameter)) {
+                                let extra = scaling.scale * this.assistInt;
+                                extra = Math.min(extra, scaling.maximum);
+                                add += extra;
+                            }
+                        }
+                    }
                 }
-            });
-        });
+            }
+        }
 
         return add;
     }

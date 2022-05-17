@@ -94,7 +94,7 @@
           </tr>
 
           <tr>
-            <td><h5>Assist buffs</h5></td>
+            <td><h5>Assist/RM buffs</h5></td>
             <td></td>
             <td>
               <input id="buffs" type="checkbox" v-model="assistbuffs">

@@ -5,7 +5,8 @@
     <div class="stats">
       <ul>
         <li v-for="buff in buffs" :value="buff" :key="buff.id">
-              <img :src="$root.getSkillIconUrl(buff.icon)" alt="" :title="getTooltip(buff)">
+          <input type="checkbox" name="enable-buff" id="enable-buff" v-model="buff.enabled" @change="reloadBuffs">
+          <img :src="$root.getSkillIconUrl(buff.icon)" alt="" :title="getTooltip(buff)" :class="{'disabled' : buff.enabled == false }">
         </li>
       </ul>
     </div>
@@ -27,7 +28,10 @@ export default {
   methods: {
     updateBuffs() {
       this.buffs = [];
-      this.buffs = this.character.activeSelfBuffs.concat(this.character.activeAssistBuffs);
+      this.buffs = this.character.activeBuffs;
+    },
+    reloadBuffs() {
+      this.character.update();
     },
     getTooltip(buff) {
       let tooltip = buff.name.en + "\n";
@@ -64,6 +68,10 @@ export default {
     '$root.character.ref.activeSelfBuffs'() {
       this.character = this.$root.character.ref;
       this.updateBuffs();
+    },
+    '$root.character.ref.activeBuffs'() {
+      this.character = this.$root.character.ref;
+      this.updateBuffs();
     }
   }
 }
@@ -79,9 +87,28 @@ ul {
     flex-wrap: wrap;
 }
 
+li {
+  position: relative;
+}
+
 h5 {
   opacity: 0.5;
   margin: 0;
   margin-bottom: 20px;
+}
+
+input[type=checkbox] {
+  position: absolute;
+  opacity: 0.8;
+  z-index: 200;
+}
+
+img {
+  transition: 0.2s;
+  
+  &.disabled {
+    opacity: 0.2;
+    transition: 0.2s;
+  }
 }
 </style>
