@@ -31,7 +31,7 @@ export class Vagrant extends Mover {
                 Utils.getSkillByName("Over Cutter")
             ],
             'buffs': [],
-            'attackSpeed': 75.0,
+            'attackSpeed': 70.0,
             'hps': 4, // TODO: change these to frames instead and calculate hits/sec using them for more accuracy
             'HP': 0.9,
             'MP': 0.3,
@@ -65,6 +65,7 @@ export class Vagrant extends Mover {
 
         this.activeAssistBuffs = [];
         this.activeSelfBuffs = [];
+        this.activeBuffs = [];
         this.assistInt = 300; // How much int the assist buffing you has
 
         this.monsters = [];
@@ -701,8 +702,7 @@ export class Blade extends Mercenary {
             'buffs': [Utils.getSkillByName("Berserk"),
                 Utils.getSkillByName("Smite Axe"),
                 Utils.getSkillByName("Axe Mastery"),
-                Utils.getSkillByName("Sword Mastery"),
-                Utils.getSkillByName("Protection")],
+                Utils.getSkillByName("Sword Mastery")],
             'attackSpeed': 87.0,
             'hps': 3,
             'HP': 1.5,
