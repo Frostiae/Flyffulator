@@ -59,6 +59,7 @@ export class Mover {
             for (let buff of this.constants.buffs) {
                 if (this.activeBuffs.find(b => b.id == buff.id)) continue;
                 if (buff.level > this.level) continue;
+
                 buff.enabled = true;
                 this.activeBuffs.push(buff);
             }
@@ -67,6 +68,12 @@ export class Mover {
                 return !this.constants.buffs.find(b => b.id == val.id);
             });
         }
+
+        // Remove any buffs not matching the selected weapon
+        this.activeBuffs = this.activeBuffs.filter(buff => buff.weapon  == null // some buffs have no weapon
+        || (this.offhand != null && this.offhand.subcategory != null && buff.weapon.includes(this.offhand.subcategory)) // offhand logic for shield
+        || buff.weapon.includes(this.mainhand.subcategory) // buff weapon doesn't match select mainhand weapon
+        );
 
         // Remove any buffs above our level
         this.activeBuffs = this.activeBuffs.filter((val, index, arr) => {
@@ -705,6 +712,12 @@ export class Mover {
                 break;
             case 7023: // Multi-Stab
                 final *= 7; // Hits 7 times in the animation
+                break;
+            case 9538: // Spring Attack
+                final *= 5; // Hits 5 times in the animation - actually 15% to double the dmg each hit
+                break;
+            case 4448: // Belial Smashing
+                final *= 5; // Hits 5 times in the animation - actually 15% to double the dmg each hit
                 break;
             case 1526: // Junk Arrow
                 final *= maxLevel.probability / 100.0;
