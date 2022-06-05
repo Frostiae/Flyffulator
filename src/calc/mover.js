@@ -356,11 +356,29 @@ export class Mover {
             if (bonus) add = bonus.ability.add;
         }
 
-        // Suit Piercing
-        if (this.suitPiercing) {
-            const ability = this.suitPiercing.abilities[0]; // Piercing cards only have one ability
+        // Suit Piercing - 4 slots selected individually
+        if (this.suitPiercing1) {
+            const ability = this.suitPiercing1.abilities[0]; // Piercing cards only have one ability
             if (params.includes(ability.parameter) && ability.rate == rate) {
-                add += ability.add * 4; // 4 card piercing slots
+                add += ability.add;
+            }
+        } 
+        if (this.suitPiercing2) {
+            const ability = this.suitPiercing2.abilities[0]; // Piercing cards only have one ability
+            if (params.includes(ability.parameter) && ability.rate == rate) {
+                add += ability.add;
+            }
+        } 
+        if (this.suitPiercing3) {
+            const ability = this.suitPiercing3.abilities[0]; // Piercing cards only have one ability
+            if (params.includes(ability.parameter) && ability.rate == rate) {
+                add += ability.add;
+            }
+        } 
+        if (this.suitPiercing4) {
+            const ability = this.suitPiercing4.abilities[0]; // Piercing cards only have one ability
+            if (params.includes(ability.parameter) && ability.rate == rate) {
+                add += ability.add;
             }
         }
 

@@ -161,15 +161,33 @@
         <tr>
           <td><h5>Suit Piercing</h5></td>
           <td>
-            <select v-model="character.suitPiercing" id="equipment-select">
+            <select v-model="character.suitPiercing1" id="equipment-select">
               <option disabled value="">Select a card...</option>
               <option v-for="card in piercingCards" :value="card" :key="card.id">
                 {{ card.name.en }}
               </option>
-          </select>
+            </select>
+            <select v-model="character.suitPiercing2" id="equipment-select">
+              <option disabled value="">Select a card...</option>
+              <option v-for="card in piercingCards" :value="card" :key="card.id">
+                {{ card.name.en }}
+              </option>
+            </select>
+            <select v-model="character.suitPiercing3" id="equipment-select">
+              <option disabled value="">Select a card...</option>
+              <option v-for="card in piercingCards" :value="card" :key="card.id">
+                {{ card.name.en }}
+              </option>
+            </select>
+            <select v-model="character.suitPiercing4" id="equipment-select">
+              <option disabled value="">Select a card...</option>
+              <option v-for="card in piercingCards" :value="card" :key="card.id">
+                {{ card.name.en }}
+              </option>
+            </select>
           </td>
           <td>
-            <button class="btn-plus" @click="character.suitPiercing = null">x</button>
+            <button class="btn-plus" @click="character.suitPiercing1 = null;character.suitPiercing2 = null;character.suitPiercing3 = null;character.suitPiercing4 = null">x</button>
           </td>
         </tr>
 
@@ -237,7 +255,10 @@ export default {
         this.character.necklace = this.byId(this.necklaces, equipment.necklace);
         this.character.ringR = this.byId(this.rings, equipment.ringR);
         this.character.ringL = this.byId(this.rings, equipment.ringL);
-        this.character.suitPiercing = this.byId(this.piercingCards, equipment.suitPiercing);
+        this.character.suitPiercing1 = this.byId(this.piercingCards, equipment.suitPiercing1);
+        this.character.suitPiercing2 = this.byId(this.piercingCards, equipment.suitPiercing2);
+        this.character.suitPiercing3 = this.byId(this.piercingCards, equipment.suitPiercing3);
+        this.character.suitPiercing4 = this.byId(this.piercingCards, equipment.suitPiercing4);
       }, 10);
     },
     byId(arr, id) {

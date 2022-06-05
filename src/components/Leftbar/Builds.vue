@@ -119,7 +119,10 @@ export default {
           necklace: this.character.necklace?.id,
           ringR: this.character.ringR?.id,
           ringL: this.character.ringL?.id,
-          suitPiercing: this.character.suitPiercing?.id,
+          suitPiercing1: this.character.suitPiercing1?.id,
+          suitPiercing2: this.character.suitPiercing2?.id,
+          suitPiercing3: this.character.suitPiercing3?.id,
+          suitPiercing4: this.character.suitPiercing4?.id,
         };
 
         this.saveAppliedStats(newStats);
