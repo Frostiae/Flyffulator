@@ -21,7 +21,10 @@ export class Vagrant extends Mover {
         this.ringR = null;
         this.ringL = null;
         this.necklace = null;
-        this.suitPiercing = null;
+        this.suitPiercing1 = null;
+        this.suitPiercing2 = null;
+        this.suitPiercing3 = null;
+        this.suitPiercing4 = null;
         this.shield = null;
         this.assistBuffs = false;
         this.selfBuffs = false;
