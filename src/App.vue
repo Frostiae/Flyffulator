@@ -137,6 +137,7 @@ export default {
     'character.ref.earringL'() { this.updateCharacter() },
     'character.ref.ringR'() { this.updateCharacter() },
     'character.ref.ringL'() { this.updateCharacter() },
+    'character.ref.cloak'() { this.updateCharacter() },
     'character.ref.necklace'() { this.updateCharacter() },
     'character.ref.suitPiercing'() { this.updateCharacter() },
     'character.ref.shield'() { this.updateCharacter() },

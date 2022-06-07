@@ -67,6 +67,7 @@ export class Utils {
     static getJewelery(subcategory) { return this.items.filter(item => item.category == "jewelry" && item.subcategory == subcategory); }
     static getPiercingCards() { return this.items.filter(item => item.subcategory == "piercingcard"); }
     static getShields() { return this.items.filter(item => item.subcategory == "shield"); }
+    static getCloaks() { return this.items.filter(item => item.subcategory == "cloak" && item.abilities); }
 
     static getUpgradeBonus(upgradeLevel) { return this.upgradeBonus[upgradeLevel - 1] || null; }
     
