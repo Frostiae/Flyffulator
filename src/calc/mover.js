@@ -606,10 +606,38 @@ export class Mover {
 
             damage -= Moverutils.calcDamageDefense(defense, damage);
             damage *= this.getDamageMultiplier(true);   // TODO: Try moving this up if inaccuracies remain after fixing MDef formula
+
+            // skill that do have multiple hits in the animation, must be multiplied after the defense calculation to be accurate
+            damage *= this.getHitsForSkill(skill.id);
         }
 
         damage *= deltaFactor;
         return damage < 1 ? 1 : damage;
+    }
+
+    /**
+     * Returns number of this for a given skill
+     * 
+     * @param {int} skillId 
+     * @returns the number of hits
+     */
+    getHitsForSkill(skillId) {
+        var hits = 1;
+        switch (skillId) {
+            case 7023: // Multi-Stab
+                hits = 7; // Hits 7 times in the animation
+                break;
+            case 1526: // Junk Arrow
+                hits = 4; // Hits 4 times
+                break;
+            case 9538: // Spring Attack
+                hits = 5; 
+                break;
+            case 4448: // Belial Smashing
+                hits = 5;
+                break;
+        }
+        return hits;
     }
 
     getDamageMultiplier(skill=false) {
@@ -703,12 +731,8 @@ export class Mover {
             case 5041: // Asal
                 final += (((this.str / 10) * level) * (5 + this.mp / 10) + 150);
                 break;
-            case 7023: // Multi-Stab
-                final *= 7; // Hits 7 times in the animation
-                break;
             case 1526: // Junk Arrow
                 final *= maxLevel.probability / 100.0;
-                final *= 4; // Hits 4 times
                 break;
         }
 
