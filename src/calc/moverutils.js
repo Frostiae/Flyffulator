@@ -17,6 +17,40 @@ export default class Moverutils {
         Utils.getSkillByName('Geburah Tiphreth')
     ];
 
+    static premiumItems = [
+        Utils.getItemByName('Grilled Eel'),
+        // Utils.getItemByName('Upcut Stone'), // incorrect item. its a scroll type, not buff and has no abilities. api issue
+        Utils.getItemByName('Def-Upcut Stone'),
+        Utils.getItemByName('Power Scroll'),
+        Utils.getItemByName('Charged Power Scroll'),
+        Utils.getItemByName('Super Charged Power Scroll'),
+        Utils.getItemByName('Flask of the Tiger'),
+        Utils.getItemByName('Flask of the Lion'),
+        Utils.getItemByName('Flask of the Rabbit'),
+        Utils.getItemByName('Flask of the Fox'),
+        Utils.getItemByName('Flask of Stone'),
+        Utils.getItemByName('Potion of Recklessness'),
+        Utils.getItemByName('Potion of Swiftness'),
+        Utils.getItemByName('Potion of Clarity'),
+        Utils.getItemByName('Elixir of the Sorceror'),
+        Utils.getItemByName('Elixir of Anti-Magic'),
+        Utils.getItemByName('Elixir of Evasion'),
+        Utils.getItemByName('Concoction of Profuse Bleeding'),
+        Utils.getItemByName('Green Cotton Candy'),
+        Utils.getItemByName('Purple Cotton Candy'),
+        Utils.getItemByName('Orange Cotton Candy'),
+        Utils.getItemByName('Yellow Cotton Candy'),
+        Utils.getItemByName('Red Cotton Candy'),
+        Utils.getItemByName('Gray Cotton Candy'),
+        Utils.getItemByName('Blue Cotton Candy'),
+        Utils.getItemByName('Pink Cotton Candy'),
+        Utils.getItemByName('White Cotton Candy'),
+        Utils.getItemByName('Sky-Blue Cotton Candy'),
+        Utils.getItemByName('Yellow Balloons'),
+        Utils.getItemByName('Pink Balloons'),
+        Utils.getItemByName('Blue Balloons')
+    ];
+
     static trainingDummy = {
         "defense": 133,
         "sta": 1,

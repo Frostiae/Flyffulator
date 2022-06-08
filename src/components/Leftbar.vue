@@ -5,6 +5,7 @@
             <character ref="character" />
             <equipment ref="equipment" />
             <buffs/>
+            <premiumitems/>
             <!--<externals/>-->
         </div>
     </div>
@@ -15,6 +16,7 @@ import Character from './Leftbar/Character.vue'
 import Equipment from './Leftbar/Equipment.vue'
 import Buffs from './Leftbar/Buffs.vue'
 import Builds from './Leftbar/Builds.vue'
+import Premiumitems from './Leftbar/Premiumitems.vue'
 //import Externals from './Leftbar/External.vue'
 //import Changelog from './Leftbar/Changelog.vue'
 
@@ -24,7 +26,8 @@ export default {
       Character,
       Equipment,
       Buffs,
-      Builds
+      Builds,
+      Premiumitems
       //Changelog,
       //Externals
   },

@@ -127,6 +127,7 @@ export default {
     'character.ref.assistInt'() { this.updateCharacter() },
     'character.ref.selfBuffs'() { this.updateCharacter() },
     'character.ref.assistBuffs'() { this.updateCharacter() },
+    'character.ref.premiumItems'() { this.updateCharacter() },
     'character.ref.mainhand'() { this.updateCharacter() },
     'character.ref.offhand'() { this.updateCharacter() },
     'character.ref.armor'() { this.updateCharacter() },
@@ -187,8 +188,13 @@ export default {
       return images('./' + img)
     },
     getIconUrl(img) {
-      var images = require.context('./assets/images/Icons/Items', false, /\.png$/)
-      return images('./' + img)
+      try {
+        var images = require.context('./assets/images/Icons/Items', false, /\.png$/)
+        return images('./' + img)
+      } catch(error) {
+        // dummy icon if icon couldn't be found
+        return images('./' + "syssysqueheadrb.png")
+      }
     },
     getSkillIconUrl(img) {
       var images = require.context('./assets/images/Icons/Skills/colored', false, /\.png$/)
