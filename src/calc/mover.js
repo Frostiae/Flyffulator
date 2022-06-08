@@ -730,7 +730,7 @@ export class Mover {
                 break;
         }
 
-        final *= 1 + (this.getExtraParam("skilldamage") / 100);
+        final *= 1 + (this.getExtraParam("skilldamage", true) / 100);
 
         return final;
     }
