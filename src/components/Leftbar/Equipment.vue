@@ -159,6 +159,22 @@
         </tr>
 
         <tr>
+          <td><h5>Cloak</h5></td>
+          <td>
+            <select v-model="character.cloak" id="equipment-select">
+              <option disabled value="">Select a cloak...</option>
+              <option v-for="cloak in cloaks" :value="cloak" :key="cloak.id">
+                {{ cloak.name.en }}
+              </option>
+            </select>
+            {{ getCloakText(character.cloak) }}
+          </td>
+          <td>
+            <button class="btn-plus" @click="character.cloak = null">x</button>
+          </td>
+        </tr>
+
+        <tr>
           <td><h5>Suit Piercing</h5></td>
           <td>
             <select v-model="character.suitPiercing" id="equipment-select">
@@ -192,6 +208,7 @@ export default {
       earrings: [],
       necklaces: [],
       rings: [],
+      cloaks: [],
       piercingCards: [],
       shields: [],
       offhands: [],
@@ -205,6 +222,7 @@ export default {
     this.necklaces = Utils.getJewelery("necklace").sort(Utils.sortByName);
     this.piercingCards = Utils.getPiercingCards().sort(Utils.sortByName);
     this.shields = Utils.getShields().sort(Utils.sortByLevel);
+    this.cloaks = Utils.getCloaks().sort(Utils.sortByName);
 
     this.offhands = [...this.shields];
     if (this.character instanceof Blade) {
@@ -237,12 +255,30 @@ export default {
         this.character.necklace = this.byId(this.necklaces, equipment.necklace);
         this.character.ringR = this.byId(this.rings, equipment.ringR);
         this.character.ringL = this.byId(this.rings, equipment.ringL);
+        this.character.cloak = this.byId(this.cloaks, equipment.cloak);
         this.character.suitPiercing = this.byId(this.piercingCards, equipment.suitPiercing);
       }, 10);
     },
     byId(arr, id) {
       let obj = arr.find(o => o.id == id);
       return obj ?? null;
+    },
+    getCloakText(cloak) {
+      let text = "";
+      if(cloak) {
+        //text = cloak.name.en + " (";
+        cloak.abilities.forEach(ability => {
+          let effect = " ";
+          effect += ability.parameter;
+          let add = ability.add;
+          effect += "+" + add;
+          if (ability.rate) effect += "%";
+          effect += " ";
+          text += effect;
+        });
+        //text += ")";   
+      }
+      return text;
     }
   },
   watch: {

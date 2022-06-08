@@ -429,6 +429,12 @@ export class Mover {
             if (bonus) add += bonus.add;
         }
 
+        // cloak added here
+        if(this.cloak && this.cloak.abilities) {
+            const bonus = this.cloak.abilities.find(a => params.includes(a.parameter) && a.rate == rate);
+            if (bonus) add += bonus.add;
+        }
+
         return add;
     }
 

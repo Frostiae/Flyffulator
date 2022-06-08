@@ -119,6 +119,7 @@ export default {
           necklace: this.character.necklace?.id,
           ringR: this.character.ringR?.id,
           ringL: this.character.ringL?.id,
+          cloak: this.character.cloak?.id,
           suitPiercing: this.character.suitPiercing?.id,
         };
 
