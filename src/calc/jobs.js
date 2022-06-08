@@ -124,7 +124,7 @@ export class Assist extends Vagrant {
                 Utils.getSkillByName("Burst Crack")
             ],
             'buffs': [Utils.getSkillByName("Stonehand")],
-            'attackSpeed': 75.0,
+            'attackSpeed': 72.0,
             'HP': 1.4,
             'hps': 4,
             'MP': 1.3,
@@ -237,7 +237,7 @@ export class Ringmaster extends Assist {
                 Utils.getSkillByName("Spirit Fortune"),
                 Utils.getSkillByName("Geburah Tiphreth")
             ],
-            'attackSpeed': 75.0,
+            'attackSpeed': 72.0,
             'hps': 3,
             'HP': 1.6,
             'MP': 1.8,
