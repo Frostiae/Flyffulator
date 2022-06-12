@@ -14,6 +14,7 @@ export class Mover {
         this.offhandUpgradeBonus = Utils.getUpgradeBonus(this.offhandUpgrade);
         
         this.applyBuffs();
+        this.applyPremiumItems();
         this.applyBaseStats();
 
         this.str = Math.floor(this.str);
@@ -72,6 +73,16 @@ export class Mover {
         this.activeBuffs = this.activeBuffs.filter((val, index, arr) => {
             return val.level <= this.level || val.class == 9389 || val.class == 8962;
         });
+    }
+
+    applyPremiumItems() {
+        for (let item of Moverutils.premiumItems) {
+            if(item) {
+                if (this.activePremiumItems.find(i => i.id == item.id)) continue;
+                item.enabled = false; // disable all items initially
+                this.activePremiumItems.push(item);
+            }
+        }
     }
 
     get parry() {
@@ -339,7 +350,7 @@ export class Mover {
     }
 
     getExtraBuffParam(param, rate = false) {
-        return this.buffParam(param, rate);
+        return this.buffParam(param, rate) + this.premiumItemParam(param, rate);
         // return this.assistBuffParam(param, rate) + this.selfBuffParam(param, rate);
     }
 
@@ -464,6 +475,28 @@ export class Mover {
                             }
                         }
                     }
+                }
+            }
+        }
+
+        return add;
+    }
+
+    /**
+     * Returns additions to a specific value from your active & enabled premium items
+     * @param param The value to find additions for 
+     */
+     premiumItemParam(param, rate=false) {
+        let add = 0;
+        let params = [param].concat(Utils.globalParams[param]);
+
+        for (let premiumItem of this.activePremiumItems) {
+            if (!premiumItem.enabled) continue;    // Don't add disabled buffs
+            let abilities = premiumItem.abilities;
+            
+            for (let ability of abilities) {
+                if (params.includes(ability.parameter) && ability.rate == rate) {
+                    add += ability.add;
                 }
             }
         }

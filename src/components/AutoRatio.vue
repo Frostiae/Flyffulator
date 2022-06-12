@@ -195,6 +195,7 @@ export default {
     '$root.focusMonster'() { this.getTheoreticalAADPS(); },
     '$root.character.ref.level'() { this.getTheoreticalAADPS(); },
     '$root.character.ref.assistBuffs'() { this.getTheoreticalAADPS(); },
+    '$root.character.ref.premiumItems'() { this.getTheoreticalAADPS(); },
     '$root.character.ref.selfBuffs'() { this.getTheoreticalAADPS(); },
     '$root.character.ref.mainhand'() { this.getTheoreticalAADPS(); },
     '$root.character.ref.armor'() { this.getTheoreticalAADPS(); },

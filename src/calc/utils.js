@@ -27,6 +27,7 @@ export class Utils {
     static assistInt = 300;
     static assistBuffs = false;
     static classBuffs = false;
+    static premiumItems = false;
 
     static maxLevel = 120;
 

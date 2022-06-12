@@ -112,6 +112,14 @@
           </tr>
 
           <tr>
+            <td><h5>Premium items</h5></td>
+            <td></td>
+            <td>
+              <input id="premiumItems" type="checkbox" v-model="premiumItems">
+            </td>
+          </tr>
+
+          <tr>
             <td><h5>Stat points</h5></td>
             <td></td>
             <td><h5 :class="{'red-text' : statpoints < 0 }">{{statpoints}}</h5></td>
@@ -145,6 +153,7 @@ export default {
       addint: 0,
       added: 0,
       assistbuffs: false,
+      premiumItems: false,
       assistint: 300,
       classbuffs: false,
       statpoints: 0,
@@ -210,6 +219,7 @@ export default {
       this.character.ref.assistInt = this.assistint;
       this.character.ref.assistBuffs = this.assistbuffs;
       this.character.ref.selfBuffs = this.classbuffs;
+      this.character.ref.premiumItems = this.premiumItems;
     },
     applyLoadedStats(appliedStats){      
       this.character.ref = new Vagrant();
@@ -227,6 +237,7 @@ export default {
       this.character.ref.int = appliedStats.int;
       this.assistint = appliedStats.assistint;
       this.assistbuffs = appliedStats.assistbuffs;
+      this.premiumItems = appliedStats.premiumItems;
       this.classbuffs = appliedStats.classbuffs;
       this.addstr = 0;
       this.addsta = 0;
@@ -248,6 +259,7 @@ export default {
       Utils.addedInt = 0;
       this.classbuffs = false;
       this.assistbuffs = false;
+      this.premiumItems = false;
       this.assistint = 300;
       this.added = 0;
 
@@ -289,6 +301,9 @@ export default {
     },
     assistbuffs() {
       Utils.assistBuffs = this.assistbuffs;
+    },
+    premiumItems() {
+      Utils.premiumItems = this.premiumItems;
     },
     classbuffs() {
       Utils.classBuffs = this.classbuffs;

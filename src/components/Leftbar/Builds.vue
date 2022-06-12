@@ -105,6 +105,7 @@ export default {
           assistint: Utils.assistInt,
           assistbuffs: Utils.assistBuffs,
           classbuffs: Utils.classBuffs,
+          premiumItems: Utils.premiumItems
         };
 
         const newEquipment = {

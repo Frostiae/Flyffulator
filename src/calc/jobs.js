@@ -25,6 +25,7 @@ export class Vagrant extends Mover {
         this.shield = null;
         this.assistBuffs = false;
         this.selfBuffs = false;
+        this.premiumItems = false;
         this.constants = constants || {
             'skills': [Utils.getSkillByName("Clean Hit"),
                 Utils.getSkillByName("Flurry"),
@@ -66,6 +67,7 @@ export class Vagrant extends Mover {
         this.activeAssistBuffs = [];
         this.activeSelfBuffs = [];
         this.activeBuffs = [];
+        this.activePremiumItems = [];
         this.assistInt = 300; // How much int the assist buffing you has
 
         this.monsters = [];
