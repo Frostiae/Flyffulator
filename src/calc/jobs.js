@@ -120,8 +120,9 @@ export class Assist extends Vagrant {
         img = img || "overamknuckle.png";
         armor = armor || Utils.getArmorByName("Sayram Set");
         mainhand = mainhand || Utils.getItemByName("Paipol Knuckle");
+        offhand = offhand || Utils.getItemByName("Avalon Shield");
         constants = constants || {
-            'skills': [Utils.getSkillByName("Power Fist"),
+            'skills': [Utils.getSkillByName("Moon Beam"),
                 Utils.getSkillByName("Temping Hole"),
                 Utils.getSkillByName("Burst Crack")
             ],
@@ -180,7 +181,8 @@ export class Billposter extends Assist {
                 Utils.getSkillByName("Blood Fist"),
                 Utils.getSkillByName("Asalraalaikum")
             ],
-            'buffs': [Utils.getSkillByName("Asmodeus")],
+            'buffs': [Utils.getSkillByName("Asmodeus"),
+                Utils.getSkillByName("Stonehand")],
             'attackSpeed': 82.0,
             'hps': 2.5,
             'HP': 1.8,
@@ -355,8 +357,11 @@ export class Jester extends Acrobat {
             ],
             'buffs': [Utils.getSkillByName("Critical Swing"),
                 Utils.getSkillByName("Enchant Absorb"),
+                Utils.getSkillByName("Enchant Blood"),
+                Utils.getSkillByName("Enchant Poison"),
                 Utils.getSkillByName("Yo-Yo Mastery"),
-                Utils.getSkillByName("Bow Mastery")
+                Utils.getSkillByName("Bow Mastery"),
+                Utils.getSkillByName("Perfect Block")
             ],
             'attackSpeed': 82.0,
             'hps': 2.6,
@@ -415,8 +420,8 @@ export class Ranger extends Acrobat {
             ],
             'buffs': [Utils.getSkillByName("Critical Shot"),
                 Utils.getSkillByName("Nature"),
-                Utils.getSkillByName("Yo-Yo Mastery"),
-                Utils.getSkillByName("Bow Mastery")
+                Utils.getSkillByName("Bow Mastery"),
+                Utils.getSkillByName("Perfect Block")
             ],
             'attackSpeed': 77.0,
             'hps': 2.14,
@@ -638,13 +643,17 @@ export class Mercenary extends Vagrant {
         img = img || "woodensword.png";
         armor = armor || Utils.getArmorByName("Panggril Set");
         mainhand = mainhand || Utils.getItemByName("Flam Sword");
+        offhand = offhand || Utils.getItemByName("Avalon Shield");
         constants = constants || {
-            'skills': [Utils.getSkillByName("Shield Bash"),
+            'skills': [Utils.getSkillByName("Slash"),
                 Utils.getSkillByName("Keenwheel"),
                 Utils.getSkillByName("Guillotine")
             ],
             'buffs': [Utils.getSkillByName("Blazing Sword"),
-                Utils.getSkillByName("Sword Mastery")
+                Utils.getSkillByName("Sword Mastery"),
+                Utils.getSkillByName("Smite Axe"),
+                Utils.getSkillByName("Axe Mastery"),
+                Utils.getSkillByName("Protection")
             ],
             'attackSpeed': 77.0,
             'hps': 4,
@@ -698,13 +707,16 @@ export class Blade extends Mercenary {
         offhand = offhand || Utils.getItemByName("Legendary Golden Axe");
         constants = constants || {
             'skills': [Utils.getSkillByName("Blade Dance"),
-                Utils.getSkillByName("Hawk Attack"),
+                Utils.getSkillByName("Spring Attack"),
                 Utils.getSkillByName("Cross Strike"),
             ],
             'buffs': [Utils.getSkillByName("Berserk"),
                 Utils.getSkillByName("Smite Axe"),
                 Utils.getSkillByName("Axe Mastery"),
-                Utils.getSkillByName("Sword Mastery")],
+                Utils.getSkillByName("Blazing Sword"),
+                Utils.getSkillByName("Sword Mastery"),
+                Utils.getSkillByName("Protection")
+            ],
             'attackSpeed': 87.0,
             'hps': 3,
             'HP': 1.5,
@@ -762,6 +774,7 @@ export class Knight extends Mercenary {
             'buffs': [Utils.getSkillByName("Rage"),
                 Utils.getSkillByName("Smite Axe"),
                 Utils.getSkillByName("Axe Mastery"),
+                Utils.getSkillByName("Blazing Sword"),
                 Utils.getSkillByName("Sword Mastery"),
                 Utils.getSkillByName("Protection")],
             'attackSpeed': 77.0,
