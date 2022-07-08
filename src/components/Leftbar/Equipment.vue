@@ -167,7 +167,6 @@
                 {{ cloak.name.en }}
               </option>
             </select>
-            {{ getCloakText(character.cloak) }}
           </td>
           <td>
             <button class="btn-plus" @click="character.cloak = null">x</button>
@@ -263,23 +262,6 @@ export default {
       let obj = arr.find(o => o.id == id);
       return obj ?? null;
     },
-    getCloakText(cloak) {
-      let text = "";
-      if(cloak) {
-        //text = cloak.name.en + " (";
-        cloak.abilities.forEach(ability => {
-          let effect = " ";
-          effect += ability.parameter;
-          let add = ability.add;
-          effect += "+" + add;
-          if (ability.rate) effect += "%";
-          effect += " ";
-          text += effect;
-        });
-        //text += ")";   
-      }
-      return text;
-    }
   },
   watch: {
     '$root.character.ref'() {

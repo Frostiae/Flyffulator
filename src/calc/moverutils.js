@@ -19,7 +19,7 @@ export default class Moverutils {
 
     static premiumItems = [
         Utils.getItemByName('Grilled Eel'),
-        // Utils.getItemByName('Upcut Stone'), // incorrect item. its a scroll type, not buff and has no abilities. api issue
+        Utils.getItemByName('Upcut Stone'), // Special case: uses SM_ATTACK_UP checked directly in the calculations
         Utils.getItemByName('Def-Upcut Stone'),
         Utils.getItemByName('Power Scroll'),
         Utils.getItemByName('Charged Power Scroll'),
@@ -57,6 +57,29 @@ export default class Moverutils {
         "levelScales": true,
         "level": 0  // Scales with the attacker's level
     }
+
+    static AttackType = {
+        AUTO_ATTACK: 0,
+        MELEE_SKILL: 1,
+        MAGIC_SKILL: 2,
+        MAGIC_HIT: 3
+    }
+
+    static AttackContext = {
+        AC_PVE: "pve",
+        AC_PVP: "pvp"
+    }
+
+    static Elements = {
+        "none": 0,
+        "fire": 1,
+        "water": 2,
+        "electricity": 3,
+        "wind": 4,
+        "earth": 5
+    }
+
+    static ATTACK_ELEMENT_FACTOR = 10000; // Factor unit for attack element.
 
     static getDeltaFactor(opponentLevel, selfLevel) {
         var deltaFactor = 1.0;

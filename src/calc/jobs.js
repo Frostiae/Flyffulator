@@ -12,6 +12,8 @@ export class Vagrant extends Mover {
         this.armorUpgradeBonus = null;
         this.mainhandUpgrade = 0;
         this.mainhandUpgradeBonus = null;
+        this.mainhandElement = Moverutils.Elements.none;
+        this.mainhandElementUpgrade = 0;
         this.offhandUpgrade = 0;
         this.offhandUpgradeBonus = null;
         this.mainhand = mainhand || Utils.getItemByName("Wooden Sword");

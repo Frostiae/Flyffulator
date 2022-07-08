@@ -12,10 +12,12 @@ export const setsjson = [
          "fil": "Ales Set",
          "fr": "Tenue Illustre",
          "it": "Ales Set",
+         "jp": "\u30a2\u30ec\u30c3\u30af\u30c8\u30bb\u30c3\u30c8(F)",
          "kr": "\uc54c\ub809\ud2b8(\uc5ec) \uc138\ud2b8",
          "nl": "Ales Set",
          "pl": "Komplet Ales",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0441\u0438\u043b\u0430\u0447\u0430",
+         "sp": "Equipo Ales",
          "sw": "Ales Set",
          "th": "Ales Set"
       },
@@ -38,8 +40,8 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "hitrate",
-               "add": 20,
+               "parameter": "attackspeed",
+               "add": 15,
                "rate": true
             }
          },
@@ -54,9 +56,9 @@ export const setsjson = [
          {
             "equipped": 2,
             "ability": {
-               "parameter": "dex",
-               "add": 10,
-               "rate": false
+               "parameter": "hitrate",
+               "add": 15,
+               "rate": true
             }
          },
          {
@@ -81,10 +83,12 @@ export const setsjson = [
          "fil": "Hyper Set",
          "fr": "Tenue Horizon",
          "it": "Hyper Set",
+         "jp": "\u30af\u30eb\u30fc\u30b6\u30bb\u30c3\u30c8(F)",
          "kr": "\ud06c\ub8e8\uc800(\uc5ec) \uc138\ud2b8",
          "nl": "Hyper Set",
          "pl": "Komplet Hyper",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0433\u0438\u043f\u0435\u0440-\u043f\u0440\u044b\u0436\u043a\u0430",
+         "sp": "Equipo Hyper",
          "sw": "Hyper Set",
          "th": "Hyper Set"
       },
@@ -158,10 +162,12 @@ export const setsjson = [
          "fil": "Mekatro Set",
          "fr": "Tenue Epique",
          "it": "Mekatro Set",
+         "jp": "\u30e1\u30ab\u30c8\u30ed\u30bb\u30c3\u30c8(M)",
          "kr": "\uba54\uce74\ud2b8\ub85c(\ub0a8) \uc138\ud2b8",
          "nl": "Mekatro Set",
          "pl": "Komplet Mekatro",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0448\u0443\u043b\u0435\u0440\u0430",
+         "sp": "Equipo Mekatro",
          "sw": "Mekatro Set",
          "th": "Mekatro Set"
       },
@@ -227,10 +233,12 @@ export const setsjson = [
          "fil": "Asren Set",
          "fr": "Tenue Astrale",
          "it": "Asren Set",
+         "jp": "\u30a2\u30b9\u30ec\u30f3\u30bb\u30c3\u30c8(M) ",
          "kr": "\uc544\uc2a4\ub80c(\ub0a8) \uc138\ud2b8",
          "nl": "Asren Set",
          "pl": "Komplet Asren",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0442\u0430\u0439\u043d\u043e\u0433\u043e \u0430\u0433\u0435\u043d\u0442\u0430",
+         "sp": "Equipo Asren",
          "sw": "Asren Set",
          "th": "Asren Set"
       },
@@ -296,10 +304,12 @@ export const setsjson = [
          "fil": "Parmil Set",
          "fr": "Tenue Parmil",
          "it": "Parmil Set",
+         "jp": "\u30d5\u30a1\u30df\u30eb\u30bb\u30c3\u30c8(M) ",
          "kr": "\ud30c\ubc00(\ub0a8) \uc138\ud2b8",
          "nl": "Parmil Set",
          "pl": "Komplet Parmil",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043c\u0435\u0445\u0430\u043d\u0438\u043a\u0430",
+         "sp": "Equipo Parmil",
          "sw": "Parmil Set",
          "th": "Parmil Set"
       },
@@ -365,10 +375,12 @@ export const setsjson = [
          "fil": "Knighz Set",
          "fr": "Tenue Mythique",
          "it": "Knighz Set",
+         "jp": "\u30ca\u30a4\u30a2\u30fc\u30c8\u30bb\u30c3\u30c8(F) ",
          "kr": "\ub098\uc774\uc5b4\ud2b8(\uc5ec) \uc138\ud2b8",
          "nl": "Knighz Set",
          "pl": "Komplet Knighz",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043e\u0433\u043d\u0435\u043d\u043d\u043e\u0433\u043e \u0433\u043b\u0430\u0434\u0438\u0430\u0442\u043e\u0440\u0430",
+         "sp": "Equipo Knighz",
          "sw": "Knighz Set",
          "th": "Knighz Set"
       },
@@ -442,10 +454,12 @@ export const setsjson = [
          "fil": "Neclus Set",
          "fr": "Tenue Epique",
          "it": "Neclus Set",
+         "jp": "\u30cd\u30d3\u30e9\u30eb\u30bb\u30c3\u30c8(F)",
          "kr": "\ub124\uc774\ube4c(\uc5ec) \uc138\ud2b8",
          "nl": "Neclus Set",
          "pl": "Komplet Neclus",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0438\u043c\u043f\u0435\u0440\u0438\u0438",
+         "sp": "Equipo Neclus",
          "sw": "Neclus Set",
          "th": "Neclus Set"
       },
@@ -511,10 +525,12 @@ export const setsjson = [
          "fil": "Neition Set",
          "fr": "Tenue Epique",
          "it": "Neition Set",
+         "jp": "\u30cd\u30a4\u30b9\u30bb\u30c3\u30c8(F)",
          "kr": "\ub124\uc774\uc2a4(\uc5ec) \uc138\ud2b8",
          "nl": "Neition Set",
          "pl": "Komplet Neition",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0433\u0430\u043b\u0430\u043a\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0433\u043e \u0448\u0443\u0442\u0430",
+         "sp": "Equipo Neition",
          "sw": "Neition Set",
          "th": "Neition Set"
       },
@@ -580,10 +596,12 @@ export const setsjson = [
          "fil": "Dest Set",
          "fr": "Tenue Astrale",
          "it": "Dest Set",
+         "jp": "\u30c7\u30a3\u30fc\u30b9\u30c8\u30bb\u30c3\u30c8(F)",
          "kr": "\ub370\uc774\uc2a4\ud2b8(\uc5ec) \uc138\ud2b8",
          "nl": "Dest Set",
          "pl": "Komplet Dest",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043e\u0433\u043d\u0435\u043d\u043d\u043e\u0433\u043e \u0432\u043e\u0438\u043d\u0430",
+         "sp": "Equipo Dest",
          "sw": "Dest Set",
          "th": "Dest Set"
       },
@@ -657,10 +675,12 @@ export const setsjson = [
          "fil": "Einy Set",
          "fr": "Tenue Illustre",
          "it": "Einy Set",
+         "jp": "\u30a2\u30a4\u30cb\u30bb\u30c3\u30c8(M)",
          "kr": "\uc544\uc774\ub2c8(\ub0a8) \uc138\ud2b8",
          "nl": "Einy Set",
          "pl": "Komplet Einy",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043d\u0435\u0431\u0435\u0441\u043d\u043e\u0433\u043e \u0432\u043e\u0438\u043d\u0430",
+         "sp": "Equipo Einy",
          "sw": "Einy Set",
          "th": "Einy Set"
       },
@@ -726,10 +746,12 @@ export const setsjson = [
          "fil": "Rodey Set",
          "fr": "Tenue Epique",
          "it": "Rodey Set",
+         "jp": "\u30ed\u30c7\u30a3\u30bb\u30c3\u30c8(F\uff09",
          "kr": "\ub85c\ub514(\uc5ec)\uc774 \uc138\ud2b8",
          "nl": "Rodey Set",
          "pl": "Komplet Rodey",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043b\u0435\u0442\u0443\u0447\u0435\u0439 \u043c\u044b\u0448\u0438",
+         "sp": "Equipo Rodey",
          "sw": "Rodey Set",
          "th": "Rodey Set"
       },
@@ -746,6 +768,14 @@ export const setsjson = [
             "ability": {
                "parameter": "criticaldamage",
                "add": 40,
+               "rate": true
+            }
+         },
+         {
+            "equipped": 4,
+            "ability": {
+               "parameter": "attackspeed",
+               "add": 10,
                "rate": true
             }
          },
@@ -795,10 +825,12 @@ export const setsjson = [
          "fil": "Tyrent Set",
          "fr": "Tenue Epique",
          "it": "Tyrent Set",
+         "jp": "\u30bf\u30a4\u30c8\u30e9\u30f3\u30bb\u30c3\u30c8(M)",
          "kr": "\ud0c0\uc774\ub7f0\ud2b8(\ub0a8) \uc138\ud2b8",
          "nl": "Tyrent Set",
          "pl": "Komplet Tyrent",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u043e\u0433\u043e \u0441\u0442\u0440\u0435\u043b\u043a\u0430",
+         "sp": "Equipo Tyrent",
          "sw": "Tyrent Set",
          "th": "Tyrent Set"
       },
@@ -864,10 +896,12 @@ export const setsjson = [
          "fil": "Blain Set",
          "fr": "Tenue Mythique",
          "it": "Blain Set",
+         "jp": "\u30d6\u30ec\u30a4\u30f3\u30bb\u30c3\u30c8(M)",
          "kr": "\ube14\ub808\uc778(\ub0a8) \uc138\ud2b8",
          "nl": "Blain Set",
          "pl": "Komplet Blain",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0437\u0432\u0435\u0437\u0434\u043d\u043e\u0433\u043e \u043d\u0430\u0435\u043c\u043d\u0438\u043a\u0430",
+         "sp": "Equipo Blain",
          "sw": "Blain Set",
          "th": "Blain Set"
       },
@@ -941,10 +975,12 @@ export const setsjson = [
          "fil": "Myurian Set",
          "fr": "Tenue Illustre",
          "it": "Myurian Set",
+         "jp": "\u30df\u30e5\u30fc\u30e9\u30f3\u30bb\u30c3\u30c8(F\uff09",
          "kr": "\ubba4\ub780(\uc5ec) \uc138\ud2b8",
          "nl": "Myurian Set",
          "pl": "Komplet Myurian",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043e\u0433\u043d\u0435\u0433\u043b\u043e\u0442\u0430\u0442\u0435\u043b\u044f",
+         "sp": "Equipo Myurian",
          "sw": "Myurian Set",
          "th": "Myurian Set"
       },
@@ -968,7 +1004,7 @@ export const setsjson = [
             "equipped": 3,
             "ability": {
                "parameter": "decreasedmpconsumption",
-               "add": 20,
+               "add": 30,
                "rate": true
             }
          },
@@ -1010,10 +1046,12 @@ export const setsjson = [
          "fil": "Akent Set",
          "fr": "Tenue Astrale",
          "it": "Akent Set",
+         "jp": "\u30a2\u30b1\u30f3\u30c8\u30bb\u30c3\u30c8(M)",
          "kr": "\uc544\ucf04\ud2b8(\ub0a8) \uc138\ud2b8",
          "nl": "Akent Set",
          "pl": "Komplet Akent",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0434\u044c\u044f\u0432\u043e\u043b\u0435\u043d\u043a\u0430",
+         "sp": "Equipo Akent",
          "sw": "Akent Set",
          "th": "Akent Set"
       },
@@ -1087,10 +1125,12 @@ export const setsjson = [
          "fil": "Sorain Set",
          "fr": "Tenue Sorain",
          "it": "Sorain Set",
+         "jp": "\u30bd\u30ec\u30a4\u30f3\u30bb\u30c3\u30c8(M)",
          "kr": "\uc18c\ub808\uc778(\ub0a8) \uc138\ud2b8",
          "nl": "Sorain Set",
          "pl": "Komplet Sorain",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0437\u0430\u0433\u0430\u0434\u043e\u043a",
+         "sp": "Equipo Sorain",
          "sw": "Sorain Set",
          "th": "Sorain Set"
       },
@@ -1105,7 +1145,7 @@ export const setsjson = [
          {
             "equipped": 4,
             "ability": {
-               "parameter": "maxhp",
+               "parameter": "decreasedcastingtime",
                "add": 10,
                "rate": true
             }
@@ -1156,10 +1196,12 @@ export const setsjson = [
          "fil": "Restron Set",
          "fr": "Tenue Restrorn",
          "it": "Restron Set",
+         "jp": "\u30ec\u30d6\u30ed\u30f3\u30bb\u30c3\u30c8(F)",
          "kr": "\ub808\ube0c\ub860(\uc5ec) \uc138\ud2b8",
          "nl": "Restron Set",
          "pl": "Komplet Restron",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043f\u0430\u0433\u043e\u0434\u044b",
+         "sp": "Equipo Restron",
          "sw": "Restron Set",
          "th": "Restron Set"
       },
@@ -1225,10 +1267,12 @@ export const setsjson = [
          "fil": "Rimyth Set",
          "fr": "Tenue Mythique",
          "it": "Rimyth Set",
+         "jp": "\u30d5\u30a1\u30f3\u30bf\u30ba\u30de\u30bb\u30c3\u30c8(M\uff09",
          "kr": "\ub9ac\ubbf8\uc2a4(\ub0a8) \uc138\ud2b8",
          "nl": "Rimyth Set",
          "pl": "Komplet Rimyth",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0437\u0430\u0432\u043e\u0434\u043d\u043e\u0433\u043e \u0430\u043f\u0435\u043b\u044c\u0441\u0438\u043d\u0430",
+         "sp": "Equipo Rimyth",
          "sw": "Rimyth Set",
          "th": "Rimyth Set"
       },
@@ -1302,10 +1346,12 @@ export const setsjson = [
          "fil": "Hanes Set",
          "fr": "Tenue Epique",
          "it": "Hanes Set",
+         "jp": "\u30cf\u30cd\u30b9\u30bb\u30c3\u30c8(M)",
          "kr": "\ud558\ub124\uc2a4(\ub0a8) \uc138\ud2b8",
          "nl": "Hanes Set",
          "pl": "Komplet Hanes",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u043e\u0433\u043e \u043d\u0430\u0435\u043c\u043d\u0438\u043a\u0430",
+         "sp": "Equipo Hanes",
          "sw": "Hanes Set",
          "th": "Hanes Set"
       },
@@ -1371,10 +1417,12 @@ export const setsjson = [
          "fil": "Rescorn Set",
          "fr": "Tenue Ryscorn",
          "it": "Rescorn Set",
+         "jp": "\u30ea\u30b3\u30f3\u30bb\u30c3\u30c8(F)",
          "kr": "\ub9ac\ucf58(\uc5ec) \uc138\ud2b8",
          "nl": "Rescorn Set",
          "pl": "Komplet Rescorn",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043f\u0438\u043b\u043e\u0442\u0430",
+         "sp": "Equipo Rescorn",
          "sw": "Rescorn Set",
          "th": "Rescorn Set"
       },
@@ -1440,10 +1488,12 @@ export const setsjson = [
          "fil": "Shupon Set",
          "fr": "Tenue Astrale",
          "it": "Shupon Set",
+         "jp": "\u30b7\u30e5\u30fc\u30d5\u30a9\u30f3\u30bb\u30c3\u30c8(M)",
          "kr": "\uc288\ud3f0(\ub0a8) \uc138\ud2b8",
          "nl": "Shupon Set",
          "pl": "Komplet Shupon",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0432\u043e\u0441\u0442\u043e\u043a\u0430",
+         "sp": "Equipo Shupon",
          "sw": "Shupon Set",
          "th": "Shupon Set"
       },
@@ -1509,10 +1559,12 @@ export const setsjson = [
          "fil": "Wees Set",
          "fr": "Tenue Astrale",
          "it": "Wees Set",
+         "jp": "\u30a6\u30a3\u30ba\u30bb\u30c3\u30c8(M)",
          "kr": "\uc704\uc2a4(\ub0a8) \ud5ec\uba67",
          "nl": "Wees Set",
          "pl": "Komplet Wees",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0441\u043e\u043b\u043d\u0435\u0447\u043d\u043e\u0433\u043e \u0433\u043b\u0430\u0434\u0438\u0430\u0442\u043e\u0440\u0430",
+         "sp": "Equipo Wees",
          "sw": "Wees Set",
          "th": "Wees Set"
       },
@@ -1578,10 +1630,12 @@ export const setsjson = [
          "fil": "Billst Set",
          "fr": "Tenue Mythique",
          "it": "Billst Set",
+         "jp": "\u30d3\u30fc\u30b9\u30c8\u30bb\u30c3\u30c8(M\uff09",
          "kr": "\ube4c\uc2a4\ud2b8(\ub0a8) \uc138\ud2b8",
          "nl": "Billst Set",
          "pl": "Komplet Billst",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043a\u043e\u0433\u0442\u0438\u0441\u0442\u043e\u0433\u043e \u0431\u0435\u0441\u0435\u043d\u043a\u0430",
+         "sp": "Equipo Billst",
          "sw": "Billst Set",
          "th": "Billst Set"
       },
@@ -1655,10 +1709,12 @@ export const setsjson = [
          "fil": "Shurand Set",
          "fr": "Tenue Shurent",
          "it": "Shurand Set",
+         "jp": "\u30b7\u30e5\u30e9\u30f3\u30c9\u30bb\u30c3\u30c8(M\uff09",
          "kr": "\uc288\ub780\ub4dc(\ub0a8) \uc138\ud2b8",
          "nl": "Shurand Set",
          "pl": "Komplet Shurand",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0430\u0441\u0441\u0438\u0441\u0442\u0435\u043d\u0442\u0430",
+         "sp": "Equipo Shurand",
          "sw": "Shurand Set",
          "th": "Shurand Set"
       },
@@ -1732,10 +1788,12 @@ export const setsjson = [
          "fil": "Wedge Set",
          "fr": "Tenue Beltias",
          "it": "Wedge Set",
+         "jp": "\u30a6\u30a7\u30a4\u30b8\u30fc\u30bb\u30c3\u30c8(M)",
          "kr": "\uc6e8\uc9c0(\ub0a8) \uc138\ud2b8",
          "nl": "Wedge Set",
          "pl": "Komplet Wedge",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043f\u043e\u043c\u043e\u0449\u043d\u0438\u043a\u0430",
+         "sp": "Equipo Wedge",
          "sw": "Wedge Set",
          "th": "Wedge Set"
       },
@@ -1809,10 +1867,12 @@ export const setsjson = [
          "fil": "Virain Set",
          "fr": "Tenue Mythique",
          "it": "Virain Set",
+         "jp": "\u30d6\u30ec\u30a4\u30f3\u30bb\u30c3\u30c8(F\uff09",
          "kr": "\ube14\ub808\uc778(\uc5ec) \uc138\ud2b8",
          "nl": "Virain Set",
          "pl": "Komplet Virain",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0437\u0432\u0435\u0437\u0434\u043d\u043e\u0433\u043e \u043d\u0430\u0435\u043c\u043d\u0438\u043a\u0430",
+         "sp": "Equipo Virain",
          "sw": "Virain Set",
          "th": "Virain Set"
       },
@@ -1886,10 +1946,12 @@ export const setsjson = [
          "fil": "Misty Set",
          "fr": "Tenue Mysty",
          "it": "Misty Set",
+         "jp": "\u30df\u30b9\u30c6\u30a3\u30bb\u30c3\u30c8(F)",
          "kr": "\ud14c\ubc14(\uc5ec) \uc138\ud2b8",
          "nl": "Misty Set",
          "pl": "Komplet Misty",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0442\u0430\u0439\u043d\u044b",
+         "sp": "Equipo Misty",
          "sw": "Misty Set",
          "th": "Misty Set"
       },
@@ -1905,7 +1967,7 @@ export const setsjson = [
             "equipped": 4,
             "ability": {
                "parameter": "decreasedcastingtime",
-               "add": 10,
+               "add": 15,
                "rate": true
             }
          },
@@ -1955,10 +2017,12 @@ export const setsjson = [
          "fil": "Jesis Set",
          "fr": "Tenue Mythique",
          "it": "Jesis Set",
+         "jp": "\u30b8\u30a7\u30b7\u30b9\u30bb\u30c3\u30c8(M)",
          "kr": "\uc81c\uc2dc\uc2a4(\ub0a8) \uc138\ud2b8",
          "nl": "Jesis Set",
          "pl": "Komplet Jesis",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043b\u0438\u0446\u0435\u0434\u0435\u044f",
+         "sp": "Equipo Jesis",
          "sw": "Jesis Set",
          "th": "Jesis Set"
       },
@@ -2032,10 +2096,12 @@ export const setsjson = [
          "fil": "Curus Set",
          "fr": "Tenue Curus",
          "it": "Curus Set",
+         "jp": "\u30b5\u30c7\u30a3\u30f3\u30bb\u30c3\u30c8(F) ",
          "kr": "\uc0ac\ub518(\uc5ec) \uc138\ud2b8",
          "nl": "Curus Set",
          "pl": "Komplet Curus",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0441\u0442\u044e\u0430\u0440\u0434\u0430",
+         "sp": "Equipo Curus",
          "sw": "Curus Set",
          "th": "Curus Set"
       },
@@ -2109,10 +2175,12 @@ export const setsjson = [
          "fil": "Paxt Set",
          "fr": "Tenue Illustre",
          "it": "Paxt Set",
+         "jp": "\u30da\u30af\u30c8\u30bb\u30c3\u30c8(F)",
          "kr": "\ud329\ud2b8(\uc5ec) \uc138\ud2b8",
          "nl": "Paxt Set",
          "pl": "Komplet Paxt",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0438\u043b\u043b\u044e\u0437\u0438\u0438",
+         "sp": "Equipo Paxt",
          "sw": "Paxt Set",
          "th": "Paxt Set"
       },
@@ -2178,10 +2246,12 @@ export const setsjson = [
          "fil": "Roshel Set",
          "fr": "Tenue Illustre",
          "it": "Roshel Set",
+         "jp": "\u30ed\u30d5\u30a1\u30f3\u30bb\u30c3\u30c8(F) ",
          "kr": "\ub85c\ud321(\uc5ec) \uc138\ud2b8",
          "nl": "Roshel Set",
          "pl": "Komplet Roshel",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0447\u0435\u0440\u0442\u0435\u043d\u043a\u0430",
+         "sp": "Equipo Roshel",
          "sw": "Roshel Set",
          "th": "Roshel Set"
       },
@@ -2205,7 +2275,7 @@ export const setsjson = [
             "equipped": 3,
             "ability": {
                "parameter": "decreasedmpconsumption",
-               "add": 25,
+               "add": 30,
                "rate": true
             }
          },
@@ -2247,10 +2317,12 @@ export const setsjson = [
          "fil": "Gynas Set",
          "fr": "Tenue Astrale",
          "it": "Gynas Set",
-         "kr": "Gynas Set",
+         "jp": "\u30b8\u30fc\u30cb\u30a2\u30f3\u30bb\u30c3\u30c8(F)",
+         "kr": "\uc9c0\ub2c8\uc5b8(\uc5ec) \uc138\ud2b8",
          "nl": "Gynas Set",
          "pl": "Komplet Gynas",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0433\u0435\u043d\u0438\u044f",
+         "sp": "Equipo Gynas",
          "sw": "Gynas Set",
          "th": "Gynas Set"
       },
@@ -2316,10 +2388,12 @@ export const setsjson = [
          "fil": "Neis Set",
          "fr": "Tenue Epique",
          "it": "Neis Set",
+         "jp": "\u30cd\u30a4\u30b9\u30bb\u30c3\u30c8(M)",
          "kr": "\ub124\uc774\uc2a4(\ub0a8) \uc138\ud2b8",
          "nl": "Neis Set",
          "pl": "Komplet Neis",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0433\u0430\u043b\u0430\u043a\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0433\u043e \u0448\u0443\u0442\u0430",
+         "sp": "Equipo Neis",
          "sw": "Neis Set",
          "th": "Neis Set"
       },
@@ -2385,10 +2459,12 @@ export const setsjson = [
          "fil": "Cruiser Set",
          "fr": "Tenue Cruiser",
          "it": "Cruiser Set",
+         "jp": "\u30af\u30eb\u30fc\u30b6\u30bb\u30c3\u30c8(M)",
          "kr": "\ud06c\ub8e8\uc800(\ub0a8) \uc138\ud2b8",
          "nl": "Cruiser Set",
          "pl": "Komplet Cruiser",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0433\u0438\u043f\u0435\u0440-\u043f\u0440\u044b\u0436\u043a\u0430",
+         "sp": "Equipo Cruiser",
          "sw": "Cruiser Set",
          "th": "Cruiser Set"
       },
@@ -2462,10 +2538,12 @@ export const setsjson = [
          "fil": "Oska Set",
          "fr": "Tenue Illustre",
          "it": "Oska Set",
+         "jp": "\u30aa\u30b9\u30ab\u30bb\u30c3\u30c8(M) ",
          "kr": "\uc624\uc2a4\uce74(\ub0a8) \uc138\ud2b8",
          "nl": "Oska Set",
          "pl": "Komplet Oska",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0441\u043d\u0430\u0439\u043f\u0435\u0440\u0430",
+         "sp": "Equipo Oska",
          "sw": "Oska Set",
          "th": "Oska Set"
       },
@@ -2524,17 +2602,19 @@ export const setsjson = [
       "name": {
          "en": "Extro Set",
          "ar": "Extro Set",
-         "br": "Extro Set",
-         "cns": "Extro Set",
+         "br": "Conjunto Exstro",
+         "cns": "\u534e\u6708\u5957\u88c5",
          "de": "Extro Set",
          "fi": "Extro Set",
          "fil": "Extro Set",
-         "fr": "Extro Set",
+         "fr": "Tenue Epique",
          "it": "Extro Set",
-         "kr": "Extro Set",
+         "jp": "\u30a8\u30af\u30c8\u30ea\u30bb\u30c3\u30c8(F)",
+         "kr": "\uc5d1\ud2b8\ub85c(\ub0a8) \uc138\ud2b8",
          "nl": "Extro Set",
-         "pl": "Extro Set",
-         "ru": "Extro Set",
+         "pl": "Komplet Extro",
+         "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0437\u0432\u0435\u0437\u0434\u043d\u043e\u0433\u043e \u0433\u043b\u0430\u0434\u0438\u0430\u0442\u043e\u0440\u0430",
+         "sp": "Equipo Extro",
          "sw": "Extro Set",
          "th": "Extro Set"
       },
@@ -2574,7 +2654,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "attackspeed",
-               "add": 15,
+               "add": 20,
                "rate": true
             }
          },
@@ -2600,10 +2680,12 @@ export const setsjson = [
          "fil": "Weeshian Set",
          "fr": "Tenue Astrale",
          "it": "Weeshian Set",
-         "kr": "Weeshian Set",
+         "jp": "\u30a6\u30a3\u30ba\u30bb\u30c3\u30c8(F)",
+         "kr": "\uc704\uc2a4 \uc138\ud2b8",
          "nl": "Weeshian Set",
          "pl": "Komplet Weeshian",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0441\u043e\u043b\u043d\u0435\u0447\u043d\u043e\u0433\u043e \u0433\u043b\u0430\u0434\u0438\u0430\u0442\u043e\u0440\u0430",
+         "sp": "Equipo Weeshian",
          "sw": "Weeshian Set",
          "th": "Weeshian Set"
       },
@@ -2669,10 +2751,12 @@ export const setsjson = [
          "fil": "Anoos Set",
          "fr": "Tenue Arkan",
          "it": "Anoos Set",
+         "jp": "\u30a2\u30ec\u30fc\u30b9\u30bb\u30c3\u30c8(F)",
          "kr": "\uc544\uc5d0\uc2a4(\uc5ec) \uc138\ud2b8",
          "nl": "Anoos Set",
          "pl": "Komplet Anoos",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043c\u0430\u0433\u0430",
+         "sp": "Equipo Anoos",
          "sw": "Anoos Set",
          "th": "Anoos Set"
       },
@@ -2688,7 +2772,7 @@ export const setsjson = [
             "equipped": 4,
             "ability": {
                "parameter": "decreasedcastingtime",
-               "add": 12,
+               "add": 15,
                "rate": true
             }
          },
@@ -2738,10 +2822,12 @@ export const setsjson = [
          "fil": "Dayst Set",
          "fr": "Tenue Astrale",
          "it": "Dayst Set",
+         "jp": "\u30c7\u30a3\u30fc\u30b9\u30c8\u30bb\u30c3\u30c8(M)",
          "kr": "\ub370\uc774\uc2a4\ud2b8(\ub0a8) \uc138\ud2b8",
          "nl": "Dayst Set",
          "pl": "Komplet Dayst",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043e\u0433\u043d\u0435\u043d\u043d\u043e\u0433\u043e \u0432\u043e\u0438\u043d\u0430",
+         "sp": "Equipo Dayst",
          "sw": "Dayst Set",
          "th": "Dayst Set"
       },
@@ -2815,10 +2901,12 @@ export const setsjson = [
          "fil": "Sayram Set",
          "fr": "Tenue Sayram",
          "it": "Sayram Set",
+         "jp": "\u30bf\u30fc\u30ea\u30fc\u30f3\u30bb\u30c3\u30c8(F) ",
          "kr": "\ud0c8\ub9b0(\uc5ec) \uc138\ud2b8",
          "nl": "Sayram Set",
          "pl": "Komplet Sayram",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043f\u043e\u0434\u0440\u0443\u0447\u043d\u043e\u0433\u043e",
+         "sp": "Equipo Sayram",
          "sw": "Sayram Set",
          "th": "Sayram Set"
       },
@@ -2834,7 +2922,7 @@ export const setsjson = [
             "equipped": 4,
             "ability": {
                "parameter": "attackspeed",
-               "add": 15,
+               "add": 10,
                "rate": true
             }
          },
@@ -2884,10 +2972,12 @@ export const setsjson = [
          "fil": "Psykon Set",
          "fr": "Tenue Mythique",
          "it": "Psykon Set",
+         "jp": "\u30b5\u30a4\u30ab\u30f3\u30bb\u30c3\u30c8(M)",
          "kr": "\uc0ac\uc774\ucee8(\ub0a8) \uc138\ud2b8",
          "nl": "Psykon Set",
          "pl": "Komplet Psykon",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043f\u0441\u0438-\u043c\u0430\u0441\u0442\u0435\u0440\u0430",
+         "sp": "Equipo Psykon",
          "sw": "Psykon Set",
          "th": "Psykon Set"
       },
@@ -2961,10 +3051,12 @@ export const setsjson = [
          "fil": "Miracle Set",
          "fr": "Tenue Mirage",
          "it": "Miracle Set",
+         "jp": "\u30ec\u30a4\u30a2\u30fc\u30c9\u30bb\u30c3\u30c8(F)",
          "kr": "\ub808\uc774\uc5b4\ub4dc(\uc5ec) \uc138\ud2b8",
          "nl": "Miracle Set",
          "pl": "Komplet Miracle",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u044d\u043a\u0432\u0438\u043b\u0438\u0431\u0440\u0438\u0441\u0442\u0430",
+         "sp": "Equipo Miracle",
          "sw": "Miracle Set",
          "th": "Miracle Set"
       },
@@ -3030,10 +3122,12 @@ export const setsjson = [
          "fil": "Leaf Set",
          "fr": "Tenue Folio",
          "it": "Leaf Set",
+         "jp": "\u30d5\u30a1\u30df\u30eb\u30bb\u30c3\u30c8(F) ",
          "kr": "\ud30c\ubc00(\uc5ec) \uc138\ud2b8",
          "nl": "Leaf Set",
          "pl": "Komplet Leaf",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043c\u0435\u0445\u0430\u043d\u0438\u043a\u0430",
+         "sp": "Equipo Leaf",
          "sw": "Leaf Set",
          "th": "Leaf Set"
       },
@@ -3099,10 +3193,12 @@ export const setsjson = [
          "fil": "Pact Set",
          "fr": "Tenue Illustre",
          "it": "Pact Set",
+         "jp": "\u30da\u30af\u30c8\u30bb\u30c3\u30c8(M)",
          "kr": "\ud329\ud2b8(\ub0a8) \uc138\ud2b8",
          "nl": "Pact Set",
          "pl": "Komplet Pact",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0438\u043b\u043b\u044e\u0437\u0438\u0438",
+         "sp": "Equipo Pact",
          "sw": "Pact Set",
          "th": "Pact Set"
       },
@@ -3168,10 +3264,12 @@ export const setsjson = [
          "fil": "Rasra Set",
          "fr": "Tenue Astrale",
          "it": "Rasra Set",
+         "jp": "\u30ea\u30c8\u30e9\u30bb\u30c3\u30c8(F)",
          "kr": "\ub9ac\uc2a4\ud2b8\ub77c(\uc5ec) \uc138\ud2b8",
          "nl": "Rasra Set",
          "pl": "Komplet Rasra",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u043e\u0433\u043e \u0448\u0443\u0442\u0430",
+         "sp": "Equipo Rasra",
          "sw": "Rasra Set",
          "th": "Rasra Set"
       },
@@ -3237,10 +3335,12 @@ export const setsjson = [
          "fil": "Shabel Set",
          "fr": "Tenue Epique",
          "it": "Shabel Set",
+         "jp": "\u30b7\u30e3\u30d9\u30eb\u30bb\u30c3\u30c8(M)",
          "kr": "\uc0e4\ubca8(\ub0a8) \uc138\ud2b8",
          "nl": "Shabel Set",
          "pl": "Komplet Shabel",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0432\u0438\u0437\u0438\u0440\u044f",
+         "sp": "Equipo Shabel",
          "sw": "Shabel Set",
          "th": "Shabel Set"
       },
@@ -3306,10 +3406,12 @@ export const setsjson = [
          "fil": "Navil Set",
          "fr": "Tenue Epique",
          "it": "Navil Set",
+         "jp": "\u30cd\u30d3\u30e9\u30eb\u30bb\u30c3\u30c8(M)",
          "kr": "\ub124\uc774\ube4c(\ub0a8) \uc138\ud2b8",
          "nl": "Navil Set",
          "pl": "Komplet Navil",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0438\u043c\u043f\u0435\u0440\u0438\u0438",
+         "sp": "Equipo Navil",
          "sw": "Navil Set",
          "th": "Navil Set"
       },
@@ -3375,10 +3477,12 @@ export const setsjson = [
          "fil": "Ellean Set",
          "fr": "Tenue Astrale",
          "it": "Ellean Set",
-         "kr": "Ellean Set",
+         "jp": "\u30a8\u30eb\u30c0\u30fc\u30bb\u30c3\u30c8(F\uff09",
+         "kr": "\uc5d8\ub354(\uc5ec) \uc138\ud2b8",
          "nl": "Ellean Set",
          "pl": "Komplet Ellean",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u0442\u0435\u043b\u044f",
+         "sp": "Equipo Ellean",
          "sw": "Ellean Set",
          "th": "Ellean Set"
       },
@@ -3409,8 +3513,8 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "int",
-               "add": 5,
+               "parameter": "sta",
+               "add": 10,
                "rate": false
             }
          },
@@ -3452,10 +3556,12 @@ export const setsjson = [
          "fil": "Rody Set",
          "fr": "Tenue Epique",
          "it": "Rody Set",
+         "jp": "\u30ed\u30c7\u30a3\u30bb\u30c3\u30c8(M)",
          "kr": "\ub85c\ub514(\ub0a8) \uc138\ud2b8",
          "nl": "Rody Set",
          "pl": "Komplet Rody",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043b\u0435\u0442\u0443\u0447\u0435\u0439 \u043c\u044b\u0448\u0438",
+         "sp": "Equipo Rody",
          "sw": "Rody Set",
          "th": "Rody Set"
       },
@@ -3472,6 +3578,14 @@ export const setsjson = [
             "ability": {
                "parameter": "criticaldamage",
                "add": 40,
+               "rate": true
+            }
+         },
+         {
+            "equipped": 4,
+            "ability": {
+               "parameter": "attackspeed",
+               "add": 10,
                "rate": true
             }
          },
@@ -3521,10 +3635,12 @@ export const setsjson = [
          "fil": "Billporon Set",
          "fr": "Tenue Mythique",
          "it": "Billporon Set",
+         "jp": "\u30d3\u30fc\u30b9\u30c8\u30bb\u30c3\u30c8(F)",
          "kr": "\ube4c\uc2a4\ud2b8(\uc5ec) \uc138\ud2b8",
          "nl": "Billporon Set",
          "pl": "Komplet Billporon",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043a\u043e\u0433\u0442\u0438\u0441\u0442\u043e\u0433\u043e \u0431\u0435\u0441\u0435\u043d\u043a\u0430",
+         "sp": "Equipo Billporon",
          "sw": "Billporon Set",
          "th": "Billporon Set"
       },
@@ -3598,10 +3714,12 @@ export const setsjson = [
          "fil": "Teba Set",
          "fr": "Tenue Kadjar",
          "it": "Teba Set",
+         "jp": "\u30df\u30b9\u30c6\u30a3\u30bb\u30c3\u30c8(M)",
          "kr": "\ud14c\ubc14(\ub0a8) \uc138\ud2b8",
          "nl": "Teba Set",
          "pl": "Komplet Teba",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0442\u0430\u0439\u043d\u044b",
+         "sp": "Equipo Teba",
          "sw": "Teba Set",
          "th": "Teba Set"
       },
@@ -3617,7 +3735,7 @@ export const setsjson = [
             "equipped": 4,
             "ability": {
                "parameter": "decreasedcastingtime",
-               "add": 10,
+               "add": 15,
                "rate": true
             }
          },
@@ -3667,10 +3785,12 @@ export const setsjson = [
          "fil": "Ropang Set",
          "fr": "Tenue Illustre",
          "it": "Ropang Set",
+         "jp": "\u30ed\u30d5\u30a1\u30f3\u30bb\u30c3\u30c8(M\uff09",
          "kr": "\ub85c\ud321(\ub0a8) \uc138\ud2b8",
          "nl": "Ropang Set",
          "pl": "Komplet Ropang",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0447\u0435\u0440\u0442\u0435\u043d\u043a\u0430",
+         "sp": "Equipo Ropang",
          "sw": "Ropang Set",
          "th": "Ropang Set"
       },
@@ -3694,7 +3814,7 @@ export const setsjson = [
             "equipped": 3,
             "ability": {
                "parameter": "decreasedmpconsumption",
-               "add": 25,
+               "add": 30,
                "rate": true
             }
          },
@@ -3736,10 +3856,12 @@ export const setsjson = [
          "fil": "Flury Set",
          "fr": "Tenue Fury",
          "it": "Flury Set",
+         "jp": "\u30a6\u30a7\u30a4\u30b8\u30fc\u30bb\u30c3\u30c8(F) ",
          "kr": "\uc6e8\uc9c0(\uc5ec) \uc138\ud2b8",
          "nl": "Flury Set",
          "pl": "Komplet Flury",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043f\u043e\u043c\u043e\u0449\u043d\u0438\u043a\u0430",
+         "sp": "Equipo Flury",
          "sw": "Flury Set",
          "th": "Flury Set"
       },
@@ -3813,10 +3935,12 @@ export const setsjson = [
          "fil": "Knighert Set",
          "fr": "Tenue Mythique",
          "it": "Knighert Set",
+         "jp": "\u30ca\u30a4\u30a2\u30fc\u30c8\u30bb\u30c3\u30c8(M)",
          "kr": "\ub098\uc774\uc5b4\ud2b8(\ub0a8) \uc138\ud2b8",
          "nl": "Knighert Set",
          "pl": "Komplet Knighert",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043e\u0433\u043d\u0435\u043d\u043d\u043e\u0433\u043e \u0433\u043b\u0430\u0434\u0438\u0430\u0442\u043e\u0440\u0430",
+         "sp": "Equipo Knighert",
          "sw": "Knighert Set",
          "th": "Knighert Set"
       },
@@ -3890,10 +4014,12 @@ export const setsjson = [
          "fil": "Warpon Set",
          "fr": "Tenue Illustre",
          "it": "Warpon Set",
+         "jp": "\u30ef\u30fc\u30d5\u30a9\u30f3\u30bb\u30c3\u30c8(M)",
          "kr": "\uc6cc\ud3f0(\ub0a8) \uc138\ud2b8",
          "nl": "Warpon Set",
          "pl": "Komplet Warpon",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0441\u043e\u043b\u043d\u0435\u0447\u043d\u043e\u0433\u043e \u0440\u044b\u0446\u0430\u0440\u044f",
+         "sp": "Equipo Warpon",
          "sw": "Warpon Set",
          "th": "Warpon Set"
       },
@@ -3959,10 +4085,12 @@ export const setsjson = [
          "fil": "Geniun Set",
          "fr": "Tenue Astrale",
          "it": "Geniun Set",
-         "kr": "Geniun Set",
+         "jp": "\u30b8\u30fc\u30cb\u30a2\u30f3\u30bb\u30c3\u30c8(M)",
+         "kr": "\uc9c0\ub2c8\uc5b8(\ub0a8) \uc138\ud2b8",
          "nl": "Geniun Set",
          "pl": "Komplet Geniun",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0433\u0435\u043d\u0438\u044f",
+         "sp": "Equipo Geniun",
          "sw": "Geniun Set",
          "th": "Geniun Set"
       },
@@ -4028,10 +4156,12 @@ export const setsjson = [
          "fil": "Ellis Set",
          "fr": "Tenue Mythique",
          "it": "Ellis Set",
+         "jp": "\u30a8\u30ea\u30b9\u30bb\u30c3\u30c8(M)",
          "kr": "\uc5d8\ub9ac\uc2a4(\ub0a8) \uc138\ud2b8",
          "nl": "Ellis Set",
          "pl": "Komplet Ellis",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043c\u0430\u0433\u0438\u0441\u0442\u0440\u0430",
+         "sp": "Equipo Ellis",
          "sw": "Ellis Set",
          "th": "Ellis Set"
       },
@@ -4105,10 +4235,12 @@ export const setsjson = [
          "fil": "Rebron Set",
          "fr": "Tenue Rebrorn",
          "it": "Rebron Set",
+         "jp": "\u30ec\u30d6\u30ed\u30f3\u30bb\u30c3\u30c8(M)",
          "kr": "\ub808\ube0c\ub860(\ub0a8) \uc138\ud2b8",
          "nl": "Rebron Set",
          "pl": "Komplet Rebron",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043f\u0430\u0433\u043e\u0434\u044b",
+         "sp": "Equipo Rebron",
          "sw": "Rebron Set",
          "th": "Rebron Set"
       },
@@ -4174,10 +4306,12 @@ export const setsjson = [
          "fil": "Okas Set",
          "fr": "Tenue Illustre",
          "it": "Okas Set",
+         "jp": "\u30aa\u30b9\u30ab\u30bb\u30c3\u30c8(F)",
          "kr": "\uc624\uc2a4\uce74(\uc5ec) \uc138\ud2b8",
          "nl": "Okas Set",
          "pl": "Komplet Okas",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0441\u043d\u0430\u0439\u043f\u0435\u0440\u0430",
+         "sp": "Equipo Okas",
          "sw": "Okas Set",
          "th": "Okas Set"
       },
@@ -4243,10 +4377,12 @@ export const setsjson = [
          "fil": "Flower Set",
          "fr": "Tenue Florale",
          "it": "Flower Set",
+         "jp": "\u30d5\u30a7\u30a4\u30bf\u30eb\u30bb\u30c3\u30c8(F) ",
          "kr": "\ud398\ud0c8(\uc5ec) \uc138\ud2b8",
          "nl": "Flower Set",
          "pl": "Komplet Flower",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0448\u043e\u0444\u0435\u0440\u0430",
+         "sp": "Equipo Flower",
          "sw": "Flower Set",
          "th": "Flower Set"
       },
@@ -4312,10 +4448,12 @@ export const setsjson = [
          "fil": "Aken Set",
          "fr": "Tenue Astrale",
          "it": "Aken Set",
+         "jp": "\u30a2\u30b1\u30f3\u30c8\u30bb\u30c3\u30c8(F)",
          "kr": "\uc544\ucf04\ud2b8(\uc5ec) \uc138\ud2b8",
          "nl": "Aken Set",
          "pl": "Komplet Aken",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0434\u044c\u044f\u0432\u043e\u043b\u0435\u043d\u043a\u0430",
+         "sp": "Equipo Aken",
          "sw": "Aken Set",
          "th": "Aken Set"
       },
@@ -4389,10 +4527,12 @@ export const setsjson = [
          "fil": "Layered Set",
          "fr": "Tenue Superposition",
          "it": "Layered Set",
+         "jp": "\u30ec\u30a4\u30a2\u30fc\u30c9\u30bb\u30c3\u30c8(M) ",
          "kr": "\ub808\uc774\uc5b4\ub4dc(\ub0a8) \uc138\ud2b8",
          "nl": "Layered Set",
          "pl": "Komplet Layered",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u044d\u043a\u0432\u0438\u043b\u0438\u0431\u0440\u0438\u0441\u0442\u0430",
+         "sp": "Equipo Layered",
          "sw": "Layered Set",
          "th": "Layered Set"
       },
@@ -4458,10 +4598,12 @@ export const setsjson = [
          "fil": "Shurian Set",
          "fr": "Tenue Epique",
          "it": "Shurian Set",
+         "jp": "\u30b7\u30e3\u30d9\u30eb\u30bb\u30c3\u30c8(F\uff09",
          "kr": "\uc0e4\ubca8(\uc5ec) \uc138\ud2b8",
          "nl": "Shurian Set",
          "pl": "Komplet Shurian",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0432\u0438\u0437\u0438\u0440\u044f",
+         "sp": "Equipo Shurian",
          "sw": "Shurian Set",
          "th": "Shurian Set"
       },
@@ -4527,10 +4669,12 @@ export const setsjson = [
          "fil": "Stitch Set",
          "fr": "Tenue Sith",
          "it": "Stitch Set",
+         "jp": "\u30d1\u30f3\u30b0\u30ea\u30eb\u30bb\u30c3\u30c8(F)",
          "kr": "\ud321\uadf8\ub9b4(\uc5ec) \uc138\ud2b8",
          "nl": "Stitch Set",
          "pl": "Komplet Stitch",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044f",
+         "sp": "Equipo Stitch",
          "sw": "Stitch Set",
          "th": "Stitch Set"
       },
@@ -4596,10 +4740,12 @@ export const setsjson = [
          "fil": "Psyuniper Set",
          "fr": "Tenue Mythique",
          "it": "Psyuniper Set",
+         "jp": "\u30b5\u30a4\u30ab\u30f3\u30bb\u30c3\u30c8(F)",
          "kr": "\uc0ac\uc774\ucee8(\uc5ec) \uc138\ud2b8",
          "nl": "Psyuniper Set",
          "pl": "Komplet Psyuniper",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043f\u0441\u0438-\u043c\u0430\u0441\u0442\u0435\u0440\u0430",
+         "sp": "Equipo Psyuniper",
          "sw": "Psyuniper Set",
          "th": "Psyuniper Set"
       },
@@ -4673,10 +4819,12 @@ export const setsjson = [
          "fil": "Comet Set",
          "fr": "Tenue Cosmic",
          "it": "Comet Set",
+         "jp": "\u30ab\u30df\u30c3\u30c8\u30bb\u30c3\u30c8(M) ",
          "kr": "\uce74\ubbf8\ud2b8(\ub0a8) \uc138\ud2b8",
          "nl": "Comet Set",
          "pl": "Komplet Comet",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043c\u0435\u0445\u0430\u043d\u0438\u043a\u0430",
+         "sp": "Equipo Comet",
          "sw": "Comet Set",
          "th": "Comet Set"
       },
@@ -4742,10 +4890,12 @@ export const setsjson = [
          "fil": "Panggril Set",
          "fr": "Tenue Pangril",
          "it": "Panggril Set",
+         "jp": "\u30d1\u30f3\u30b0\u30ea\u30eb\u30bb\u30c3\u30c8(M) ",
          "kr": "\ud321\uadf8\ub9b4(\ub0a8) \uc138\ud2b8",
          "nl": "Panggril Set",
          "pl": "Komplet Panggril",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044f",
+         "sp": "Equipo Panggril",
          "sw": "Panggril Set",
          "th": "Panggril Set"
       },
@@ -4811,10 +4961,12 @@ export const setsjson = [
          "fil": "Extro Set",
          "fr": "Tenue Epique",
          "it": "Extro Set",
+         "jp": "\u30a8\u30af\u30c8\u30ea\u30bb\u30c3\u30c8(F)",
          "kr": "\uc5d1\ud2b8\ub85c(\ub0a8) \uc138\ud2b8",
          "nl": "Extro Set",
          "pl": "Komplet Extro",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0437\u0432\u0435\u0437\u0434\u043d\u043e\u0433\u043e \u0433\u043b\u0430\u0434\u0438\u0430\u0442\u043e\u0440\u0430",
+         "sp": "Equipo Extro",
          "sw": "Extro Set",
          "th": "Extro Set"
       },
@@ -4854,7 +5006,7 @@ export const setsjson = [
             "equipped": 2,
             "ability": {
                "parameter": "attackspeed",
-               "add": 15,
+               "add": 20,
                "rate": true
             }
          },
@@ -4880,10 +5032,12 @@ export const setsjson = [
          "fil": "Ahes Set",
          "fr": "Tenue Ahes",
          "it": "Ahes Set",
+         "jp": "\u30a2\u30ec\u30fc\u30b9\u30bb\u30c3\u30c8(M)",
          "kr": "\uc544\uc5d0\uc2a4(\ub0a8) \uc138\ud2b8",
          "nl": "Ahes Set",
          "pl": "Komplet Ahes",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043c\u0430\u0433\u0430",
+         "sp": "Equipo Ahes",
          "sw": "Ahes Set",
          "th": "Ahes Set"
       },
@@ -4899,7 +5053,7 @@ export const setsjson = [
             "equipped": 4,
             "ability": {
                "parameter": "decreasedcastingtime",
-               "add": 12,
+               "add": 15,
                "rate": true
             }
          },
@@ -4949,10 +5103,12 @@ export const setsjson = [
          "fil": "Slepint Set",
          "fr": "Tenue Slepin",
          "it": "Slepint Set",
+         "jp": "\u30b9\u30ec\u30a4\u30d4\u30f3\u30bb\u30c3\u30c8(M) ",
          "kr": "\uc2ac\ub808\ud540(\ub0a8) \uc138\ud2b8",
          "nl": "Slepint Set",
          "pl": "Komplet Slepint",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043a\u0430\u043d\u0430\u0442\u043e\u0445\u043e\u0434\u0446\u0430",
+         "sp": "Equipo Slepint",
          "sw": "Slepint Set",
          "th": "Slepint Set"
       },
@@ -5026,10 +5182,12 @@ export const setsjson = [
          "fil": "Warspon Set",
          "fr": "Tenue Illustre",
          "it": "Warspon Set",
+         "jp": "\u30ef\u30fc\u30d5\u30a9\u30f3\u30bb\u30c3\u30c8(F)",
          "kr": "\uc6cc\ud3f0(\uc5ec) \uc138\ud2b8",
          "nl": "Warspon Set",
          "pl": "Komplet Warspon",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0441\u043e\u043b\u043d\u0435\u0447\u043d\u043e\u0433\u043e \u0440\u044b\u0446\u0430\u0440\u044f",
+         "sp": "Equipo Warspon",
          "sw": "Warspon Set",
          "th": "Warspon Set"
       },
@@ -5095,10 +5253,12 @@ export const setsjson = [
          "fil": "Remingster Set",
          "fr": "Tenue Mythique",
          "it": "Remingster Set",
+         "jp": "\u30d5\u30a1\u30f3\u30bf\u30ba\u30de\u30bb\u30c3\u30c8(F\uff09",
          "kr": "\ub9ac\ubbf8\uc2a4(\uc5ec)\ud130 \uc138\ud2b8",
          "nl": "Remingster Set",
          "pl": "Komplet Remingster",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0437\u0430\u0432\u043e\u0434\u043d\u043e\u0433\u043e \u0430\u043f\u0435\u043b\u044c\u0441\u0438\u043d\u0430",
+         "sp": "Equipo Remingster",
          "sw": "Remingster Set",
          "th": "Remingster Set"
       },
@@ -5172,10 +5332,12 @@ export const setsjson = [
          "fil": "Petal Set",
          "fr": "Tenue Fortis",
          "it": "Petal Set",
+         "jp": "\u30d5\u30a7\u30a4\u30bf\u30eb\u30bb\u30c3\u30c8(M) ",
          "kr": "\ud398\ud0c8(\ub0a8) \uc138\ud2b8",
          "nl": "Petal Set",
          "pl": "Komplet Petal",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0448\u043e\u0444\u0435\u0440\u0430",
+         "sp": "Equipo Petal",
          "sw": "Petal Set",
          "th": "Petal Set"
       },
@@ -5241,10 +5403,12 @@ export const setsjson = [
          "fil": "Recorn Set",
          "fr": "Tenue Recorn",
          "it": "Recorn Set",
+         "jp": "\u30ea\u30b3\u30f3\u30bb\u30c3\u30c8(M)",
          "kr": "\ub9ac\ucf58(\ub0a8) \uc138\ud2b8",
          "nl": "Recorn Set",
          "pl": "Komplet Recorn",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043f\u0438\u043b\u043e\u0442\u0430",
+         "sp": "Equipo Recorn",
          "sw": "Recorn Set",
          "th": "Recorn Set"
       },
@@ -5310,10 +5474,12 @@ export const setsjson = [
          "fil": "Niz Set",
          "fr": "Tenue Niz",
          "it": "Niz Set",
+         "jp": "\u30b7\u30a2\u30fc\u30bb\u30c3\u30c8(F) ",
          "kr": "\uc2dc\uc5b4(\uc5ec) \uc138\ud2b8",
          "nl": "Niz Set",
          "pl": "Komplet Niz",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043f\u0440\u0435\u0434\u0441\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044f",
+         "sp": "Equipo Niz",
          "sw": "Niz Set",
          "th": "Niz Set"
       },
@@ -5379,10 +5545,12 @@ export const setsjson = [
          "fil": "Ranerz Set",
          "fr": "Tenue Mythique",
          "it": "Ranerz Set",
+         "jp": "\u30ec\u30a4\u30a2\u30fc\u30b9\u30bb\u30c3\u30c8(M)",
          "kr": "\ub808\ub108\uc988(\ub0a8) \uc138\ud2b8",
          "nl": "Ranerz Set",
          "pl": "Komplet Ranerz",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0437\u0432\u0435\u0437\u0434\u043d\u043e\u0433\u043e \u0441\u0442\u0440\u0435\u043b\u043a\u0430",
+         "sp": "Equipo Ranerz",
          "sw": "Ranerz Set",
          "th": "Ranerz Set"
       },
@@ -5456,10 +5624,12 @@ export const setsjson = [
          "fil": "Merr Set",
          "fr": "Tenue Mera",
          "it": "Merr Set",
+         "jp": "\u30bd\u30ec\u30a4\u30f3\u30bb\u30c3\u30c8(F) ",
          "kr": "\uc18c\ub808\uc778(\uc5ec) \uc138\ud2b8",
          "nl": "Merr Set",
          "pl": "Komplet Merr",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0437\u0430\u0433\u0430\u0434\u043e\u043a",
+         "sp": "Equipo Merr",
          "sw": "Merr Set",
          "th": "Merr Set"
       },
@@ -5474,7 +5644,7 @@ export const setsjson = [
          {
             "equipped": 4,
             "ability": {
-               "parameter": "maxhp",
+               "parameter": "decreasedcastingtime",
                "add": 10,
                "rate": true
             }
@@ -5525,10 +5695,12 @@ export const setsjson = [
          "fil": "Elder Set",
          "fr": "Tenue Astrale",
          "it": "Elder Set",
-         "kr": "Elder Set",
+         "jp": "\u30a8\u30eb\u30c0\u30fc\u30bb\u30c3\u30c8(M)",
+         "kr": "\uc5d8\ub354(\ub0a8) \uc138\ud2b8",
          "nl": "Elder Set",
          "pl": "Komplet Elder",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0437\u0430\u043a\u043b\u0438\u043d\u0430\u0442\u0435\u043b\u044f",
+         "sp": "Equipo Elder",
          "sw": "Elder Set",
          "th": "Elder Set"
       },
@@ -5559,8 +5731,8 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "int",
-               "add": 5,
+               "parameter": "sta",
+               "add": 10,
                "rate": false
             }
          },
@@ -5602,10 +5774,12 @@ export const setsjson = [
          "fil": "Raze Set",
          "fr": "Tenue Mythique",
          "it": "Raze Set",
+         "jp": "\u30ec\u30a4\u30a2\u30fc\u30b9\u30bb\u30c3\u30c8(F\uff09",
          "kr": "\ub808\ub108\uc988(\uc5ec) \uc138\ud2b8",
          "nl": "Raze Set",
          "pl": "Komplet Raze",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0437\u0432\u0435\u0437\u0434\u043d\u043e\u0433\u043e \u0441\u0442\u0440\u0435\u043b\u043a\u0430",
+         "sp": "Equipo Raze",
          "sw": "Raze Set",
          "th": "Raze Set"
       },
@@ -5679,10 +5853,12 @@ export const setsjson = [
          "fil": "Katria Set",
          "fr": "Tenue Illustre",
          "it": "Katria Set",
+         "jp": "\u30ab\u30c8\u30ea\u30a2\u30bb\u30c3\u30c8(M)",
          "kr": "\uce74\ud2b8\ub9ac\uc544(\ub0a8) \uc138\ud2b8",
          "nl": "Katria Set",
          "pl": "Komplet Katria",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043a\u0430\u0440\u043d\u0430\u0432\u0430\u043b\u0430",
+         "sp": "Equipo Katria",
          "sw": "Katria Set",
          "th": "Katria Set"
       },
@@ -5748,10 +5924,12 @@ export const setsjson = [
          "fil": "Jenes Set",
          "fr": "Tenue Mythique",
          "it": "Jenes Set",
+         "jp": "\u30b8\u30a7\u30b7\u30b9\u30bb\u30c3\u30c8(F\uff09",
          "kr": "\uc81c\uc2dc\uc2a4(\uc5ec) \uc138\ud2b8",
          "nl": "Jenes Set",
          "pl": "Komplet Jenes",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043b\u0438\u0446\u0435\u0434\u0435\u044f",
+         "sp": "Equipo Jenes",
          "sw": "Jenes Set",
          "th": "Jenes Set"
       },
@@ -5825,10 +6003,12 @@ export const setsjson = [
          "fil": "Myuran Set",
          "fr": "Tenue Illustre",
          "it": "Myuran Set",
+         "jp": "\u30df\u30e5\u30fc\u30e9\u30f3\u30bb\u30c3\u30c8(M\uff09",
          "kr": "\ubba4\ub780(\ub0a8) \uc138\ud2b8",
          "nl": "Myuran Set",
          "pl": "Komplet Myuran",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043e\u0433\u043d\u0435\u0433\u043b\u043e\u0442\u0430\u0442\u0435\u043b\u044f",
+         "sp": "Equipo Myuran",
          "sw": "Myuran Set",
          "th": "Myuran Set"
       },
@@ -5852,7 +6032,7 @@ export const setsjson = [
             "equipped": 3,
             "ability": {
                "parameter": "decreasedmpconsumption",
-               "add": 20,
+               "add": 30,
                "rate": true
             }
          },
@@ -5894,10 +6074,12 @@ export const setsjson = [
          "fil": "Tight Set",
          "fr": "Tenue Epique",
          "it": "Tight Set",
+         "jp": "\u30bf\u30a4\u30c8\u30e9\u30f3\u30bb\u30c3\u30c8(F)",
          "kr": "\ud0c0\uc774\ub7f0\ud2b8(\uc5ec) \uc138\ud2b8",
          "nl": "Tight Set",
          "pl": "Komplet Tight",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u043e\u0433\u043e \u0441\u0442\u0440\u0435\u043b\u043a\u0430",
+         "sp": "Equipo Tight",
          "sw": "Tight Set",
          "th": "Tight Set"
       },
@@ -5963,10 +6145,12 @@ export const setsjson = [
          "fil": "Stinger Set",
          "fr": "Tenue Piquante",
          "it": "Stinger Set",
+         "jp": "\u30b9\u30ec\u30a4\u30d4\u30f3\u30bb\u30c3\u30c8(F) ",
          "kr": "\uc2ac\ub808\ud540(\uc5ec) \uc138\ud2b8",
          "nl": "Stinger Set",
          "pl": "Komplet Stinger",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043a\u0430\u043d\u0430\u0442\u043e\u0445\u043e\u0434\u0446\u0430",
+         "sp": "Equipo Stinger",
          "sw": "Stinger Set",
          "th": "Stinger Set"
       },
@@ -6040,10 +6224,12 @@ export const setsjson = [
          "fil": "Akan Set",
          "fr": "Tenue Illustre",
          "it": "Akan Set",
+         "jp": "\u30a2\u30a4\u30cb\u30bb\u30c3\u30c8(F)",
          "kr": "\uc544\uc774\ub2c8(\uc5ec) \uc138\ud2b8",
          "nl": "Akan Set",
          "pl": "Komplet Akan",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043d\u0435\u0431\u0435\u0441\u043d\u043e\u0433\u043e \u0432\u043e\u0438\u043d\u0430",
+         "sp": "Equipo Akan",
          "sw": "Akan Set",
          "th": "Akan Set"
       },
@@ -6109,10 +6295,12 @@ export const setsjson = [
          "fil": "Shuran Set",
          "fr": "Tenue Shuran",
          "it": "Shuran Set",
+         "jp": "\u30b7\u30e5\u30e9\u30f3\u30c9\u30bb\u30c3\u30c8(F)",
          "kr": "\uc288\ub780\ub4dc(\uc5ec) \uc138\ud2b8",
          "nl": "Shuran Set",
          "pl": "Komplet Shuran",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0430\u0441\u0441\u0438\u0441\u0442\u0435\u043d\u0442\u0430",
+         "sp": "Equipo Shuran",
          "sw": "Shuran Set",
          "th": "Shuran Set"
       },
@@ -6186,10 +6374,12 @@ export const setsjson = [
          "fil": "Seer Set",
          "fr": "Tenue Seer",
          "it": "Seer Set",
+         "jp": "\u30b7\u30a2\u30fc\u30bb\u30c3\u30c8(M)",
          "kr": "\uc2dc\uc5b4(\ub0a8) \uc138\ud2b8",
          "nl": "Seer Set",
          "pl": "Komplet Seer",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043f\u0440\u0435\u0434\u0441\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044f",
+         "sp": "Equipo Seer",
          "sw": "Seer Set",
          "th": "Seer Set"
       },
@@ -6255,10 +6445,12 @@ export const setsjson = [
          "fil": "Aren Set",
          "fr": "Tenue Astrale",
          "it": "Aren Set",
-         "kr": "Aren Set",
+         "jp": "\u30a2\u30b9\u30ec\u30f3\u30bb\u30c3\u30c8(F)",
+         "kr": "\uc544\uc2a4\ub80c(\uc5ec) \uc138\ud2b8",
          "nl": "Aren Set",
          "pl": "Komplet Aren",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0442\u0430\u0439\u043d\u043e\u0433\u043e \u0430\u0433\u0435\u043d\u0442\u0430",
+         "sp": "Equipo Aren",
          "sw": "Aren Set",
          "th": "Aren Set"
       },
@@ -6324,10 +6516,12 @@ export const setsjson = [
          "fil": "Talin Set",
          "fr": "Tenue Talin",
          "it": "Talin Set",
+         "jp": "\u30bf\u30fc\u30ea\u30fc\u30f3\u30bb\u30c3\u30c8(M)",
          "kr": "\ud0c8\ub9b0(\ub0a8) \uc138\ud2b8",
          "nl": "Talin Set",
          "pl": "Komplet Talin",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043f\u043e\u0434\u0440\u0443\u0447\u043d\u043e\u0433\u043e",
+         "sp": "Equipo Talin",
          "sw": "Talin Set",
          "th": "Talin Set"
       },
@@ -6343,7 +6537,7 @@ export const setsjson = [
             "equipped": 4,
             "ability": {
                "parameter": "attackspeed",
-               "add": 15,
+               "add": 10,
                "rate": true
             }
          },
@@ -6393,10 +6587,12 @@ export const setsjson = [
          "fil": "Ellsis Set",
          "fr": "Tenue Mythique",
          "it": "Ellsis Set",
+         "jp": "\u30a8\u30ea\u30b9\u30bb\u30c3\u30c8(F)",
          "kr": "\uc5d8\ub9ac\uc2a4(\uc5ec) \uc138\ud2b8",
          "nl": "Ellsis Set",
          "pl": "Komplet Ellsis",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043c\u0430\u0433\u0438\u0441\u0442\u0440\u0430",
+         "sp": "Equipo Ellsis",
          "sw": "Ellsis Set",
          "th": "Ellsis Set"
       },
@@ -6470,10 +6666,12 @@ export const setsjson = [
          "fil": "Sardine Set",
          "fr": "Tenue Sardin",
          "it": "Sardine Set",
+         "jp": "\u30b5\u30c7\u30a3\u30f3\u30bb\u30c3\u30c8(M)",
          "kr": "\uc0ac\ub518(\ub0a8) \uc138\ud2b8",
          "nl": "Sardine Set",
          "pl": "Komplet Sardine",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0441\u0442\u044e\u0430\u0440\u0434\u0430",
+         "sp": "Equipo Sardine",
          "sw": "Sardine Set",
          "th": "Sardine Set"
       },
@@ -6547,10 +6745,12 @@ export const setsjson = [
          "fil": "Kanarin Set",
          "fr": "Tenue Illustre",
          "it": "Kanarin Set",
+         "jp": "\u30ab\u30c8\u30ea\u30a2\u30bb\u30c3\u30c8(F)",
          "kr": "\uce74\ud2b8\ub9ac\uc544(\uc5ec) \uc138\ud2b8",
          "nl": "Kanarin Set",
          "pl": "Komplet Kanarin",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043a\u0430\u0440\u043d\u0430\u0432\u0430\u043b\u0430",
+         "sp": "Equipo Kanarin",
          "sw": "Kanarin Set",
          "th": "Kanarin Set"
       },
@@ -6616,10 +6816,12 @@ export const setsjson = [
          "fil": "Restra Set",
          "fr": "Tenue Astrale",
          "it": "Restra Set",
+         "jp": "\u30ea\u30c8\u30e9\u30bb\u30c3\u30c8(M)",
          "kr": "\ub9ac\uc2a4\ud2b8\ub77c(\ub0a8) \uc138\ud2b8",
          "nl": "Restra Set",
          "pl": "Komplet Restra",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u043e\u0433\u043e \u0448\u0443\u0442\u0430",
+         "sp": "Equipo Restra",
          "sw": "Restra Set",
          "th": "Restra Set"
       },
@@ -6685,10 +6887,12 @@ export const setsjson = [
          "fil": "Haganes Set",
          "fr": "Tenue Epique",
          "it": "Haganes Set",
+         "jp": "\u30cf\u30cd\u30b9\u30bb\u30c3\u30c8(F)",
          "kr": "\ud558\ub124\uc2a4(\uc5ec) \uc138\ud2b8",
          "nl": "Haganes Set",
          "pl": "Komplet Haganes",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043a\u043e\u0441\u043c\u0438\u0447\u0435\u0441\u043a\u043e\u0433\u043e \u043d\u0430\u0435\u043c\u043d\u0438\u043a\u0430",
+         "sp": "Equipo Haganes",
          "sw": "Haganes Set",
          "th": "Haganes Set"
       },
@@ -6754,10 +6958,12 @@ export const setsjson = [
          "fil": "Mekaron Set",
          "fr": "Tenue Epique",
          "it": "Mekaron Set",
+         "jp": "\u30e1\u30ab\u30c8\u30ed\u30bb\u30c3\u30c8(F)",
          "kr": "\uba54\uce74\ud2b8\ub85c(\uc5ec) \uc138\ud2b8",
          "nl": "Mekaron Set",
          "pl": "Komplet Mekaron",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0448\u0443\u043b\u0435\u0440\u0430",
+         "sp": "Equipo Mekaron",
          "sw": "Mekaron Set",
          "th": "Mekaron Set"
       },
@@ -6823,10 +7029,12 @@ export const setsjson = [
          "fil": "Shrian Set",
          "fr": "Tenue Astrale",
          "it": "Shrian Set",
-         "kr": "Shrian Set",
+         "jp": "\u30b7\u30e5\u30fc\u30d5\u30a9\u30f3\u30bb\u30c3\u30c8(F)",
+         "kr": "\uc288\ud3f0(\uc5ec) \uc138\ud2b8",
          "nl": "Shrian Set",
          "pl": "Komplet Shrian",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0432\u043e\u0441\u0442\u043e\u043a\u0430",
+         "sp": "Equipo Shrian",
          "sw": "Shrian Set",
          "th": "Shrian Set"
       },
@@ -6892,10 +7100,12 @@ export const setsjson = [
          "fil": "Alext Set",
          "fr": "Tenue Illustre",
          "it": "Alext Set",
+         "jp": "\u30a2\u30ec\u30c3\u30af\u30c8\u30bb\u30c3\u30c8(M)",
          "kr": "\uc54c\ub809\ud2b8(\ub0a8) \uc138\ud2b8",
          "nl": "Alext Set",
          "pl": "Komplet Alext",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0441\u0438\u043b\u0430\u0447\u0430",
+         "sp": "Equipo Alext",
          "sw": "Alext Set",
          "th": "Alext Set"
       },
@@ -6918,8 +7128,8 @@ export const setsjson = [
          {
             "equipped": 3,
             "ability": {
-               "parameter": "hitrate",
-               "add": 20,
+               "parameter": "attackspeed",
+               "add": 15,
                "rate": true
             }
          },
@@ -6934,9 +7144,9 @@ export const setsjson = [
          {
             "equipped": 2,
             "ability": {
-               "parameter": "dex",
-               "add": 10,
-               "rate": false
+               "parameter": "hitrate",
+               "add": 15,
+               "rate": true
             }
          },
          {
@@ -6961,10 +7171,12 @@ export const setsjson = [
          "fil": "Cylos Set",
          "fr": "Tenue Cylos",
          "it": "Cylos Set",
+         "jp": "\u30ab\u30df\u30c3\u30c8\u30bb\u30c3\u30c8(F)",
          "kr": "\uce74\ubbf8\ud2b8(\uc5ec) \uc138\ud2b8",
          "nl": "Cylos Set",
          "pl": "Komplet Cylos",
          "ru": "\u0420\u0435\u0434\u043a\u0438\u0439 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u043c\u0435\u0445\u0430\u043d\u0438\u043a\u0430",
+         "sp": "Equipo Cylos",
          "sw": "Cylos Set",
          "th": "Cylos Set"
       },

@@ -35,12 +35,15 @@ export default {
     },
     getTooltip(premiumItem) {
       let tooltip = premiumItem.name.en + "\n";
-      if(premiumItem.abilities) {
+      
+      if (premiumItem.abilities) {
         premiumItem.abilities.forEach(ability => {
           let effect = "";
           effect += ability.parameter;
+
           let add = ability.add;
           effect += "+" + add;
+
           if (ability.rate) effect += "%";
           effect += "\n";
           tooltip += effect;

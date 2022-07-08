@@ -10,7 +10,7 @@
       <h5>Speed</h5>
       <p>100%</p>
       <h5>Casting Speed</h5>
-      <p v-cloak>{{ format(character.ref.DCT) + '%'}}</p>
+      <p v-cloak>{{ format(character.ref.DCT * 100.0) + '%'}}</p>
       <hr>
       <h5>Attack</h5>
       <p v-cloak>{{ format(character.ref.attack) || "N/A" }}</p>
