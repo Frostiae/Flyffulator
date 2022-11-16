@@ -139,9 +139,80 @@ export class Utils {
     }
 
     static getJewelery(subcategory) {
-        return this.items.filter(
-            (item) => item.category == "jewelry" && item.subcategory == subcategory
-        );
+        const deprecated = [
+            2746	, // Arek Ring +0
+            9239	, // Arek Ring +1
+            8620	, // Arek Ring +2
+            4760	, // Arek Ring +3
+            9494	, // Arek Ring +4
+            9640	, // Arek Ring +5
+            9213	, // Arek Ring +6
+            1460	, // Demol Earring +1
+            3563	, // Demol Earring +2
+            8953	, // Demol Earring +3
+            4872	, // Demol Earring +4
+            9005	, // Demol Earring +5
+            6059	, // Demol Earring +6
+            7665	, // Gore Necklace +1
+            4397	, // Gore Necklace +2
+            2503	, // Gore Necklace +3
+            4765	, // Gore Necklace +4
+            3677	, // Gore Necklace +5
+            8772	, // Gore Necklace +6
+            6687	, // Mental Necklace +1
+            1898	, // Mental Necklace +2
+            2004	, // Mental Necklace +3
+            9481	, // Mental Necklace +4
+            9297	, // Mental Necklace +5
+            1770	, // Mental Necklace +6
+            8290	, // Peision Necklace +1
+            4919	, // Peision Necklace +2
+            9406	, // Peision Necklace +3
+            5708	, // Peision Necklace +4
+            2829	, // Peision Necklace +5
+            2125	, // Peision Necklace +6
+            9883	, // Plug Earring +1
+            4786	, // Plug Earring +2
+            2771	, // Plug Earring +3
+            8362	, // Plug Earring +4
+            633	    , // Plug Earring +5
+            6163	, // Plug Earring +6
+            3231	, // Stam Ring +0
+            4771	, // Stam Ring +1
+            2540	, // Stam Ring +2
+            4871	, // Stam Ring +3
+            8588	, // Stam Ring +4
+            3075	, // Stam Ring +5
+            905	    , // Stam Ring +6
+            1957	, // Vigor Ring +0
+            5750	, // Vigor Ring +1
+            4850	, // Vigor Ring +2
+            2057	, // Vigor Ring +3
+            5638	, // Vigor Ring +4
+            4612	, // Vigor Ring +5
+            3739	, // Vigor Ring +6
+        ]
+
+        let filtered = this.items
+        .filter(item => item.category == "jewelry" && item.subcategory == subcategory)
+        .filter(item => item.upgradeLevels || (deprecated.every(x => item.id !== x)));
+        
+        let result = filtered;
+
+        filtered.forEach(item => {
+            if (!item.upgradeLevels) {return;}
+            item.upgradeLevels.slice(1).forEach(upgrade => {
+                let clone = JSON.parse(JSON.stringify(item));
+                // We cheat here. This way we don't need to modify save/load code
+                clone.id = clone.id * 100000 + upgrade.upgradeLevel;
+                clone.level = upgrade.requiredLevel;
+                clone.abilities = upgrade.abilities;
+                clone.name.en += ` +${upgrade.upgradeLevel}`;
+                result.push(clone);
+            })
+        });
+
+        return result;
     }
     static getPiercingCards() {
         return this.items.filter((item) => item.subcategory == "piercingcard");
@@ -210,10 +281,29 @@ export class Utils {
     }
 
     static sortByName(a, b) {
-        if (a.name.en < b.name.en) {
+        let aname = a.name.en.match(/([a-zA-Z ]+)/);
+        let bname = b.name.en.match(/([a-zA-Z ]+)/);
+
+        aname = (aname && aname[1]) || a.name.en;
+        bname = (bname && bname[1]) || b.name.en;
+
+        const alvl = a.name.en.match(/([\d]+)/);
+        const blvl = b.name.en.match(/([\d]+)/);
+
+        const aitemUpLvl = (alvl && Number.parseInt(alvl[1])) || 0;
+        const bitemUpLvl = (blvl && Number.parseInt(blvl[1])) || 0;
+
+        if (aname < bname) {
             return -1;
         }
-        if (a.name.en > b.name.en) {
+        if (aname > bname) {
+            return 1;
+        }
+
+        if (aitemUpLvl < bitemUpLvl) {
+            return -1;
+        }
+        if (aitemUpLvl > bitemUpLvl) {
             return 1;
         }
 
