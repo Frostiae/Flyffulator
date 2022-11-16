@@ -27,7 +27,7 @@ Math.lerp = function (start, end, amount) {
 export class Utils {
     static focus = null;
 
-    static monsters = monstersjson;
+    static monsters = monstersjson.sort((a, b) => a.level < b.level ? -1 : a.level > b.level ? 1 : 0);
     static skills = skillsjson;
     static items = itemsjson;
     static jobs = jobsjson;
