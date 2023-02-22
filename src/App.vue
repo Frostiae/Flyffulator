@@ -206,7 +206,7 @@ export default {
 
 function validateInput(character) {
   character.level = character.level < 1 ? 1 : character.level;
-  character.level = character.level > 120 ? 120 : character.level;
+  character.level = character.level > 140 ? 140 : character.level;
   character.str = character.str < 1 ? 1 : character.str;
   character.sta = character.sta < 1 ? 1 : character.sta;
   character.dex = character.dex < 1 ? 1 : character.dex;

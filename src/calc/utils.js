@@ -29,7 +29,7 @@ export class Utils {
     static classBuffs = false;
     static premiumItems = false;
 
-    static maxLevel = 120;
+    static maxLevel = 140;
 
     // These parameters come in different names, so this object describes those. Used in getExtraParam() etc. in mover.js
     static globalParams = {
