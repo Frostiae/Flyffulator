@@ -1,54 +1,38 @@
-<template>
-  <div class="extensivebasic">
-    <h3>{{ title }}</h3>
-    <p id="expPerKill"> {{ reward.toFixed(3) }}%</p>
-    <h5 id="expPerKillName">at {{ name }} (best value)</h5>
-  </div>
-</template>
+<script setup>
+import { ref, onMounted, watch } from "vue";
+import { Utils } from "../calc/utils";
 
-<script>
-export default {
-  name: 'ExperiencePerKill',
-  data() {
-    return {
-      character: this.$root.character.ref,
-      monsters: this.$root.monsters,
-      title: 'Experience/Kill',
-      reward: 0,
-      name: 'N/A'
-    }
-  },
-  created() { this.getBestExp() },
-  watch: {
-    '$root.monsters'() {
-      this.monsters = this.$root.monsters
-      this.character = this.$root.character.ref
-      this.getBestExp()
-    }
-  },
-  methods: {
-    getBestExp() {
-      let best = null
-      this.monsters.forEach(monster => {
-        if (monster.experience > 0) {
-          const expReward = this.$root.getExpReward(monster, this.character.level)
-          if (best == null || expReward > best.reward) {
-            best = {
-              name: monster.name.en,
-              reward: expReward
-            }
-          }
+const props = defineProps(["character", "focusMonsters"]);
+const bestExperience = ref({ name: "Small Aibatt", reward: 0 });
+
+function getBestExp() {
+    bestExperience.value.reward = 0;
+
+    for (let monster of props.focusMonsters) {
+        const expReward = Utils.getExpReward(monster, props.character.level);
+        if (expReward > bestExperience.value.reward) {
+            bestExperience.value.name = monster.name.en;
+            bestExperience.value.reward = expReward.toFixed(4);
         }
-      })
-
-      if (best) {
-        this.reward = best.reward
-        this.name = best.name
-      }
     }
-  }
 }
+
+onMounted(() => {
+    getBestExp();
+});
+
+watch(
+    () => props.character.level,
+    () => {
+        getBestExp();
+    }
+);
 </script>
 
-<style scoped lang='scss'>
-</style>
+<template>
+    <div class="box basicbox">
+        <h3>Experience/Kill</h3>
+        <p>{{ bestExperience.reward }}%</p>
+        <h5>at {{ bestExperience.name }} (best value)</h5>
+    </div>
+</template>
