@@ -51,7 +51,7 @@ export const jobsjson = [
       "parent": 764,
       "icon": "blade.png",
       "minLevel": 60,
-      "maxLevel": 140,
+      "maxLevel": 120,
       "maxHP": "150+level*30+sta*level*0.3",
       "maxFP": "level*2.4+sta*8.400001",
       "maxMP": "22+level*1.2+int*5.4"
@@ -79,7 +79,7 @@ export const jobsjson = [
       "parent": 9098,
       "icon": "jester.png",
       "minLevel": 60,
-      "maxLevel": 140,
+      "maxLevel": 120,
       "maxHP": "150+level*30+sta*level*0.3",
       "maxFP": "level*2+sta*7",
       "maxMP": "22+level*1+int*4.5"
@@ -107,7 +107,7 @@ export const jobsjson = [
       "parent": 764,
       "icon": "knight.png",
       "minLevel": 60,
-      "maxLevel": 140,
+      "maxLevel": 120,
       "maxHP": "150+level*40+sta*level*0.4",
       "maxFP": "level*3+sta*10.5",
       "maxMP": "22+level*1.2+int*5.4"
@@ -135,7 +135,7 @@ export const jobsjson = [
       "parent": 9581,
       "icon": "psychikeeper.png",
       "minLevel": 60,
-      "maxLevel": 140,
+      "maxLevel": 120,
       "maxHP": "150+level*30+sta*level*0.3",
       "maxFP": "level*0.8+sta*2.8",
       "maxMP": "22+level*4+int*18"
@@ -163,7 +163,7 @@ export const jobsjson = [
       "parent": 8962,
       "icon": "billposter.png",
       "minLevel": 60,
-      "maxLevel": 140,
+      "maxLevel": 120,
       "maxHP": "150+level*36+sta*level*0.36",
       "maxFP": "level*2.2+sta*7.7",
       "maxMP": "22+level*1.8+int*8.1"
@@ -247,7 +247,7 @@ export const jobsjson = [
       "parent": 9581,
       "icon": "elementor.png",
       "minLevel": 60,
-      "maxLevel": 140,
+      "maxLevel": 120,
       "maxHP": "150+level*30+sta*level*0.3",
       "maxFP": "level*0.8+sta*2.8",
       "maxMP": "22+level*4+int*18"
@@ -275,7 +275,7 @@ export const jobsjson = [
       "parent": 9098,
       "icon": "ranger.png",
       "minLevel": 60,
-      "maxLevel": 140,
+      "maxLevel": 120,
       "maxHP": "150+level*32+sta*level*0.32",
       "maxFP": "level*1.2+sta*4.2",
       "maxMP": "22+level*2.4+int*10.8"
@@ -303,7 +303,7 @@ export const jobsjson = [
       "parent": 8962,
       "icon": "ringmaster.png",
       "minLevel": 60,
-      "maxLevel": 140,
+      "maxLevel": 120,
       "maxHP": "150+level*32+sta*level*0.32",
       "maxFP": "level*0.8+sta*2.8",
       "maxMP": "22+level*3.6+int*16.2"

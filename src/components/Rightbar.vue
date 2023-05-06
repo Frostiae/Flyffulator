@@ -1,70 +1,20 @@
-<template>
-  <div class="rightpanel">
-    <div class="panelcontent" id="outputstats">
-      <h5>Max Health</h5>
-      <p v-cloak>{{ format(character.ref.health) || "N/A" }}</p>
-      <h5>Max MP</h5>
-      <p v-cloak>{{ format(character.ref.mp) || "N/A" }}</p>
-      <h5>Max FP</h5>
-      <p v-cloak>{{ format(character.ref.fp) || "N/A" }}</p>
-      <h5>Speed</h5>
-      <p>100%</p>
-      <h5>Casting Speed</h5>
-      <p v-cloak>{{ format(character.ref.DCT) + '%'}}</p>
-      <hr>
-      <h5>Attack</h5>
-      <p v-cloak>{{ format(character.ref.attack) || "N/A" }}</p>
-      <h5>Attack Speed</h5>
-      <p v-cloak>{{ format(character.ref.aspd) + '%' || "N/A" }}</p>
-      <h5>Hit Rate</h5>
-      <p v-cloak>{{ format(character.ref.hitrate) + '%' || "N/A" }}</p>
-      <h5>Critical Chance</h5>
-      <p v-cloak>{{ format(character.ref.criticalChance) + '%' || "N/A" }}</p>
-      <h5>Critical Damage</h5>
-      <p v-cloak>{{ format(character.ref.criticalDamage) + '%' || "N/A" }}</p>
-      <hr>
-      <h5>Defense</h5>
-      <p v-cloak>{{ format(character.ref.defense) || "N/A" }}</p>
-      <h5>Parry</h5>
-      <p v-cloak>{{ format(character.ref.parry) + '%' || "N/A" }}</p>
-      <h5>Melee Block</h5>
-      <p v-cloak>{{ format(character.ref.meleeBlock) + '%' || "N/A" }}</p>
-      <h5>Ranged Block</h5>
-      <p v-cloak>{{ format(character.ref.rangedBlock) + '%' || "N/A" }}</p>
-    </div>
-  </div>
-</template>
+<script setup>
+import Statistics from "./Statistics.vue";
 
-<script>
-export default {
-  name: 'Rightbar',
-  data() {
-    return {
-      character: this.$root.character,
-      format:  (num) => num.toLocaleString('en-US', {
-                minimumFractionDigits: 1,
-                maximumFractionDigits: 1,
-              })
-    }
-  },
-  components: {
-  }
-}
+const props = defineProps(["character"]);
 </script>
 
-<style lang='scss'>
-.rightpanel {
-  position: fixed;
-  height: 100%;
-  overflow-x: hidden;
-  right: 0;
-  top: 0;
-  width: 22vw;
-  max-width: 330px;
-  min-width: 180px;
-  text-align: center;
-  font-weight: 500;
-  transition: 0.3s;
+<template>
+    <div class="sidepanel">
+        <div class="panelcontent">
+            <Statistics :character="props.character" />
+        </div>
+    </div>
+</template>
+
+<style>
+.sidepanel {
+    right: 0;
+    float: right;
 }
 </style>
-

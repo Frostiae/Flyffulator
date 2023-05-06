@@ -1,0 +1,225 @@
+@import './base.css';
+
+#app {
+  margin: 0 0;
+	padding: 0 0;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+	font-weight: normal;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.logo {
+  display: block;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: rgb(0, 189, 173);
+  transition: 0.4s;
+}
+
+a:hover {
+  background-color: hsla(160, 100%, 37%, 0.2);
+}
+
+body {
+	display: flex;
+	place-items: center;
+}
+
+.middle {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidepanel {
+  flex-grow: 1;
+  max-width: 22vw;
+  min-width: 300px;
+  overflow-y: auto;
+  transition: 0.3s;
+  padding: 25px;
+}
+
+.boxrow {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.box {
+  background: var(--vt-c-black-soft);
+  border-radius: 20px;
+  box-shadow: #0000001e 0px 5px 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transform: 0.3s;
+}
+
+.basicbox {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 180px;
+  padding: 20px;
+}
+
+.basicchart {
+  height: 180px;
+  width: 300px;
+}
+
+.bigchart {
+  padding: 40px 20px 0 20px;
+}
+
+p {
+  font-size: 35px;
+  font-weight: 500;
+  color: var(--color-text-value);
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 500;
+  margin-bottom: 8px;
+  transition: 0.3s;
+}
+
+h5 {
+  margin: 3px;
+}
+
+hr {
+  opacity: 0.1;
+  margin: 8px 58px;
+}
+
+.vue-apexcharts {
+  margin-left: -21px;
+  margin-top: -45px;
+  color: black;
+}
+
+.char {
+  margin-bottom: 18px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  min-width: 270px;
+  width: 100%;
+  min-height: 20px;
+  box-shadow: #0000001e 0px 5px 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+table.stattable {
+  text-align: center;
+  margin: 3px;
+  font-size: 14px;
+}
+
+.footer {
+  margin-top: 50px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.btn-plus {
+  font-weight: bolder;
+  font-size: 13px;
+  background: none;
+  border-radius: 15px;
+  border: 1px solid #5975cf31;
+  transition: 0.3s;
+  margin: 0;
+  color: var(--color-text-value);
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &:hover {
+    border: 1px solid #5975cf;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.307);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  &:active {
+    background-color: var(--color-text);
+  }
+
+}
+
+.weaponModel {
+  width: 50%;
+  height: 25%;
+}
+
+select {
+  background: none;
+  color: var(--color-text);
+  margin: 3px;
+  font-weight: 500;
+  border: 1px solid #5975cf00;
+  border-radius: 15px;
+  transition: 0.3s;
+  
+  text-overflow: ellipsis;
+  text-align: center;
+
+  option {
+    color:black;
+  }
+
+  &:active {
+    background-color: var(--color-text);
+  }
+
+  &:hover {
+    border: 1px solid #5975cf;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.307);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+}
+
+.mid-select {
+  border: 1px solid #5975cf25;
+}
+
+input[type=number], input[type=text] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  background: none;
+  border: none;
+  width: 50px;
+  text-align: center;
+  color: var(--color-text-value);
+  font-weight: 500;
+  margin: 2px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=checkbox]#buffs {
+  align-self: center;
+}
