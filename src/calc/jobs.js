@@ -939,6 +939,7 @@ export class Knight extends Mercenary {
                 Utils.getSkillByName("Axe Mastery"),
                 Utils.getSkillByName("Sword Mastery"),
                 Utils.getSkillByName("Protection"),
+                Utils.getSkillByName("Heart of Fury"),
             ],
             attackSpeed: 77.0,
             hps: 2,

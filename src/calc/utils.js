@@ -306,6 +306,21 @@ export class Utils {
         return string.replace(/[/\-\\^$*+?.()|[\]{}]/g, "\\$&");
     }
 
+    static getGameIconUrl(img, path) {
+        let address = "https://api.flyff.com/image/";
+        switch (path) {
+            case "skills":
+                address += "skill/colored/";
+                break;
+            default:
+                address += "item/";
+                break;
+        }
+
+        address += img;
+        return address;
+    }
+
     static getImageUrl(img, path) {
         const rx = new RegExp(Utils.escapeRegex(img), "i");
         let store;

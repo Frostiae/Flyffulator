@@ -55,7 +55,7 @@ function getTooltip(buff) {
                         @change="props.character.data.forceUpdate = !props.character.data.forceUpdate"
                     />
                     <img
-                        :src="Utils.getImageUrl(buff.icon, 'skills')"
+                        :src="Utils.getGameIconUrl(buff.icon, 'skills')"
                         alt=""
                         :title="getTooltip(buff)"
                         :class="{ disabled: buff.enabled == false }"
@@ -92,6 +92,7 @@ ul {
 
 img {
     transition: 0.2s;
+    width: 32px;
 
     &.disabled {
         opacity: 0.2;
