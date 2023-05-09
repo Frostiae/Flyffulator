@@ -351,7 +351,7 @@ export class Utils {
 
     static updateMonsters(character) {
         let level = parseInt(character.level);
-        let ignoreRanks = ["super", "boss", "giant", "violet"];
+        let ignoreRanks = ["super", "boss", "giant", "violet", "worldboss"];
 
         let index = Utils.monsters.findIndex((monster) => monster.level >= level + 1);
 
@@ -368,6 +368,7 @@ export class Utils {
             return (
                 !ignoreRanks.includes(monster.rank) &&
                 monster.experience > 0 &&
+                monster.id !== 779 && // giant chimeradon is "captain"
                 !monster.name.en.includes("Criminal") &&
                 monster.spawns != undefined &&
                 monster.spawns.length > 0
