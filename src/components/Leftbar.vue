@@ -3,6 +3,7 @@ import Character from "./Leftbar/Character.vue";
 import Equipment from "./Leftbar/Equipment.vue";
 import Builds from "./Leftbar/Builds.vue";
 import BuffBox from "./Leftbar/BuffBox.vue";
+import PremiumItems from "./Leftbar/PremiumItems.vue"
 import { ref } from "vue";
 
 const props = defineProps(["character"]);
@@ -20,6 +21,7 @@ function loadEquipment(equipment) {
             <Character :character="props.character" />
             <Equipment :character="props.character" ref="equipmentComponent" />
             <BuffBox :character="props.character" />
+            <PremiumItems :character="props.character" />
         </div>
     </div>
 </template>
