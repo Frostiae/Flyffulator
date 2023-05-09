@@ -97,7 +97,7 @@ function saveCurrentBuild() {
     console.log("Saving current...");
 
     const newStats = {
-        jobName: props.character.data.constructor.name,
+        jobName: Utils.getJobName(props.character.data.jobId),
         newlevel: props.character.data.level,
         str: props.character.data.str,
         sta: props.character.data.sta,
