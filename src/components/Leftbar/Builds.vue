@@ -143,11 +143,7 @@ function loadBuild() {
     if (currentBuild.data.appliedStats && currentBuild.data.equipment) {
         let c = Utils.updateJob(props.character.data, currentBuild.data.appliedStats.jobName);
 
-        if (c) {
-            props.character.data = c;
-        } else {
-            props.character.data = new Vagrant();
-        }
+        props.character.data = c || new Vagrant();
 
         props.character.data.level = currentBuild.data.appliedStats.newlevel;
 

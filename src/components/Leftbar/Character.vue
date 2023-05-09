@@ -4,8 +4,9 @@ import { Utils } from "../../calc/utils";
 
 const props = defineProps(["character"]);
 
+
 const inputBuffer = reactive({
-    newLevel: 1,
+    newLevel: props.character.data.level,
     addStr: 0,
     addSta: 0,
     addDex: 0,
@@ -20,6 +21,12 @@ const inputBuffer = reactive({
     classBuffs: false,
     jobName: props.character.data.constructor.name,
 });
+
+watch(() => props.character.data.level, level => {
+    inputBuffer.newLevel = level;
+    applyStats();
+});
+
 
 window.addEventListener("keypress", (e) => {
     if (e.code == "Enter") {
@@ -98,7 +105,7 @@ function applyStats() {
 function resetCharacter() {
     changeJob("Vagrant");
     inputBuffer.jobName = props.character.data.constructor.name;
-    inputBuffer.newLevel = 1;
+    inputBuffer.newLevel = props.character.data.level;
     inputBuffer.addStr = 0;
     inputBuffer.addSta = 0;
     inputBuffer.addDex = 0;
