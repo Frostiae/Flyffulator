@@ -1,8 +1,8 @@
 <script setup>
-import Character from "./leftbar/Character.vue";
-import Equipment from "./leftbar/Equipment.vue";
-import Builds from "./leftbar/Builds.vue";
-import BuffBox from "./leftbar/BuffBox.vue";
+import Character from "./Leftbar/Character.vue";
+import Equipment from "./Leftbar/Equipment.vue";
+import Builds from "./Leftbar/Builds.vue";
+import BuffBox from "./Leftbar/BuffBox.vue";
 import { ref } from "vue";
 
 const props = defineProps(["character"]);
