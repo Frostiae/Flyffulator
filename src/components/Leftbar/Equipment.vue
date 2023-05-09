@@ -44,11 +44,11 @@ watch(
 
 const offhands = ref([...shields.value]);
 if (props.character.data instanceof Blade) {
-    offhands.value = [...shields.value];
-    offhands.value = offhands.value.concat(weapons.value);
+    offhands.value = shields.value.concat(weapons.value);
 }
 
 function updateEquipment(newEquipment) {
+    updateDropdowns();
 
     props.character.data.armor = byId(armors.value, newEquipment.armor);
     props.character.data.armorUpgrade = newEquipment.armorUpgrade;

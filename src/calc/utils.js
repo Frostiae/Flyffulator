@@ -346,7 +346,7 @@ export class Utils {
             return c;
         }
 
-        return false;
+        return character;
     }
 
     static updateMonsters(character) {
