@@ -5,30 +5,27 @@ import { Utils } from "../../calc/utils";
 
 const props = defineProps(["character"]);
 
-const weapons = reactive({
-    data: Utils.getJobWeapons(props.character.data.jobId).sort(Utils.sortByLevel),
-});
-const armors = reactive({
-    data: Utils.getJobArmors(props.character.data.jobId).sort(Utils.sortByLevel),
-});
-const rings = reactive({ data: Utils.getJewelery("ring").sort(Utils.sortByName) });
-const earrings = reactive({ data: Utils.getJewelery("earring").sort(Utils.sortByName) });
-const necklaces = reactive({ data: Utils.getJewelery("necklace").sort(Utils.sortByName) });
-const piercingCards = reactive({ data: Utils.getPiercingCards().sort(Utils.sortByName) });
-const cloaks = reactive({ data: Utils.getCloaks().sort(Utils.sortByName) });
-const shields = reactive({ data: Utils.getShields().sort(Utils.sortByLevel) });
+const weapons = ref(Utils.getJobWeapons(props.character.data.jobId).sort(Utils.sortByLevel));
+const armors = ref(Utils.getJobArmors(props.character.data.jobId).sort(Utils.sortByLevel));
+
+const rings = ref(Utils.getJewelery("ring").sort(Utils.sortByName));
+const earrings = ref(Utils.getJewelery("earring").sort(Utils.sortByName));
+const necklaces = ref(Utils.getJewelery("necklace").sort(Utils.sortByName));
+const piercingCards = ref(Utils.getPiercingCards().sort(Utils.sortByName));
+const cloaks = ref(Utils.getCloaks().sort(Utils.sortByName));
+const shields = ref(Utils.getShields().sort(Utils.sortByLevel));
 
 const canUseOffhand = ref(false);
 
 function updateDropdowns() {
-    weapons.data = Utils.getJobWeapons(props.character.data.jobId).sort(Utils.sortByLevel);
-    armors.data = Utils.getJobArmors(props.character.data.jobId).sort(Utils.sortByLevel);
-    rings.data = Utils.getJewelery("ring").sort(Utils.sortByName);
-    earrings.data = Utils.getJewelery("earring").sort(Utils.sortByName);
-    necklaces.data = Utils.getJewelery("necklace").sort(Utils.sortByName);
-    piercingCards.data = Utils.getPiercingCards().sort(Utils.sortByName);
-    cloaks.data = Utils.getCloaks().sort(Utils.sortByName);
-    shields.data = Utils.getShields().sort(Utils.sortByLevel);
+    weapons.value = Utils.getJobWeapons(props.character.data.jobId).sort(Utils.sortByLevel);
+    armors.value = Utils.getJobArmors(props.character.data.jobId).sort(Utils.sortByLevel);
+    rings.value = Utils.getJewelery("ring").sort(Utils.sortByName);
+    earrings.value = Utils.getJewelery("earring").sort(Utils.sortByName);
+    necklaces.value = Utils.getJewelery("necklace").sort(Utils.sortByName);
+    piercingCards.value = Utils.getPiercingCards().sort(Utils.sortByName);
+    cloaks.value = Utils.getCloaks().sort(Utils.sortByName);
+    shields.value = Utils.getShields().sort(Utils.sortByLevel);
 }
 
 watch(() => props.character.data.constructor.name, updateDropdowns);
@@ -45,28 +42,28 @@ watch(
     }
 );
 
-const offhands = reactive({ data: [...shields.data] });
+const offhands = ref([...shields.value]);
 if (props.character.data instanceof Blade) {
-    offhands.data = [];
-    offhands.data = [...shields.data];
-    offhands.data = offhands.data.concat(weapons.data);
+    offhands.value = [...shields.value];
+    offhands.value = offhands.value.concat(weapons.value);
 }
 
 function updateEquipment(newEquipment) {
-    props.character.armor = byId(armors.data, newEquipment.armor);
-    props.character.armorUpgrade = newEquipment.armorUpgrade;
-    props.character.mainhandUpgrade = newEquipment.mainhandUpgrade;
-    props.character.offhandUpgrade = newEquipment.offhandUpgrade;
-    props.character.mainhand = byId(weapons.data, newEquipment.mainhand) || Utils.getItemByName("Wooden Sword");
 
-    props.character.offhand = byId(offhands.data.concat(weapons.data), newEquipment.offhand);
-    props.character.earringR = byId(earrings.data, newEquipment.earringR);
-    props.character.earringL = byId(earrings.data, newEquipment.earringL);
-    props.character.necklace = byId(necklaces.data, newEquipment.necklace);
-    props.character.ringR = byId(rings.data, newEquipment.ringR);
-    props.character.ringL = byId(rings.data, newEquipment.ringL);
-    props.character.cloak = byId(cloaks.data, newEquipment.cloak);
-    props.character.suitPiercing = byId(piercingCards.data, newEquipment.suitPiercing);
+    props.character.data.armor = byId(armors.value, newEquipment.armor);
+    props.character.data.armorUpgrade = newEquipment.armorUpgrade;
+    props.character.data.mainhandUpgrade = newEquipment.mainhandUpgrade;
+    props.character.data.offhandUpgrade = newEquipment.offhandUpgrade;
+    props.character.data.mainhand = byId(weapons.value, newEquipment.mainhand) || Utils.getItemByName("Wooden Sword");
+    props.character.data.offhand = byId(offhands.value.concat(weapons.value), newEquipment.offhand);
+
+    props.character.data.earringR = byId(earrings.value, newEquipment.earringR);
+    props.character.data.earringL = byId(earrings.value, newEquipment.earringL);
+    props.character.data.necklace = byId(necklaces.value, newEquipment.necklace);
+    props.character.data.ringR = byId(rings.value, newEquipment.ringR);
+    props.character.data.ringL = byId(rings.value, newEquipment.ringL);
+    props.character.data.cloak = byId(cloaks.value, newEquipment.cloak);
+    props.character.data.suitPiercing = byId(piercingCards.value, newEquipment.suitPiercing);
 }
 
 function byId(arr, id) {
@@ -90,10 +87,9 @@ defineExpose({ updateEquipment });
                             <select
                                 v-model="props.character.data.armor"
                                 id="equipment-select"
-                                @change="updateEquipment"
                             >
                                 <option disabled value="">Select an armor set...</option>
-                                <option v-for="set in armors.data" :value="set" :key="set.id">
+                                <option v-for="set in armors" :value="set" :key="set.id">
                                     {{ set.name.en }}
                                 </option>
                             </select>
@@ -104,7 +100,6 @@ defineExpose({ updateEquipment });
                                 @click="
                                     {
                                         props.character.data.armor = null;
-                                        updateEquipment();
                                     }
                                 "
                             >
@@ -120,7 +115,6 @@ defineExpose({ updateEquipment });
                                 v-model="props.character.data.armorUpgrade"
                                 id="equipment-select"
                                 :disabled="!props.character.data.armor"
-                                @change="updateEquipment"
                             >
                                 <option disabled value="">Select an upgrade level...</option>
                                 <option v-for="(e, i) in 11" :value="i" :key="i">+{{ i }}</option>
@@ -134,10 +128,9 @@ defineExpose({ updateEquipment });
                             <select
                                 v-model="props.character.data.mainhand"
                                 id="equipment-select"
-                                @change="updateEquipment"
                             >
                                 <option disabled value="">Select a weapon...</option>
-                                <option v-for="weapon in weapons.data" :value="weapon" :key="weapon.id">
+                                <option v-for="weapon in weapons" :value="weapon" :key="weapon.id">
                                     Lv. {{ weapon.level }} {{ weapon.name.en }}
                                 </option>
                             </select>
@@ -151,7 +144,6 @@ defineExpose({ updateEquipment });
                             <select
                                 v-model="props.character.data.mainhandUpgrade"
                                 id="equipment-select"
-                                @change="updateEquipment"
                             >
                                 <option disabled value="">Select an upgrade level...</option>
                                 <option v-for="(e, i) in 11" :value="i" :key="i">+{{ i }}</option>
@@ -165,11 +157,10 @@ defineExpose({ updateEquipment });
                             <select
                                 v-model="props.character.data.offhand"
                                 id="equipment-select"
-                                @change="updateEquipment"
                                 :disabled="!canUseOffhand"
                             >
                                 <option disabled value="">Select an offhand...</option>
-                                <option v-for="offhand in offhands.data" :value="offhand" :key="offhand.id">
+                                <option v-for="offhand in offhands" :value="offhand" :key="offhand.id">
                                     Lv. {{ offhand.level }} {{ offhand.name.en }}
                                 </option>
                             </select>
@@ -180,7 +171,6 @@ defineExpose({ updateEquipment });
                                 @click="
                                     {
                                         props.character.data.offhand = null;
-                                        updateEquipment();
                                     }
                                 "
                             >
@@ -195,7 +185,6 @@ defineExpose({ updateEquipment });
                             <select
                                 v-model="props.character.data.offhandUpgrade"
                                 id="equipment-select"
-                                @change="updateEquipment"
                                 :disabled="!props.character.data.offhand"
                             >
                                 <option disabled value="">Select an upgrade level...</option>
@@ -210,10 +199,9 @@ defineExpose({ updateEquipment });
                             <select
                                 v-model="props.character.data.earringR"
                                 id="equipment-select"
-                                @change="updateEquipment"
                             >
                                 <option disabled value="">Select an earring...</option>
-                                <option v-for="earring in earrings.data" :value="earring" :key="earring.id">
+                                <option v-for="earring in earrings" :value="earring" :key="earring.id">
                                     Lv. {{ earring.level }} {{ earring.name.en }}
                                 </option>
                             </select>
@@ -224,7 +212,6 @@ defineExpose({ updateEquipment });
                                 @click="
                                     {
                                         props.character.data.earringR = null;
-                                        updateEquipment();
                                     }
                                 "
                             >
@@ -239,10 +226,9 @@ defineExpose({ updateEquipment });
                             <select
                                 v-model="props.character.data.earringL"
                                 id="equipment-select"
-                                @change="updateEquipment"
                             >
                                 <option disabled value="">Select an earring...</option>
-                                <option v-for="earring in earrings.data" :value="earring" :key="earring.id">
+                                <option v-for="earring in earrings" :value="earring" :key="earring.id">
                                     Lv. {{ earring.level }} {{ earring.name.en }}
                                 </option>
                             </select>
@@ -253,7 +239,6 @@ defineExpose({ updateEquipment });
                                 @click="
                                     {
                                         props.character.data.earringL = null;
-                                        updateEquipment();
                                     }
                                 "
                             >
@@ -268,10 +253,9 @@ defineExpose({ updateEquipment });
                             <select
                                 v-model="props.character.data.necklace"
                                 id="equipment-select"
-                                @change="updateEquipment"
                             >
                                 <option disabled value="">Select a necklace...</option>
-                                <option v-for="necklace in necklaces.data" :value="necklace" :key="necklace.id">
+                                <option v-for="necklace in necklaces" :value="necklace" :key="necklace.id">
                                     Lv. {{ necklace.level }} {{ necklace.name.en }}
                                 </option>
                             </select>
@@ -282,7 +266,6 @@ defineExpose({ updateEquipment });
                                 @click="
                                     {
                                         props.character.data.necklace = null;
-                                        updateEquipment();
                                     }
                                 "
                             >
@@ -297,10 +280,9 @@ defineExpose({ updateEquipment });
                             <select
                                 v-model="props.character.data.ringR"
                                 id="equipment-select"
-                                @change="updateEquipment"
                             >
                                 <option disabled value="">Select a ring...</option>
-                                <option v-for="ring in rings.data" :value="ring" :key="ring.id">
+                                <option v-for="ring in rings" :value="ring" :key="ring.id">
                                     Lv. {{ ring.level }} {{ ring.name.en }}
                                 </option>
                             </select>
@@ -311,7 +293,6 @@ defineExpose({ updateEquipment });
                                 @click="
                                     {
                                         props.character.data.ringR = null;
-                                        updateEquipment();
                                     }
                                 "
                             >
@@ -326,10 +307,9 @@ defineExpose({ updateEquipment });
                             <select
                                 v-model="props.character.data.ringL"
                                 id="equipment-select"
-                                @change="updateEquipment"
                             >
                                 <option disabled value="">Select a ring...</option>
-                                <option v-for="ring in rings.data" :value="ring" :key="ring.id">
+                                <option v-for="ring in rings" :value="ring" :key="ring.id">
                                     Lv. {{ ring.level }} {{ ring.name.en }}
                                 </option>
                             </select>
@@ -340,7 +320,6 @@ defineExpose({ updateEquipment });
                                 @click="
                                     {
                                         props.character.data.ringL = null;
-                                        updateEquipment();
                                     }
                                 "
                             >
@@ -355,10 +334,9 @@ defineExpose({ updateEquipment });
                             <select
                                 v-model="props.character.data.cloak"
                                 id="equipment-select"
-                                @change="updateEquipment"
                             >
                                 <option disabled value="">Select a cloak...</option>
-                                <option v-for="cloak in cloaks.data" :value="cloak" :key="cloak.id">
+                                <option v-for="cloak in cloaks" :value="cloak" :key="cloak.id">
                                     {{ cloak.name.en }}
                                 </option>
                             </select>
@@ -369,7 +347,6 @@ defineExpose({ updateEquipment });
                                 @click="
                                     {
                                         props.character.data.cloak = null;
-                                        updateEquipment();
                                     }
                                 "
                             >
@@ -384,10 +361,9 @@ defineExpose({ updateEquipment });
                             <select
                                 v-model="props.character.data.suitPiercing"
                                 id="equipment-select"
-                                @change="updateEquipment"
                             >
                                 <option disabled value="">Select a card...</option>
-                                <option v-for="card in piercingCards.data" :value="card" :key="card.id">
+                                <option v-for="card in piercingCards" :value="card" :key="card.id">
                                     {{ card.name.en }}
                                 </option>
                             </select>
@@ -398,7 +374,6 @@ defineExpose({ updateEquipment });
                                 @click="
                                     {
                                         props.character.data.suitPiercing = null;
-                                        updateEquipment();
                                     }
                                 "
                             >
