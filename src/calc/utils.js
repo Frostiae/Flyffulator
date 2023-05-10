@@ -244,7 +244,8 @@ export class Utils {
     }
 
     static updateJob(character, job) {
-        if (character.constructor.name != job) {
+        const currentCharacterJobName = this.getJobName(character.jobId);
+        if (currentCharacterJobName != job) {
             let stats = {
                 str: character.str,
                 sta: character.sta,

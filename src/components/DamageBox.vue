@@ -6,7 +6,7 @@ const props = defineProps(["character", "focus", "skill"]);
 const skills = reactive({ data: Utils.getJobSkills(props.character.data.jobId) });
 
 watch(
-    () => props.character.data.constructor.name,
+    () => props.character.data.jobId,
     () => {
         skills.data = Utils.getJobSkills(props.character.data.jobId);
     }

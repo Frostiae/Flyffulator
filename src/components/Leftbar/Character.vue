@@ -18,7 +18,7 @@ const inputBuffer = reactive({
     assistBuffs: false,
     premiumItems: false,
     classBuffs: false,
-    jobName: props.character.data.constructor.name,
+    jobName: Utils.getJobName(props.character.data.jobId)
 });
 
 window.addEventListener("keypress", (e) => {
@@ -97,7 +97,7 @@ function applyStats() {
 
 function resetCharacter() {
     changeJob("Vagrant");
-    inputBuffer.jobName = props.character.data.constructor.name;
+    inputBuffer.jobName = Utils.getJobName(props.character.data.jobId);
     inputBuffer.newLevel = 1;
     inputBuffer.addStr = 0;
     inputBuffer.addSta = 0;
@@ -146,7 +146,7 @@ function updateStatPoints() {
 watch(
     () => props.character.data,
     () => {
-        inputBuffer.jobName = props.character.data.constructor.name;
+        inputBuffer.jobName = Utils.getJobName(props.character.data.jobId);
     }
 );
 

@@ -31,7 +31,7 @@ function updateDropdowns() {
     shields.data = Utils.getShields().sort(Utils.sortByLevel);
 }
 
-watch(() => props.character.data.constructor.name, updateDropdowns);
+watch(() => props.character.data.jobId, updateDropdowns);
 
 watch(
     () => props.character.data.mainhand,
