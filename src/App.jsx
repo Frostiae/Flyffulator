@@ -75,7 +75,8 @@ function App() {
   const buildOptions = {};
   for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i);
-    if (key.startsWith("i18")) {
+    //Dont try to load the key saved from i18n
+    if (key.startsWith("i18next")) {
       continue;
     }
 
@@ -103,11 +104,12 @@ function App() {
   if (loadedBuild == null) {
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);
-      if (key.startsWith("i18")) {
+      if (key.startsWith("i18next")) {
         continue;
       }
   
       loadBuild(localStorage.key(i));
+      break;
     }
   }
 
