@@ -11,14 +11,18 @@ import { useTranslation } from "react-i18next";
 function ItemEdit({ itemElem }) {
     const [state, setState] = useState(false);
     const { showSearch } = useSearch();
-    const { t } = useTranslation();
+    const { i18n } = useTranslation();
+    var shortCode = "en";
+    if(i18n.resolvedLanguage) {
+        shortCode = i18n.resolvedLanguage.split('-')[0];
+    }
 
     if (itemElem == null) {
         return (
             <div className="item-edit">
-                {t("no_item_selected")}
+                {i18n.t("no_item_selected")}
                 <br />
-                {t("no_item_selected_explanation")}
+                {i18n.t("no_item_selected_explanation")}
             </div>
         );
     }
@@ -197,7 +201,7 @@ function ItemEdit({ itemElem }) {
                 }
             </div>
             <p style={{ maxWidth: "300px", fontStyle: "italic", margin: "0" }}>
-                {itemElem.itemProp.description.en != "null" && itemElem.itemProp.description.en}
+                {itemElem.itemProp.description.en != "null" && (itemElem.itemProp.description[shortCode] ?? itemElem.itemProp.description.en)}
             </p>
             {
                 itemElem.isOriginAwakeAble() &&

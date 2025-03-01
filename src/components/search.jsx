@@ -9,10 +9,16 @@ import Context from "../flyff/flyffcontext";
 import * as Utils from "../flyff/flyffutils";
 import ItemElem from "../flyff/flyffitemelem";
 import monsters from "../assets/Monsters.json";
+import { useTranslation } from "react-i18next";
 
 function Search() {
     const { isSearchOpen, searchProperties, hideSearch } = useSearch();
     const [results, setResults] = useState([]);
+    const { i18n } = useTranslation();
+    var shortCode = "en";
+    if(i18n.resolvedLanguage) {
+        shortCode = i18n.resolvedLanguage.split('-')[0];
+    }
 
     if (!isSearchOpen) {
         return null;
@@ -54,8 +60,16 @@ function Search() {
                         }
                     }
 
-                    if (item.name.en.toLowerCase().includes(query)) {
-                        res.push(new ItemElem(item));
+                    //Check if the item supports that locale
+                    var selectedLanguageItemName = item.name[shortCode]
+                    if(selectedLanguageItemName) {
+                        if (selectedLanguageItemName.toLowerCase().includes(query)) {
+                            res.push(new ItemElem(item));
+                        }
+                    } else {
+                        if (item.name.en.toLowerCase().includes(query)) {
+                            res.push(new ItemElem(item));
+                        }
                     }
                 }
             }
@@ -93,9 +107,9 @@ function Search() {
     return (
         <div className="search-modal" onClick={close} onKeyDown={(e) => { if (e.key == "Escape") close(); }}>
             <div id="search-box" onClick={(e) => e.stopPropagation()}>
-                <div className="window-title">Search</div>
+                <div className="window-title">{i18n.t("search_title")}</div>
                 <div className="window-content">
-                    <input type="text" name="query" autoFocus id="search-field" placeholder={`Search for a ${searchProperties.type}...`} onChange={e => search(e.target.value)} />
+                    <input type="text" name="query" autoFocus id="search-field" placeholder={i18n.t("search_placeholder", { type: searchProperties.type,})} onChange={e => search(e.target.value)} />
                     {
                         results.length > 0 &&
                         <hr />
@@ -121,7 +135,7 @@ function Search() {
                                     }}
                                 >
                                     <Slot className={"slot-item"} content={result} />
-                                    <span style={{ color: Utils.getItemNameColor(result.itemProp) }}>{result.itemProp.name.en}</span>
+                                    <span style={{ color: Utils.getItemNameColor(result.itemProp) }}>{result.itemProp.name[shortCode] ?? result.itemProp.name.en}</span>
                                 </div>
                             )
                         }

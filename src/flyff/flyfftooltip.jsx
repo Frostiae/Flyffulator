@@ -5,24 +5,30 @@ import Context from "../flyff/flyffcontext";
 /**
  * Create a tooltip for the given item or skill
  * @param {object} content The item or skill
+ * @param {object} i18n Localization
  * @returns a JSX element conatining the tooltip
  */
-export function createTooltip(content) {
+export function createTooltip(content, i18n) {
     if (content instanceof ItemElem) {
-        return setupItem(content);
+        return setupItem(content, i18n);
     }
     else {
-        return setupSkill(content);
+        return setupSkill(content, i18n);
     }
 }
 
 /**
  * Get the tooltip text for the given item
  * @param {object} itemElem The item elem
+ * @param {object} i18n Localization
  */
-function setupItem(itemElem) {
+function setupItem(itemElem, i18n) {
     const out = [];
     const itemProp = itemElem.itemProp;
+    var shortLanguageCode = "en";
+    if(i18n.resolvedLanguage) {
+        shortLanguageCode = i18n.resolvedLanguage.split('-')[0];
+    }
 
     const isUltimate = itemProp.rarity == "ultimate";
 
@@ -50,7 +56,7 @@ function setupItem(itemElem) {
     out.push(<span style={{
         fontWeight: 700,
         color: Utils.getItemNameColor(itemProp)
-    }}>{itemProp.name.en}</span>);
+    }}>{itemProp.name[shortLanguageCode] ?? itemProp.name.en}</span>);
 
     // TODO: Origin awakes (STA+, etc.)
 
@@ -74,20 +80,20 @@ function setupItem(itemElem) {
     }
     else if (itemProp.category == "weapon") {
         if (itemProp.twoHanded) {
-            out.push("\nTwo-handed weapon.")
+            out.push(`\n${i18n.t("tooltip_two_handed")}`)
         }
         else {
-            out.push("\nOne-handed weapon.")
+            out.push(`\n${i18n.t("tooltip_one_handed")}`)
         }
     }
 
     // Sex
 
     if (itemProp.sex == "male") {
-        out.push("\nSex: Male");
+        out.push(`\n${i18n.t("tooltip_sex_male")}`);
     }
     else if (itemProp.sex == "female") {
-        out.push("\nSex: Female");
+        out.push(`\n${i18n.t("tooltip_sex_female")}`);
     }
 
     // Attack & Defense
@@ -135,10 +141,10 @@ function setupItem(itemElem) {
         }
 
         if (isAttack) {
-            out.push(`\nAttack: `);
+            out.push(`\n${i18n.t("tooltip_attack")}`);
         }
         else {
-            out.push(`\nDefense: `);
+            out.push(`\n${i18n.t("tooltip_defense")}`);
         }
 
         out.push(<span style={baseStyle}>{ability.min} ~ {ability.max}</span>);
@@ -156,7 +162,7 @@ function setupItem(itemElem) {
     }
 
     if (itemProp.attackSpeed != undefined) {
-        out.push(`\nAttack speed: ${itemProp.attackSpeed}`);
+        out.push(`\n${i18n.t("tooltip_attack_speed")}${itemProp.attackSpeed}`);
     }
 
     // Element
@@ -166,7 +172,7 @@ function setupItem(itemElem) {
         out.push(`\n${itemElem.element}+${itemElem.elementUpgradeLevel}`);
     }
     if (itemProp.element != "none") {
-        out.push(`\nElement: ${itemProp.element}`);
+        out.push(`\n${i18n.t("tooltip_element")}${itemProp.element}`);
     }
 
     // Stats
@@ -245,13 +251,13 @@ function setupItem(itemElem) {
         for (const ability of itemProp.abilities) {
             switch (ability.parameter) {
                 case "fp":
-                    out.push(`\nRestore FP: ${ability.add}`);
+                    out.push(`\n${i18n.t("tooltip_restore_fp")}${ability.add}`);
                     break;
                 case "mp":
-                    out.push(`\nRestore MP: ${ability.add}`);
+                    out.push(`\n${i18n.t("tooltip_restore_mp")}${ability.add}`);
                     break;
                 default:
-                    out.push(`\nRestore HP: ${ability.add}`);
+                    out.push(`\n${i18n.t("tooltip_restore_hp")}${ability.add}`);
                     break;
             }
         }
@@ -279,14 +285,14 @@ function setupItem(itemElem) {
     if (itemProp.class != undefined) {
         const job = Utils.getClassById(itemProp.class);
         if (job != undefined) {
-            out.push(`\nReq Job: ${job.name.en}`);
+            out.push(`\n${i18n.t("tooltip_required_job")}${job.name[shortLanguageCode] ?? job.name.en}`);
         }
     }
 
     // Level
 
     if (itemProp.level != undefined && itemProp.level > 1) {
-        out.push(`\nRequired Level: ${itemProp.level}`);
+        out.push(`\n${i18n.t("tooltip_required_level")}${itemProp.level}`);
     }
 
     // Required material item level
@@ -299,17 +305,17 @@ function setupItem(itemElem) {
 
     // Rarity
 
-    out.push(`\nRarity: `);
+    out.push(`\n${i18n.t("tooltip_rarity")}`);
     out.push(<span style={{ color: Utils.getItemNameColor(itemProp) }}>{itemProp.rarity}</span>);
 
     // Description
 
     if (itemProp.description.en != "null") {
         if (itemProp.category == "raisedpet") {
-            out.push(<span style={{ color: "#d386ff" }}><br />{itemProp.description.en}</span>);
+            out.push(<span style={{ color: "#d386ff" }}><br />{itemProp.description[shortLanguageCode] ?? itemProp.description.en}</span>);
         }
         else {
-            out.push(`\nDescription: ${itemProp.description.en}`);
+            out.push(`\n${i18n.t("tooltip_description")}${itemProp.description[shortLanguageCode] ?? itemProp.description.en}`);
         }
     }
 
@@ -337,12 +343,12 @@ function setupItem(itemElem) {
         const set = Utils.getEquipSetByItemId(itemProp.id);
         if (set != null) {
             const equippedCount = Context.player.getEquipSetPieceCountByItem(itemProp);
-            out.push(`\n\n${set.name.en} (${equippedCount}/${set.parts.length})`);
+            out.push(`\n\n${set.name[shortLanguageCode] ?? set.name.en} (${equippedCount}/${set.parts.length})`);
 
             for (const part of set.parts) {
                 const item = Utils.getItemById(part);
                 if (item != undefined) {
-                    out.push(<span style={{ color: "#01ab19" }}><br />    {item.name.en}</span>);
+                    out.push(<span style={{ color: "#01ab19" }}><br />    {item.name[shortLanguageCode] ?? item.name.en}</span>);
                 }
             }
 
@@ -377,7 +383,7 @@ function setupItem(itemElem) {
     if (itemElem.skillAwake != null) {
         if (itemElem.skillAwake.skill != undefined) {
             const skill = Utils.getSkillById(itemElem.skillAwake.skill);
-            out.push(<span style={{ color: "#ff007b" }}><br />{skill.name.en} damage+{itemElem.skillAwake.add}%</span>)
+            out.push(<span style={{ color: "#ff007b" }}><br />{skill.name[shortLanguageCode] ?? skill.name.en} damage+{itemElem.skillAwake.add}%</span>)
         }
         else if (itemElem.skillAwake.parameter != undefined) {
             out.push(<span style={{ color: "#ff007b" }}><br />{itemElem.skillAwake.parameter}+{itemElem.skillAwake.add}%</span>)
@@ -422,14 +428,19 @@ function setupItem(itemElem) {
 /**
  * Get the tooltip text for the given skill
  * @param {object} skill The skill property
+ * @param {I18n} i18n Localization
  */
-function setupSkill(skill) {
+function setupSkill(skill, i18n) {
     const out = [];
+    var shortLanguageCode = "en";
+    if(i18n.resolvedLanguage) {
+        shortLanguageCode = i18n.resolvedLanguage.split('-')[0];
+    }
 
     const skillLevel = Context.player.skillLevels[skill.id];
     const levelProp = skillLevel != undefined ? skill.levels[skillLevel - 1] : skill.levels[0];
 
-    out.push(<span style={{ color: "#2fbe6d", fontWeight: 600 }}>{skill.name.en}</span>);
+    out.push(<span style={{ color: "#2fbe6d", fontWeight: 600 }}>{skill.name[shortLanguageCode] ?? skill.name.en}</span>);
     if (skillLevel != undefined) {
         out.push(`  Lv. ${skillLevel}`);
     }
@@ -451,10 +462,10 @@ function setupSkill(skill) {
         const playerLevel = Context.player.skillLevels[requirement.skill];
 
         if (playerLevel == undefined || playerLevel < requirement.level) {
-            out.push(<span style={{ color: "#ff0000" }}><br />{req.name.en} skill level {requirement.level} is needed.</span>);
+            out.push(<span style={{ color: "#ff0000" }}><br />{req.name[shortLanguageCode] ?? req.name.en} skill level {requirement.level} is needed.</span>);
         }
         else {
-            out.push(`\n${req.name.en} skill level ${requirement.level} is needed.`);
+            out.push(`\n${req.name[shortLanguageCode] ?? req.name.en} skill level ${requirement.level} is needed.`);
         }
     }
 
@@ -597,7 +608,7 @@ function setupSkill(skill) {
         }
     }
 
-    out.push(`\n${skill.description.en}`);
+    out.push(`\n${skill.description[shortLanguageCode] ?? skill.description.en}`);
 
     return (<div>{out.map((v, i) => <span key={i}>{v}</span>)}</div>);
 }

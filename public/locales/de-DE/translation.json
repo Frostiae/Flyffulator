@@ -21,5 +21,22 @@
     "skills_and_buffs_active_items": "Aktive Items",
     "skills_and_buffs_active_buffs": "Aktive Buffs",
     "skills_and_buffs_add": "Hinzufügen",
-    "skills_and_buffs_skills_points_available": "Skillpunkte verfügbar"
+    "skills_and_buffs_skills_points_available": "Skillpunkte verfügbar",
+    "tooltip_attack": "Schaden: ",
+    "tooltip_defense": "Defense: ",
+    "tooltip_rarity": "Seltenheit: ",
+    "tooltip_required_job": "Job: ",
+    "tooltip_required_level": "Level: ",
+    "tooltip_attack_speed": "Angriffsgeschw.: ",
+    "tooltip_element": "Element: ",
+    "tooltip_restore_mp": "Restore MP: ",
+    "tooltip_restore_hp": "Restore HP: ",
+    "tooltip_restore_fp": "Restore FP: ",
+    "tooltip_description": "Description: ",
+    "tooltip_sex_male": "Geschlecht: Männlich",
+    "tooltip_sex_female": "Geschlecht: Weiblich",
+    "tooltip_one_handed": "Einhandwaffe",
+    "tooltip_two_handed": "Zweihandwaffe",
+    "search_placeholder": "Suche nach einem {{type}}...",
+    "search_title": "Suchen"
 }
