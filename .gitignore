@@ -8,22 +8,15 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-.DS_Store
 dist
 dist-ssr
-coverage
 *.local
-
-*/assets/*
-!src/assets/*
-
-/cypress/videos/
-/cypress/screenshots/
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
+.DS_Store
 *.suo
 *.ntvs*
 *.njsproj

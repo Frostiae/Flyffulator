@@ -1,0 +1,185 @@
+import { useSearch } from "../searchcontext";
+import { useState } from "react";
+
+import Slot from '../components/slot';
+import items from "../assets/Items.json";
+import Entity from "../flyff/flyffentity";
+import skills from "../assets/Skills.json";
+import Context from "../flyff/flyffcontext";
+import * as Utils from "../flyff/flyffutils";
+import ItemElem from "../flyff/flyffitemelem";
+import monsters from "../assets/Monsters.json";
+
+function Search() {
+    const { isSearchOpen, searchProperties, hideSearch } = useSearch();
+    const [results, setResults] = useState([]);
+
+    if (!isSearchOpen) {
+        return null;
+    }
+
+    function search(query) {
+        let res = [];
+
+        if (query.length >= 3) {
+            query = query.toLowerCase();
+
+            if (searchProperties.type == "item") {
+                for (const [_, item] of Object.entries(items)) {
+                    if (searchProperties.checkCanUse) {
+                        if (!Context.player.canUseItem(item)) {
+                            continue;
+                        }
+                    }
+
+                    if (searchProperties.subcategory != null) {
+                        if (searchProperties.subcategory instanceof Array) {
+                            if (!searchProperties.subcategory.includes(item.subcategory)) {
+                                continue;
+                            }
+                        }
+                        else if (item.subcategory != searchProperties.subcategory) {
+                            continue;
+                        }
+                    }
+
+                    if (searchProperties.category != null) {
+                        if (searchProperties.category instanceof Array) {
+                            if (!searchProperties.category.includes(item.category)) {
+                                continue;
+                            }
+                        }
+                        else if (item.category != searchProperties.category) {
+                            continue;
+                        }
+                    }
+
+                    if (item.name.en.toLowerCase().includes(query)) {
+                        res.push(new ItemElem(item));
+                    }
+                }
+            }
+            else if (searchProperties.type == "monster") {
+                for (const [_, monster] of Object.entries(monsters)) {
+                    if (monster.name.en.toLowerCase().includes(query)) {
+                        res.push(new Entity(monster));
+                    }
+                }
+
+                res.sort((a, b) => a.level - b.level);
+            }
+            else if (searchProperties.type == "skill") {
+                for (const [_, skill] of Object.entries(skills)) {
+                    if (skill.name.en.toLowerCase().includes(query)) {
+                        res.push(skill);
+                    }
+                }
+            }
+        }
+
+        setResults(res);
+    }
+
+    function close() {
+        setResults([]);
+        hideSearch();
+    }
+
+    function handleItemClick(result) {
+        searchProperties.onSet(result);
+        close();
+    }
+
+    return (
+        <div className="search-modal" onClick={close} onKeyDown={(e) => { if (e.key == "Escape") close(); }}>
+            <div id="search-box" onClick={(e) => e.stopPropagation()}>
+                <div className="window-title">Search</div>
+                <div className="window-content">
+                    <input type="text" name="query" autoFocus id="search-field" placeholder={`Search for a ${searchProperties.type}...`} onChange={e => search(e.target.value)} />
+                    {
+                        results.length > 0 &&
+                        <hr />
+                    }
+                    <div id="search-results">
+                        {
+                            searchProperties.type == "item" &&
+                            results.map(result =>
+                                <div id="search-result" key={result.itemProp.id} onClick={() => handleItemClick(result)} tabIndex={0}
+                                    onKeyDown={(e) => {
+                                        if (e.key == "Enter") {
+                                            handleItemClick(result);
+                                        }
+
+                                        if (e.key == "ArrowDown") {
+                                            e.currentTarget.nextSibling && e.currentTarget.nextSibling.focus();
+                                        }
+                                        if (e.key == "ArrowUp") {
+                                            e.currentTarget.previousSibling && e.currentTarget.previousSibling.focus();
+                                        }
+
+                                        e.preventDefault(); // prevent scrolling
+                                    }}
+                                >
+                                    <Slot className={"slot-item"} content={result} />
+                                    <span style={{ color: Utils.getItemNameColor(result.itemProp) }}>{result.itemProp.name.en}</span>
+                                </div>
+                            )
+                        }
+
+                        {
+                            searchProperties.type == "monster" &&
+                            results.map(result =>
+                                <div id="search-result" key={result.monsterProp.id} onClick={() => handleItemClick(result)} tabIndex={0}
+                                    onKeyDown={(e) => {
+                                        if (e.key == "Enter") {
+                                            handleItemClick(result);
+                                        }
+
+                                        if (e.key == "ArrowDown") {
+                                            e.currentTarget.nextSibling && e.currentTarget.nextSibling.focus();
+                                        }
+                                        if (e.key == "ArrowUp") {
+                                            e.currentTarget.previousSibling && e.currentTarget.previousSibling.focus();
+                                        }
+
+                                        e.preventDefault(); // prevent scrolling
+                                    }}
+                                >
+                                    <img style={{ width: 32, height: 32, objectFit: "contain" }} src={`https://api.flyff.com/image/monster/${result.monsterProp.icon}`} alt={result.monsterProp.name.en} />
+                                    <span>{result.monsterProp.name.en} (level {result.monsterProp.level})</span>
+                                </div>
+                            )
+                        }
+
+                        {
+                            searchProperties.type == "skill" &&
+                            results.map(result =>
+                                <div id="search-result" key={result.id} onClick={() => handleItemClick(result)} tabIndex={0}
+                                    onKeyDown={(e) => {
+                                        if (e.key == "Enter") {
+                                            handleItemClick(result);
+                                        }
+
+                                        if (e.key == "ArrowDown") {
+                                            e.currentTarget.nextSibling && e.currentTarget.nextSibling.focus();
+                                        }
+                                        if (e.key == "ArrowUp") {
+                                            e.currentTarget.previousSibling && e.currentTarget.previousSibling.focus();
+                                        }
+
+                                        e.preventDefault(); // prevent scrolling
+                                    }}
+                                >
+                                    <Slot className={"slot-skill"} content={result} />
+                                    <span>{result.name.en}</span>
+                                </div>
+                            )
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default Search;

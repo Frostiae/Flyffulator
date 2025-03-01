@@ -1,36 +1,31 @@
-<p align="center">
-  <a href="https://flyffulator.com/">
-    <img src="https://i.imgur.com/K7ylR3y.png" alt="flyffulator" width="256" height="256">
-  </a>
-</p>
+<table align="center">
+  <tr>
+    <td>
+      <img src="https://i.imgur.com/8F2kGqQ.png" alt="flyffulator" width="64" height="64">
+    </td>
+    <td>
+      <h1>Flyffulator</h1>
+    </td>
+  </tr>
+</table>
 
 <h3 align="center">
   <b>
-      Flyffulator - The extensive Flyff simulator
+    Flyff simulator and damage calculator
   </b>
 </h3>
 
 ## About
-Flyffulator is a [website](https://flyffulator.com/) for [Flyff Universe](https://discord.gg/flyffuniverse) players to simulate characters and be able to calculate an optimal build or leveling strategy. 
+Flyffulator is a [website](https://flyffulator.com/) for [Flyff Universe](https://universe.flyff.com/) players to simulate characters and be able to calculate an optimal build.
 
-- [x] Highest experience per kill monster at your level.
-- [x] Kills per level chart for the relevant monsters.
-- [x] Experience-to-Health ratio chart for the relevant.
-- [x] An extensive hits per level chart for the relevant monsters.
-- [x] Relevant skills' damage calculations.
-- [x] General stat calculations.
-- [x] Assist buffs calculation.
-- [x] Class-specific buffs calculation and option.
-- [x] Equipment bonus calculation.
-- [x] Equipment customization. 
-- [x] Skill options.
-- [ ] Mobile browser support.
+Flyffulator allows you to calculate both offensive and defensive capabilities, skills and auto attacks, and provides the full build customization possibilities of the game.
 
+The website design was built with the aim to look identical to the game, so that everything is familiar and easy to use. All tooltips, icons, buttons, tabs, and other UI elements are identical to the game's golden theme.
 <p align="center">
-  <img src="https://i.imgur.com/o83SQru.png" alt="flyffulator" width=75%>
+  <img src="https://i.imgur.com/J64fpSJ.png" alt="flyffulator" width=75%>
 </p>
 
-This project uses [Pyff](https://github.com/Frostiae/Pyff), a python wrapper for the [Flyff Universe](https://api.flyff.com/) API, [ApexCharts](https://apexcharts.com/) for chart and graph rendering, Vue3, and Vite4.
+This project uses [Pyff](https://github.com/Frostiae/Pyff), a python wrapper for the [Flyff Universe](https://api.flyff.com/) API, [Chart.js](https://www.chartjs.org/) for chart and graph rendering, Bun, Vite, and React.
 
 ## Installation for development
 Clone the repository into any directory.
@@ -40,10 +35,10 @@ git clone https://github.com/Frostiae/Flyffulator.git
 
 Start a terminal in the directory of the step from above, and run the following command.
 ```
-npm install
+bun install
 ```
 
 In the same directory, start the local server by running the following.
 ```
-npm run dev
+bun run dev
 ```

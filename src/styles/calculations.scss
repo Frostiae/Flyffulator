@@ -1,0 +1,142 @@
+@use "./variables.scss" as v;
+
+#calculations {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  width: 100%;
+}
+
+#basic-stats {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-width: 260px;
+}
+
+.basic-stat {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  background-color: v.$stat-bg-color;
+  border-radius: 3px;
+  padding: 3px 12px;
+  min-width: 100px;
+
+  &:hover {
+    background-color: v.$stat-bg-color-hover;
+  }
+
+  .basic-value {
+    text-align: right;
+    flex-grow: 1;
+    font-weight: 700;
+    min-width: 50px;
+  }
+
+  a {
+    display: flex;
+  }
+}
+
+#extra-stats {
+  flex-grow: 4;
+
+  #target-select {
+    display: flex;
+    background-color: v.$stat-bg-color;
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+
+    #target-options {
+      flex-grow: 1;
+    }
+
+    #target-information {
+      flex-grow: 2;
+      display: flex;
+      gap: 5px;
+      flex-direction: row;
+
+      #target-name {
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.category-header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+
+  h3 {
+    margin: 15px 0px;
+  }
+
+  img {
+    display: flex;
+  }
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  column-gap: 10px;
+  row-gap: 10px;
+  position: relative;
+  padding: 5px 2px;
+}
+
+.chart-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 2px solid v.$border-color-light;
+  outline: 1px solid v.$border-color;
+  border-radius: 3px;
+  padding: 3px 12px;
+
+  .chart-title {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+
+    span {
+      flex-grow: 1;
+    }
+
+    a {
+      display: flex;
+    }
+  }
+
+  .heal-value-stat {
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: #29efc6;
+    text-shadow: 0px 0px 3px #004a4a;
+  }
+}
+
+.placeholder-stat {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  font-style: italic;
+  opacity: 0.8;
+  font-weight: 300;
+}

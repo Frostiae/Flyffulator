@@ -1,0 +1,94 @@
+@use "./variables.scss" as v;
+
+#skills {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.skill-tree {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 30px;
+
+    #skill-tree-base {
+        position: relative;
+        display: flex;
+
+        #skill-points {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    #edit-skill {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+    }
+}
+
+.skill-tree-icon {
+    position: absolute;
+    opacity: 0.5;
+
+    &.disabled {
+        opacity: 0;
+    }
+
+    &.active {
+        opacity: 1;
+    }
+
+    &:hover {
+        &:not(.disabled) {
+            opacity: 1;
+        }
+    }
+
+    #skill-level {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        text-align: center;
+        bottom: 5px;
+        color: white;
+        font-weight: 500;
+        -webkit-text-stroke: 5px #f34925;
+        text-shadow: 0 0 3px white;
+        paint-order: stroke fill;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+}
+
+.skill-tree-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buffs {
+    .buffs-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            margin-left: 2rem;
+        }
+    }
+
+    .buffs-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        row-gap: 10px;
+        column-gap: 10px;
+    }
+}
