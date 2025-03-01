@@ -1,6 +1,8 @@
 import HoverInfo from './hoverinfo';
+import { useTranslation } from "react-i18next";
 
 function BasicStat({ title, information, sourceLink, value, percentage }) {
+    const { t } = useTranslation();
     return (
         <div className="basic-stat">
             <span className="basic-label">{title}</span>
@@ -11,7 +13,7 @@ function BasicStat({ title, information, sourceLink, value, percentage }) {
             }
             {
                 sourceLink != undefined &&
-                <HoverInfo text="View calculation code 🔗" icon="code-icon.svg" link={sourceLink} />
+                <HoverInfo text={t("view_calculation_code")} icon="code-icon.svg" link={sourceLink} />
             }
         </div>
     );

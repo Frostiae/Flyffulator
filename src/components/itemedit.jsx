@@ -6,17 +6,19 @@ import Dropdown from './dropdown';
 import RangeInput from './rangeinput';
 import * as Utils from '../flyff/flyffutils';
 import skillAwakes from '../assets/SkillAwakes.json';
+import { useTranslation } from "react-i18next";
 
 function ItemEdit({ itemElem }) {
     const [state, setState] = useState(false);
     const { showSearch } = useSearch();
+    const { t } = useTranslation();
 
     if (itemElem == null) {
         return (
             <div className="item-edit">
-                No item selected.
+                {t("no_item_selected")}
                 <br />
-                Add items to the inventory and select them to edit their stats and properties.
+                {t("no_item_selected_explanation")}
             </div>
         );
     }

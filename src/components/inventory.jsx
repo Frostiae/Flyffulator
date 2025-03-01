@@ -8,9 +8,11 @@ import Loader from './fallbackloader';
 import PlayerModel from './playermodel';
 import Context from '../flyff/flyffcontext';
 import * as Utils from "../flyff/flyffutils";
+import { useTranslation } from "react-i18next";
 
 function Inventory({ onSelectItem }) {
   const [refresh, setRefresh] = useState(false);
+  const { t } = useTranslation();
 
   const { showSearch } = useSearch();
   const mainhandSlot = useRef(null);
@@ -105,7 +107,7 @@ function Inventory({ onSelectItem }) {
                 <OrbitControls target={[0, 0.8, 0]} enablePan={false} enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
               </Suspense>
             </Canvas>
-            <i id="model-info">Model does not reflect actual equipment.</i>
+            <i id="model-info">{t("model_not_accurate")}</i>
           </div>
         </div>
       </div>

@@ -8,10 +8,12 @@ import HoverInfo from '../components/hoverinfo';
 import LineChart from '../components/linechart';
 import { getDamage, getHealing } from '../flyff/flyffdamagecalculator';
 import BasicStat from '../components/basicstat';
+import { useTranslation } from "react-i18next";
 
 function Calculations() {
     const { showSearch } = useSearch();
     const [targetType, setTargetType] = useState(0);
+    const { t } = useTranslation();
 
     function setTarget(index) {
         if (index == 0) { // Training dummy
@@ -330,15 +332,15 @@ function Calculations() {
                     <div id="target-options">
                         <div>
                             <input type="radio" id="target-dummy" name="target-type" checked={targetType == 0} onChange={() => setTarget(0)} />
-                            <label htmlFor="target-dummy">Training Dummy target</label>
+                            <label htmlFor="target-dummy">{t("training_dummy_target")}</label>
                         </div>
                         <div>
                             <input type="radio" id="target-player" name="target-type" checked={targetType == 1} onChange={() => setTarget(1)} />
-                            <label htmlFor="target-player">Other player target (disabled)</label>
+                            <label htmlFor="target-player">{t("player_target")}</label>
                         </div>
                         <div>
                             <input type="radio" id="target-monster" name="target-type" checked={targetType == 2} onChange={() => setTarget(2)} />
-                            <label htmlFor="target-monster">Monster target</label>
+                            <label htmlFor="target-monster">{t("monster_target")}</label>
                         </div>
                     </div>
 

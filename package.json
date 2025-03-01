@@ -15,9 +15,13 @@
     "@types/three": "^0.170.0",
     "chart.js": "^4.4.6",
     "chartjs-plugin-annotation": "^3.1.0",
+    "i18next": "^24.2.2",
+    "i18next-browser-languagedetector": "^8.0.4",
+    "i18next-http-backend": "^3.0.2",
     "react": "^18.3.1",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.3.1",
+    "react-i18next": "^15.4.1",
     "three": "^0.170.0"
   },
   "devDependencies": {
