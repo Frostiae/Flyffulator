@@ -1,7 +1,7 @@
 import { Line } from "react-chartjs-2";
 import HoverInfo from "./hoverinfo";
 
-function LineChart({ chartData, title, info, label }) {
+function LineChart({ chartData, title, info, label, sourceLink }) {
     const data = {
         labels: chartData.map((_, i) => `Attack #${i + 1}`),
         datasets: [
@@ -53,7 +53,7 @@ function LineChart({ chartData, title, info, label }) {
             <div className="chart-title">
                 <span>{title}</span>
                 <HoverInfo text={info} />
-                <HoverInfo text="View calculation code 🔗" icon="code-icon.svg" link="https://github.com/" />
+                <HoverInfo text="View calculation code 🔗" icon="code-icon.svg" link={sourceLink} />
             </div>
 
             <Line

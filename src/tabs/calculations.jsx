@@ -177,58 +177,58 @@ function Calculations() {
             <div id="basic-stats">
                 <BasicStat title={"Stamina"} value={Context.player.getBaseStat("sta")}
                     information={"This is your total stamina, including any bonuses from equipment or elsewhere."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L290"}
                 />
 
                 <BasicStat title={"Strength"} value={Context.player.getBaseStat("str")}
                     information={"This is your total strength, including any bonuses from equipment or elsewhere."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L290"}
                 />
 
                 <BasicStat title={"Dexterity"} value={Context.player.getBaseStat("dex")}
                     information={"This is your total dexterity, including any bonuses from equipment or elsewhere."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L290"}
                 />
 
                 <BasicStat title={"Intelligence"} value={Context.player.getBaseStat("int")}
                     information={"This is your total intelligence, including any bonuses from equipment or elsewhere."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L290"}
                 />
 
                 <hr />
 
                 <BasicStat title={"Maximum HP"} value={Context.player.getHP()}
                     information={"This is your maximum health."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L302"}
                 />
 
                 <BasicStat title={"Maximum MP"} value={Context.player.getMP()}
                     information={"This is your maximum MP. MP is a requirement for using most magic skills."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L324"}
                 />
 
                 <BasicStat title={"Maximum FP"} value={Context.player.getFP()}
                     information={"This is your maximum FP. FP is a requirement for most non-magic skills."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L345"}
                 />
 
                 <hr />
 
                 <BasicStat title={"Speed"} value={Context.player.getMovementSpeed()}
                     information={"This is your current movement speed factor."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L365"}
                     percentage
                 />
 
                 <BasicStat title={"Jump Height"} value={(Context.player.getStat("jumpheight", false) + 200) / 2}
                     information={"This is your current jumping height factor."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L735"}
                     percentage
                 />
 
                 <BasicStat title={"Casting Speed"} value={100 + Context.player.getStat("decreasedcastingtime", true)}
                     information={"This is your current casting speed bonus. Casting speed affects how long it takes you to cast magic skills."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L735"}
                     percentage
                 />
 
@@ -236,54 +236,54 @@ function Calculations() {
 
                 <BasicStat title={"Attack"} value={Context.player.getAttack()}
                     information={"This is your attack. This is an approximated value of your general damage, as your true damage heavily relies on the current context."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L423"}
                 />
 
                 <BasicStat title={"Skill Damage"} value={Context.player.getStat("skilldamage", true)}
                     information={"This value is a bonus multiplier for your skill damage."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L735"}
                     percentage
                 />
 
                 <BasicStat title={"PvE Damage"} value={Context.player.getStat("pvedamage", true)}
                     information={"This value is a bonus multiplier for your damage against monsters."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L735"}
                     percentage
                 />
 
                 <BasicStat title={"PvP Damage"} value={Context.player.getStat("pvpdamage", true)}
                     information={"This value is a bonus multiplier for your damage against other players."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L735"}
                     percentage
                 />
 
                 <BasicStat title={"Attack Speed"} value={Math.floor(Context.player.getAttackSpeed() * 100) / 2}
                     information={"This value affects how fast you can unleash subsequent auto attacks."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L378"}
                     percentage
                 />
 
                 <BasicStat title={"Hit Rate"} value={Context.player.getContextHitRate(Context.defender).probAdjusted}
                     information={"How often your auto attacks will land (not miss or be parried) on your target.\n\nThis value differs from the one you see in-game, but is the true hit rate against your current target."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L550"}
                     percentage
                 />
 
                 <BasicStat title={"Critical Chance"} value={Context.player.getCriticalChance()}
                     information={"How often your auto attacks will result in a critical hit."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L949"}
                     percentage
                 />
 
                 <BasicStat title={"Critical Damage"} value={Context.player.getStat("criticaldamage", true)}
                     information={"This value is a bonus multiplier on your critical hits' damage."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L735"}
                     percentage
                 />
 
                 <BasicStat title={"Block Penetration"} value={Context.player.getStat("blockpenetration", true)}
                     information={"This value lowers your target's chance to block your auto attacks.\n\nThis is a factor, meaning that 50% block penetration will lower your target's block chance by 50%, leaving them with half of what they would have otherwise."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L735"}
                     percentage
                 />
 
@@ -291,17 +291,17 @@ function Calculations() {
 
                 <BasicStat title={"Defense"} value={generateDefense()}
                     information={"This value lowers how much damage you take from auto attacks.\n\nWhile this value is significantly lower than the value you would see in-game, it is the real value used during damage calculations."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/tabs/calculations.jsx#L147"}
                 />
 
                 <BasicStat title={"Magic Defense"} value={getMagicDefense()}
                     information={"This value lowers how much damage you take from magical attacks."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/tabs/calculations.jsx#L166"}
                 />
 
                 <BasicStat title={"Critical Resist"} value={Context.player.getStat("criticalresist", true)}
                     information={"This value lowers your target's chance to land critical hits against you.\n\nThis is a factor, meaning that 50% critical resist will leave your target with 50% of their original critical chance."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L735"}
                     percentage
                 />
 
@@ -309,22 +309,20 @@ function Calculations() {
 
                 <BasicStat title={"Parry"} value={Context.player.getParry()}
                     information={"This is your parry."}
-                    sourceLink={"https://github.com/"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L535"}
                 />
 
-                <div className="basic-stat">
-                    <span className="basic-label">Melee Block</span>
-                    <span className="basic-value">{Utils.clamp(Context.player.getBlockChance(false, Context.defender), 6.25, 93.75)}%</span>
-                    <HoverInfo text={"How often you block melee attacks from the current target.\n\nThis value may be different than the one you see in the character window as it takes everything into account, such as minimums, maximums and the opponent's stats. This is your true block rate."} />
-                    <HoverInfo text="View calculation code 🔗" icon="code-icon.svg" link="https://github.com/" />
-                </div>
+                <BasicStat title={"Melee Block"} value={Utils.clamp(Context.player.getBlockChance(false, Context.defender), 6.25, 93.75)}
+                    information={"How often you block melee attacks from the current target.\n\nThis value may be different than the one you see in the character window as it takes everything into account, such as minimums, maximums and the opponent's stats. This is your true block rate."}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L965"}
+                    percentage
+                />
 
-                <div className="basic-stat">
-                    <span className="basic-label">Ranged Block</span>
-                    <span className="basic-value">{Utils.clamp(Context.player.getBlockChance(true, Context.defender), 6.25, 93.75)}%</span>
-                    <HoverInfo text={"How often you block ranged attacks from the current target.\n\nThis value may be different than the one you see in the character window as it takes everything into account, such as minimums, maximums and the opponent's stats. This is your true block rate."} />
-                    <HoverInfo text="View calculation code 🔗" icon="code-icon.svg" link="https://github.com/" />
-                </div>
+                <BasicStat title={"Ranged Block"} value={Utils.clamp(Context.player.getBlockChance(true, Context.defender), 6.25, 93.75)}
+                    information={"How often you block ranged attacks from the current target.\n\nThis value may be different than the one you see in the character window as it takes everything into account, such as minimums, maximums and the opponent's stats. This is your true block rate."}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L965"}
+                    percentage
+                />
             </div>
 
             <div id="extra-stats">
@@ -336,7 +334,7 @@ function Calculations() {
                         </div>
                         <div>
                             <input type="radio" id="target-player" name="target-type" checked={targetType == 1} onChange={() => setTarget(1)} />
-                            <label htmlFor="target-player">Other player target</label>
+                            <label htmlFor="target-player">Other player target (disabled)</label>
                         </div>
                         <div>
                             <input type="radio" id="target-monster" name="target-type" checked={targetType == 2} onChange={() => setTarget(2)} />
@@ -427,6 +425,7 @@ function Calculations() {
                         title={"Auto Attack Damage"}
                         info={"This is the result of 200 simulated auto attacks against the selected target. On the chart is each iteration's final damage, the highest attack highlighted with a white point, and the average of all 200 simulations."}
                         label={"Damage"}
+                        sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffdamagecalculator.js#L50"}
                     />
 
                     {/* Skills */}
@@ -439,6 +438,7 @@ function Calculations() {
                                 info={"This is the result of 100 simulated attacks of this skill against the selected target. On the chart is each iteration's final damage, the highest attack highlighted with a white point, and the average of all 200 simulations."}
                                 key={skill}
                                 label={"Damage"}
+                                sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffdamagecalculator.js#L50"}
                             />
                         )
                     }
@@ -456,6 +456,7 @@ function Calculations() {
                         title={"Monster Damage"}
                         info={"This is the result of 100 simulated attacks taken from the selected target. On the chart is each iteration's final damage, the highest attack highlighted with a white point, and the average of all 100 simulations."}
                         label={"Damage"}
+                        sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/tabs/calculations.jsx#L34"}
                     />
                 </div>
 
@@ -473,7 +474,7 @@ function Calculations() {
                             <div className="basic-stat">
                                 <span className="basic-label">{Utils.getSkillById(skill).name.en + " Healing"}</span>
                                 <span className="basic-value">{data}</span>
-                                <HoverInfo text="View calculation code 🔗" icon="code-icon.svg" link="https://github.com/" />
+                                <HoverInfo text="View calculation code 🔗" icon="code-icon.svg" link="https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffdamagecalculator.js#L11" />
                             </div>
                         )
                     }
