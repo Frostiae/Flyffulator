@@ -30,7 +30,7 @@ function Search() {
         const item = new ItemElem(itemProp);
 
         // Inject Demon/Goddess Blessing RandomStats
-        if(item.itemProp.category === "fashion" && ['hat', 'cloth', 'gaunts', 'shoes', 'visualcloak', 'glove'].includes(item.itemProp.subcategory)) {
+        if(item.itemProp.category === "fashion" && ['hat', 'cloth', 'glove', 'shoes', 'visualcloak', 'cloak'].includes(item.itemProp.subcategory)) {
             item.itemProp.possibleRandomStats = [...(item.itemProp.possibleRandomStats ?? []), ...Utils.BOG_BOD_RANDOM_STATS];
             item.randomStats = [null, null]
         }
