@@ -221,7 +221,7 @@ function applyDefense(attack) {
         const skillLevel = Context.attacker.getSkillLevel(5041);
         const add = [20, 30, 40, 50, 60, 70, 80, 90, 100, 150][skillLevel - 1];
         const mp = Context.attacker.getMP();
-        const totalBonus = Math.floor(((Context.attacker.getStr() / 10) * skillLevel) * (5 + mp / 10) + add);
+        const totalBonus = Math.floor(((Context.attacker.getBaseStat("str") / 10) * skillLevel) * (5 + mp / 10) + add);
         damage = damage > 0 ? (damage + totalBonus) : totalBonus;
     }
 
@@ -410,7 +410,7 @@ function applyMagicSkillDefense(attack) {
         const skillLevel = Context.attacker.getSkillLevel(5041);
         const add = [20, 30, 40, 50, 60, 70, 80, 90, 100, 150][skillLevel - 1];
         const mp = Context.attacker.getMP();
-        const totalBonus = Math.floor(((Context.attacker.getStr() / 10) * skillLevel) * (5 + mp / 10) + add);
+        const totalBonus = Math.floor(((Context.attacker.getBaseStat("str") / 10) * skillLevel) * (5 + mp / 10) + add);
         attack = attack > 0 ? (attack + totalBonus) : totalBonus;
     }
 

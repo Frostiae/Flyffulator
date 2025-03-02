@@ -5,12 +5,14 @@ function NumberInput({ min, max, value, onChange, label, hasButtons, prefix, suf
     const [val, setVal] = useState(value);
 
     function handleChange(input, blur) {
-        if (prefix && input.includes(prefix)) {
-            input = input.replaceAll(prefix, "");
-        }
-
-        if (suffix && input.includes(suffix)) {
-            input = input.replaceAll(suffix, "");
+        if (typeof input == "string") {
+            if (prefix) {
+                input = input.replaceAll(prefix, "");
+            }
+    
+            if (suffix) {
+                input = input.replaceAll(suffix, "");
+            }
         }
 
         if (blur) {
@@ -20,7 +22,7 @@ function NumberInput({ min, max, value, onChange, label, hasButtons, prefix, suf
 
             onChange(input);
         }
-
+        
         setVal(input);
         setRefresh(!refresh);
     }
