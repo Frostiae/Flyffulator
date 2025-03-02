@@ -478,7 +478,7 @@ function Calculations() {
 
                     {
                         Object.entries(generateHealing()).map(([skill, data]) =>
-                            <div className="basic-stat">
+                            <div className="basic-stat" key={skill}>
                                 <span className="basic-label">{(Utils.getSkillById(skill).name[shortCode] ?? Utils.getSkillById(skill).name.en) + " Healing"}</span>
                                 <span className="basic-value">{data}</span>
                                 <HoverInfo text="View calculation code 🔗" icon="code-icon.svg" link="https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffdamagecalculator.js#L11" />

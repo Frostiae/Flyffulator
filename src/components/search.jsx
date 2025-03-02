@@ -31,7 +31,7 @@ function Search() {
             query = query.toLowerCase();
 
             if (searchProperties.type == "item") {
-                for (const [_, item] of Object.entries(items)) {
+                for (const [, item] of Object.entries(items)) {
                     if (searchProperties.checkCanUse) {
                         if (!Context.player.canUseItem(item)) {
                             continue;
@@ -74,7 +74,7 @@ function Search() {
                 }
             }
             else if (searchProperties.type == "monster") {
-                for (const [_, monster] of Object.entries(monsters)) {
+                for (const [, monster] of Object.entries(monsters)) {
                     if (monster.name.en.toLowerCase().includes(query)) {
                         res.push(new Entity(monster));
                     }
@@ -83,7 +83,7 @@ function Search() {
                 res.sort((a, b) => a.level - b.level);
             }
             else if (searchProperties.type == "skill") {
-                for (const [_, skill] of Object.entries(skills)) {
+                for (const [, skill] of Object.entries(skills)) {
                     if (skill.name.en.toLowerCase().includes(query)) {
                         res.push(skill);
                     }

@@ -43,7 +43,7 @@ export default class ItemElem {
      */
     isOriginAwakeAble() {
         return false; // TODO: Add something to the API. There are tons of combinations
-        return this.itemProp.category == "weapon" || this.itemProp.category == "armor";
+        //return this.itemProp.category == "weapon" || this.itemProp.category == "armor";
     }
 
     /**

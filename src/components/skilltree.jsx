@@ -137,7 +137,7 @@ function SkillTree() {
                 <hr />
                 <div className="buffs-container">
                     {
-                        Object.entries(Context.player.activeBuffs).map(([id, _]) =>
+                        Object.entries(Context.player.activeBuffs).map(([id,]) =>
                             <Slot key={id} className={"slot-skill"} content={Utils.getSkillById(id)} onRemove={removeSkill} />
                         )
                     }

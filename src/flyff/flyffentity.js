@@ -747,7 +747,7 @@ export default class Entity {
 
         // Individual item abilities
 
-        for (const [_, itemElem] of Object.entries(this.equipment)) {
+        for (const [, itemElem] of Object.entries(this.equipment)) {
             if (itemElem == null) {
                 continue;
             }
@@ -915,7 +915,7 @@ export default class Entity {
         }
 
         let defense = { min: 0, max: 0 };
-        for (const [_, piece] of Object.entries(this.equipment)) {
+        for (const [, piece] of Object.entries(this.equipment)) {
             if (piece == null) {
                 continue;
             }
@@ -1038,7 +1038,7 @@ export default class Entity {
         }
 
         let total = 0;
-        for (const [_, scale] of Object.entries(levelProp.scalingParameters)) {
+        for (const [, scale] of Object.entries(levelProp.scalingParameters)) {
             if (scale.parameter != parameter) {
                 continue;
             }
@@ -1096,7 +1096,7 @@ export default class Entity {
             return 0;
         }
 
-        return Object.entries(this.equipment).filter(([_, itemElem]) => itemElem != null && set.parts.includes(itemElem.itemProp.id)).length;
+        return Object.entries(this.equipment).filter(([, itemElem]) => itemElem != null && set.parts.includes(itemElem.itemProp.id)).length;
     }
 
     /**
@@ -1104,7 +1104,7 @@ export default class Entity {
      * @param {object} set The set to check pieces of.
      */
     getEquipSetPieceCountBySet(set) {
-        return Object.entries(this.equipment).filter(([_, itemElem]) => itemElem != null && set.parts.includes(itemElem.itemProp.id)).length;
+        return Object.entries(this.equipment).filter(([, itemElem]) => itemElem != null && set.parts.includes(itemElem.itemProp.id)).length;
     }
 
     /**

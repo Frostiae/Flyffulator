@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import { supportedLngs } from "./config";
-import React from "react";
 
 export default function LocaleSwitcher() {
   const { i18n } = useTranslation();

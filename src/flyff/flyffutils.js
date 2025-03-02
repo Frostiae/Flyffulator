@@ -121,7 +121,7 @@ export function isAnteriorJob(baseJobId, otherJobId) {
 export function getAnteriorClassIds(classId) {
     const ids = [classId];
 
-    for (const [id, _] of Object.entries(classes)) {
+    for (const [id,] of Object.entries(classes)) {
         if (id != classId && isAnteriorJob(classId, id)) {
             ids.push(id);
         }
@@ -132,7 +132,7 @@ export function getAnteriorClassIds(classId) {
 
 export function getClassSkills(classId) {
     const res = [];
-    for (const [_, skill] of Object.entries(skills)) {
+    for (const [, skill] of Object.entries(skills)) {
         if (skill.class == classId) {
             res.push(skill);
         }
@@ -143,7 +143,7 @@ export function getClassSkills(classId) {
 
 export function getEquipSetByItemId(id) {
     // this is kinda slow but what can you do
-    for (const [_, set] of Object.entries(equipSets)) {
+    for (const [, set] of Object.entries(equipSets)) {
         if (set.parts.includes(id)) {
             return set;
         }
