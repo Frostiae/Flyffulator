@@ -1,11 +1,13 @@
 import { useState } from "react";
+import { useSearch } from '../searchcontext';
+import { useTranslation } from "react-i18next";
+
+import Slot from "./slot";
 import HoverInfo from './hoverinfo';
 import Context from "../flyff/flyffcontext";
 import SkillTreeIcon from "./skilltreeicon";
-import Slot from "./slot";
+import NumberInput from "./numberinput";
 import * as Utils from "../flyff/flyffutils";
-import { useSearch } from '../searchcontext';
-import { useTranslation } from "react-i18next";
 
 function SkillTree() {
     const { showSearch } = useSearch();
@@ -133,6 +135,12 @@ function SkillTree() {
                 <div className="buffs-header">
                     <h3>{t("skills_and_buffs_active_buffs")}</h3>
                     <button className="flyff-button" onClick={() => addBuffSkill()}>{t("skills_and_buffs_add")}</button>
+                </div>
+                <div className="column">
+                    <NumberInput min={15} max={1000} value={Context.player.bufferStr} label={"Caster STR"} onChange={(v) => {Context.player.bufferStr = v;}} />
+                    <NumberInput min={15} max={1000} value={Context.player.bufferSta} label={"Caster STA"} onChange={(v) => {Context.player.bufferSta = v;}} />
+                    <NumberInput min={15} max={1000} value={Context.player.bufferDex} label={"Caster DEX"} onChange={(v) => {Context.player.bufferDex = v;}} />
+                    <NumberInput min={15} max={1000} value={Context.player.bufferInt} label={"Caster INT"} onChange={(v) => {Context.player.bufferInt = v;}} />
                 </div>
                 <hr />
                 <div className="buffs-container">

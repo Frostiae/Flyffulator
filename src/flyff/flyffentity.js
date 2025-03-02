@@ -33,6 +33,10 @@ export default class Entity {
     sta = 15;
     dex = 15;
     int = 15;
+    bufferStr = 15;
+    bufferSta = 15;
+    bufferDex = 15;
+    bufferInt = 15;
 
     constructor(monsterProp) {
         this.monsterProp = monsterProp;
@@ -69,6 +73,16 @@ export default class Entity {
 
             const itemElem = new ItemElem(item.itemProp);
             this.equipment[slot] = Object.assign(itemElem, item);
+
+            for (let i = 0; i < itemElem.piercings.length; i++) {
+                const cardElem = new ItemElem(itemElem.piercings[i].itemProp);
+                itemElem.piercings[i] = cardElem;
+            }
+
+            for (let i = 0; i < itemElem.ultimateJewels.length; i++) {
+                const jewelElem = new ItemElem(itemElem.ultimateJewels[i].itemProp);
+                itemElem.ultimateJewels[i] = jewelElem;
+            }
         }
 
         const tempItems = [];
@@ -873,7 +887,27 @@ export default class Entity {
                         continue;
                     }
 
-                    total += ability.add;
+                    let add = ability.add;
+                    for (const scale of levelProp.scalingParameters) {
+                        if (scale.parameter != ability.parameter) {
+                            continue;
+                        }
+
+                        if (scale.stat == "int") {
+                            add += Math.floor(Math.min(this.bufferInt * scale.scale, scale.maximum));
+                        }
+                        else if (scale.stat == "str") {
+                            add += Math.floor(Math.min(this.bufferStr * scale.scale, scale.maximum));
+                        }
+                        else if (scale.stat == "sta") {
+                            add += Math.floor(Math.min(this.bufferSta * scale.scale, scale.maximum));
+                        }
+                        else if (scale.stat == "dex") {
+                            add += Math.floor(Math.min(this.bufferDex * scale.scale, scale.maximum));
+                        }
+                    }
+
+                    total += add;
                 }
             }
         }
