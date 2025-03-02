@@ -23,6 +23,10 @@ export default class Entity {
         suit: null,
         gauntlets: null,
         boots: null,
+        fashHelmet: null,
+        fashSuit: null,
+        fashGauntlets: null,
+        fashBoots: null,
         pet: null
     };
     skillLevels = {};

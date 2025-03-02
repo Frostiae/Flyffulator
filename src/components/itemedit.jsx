@@ -249,7 +249,7 @@ function ItemEdit({ itemElem }) {
             {
                 itemElem.itemProp.possibleRandomStats != undefined &&
                 <div className="column">
-                    <h3>Random Bonus</h3>
+                    <h3>Random Bonus ({itemElem.itemProp.category === "fashion" ? "Demon of Blessing/Goddess" : "Ultimate"})</h3>
                     <Dropdown options={possibleRandomStats} onSelectionChanged={(e) => setRandomStatOption(0, e)} valueKey={itemElem.randomStats[0]?.id} style={{minWidth: "100px"}}/>
                     <div className="row">
                         <RangeInput
