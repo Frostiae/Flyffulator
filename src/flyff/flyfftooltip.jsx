@@ -26,7 +26,7 @@ function setupItem(itemElem, i18n) {
     const out = [];
     const itemProp = itemElem.itemProp;
     var shortLanguageCode = "en";
-    if(i18n.resolvedLanguage) {
+    if (i18n.resolvedLanguage) {
         shortLanguageCode = i18n.resolvedLanguage.split('-')[0];
     }
 
@@ -157,7 +157,7 @@ function setupItem(itemElem, i18n) {
                 out.push(`\nBase Defense: `);
             }
 
-            out.push(<span style={{color: "#b2b2b2"}}>{ability.min} ~ {ability.max}</span>);
+            out.push(<span style={{ color: "#b2b2b2" }}>{ability.min} ~ {ability.max}</span>);
         }
     }
 
@@ -302,13 +302,18 @@ function setupItem(itemElem, i18n) {
     }
 
     // TODO: itemElem pet stuff
-    if(itemProp.category == "raisedpet") {
-        const pet = Context.player.equipment.pet;
+    if (itemProp.category == "raisedpet") {
+        const pet = itemElem;
         const petDefinition = Utils.getPetDefinitionByItemId(pet.itemProp.id)
 
-        out.push(<span style={{color: '#01ab19'}}><br />Tier: {Utils.getPetTierByLevels(pet.petStats)} Tier</span>)
-        out.push(<span style={{color: '#d20000'}}><br />Bonus: {`${petDefinition.parameter} +${Utils.getPetStatSum(petDefinition, pet.petStats)}${petDefinition.rate ? '%' : ''}`}</span>)
-        out.push(<span style={{color: '#026cd7'}}><br />({Object.values(pet.petStats).map((lv) => lv ? `Lv${lv}` : null).filter(_ => _).join('/')})</span>)
+        out.push(<span style={{ color: '#009e00' }}><br />Tier: {Utils.getPetTierByLevels(pet.petStats)} Tier</span>)
+        out.push(<span style={{ color: '#ff0000' }}><br />Bonus: {`${petDefinition.parameter} +${Utils.getPetStatSum(petDefinition, pet.petStats)}${petDefinition.rate ? '%' : ''}`}</span>)
+        out.push(<span style={{ color: '#007fff' }}><br />({Object.values(pet.petStats).map((lv) => lv ? `Lv${lv}` : null).filter(_ => _).join('/')})</span>)
+
+        out.push(<span style={{ color: '#7878dc' }}><br />Exp: 99.99%</span>)
+
+        const petTier = Object.values(pet.petStats).filter((tier) => tier != null).length;
+        out.push(<span style={{ color: '#ff0a0a' }}><br />Energy: {petDefinition.tiers[petTier - 1].maxEnergy} / {petDefinition.tiers[petTier - 1].maxEnergy}</span>)
     }
 
     // Rarity
@@ -332,7 +337,7 @@ function setupItem(itemElem, i18n) {
     }
 
     // Buff items
-    
+
     if (itemProp.category == "buff") {
         for (const ability of itemProp.abilities) {
             out.push(<span style={{ color: "#ffeaa1" }}><br />{ability.parameter}+{ability.add}{ability.rate && "%"}</span>);
@@ -441,7 +446,7 @@ function setupItem(itemElem, i18n) {
 function setupSkill(skill, i18n) {
     const out = [];
     var shortLanguageCode = "en";
-    if(i18n.resolvedLanguage) {
+    if (i18n.resolvedLanguage) {
         shortLanguageCode = i18n.resolvedLanguage.split('-')[0];
     }
 
@@ -608,7 +613,7 @@ function setupSkill(skill, i18n) {
                 for (const scale of levelProp.scalingParameters) {
                     if (scale.parameter == ability.parameter && scale.maximum != undefined) {
                         out.push(<span style={{ color: "#ffaa00" }}><br />
-                            {scale.parameter} Scaling: +{scale.scale * 25}{ability.rate && "%"} per 25 {scale.stat} (max {scale.maximum}{ability.rate && "%"}) 
+                            {scale.parameter} Scaling: +{scale.scale * 25}{ability.rate && "%"} per 25 {scale.stat} (max {scale.maximum}{ability.rate && "%"})
                         </span>);
                     }
                 }

@@ -8,7 +8,6 @@ function ItemEditPet({ itemElem }) {
     
     function updateLevels(levels) {
         itemElem.petStats = levels;
-
         setPetLevels((prevLevels) => ({...prevLevels, ...levels}))
     }
 

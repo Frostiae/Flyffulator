@@ -125,14 +125,14 @@ function Calculations() {
             if (level <= 0) {
                 continue; // Shouldn't happen
             }
-            
+
             const skillProp = Utils.getSkillById(skill);
             const levelProp = skillProp.levels[level - 1];
-            
+
             if (!Context.player.canUseSkill(skillProp)) {
                 continue;
             }
-            
+
             if (levelProp.minAttack == undefined) {
                 continue;
             }
@@ -342,6 +342,12 @@ function Calculations() {
             </div>
 
             <div id="extra-stats">
+                <div className="category-header">
+                    <h3>Configuration</h3>
+                    <HoverInfo text={"Set configurations for all calculations such as your target, debuffs, and so on."} />
+                </div>
+                <hr />
+
                 <div id="target-select">
                     <div id="target-options">
                         <div>

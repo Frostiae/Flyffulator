@@ -2,8 +2,8 @@ import { useSearch } from "../searchcontext";
 import { useState } from "react";
 
 import Slot from '../components/slot';
-import items from "../assets/Items.json";
 import pets from "../assets/Pets.json";
+import items from "../assets/Items.json";
 import Entity from "../flyff/flyffentity";
 import skills from "../assets/Skills.json";
 import Context from "../flyff/flyffcontext";
@@ -62,9 +62,9 @@ function Search() {
                         }
 
                         // only display actual pets, not skins or the ones with modified flags                        
-                        if(item.category === "raisedpet") {
-                            const petFound = pets.find((pet) => pet.petItemId === item.id)
-                            if(!petFound) {
+                        if (item.category === "raisedpet") {
+                            const petFound = Object.values(pets).find((pet) => pet.petItemId === item.id);
+                            if (!petFound) {
                                 continue;
                             }
                         }

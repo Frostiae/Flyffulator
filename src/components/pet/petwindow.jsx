@@ -1,17 +1,45 @@
-import { useState } from "react";
-import Items from "../../assets/Items.json"
-import PetTier from "./pettier";
-import * as Utils from "./../../flyff/flyffutils"
+import { Canvas } from '@react-three/fiber';
+import { useTranslation } from "react-i18next";
+import { useTooltip } from '../../tooltipcontext';
+import { Suspense, useState, useRef } from "react";
+import { createTooltip } from '../../flyff/flyfftooltip';
 
-function PetWindow({raisedPetDefinition, petLevels, editable = false, onEditLevels = null}) {
+import PetTier from "./pettier";
+import Loader from "../fallbackloader";
+import PlayerModel from "../playermodel";
+import items from "../../assets/Items.json";
+import Context from "../../flyff/flyffcontext";
+import * as Utils from "./../../flyff/flyffutils";
+
+function PetWindow({ raisedPetDefinition, petLevels, editable = false, onEditLevels = null }) {
+    const { showTooltip, hideTooltip } = useTooltip();
     const [currentlyEditingTier, setEditingTier] = useState(null);
+    const slotRef = useRef(null);
+    const { i18n } = useTranslation();
+
+    function toggleTooltip(enabled) {
+        if (Context.player.equipment.pet == null) {
+            return;
+        }
+
+        if (enabled) {
+            const settings = {
+                rect: slotRef.current.getBoundingClientRect(),
+                text: createTooltip(Context.player.equipment.pet, i18n)
+            };
+            showTooltip(settings);
+        }
+        else {
+            hideTooltip();
+        }
+    }
 
     function tierIsEditable(tier) {
         const tierIndex = Object.keys(petLevels).findIndex((key) => key === tier);
-        if(tierIndex === 0) return false;
+        if (tierIndex === 0) return false;
 
         const nextSmallerTier = Object.keys(petLevels)[tierIndex - 1];
-        if(!petLevels[nextSmallerTier]) return false;
+        if (!petLevels[nextSmallerTier]) return false;
 
         return editable;
     }
@@ -19,20 +47,33 @@ function PetWindow({raisedPetDefinition, petLevels, editable = false, onEditLeve
     function setLevel(tier, level) {
         petLevels[tier] = level;
 
-        if(editable) {
+        if (editable) {
             setEditingTier(null)
             onEditLevels(petLevels)
         }
     }
 
     return (
-        <div className="pet">
-            <div className="window-title">{Items[raisedPetDefinition.petItemId].name.en}</div>
+        <div className="pet-edit">
+            <div className="window-title">{items[raisedPetDefinition.petItemId].name.en}</div>
             <div className="window-content">
                 <div id="base-container">
-                    <div id="image-container">
-                        <img src={`https://api.flyff.com/image/item/${Items[raisedPetDefinition.petItemId].icon}`}></img>
+                    <div id="image-container" ref={slotRef}
+                        onMouseEnter={() => toggleTooltip(true)}
+                        onMouseLeave={() => toggleTooltip(false)}>
+                        <Canvas camera={{ fov: 20, position: Utils.getPetCameraPosition(raisedPetDefinition.petItemId) }}
+                            onCreated={({ camera }) => {
+                                const lookAt = Utils.getPetCameraLookAt(raisedPetDefinition.petItemId);
+                                camera.lookAt(lookAt[0], lookAt[1], lookAt[2]);
+                            }}
+                        >
+                            <Suspense fallback={<Loader />}>
+                                <ambientLight intensity={Math.PI / 2} />
+                                <PlayerModel modelPath={Utils.getPetModelPath(raisedPetDefinition.petItemId)} />
+                            </Suspense>
+                        </Canvas>
                     </div>
+
 
                     <div id="stats-container">
                         <div className="stat-group">
@@ -46,7 +87,7 @@ function PetWindow({raisedPetDefinition, petLevels, editable = false, onEditLeve
                         </div>
                     </div>
                 </div>
-                
+
                 <div id="level-container">
                     {Object.keys(petLevels).map((tier, index) => (
                         <PetTier

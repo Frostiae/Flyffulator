@@ -104,7 +104,7 @@ function Inventory({ onSelectItem }) {
             <Canvas camera={{ fov: 30, position: [0, 1, 3.5] }}>
               <Suspense fallback={<Loader />}>
                 <ambientLight intensity={Math.PI / 2} />
-                <PlayerModel />
+                <PlayerModel modelPath={"/model/vagrant.glb"}/>
                 <OrbitControls target={[0, 0.8, 0]} enablePan={false} enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
               </Suspense>
             </Canvas>
@@ -112,7 +112,7 @@ function Inventory({ onSelectItem }) {
           </div>
         </div>
       </div>
-      <div id="inventory-side" className='inventory-space-between'>
+      <div id="inventory-side" style={{justifyContent: "space-between"}}>
         <div id="inventory-side">
           <div onClick={() => selectSlot("helmet", null, helmetSlot, (result) => { Context.player.equipment.helmet = result; updateEquipSets(); })}>
             <Slot removable={true} backgroundIcon='/helmet.png' className={"slot-equipment slot-editable"} ref={helmetSlot} onRemove={() => removeItem("helmet")}

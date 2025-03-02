@@ -768,17 +768,6 @@ export default class Entity {
 
         let total = 0;
 
-
-        // pet
-        if(this.equipment.pet) {
-            const petData = Utils.getPetDefinitionByItemId(this.equipment.pet.itemProp.id)
-
-            if(petData.parameter === stat && petData.rate === rate) {
-                total = Utils.getPetStatSum(petData, this.equipment.pet.petStats)
-            }
-        }
-
-
         // Individual item abilities
 
         for (const [, itemElem] of Object.entries(this.equipment)) {
@@ -929,6 +918,16 @@ export default class Entity {
 
                     total += add;
                 }
+            }
+        }
+
+        // Pet
+
+        if (this.equipment.pet) {
+            const petData = Utils.getPetDefinitionByItemId(this.equipment.pet.itemProp.id)
+
+            if (targetStats.includes(petData.parameter) && petData.rate === rate) {
+                total += Utils.getPetStatSum(petData, this.equipment.pet.petStats)
             }
         }
 

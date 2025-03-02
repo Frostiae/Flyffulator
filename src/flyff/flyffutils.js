@@ -1,6 +1,6 @@
 import ItemElem from "./flyffitemelem";
-import items from "../assets/Items.json";
 import pets from "../assets/Pets.json";
+import items from "../assets/Items.json";
 import skills from "../assets/Skills.json"
 import classes from "../assets/Classes.json";
 import equipSets from "../assets/EquipSets.json";
@@ -153,6 +153,95 @@ export function getEquipSetByItemId(id) {
     return null;
 }
 
+export function getPetDefinitionByItemId(itemId) {
+    for (const [, pet] of Object.entries(pets)) {
+        if (pet.petItemId == itemId) {
+            return pet;
+        }
+    }
+
+    return null;
+}
+
+export function getPetTierByLevels(levels) {
+    switch (Object.values(levels).filter((el) => el).length) {
+        case 1: return "F";
+        case 2: return "E";
+        case 3: return "D";
+        case 4: return "C";
+        case 5: return "B";
+        case 6: return "A";
+        case 7: return "S";
+        default: "Oops";
+    }
+}
+
+export function getPetOptionsForTier(tier) {
+    switch (tier) {
+        case "F": return [1];
+        case "E": return [1, 2];
+        case "D": return [1, 2, 3];
+        case "C": return [1, 2, 3, 4];
+        case "B": return [1, 2, 3, 4, 5];
+        case "A": return [1, 2, 3, 4, 5, 6, 7];
+        case "S": return [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        default: return [];
+    }
+}
+
+export function getPetStatSum(raisedPetDefinition, levels) {
+    return Object.values(levels).reduce((prevSum, currentLevel) => {
+        if (!currentLevel) return prevSum;
+
+        return prevSum + raisedPetDefinition.values[currentLevel - 1];
+    }, 0);
+}
+
+export function getPetModelPath(itemId) {
+    switch (itemId) {
+        case 5851: return "/model/pettiger.glb";
+        case 9941: return "/model/petlion.glb";
+        case 5471: return "/model/petrabbit.glb";
+        case 4817: return "/model/petfox.glb";
+        case 885: return "/model/petdragon.glb";
+        case 2563: return "/model/petgriffin.glb";
+        case 148: return "/model/petunicorn.glb";
+        case 1644: return "/model/petangel.glb";
+        case 6296: return "/model/petcrab.glb";
+        default: return "/model/pettiger.glb";
+    }
+}
+
+export function getPetCameraPosition(itemId) {
+    switch (itemId) {
+        case 5851: return [1, 1.5, 2];
+        case 9941: return [1, 0.7, 2];
+        case 5471: return [1, 0.5, 1.5];
+        case 4817: return [1, 1, 2];
+        case 885: return [1, 1.8, 2];
+        case 2563: return [1, 1.6, 2.3];
+        case 148: return [2, 1.5, 2.5];
+        case 1644: return [1, 2.3, 2];
+        case 6296: return [3, 1.5, 5];
+        default: return [1, 1.5, 2];
+    }
+}
+
+export function getPetCameraLookAt(itemId) {
+    switch (itemId) {
+        case 5851: return [0, 0.7, 0.6];
+        case 9941: return [0, 0.5, 0.6];
+        case 5471: return [0, 0.3, 0.2];
+        case 4817: return [0, 0.6, 0.6];
+        case 885: return [0, 1.2, 0.4];
+        case 2563: return [0, 1.2, 0.7];
+        case 148: return [0, 0.8, 0.8];
+        case 1644: return [0, 2.2, 0.2];
+        case 6296: return [0, 0.7, 0.6];
+        default: return [0, 0.7, 0.6];
+    }
+}
+
 export function getUpgradeBonus(upgradeLevel) {
     return upgradeBonus[upgradeLevel - 1];
 }
@@ -201,45 +290,4 @@ export function getGuid() {
     return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
         (c ^ (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))).toString(16)
     );
-}
-
-export function getPetDefinitionByItemId(itemId) {
-    const petData = pets.find((pet) => pet.petItemId === itemId);
-    if(!petData) return null;
-
-    return petData
-}
-
-export function getPetTierByLevels(levels) {
-    switch(Object.values(levels).filter((el) => el).length) {
-        case 1: return "F";
-        case 2: return "E";
-        case 3: return "D";
-        case 4: return "C";
-        case 5: return "B";
-        case 6: return "A";
-        case 7: return "S";
-        default: "Oops";
-    }
-}
-
-export function getPetOptionsForTier(tier) {
-    switch(tier) {
-        case "F": return [1];
-        case "E": return [1,2];
-        case "D": return [1,2,3];
-        case "C": return [1,2,3,4];
-        case "B": return [1,2,3,4,5];
-        case "A": return [1,2,3,4,5,6,7];
-        case "S": return [1,2,3,4,5,6,7,8,9];
-        default: []
-    }
-}
-
-export function getPetStatSum(raisedPetDefinition, levels) {
-    return Object.values(levels).reduce((prevSum, currentLevel) => {
-        if(!currentLevel) return prevSum;
-
-        return prevSum + raisedPetDefinition.values[currentLevel - 1];
-    }, 0)
 }

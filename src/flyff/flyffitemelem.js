@@ -14,7 +14,7 @@ export default class ItemElem {
     randomStats = [null, null]; // Random stats if the item has possible random stats
     originAwake = null;
     skillAwake = null;
-    petStats = {F: 1, E: null, D: null, C: null, B: null, A: null, S: null}; // default value
+    petStats = { F: 1, E: null, D: null, C: null, B: null, A: null, S: null }; // default value
 
 
     constructor(itemProp) {
@@ -24,7 +24,7 @@ export default class ItemElem {
         if (itemProp.abilities != undefined) {
             for (const ability of itemProp.abilities) {
                 if (ability.addMax != undefined) {
-                    const a = {...ability, value: Math.floor(ability.add + (ability.addMax - ability.add) / 2)};
+                    const a = { ...ability, value: Math.floor(ability.add + (ability.addMax - ability.add) / 2) };
                     this.statRanges.push(a);
                 }
             }
@@ -35,7 +35,7 @@ export default class ItemElem {
             for (let i = 0; i < 2; ++i) {
                 // Just initialize with the first two
                 const stat = itemProp.possibleRandomStats[i];
-                this.randomStats[i] = {...stat, id: i, value: Math.floor(stat.add + (stat.addMax - stat.add) / 2)};
+                this.randomStats[i] = { ...stat, id: i, value: Math.floor(stat.add + (stat.addMax - stat.add) / 2) };
             }
         }
     }
@@ -139,7 +139,7 @@ export default class ItemElem {
 
         if (upgradeLevel > 0) {
             let upgradeFactor = upgradeBonus[upgradeLevel - 1].weaponAttack;
-            
+
             switch (this.itemProp.subcategory) {
                 case "helmet":
                     upgradeFactor = upgradeBonus[upgradeLevel - 1].helmetDefense;

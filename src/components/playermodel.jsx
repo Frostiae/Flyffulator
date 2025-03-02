@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useAnimations, useGLTF } from '@react-three/drei';
 
-function PlayerModel() {
-    const { scene, animations } = useGLTF("/model/vagrant.glb");
+function PlayerModel({ modelPath }) {
+    const { scene, animations } = useGLTF(modelPath);
     const { actions, mixer } = useAnimations(animations, scene);
     useEffect(() => {
         if (actions) {
@@ -18,6 +18,17 @@ function PlayerModel() {
             }
         };
     }, [actions, mixer]);
+
+    useEffect(() => {
+        scene.traverse((child) => {
+            if (child.isMesh) {
+                if (child.material.map) {
+                    child.material.transparent = true;
+                    child.material.alphaTest = 0.5;
+                }
+            }
+        });
+    }, [scene]);
 
     return (
         <primitive object={scene} />
