@@ -9,7 +9,7 @@ function Equipment() {
   return (
     <div id="equipment">
       <Inventory onSelectItem={setSelectedItemElem}/>
-      <ItemEdit itemElem={selectedItemElem} />
+      <ItemEditSwitcher itemElem={selectedItemElem} />
     </div>
   )
 }
