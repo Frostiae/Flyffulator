@@ -1,6 +1,6 @@
 import * as Utils from "../../flyff/flyffutils"
 
-function PetTier({petTier, petTierLevel, currentlyEditing = false, onChange = null, onClick = null, canRemove = false}) {
+function PetTier({petTier, petTierLevel, isEditable = false, currentlyEditing = false, onChange = null, onClick = null, canRemove = false}) {
     function getImageName() {
         if(!petTierLevel) return petTier;
 
@@ -10,6 +10,7 @@ function PetTier({petTier, petTierLevel, currentlyEditing = false, onChange = nu
     return (
         <div>
             <img
+                style={{cursor: isEditable ? 'pointer' : 'inherit'}}
                 onClick={() => onClick()}
                 src={`pets/petlevels/${getImageName()}.png`}
             />
@@ -25,7 +26,7 @@ function PetTier({petTier, petTierLevel, currentlyEditing = false, onChange = nu
             )}
 
             {canRemove && (
-                <button class="flyff-close-button" onClick={() => onChange(null)}><img src="close-icon.svg" alt="remove" /></button>
+                <button className="flyff-close-button" onClick={() => onChange(null)}><img src="close-icon.svg" alt="remove" /></button>
             )}
         </div>
     )

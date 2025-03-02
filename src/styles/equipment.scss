@@ -233,7 +233,6 @@
 
     img {
       display: block;
-      cursor: pointer;
     }
 
     > div {
@@ -250,6 +249,7 @@
         left: 50%;
         transform: translateX(-50%);
         margin-top: 15px;
+        cursor: pointer;
 
         &::after {
           content: '';
