@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Dropdown({ options, onSelectionChanged, valueKey, onRemove }) {
+function Dropdown({ options, onSelectionChanged, valueKey, onRemove, style }) {
     const [opened, setOpened] = useState(false);
 
     if (options == null || Object.keys(options).length == 0) {
@@ -18,7 +18,7 @@ function Dropdown({ options, onSelectionChanged, valueKey, onRemove }) {
       }
 
     return (
-        <div className="flyff-dropdown" >
+        <div className="flyff-dropdown" style={{...style}}>
             <span onClick={() => setOpened(!opened)} className="flyff-dropdown-arrow">
                 {options[valueKey]}
                 <img style={{ transform: opened ? "scale(-1)" : "scale(1)" }} draggable={false} src="/arrow-down.png" />

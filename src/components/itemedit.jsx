@@ -250,27 +250,27 @@ function ItemEdit({ itemElem }) {
                 itemElem.itemProp.possibleRandomStats != undefined &&
                 <div className="column">
                     <h3>Random Bonus</h3>
-                    <Dropdown options={possibleRandomStats} onSelectionChanged={(e) => setRandomStatOption(0, e)} valueKey={itemElem.randomStats[0].id} />
+                    <Dropdown options={possibleRandomStats} onSelectionChanged={(e) => setRandomStatOption(0, e)} valueKey={itemElem.randomStats[0]?.id} style={{minWidth: "100px"}}/>
                     <div className="row">
                         <RangeInput
-                            min={itemElem.randomStats[0].add}
-                            max={itemElem.randomStats[0].addMax}
+                            min={itemElem.randomStats[0]?.add ?? 0}
+                            max={itemElem.randomStats[0]?.addMax ?? 0}
                             onChange={(e) => setRandomStatValue(0, e)}
-                            value={itemElem.randomStats[0].value}
-                            isRange={itemElem.randomStats[0].rate}
+                            value={itemElem.randomStats[0]?.value ?? 0}
+                            isRange={itemElem.randomStats[0]?.rate ?? true}
                             prefix={"+"}
                             step={0.1}
                         />
                     </div>
 
-                    <Dropdown options={possibleRandomStats} onSelectionChanged={(e) => setRandomStatOption(1, e)} valueKey={itemElem.randomStats[1].id} />
+                    <Dropdown options={possibleRandomStats} onSelectionChanged={(e) => setRandomStatOption(1, e)} valueKey={itemElem.randomStats[1]?.id} style={{minWidth: "100px"}}/>
                     <div className="row">
                         <RangeInput
-                            min={itemElem.randomStats[1].add}
-                            max={itemElem.randomStats[1].addMax}
+                            min={itemElem.randomStats[1]?.add ?? 0}
+                            max={itemElem.randomStats[1]?.addMax ?? 0}
                             onChange={(e) => setRandomStatValue(1, e)}
-                            value={itemElem.randomStats[1].value}
-                            isRange={itemElem.randomStats[1].rate}
+                            value={itemElem.randomStats[1]?.value ?? 0}
+                            isRange={itemElem.randomStats[1]?.rate ?? true}
                             prefix={"+"}
                             step={0.1}
                         />

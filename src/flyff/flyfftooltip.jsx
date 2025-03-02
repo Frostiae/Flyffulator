@@ -209,9 +209,10 @@ function setupItem(itemElem, i18n) {
     }
 
     // Ultimate stats
-
     if (itemProp.possibleRandomStats != undefined) {
         for (const stat of itemElem.randomStats) {
+            if(stat === null) continue; 
+            
             out.push(<span style={{ color: "#ffff00" }}><br />{stat.parameter}+{stat.value}{stat.rate ? "%" : ""}</span>);
         }
     }
