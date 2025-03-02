@@ -28,6 +28,7 @@ function Inventory({ onSelectItem }) {
   const suitSlot = useRef(null);
   const gauntletsSlot = useRef(null);
   const bootsSlot = useRef(null);
+  const petSlot = useRef(null);
 
   function selectSlot(subcategory, category, slotRef, onSet) {
     if (slotRef.current.content != null) {
@@ -111,22 +112,31 @@ function Inventory({ onSelectItem }) {
           </div>
         </div>
       </div>
-      <div id="inventory-side">
-        <div onClick={() => selectSlot("helmet", null, helmetSlot, (result) => { Context.player.equipment.helmet = result; updateEquipSets(); })}>
-          <Slot removable={true} backgroundIcon='/helmet.png' className={"slot-equipment slot-editable"} ref={helmetSlot} onRemove={() => removeItem("helmet")}
-            content={Context.player.equipment.helmet} />
+      <div id="inventory-side" className='inventory-space-between'>
+        <div id="inventory-side">
+          <div onClick={() => selectSlot("helmet", null, helmetSlot, (result) => { Context.player.equipment.helmet = result; updateEquipSets(); })}>
+            <Slot removable={true} backgroundIcon='/helmet.png' className={"slot-equipment slot-editable"} ref={helmetSlot} onRemove={() => removeItem("helmet")}
+              content={Context.player.equipment.helmet} />
+          </div>
+          <div onClick={() => selectSlot("suit", null, suitSlot, (result) => { Context.player.equipment.suit = result; updateEquipSets(); })}>
+            <Slot removable={true} backgroundIcon='/suit.png' className={"slot-equipment slot-editable"} ref={suitSlot} onRemove={() => removeItem("suit")}
+              content={Context.player.equipment.suit} />
+          </div>
+          <div onClick={() => selectSlot("gauntlet", null, gauntletsSlot, (result) => { Context.player.equipment.gauntlets = result; updateEquipSets(); })}>
+            <Slot removable={true} backgroundIcon='/gloves.png' className={"slot-equipment slot-editable"} ref={gauntletsSlot} onRemove={() => removeItem("gauntlets")}
+              content={Context.player.equipment.gauntlets} />
+          </div>
+          <div onClick={() => selectSlot("boots", null, bootsSlot, (result) => { Context.player.equipment.boots = result; updateEquipSets(); })}>
+            <Slot removable={true} backgroundIcon='/boots.png' className={"slot-equipment slot-editable"} ref={bootsSlot} onRemove={() => removeItem("boots")}
+              content={Context.player.equipment.boots} />
+          </div>
         </div>
-        <div onClick={() => selectSlot("suit", null, suitSlot, (result) => { Context.player.equipment.suit = result; updateEquipSets(); })}>
-          <Slot removable={true} backgroundIcon='/suit.png' className={"slot-equipment slot-editable"} ref={suitSlot} onRemove={() => removeItem("suit")}
-            content={Context.player.equipment.suit} />
-        </div>
-        <div onClick={() => selectSlot("gauntlet", null, gauntletsSlot, (result) => { Context.player.equipment.gauntlets = result; updateEquipSets(); })}>
-          <Slot removable={true} backgroundIcon='/gloves.png' className={"slot-equipment slot-editable"} ref={gauntletsSlot} onRemove={() => removeItem("gauntlets")}
-            content={Context.player.equipment.gauntlets} />
-        </div>
-        <div onClick={() => selectSlot("boots", null, bootsSlot, (result) => { Context.player.equipment.boots = result; updateEquipSets(); })}>
-          <Slot removable={true} backgroundIcon='/boots.png' className={"slot-equipment slot-editable"} ref={bootsSlot} onRemove={() => removeItem("boots")}
-            content={Context.player.equipment.boots} />
+
+        <div id="inventory-side">
+          <div onClick={() => selectSlot(null, "raisedpet", petSlot, (result) => { Context.player.equipment.pet = result; })}>
+            <Slot removable={true} backgroundIcon='/pet.png' className={"slot-equipment slot-editable"} ref={petSlot} onRemove={() => removeItem("pet")}
+              content={Context.player.equipment.pet} />
+          </div>
         </div>
       </div>
     </div>

@@ -14,6 +14,8 @@ export default class ItemElem {
     randomStats = [null, null]; // Random stats if the item has possible random stats
     originAwake = null;
     skillAwake = null;
+    petStats = {F: 1, E: null, D: null, C: null, B: null, A: null, S: null}; // default value
+
 
     constructor(itemProp) {
         this.itemProp = itemProp;

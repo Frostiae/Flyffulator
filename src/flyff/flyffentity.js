@@ -22,7 +22,8 @@ export default class Entity {
         helmet: null,
         suit: null,
         gauntlets: null,
-        boots: null
+        boots: null,
+        pet: null
     };
     skillLevels = {};
     activeBuffs = {};
@@ -766,6 +767,17 @@ export default class Entity {
         }
 
         let total = 0;
+
+
+        // pet
+        if(this.equipment.pet) {
+            const petData = Utils.getPetDefinitionByItemId(this.equipment.pet.itemProp.id)
+
+            if(petData.parameter === stat && petData.rate === rate) {
+                total = Utils.getPetStatSum(petData, this.equipment.pet.petStats)
+            }
+        }
+
 
         // Individual item abilities
 

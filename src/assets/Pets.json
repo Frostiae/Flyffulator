@@ -1,0 +1,714 @@
+[
+    {
+      "petItemId": 148,
+      "parameter": "maxhp",
+      "rate": false,
+      "values": [96, 191, 383, 670, 1053, 1356, 1628, 2539, 3161],
+      "tiers": [
+        {
+          "maxEnergy": 180,
+          "exp": 20,
+          "requiredCandyItem": 2313,
+          "graceSkill": 8819,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 1,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 210,
+          "exp": 20,
+          "requiredCandyItem": 5906,
+          "graceSkill": 8819,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 2,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 240,
+          "exp": 25,
+          "requiredCandyItem": 3380,
+          "graceSkill": 8819,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 3,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 270,
+          "exp": 25,
+          "requiredCandyItem": 8748,
+          "graceSkill": 8819,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 4,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 300,
+          "exp": 25,
+          "requiredCandyItem": 4371,
+          "graceSkill": 8819,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 5,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 330,
+          "exp": 50,
+          "requiredCandyItem": 6663,
+          "graceSkill": 8819,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 6,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 360,
+          "exp": 0,
+          "requiredCandyItem": 6663,
+          "graceSkill": 8819,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 7,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        }
+      ]
+    },
+    {
+      "petItemId": 885,
+      "parameter": "attack",
+      "rate": false,
+      "values": [7, 13, 27, 47, 73, 95, 113, 165, 220],
+      "tiers": [
+        {
+          "maxEnergy": 180,
+          "exp": 20,
+          "requiredCandyItem": 2313,
+          "graceSkill": 4622,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 1,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 210,
+          "exp": 20,
+          "requiredCandyItem": 5906,
+          "graceSkill": 4622,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 2,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 240,
+          "exp": 25,
+          "requiredCandyItem": 3380,
+          "graceSkill": 4622,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 3,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 270,
+          "exp": 25,
+          "requiredCandyItem": 8748,
+          "graceSkill": 4622,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 4,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 300,
+          "exp": 25,
+          "requiredCandyItem": 4371,
+          "graceSkill": 4622,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 5,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 330,
+          "exp": 50,
+          "requiredCandyItem": 6663,
+          "graceSkill": 4622,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 6,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 360,
+          "exp": 0,
+          "requiredCandyItem": 6663,
+          "graceSkill": 4622,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 7,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        }
+      ]
+    },
+    {
+      "petItemId": 1644,
+      "parameter": "criticalchance",
+      "rate": true,
+      "values": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "tiers": [
+        {
+          "maxEnergy": 180,
+          "exp": 20,
+          "requiredCandyItem": 2313,
+          "graceSkill": 2379,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 1,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 210,
+          "exp": 20,
+          "requiredCandyItem": 5906,
+          "graceSkill": 2379,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 2,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 240,
+          "exp": 25,
+          "requiredCandyItem": 3380,
+          "graceSkill": 2379,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 3,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 270,
+          "exp": 25,
+          "requiredCandyItem": 8748,
+          "graceSkill": 2379,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 4,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 300,
+          "exp": 25,
+          "requiredCandyItem": 4371,
+          "graceSkill": 2379,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 5,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 330,
+          "exp": 50,
+          "requiredCandyItem": 6663,
+          "graceSkill": 2379,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 6,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 360,
+          "exp": 0,
+          "requiredCandyItem": 6663,
+          "graceSkill": 2379,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 7,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        }
+      ]
+    },
+    {
+      "petItemId": 2563,
+      "parameter": "def",
+      "rate": false,
+      "values": [6, 12, 24, 42, 66, 88, 102, 140, 198],
+      "tiers": [
+        {
+          "maxEnergy": 180,
+          "exp": 20,
+          "requiredCandyItem": 2313,
+          "graceSkill": 4819,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 1,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 210,
+          "exp": 20,
+          "requiredCandyItem": 5906,
+          "graceSkill": 4819,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 2,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 240,
+          "exp": 25,
+          "requiredCandyItem": 3380,
+          "graceSkill": 4819,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 3,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 270,
+          "exp": 25,
+          "requiredCandyItem": 8748,
+          "graceSkill": 4819,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 4,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 300,
+          "exp": 25,
+          "requiredCandyItem": 4371,
+          "graceSkill": 4819,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 5,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 330,
+          "exp": 50,
+          "requiredCandyItem": 6663,
+          "graceSkill": 4819,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 6,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 360,
+          "exp": 0,
+          "requiredCandyItem": 6663,
+          "graceSkill": 4819,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 7,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        }
+      ]
+    },
+    {
+      "petItemId": 4817,
+      "parameter": "int",
+      "rate": false,
+      "values": [1, 2, 4, 7, 11, 15, 17, 24, 33],
+      "tiers": [
+        {
+          "maxEnergy": 180,
+          "exp": 20,
+          "requiredCandyItem": 2313,
+          "graceSkill": 1625,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 1,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 210,
+          "exp": 20,
+          "requiredCandyItem": 5906,
+          "graceSkill": 1625,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 2,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 240,
+          "exp": 25,
+          "requiredCandyItem": 3380,
+          "graceSkill": 1625,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 3,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 270,
+          "exp": 25,
+          "requiredCandyItem": 8748,
+          "graceSkill": 1625,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 4,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 300,
+          "exp": 25,
+          "requiredCandyItem": 4371,
+          "graceSkill": 1625,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 5,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 330,
+          "exp": 50,
+          "requiredCandyItem": 6663,
+          "graceSkill": 1625,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 6,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 360,
+          "exp": 0,
+          "requiredCandyItem": 6663,
+          "graceSkill": 1625,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 7,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        }
+      ]
+    },
+    {
+      "petItemId": 5471,
+      "parameter": "dex",
+      "rate": false,
+      "values": [1, 2, 4, 7, 11, 15, 17, 24, 33],
+      "tiers": [
+        {
+          "maxEnergy": 180,
+          "exp": 20,
+          "requiredCandyItem": 2313,
+          "graceSkill": 4295,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 1,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 210,
+          "exp": 20,
+          "requiredCandyItem": 5906,
+          "graceSkill": 4295,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 2,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 240,
+          "exp": 25,
+          "requiredCandyItem": 3380,
+          "graceSkill": 4295,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 3,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 270,
+          "exp": 25,
+          "requiredCandyItem": 8748,
+          "graceSkill": 4295,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 4,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 300,
+          "exp": 25,
+          "requiredCandyItem": 4371,
+          "graceSkill": 4295,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 5,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 330,
+          "exp": 50,
+          "requiredCandyItem": 6663,
+          "graceSkill": 4295,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 6,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 360,
+          "exp": 0,
+          "requiredCandyItem": 6663,
+          "graceSkill": 4295,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 7,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        }
+      ]
+    },
+    {
+      "petItemId": 5851,
+      "parameter": "str",
+      "rate": false,
+      "values": [1, 2, 4, 7, 11, 15, 17, 24, 33],
+      "tiers": [
+        {
+          "maxEnergy": 180,
+          "exp": 20,
+          "requiredCandyItem": 2313,
+          "graceSkill": 8542,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 1,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 210,
+          "exp": 20,
+          "requiredCandyItem": 5906,
+          "graceSkill": 8542,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 2,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 240,
+          "exp": 25,
+          "requiredCandyItem": 3380,
+          "graceSkill": 8542,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 3,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 270,
+          "exp": 25,
+          "requiredCandyItem": 8748,
+          "graceSkill": 8542,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 4,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 300,
+          "exp": 25,
+          "requiredCandyItem": 4371,
+          "graceSkill": 8542,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 5,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 330,
+          "exp": 50,
+          "requiredCandyItem": 6663,
+          "graceSkill": 8542,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 6,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 360,
+          "exp": 0,
+          "requiredCandyItem": 6663,
+          "graceSkill": 8542,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 7,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        }
+      ]
+    },
+    {
+      "petItemId": 6296,
+      "parameter": "criticaldamage",
+      "rate": true,
+      "values": [2, 3, 4, 5, 6, 7, 9, 11, 16],
+      "tiers": [
+        {
+          "maxEnergy": 180,
+          "exp": 20,
+          "requiredCandyItem": 2313,
+          "graceSkill": 5184,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 1,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 210,
+          "exp": 20,
+          "requiredCandyItem": 5906,
+          "graceSkill": 5184,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 2,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 240,
+          "exp": 25,
+          "requiredCandyItem": 3380,
+          "graceSkill": 5184,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 3,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 270,
+          "exp": 25,
+          "requiredCandyItem": 8748,
+          "graceSkill": 5184,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 4,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 300,
+          "exp": 25,
+          "requiredCandyItem": 4371,
+          "graceSkill": 5184,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 5,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 330,
+          "exp": 50,
+          "requiredCandyItem": 6663,
+          "graceSkill": 5184,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 6,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 360,
+          "exp": 0,
+          "requiredCandyItem": 6663,
+          "graceSkill": 5184,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 7,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        }
+      ]
+    },
+    {
+      "petItemId": 8600,
+      "tiers": [
+        {
+          "maxEnergy": 0,
+          "exp": 10,
+          "requiredCandyItem": 2313
+        }
+      ]
+    },
+    {
+      "petItemId": 9941,
+      "parameter": "sta",
+      "rate": false,
+      "values": [1, 2, 4, 7, 11, 15, 17, 24, 33],
+      "tiers": [
+        {
+          "maxEnergy": 180,
+          "exp": 20,
+          "requiredCandyItem": 2313,
+          "graceSkill": 2472,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 1,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 210,
+          "exp": 20,
+          "requiredCandyItem": 5906,
+          "graceSkill": 2472,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 2,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 240,
+          "exp": 25,
+          "requiredCandyItem": 3380,
+          "graceSkill": 2472,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 3,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 270,
+          "exp": 25,
+          "requiredCandyItem": 8748,
+          "graceSkill": 2472,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 4,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 300,
+          "exp": 25,
+          "requiredCandyItem": 4371,
+          "graceSkill": 2472,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 5,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 330,
+          "exp": 50,
+          "requiredCandyItem": 6663,
+          "graceSkill": 2472,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 6,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        },
+        {
+          "maxEnergy": 360,
+          "exp": 0,
+          "requiredCandyItem": 6663,
+          "graceSkill": 2472,
+          "graceSkillCooldown": 120,
+          "graceSkillLevel": 7,
+          "graceSkillDuration": 20,
+          "graceSkillEnergyConsumption": 50
+        }
+      ]
+    }
+  ]
