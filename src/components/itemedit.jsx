@@ -1,19 +1,20 @@
-import { useSearch } from '../searchcontext';
 import { useState } from 'react';
+import { useSearch } from '../searchcontext';
+import { useTranslation } from "react-i18next";
 
 import Slot from './slot';
 import Dropdown from './dropdown';
 import RangeInput from './rangeinput';
+import NumberInput from './numberinput';
 import * as Utils from '../flyff/flyffutils';
 import skillAwakes from '../assets/SkillAwakes.json';
-import { useTranslation } from "react-i18next";
 
 function ItemEdit({ itemElem }) {
     const [state, setState] = useState(false);
     const { showSearch } = useSearch();
     const { i18n } = useTranslation();
     var shortCode = "en";
-    if(i18n.resolvedLanguage) {
+    if (i18n.resolvedLanguage) {
         shortCode = i18n.resolvedLanguage.split('-')[0];
     }
 
@@ -81,11 +82,6 @@ function ItemEdit({ itemElem }) {
         }
     }
 
-    function addUpgradeLevel(add) {
-        itemElem.upgradeLevel = Utils.clamp(itemElem.upgradeLevel + add, 0, itemElem.getMaximumUpgradeLevel());
-        setState(!state);
-    }
-
     function setPiercingSlot(index) {
         showSearch({
             type: "item", subcategory: "piercingcard", onSet: (cardItem) => {
@@ -139,7 +135,7 @@ function ItemEdit({ itemElem }) {
     }
 
     function setSkillAwakeValue(value) {
-        itemElem.skillAwake.add = parseFloat(value.target.value);
+        itemElem.skillAwake.add = parseFloat(value);
         setState(!state);
     }
 
@@ -155,7 +151,7 @@ function ItemEdit({ itemElem }) {
     }
 
     function setRandomStatValue(index, value) {
-        itemElem.randomStats[index].value = parseFloat(value.target.value);
+        itemElem.randomStats[index].value = parseFloat(value);
         setState(!state);
     }
 
@@ -180,11 +176,6 @@ function ItemEdit({ itemElem }) {
         setState(!state);
     }
 
-    function addElementUpgradeLevel(add) {
-        itemElem.elementUpgradeLevel = Utils.clamp(itemElem.elementUpgradeLevel + add, 0, 10);
-        setState(!state);
-    }
-
     return (
         <div className="item-edit">
             <div id="edit-header">
@@ -193,11 +184,7 @@ function ItemEdit({ itemElem }) {
 
                 {
                     itemElem.getMaximumUpgradeLevel() > 0 &&
-                    <>
-                        <button onClick={() => addUpgradeLevel(-1)} className='flyff-button small'>-</button>
-                        <input type="text" disabled value={`+${itemElem.upgradeLevel}`} />
-                        <button onClick={() => addUpgradeLevel(1)} className='flyff-button small'>+</button>
-                    </>
+                    <NumberInput hasButtons min={0} max={itemElem.getMaximumUpgradeLevel()} value={itemElem.upgradeLevel} onChange={(v) => { itemElem.upgradeLevel = v; }} label={"+"} />
                 }
             </div>
             <p style={{ maxWidth: "300px", fontStyle: "italic", margin: "0" }}>
@@ -227,7 +214,7 @@ function ItemEdit({ itemElem }) {
                                 <RangeInput
                                     min={ability.add}
                                     max={ability.addMax}
-                                    onChange={(e) => setStatRange(index, e.target.value)}
+                                    onChange={(e) => setStatRange(index, e)}
                                     value={ability.value}
                                     isRange={ability.rate}
                                     prefix={"+"}
@@ -277,9 +264,7 @@ function ItemEdit({ itemElem }) {
                     <h3>Element</h3>
                     <Dropdown options={possibleElementValues} onSelectionChanged={setElement} valueKey={itemElem.element} />
                     <div className="row">
-                        <button disabled={itemElem.element == "none"} onClick={() => addElementUpgradeLevel(-1)} className='flyff-button small'>-</button>
-                        <input type="text" disabled value={`+${itemElem.elementUpgradeLevel}`} />
-                        <button disabled={itemElem.element == "none"} onClick={() => addElementUpgradeLevel(1)} className='flyff-button small'>+</button>
+                        <NumberInput hasButtons min={0} max={10} value={itemElem.elementUpgradeLevel} onChange={(v) => { itemElem.elementUpgradeLevel = v; }} label={"+"} />
                     </div>
                 </div>
             }

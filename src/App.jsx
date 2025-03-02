@@ -13,6 +13,7 @@ import * as Utils from './flyff/flyffutils';
 import Dropdown from './components/dropdown';
 import SkillsBuffs from './tabs/skillsbuffs';
 import Calculations from './tabs/calculations';
+import NumberInput from './components/numberinput';
 import ImportCharacter from './components/importcharacter';
 
 
@@ -48,18 +49,10 @@ function App() {
 
   function setPlayerStat(statKey, statValue) {
     statValue = Number(statValue);
-    if (statKey == "level") {
-      statValue = Utils.clamp(statValue, Context.player.job.minLevel, Context.player.job.maxLevel);
+    if (Context.player[statKey] != statValue) {
+      Context.player[statKey] = statValue;
+      setState(!state); // Just to re-render...
     }
-    else {
-      const maxDiff = Context.player.getRemainingStatPoints();
-      if (statValue - Context.player[statKey] > maxDiff) {
-        statValue = Context.player[statKey] + maxDiff;
-      }
-    }
-
-    Context.player[statKey] = statValue;
-    setState(!state); // Just to re-render...
   }
 
   async function share() {
@@ -107,7 +100,7 @@ function App() {
       if (key.startsWith("i18next")) {
         continue;
       }
-  
+
       loadBuild(localStorage.key(i));
       break;
     }
@@ -133,28 +126,23 @@ function App() {
             </div>
             <div id="build-stats">
               <div className="stat-block">
-                <label htmlFor="stats-level">Level</label>
-                <input type="number" id="stats-level" value={Context.player.level} onChange={(e) => setPlayerStat("level", e.target.value)} />
+                <NumberInput min={Context.player.job.minLevel} max={Context.player.job.maxLevel} label={"Level"} onChange={(v) => setPlayerStat("level", v)} value={Context.player.level} />
                 <i>{Context.player.getRemainingStatPoints()} {t("stat_points_available")}</i>
               </div>
               <div className="stat-block">
                 <div className="stat-row">
-                  <label htmlFor="stats-str">STR</label>
-                  <input type="number" id="stats-str" value={Context.player.str} onChange={(e) => setPlayerStat("str", e.target.value)} />
+                  <NumberInput min={15} max={Context.player.str + Context.player.getRemainingStatPoints()} label={"STR"} onChange={(v) => setPlayerStat("str", v)} value={Context.player.str} />
                 </div>
                 <div className="stat-row">
-                  <label htmlFor="stats-sta">STA</label>
-                  <input type="number" id="stats-sta" value={Context.player.sta} onChange={(e) => setPlayerStat("sta", e.target.value)} />
+                  <NumberInput min={15} max={Context.player.sta + Context.player.getRemainingStatPoints()} label={"STA"} onChange={(v) => setPlayerStat("sta", v)} value={Context.player.sta} />
                 </div>
               </div>
               <div className="stat-block">
                 <div className="stat-row">
-                  <label htmlFor="stats-dex">DEX</label>
-                  <input type="number" id="stats-dex" value={Context.player.dex} onChange={(e) => setPlayerStat("dex", e.target.value)} />
+                  <NumberInput min={15} max={Context.player.dex + Context.player.getRemainingStatPoints()} label={"DEX"} onChange={(v) => setPlayerStat("dex", v)} value={Context.player.dex} />
                 </div>
                 <div className="stat-row">
-                  <label htmlFor="stats-int">INT</label>
-                  <input type="number" id="stats-int" value={Context.player.int} onChange={(e) => setPlayerStat("int", e.target.value)} />
+                  <NumberInput min={15} max={Context.player.int + Context.player.getRemainingStatPoints()} label={"INT"} onChange={(v) => setPlayerStat("int", v)} value={Context.player.int} />
                 </div>
               </div>
             </div>
