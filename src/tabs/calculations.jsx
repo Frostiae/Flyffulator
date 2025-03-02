@@ -79,8 +79,14 @@ function Calculations() {
                 Context.attackFlags = Utils.ATTACK_FLAGS.GENERIC;
             }
 
+            // TODO: This isn't too accurate for blades, the pattern is a bit different
+            let leftHand = false;
+            if (Context.player.job.id == 2246) {
+                leftHand = !leftHand;
+            }
+
             const res = {
-                damage: getDamage(false),
+                damage: getDamage(leftHand),
                 critical: (Context.attackFlags & Utils.ATTACK_FLAGS.CRITICAL) != 0,
                 block: (Context.attackFlags & Utils.ATTACK_FLAGS.BLOCKING) != 0,
                 miss: (Context.attackFlags & Utils.ATTACK_FLAGS.MISS) != 0,
