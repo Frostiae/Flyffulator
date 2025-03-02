@@ -1,5 +1,5 @@
-import SkillTree from '../components/skilltree';
 import '../styles/skills.scss';
+import SkillTree from '../components/skilltree';
 
 function SkillsBuffs() {
     return (

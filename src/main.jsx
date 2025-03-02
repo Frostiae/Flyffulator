@@ -1,12 +1,13 @@
-import App from './App.jsx'
-import LocaleSwitcher from "./i18n/LocaleSwitcher";
-import './styles/index.scss'
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import flyffulatorLogo from '/logonew.png'
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler } from 'chart.js';
-import Annotation from 'chartjs-plugin-annotation'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+
 import "./i18n/config.js";
+import App from './App.jsx';
+import './styles/index.scss';
+import flyffulatorLogo from '/logonew.png';
+import Annotation from 'chartjs-plugin-annotation';
+import LocaleSwitcher from "./i18n/LocaleSwitcher";
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler } from 'chart.js';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Annotation);
 

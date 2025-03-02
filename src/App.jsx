@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from "react-i18next";
 import { SearchProvider } from './searchcontext';
 import { TooltipProvider } from './tooltipcontext';
 
@@ -13,7 +14,6 @@ import Dropdown from './components/dropdown';
 import SkillsBuffs from './tabs/skillsbuffs';
 import Calculations from './tabs/calculations';
 import ImportCharacter from './components/importcharacter';
-import { useTranslation } from "react-i18next";
 
 
 function App() {
@@ -123,7 +123,7 @@ function App() {
               <Dropdown options={jobOptions} onSelectionChanged={changeJob} valueKey={Context.player.job.id} />
               {t("flyff_universe_character_simulator")}
               {
-                localStorage.length > 0 &&
+                Object.entries(buildOptions).length > 0 &&
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                   {t("loaded_build")}
                   <Dropdown options={buildOptions} onSelectionChanged={loadBuild} valueKey={loadedBuild} />

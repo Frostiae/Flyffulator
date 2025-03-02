@@ -1,7 +1,7 @@
+import { useState } from 'react';
 import '../styles/equipment.scss';
 import Inventory from '../components/inventory';
 import ItemEdit from '../components/itemedit';
-import { useState } from 'react';
 
 function Equipment() {
   const [selectedItemElem, setSelectedItemElem] = useState(null);
