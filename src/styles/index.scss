@@ -284,6 +284,16 @@ button.flyff-button {
   color: black;
   user-select: none;
 
+  &.icon {
+    width: 100%;
+    padding: 0;
+
+    img {
+      width: 10px;
+      filter: brightness(0);
+    }
+  }
+
   &.small {
     padding: 0;
     width: 20px;

@@ -186,6 +186,16 @@ function ItemEdit({ itemElem }) {
         setState(!state);
     }
 
+    function fillPiercings(e) {
+        if (itemElem.piercings.at(-1)) {
+            while (itemElem.piercings.length < itemElem.getMaximumPiercingSlots()) {
+                itemElem.piercings.push(itemElem.piercings.at(-1));
+            }
+        }
+        setState(!state);
+        e.stopPropagation();
+    }
+
     return (
         <div className="item-edit">
             <div id="edit-header">
@@ -288,6 +298,13 @@ function ItemEdit({ itemElem }) {
                             Array.from({ length: itemElem.getMaximumPiercingSlots() }, (_, i) => (
                                 <div key={i} onClick={() => setPiercingSlot(i)}>
                                     <Slot className={"slot-item slot-editable"} content={itemElem.piercings[i]} />
+                                    {
+                                        i == itemElem.piercings.length - 1 &&
+                                        <button className="flyff-button icon" onClick={fillPiercings}>
+                                            <img src="double-arrow-right.svg" alt="remove" />
+                                        </button>
+
+                                    }
                                 </div>
                             ))
                         }
