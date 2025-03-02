@@ -69,6 +69,28 @@ function SkillTree() {
         });
     }
 
+    function addRMBuffs() {
+        const buffs = [
+            2678, // patience
+            3964, // quick step
+            1129, // mental sign
+            9852, // haste
+            7661, // heap up
+            3721, // cats reflex
+            690,  // beef up
+            1029, // cannon ball
+            6858, // accuracy
+            579,  // protect
+            9047 // spirit fortune
+        ];
+
+        for (const id of buffs) {
+            Context.player.activeBuffs[id] = Utils.getSkillById(id).levels.length;
+        }
+
+        setRefresh(!refresh);
+    }
+
     function removeBuffItem(item) {
         Context.player.activeItems = Context.player.activeItems.filter((i) => i != item);
         setRefresh(!refresh);
@@ -135,6 +157,7 @@ function SkillTree() {
                 <div className="buffs-header">
                     <h3>{t("skills_and_buffs_active_buffs")}</h3>
                     <button className="flyff-button" onClick={() => addBuffSkill()}>{t("skills_and_buffs_add")}</button>
+                    <button className="flyff-button" onClick={() => addRMBuffs()}>{t("skills_and_buffs_add_rm")}</button>
                 </div>
                 <div className="column">
                     <NumberInput min={15} max={1000} value={Context.player.bufferStr} label={"Caster STR"} onChange={(v) => {Context.player.bufferStr = v;}} />
