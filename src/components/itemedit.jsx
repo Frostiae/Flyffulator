@@ -84,7 +84,7 @@ function ItemEdit({ itemElem }) {
 
     function setPiercingSlot(index) {
         showSearch({
-            type: "item", subcategory: "piercingcard", onSet: (cardItem) => {
+            type: "item", subcategory: "piercingcard", searchByStats: true, onSet: (cardItem) => {
                 itemElem.piercings[index] = cardItem;
             }
         });
@@ -92,7 +92,7 @@ function ItemEdit({ itemElem }) {
 
     function setJewelSlot(index) {
         showSearch({
-            type: "item", subcategory: "ultimatejewel", onSet: (jewel) => {
+            type: "item", subcategory: "ultimatejewel", searchByStats: true, onSet: (jewel) => {
                 itemElem.ultimateJewels[index] = jewel;
             }
         });
@@ -175,6 +175,16 @@ function ItemEdit({ itemElem }) {
 
         setState(!state);
     }
+    
+    function setUpgradeLevel(level) {
+        itemElem.upgradeLevel = level;
+        setState(!state);
+    }
+
+    function setElementUpgradeLevel(level) {
+        itemElem.elementUpgradeLevel = level;
+        setState(!state);
+    }
 
     return (
         <div className="item-edit">
@@ -184,7 +194,7 @@ function ItemEdit({ itemElem }) {
 
                 {
                     itemElem.getMaximumUpgradeLevel() > 0 &&
-                    <NumberInput hasButtons min={0} max={itemElem.getMaximumUpgradeLevel()} value={itemElem.upgradeLevel} onChange={(v) => { itemElem.upgradeLevel = v; }} label={"+"} />
+                    <NumberInput hasButtons min={0} max={itemElem.getMaximumUpgradeLevel()} value={itemElem.upgradeLevel} onChange={setUpgradeLevel} label={"+"} />
                 }
             </div>
             <p style={{ maxWidth: "300px", fontStyle: "italic", margin: "0" }}>
@@ -264,7 +274,7 @@ function ItemEdit({ itemElem }) {
                     <h3>Element</h3>
                     <Dropdown options={possibleElementValues} onSelectionChanged={setElement} valueKey={itemElem.element} />
                     <div className="row">
-                        <NumberInput hasButtons min={0} max={10} value={itemElem.elementUpgradeLevel} onChange={(v) => { itemElem.elementUpgradeLevel = v; }} label={"+"} />
+                        <NumberInput hasButtons min={0} max={10} value={itemElem.elementUpgradeLevel} onChange={setElementUpgradeLevel} label={"+"} />
                     </div>
                 </div>
             }

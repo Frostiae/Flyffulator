@@ -1,8 +1,12 @@
-import { useState, forwardRef, useImperativeHandle } from "react";
+import { useState, useEffect } from "react";
 
-function NumberInput({ min, max, value, onChange, label, hasButtons, prefix, suffix }, ref) {
+function NumberInput({ min, max, value, onChange, label, hasButtons, prefix, suffix }) {
     const [refresh, setRefresh] = useState(false);
     const [val, setVal] = useState(value);
+
+    useEffect(() => {
+        setVal(value);
+    }, [value]);
 
     function handleChange(input, blur) {
         if (typeof input == "string") {
@@ -27,14 +31,6 @@ function NumberInput({ min, max, value, onChange, label, hasButtons, prefix, suf
         setRefresh(!refresh);
     }
 
-    function forceRefresh(newValue) {
-        setVal(newValue);
-    }
-
-    useImperativeHandle(ref, () => ({
-        refresh: forceRefresh
-    }));
-
     return (
         <div className="row" style={{ justifyContent: "space-between" }}>
             <label htmlFor={label}>{label}</label>
@@ -51,4 +47,4 @@ function NumberInput({ min, max, value, onChange, label, hasButtons, prefix, suf
     );
 }
 
-export default forwardRef(NumberInput);
+export default NumberInput;
