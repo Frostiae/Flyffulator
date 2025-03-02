@@ -106,6 +106,24 @@ function App() {
     }
   }
 
+  function removeBuild(key) {
+    if (confirm("Are you sure you want to remove this build?")) {
+      localStorage.removeItem(key);
+      if (loadedBuild == key) {
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+          if (key.startsWith("i18next")) {
+            continue;
+          }
+
+          loadBuild(localStorage.key(i));
+          break;
+        }
+      }
+      setState(!state);
+    }
+  }
+
   return (
     <TooltipProvider>
       <SearchProvider>
@@ -119,7 +137,7 @@ function App() {
                 Object.entries(buildOptions).length > 0 &&
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                   {t("loaded_build")}
-                  <Dropdown options={buildOptions} onSelectionChanged={loadBuild} valueKey={loadedBuild} />
+                  <Dropdown onRemove={removeBuild} options={buildOptions} onSelectionChanged={loadBuild} valueKey={loadedBuild} />
                 </div>
 
               }
