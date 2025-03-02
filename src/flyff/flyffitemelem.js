@@ -50,7 +50,7 @@ export default class ItemElem {
      * @returns Whether or not this item can be element upgraded.
      */
     isElementUpgradeAble() {
-        return this.itemProp.category == "weapon" || this.itemProp.category == "suit";
+        return this.itemProp.category == "weapon" || this.itemProp.subcategory == "suit";
     }
 
     /**
