@@ -26,36 +26,39 @@ function PetWindow({raisedPetDefinition, petLevels, editable = false, onEditLeve
     }
 
     return (
-        <div id="item-edit-pet" className="item-edit">
-            <div id="base-container">
-                <div id="image-container">
-                    <img src={`https://api.flyff.com/image/item/${Items[raisedPetDefinition.petItemId].icon}`}></img>
-                </div>
-
-                <div id="stats-container">
-                    <div className="stat-group">
-                        <span className='stat-title'>Tier</span>
-                        <span className='stat-value'>{Utils.getPetTierByLevels(petLevels)} Tier</span>
+        <div className="pet">
+            <div className="window-title">{Items[raisedPetDefinition.petItemId].name.en}</div>
+            <div className="window-content">
+                <div id="base-container">
+                    <div id="image-container">
+                        <img src={`https://api.flyff.com/image/item/${Items[raisedPetDefinition.petItemId].icon}`}></img>
                     </div>
 
-                    <div className="stat-group">
-                        <span className='stat-title'>Stat</span>
-                        <span className='stat-value'>{`${raisedPetDefinition.parameter} +${Utils.getPetStatSum(raisedPetDefinition, petLevels)}${raisedPetDefinition.rate ? '%' : ''}`}</span>
+                    <div id="stats-container">
+                        <div className="stat-group">
+                            <span className='stat-title'>Tier</span>
+                            <span className='stat-value'>{Utils.getPetTierByLevels(petLevels)} Tier</span>
+                        </div>
+
+                        <div className="stat-group">
+                            <span className='stat-title'>Stat</span>
+                            <span className='stat-value'>{`${raisedPetDefinition.parameter} +${Utils.getPetStatSum(raisedPetDefinition, petLevels)}${raisedPetDefinition.rate ? '%' : ''}`}</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div id="level-container">
-                {Object.keys(petLevels).map((tier, index) => (
-                    <PetTier
-                        key={tier}
-                        petTier={tier}
-                        petTierLevel={petLevels[tier]}
-                        currentlyEditing={currentlyEditingTier === tier}
-                        onChange={(level) => setLevel(tier, level)}
-                        onClick={() => tierIsEditable(tier) ? setEditingTier((prev) => prev === tier ? null : tier) : null}
-                    />
-                ))}
+                
+                <div id="level-container">
+                    {Object.keys(petLevels).map((tier, index) => (
+                        <PetTier
+                            key={tier}
+                            petTier={tier}
+                            petTierLevel={petLevels[tier]}
+                            currentlyEditing={currentlyEditingTier === tier}
+                            onChange={(level) => setLevel(tier, level)}
+                            onClick={() => tierIsEditable(tier) ? setEditingTier((prev) => prev === tier ? null : tier) : null}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     )

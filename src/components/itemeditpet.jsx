@@ -13,12 +13,14 @@ function ItemEditPet({ itemElem }) {
     }
 
     return (
-        <PetWindow
-            raisedPetDefinition = {Utils.getPetDefinitionByItemId(itemElem.itemProp.id)}
-            petLevels = {currentPetLevels}
-            editable = {true}
-            onEditLevels = {(levels) => updateLevels(levels)}
-        />
+        <div id="item-edit-pet" className="item-edit">
+            <PetWindow
+                raisedPetDefinition = {Utils.getPetDefinitionByItemId(itemElem.itemProp.id)}
+                petLevels = {currentPetLevels}
+                editable = {true}
+                onEditLevels = {(levels) => updateLevels(levels)}
+            />
+        </div>
     )
 }
 
