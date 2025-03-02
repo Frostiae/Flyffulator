@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import Slot from '../components/slot';
 import items from "../assets/Items.json";
+import pets from "../assets/Pets.json";
 import Entity from "../flyff/flyffentity";
 import skills from "../assets/Skills.json";
 import Context from "../flyff/flyffcontext";
@@ -58,6 +59,14 @@ function Search() {
                         }
                         else if (item.category != searchProperties.category) {
                             continue;
+                        }
+
+                        // only display actual pets, not skins or the ones with modified flags                        
+                        if(item.category === "raisedpet") {
+                            const petFound = pets.find((pet) => pet.petItemId === item.id)
+                            if(!petFound) {
+                                continue;
+                            }
                         }
                     }
 
