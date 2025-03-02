@@ -254,6 +254,10 @@ export default class Entity {
             return false;
         }
 
+        if (skillProp.weapon != undefined && this.equipment.mainhand.itemProp.subcategory != skillProp.weapon) {
+            return false;
+        }
+
         if (skillProp.requirements != undefined) {
             for (const req of skillProp.requirements) {
                 if (!(req.skill in this.skillLevels)) {

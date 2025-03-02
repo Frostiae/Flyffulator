@@ -65,7 +65,7 @@ function Search() {
                     var selectedLanguageItemName = item.name[shortCode] ?? item.name.en;
                     if (selectedLanguageItemName.toLowerCase().includes(query)) {
                         res.push(new ItemElem(item));
-                        break;
+                        continue;
                     }
 
                     if (searchProperties.searchByStats && item.abilities != undefined) {

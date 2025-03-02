@@ -16,7 +16,7 @@ function Calculations() {
     const [targetType, setTargetType] = useState(0);
     const { t } = useTranslation();
     var shortCode = "en";
-    if(t.resolvedLanguage) {
+    if (t.resolvedLanguage) {
         shortCode = t.resolvedLanguage.split('-')[0];
     }
 
@@ -125,16 +125,19 @@ function Calculations() {
             if (level <= 0) {
                 continue; // Shouldn't happen
             }
-
-            let out = [];
-
+            
             const skillProp = Utils.getSkillById(skill);
             const levelProp = skillProp.levels[level - 1];
-
+            
+            if (!Context.player.canUseSkill(skillProp)) {
+                continue;
+            }
+            
             if (levelProp.minAttack == undefined) {
                 continue;
             }
 
+            let out = [];
             for (let i = 0; i < 100; i++) {
                 Context.skill = skillProp;
                 Context.attackFlags = skillProp.magic ? Utils.ATTACK_FLAGS.MAGICSKILL : Utils.ATTACK_FLAGS.MELEESKILL;
