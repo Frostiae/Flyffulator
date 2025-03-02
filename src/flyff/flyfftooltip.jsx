@@ -302,6 +302,14 @@ function setupItem(itemElem, i18n) {
     }
 
     // TODO: itemElem pet stuff
+    if(itemProp.category == "raisedpet") {
+        const pet = Context.player.equipment.pet;
+        const petDefinition = Utils.getPetDefinitionByItemId(pet.itemProp.id)
+
+        out.push(<span style={{color: '#01ab19'}}><br />Tier: {Utils.getPetTierByLevels(pet.petStats)} Tier</span>)
+        out.push(<span style={{color: '#d20000'}}><br />Bonus: {`${petDefinition.parameter} +${Utils.getPetStatSum(petDefinition, pet.petStats)}${petDefinition.rate ? '%' : ''}`}</span>)
+        out.push(<span style={{color: '#026cd7'}}><br />({Object.values(pet.petStats).map((lv) => lv ? `Lv${lv}` : null).filter(_ => _).join('/')})</span>)
+    }
 
     // Rarity
 
