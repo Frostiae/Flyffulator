@@ -56,6 +56,7 @@ function PetWindow({raisedPetDefinition, petLevels, editable = false, onEditLeve
                             currentlyEditing={currentlyEditingTier === tier}
                             onChange={(level) => setLevel(tier, level)}
                             onClick={() => tierIsEditable(tier) ? setEditingTier((prev) => prev === tier ? null : tier) : null}
+                            canRemove={index === Object.values(petLevels).filter(n => n).length - 1 && tierIsEditable(tier)}
                         />
                     ))}
                 </div>

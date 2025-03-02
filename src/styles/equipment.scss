@@ -220,7 +220,7 @@
     }
   }
 
-  #level-container  {
+  #level-container {
     position: relative; 
 
     display: flex;
@@ -265,6 +265,11 @@
           margin-top: -8px;
           z-index: 2;
         }
+      }
+
+      .flyff-close-button {
+        top: -8px;
+        left: -8px;
       }
     }
   }
