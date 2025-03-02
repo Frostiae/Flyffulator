@@ -237,7 +237,7 @@ function ItemEdit({ itemElem }) {
                             max={itemElem.randomStats[0].addMax}
                             onChange={(e) => setRandomStatValue(0, e)}
                             value={itemElem.randomStats[0].value}
-                            isRange
+                            isRange={itemElem.randomStats[0].rate}
                             prefix={"+"}
                             step={0.1}
                         />
@@ -250,7 +250,7 @@ function ItemEdit({ itemElem }) {
                             max={itemElem.randomStats[1].addMax}
                             onChange={(e) => setRandomStatValue(1, e)}
                             value={itemElem.randomStats[1].value}
-                            isRange
+                            isRange={itemElem.randomStats[1].rate}
                             prefix={"+"}
                             step={0.1}
                         />
