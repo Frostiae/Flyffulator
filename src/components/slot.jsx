@@ -2,12 +2,14 @@ import { useRef, forwardRef, useImperativeHandle } from 'react';
 import { useTooltip } from '../tooltipcontext';
 import { createTooltip } from '../flyff/flyfftooltip';
 import * as Utils from '../flyff/flyffutils';
+import { useTranslation } from "react-i18next";
 
 import '../styles/equipment.scss';
 
 function Slot({ backgroundIcon, content, className, onRemove }, ref) {
   const { showTooltip, hideTooltip } = useTooltip();
   const slotRef = useRef(null);
+  const { i18n } = useTranslation();
 
   function toggleTooltip(enabled) {
     if (content == null) {
@@ -17,7 +19,7 @@ function Slot({ backgroundIcon, content, className, onRemove }, ref) {
     if (enabled) {
       const settings = {
         rect: slotRef.current.getBoundingClientRect(),
-        text: createTooltip(content)
+        text: createTooltip(content, i18n)
       };
       showTooltip(settings);
     }

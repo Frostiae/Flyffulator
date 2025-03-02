@@ -8,10 +8,16 @@ import HoverInfo from '../components/hoverinfo';
 import LineChart from '../components/linechart';
 import { getDamage, getHealing } from '../flyff/flyffdamagecalculator';
 import BasicStat from '../components/basicstat';
+import { useTranslation } from "react-i18next";
 
 function Calculations() {
     const { showSearch } = useSearch();
     const [targetType, setTargetType] = useState(0);
+    const { t } = useTranslation();
+    var shortCode = "en";
+    if(t.resolvedLanguage) {
+        shortCode = t.resolvedLanguage.split('-')[0];
+    }
 
     function setTarget(index) {
         if (index == 0) { // Training dummy
@@ -330,15 +336,15 @@ function Calculations() {
                     <div id="target-options">
                         <div>
                             <input type="radio" id="target-dummy" name="target-type" checked={targetType == 0} onChange={() => setTarget(0)} />
-                            <label htmlFor="target-dummy">Training Dummy target</label>
+                            <label htmlFor="target-dummy">{t("training_dummy_target")}</label>
                         </div>
                         <div>
                             <input type="radio" id="target-player" name="target-type" checked={targetType == 1} onChange={() => setTarget(1)} />
-                            <label htmlFor="target-player">Other player target (disabled)</label>
+                            <label htmlFor="target-player">{t("player_target")}</label>
                         </div>
                         <div>
                             <input type="radio" id="target-monster" name="target-type" checked={targetType == 2} onChange={() => setTarget(2)} />
-                            <label htmlFor="target-monster">Monster target</label>
+                            <label htmlFor="target-monster">{t("monster_target")}</label>
                         </div>
                     </div>
 
@@ -347,7 +353,7 @@ function Calculations() {
                         <div id="target-information">
                             <div className="column">
                                 <b id="target-name">
-                                    {Context.defender.monsterProp.name.en}
+                                    {Context.defender.monsterProp.name[shortCode] ?? Context.defender.monsterProp.name.en}
                                 </b>
                                 <div className="basic-stat">
                                     <span className="basic-label">HP</span>
@@ -382,7 +388,7 @@ function Calculations() {
                         <div id="target-information">
                             <div className="column">
                                 <b id="target-name">
-                                    {Context.defender.monsterProp.name.en}
+                                    {Context.defender.monsterProp.name[shortCode] ?? Context.defender.monsterProp.name.en}
                                 </b>
                                 <div className="basic-stat">
                                     <span className="basic-label">HP</span>
@@ -434,7 +440,7 @@ function Calculations() {
                         Object.entries(generateSkillDamage()).map(([skill, data]) =>
                             <LineChart
                                 chartData={data}
-                                title={Utils.getSkillById(skill).name.en + " Damage"}
+                                title={(Utils.getSkillById(skill).name[shortCode] ?? Utils.getSkillById(skill).name.en) + " Damage"}
                                 info={"This is the result of 100 simulated attacks of this skill against the selected target. On the chart is each iteration's final damage, the highest attack highlighted with a white point, and the average of all 200 simulations."}
                                 key={skill}
                                 label={"Damage"}
@@ -472,7 +478,7 @@ function Calculations() {
                     {
                         Object.entries(generateHealing()).map(([skill, data]) =>
                             <div className="basic-stat">
-                                <span className="basic-label">{Utils.getSkillById(skill).name.en + " Healing"}</span>
+                                <span className="basic-label">{(Utils.getSkillById(skill).name[shortCode] ?? Utils.getSkillById(skill).name.en) + " Healing"}</span>
                                 <span className="basic-value">{data}</span>
                                 <HoverInfo text="View calculation code 🔗" icon="code-icon.svg" link="https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffdamagecalculator.js#L11" />
                             </div>

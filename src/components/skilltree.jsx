@@ -5,10 +5,12 @@ import SkillTreeIcon from "./skilltreeicon";
 import Slot from "./slot";
 import * as Utils from "../flyff/flyffutils";
 import { useSearch } from '../searchcontext';
+import { useTranslation } from "react-i18next";
 
 function SkillTree() {
     const { showSearch } = useSearch();
     const [refresh, setRefresh] = useState(false);
+    const { t } = useTranslation();
 
     const classIds = Utils.getAnteriorClassIds(Context.player.job.id);
     const classes = [];
@@ -80,7 +82,7 @@ function SkillTree() {
             <div id="skill-tree-base">
                 <div style={{ position: "relative" }}>
                     <div id="skill-points">
-                        <i style={{ color: Context.player.getRemainingSkillPoints() < 0 ? "red" : "inherit" }}>{Context.player.getRemainingSkillPoints()} skill points available</i>
+                        <i style={{ color: Context.player.getRemainingSkillPoints() < 0 ? "red" : "inherit" }}>{Context.player.getRemainingSkillPoints()} {t("skills_and_buffs_skills_points_available")}</i>
                         <HoverInfo text={"How many skill points you have remaining.\n\nWhile you cannot go below 0 skill points in-game, this page allows you to allocate more points than you have."} />
                     </div>
                     {
@@ -115,8 +117,8 @@ function SkillTree() {
             </div>
             <div className="buffs">
                 <div className="buffs-header">
-                    <h3>Active Items</h3>
-                    <button className="flyff-button" onClick={() => addBuffItem()}>Add</button>
+                    <h3>{t("skills_and_buffs_active_items")}</h3>
+                    <button className="flyff-button" onClick={() => addBuffItem()}>{t("skills_and_buffs_add")}</button>
                 </div>
                 <hr />
                 <div className="buffs-container">
@@ -129,8 +131,8 @@ function SkillTree() {
             </div>
             <div className="buffs">
                 <div className="buffs-header">
-                    <h3>Active Buffs</h3>
-                    <button className="flyff-button" onClick={() => addBuffSkill()}>Add</button>
+                    <h3>{t("skills_and_buffs_active_buffs")}</h3>
+                    <button className="flyff-button" onClick={() => addBuffSkill()}>{t("skills_and_buffs_add")}</button>
                 </div>
                 <hr />
                 <div className="buffs-container">

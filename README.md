@@ -27,6 +27,14 @@ The website design was built with the aim to look identical to the game, so that
 
 This project uses [Pyff](https://github.com/Frostiae/Pyff), a python wrapper for the [Flyff Universe](https://api.flyff.com/) API, [Chart.js](https://www.chartjs.org/) for chart and graph rendering, Bun, Vite, and React.
 
+## Add new language
+To add a new language copy the translation.json from public/en_US/ to your new language folder and translate strings to your language.
+E.g. public/yourlanguage-code/translation.json
+
+Finally, in src/i18n/config.js add your language code to the supportedLngs Array.
+
+Make sure to lint your Json file before making a PR
+
 ## Installation for development
 Clone the repository into any directory.
 ```

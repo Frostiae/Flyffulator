@@ -13,6 +13,7 @@ import Dropdown from './components/dropdown';
 import SkillsBuffs from './tabs/skillsbuffs';
 import Calculations from './tabs/calculations';
 import ImportCharacter from './components/importcharacter';
+import { useTranslation } from "react-i18next";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
   const [isImporting, setIsImporting] = useState(false);
   const [loadedBuild, setLoadedBuild] = useState(null);
   const [state, setState] = useState(false); // To force re-render. this is probably bad design but i dont care
+  const { t } = useTranslation();
 
   const jobOptions = {};
   for (const [k, v] of Object.entries(Classes)) {
@@ -73,12 +75,17 @@ function App() {
   const buildOptions = {};
   for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i);
+    //Dont try to load the key saved from i18n
+    if (key.startsWith("i18next")) {
+      continue;
+    }
+
     buildOptions[key] = key.split("_")[0];
   }
 
   function save() {
     // Crude way of saving for now
-    const buildName = prompt("Enter a name for the build");
+    const buildName = prompt(t("enter_build_name"));
     if (buildName == null || buildName.length == 0) {
       return;
     }
@@ -94,8 +101,16 @@ function App() {
     setState(!state);
   }
 
-  if (loadedBuild == null && localStorage.length > 0) {
-    loadBuild(localStorage.key(0));
+  if (loadedBuild == null) {
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key.startsWith("i18next")) {
+        continue;
+      }
+  
+      loadBuild(localStorage.key(i));
+      break;
+    }
   }
 
   return (
@@ -106,11 +121,11 @@ function App() {
             <img src={`https://api.flyff.com/image/class/target/${Utils.getClassById(Context.player.job.id).icon}`} alt="elementor" />
             <div id="build-job" style={{ fontWeight: "200" }}>
               <Dropdown options={jobOptions} onSelectionChanged={changeJob} valueKey={Context.player.job.id} />
-              Flyff Universe Character Simulator
+              {t("flyff_universe_character_simulator")}
               {
                 localStorage.length > 0 &&
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                  Loaded build:
+                  {t("loaded_build")}
                   <Dropdown options={buildOptions} onSelectionChanged={loadBuild} valueKey={loadedBuild} />
                 </div>
 
@@ -120,7 +135,7 @@ function App() {
               <div className="stat-block">
                 <label htmlFor="stats-level">Level</label>
                 <input type="number" id="stats-level" value={Context.player.level} onChange={(e) => setPlayerStat("level", e.target.value)} />
-                <i>{Context.player.getRemainingStatPoints()} stat points available</i>
+                <i>{Context.player.getRemainingStatPoints()} {t("stat_points_available")}</i>
               </div>
               <div className="stat-block">
                 <div className="stat-row">
@@ -144,25 +159,25 @@ function App() {
               </div>
             </div>
             <div id="build-share">
-              <button className='flyff-button' onClick={save}>Save</button>
+              <button className='flyff-button' onClick={save}>{t("build_share_save")}</button>
               <div>
-                <button className='flyff-button' onClick={share} disabled>Share</button>
-                <button className='flyff-button' onClick={() => setIsImporting(true)} disabled>Import</button>
+                <button className='flyff-button' onClick={share} disabled>{t("build_share_share")}</button>
+                <button className='flyff-button' onClick={() => setIsImporting(true)} disabled>{t("build_share_import")}</button>
               </div>
             </div>
           </div>
           <div id="tab-container">
             <button onClick={() => setCurrentTab(0)} className={"tab-button" + (currentTab == 0 ? " active" : "")}>
               <div className="tab-button-border"></div>
-              Equipment
+              {t("equipment_tab_name")}
             </button>
             <button onClick={() => setCurrentTab(1)} className={"tab-button" + (currentTab == 1 ? " active" : "")}>
               <div className="tab-button-border"></div>
-              Skills & Buffs
+              {t("skills_and_buffs_tab_name")}
             </button>
             <button onClick={() => setCurrentTab(2)} className={"tab-button" + (currentTab == 2 ? " active" : "")}>
               <div className="tab-button-border"></div>
-              Calculations
+              {t("calculations_tab_name")}
             </button>
           </div>
           {

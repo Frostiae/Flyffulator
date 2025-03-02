@@ -6,17 +6,23 @@ import Dropdown from './dropdown';
 import RangeInput from './rangeinput';
 import * as Utils from '../flyff/flyffutils';
 import skillAwakes from '../assets/SkillAwakes.json';
+import { useTranslation } from "react-i18next";
 
 function ItemEdit({ itemElem }) {
     const [state, setState] = useState(false);
     const { showSearch } = useSearch();
+    const { i18n } = useTranslation();
+    var shortCode = "en";
+    if(i18n.resolvedLanguage) {
+        shortCode = i18n.resolvedLanguage.split('-')[0];
+    }
 
     if (itemElem == null) {
         return (
             <div className="item-edit">
-                No item selected.
+                {i18n.t("no_item_selected")}
                 <br />
-                Add items to the inventory and select them to edit their stats and properties.
+                {i18n.t("no_item_selected_explanation")}
             </div>
         );
     }
@@ -195,7 +201,7 @@ function ItemEdit({ itemElem }) {
                 }
             </div>
             <p style={{ maxWidth: "300px", fontStyle: "italic", margin: "0" }}>
-                {itemElem.itemProp.description.en != "null" && itemElem.itemProp.description.en}
+                {itemElem.itemProp.description.en != "null" && (itemElem.itemProp.description[shortCode] ?? itemElem.itemProp.description.en)}
             </p>
             {
                 itemElem.isOriginAwakeAble() &&

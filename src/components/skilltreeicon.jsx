@@ -1,10 +1,16 @@
 import { useRef } from 'react';
 import { useTooltip } from '../tooltipcontext';
 import { createTooltip } from '../flyff/flyfftooltip';
+import { useTranslation } from "react-i18next";
 
 function SkillTreeIcon({ skill, disabled, level, clickHandle, rightClickHandle }) {
     const { showTooltip, hideTooltip } = useTooltip();
     const slotRef = useRef(null);
+    const { i18n } = useTranslation();
+    var shortCode = "en";
+    if(i18n.resolvedLanguage) {
+        shortCode = i18n.resolvedLanguage.split('-')[0];
+    }
 
     const levelText = level == skill.levels.length ? "MAX" : level;
 
@@ -16,7 +22,7 @@ function SkillTreeIcon({ skill, disabled, level, clickHandle, rightClickHandle }
         if (enabled) {
             const settings = {
                 rect: slotRef.current.getBoundingClientRect(),
-                text: createTooltip(skill)
+                text: createTooltip(skill, i18n)
             };
             showTooltip(settings);
         }
@@ -38,7 +44,7 @@ function SkillTreeIcon({ skill, disabled, level, clickHandle, rightClickHandle }
             <img
                 key={skill.id}
                 src={`https://api.flyff.com/image/skill/colored/${skill.icon}`}
-                alt={skill.name.en}
+                alt={skill.name[shortCode] ?? skill.name.en}
                 style={{
                     width: 50, height: 50,
                     transform: "scale(1.15)"

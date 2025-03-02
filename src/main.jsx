@@ -1,10 +1,12 @@
 import App from './App.jsx'
+import LocaleSwitcher from "./i18n/LocaleSwitcher";
 import './styles/index.scss'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import flyffulatorLogo from '/logonew.png'
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler } from 'chart.js';
 import Annotation from 'chartjs-plugin-annotation'
+import "./i18n/config.js";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Annotation);
 
@@ -14,7 +16,7 @@ createRoot(document.getElementById('root')).render(
       <img src={flyffulatorLogo} className="logo" alt="Flyffulator logo" />
       <h2>Flyffulator</h2>
     </div>
-    <App />
+      <App />
     <footer>
       <div className="footer-wrapper">
         <div className="footer-info">
@@ -43,6 +45,11 @@ createRoot(document.getElementById('root')).render(
           <a href="https://universe.flyff.com/">Flyff Universe</a>
           <br />
           <a href="https://api.flyff.com/">Flyff API</a>
+          <br />
+          <br />
+          Select your Language
+          <br />
+          <LocaleSwitcher />
         </div>
       </div>
     </footer>
