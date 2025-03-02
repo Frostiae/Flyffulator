@@ -757,6 +757,10 @@ export default class Entity {
             targetStats.push("allstats");
         }
 
+        if (stat == "meleeblock" || stat == "rangedblock") {
+            targetStats.push("block");
+        }
+
         let total = 0;
 
         // Individual item abilities
