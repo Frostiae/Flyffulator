@@ -93,16 +93,16 @@ export const BOG_BOD_RANDOM_STATS = [
     { "parameter": "speed", "add": 0, "addMax": 3, "rate": true },
     { "parameter": "attackspeed", "add": 0, "addMax": 3, "rate": true },
     { "parameter": "decreasedcastingtime", "add": 0, "addMax": 3, "rate": true },
-    { "parameter": "attack", "add": 0, "addMax": 21, "rate": true },
-    { "parameter": "maxhp", "add": 0, "addMax": 46, "rate": true },
-    { "parameter": "maxmp", "add": 0, "addMax": 46, "rate": true },
-    { "parameter": "maxfp", "add": 0, "addMax": 46, "rate": true },
-    { "parameter": "magicdefense", "add": 0, "addMax": 18, "rate": true },
+    { "parameter": "attack", "add": 0, "addMax": 21, "rate": false },
+    { "parameter": "maxhp", "add": 0, "addMax": 46, "rate": false },
+    { "parameter": "maxmp", "add": 0, "addMax": 46, "rate": false },
+    { "parameter": "maxfp", "add": 0, "addMax": 46, "rate": false },
+    { "parameter": "magicdefense", "add": 0, "addMax": 18, "rate": false },
     { "parameter": "parry", "add": 0, "addMax": 3, "rate": true },
     { "parameter": "meleeblock", "add": 0, "addMax": 3, "rate": true },
     { "parameter": "rangedblock", "add": 0, "addMax": 3, "rate": true },
-    { "parameter": "pvedamage", "add": 0, "addMax": 30, "rate": true },
-    { "parameter": "pvedamagereduction", "add": 0, "addMax": 30, "rate": true },
+    { "parameter": "pvedamage", "add": 0, "addMax": 30, "rate": false },
+    { "parameter": "pvedamagereduction", "add": 0, "addMax": 30, "rate": false },
 ]
 
 export function getClassById(id) {
