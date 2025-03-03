@@ -26,17 +26,6 @@ function Search() {
         return null;
     }
 
-    function getItemElem(itemProp) {
-        const item = new ItemElem(itemProp);
-
-        // Inject Demon/Goddess Blessing RandomStats
-        if(item.itemProp.category === "fashion" && ['hat', 'cloth', 'glove', 'shoes', 'visualcloak', 'cloak'].includes(item.itemProp.subcategory)) {
-            item.itemProp.possibleRandomStats = [...(item.itemProp.possibleRandomStats ?? []), ...Utils.BOG_BOD_RANDOM_STATS];
-        }
-
-        return item;
-    }
-
     function search(query) {
         let res = [];
 
@@ -84,14 +73,14 @@ function Search() {
                     // Check if the item supports that locale
                     var selectedLanguageItemName = item.name[shortCode] ?? item.name.en;
                     if (selectedLanguageItemName.toLowerCase().includes(query)) {
-                        res.push(getItemElem(item));
+                        res.push(new ItemElem(item));
                         continue;
                     }
 
                     if (searchProperties.searchByStats && item.abilities != undefined) {
                         for (const ability of item.abilities) {
                             if (ability.parameter != undefined && ability.parameter.toLowerCase().includes(query)) {
-                                res.push(getItemElem(item));
+                                res.push(new ItemElem(item));
                                 break;
                             }
                         }
