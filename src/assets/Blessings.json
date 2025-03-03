@@ -1,0 +1,150 @@
+{
+	"str": [
+		{ "parameter": "str", "add": 0, "rate": false },
+		{ "parameter": "str", "add": 1, "rate": false },
+		{ "parameter": "str", "add": 2, "rate": false },
+		{ "parameter": "str", "add": 3, "rate": false },
+		{ "parameter": "str", "add": 4, "rate": false },
+		{ "parameter": "str", "add": 5, "rate": false }
+	],
+	"dex": [
+		{ "parameter": "dex", "add": 0, "rate": false },
+		{ "parameter": "dex", "add": 1, "rate": false },
+		{ "parameter": "dex", "add": 2, "rate": false },
+		{ "parameter": "dex", "add": 3, "rate": false },
+		{ "parameter": "dex", "add": 4, "rate": false },
+		{ "parameter": "dex", "add": 5, "rate": false }
+	],
+	"int": [
+		{ "parameter": "int", "add": 0, "rate": false },
+		{ "parameter": "int", "add": 1, "rate": false },
+		{ "parameter": "int", "add": 2, "rate": false },
+		{ "parameter": "int", "add": 3, "rate": false },
+		{ "parameter": "int", "add": 4, "rate": false },
+		{ "parameter": "int", "add": 5, "rate": false }
+	],
+	"sta": [
+		{ "parameter": "sta", "add": 0, "rate": false },
+		{ "parameter": "sta", "add": 1, "rate": false },
+		{ "parameter": "sta", "add": 2, "rate": false },
+		{ "parameter": "sta", "add": 3, "rate": false },
+		{ "parameter": "sta", "add": 4, "rate": false },
+		{ "parameter": "sta", "add": 5, "rate": false }
+	],
+	"criticalchance": [
+		{ "parameter": "criticalchance", "add": 0, "rate": true },
+		{ "parameter": "criticalchance", "add": 0.5, "rate": true },
+		{ "parameter": "criticalchance", "add": 1, "rate": true },
+		{ "parameter": "criticalchance", "add": 1.5, "rate": true },
+		{ "parameter": "criticalchance", "add": 2, "rate": true },
+		{ "parameter": "criticalchance", "add": 2.5, "rate": true }
+	],
+	"criticaldamage": [
+		{ "parameter": "criticaldamage", "add": 0, "rate": true },
+		{ "parameter": "criticaldamage", "add": 0.5, "rate": true },
+		{ "parameter": "criticaldamage", "add": 1, "rate": true },
+		{ "parameter": "criticaldamage", "add": 1.5, "rate": true },
+		{ "parameter": "criticaldamage", "add": 2, "rate": true },
+		{ "parameter": "criticaldamage", "add": 2.5, "rate": true }
+	],
+	"speed": [
+		{ "parameter": "speed", "add": 0, "rate": true },
+		{ "parameter": "speed", "add": 1, "rate": true },
+		{ "parameter": "speed", "add": 2, "rate": true },
+		{ "parameter": "speed", "add": 3, "rate": true }
+	],
+	"attackspeed": [
+		{ "parameter": "attackspeed", "add": 0, "rate": true },
+		{ "parameter": "attackspeed", "add": 1, "rate": true },
+		{ "parameter": "attackspeed", "add": 2, "rate": true },
+		{ "parameter": "attackspeed", "add": 3, "rate": true }
+	],
+	"decreasedcastingtime": [
+		{ "parameter": "decreasedcastingtime", "add": 0, "rate": true },
+		{ "parameter": "decreasedcastingtime", "add": 1, "rate": true },
+		{ "parameter": "decreasedcastingtime", "add": 2, "rate": true },
+		{ "parameter": "decreasedcastingtime", "add": 3, "rate": true }
+	],
+	"def": [
+		{ "parameter": "def", "add": 0, "rate": false },
+		{ "parameter": "def", "add": 2, "rate": false },
+		{ "parameter": "def", "add": 6, "rate": false },
+		{ "parameter": "def", "add": 10, "rate": false },
+		{ "parameter": "def", "add": 14, "rate": false },
+		{ "parameter": "def", "add": 18, "rate": false }
+	],
+	"attack": [
+		{ "parameter": "attack", "add": 0, "rate": false },
+		{ "parameter": "attack", "add": 5, "rate": false },
+		{ "parameter": "attack", "add": 9, "rate": false },
+		{ "parameter": "attack", "add": 13, "rate": false },
+		{ "parameter": "attack", "add": 17, "rate": false },
+		{ "parameter": "attack", "add": 21, "rate": false }
+	],
+	"maxhp": [
+		{ "parameter": "maxhp", "add": 0, "rate": false },
+		{ "parameter": "maxhp", "add": 12, "rate": false },
+		{ "parameter": "maxhp", "add": 20, "rate": false },
+		{ "parameter": "maxhp", "add": 28, "rate": false },
+		{ "parameter": "maxhp", "add": 37, "rate": false },
+		{ "parameter": "maxhp", "add": 46, "rate": false }
+	],
+	"maxmp": [
+		{ "parameter": "maxmp", "add": 0, "rate": false },
+		{ "parameter": "maxmp", "add": 12, "rate": false },
+		{ "parameter": "maxmp", "add": 20, "rate": false },
+		{ "parameter": "maxmp", "add": 28, "rate": false },
+		{ "parameter": "maxmp", "add": 37, "rate": false },
+		{ "parameter": "maxmp", "add": 46, "rate": false }
+	],
+	"maxfp": [
+		{ "parameter": "maxfp", "add": 0, "rate": false },
+		{ "parameter": "maxfp", "add": 12, "rate": false },
+		{ "parameter": "maxfp", "add": 20, "rate": false },
+		{ "parameter": "maxfp", "add": 28, "rate": false },
+		{ "parameter": "maxfp", "add": 37, "rate": false },
+		{ "parameter": "maxfp", "add": 46, "rate": false }
+	],
+	"magicdefense": [
+		{ "parameter": "magicdefense", "add": 0, "rate": false },
+		{ "parameter": "magicdefense", "add": 2, "rate": false },
+		{ "parameter": "magicdefense", "add": 6, "rate": false },
+		{ "parameter": "magicdefense", "add": 10, "rate": false },
+		{ "parameter": "magicdefense", "add": 14, "rate": false },
+		{ "parameter": "magicdefense", "add": 18, "rate": false }
+	],
+	"parry": [
+		{ "parameter": "parry", "add": 0, "rate": true },
+		{ "parameter": "parry", "add": 1, "rate": true },
+		{ "parameter": "parry", "add": 2, "rate": true },
+		{ "parameter": "parry", "add": 3, "rate": true }
+	],
+	"meleeblock": [
+		{ "parameter": "meleeblock", "add": 0, "rate": true },
+		{ "parameter": "meleeblock", "add": 1, "rate": true },
+		{ "parameter": "meleeblock", "add": 2, "rate": true },
+		{ "parameter": "meleeblock", "add": 3, "rate": true }
+	],
+	"rangedblock": [
+		{ "parameter": "rangedblock", "add": 0, "rate": true },
+		{ "parameter": "rangedblock", "add": 1, "rate": true },
+		{ "parameter": "rangedblock", "add": 2, "rate": true },
+		{ "parameter": "rangedblock", "add": 3, "rate": true }
+	],
+	"pvedamage": [
+		{ "parameter": "pvedamage", "add": 0, "rate": false },
+		{ "parameter": "pvedamage", "add": 10, "rate": false },
+		{ "parameter": "pvedamage", "add": 15, "rate": false },
+		{ "parameter": "pvedamage", "add": 20, "rate": false },
+		{ "parameter": "pvedamage", "add": 25, "rate": false },
+		{ "parameter": "pvedamage", "add": 30, "rate": false }
+	],
+	"pveincomingdamage": [
+		{ "parameter": "pveincomingdamage", "add": 0, "rate": false },
+		{ "parameter": "pveincomingdamage", "add": 10, "rate": false },
+		{ "parameter": "pveincomingdamage", "add": 15, "rate": false },
+		{ "parameter": "pveincomingdamage", "add": 20, "rate": false },
+		{ "parameter": "pveincomingdamage", "add": 25, "rate": false },
+		{ "parameter": "pveincomingdamage", "add": 30, "rate": false }
+	]
+}

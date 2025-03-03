@@ -795,8 +795,10 @@ export default class Entity {
                 }
             }
 
-            for(const ability of itemElem.randomStats) {
-                if(!ability) continue;
+            for (const ability of itemElem.randomStats) {
+                if (!ability) {
+                    continue;
+                }
 
                 if (!targetStats.includes(ability.parameter) || ability.rate != rate) {
                     continue;

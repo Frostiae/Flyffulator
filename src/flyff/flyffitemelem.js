@@ -32,15 +32,13 @@ export default class ItemElem {
         }
 
         // Random stats for ultimate
-        if (itemProp.possibleRandomStats != undefined && itemProp.possibleRandomStats.length >= 2 && itemProp.category === "weapon") {
+        if (itemProp.possibleRandomStats != undefined && itemProp.possibleRandomStats.length >= 2) {
             for (let i = 0; i < 2; ++i) {
                 // Just initialize with the first two
                 const stat = itemProp.possibleRandomStats[i];
                 this.randomStats[i] = { ...stat, id: i, value: Math.floor(stat.add + (stat.addMax - stat.add) / 2) };
             }
         }
-
-        this.insertNonApiData()
     }
 
     /**
@@ -162,14 +160,5 @@ export default class ItemElem {
         }
 
         return value;
-    }
-
-    insertNonApiData() {
-        // Inject Demon/Goddess Blessing RandomStats
-        if(this.itemProp.category === "fashion" && ['hat', 'cloth', 'glove', 'shoes', 'visualcloak', 'cloak'].includes(this.itemProp.subcategory)) {
-            if(!this.itemProp.possibleRandomStats) {
-                this.itemProp.possibleRandomStats = [...(this.itemProp.possibleRandomStats ?? []), ...Utils.BOG_BOD_RANDOM_STATS];
-            }
-        }
     }
 }

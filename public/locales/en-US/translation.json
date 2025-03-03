@@ -38,6 +38,7 @@
     "tooltip_sex_female": "Sex: Female",
     "tooltip_one_handed": "One-handed weapon.",
     "tooltip_two_handed": "Two-handed weapon.",
+    "tooltip_blessing": "Demon Blessing",
     "search_placeholder": "Search for a {{type}}...",
     "search_title": "Search"
 }

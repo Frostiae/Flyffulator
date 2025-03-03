@@ -161,6 +161,22 @@ function setupItem(itemElem, i18n) {
         }
     }
 
+    // Blessings
+
+    if (itemProp.category == "fashion") {
+        const hasBlessing = itemElem.randomStats.find((e) => e);
+
+        if (hasBlessing) {
+            out.push(<span style={{ color: "#d386ff" }}><br />{i18n.t("tooltip_blessing")}</span>);
+        }
+
+        for (const blessing of itemElem.randomStats) {
+            if (blessing) {
+                out.push(<span style={{ color: "#d386ff" }}><br />{blessing.parameter}+{blessing.value}{blessing.rate ? "%" : ""}</span>);
+            }
+        }
+    }
+
     if (itemProp.attackSpeed != undefined) {
         out.push(`\n${i18n.t("tooltip_attack_speed")}${itemProp.attackSpeed}`);
     }
@@ -209,10 +225,9 @@ function setupItem(itemElem, i18n) {
     }
 
     // Ultimate stats
+
     if (itemProp.possibleRandomStats != undefined) {
         for (const stat of itemElem.randomStats) {
-            if(stat === null) continue; 
-            
             out.push(<span style={{ color: "#ffff00" }}><br />{stat.parameter}+{stat.value}{stat.rate ? "%" : ""}</span>);
         }
     }

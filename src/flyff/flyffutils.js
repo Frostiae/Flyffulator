@@ -83,28 +83,6 @@ export const ATTACK_FLAGS = {
     REGION: 1 << 15, // AoE skill.
 };
 
-export const BOG_BOD_RANDOM_STATS = [
-    { "parameter": "str", "add": 0, "addMax": 5, "rate": false },
-    { "parameter": "sta", "add": 0, "addMax": 5, "rate": false },
-    { "parameter": "dex", "add": 0, "addMax": 5, "rate": false },
-    { "parameter": "int", "add": 0, "addMax": 5, "rate": false },
-    { "parameter": "criticalchance", "add": 0.0, "addMax": 2.5, "rate": true },
-    { "parameter": "criticaldamage", "add": 0.0, "addMax": 2.5, "rate": true },
-    { "parameter": "speed", "add": 0, "addMax": 3, "rate": true },
-    { "parameter": "attackspeed", "add": 0, "addMax": 3, "rate": true },
-    { "parameter": "decreasedcastingtime", "add": 0, "addMax": 3, "rate": true },
-    { "parameter": "attack", "add": 0, "addMax": 21, "rate": false },
-    { "parameter": "maxhp", "add": 0, "addMax": 46, "rate": false },
-    { "parameter": "maxmp", "add": 0, "addMax": 46, "rate": false },
-    { "parameter": "maxfp", "add": 0, "addMax": 46, "rate": false },
-    { "parameter": "magicdefense", "add": 0, "addMax": 18, "rate": false },
-    { "parameter": "parry", "add": 0, "addMax": 3, "rate": true },
-    { "parameter": "meleeblock", "add": 0, "addMax": 3, "rate": true },
-    { "parameter": "rangedblock", "add": 0, "addMax": 3, "rate": true },
-    { "parameter": "pvedamage", "add": 0, "addMax": 30, "rate": false },
-    { "parameter": "pvedamagereduction", "add": 0, "addMax": 30, "rate": false },
-]
-
 export function getClassById(id) {
     return classes[id];
 }

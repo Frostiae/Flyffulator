@@ -7,6 +7,7 @@ import Dropdown from './dropdown';
 import RangeInput from './rangeinput';
 import NumberInput from './numberinput';
 import * as Utils from '../flyff/flyffutils';
+import blessings from '../assets/Blessings.json';
 import skillAwakes from '../assets/SkillAwakes.json';
 
 function ItemEdit({ itemElem }) {
@@ -36,6 +37,22 @@ function ItemEdit({ itemElem }) {
             const ability = itemElem.itemProp.possibleRandomStats[i];
             possibleRandomStats[i] = ability.parameter;
         }
+    }
+
+    // Fashion blessings
+
+    const possibleBlessings = { "0": "None" };
+    for (const [parameter,] of Object.entries(blessings)) {
+        possibleBlessings[parameter] = parameter;
+    }
+
+    function getAllowedBlessingValues(parameter) {
+        if (parameter == 0) {
+            return [0, 1];
+        }
+
+        const values = blessings[parameter].map((e) => e.add);
+        return values;
     }
 
     // Skill awakes
@@ -123,11 +140,11 @@ function ItemEdit({ itemElem }) {
 
             if (!isNaN(parseInt(option))) {
                 // Is a skill
-                itemElem.skillAwake = { id: option, skill: option, add: range.min + (range.max - range.min) / 2 };
+                itemElem.skillAwake = { id: option, skill: option, add: possibleSkillAwakeValues[option][Math.floor(possibleSkillAwakeValues[option].length / 2)] };
             }
             else {
                 // Is a param
-                itemElem.skillAwake = { id: option, parameter: option, add: range.min + (range.max - range.min) / 2 };
+                itemElem.skillAwake = { id: option, parameter: option, add: possibleSkillAwakeValues[option][Math.floor(possibleSkillAwakeValues[option].length / 2)] };
             }
 
             setState(!state);
@@ -155,6 +172,18 @@ function ItemEdit({ itemElem }) {
         setState(!state);
     }
 
+    function setBlessingOption(index, option) {
+        if (option == 0) {
+            itemElem.randomStats[index] = null;
+        }
+        else {
+            const values = blessings[option];
+            itemElem.randomStats[index] = { ...values[0], id: option, value: values[0].add };
+        }
+
+        setState(!state);
+    }
+
     // Element
 
     const possibleElementValues = {
@@ -175,7 +204,7 @@ function ItemEdit({ itemElem }) {
 
         setState(!state);
     }
-    
+
     function setUpgradeLevel(level) {
         itemElem.upgradeLevel = level;
         setState(!state);
@@ -249,12 +278,12 @@ function ItemEdit({ itemElem }) {
             {
                 itemElem.itemProp.possibleRandomStats != undefined &&
                 <div className="column">
-                    <h3>Random Bonus ({itemElem.itemProp.category === "fashion" ? "Demon of Blessing/Goddess" : "Ultimate"})</h3>
-                    <Dropdown options={possibleRandomStats} onSelectionChanged={(e) => setRandomStatOption(0, e)} valueKey={itemElem.randomStats[0]?.id} style={{minWidth: "100px"}}/>
+                    <h3>Random Bonus (Ultimate)</h3>
+                    <Dropdown options={possibleRandomStats} onSelectionChanged={(e) => setRandomStatOption(0, e)} valueKey={itemElem.randomStats[0]?.id} style={{ minWidth: "200px" }} />
                     <div className="row">
                         <RangeInput
                             min={itemElem.randomStats[0]?.add ?? 0}
-                            max={itemElem.randomStats[0]?.addMax ?? 0}
+                            max={itemElem.randomStats[0]?.addMax ?? 1}
                             onChange={(e) => setRandomStatValue(0, e)}
                             value={itemElem.randomStats[0]?.value ?? 0}
                             isRange={itemElem.randomStats[0]?.rate ?? true}
@@ -263,7 +292,7 @@ function ItemEdit({ itemElem }) {
                         />
                     </div>
 
-                    <Dropdown options={possibleRandomStats} onSelectionChanged={(e) => setRandomStatOption(1, e)} valueKey={itemElem.randomStats[1]?.id} style={{minWidth: "100px"}}/>
+                    <Dropdown options={possibleRandomStats} onSelectionChanged={(e) => setRandomStatOption(1, e)} valueKey={itemElem.randomStats[1]?.id} style={{ minWidth: "200px" }} />
                     <div className="row">
                         <RangeInput
                             min={itemElem.randomStats[1]?.add ?? 0}
@@ -273,6 +302,38 @@ function ItemEdit({ itemElem }) {
                             isRange={itemElem.randomStats[1]?.rate ?? true}
                             prefix={"+"}
                             step={0.1}
+                        />
+                    </div>
+                </div>
+            }
+
+            {
+                itemElem.itemProp.category == "fashion" &&
+                <div className="column">
+                    <h3>Blessing of the Goddess / Demon</h3>
+                    <Dropdown options={possibleBlessings} onSelectionChanged={(e) => setBlessingOption(0, e)} valueKey={itemElem.randomStats[0]?.id ?? 0} style={{ minWidth: "200px" }} />
+                    <div className="row">
+                        <RangeInput
+                            onChange={(e) => setRandomStatValue(0, e)}
+                            value={itemElem.randomStats[0]?.value ?? 0}
+                            isRange={itemElem.randomStats[0]?.rate ?? true}
+                            prefix={"+"}
+                            step={0.1}
+                            disabled={itemElem.randomStats[0] == null}
+                            allowedValues={itemElem.randomStats[0] ? getAllowedBlessingValues(itemElem.randomStats[0].parameter) : [0, 1]}
+                        />
+                    </div>
+
+                    <Dropdown options={possibleBlessings} onSelectionChanged={(e) => setBlessingOption(1, e)} valueKey={itemElem.randomStats[1]?.id ?? 0} style={{ minWidth: "200px" }} />
+                    <div className="row">
+                        <RangeInput
+                            onChange={(e) => setRandomStatValue(1, e)}
+                            value={itemElem.randomStats[1]?.value ?? 0}
+                            isRange={itemElem.randomStats[1]?.rate ?? true}
+                            prefix={"+"}
+                            step={0.1}
+                            disabled={itemElem.randomStats[1] == null}
+                            allowedValues={itemElem.randomStats[1] ? getAllowedBlessingValues(itemElem.randomStats[1].parameter) : [0, 1]}
                         />
                     </div>
                 </div>
@@ -332,17 +393,16 @@ function ItemEdit({ itemElem }) {
                 itemElem.isSkillAwakeAble() &&
                 <div className="column">
                     <h3>Skill Awake</h3>
-                    <Dropdown options={possibleSkillAwakeOptions} onSelectionChanged={setSkillAwakeOption} valueKey={itemElem.skillAwake == null ? 0 : itemElem.skillAwake.id} />
+                    <Dropdown options={possibleSkillAwakeOptions} onSelectionChanged={setSkillAwakeOption} valueKey={itemElem.skillAwake == null ? 0 : itemElem.skillAwake.id} style={{ minWidth: "200px" }} />
                     <div className="row">
                         <RangeInput
-                            min={itemElem.skillAwake == null ? 0 : possibleSkillAwakeValues[itemElem.skillAwake.id][0]}
-                            max={itemElem.skillAwake == null ? 1 : possibleSkillAwakeValues[itemElem.skillAwake.id].at(-1)}
                             disabled={itemElem.skillAwake == null}
                             onChange={setSkillAwakeValue}
                             value={itemElem.skillAwake == null ? 0 : itemElem.skillAwake.add}
                             isRange
                             prefix={"+"}
                             step={1}
+                            allowedValues={itemElem.skillAwake ? possibleSkillAwakeValues[itemElem.skillAwake.id] : [0, 1]}
                         />
                     </div>
                 </div>
