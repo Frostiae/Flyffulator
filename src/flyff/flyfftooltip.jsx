@@ -62,7 +62,7 @@ function setupItem(itemElem, i18n) {
     out.push(<span style={{
         fontWeight: 700,
         color: Utils.getItemNameColor(itemProp)
-    }}>{itemProp.name[shortLanguageCode] ?? itemProp.name.en}</span>);
+    }}>{itemProp.name[shortLanguageCode] ?? itemProp.name.en} {itemElem.statAwake?.title[shortLanguageCode] ?? itemElem.statAwake?.title.en}</span>);
 
     // TODO: Origin awakes (STA+, etc.)
 
@@ -235,6 +235,12 @@ function setupItem(itemElem, i18n) {
     if (itemProp.possibleRandomStats != undefined) {
         for (const stat of itemElem.randomStats) {
             out.push(<span style={{ color: "#ffff00" }}><br />{stat.parameter}+{stat.value}{stat.rate ? "%" : ""}</span>);
+        }
+    }
+
+    if(itemElem.statAwake != null) {
+        for(const ability of itemElem.statAwake.abilities) {
+            out.push(<span><br />{`${ability.parameter} +${ability.add}`}</span>)
         }
     }
 
