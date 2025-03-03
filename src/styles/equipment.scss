@@ -55,6 +55,11 @@
   justify-content: space-between;
   gap: 30px;
   height: fit-content;
+  margin-top: 20px;
+
+  &:first-of-type {
+    margin-top: unset;
+  }
 
   #inventory-side {
     display: flex;

@@ -23,6 +23,10 @@ export default class Entity {
         suit: null,
         gauntlets: null,
         boots: null,
+        fashHelmet: null,
+        fashSuit: null,
+        fashGauntlets: null,
+        fashBoots: null,
         pet: null
     };
     skillLevels = {};
@@ -791,14 +795,14 @@ export default class Entity {
                 }
             }
 
-            if (itemElem.randomStats[0] != null && itemElem.randomStats[1] != null) {
-                for (const ability of itemElem.randomStats) {
-                    if (!targetStats.includes(ability.parameter) || ability.rate != rate) {
-                        continue;
-                    }
+            for(const ability of itemElem.randomStats) {
+                if(!ability) continue;
 
-                    total += ability.value;
+                if (!targetStats.includes(ability.parameter) || ability.rate != rate) {
+                    continue;
                 }
+
+                total += ability.value;
             }
 
             // Accessories
