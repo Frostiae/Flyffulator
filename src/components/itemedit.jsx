@@ -258,14 +258,12 @@ function ItemEdit({ itemElem }) {
 
     function setStatAwakeOption(index, optionId) { 
         const parameter = getPossibleStatAwakeningParameter(index, optionId)[optionId];
-        console.log(parameter)
+
         const foundAwake = Utils.getAvailableStatAwakeOptions(itemElem?.statAwake).find((option) => {
-            const optionParameters = option.abilities.map((a) => a.parameter)
+            const abilityIndex = option.abilities.findIndex((e) => e.parameter === parameter);
+            if(abilityIndex < 0) return false;
 
-            const indexOfParameter = optionParameters.indexOf(parameter);
-            if(indexOfParameter < 0) return false; 
-
-            if(option.abilities[indexOfParameter].add != 1) {
+            if(option.abilities[abilityIndex].add != 1) {
                 return false;
             }
 
