@@ -40,5 +40,6 @@
     "tooltip_two_handed": "Two-handed weapon.",
     "tooltip_blessing": "Demon Blessing",
     "search_placeholder": "Search for a {{type}}...",
-    "search_title": "Search"
+    "search_title": "Search",
+    "enable_swordcross": "Swordcross enabled"
 }

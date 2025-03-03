@@ -65,7 +65,7 @@ export function getDamage(leftHand) {
 
     if (damage > 0) {
         // Just apply swordcross here manually
-        if ((Context.attackFlags & (Utils.ATTACK_FLAGS.GENERIC | Utils.ATTACK_FLAGS.MELEESKILL)) != 0) {
+        if (Context.settings.swordcrossEnabled && (Context.attackFlags & (Utils.ATTACK_FLAGS.GENERIC | Utils.ATTACK_FLAGS.MELEESKILL)) != 0) {
             if (Context.attacker.equipment.mainhand.itemProp.triggerSkill != undefined && Context.attacker.equipment.mainhand.itemProp.triggerSkill == 3124) {
                 if (Math.random() * 100 < Context.attacker.equipment.mainhand.itemProp.triggerSkillProbability) {
                     Context.defender.activeBuffs[3124] = 1;

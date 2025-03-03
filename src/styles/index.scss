@@ -117,6 +117,12 @@ body {
   align-items: center;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  column-gap: 10px;
+}
+
 input[type="text"], input[type="number"] {
   background-color: v.$input-bg-color;
   border: 1px solid v.$input-border-color;
@@ -133,11 +139,11 @@ input[type="text"], input[type="number"] {
   }
 }
 
-input[type="radio"] {
+input[type="radio"], input[type="checkbox"] {
   appearance: none;
   background-color: v.$input-bg-color;
   background: linear-gradient(-45deg, #ffffff80 0%, v.$input-bg-color 40%);
-  margin-right: 5px;
+  margin: 3px 5px 0px 5px;
   font: inherit;
   width: 13px;
   height: 13px;

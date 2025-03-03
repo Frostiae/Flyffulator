@@ -31,6 +31,13 @@ export default class Context
      */
     static skill = null;
 
+    /**
+     * Generic multipurpose settings for the current context.
+     */
+    static settings = {
+        swordcrossEnabled: true,
+    };
+
     static isPVP() {
         return this.defender.isPlayer() && this.attacker.isPlayer();
     }

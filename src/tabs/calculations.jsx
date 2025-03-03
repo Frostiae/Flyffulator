@@ -14,6 +14,7 @@ import BasicStat from '../components/basicstat';
 function Calculations() {
     const { showSearch } = useSearch();
     const [targetType, setTargetType] = useState(0);
+    const [refresh, setRefresh] = useState(false);
     const { t } = useTranslation();
     var shortCode = "en";
     if (t.resolvedLanguage) {
@@ -69,6 +70,8 @@ function Calculations() {
 
     function generateAutoAttack() {
         let out = [];
+        Context.defender.activeBuffs = []; // Reset their debuffs from any previous simulations
+
         for (let i = 0; i < 200; i++) {
             Context.skill = null;
 
@@ -186,6 +189,11 @@ function Calculations() {
         let defense = Context.player.getDefense();
         defense += defense * Context.player.getStat("magicdefense", true) / 100;
         return Math.floor(defense);
+    }
+
+    function setSetting(setting, value) {
+        Context.settings[setting] = value;
+        setRefresh(!refresh);
     }
 
     return (
@@ -431,6 +439,16 @@ function Calculations() {
                                     <span className="basic-value">{Context.defender.int}</span>
                                 </div>
                             </div>
+                        </div>
+                    }
+                </div>
+
+                <div className="grid">
+                    {
+                        (Context.player.equipment.mainhand.itemProp.triggerSkill != undefined && Context.player.equipment.mainhand.itemProp.triggerSkill == 3124)  &&
+                        <div>
+                            <input type="checkbox" id="swordcross" checked={Context.settings.swordcrossEnabled} onChange={() => setSetting("swordcrossEnabled", !Context.settings.swordcrossEnabled)} />
+                            <label htmlFor="swordcross">{t("enable_swordcross")}</label>
                         </div>
                     }
                 </div>
