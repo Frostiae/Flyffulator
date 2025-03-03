@@ -84,7 +84,7 @@ function Calculations() {
 
             // TODO: This isn't too accurate for blades, the pattern is a bit different
             let leftHand = false;
-            if (Context.player.job.id == 2246) {
+            if (Context.player.job.id == 2246 && Context.player.equipment.offhand != null) {
                 leftHand = !leftHand;
             }
 
