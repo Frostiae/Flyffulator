@@ -657,12 +657,9 @@ export default class Entity {
             return hit;
         }
 
-        let weaponProp;
+        let weaponProp = this.equipment.mainhand.itemProp;
         if (leftHand && this.equipment.offhand != null) {
             weaponProp = this.equipment.offhand.itemProp;
-        }
-        else if (!leftHand && this.equipment.mainhand != null) {
-            weaponProp = this.equipment.mainhand.itemProp;
         }
 
         hit.min = weaponProp.minAttack * 2;
@@ -895,7 +892,6 @@ export default class Entity {
             const skillProp = Utils.getSkillById(id);
             const levelProp = skillProp.levels[level - 1];
 
-            // TODO: Scaling and stuff? how would it know who applied it
             if (levelProp.abilities != undefined) {
                 for (const ability of levelProp.abilities) {
                     if (!targetStats.includes(ability.parameter) || ability.rate != rate) {
@@ -903,7 +899,8 @@ export default class Entity {
                     }
 
                     let add = ability.add;
-                    for (const scale of levelProp.scalingParameters) {
+
+                    for (const scale of levelProp.scalingParameters ?? []) {
                         if (scale.parameter != ability.parameter) {
                             continue;
                         }

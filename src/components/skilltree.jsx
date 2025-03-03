@@ -34,6 +34,9 @@ function SkillTree() {
         }
         else if (inc < 0 && currentLevel > 0) {
             Context.player.skillLevels[skill.id] = currentLevel - 1;
+            if (Context.player.skillLevels[skill.id] <= 0) {
+                delete Context.player.skillLevels[skill.id];
+            }
         }
 
         setRefresh(!refresh);

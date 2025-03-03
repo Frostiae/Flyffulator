@@ -272,7 +272,10 @@ function applyDefense(attack) {
                 break;
         }
 
-        let weapon = leftHanded ? Context.attacker.equipment.offhand : Context.attacker.equipment.mainhand;
+        let weapon = Context.attacker.equipment.mainhand;
+        if (leftHanded && Context.attacker.equipment.offhand) {
+            weapon = Context.attacker.equipment.offhand;
+        }
 
         // Skill awakes
         if (weapon != null && weapon.skillAwake != null && weapon.skillAwake.skill != undefined
@@ -322,7 +325,11 @@ function getElementDamage() {
         attack = 1; // This value is 1 on every monster in the game it seems
     }
     else {
-        const weapon = leftHanded ? Context.attacker.equipment.offhand : Context.attacker.equipment.mainhand;
+        let weapon = Context.attacker.equipment.mainhand;
+        if (leftHanded && Context.attacker.equipment.offhand) {
+            weapon = Context.attacker.equipment.offhand;
+        }
+
         if (weapon != null && weapon.element != "none") {
             element = weapon.element;
             attack = weapon.elementUpgradeLevel;
@@ -355,7 +362,11 @@ function applyElementDefense(attack) {
     }
 
     let weaponElement = "none";
-    const weapon = leftHanded ? Context.attacker.equipment.offhand : Context.attacker.equipment.mainhand;
+    let weapon = Context.attacker.equipment.mainhand;
+    if (leftHanded && Context.attacker.equipment.offhand) {
+        weapon = Context.attacker.equipment.offhand;
+    }
+    
     if (weapon.element != "none") {
         weaponElement = weapon.element;
     }
