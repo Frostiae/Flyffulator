@@ -12,7 +12,6 @@ import skillAwakes from '../assets/SkillAwakes.json';
 import { AlwaysStencilFunc } from 'three';
 
 function ItemEdit({ itemElem }) {
-    console.log(itemElem)
     const [state, setState] = useState(false);
     const { showSearch } = useSearch();
     const { i18n } = useTranslation();
