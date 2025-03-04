@@ -36,6 +36,7 @@ export default class Context
      */
     static settings = {
         swordcrossEnabled: true,
+        waterbombEnabled: true
     };
 
     static isPVP() {

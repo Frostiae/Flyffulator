@@ -750,9 +750,10 @@ export default class Entity {
      * Get the total amount of a stat applied to this player through their equipment, buffs, and active items.
      * @param {string} stat The stat to check for.
      * @param {boolean} rate If the state is a percentage or not.
+     * @param {number} skillChanceId The ID of the skill chance to check for if `stat == skillchance`.
      * @returns The total amount.
      */
-    getStat(stat, rate) {
+    getStat(stat, rate, skillChanceId = 0) {
         if (this.isMonster()) {
             return 0;
         }
@@ -783,6 +784,10 @@ export default class Entity {
                         continue;
                     }
 
+                    if (stat == "skillchance" && (ability.skill == undefined || ability.skill != skillChanceId)) {
+                        continue;
+                    }
+
                     if (ability.addMax != undefined && itemElem.statRanges.length - 1 >= i) { // Stat ranges
                         total += itemElem.statRanges[i].value;
                     }
@@ -801,6 +806,10 @@ export default class Entity {
                     continue;
                 }
 
+                if (stat == "skillchance" && (ability.skill == undefined || ability.skill != skillChanceId)) {
+                    continue;
+                }
+
                 total += ability.value;
             }
 
@@ -808,6 +817,10 @@ export default class Entity {
             if (itemElem.itemProp.upgradeLevels != undefined) {
                 for (const ability of itemElem.itemProp.upgradeLevels[itemElem.upgradeLevel].abilities) {
                     if (!targetStats.includes(ability.parameter) || ability.rate != rate) {
+                        continue;
+                    }
+
+                    if (stat == "skillchance" && (ability.skill == undefined || ability.skill != skillChanceId)) {
                         continue;
                     }
 
@@ -826,6 +839,10 @@ export default class Entity {
                         continue;
                     }
 
+                    if (stat == "skillchance" && (ability.skill == undefined || ability.skill != skillChanceId)) {
+                        continue;
+                    }
+
                     total += ability.add;
                 }
             }
@@ -838,6 +855,10 @@ export default class Entity {
             const bonus = Utils.getUpgradeBonus(armorUpgrade);
             for (const ability of bonus.setAbilities) {
                 if (!targetStats.includes(ability.parameter) || ability.rate != rate) {
+                    continue;
+                }
+
+                if (stat == "skillchance" && (ability.skill == undefined || ability.skill != skillChanceId)) {
                     continue;
                 }
 
@@ -854,6 +875,10 @@ export default class Entity {
                 }
 
                 if (!targetStats.includes(bonus.ability.parameter) || bonus.ability.rate != rate) {
+                    continue;
+                }
+
+                if (stat == "skillchance" && (bonus.ability.skill == undefined || bonus.ability.skill != skillChanceId)) {
                     continue;
                 }
 
@@ -881,6 +906,10 @@ export default class Entity {
                         continue;
                     }
 
+                    if (stat == "skillchance" && (ability.skill == undefined || ability.skill != skillChanceId)) {
+                        continue;
+                    }
+
                     total += ability.add;
                 }
             }
@@ -895,6 +924,10 @@ export default class Entity {
             if (levelProp.abilities != undefined) {
                 for (const ability of levelProp.abilities) {
                     if (!targetStats.includes(ability.parameter) || ability.rate != rate) {
+                        continue;
+                    }
+
+                    if (stat == "skillchance" && (ability.skill == undefined || ability.skill != skillChanceId)) {
                         continue;
                     }
 
@@ -928,8 +961,16 @@ export default class Entity {
 
         if (this.equipment.pet) {
             const petData = Utils.getPetDefinitionByItemId(this.equipment.pet.itemProp.id)
-
-            if (targetStats.includes(petData.parameter) && petData.rate === rate) {
+            let valid = true;
+            if (!targetStats.includes(petData.parameter) || petData.rate != rate) {
+                valid = false;
+            }
+            
+            if (stat == "skillchance" && (ability.skill == undefined || ability.skill != skillChanceId)) {
+                valid = false;
+            }
+            
+            if (valid) {
                 total += Utils.getPetStatSum(petData, this.equipment.pet.petStats)
             }
         }
@@ -1086,7 +1127,8 @@ export default class Entity {
     getStatScale(parameter, skillProp, level) {
         const levelProp = skillProp.levels[level];
         if (levelProp == undefined) {
-            console.error(skillProp, level);
+            console.error("Skill level not found", skillProp, level);
+            return 0;
         }
 
         if (levelProp.scalingParameters == undefined) {

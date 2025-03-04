@@ -81,6 +81,7 @@ export const ATTACK_FLAGS = {
     NO_TARGET: 1 << 13, // Attack without a specific target.
     DOUBLE: 1 << 14, // Target takes double damage.
     REGION: 1 << 15, // AoE skill.
+    TRIGGEREDSKILL: 1 << 16 // A skill was triggered in this attack.
 };
 
 export function getClassById(id) {

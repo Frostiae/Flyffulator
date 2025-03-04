@@ -56,7 +56,8 @@ function Calculations() {
                 block: (Context.attackFlags & Utils.ATTACK_FLAGS.BLOCKING) != 0,
                 miss: (Context.attackFlags & Utils.ATTACK_FLAGS.MISS) != 0,
                 parry: (Context.attackFlags & Utils.ATTACK_FLAGS.PARRY) != 0,
-                double: (Context.attackFlags & Utils.ATTACK_FLAGS.DOUBLE) != 0
+                double: (Context.attackFlags & Utils.ATTACK_FLAGS.DOUBLE) != 0,
+                trigger: (Context.attackFlags & Utils.ATTACK_FLAGS.TRIGGEREDSKILL) != 0
             }
 
             out.push(res);
@@ -72,6 +73,9 @@ function Calculations() {
         let out = [];
         Context.defender.activeBuffs = []; // Reset their debuffs from any previous simulations
 
+        // TODO: This isn't too accurate for blades, the pattern is a bit different
+        let leftHand = false;
+        
         for (let i = 0; i < 200; i++) {
             Context.skill = null;
 
@@ -82,8 +86,6 @@ function Calculations() {
                 Context.attackFlags = Utils.ATTACK_FLAGS.GENERIC;
             }
 
-            // TODO: This isn't too accurate for blades, the pattern is a bit different
-            let leftHand = false;
             if (Context.player.job.id == 2246 && Context.player.equipment.offhand != null) {
                 leftHand = !leftHand;
             }
@@ -94,7 +96,8 @@ function Calculations() {
                 block: (Context.attackFlags & Utils.ATTACK_FLAGS.BLOCKING) != 0,
                 miss: (Context.attackFlags & Utils.ATTACK_FLAGS.MISS) != 0,
                 parry: (Context.attackFlags & Utils.ATTACK_FLAGS.PARRY) != 0,
-                double: (Context.attackFlags & Utils.ATTACK_FLAGS.DOUBLE) != 0
+                double: (Context.attackFlags & Utils.ATTACK_FLAGS.DOUBLE) != 0,
+                trigger: (Context.attackFlags & Utils.ATTACK_FLAGS.TRIGGEREDSKILL) != 0
             }
 
             out.push(res);
@@ -124,6 +127,12 @@ function Calculations() {
 
     function generateSkillDamage() {
         let data = {};
+
+        // Add waterbomb
+        if (Context.settings.waterbombEnabled && Context.attacker.getStat("skillchance", true, 11389) > 0) {
+            Context.player.skillLevels[11389] = 1;
+        }
+
         for (const [skill, level] of Object.entries(Context.player.skillLevels)) {
             if (level <= 0) {
                 continue; // Shouldn't happen
@@ -151,7 +160,8 @@ function Calculations() {
                     block: (Context.attackFlags & Utils.ATTACK_FLAGS.BLOCKING) != 0,
                     miss: (Context.attackFlags & Utils.ATTACK_FLAGS.MISS) != 0,
                     parry: (Context.attackFlags & Utils.ATTACK_FLAGS.PARRY) != 0,
-                    double: (Context.attackFlags & Utils.ATTACK_FLAGS.DOUBLE) != 0
+                    double: (Context.attackFlags & Utils.ATTACK_FLAGS.DOUBLE) != 0,
+                    trigger: (Context.attackFlags & Utils.ATTACK_FLAGS.TRIGGEREDSKILL) != 0
                 }
 
                 out.push(res);
@@ -160,6 +170,7 @@ function Calculations() {
             data[skill] = out;
         }
 
+        delete Context.player.skillLevels[11389];
         return data;
     }
 
@@ -445,10 +456,18 @@ function Calculations() {
 
                 <div className="grid">
                     {
-                        (Context.player.equipment.mainhand.itemProp.triggerSkill != undefined && Context.player.equipment.mainhand.itemProp.triggerSkill == 3124)  &&
+                        (Context.player.equipment.mainhand.itemProp.triggerSkill != undefined && Context.player.equipment.mainhand.itemProp.triggerSkill == 3124) &&
                         <div>
                             <input type="checkbox" id="swordcross" checked={Context.settings.swordcrossEnabled} onChange={() => setSetting("swordcrossEnabled", !Context.settings.swordcrossEnabled)} />
                             <label htmlFor="swordcross">{t("enable_swordcross")}</label>
+                        </div>
+                    }
+
+                    {
+                        Context.attacker.getStat("skillchance", true, 11389) > 0 &&
+                        <div>
+                            <input type="checkbox" id="waterbomb" checked={Context.settings.waterbombEnabled} onChange={() => setSetting("waterbombEnabled", !Context.settings.waterbombEnabled)} />
+                            <label htmlFor="waterbomb">{t("enable_waterbomb")}</label>
                         </div>
                     }
                 </div>
@@ -507,15 +526,19 @@ function Calculations() {
                 <hr />
 
                 <div className="charts">
+                    <BasicStat title={"Waterbomb chance"} value={Context.attacker.getStat("skillchance", true, 11389)}
+                        information={"This value lowers how much damage you take from auto attacks.\n\nWhile this value is significantly lower than the value you would see in-game, it is the real value used during damage calculations."}
+                        sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/tabs/calculations.jsx#L147"}
+                        percentage
+                    />
+
                     {/* Healing Skills */}
 
                     {
                         Object.entries(generateHealing()).map(([skill, data]) =>
-                            <div className="basic-stat" key={skill}>
-                                <span className="basic-label">{(Utils.getSkillById(skill).name[shortCode] ?? Utils.getSkillById(skill).name.en) + " Healing"}</span>
-                                <span className="basic-value">{data}</span>
-                                <HoverInfo text="View calculation code 🔗" icon="code-icon.svg" link="https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffdamagecalculator.js#L11" />
-                            </div>
+                            <BasicStat key={skill} title={(Utils.getSkillById(skill).name[shortCode] ?? Utils.getSkillById(skill).name.en) + " Healing"} value={data}
+                                sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffdamagecalculator.js#L11"}
+                            />
                         )
                     }
                 </div>

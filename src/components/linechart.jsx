@@ -113,6 +113,10 @@ function LineChart({ chartData, title, info, label, sourceLink }) {
                                         out += "(Double)\n"
                                     }
 
+                                    if (data.trigger) {
+                                        out += "(Triggered skill)\n";
+                                    }
+
                                     return out.slice(0, -1);
                                 }
                             }

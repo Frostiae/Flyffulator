@@ -41,5 +41,6 @@
     "tooltip_blessing": "Demon Blessing",
     "search_placeholder": "Search for a {{type}}...",
     "search_title": "Search",
-    "enable_swordcross": "Swordcross enabled"
+    "enable_swordcross": "Swordcross enabled",
+    "enable_waterbomb": "Waterbomb enabled"
 }

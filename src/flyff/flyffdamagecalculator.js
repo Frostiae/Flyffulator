@@ -2,6 +2,7 @@ import Context from "./flyffcontext";
 import * as Utils from "./flyffutils";
 
 let leftHanded = false; // If this attack is using the left hand weapon.
+let elementDefenseFactor = 0; // Monster element property defense factor... or something?
 
 /**
  * Get the amount of healing done by the current attacker to **themself** using the given skill.
@@ -49,6 +50,7 @@ export function getHealing(skillProp) {
  */
 export function getDamage(leftHand) {
     leftHanded = leftHand;
+    elementDefenseFactor = 0;
 
     // Check for miss is the first thing
     if (!Context.isSkillAttack() && (Context.attackFlags & Utils.ATTACK_FLAGS.MAGIC) == 0) {
@@ -64,15 +66,7 @@ export function getDamage(leftHand) {
     const damage = applyDefense(attack);
 
     if (damage > 0) {
-        // Just apply swordcross here manually
-        if (Context.settings.swordcrossEnabled && (Context.attackFlags & (Utils.ATTACK_FLAGS.GENERIC | Utils.ATTACK_FLAGS.MELEESKILL)) != 0) {
-            if (Context.attacker.equipment.mainhand.itemProp.triggerSkill != undefined && Context.attacker.equipment.mainhand.itemProp.triggerSkill == 3124) {
-                if (Math.random() * 100 < Context.attacker.equipment.mainhand.itemProp.triggerSkillProbability) {
-                    Context.defender.activeBuffs[3124] = 1;
-                }
-            }
-        }
-
+        totalDamage += triggerSkills();
         totalDamage += damage;
     }
 
@@ -96,6 +90,72 @@ export function getDamage(leftHand) {
     // Spirit strike here
 
     return totalDamage;
+}
+
+function triggerSkills() {
+    if ((Context.attackFlags & Utils.ATTACK_FLAGS.DAMAGE_OVER_TIME) != 0 && Context.attacker.isPlayer()) {
+        // spiritual overcharge
+        // healing grace
+
+        if (Context.skill?.id == 9730 || Context.skill?.id == 4636) {
+            // Merkaba and arrow rain can waterbomb
+
+        }
+    }
+
+    if ((Context.attackFlags & Utils.ATTACK_FLAGS.DAMAGE_OVER_TIME) == 0 && Context.attacker.isPlayer()) {
+        // Damage slow rate
+
+        if (Context.settings.waterbombEnabled && Context.skill?.id != 11389 && Math.random() * 100 <= Context.attacker.getStat("skillchance", true, 11389)) {
+            // Waterbomb
+            const oldSkill = Context.skill;
+            const oldFlags = Context.attackFlags;
+
+            Context.attacker.skillLevels[11389] = 1;
+            Context.skill = Utils.getSkillById(11389);
+            Context.attackFlags = Context.skill.magic ? Utils.ATTACK_FLAGS.MAGICSKILL : Utils.ATTACK_FLAGS.MELEESKILL; // its always magic
+
+            const extraDamage = getDamage(false);
+
+            delete Context.attacker.skillLevels[11389];
+            Context.skill = oldSkill;
+            Context.attackFlags = oldFlags | Utils.ATTACK_FLAGS.TRIGGEREDSKILL;
+
+            return extraDamage;
+        }
+    }
+
+    if ((Context.attackFlags & Utils.ATTACK_FLAGS.MAGICSKILL) != 0 && Context.attacker.isPlayer()) {
+        if (Context.skill?.id == 447 || Context.skill?.id == 5041 || Context.skill?.id == 9730) {
+            // Bgvur, Asal, and Merk can stun
+            // Stun chance
+        }
+
+        // Healing grace
+    }
+
+    // Last stand if defender is less than or equal to 25% HP here
+
+    if ((Context.attackFlags & (Utils.ATTACK_FLAGS.GENERIC | Utils.ATTACK_FLAGS.MELEESKILL)) != 0 && Context.attacker.isPlayer()) {
+        // Stun chance
+        // poison, bleed, lifesteal
+        // spiritual overcharge
+        // pranksters escape
+        // healing grace
+
+        // Yoyo knockback and swordcross here
+        if (Context.settings.swordcrossEnabled && (Context.attackFlags & (Utils.ATTACK_FLAGS.GENERIC | Utils.ATTACK_FLAGS.MELEESKILL)) != 0) {
+            if (Context.attacker.equipment.mainhand.itemProp.triggerSkill != undefined && Context.attacker.equipment.mainhand.itemProp.triggerSkill == 3124) {
+                if (Math.random() * 100 <= Context.attacker.equipment.mainhand.itemProp.triggerSkillProbability) {
+                    Context.defender.activeBuffs[3124] = 1;
+                }
+            }
+        }
+    }
+
+    // Skills triggering skills here, only burning arrow triggers burning field it seems
+
+    return 0;
 }
 
 /**
@@ -209,7 +269,7 @@ function applyDefense(attack) {
         // Melee Skills or wand auto attacks
         damage = applyMeleeSkillDefense(attack);
         if (damage > 0) {
-            damage += getElementDamage();
+            damage += getElementDamageFactorMeleeSkill();
         }
     }
 
@@ -316,7 +376,99 @@ function applyDefense(attack) {
     return damage;
 }
 
-function getElementDamage() {
+/**
+ * Get the element damage factor for auto attacks.
+ */
+function getElementDamageFactorAutoAttack() {
+    let attackFactor = 10000;
+    elementDefenseFactor = 10000;
+
+    let attackType = "none";
+    let attackLevel = 0;
+    let plusAttack = 0;
+
+    if (Context.attacker.isPlayer()) {
+        let weapon = Context.attacker.equipment.mainhand;
+        if (leftHanded && Context.attacker.equipment.offhand) {
+            weapon = Context.attacker.equipment.offhand;
+        }
+
+        if (weapon.element != "none") {
+            attackType = weapon.element;
+            attackLevel = weapon.elementUpgradeLevel + Context.attacker.getStat("elementattack", false);
+        }
+        else {
+            attackType = weapon.itemProp.element;
+        }
+
+        // TODO: Element upcuts here I think
+    }
+    else {
+        attackType = Context.attacker.monsterProp.element;
+        attackLevel = 1; // 1 on 90% of monsters it seems
+    }
+
+    let defenseType = "none";
+    let defenseLevel = 0;
+    let plusDefense = 0;
+
+    if (Context.defender.isPlayer()) {
+        if (Context.defender.equipment.suit != null) {
+            defenseType = Context.defender.equipment.suit.element;
+            defenseLevel = Context.defender.equipment.suit.elementUpgradeLevel;
+        }
+
+        // TODO: Def element upcut or something idk
+    }
+    else {
+        defenseType = Context.defender.monsterProp.element;
+        defenseLevel = 1;
+    }
+
+    if (attackType == "none" && defenseType == "none") {
+        return attackFactor;
+    }
+
+    const relations = {
+        None: 0, // One has no element
+        Same: 1, // Same element
+        Weak: 2, // Attacker element is weak
+        Strong: 3 // Attacker element is strong
+    };
+
+    const table = [
+        [relations.None, relations.None, relations.None, relations.None, relations.None, relations.None]
+        [relations.None, relations.Same, relations.Weak, relations.None, relations.Strong, relations.None]
+        [relations.None, relations.Strong, relations.Same, relations.Weak, relations.None, relations.None]
+        [relations.None, relations.None, relations.Strong, relations.Same, relations.None, relations.Weak]
+        [relations.None, relations.Weak, relations.None, relations.None, relations.Same, relations.Strong]
+        [relations.None, relations.None, relations.None, relations.Strong, relations.Weak, relations.Same]
+    ];
+
+    const result = table[attackType][defenseType];
+
+    let factor = 0;
+    let level = 0;
+
+    switch (result) {
+        case relations.Weak:
+            level = (attackLevel - 5) - defenseLevel;
+            elementDefenseFactor += plusDefense;
+            break;
+        case relations.Strong:
+            level = attackLevel - (defenseLevel > 5 ? defenseLevel - 5 : 0);
+            if (level > 0) {
+                // TODO: Continue this
+            }
+        default:
+            break;
+    }
+}
+
+/**
+ * Get the element damage factor for melee skills.
+ */
+function getElementDamageFactorMeleeSkill() {
     let element = "none";
     let attack = 0;
 
@@ -366,7 +518,7 @@ function applyElementDefense(attack) {
     if (leftHanded && Context.attacker.equipment.offhand) {
         weapon = Context.attacker.equipment.offhand;
     }
-    
+
     if (weapon.element != "none") {
         weaponElement = weapon.element;
     }
