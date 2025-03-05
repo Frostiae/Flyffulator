@@ -4,9 +4,9 @@ import { useTranslation } from "react-i18next";
 
 import Slot from "./slot";
 import HoverInfo from './hoverinfo';
+import NumberInput from "./numberinput";
 import Context from "../flyff/flyffcontext";
 import SkillTreeIcon from "./skilltreeicon";
-import NumberInput from "./numberinput";
 import * as Utils from "../flyff/flyffutils";
 
 function SkillTree() {
@@ -79,6 +79,7 @@ function SkillTree() {
         showSearch({
             type: "personalOrCoupleHousingNpc",
             typeLocalization: "search_personal_housing_npc",
+            searchByStats: true,
             onSet: (result) => {
                 if (!Context.player.activePersonalHousingNpcs.includes(result)) {
                     Context.player.activePersonalHousingNpcs.push(result);
@@ -91,6 +92,7 @@ function SkillTree() {
         showSearch({
             type: "personalOrCoupleHousingNpc",
             typeLocalization: "search_couple_housing_npc",
+            searchByStats: true,
             onSet: (result) => {
                 if (!Context.player.activeCoupleHousingNpcs.includes(result)) {
                     Context.player.activeCoupleHousingNpcs.push(result);
@@ -103,6 +105,7 @@ function SkillTree() {
         showSearch({
             type: "guildHousingNpc",
             typeLocalization: "search_guild_housing_npc",
+            searchByStats: true,
             onSet: (result) => {
                 if (!Context.player.activeGuildHousingNpcs.includes(result)) {
                     Context.player.activeGuildHousingNpcs.push(result);
@@ -217,10 +220,10 @@ function SkillTree() {
                     <button className="flyff-button" onClick={() => addRMBuffs()}>{t("skills_and_buffs_add_rm")}</button>
                 </div>
                 <div className="column">
-                    <NumberInput min={15} max={1000} value={Context.player.bufferStr} label={"Caster STR"} onChange={(v) => {Context.player.bufferStr = v;}} />
-                    <NumberInput min={15} max={1000} value={Context.player.bufferSta} label={"Caster STA"} onChange={(v) => {Context.player.bufferSta = v;}} />
-                    <NumberInput min={15} max={1000} value={Context.player.bufferDex} label={"Caster DEX"} onChange={(v) => {Context.player.bufferDex = v;}} />
-                    <NumberInput min={15} max={1000} value={Context.player.bufferInt} label={"Caster INT"} onChange={(v) => {Context.player.bufferInt = v;}} />
+                    <NumberInput min={15} max={1000} value={Context.player.bufferStr} label={"Caster STR"} onChange={(v) => { Context.player.bufferStr = v; }} />
+                    <NumberInput min={15} max={1000} value={Context.player.bufferSta} label={"Caster STA"} onChange={(v) => { Context.player.bufferSta = v; }} />
+                    <NumberInput min={15} max={1000} value={Context.player.bufferDex} label={"Caster DEX"} onChange={(v) => { Context.player.bufferDex = v; }} />
+                    <NumberInput min={15} max={1000} value={Context.player.bufferInt} label={"Caster INT"} onChange={(v) => { Context.player.bufferInt = v; }} />
                 </div>
                 <hr />
                 <div className="buffs-container">
@@ -233,7 +236,7 @@ function SkillTree() {
 
                 <div className="column">
                     <div>
-                        <div className="housing-npcs-header">
+                        <div className="buffs-header">
                             <h3>{t("skills_and_buffs_active_personal_house_buffs")}</h3>
                             <button className="flyff-button" onClick={() => addPersonalHousingNpc()}>{t("skills_and_buffs_add")}</button>
                         </div>
@@ -247,7 +250,7 @@ function SkillTree() {
                         </div>
                     </div>
                     <div>
-                        <div className="housing-npcs-header">
+                        <div className="buffs-header">
                             <h3>{t("skills_and_buffs_active_personal_couple_buffs")}</h3>
                             <button className="flyff-button" onClick={() => addCoupleHousingNpc()}>{t("skills_and_buffs_add")}</button>
                         </div>
@@ -261,7 +264,7 @@ function SkillTree() {
                         </div>
                     </div>
                     <div>
-                        <div className="housing-npcs-header">
+                        <div className="buffs-header">
                             <h3>{t("skills_and_buffs_active_personal_guild_buffs")}</h3>
                             <button className="flyff-button" onClick={() => addGuildHousingNpc()}>{t("skills_and_buffs_add")}</button>
                         </div>

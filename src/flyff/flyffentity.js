@@ -968,11 +968,11 @@ export default class Entity {
             if (!targetStats.includes(petData.parameter) || petData.rate != rate) {
                 valid = false;
             }
-            
+
             if (stat == "skillchance" && (petData.skill == undefined || petData.skill != skillChanceId)) {
                 valid = false;
             }
-            
+
             if (valid) {
                 total += Utils.getPetStatSum(petData, this.equipment.pet.petStats)
             }

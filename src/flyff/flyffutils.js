@@ -33,7 +33,8 @@ export const DEFAULT_WEAPON = new ItemElem({
     attackSpeedValue: 0.07,
     category: "weapon",
     subcategory: "hand",
-    additionalSkillDamage: 0
+    additionalSkillDamage: 0,
+    element: "none"
 });
 
 export const TRAINING_DUMMY = {

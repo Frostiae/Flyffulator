@@ -1,17 +1,17 @@
-import { useSearch } from "../searchcontext";
 import { useState } from "react";
+import { useSearch } from "../searchcontext";
+import { useTranslation } from "react-i18next";
 
 import Slot from '../components/slot';
 import pets from "../assets/Pets.json";
 import items from "../assets/Items.json";
-import housingNpcs from "../assets/HousingNPCs.json";
 import Entity from "../flyff/flyffentity";
 import skills from "../assets/Skills.json";
 import Context from "../flyff/flyffcontext";
 import * as Utils from "../flyff/flyffutils";
 import ItemElem from "../flyff/flyffitemelem";
 import monsters from "../assets/Monsters.json";
-import { useTranslation } from "react-i18next";
+import housingNpcs from "../assets/HousingNPCs.json";
 
 function Search() {
     const { isSearchOpen, searchProperties, hideSearch } = useSearch();
@@ -125,9 +125,19 @@ function Search() {
 
                     var selectedLanguageNpcName = housingNpc.name[shortCode] ?? housingNpc.name.en;
                     if (selectedLanguageNpcName.toLowerCase().includes(query)) {
-                        //Npcs dont have an icon. Assign a more or less fitting icon here
+                        // Npcs dont have an icon. Assign a more or less fitting icon here
                         housingNpc.icon = "asschecatsre.png"
                         res.push(housingNpc);
+                        continue;
+                    }
+
+                    if (searchProperties.searchByStats && housingNpc.abilities != undefined) {
+                        for (const ability of housingNpc.abilities) {
+                            if (ability.parameter != undefined && ability.parameter.toLowerCase().includes(query)) {
+                                res.push(housingNpc);
+                                break;
+                            }
+                        }
                     }
                 }
             }
@@ -139,9 +149,19 @@ function Search() {
 
                     var selectedLanguageGuildNpcName = housingNpc.name[shortCode] ?? housingNpc.name.en;
                     if (selectedLanguageGuildNpcName.toLowerCase().includes(query)) {
-                        //Npcs dont have an icon. Assign a more or less fitting icon here
+                        // Npcs dont have an icon. Assign a more or less fitting icon here
                         housingNpc.icon = "asschecatsre.png"
                         res.push(housingNpc);
+                        continue;
+                    }
+
+                    if (searchProperties.searchByStats && housingNpc.abilities != undefined) {
+                        for (const ability of housingNpc.abilities) {
+                            if (ability.parameter != undefined && ability.parameter.toLowerCase().includes(query)) {
+                                res.push(housingNpc);
+                                break;
+                            }
+                        }
                     }
                 }
             };
@@ -222,7 +242,7 @@ function Search() {
                         }
 
                         {
-                            (searchProperties.type == "skill" || searchProperties.type == "personalOrCoupleHousingNpc" || searchProperties.type == "guildHousingNpc")  &&
+                            (searchProperties.type == "skill" || searchProperties.type == "personalOrCoupleHousingNpc" || searchProperties.type == "guildHousingNpc") &&
                             results.map(result =>
                                 <div id="search-result" key={result.id} onClick={() => handleItemClick(result)} tabIndex={0}
                                     onKeyDown={(e) => {

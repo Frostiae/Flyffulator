@@ -75,16 +75,16 @@ export function getDamage(leftHand) {
 
     // if (not damage over time)
     // Various multipliers
-    totalDamage += totalDamage * Context.attacker.getStat(Context.isPVP() ? "pvpdamage" : "pvedamage", true) / 100;
+    totalDamage += Math.floor(totalDamage * Context.attacker.getStat(Context.isPVP() ? "pvpdamage" : "pvedamage", true) / 100);
 
-    totalDamage += totalDamage * Math.max(Context.defender.getStat("incomingdamage", true), -50) / 100;
+    totalDamage += Math.floor(totalDamage * Math.max(Context.defender.getStat("incomingdamage", true), -50) / 100);
     if (Context.defender.isMonster() && Context.defender.monsterProp.rank == "giant") {
-        totalDamage += totalDamage * Context.attacker.getStat("bossmonsterdamage", true) / 100;
+        totalDamage += Math.floor(totalDamage * Context.attacker.getStat("bossmonsterdamage", true) / 100);
     }
 
     if (Context.defender.isPlayer()) {
-        totalDamage -= totalDamage * Math.min(20, Context.defender.getStat(Context.isPVP() ? "pvpdamagereduction" : "pvedamagereduction", true)) / 100;
-        totalDamage -= totalDamage * Context.defender.getStat("damageoffload", true) / 100;
+        totalDamage -= Math.floor(totalDamage * Math.min(20, Context.defender.getStat(Context.isPVP() ? "pvpdamagereduction" : "pvedamagereduction", true)) / 100);
+        totalDamage -= Math.floor(totalDamage * Context.defender.getStat("damageoffload", true) / 100);
     }
 
     totalDamage = Math.max(totalDamage, 1);
