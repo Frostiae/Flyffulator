@@ -983,7 +983,7 @@ export default class Entity {
         if (this.activePersonalHousingNpcs) {
             for (const personalHouseNpc of this.activePersonalHousingNpcs) {
                 for (const ability of personalHouseNpc.abilities) {
-                    if (!targetStats.includes(ability.parameter)) {
+                    if (!targetStats.includes(ability.parameter) || ability.rate != rate) {
                         continue;
                     }
 
@@ -997,7 +997,7 @@ export default class Entity {
         if (this.activeCoupleHousingNpcs) {
             for (const coupleHouseNpc of this.activeCoupleHousingNpcs) {
                 for (const ability of coupleHouseNpc.abilities) {
-                    if (!targetStats.includes(ability.parameter)) {
+                    if (!targetStats.includes(ability.parameter) || ability.rate != rate) {
                         continue;
                     }
 
@@ -1011,7 +1011,7 @@ export default class Entity {
         if (this.activeGuildHousingNpcs) {
             for (const guildHouseNpc of this.activeGuildHousingNpcs) {
                 for (const ability of guildHouseNpc.abilities) {
-                    if (!targetStats.includes(ability.parameter)) {
+                    if (!targetStats.includes(ability.parameter) || ability.rate != rate) {
                         continue;
                     }
 
