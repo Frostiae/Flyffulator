@@ -56,7 +56,8 @@ function SkillTree() {
     function addBuffItem() {
         showSearch({
             type: "item",
-            category: ["buff", "scroll"],
+            powerup: true,
+            searchByStats: true,
             onSet: (result) => {
                 Context.player.activeItems.push(result);
             }
