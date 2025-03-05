@@ -225,6 +225,16 @@ function ItemEdit({ itemElem }) {
         e.stopPropagation();
     }
 
+    function clearPiercing(i) {
+        itemElem.piercings.splice(i, 1);
+        setState(!state);
+    }
+
+    function clearJewel(i) {
+        itemElem.ultimateJewels.splice(i, 1);
+        setState(!state);
+    }
+
     return (
         <div className="item-edit">
             <div id="edit-header">
@@ -358,7 +368,7 @@ function ItemEdit({ itemElem }) {
                         {
                             Array.from({ length: itemElem.getMaximumPiercingSlots() }, (_, i) => (
                                 <div key={i} onClick={() => setPiercingSlot(i)}>
-                                    <Slot className={"slot-item slot-editable"} content={itemElem.piercings[i]} />
+                                    <Slot className={"slot-item slot-editable"} content={itemElem.piercings[i]} onRemove={() => clearPiercing(i)} />
                                     {
                                         i == itemElem.piercings.length - 1 &&
                                         <button className="flyff-button icon" onClick={fillPiercings}>
@@ -381,7 +391,7 @@ function ItemEdit({ itemElem }) {
                         {
                             Array.from({ length: itemElem.getMaximumUltimateJewelSlots() }, (_, i) => (
                                 <div key={i} onClick={() => setJewelSlot(i)}>
-                                    <Slot className={"slot-item slot-editable"} content={itemElem.ultimateJewels[i]} />
+                                    <Slot className={"slot-item slot-editable"} content={itemElem.ultimateJewels[i]} onRemove={() => clearJewel(i)} />
                                 </div>
                             ))
                         }
