@@ -2,7 +2,8 @@ import Context from "./flyffcontext";
 import * as Utils from "./flyffutils";
 
 let leftHanded = false; // If this attack is using the left hand weapon.
-let elementDefenseFactor = 0; // Monster element property defense factor... or something?
+let elementDefenseFactor = 0; // Element defense factor
+let lifestealPercent = 0;
 
 /**
  * Get the amount of healing done by the current attacker to **themself** using the given skill.
@@ -51,6 +52,8 @@ export function getHealing(skillProp) {
 export function getDamage(leftHand) {
     leftHanded = leftHand;
     elementDefenseFactor = 0;
+    lifestealPercent = 0;
+    Context.afterDamageProps = {};
 
     // Check for miss is the first thing
     if (!Context.isSkillAttack() && (Context.attackFlags & Utils.ATTACK_FLAGS.MAGIC) == 0) {
@@ -86,13 +89,20 @@ export function getDamage(leftHand) {
 
     totalDamage = Math.max(totalDamage, 1);
 
-    // Lifesteal here
+    if (lifestealPercent > 0) {
+        const stealAmount = Math.floor(totalDamage * (lifestealPercent / 100));
+        totalDamage += stealAmount;
+        Context.afterDamageProps.lifesteal = stealAmount;
+    }
+
     // Spirit strike here
 
     return totalDamage;
 }
 
 function triggerSkills() {
+    let extraDamage = 0;
+
     if ((Context.attackFlags & Utils.ATTACK_FLAGS.DAMAGE_OVER_TIME) != 0 && Context.attacker.isPlayer()) {
         // spiritual overcharge
         // healing grace
@@ -115,13 +125,12 @@ function triggerSkills() {
             Context.skill = Utils.getSkillById(11389);
             Context.attackFlags = Context.skill.magic ? Utils.ATTACK_FLAGS.MAGICSKILL : Utils.ATTACK_FLAGS.MELEESKILL; // its always magic
 
-            const extraDamage = getDamage(false);
+            extraDamage += getDamage(false);
 
-            delete Context.attacker.skillLevels[11389];
+            //delete Context.attacker.skillLevels[11389];
             Context.skill = oldSkill;
-            Context.attackFlags = oldFlags | Utils.ATTACK_FLAGS.TRIGGEREDSKILL;
-
-            return extraDamage;
+            Context.attackFlags = oldFlags;
+            Context.afterDamageProps.triggeredSkill = 11389;
         }
     }
 
@@ -138,10 +147,19 @@ function triggerSkills() {
 
     if ((Context.attackFlags & (Utils.ATTACK_FLAGS.GENERIC | Utils.ATTACK_FLAGS.MELEESKILL)) != 0 && Context.attacker.isPlayer()) {
         // Stun chance
-        // poison, bleed, lifesteal
+        // poison, bleed
         // spiritual overcharge
         // pranksters escape
         // healing grace
+
+        if (Context.settings.lifestealEnabled && Math.random() * 100 <= Context.attacker.getStat("skillchance", true, 7513)) {
+            // Lifesteal
+            const lifestealSkillProp = Utils.getSkillById(7513);
+            // TODO: Don't really have a clean way at all to get the skill level of the triggered skill... (getChgParam)
+
+            lifestealPercent = lifestealSkillProp.levels.at(-1).abilities[0].add;
+            // Lifesteal is added later. see lifestealPercent
+        }
 
         // Yoyo knockback and swordcross here
         if (Context.settings.swordcrossEnabled && (Context.attackFlags & (Utils.ATTACK_FLAGS.GENERIC | Utils.ATTACK_FLAGS.MELEESKILL)) != 0) {
@@ -155,7 +173,7 @@ function triggerSkills() {
 
     // Skills triggering skills here, only burning arrow triggers burning field it seems
 
-    return 0;
+    return extraDamage;
 }
 
 /**
@@ -197,10 +215,11 @@ function computeAttack() {
     }
     else if (Context.attackFlags & Utils.ATTACK_FLAGS.GENERIC) {
         // Regular autos
-        // Element Factor here
+        const elementFactor = getElementDamageFactorAutoAttack();
         const hit = Context.attacker.getHitMinMax(leftHanded);
         attack = Math.floor(Math.random() * (Math.floor(hit.max) - Math.ceil(hit.min) + 1) + Math.ceil(hit.min));
-        // element
+        attack = Math.floor((attack * elementFactor) / 10000);
+
         // Bow charge factor here
     }
 
@@ -357,14 +376,20 @@ function applyDefense(attack) {
     }
 
     // Level difference
-    if (Context.isPVE()) {
+    if (Context.attacker.isPlayer() || !Context.attacker.monsterProp.noLevelReduction) {
         const defenderLevel = Context.defender.level == -1 ? Context.attacker.level : Context.defender.level;
-        let delta = defenderLevel - Context.attacker.level;
+        const attackerLevel = Context.attacker.level == -1 ? Context.defender.level : Context.attacker.level;
+        let delta = defenderLevel - attackerLevel;
         if (delta > 0) {
-            const maxLevelDifference = 16;
-            const reductionFactor = [1.0, 1.0, 0.98, 0.95, 0.91, 0.87, 0.81, 0.75, 0.67, 0.59, 0.51, 0.42, 0.32, 0.22, 0.12, 0.01];
-            delta = Math.min(delta, maxLevelDifference - 1);
-            factor *= reductionFactor[delta];
+            if (Context.isPVE()) {
+                const maxLevelDifference = 16;
+                const reductionFactor = [1.0, 1.0, 0.98, 0.95, 0.91, 0.87, 0.81, 0.75, 0.67, 0.59, 0.51, 0.42, 0.32, 0.22, 0.12, 0.01];
+                delta = Math.min(delta, maxLevelDifference - 1);
+                factor *= reductionFactor[delta];
+            }
+            else if (Context.isPVP()) {
+                factor *= 1; // No level difference in pvp
+            }
         }
     }
 
@@ -429,6 +454,16 @@ function getElementDamageFactorAutoAttack() {
         return attackFactor;
     }
 
+    // Element to index
+    const indices = {
+        "none": 0,
+        "fire": 1,
+        "water": 2,
+        "electricity": 3,
+        "wind": 4,
+        "earth": 5
+    };
+
     const relations = {
         None: 0, // One has no element
         Same: 1, // Same element
@@ -437,15 +472,15 @@ function getElementDamageFactorAutoAttack() {
     };
 
     const table = [
-        [relations.None, relations.None, relations.None, relations.None, relations.None, relations.None]
-        [relations.None, relations.Same, relations.Weak, relations.None, relations.Strong, relations.None]
-        [relations.None, relations.Strong, relations.Same, relations.Weak, relations.None, relations.None]
-        [relations.None, relations.None, relations.Strong, relations.Same, relations.None, relations.Weak]
-        [relations.None, relations.Weak, relations.None, relations.None, relations.Same, relations.Strong]
+        [relations.None, relations.None, relations.None, relations.None, relations.None, relations.None],
+        [relations.None, relations.Same, relations.Weak, relations.None, relations.Strong, relations.None],
+        [relations.None, relations.Strong, relations.Same, relations.Weak, relations.None, relations.None],
+        [relations.None, relations.None, relations.Strong, relations.Same, relations.None, relations.Weak],
+        [relations.None, relations.Weak, relations.None, relations.None, relations.Same, relations.Strong],
         [relations.None, relations.None, relations.None, relations.Strong, relations.Weak, relations.Same]
     ];
 
-    const result = table[attackType][defenseType];
+    const result = table[indices[attackType]][indices[defenseType]];
 
     let factor = 0;
     let level = 0;
@@ -458,11 +493,36 @@ function getElementDamageFactorAutoAttack() {
         case relations.Strong:
             level = attackLevel - (defenseLevel > 5 ? defenseLevel - 5 : 0);
             if (level > 0) {
-                // TODO: Continue this
+                factor += (Utils.getUpgradeBonus(level).elementAttackStrong * 100) ?? 0;
             }
+            attackFactor += plusAttack;
+            break;
         default:
+            if (attackLevel > 0 && defenseLevel == 0) {
+                factor += (Utils.getUpgradeBonus(attackLevel).elementAttack * 100) ?? 0;
+            }
+            else if (attackLevel == 0 && defenseLevel > 0) {
+                factor -= (Utils.getUpgradeBonus(Math.max(defenseLevel - 3, 1)).elementDefense * 100) ?? 0;
+            }
+            else if (attackLevel > 0 && defenseLevel > 0) {
+                level = attackLevel - defenseLevel;
+            }
             break;
     }
+
+    if (level != 0) {
+        if (level > 0) {
+            factor += (Utils.getUpgradeBonus(level).elementAttack * 100) ?? 0;
+        }
+        else {
+            factor -= (Utils.getUpgradeBonus(-level).elementDefense * 100) ?? 0;
+        }
+    }
+
+    attackFactor += factor;
+    elementDefenseFactor += factor;
+
+    return Math.floor(attackFactor);
 }
 
 /**
@@ -619,7 +679,7 @@ function applyMeleeSkillDefense(attack) {
 
 function applyAutoAttackDefense(attack) {
     let defense = Math.floor(Context.defender.getDefense());
-    // TODO: Element defense factor
+    defense = Math.floor((defense * elementDefenseFactor) / 10000);
 
     let damage = applyAttackDefense(attack, defense);
     if (damage > 0) {
