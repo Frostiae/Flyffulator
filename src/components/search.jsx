@@ -4,6 +4,7 @@ import { useState } from "react";
 import Slot from '../components/slot';
 import pets from "../assets/Pets.json";
 import items from "../assets/Items.json";
+import housingNpcs from "../assets/HousingNPCs.json";
 import Entity from "../flyff/flyffentity";
 import skills from "../assets/Skills.json";
 import Context from "../flyff/flyffcontext";
@@ -116,6 +117,34 @@ function Search() {
                     }
                 }
             }
+            else if (searchProperties.type == "personalOrCoupleHousingNpc") {
+                for (const [, housingNpc] of Object.entries(housingNpcs)) {
+                    if (!housingNpc.name.en.includes("Personal House NPC")) {
+                        continue;
+                    }
+
+                    var selectedLanguageNpcName = housingNpc.name[shortCode] ?? housingNpc.name.en;
+                    if (selectedLanguageNpcName.toLowerCase().includes(query)) {
+                        //Npcs dont have an icon. Assign a more or less fitting icon here
+                        housingNpc.icon = "asschecatsre.png"
+                        res.push(housingNpc);
+                    }
+                }
+            }
+            else if (searchProperties.type == "guildHousingNpc") {
+                for (const [, housingNpc] of Object.entries(housingNpcs)) {
+                    if (!housingNpc.name.en.includes("Guild House NPC")) {
+                        continue;
+                    }
+
+                    var selectedLanguageGuildNpcName = housingNpc.name[shortCode] ?? housingNpc.name.en;
+                    if (selectedLanguageGuildNpcName.toLowerCase().includes(query)) {
+                        //Npcs dont have an icon. Assign a more or less fitting icon here
+                        housingNpc.icon = "asschecatsre.png"
+                        res.push(housingNpc);
+                    }
+                }
+            };
         }
 
         setResults(res);
@@ -136,7 +165,7 @@ function Search() {
             <div id="search-box" onClick={(e) => e.stopPropagation()}>
                 <div className="window-title">{i18n.t("search_title")}</div>
                 <div className="window-content">
-                    <input type="text" name="query" autoFocus id="search-field" placeholder={i18n.t("search_placeholder", { type: searchProperties.type, })} onChange={e => search(e.target.value)} />
+                    <input type="text" name="query" autoFocus id="search-field" placeholder={i18n.t("search_placeholder", { type: searchProperties.typeLocalization ? (i18n.t(searchProperties.typeLocalization)) : searchProperties.type, })} onChange={e => search(e.target.value)} />
                     {
                         results.length > 0 &&
                         <hr />
@@ -187,13 +216,13 @@ function Search() {
                                     }}
                                 >
                                     <img style={{ width: 32, height: 32, objectFit: "contain" }} src={`https://api.flyff.com/image/monster/${result.monsterProp.icon}`} alt={result.monsterProp.name.en} />
-                                    <span>{result.monsterProp.name.en} (level {result.monsterProp.level})</span>
+                                    <span>{result.monsterProp.name[shortCode] ?? result.monsterProp.name.en} (level {result.monsterProp.level})</span>
                                 </div>
                             )
                         }
 
                         {
-                            searchProperties.type == "skill" &&
+                            (searchProperties.type == "skill" || searchProperties.type == "personalOrCoupleHousingNpc" || searchProperties.type == "guildHousingNpc")  &&
                             results.map(result =>
                                 <div id="search-result" key={result.id} onClick={() => handleItemClick(result)} tabIndex={0}
                                     onKeyDown={(e) => {
@@ -212,7 +241,7 @@ function Search() {
                                     }}
                                 >
                                     <Slot className={"slot-skill"} content={result} />
-                                    <span>{result.name.en}</span>
+                                    <span>{result.name[shortCode] ?? result.name.en}</span>
                                 </div>
                             )
                         }

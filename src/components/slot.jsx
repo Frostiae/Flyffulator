@@ -52,14 +52,14 @@ function Slot({ backgroundIcon, content, className, onRemove }, ref) {
         content != null &&
         <>
           {
-            content.passive == undefined ?
+            (content.itemProp != undefined && content.passive == undefined) ? 
             <img src={`https://api.flyff.com/image/item/${content.itemProp.icon}`} draggable={false} id="slot-content" />
             :
             <img src={`https://api.flyff.com/image/skill/colored/${content.icon}`} draggable={false} id="slot-content" />
           }
 
           {
-            (content.passive == undefined && content.itemProp.rarity != "common") &&
+            (content.passive == undefined && content.itemProp && content.itemProp.rarity != "common") &&
             <div id="slot-rarity-corner" style={{
               background: `linear-gradient(45deg, #ffffff00 0%, #ffffff00 50%, ${Utils.getItemNameColor(content.itemProp)} 51%, ${Utils.getItemNameColor(content.itemProp)} 100%)`
             }}></div>

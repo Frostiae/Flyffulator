@@ -91,4 +91,18 @@
         row-gap: 10px;
         column-gap: 10px;
     }
+
+    .housing-npcs-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+            margin-bottom: 0rem;
+        }
+
+        button {
+            margin-left: 2rem;
+        }
+    }
 }
