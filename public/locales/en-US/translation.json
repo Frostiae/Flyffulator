@@ -50,5 +50,6 @@
     "search_couple_housing_npc": "Personal Housing NPC",
     "search_guild_housing_npc": "Guild Housing NPC",
     "enable_swordcross": "Swordcross enabled",
-    "enable_waterbomb": "Waterbomb enabled"
+    "enable_waterbomb": "Waterbomb enabled",
+    "enable_lifesteal": "Lifesteal enabled"
 }

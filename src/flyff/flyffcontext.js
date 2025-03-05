@@ -27,6 +27,11 @@ export default class Context
     static attackFlags = Utils.ATTACK_FLAGS.GENERIC;
 
     /**
+     * Properties and generic information set about the previous attack, such as lifesteal amount.
+     */
+    static afterDamageProps = {};
+
+    /**
      * The current skill property being used to attack, or null if it's an auto attack.
      */
     static skill = null;
@@ -36,7 +41,8 @@ export default class Context
      */
     static settings = {
         swordcrossEnabled: true,
-        waterbombEnabled: true
+        waterbombEnabled: true,
+        lifestealEnabled: true
     };
 
     static isPVP() {

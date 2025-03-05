@@ -95,6 +95,24 @@ function App() {
   }
 
   if (loadedBuild == null) {
+    // Invalidate old flyffulator builds
+    const toRemove = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key.startsWith("i18next")) {
+        continue;
+      }
+
+      const build = localStorage.getItem(key);
+      if (build.includes("\"appliedStats\":")) {
+        toRemove.push(key);
+      }
+    }
+
+    for (const key of toRemove) {
+      localStorage.removeItem(key);
+    }
+
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);
       if (key.startsWith("i18next")) {

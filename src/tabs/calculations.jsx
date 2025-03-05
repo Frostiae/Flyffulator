@@ -57,7 +57,7 @@ function Calculations() {
                 miss: (Context.attackFlags & Utils.ATTACK_FLAGS.MISS) != 0,
                 parry: (Context.attackFlags & Utils.ATTACK_FLAGS.PARRY) != 0,
                 double: (Context.attackFlags & Utils.ATTACK_FLAGS.DOUBLE) != 0,
-                trigger: (Context.attackFlags & Utils.ATTACK_FLAGS.TRIGGEREDSKILL) != 0
+                afterDamageProps: Context.afterDamageProps
             }
 
             out.push(res);
@@ -75,7 +75,7 @@ function Calculations() {
 
         // TODO: This isn't too accurate for blades, the pattern is a bit different
         let leftHand = false;
-        
+
         for (let i = 0; i < 200; i++) {
             Context.skill = null;
 
@@ -97,7 +97,7 @@ function Calculations() {
                 miss: (Context.attackFlags & Utils.ATTACK_FLAGS.MISS) != 0,
                 parry: (Context.attackFlags & Utils.ATTACK_FLAGS.PARRY) != 0,
                 double: (Context.attackFlags & Utils.ATTACK_FLAGS.DOUBLE) != 0,
-                trigger: (Context.attackFlags & Utils.ATTACK_FLAGS.TRIGGEREDSKILL) != 0
+                afterDamageProps: Context.afterDamageProps
             }
 
             out.push(res);
@@ -133,6 +133,11 @@ function Calculations() {
             Context.player.skillLevels[11389] = 1;
         }
 
+        // Counter attack
+        if (Context.player.skillLevels[2506] != undefined) {
+            Context.player.skillLevels[6725] = Context.player.skillLevels[2506];
+        }
+
         for (const [skill, level] of Object.entries(Context.player.skillLevels)) {
             if (level <= 0) {
                 continue; // Shouldn't happen
@@ -161,7 +166,7 @@ function Calculations() {
                     miss: (Context.attackFlags & Utils.ATTACK_FLAGS.MISS) != 0,
                     parry: (Context.attackFlags & Utils.ATTACK_FLAGS.PARRY) != 0,
                     double: (Context.attackFlags & Utils.ATTACK_FLAGS.DOUBLE) != 0,
-                    trigger: (Context.attackFlags & Utils.ATTACK_FLAGS.TRIGGEREDSKILL) != 0
+                    afterDamageProps: Context.afterDamageProps
                 }
 
                 out.push(res);
@@ -470,6 +475,14 @@ function Calculations() {
                             <label htmlFor="waterbomb">{t("enable_waterbomb")}</label>
                         </div>
                     }
+
+                    {
+                        Context.attacker.getStat("skillchance", true, 7513) > 0 &&
+                        <div>
+                            <input type="checkbox" id="lifesteal" checked={Context.settings.lifestealEnabled} onChange={() => setSetting("lifestealEnabled", !Context.settings.lifestealEnabled)} />
+                            <label htmlFor="lifesteal">{t("enable_lifesteal")}</label>
+                        </div>
+                    }
                 </div>
 
                 <div className="category-header">
@@ -498,6 +511,7 @@ function Calculations() {
                                 key={skill}
                                 label={"Damage"}
                                 sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffdamagecalculator.js#L50"}
+                                skillId={skill}
                             />
                         )
                     }

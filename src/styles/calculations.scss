@@ -108,6 +108,11 @@
     justify-content: space-between;
     gap: 5px;
 
+    img.chart-icon {
+      width: 24px;
+      height: 24px;
+    }
+
     span {
       flex-grow: 1;
     }

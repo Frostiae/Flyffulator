@@ -71,6 +71,19 @@ function Search() {
                         }
                     }
 
+                    // Powerups are messy, just do their conditions here
+                    if (searchProperties.powerup) {
+                        let powerupFound = false;
+                        if ((item.abilities != undefined && item.duration != undefined) ||
+                            item.category == "buff" || item.category == "scroll") {
+                            powerupFound = true;
+                        }
+
+                        if (!powerupFound) {
+                            continue;
+                        }
+                    }
+
                     // Check if the item supports that locale
                     var selectedLanguageItemName = item.name[shortCode] ?? item.name.en;
                     if (selectedLanguageItemName.toLowerCase().includes(query)) {
