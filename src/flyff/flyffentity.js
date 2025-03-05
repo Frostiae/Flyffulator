@@ -969,7 +969,7 @@ export default class Entity {
                 valid = false;
             }
             
-            if (stat == "skillchance" && (ability.skill == undefined || ability.skill != skillChanceId)) {
+            if (stat == "skillchance" && (petData.skill == undefined || petData.skill != skillChanceId)) {
                 valid = false;
             }
             
