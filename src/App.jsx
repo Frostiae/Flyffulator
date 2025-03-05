@@ -56,13 +56,24 @@ function App() {
   }
 
   async function share() {
-    const json = Context.player.serialize();
+    const buildName = prompt(t("enter_build_name"));
+    
+    if (buildName === null || buildName.length === 0) {
+      return;
+    }
+
+    const json = Context.player.serialize(buildName);
     await navigator.clipboard.writeText(json);
+    alert("The build's JSON was copied to your clipboard.");
   }
 
   function importCharacter(json) {
+    const deserialized = Context.player.unserialize(json);
     setIsImporting(false);
-    Context.player.unserialize(json);
+    const buildName = deserialized.buildName ?? 'Imported';
+    const key = `${buildName}_${Utils.getGuid()}`;
+    localStorage.setItem(key, Context.player.serialize());
+    loadBuild(key);
   }
 
   const buildOptions = {};
@@ -185,8 +196,8 @@ function App() {
             <div id="build-share">
               <button className='flyff-button' onClick={save}>{t("build_share_save")}</button>
               <div>
-                <button className='flyff-button' onClick={share} disabled>{t("build_share_share")}</button>
-                <button className='flyff-button' onClick={() => setIsImporting(true)} disabled>{t("build_share_import")}</button>
+                <button className='flyff-button' onClick={share}>{t("build_share_share")}</button>
+                <button className='flyff-button' onClick={() => setIsImporting(true)}>{t("build_share_import")}</button>
               </div>
             </div>
           </div>
@@ -217,7 +228,7 @@ function App() {
             <Calculations />
           }
 
-          <ImportCharacter open={isImporting} onImport={importCharacter} />
+          <ImportCharacter open={isImporting} onImport={importCharacter} close={() => setIsImporting(false)} />
 
           <Search />
           <Tooltip />

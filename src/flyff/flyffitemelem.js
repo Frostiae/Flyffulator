@@ -41,6 +41,62 @@ export default class ItemElem {
         }
     }
 
+    toJSON() {
+        const { itemProp, piercings, ultimateJewels, ...rest } = this;
+        const shrinked = {
+            ...rest,
+            // Add ID so itemProp can be restored later
+            id: itemProp.id,
+            // Serialize only IDs for piercing cards and ultimate jewels because everything else is unnecessary
+            piercings: piercings.map(itemElem => itemElem.itemProp.id),
+            ultimateJewels: ultimateJewels.map(itemElem => itemElem.itemProp.id),
+        };
+
+        // Strip even further by removing properties with default values and thus reducing the JSON size substantially.
+        // When ItemElem gets deserialized the default properties are restored.
+        if (shrinked.element === 'none') {
+            delete shrinked.element;
+        }
+
+        if (shrinked.upgradeLevel === 0) {
+            delete shrinked.upgradeLevel;
+        }
+
+        if (shrinked.elementUpgradeLevel === 0) {
+            delete shrinked.elementUpgradeLevel;
+        }
+
+        if (shrinked.piercings.length === 0) {
+            delete shrinked.piercings;
+        }
+
+        if (shrinked.ultimateJewels.length === 0) {
+            delete shrinked.ultimateJewels;
+        }
+
+        if (shrinked.statRanges.length === 0) {
+            delete shrinked.statRanges;
+        }
+
+        if (shrinked.randomStats.length === 2 && shrinked.randomStats[0] === null && shrinked.randomStats[1] === null) {
+            delete shrinked.randomStats;
+        }
+
+        if (shrinked.originAwake === null) {
+            delete shrinked.originAwake;
+        }
+
+        if (shrinked.skillAwake === null) {
+            delete shrinked.skillAwake;
+        }
+
+        if (this.itemProp.category !== 'raisedpet') {
+            delete shrinked.petStats;
+        }
+
+        return shrinked;
+    }
+
     /**
      * @returns Whether or not this item can take an origin awake (of STR, etc).
      */
