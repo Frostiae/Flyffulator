@@ -1,7 +1,19 @@
 import { Line } from "react-chartjs-2";
-import HoverInfo from "./hoverinfo";
+import { useTranslation } from "react-i18next";
 
-function LineChart({ chartData, title, info, label, sourceLink }) {
+import HoverInfo from "./hoverinfo";
+import * as Utils from "../flyff/flyffutils";
+
+function LineChart({ chartData, title, info, label, sourceLink, skillId = 0 }) {
+    const { i18n } = useTranslation();
+
+    var shortCode = "en";
+    if (i18n.resolvedLanguage) {
+        shortCode = i18n.resolvedLanguage.split('-')[0];
+    }
+
+    const skillProp = skillId > 0 ? Utils.getSkillById(skillId) : null;
+
     const data = {
         labels: chartData.map((_, i) => `Attack #${i + 1}`),
         datasets: [
@@ -51,6 +63,10 @@ function LineChart({ chartData, title, info, label, sourceLink }) {
     return (
         <div className="chart-container">
             <div className="chart-title">
+                {
+                    skillProp != null &&
+                    <img className="chart-icon" src={`https://api.flyff.com/image/skill/colored/${skillProp.icon}`} alt={skillProp.name.en} />
+                }
                 <span>{title}</span>
                 <HoverInfo text={info} />
                 <HoverInfo text="View calculation code 🔗" icon="code-icon.svg" link={sourceLink} />
@@ -96,7 +112,7 @@ function LineChart({ chartData, title, info, label, sourceLink }) {
                                     if (data.block) {
                                         out += "(Blocked)\n";
                                     }
-                                    
+
                                     if (data.critical) {
                                         out += "(Critical)\n";
                                     }
@@ -113,8 +129,17 @@ function LineChart({ chartData, title, info, label, sourceLink }) {
                                         out += "(Double)\n"
                                     }
 
-                                    if (data.trigger) {
-                                        out += "(Triggered skill)\n";
+                                    if (data.afterDamageProps) {
+                                        if (data.afterDamageProps.lifesteal) {
+                                            out += `(${data.afterDamageProps.lifesteal} lifesteal)\n`;
+                                        }
+
+                                        if (data.afterDamageProps.triggeredSkill) {
+                                            const skillProp = Utils.getSkillById(data.afterDamageProps.triggeredSkill);
+                                            if (skillProp) {
+                                                out += `(Triggered ${skillProp.name[shortCode] ?? skillProp.name.en})\n`;
+                                            }
+                                        }
                                     }
 
                                     return out.slice(0, -1);

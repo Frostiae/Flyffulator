@@ -7,6 +7,9 @@
 		"gauntletDefense": 2,
 		"bootsDefense": 2,
 		"shieldDefense": 2,
+		"elementAttack": 2,
+		"elementAttackStrong": 5,
+		"elementDefense": 2,
 		"setAbilities": []
 	},
 	{
@@ -17,6 +20,9 @@
 		"gauntletDefense": 4,
 		"bootsDefense": 4,
 		"shieldDefense": 4,
+		"elementAttack": 2.21,
+		"elementAttackStrong": 5.22,
+		"elementDefense": 2.21,
 		"setAbilities": []
 	},
 	{
@@ -27,6 +33,9 @@
 		"gauntletDefense": 6,
 		"bootsDefense": 6,
 		"shieldDefense": 6,
+		"elementAttack": 2.56,
+		"elementAttackStrong": 5.6,
+		"elementDefense": 2.56,
 		"setAbilities": [
 			{ "parameter": "hitrate", "add": 5, "rate": true },
 			{ "parameter": "block", "add": 3, "rate": true },
@@ -41,6 +50,9 @@
 		"gauntletDefense": 8,
 		"bootsDefense": 8,
 		"shieldDefense": 8,
+		"elementAttack": 3.05,
+		"elementAttackStrong": 6.12,
+		"elementDefense": 3.05,
 		"setAbilities": [
 			{ "parameter": "hitrate", "add": 10, "rate": true },
 			{ "parameter": "block", "add": 3, "rate": true },
@@ -55,6 +67,9 @@
 		"gauntletDefense": 10,
 		"bootsDefense": 10,
 		"shieldDefense": 10,
+		"elementAttack": 3.68,
+		"elementAttackStrong": 6.8,
+		"elementDefense": 3.68,
 		"setAbilities": [
 			{ "parameter": "hitrate", "add": 15, "rate": true },
 			{ "parameter": "block", "add": 3, "rate": true },
@@ -70,6 +85,9 @@
 		"gauntletDefense": 12,
 		"bootsDefense": 12,
 		"shieldDefense": 12,
+		"elementAttack": 4.46,
+		"elementAttackStrong": 7.63,
+		"elementDefense": 4.46,
 		"setAbilities": [
 			{ "parameter": "hitrate", "add": 20, "rate": true },
 			{ "parameter": "block", "add": 6, "rate": true },
@@ -86,6 +104,9 @@
 		"gauntletDefense": 14,
 		"bootsDefense": 14,
 		"shieldDefense": 14,
+		"elementAttack": 5.37,
+		"elementAttackStrong": 8.6,
+		"elementDefense": 5.37,
 		"setAbilities": [
 			{ "parameter": "hitrate", "add": 25, "rate": true },
 			{ "parameter": "block", "add": 6, "rate": true },
@@ -102,6 +123,9 @@
 		"gauntletDefense": 16,
 		"bootsDefense": 16,
 		"shieldDefense": 16,
+		"elementAttack": 6.42,
+		"elementAttackStrong": 9.73,
+		"elementDefense": 6.42,
 		"setAbilities": [
 			{ "parameter": "hitrate", "add": 30, "rate": true },
 			{ "parameter": "block", "add": 10, "rate": true },
@@ -118,6 +142,9 @@
 		"gauntletDefense": 18,
 		"bootsDefense": 18,
 		"shieldDefense": 18,
+		"elementAttack": 7.61,
+		"elementAttackStrong": 11.01,
+		"elementDefense": 7.61,
 		"setAbilities": [
 			{ "parameter": "hitrate", "add": 35, "rate": true },
 			{ "parameter": "block", "add": 10, "rate": true },
@@ -134,6 +161,9 @@
 		"gauntletDefense": 20,
 		"bootsDefense": 20,
 		"shieldDefense": 20,
+		"elementAttack": 8.95,
+		"elementAttackStrong": 12.44,
+		"elementDefense": 8.95,
 		"setAbilities": [
 			{ "parameter": "hitrate", "add": 45, "rate": true },
 			{ "parameter": "block", "add": 15, "rate": true },
