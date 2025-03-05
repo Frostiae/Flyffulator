@@ -31,6 +31,9 @@ export default class Entity {
     };
     skillLevels = {};
     activeBuffs = {};
+    activePersonalHousingNpcs = [];
+    activeCoupleHousingNpcs = [];
+    activeGuildHousingNpcs = [];
     activeItems = [];
     equipSets = []; // Current armor sets equipped. Cached because the lookup is really slow.
     level = 1;
@@ -972,6 +975,48 @@ export default class Entity {
             
             if (valid) {
                 total += Utils.getPetStatSum(petData, this.equipment.pet.petStats)
+            }
+        }
+
+        // Personal Housing
+
+        if (this.activePersonalHousingNpcs) {
+            for (const personalHouseNpc of this.activePersonalHousingNpcs) {
+                for (const ability of personalHouseNpc.abilities) {
+                    if (!targetStats.includes(ability.parameter)) {
+                        continue;
+                    }
+
+                    total += ability.add;
+                }
+            }
+        }
+
+        // Couple Housing
+
+        if (this.activeCoupleHousingNpcs) {
+            for (const coupleHouseNpc of this.activeCoupleHousingNpcs) {
+                for (const ability of coupleHouseNpc.abilities) {
+                    if (!targetStats.includes(ability.parameter)) {
+                        continue;
+                    }
+
+                    total += ability.add;
+                }
+            }
+        }
+
+        //Guild Housing
+
+        if (this.activeGuildHousingNpcs) {
+            for (const guildHouseNpc of this.activeGuildHousingNpcs) {
+                for (const ability of guildHouseNpc.abilities) {
+                    if (!targetStats.includes(ability.parameter)) {
+                        continue;
+                    }
+
+                    total += ability.add;
+                }
             }
         }
 

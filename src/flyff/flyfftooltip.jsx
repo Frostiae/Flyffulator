@@ -12,8 +12,10 @@ export function createTooltip(content, i18n) {
     if (content instanceof ItemElem) {
         return setupItem(content, i18n);
     }
-    else {
+    else if (content.passive != undefined) {
         return setupSkill(content, i18n);
+    } else {
+        return setupHousingNpc(content, i18n);
     }
 }
 
@@ -638,6 +640,31 @@ function setupSkill(skill, i18n) {
     }
 
     out.push(`\n${skill.description[shortLanguageCode] ?? skill.description.en}`);
+
+    return (<div>{out.map((v, i) => <span key={i}>{v}</span>)}</div>);
+}
+
+/**
+ * Get the tooltip text for the given housingNpc
+ * @param {object} housingNpc The housingNpc property
+ * @param {I18n} i18n Localization
+ */
+function setupHousingNpc(housingNpc, i18n) {
+    const out = [];
+    var shortLanguageCode = "en";
+    if (i18n.resolvedLanguage) {
+        shortLanguageCode = i18n.resolvedLanguage.split('-')[0];
+    }
+
+    out.push(<span style={{ color: "#2fbe6d", fontWeight: 600 }}>{housingNpc.name[shortLanguageCode] ?? housingNpc.name.en}</span>);
+    const abilityStyle = { color: "#6161ff" };
+    for (const ability of housingNpc.abilities) {
+        if (ability.rate) {
+            out.push(<span style={abilityStyle}><br />{ability.parameter}{"+"}{ability.add}{"%"}</span>);
+        } else {
+            out.push(<span style={abilityStyle}><br />{ability.parameter}{"+"}{ability.add}</span>);
+        }
+    }
 
     return (<div>{out.map((v, i) => <span key={i}>{v}</span>)}</div>);
 }

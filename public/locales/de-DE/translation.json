@@ -22,6 +22,9 @@
     "skills_and_buffs_active_buffs": "Aktive Buffs",
     "skills_and_buffs_add": "Hinzufügen",
     "skills_and_buffs_skills_points_available": "Skillpunkte verfügbar",
+    "skills_and_buffs_active_personal_house_buffs": "Privates Haus",
+    "skills_and_buffs_active_personal_couple_buffs": "Couple Haus",
+    "skills_and_buffs_active_personal_guild_buffs": "Gildenhaus",
     "tooltip_attack": "Schaden: ",
     "tooltip_defense": "Defense: ",
     "tooltip_rarity": "Seltenheit: ",
@@ -38,5 +41,12 @@
     "tooltip_one_handed": "Einhandwaffe",
     "tooltip_two_handed": "Zweihandwaffe",
     "search_placeholder": "Suche nach einem {{type}}...",
-    "search_title": "Suchen"
+    "search_title": "Suchen",
+    "search_item": "Item",
+    "search_skill": "Skill",
+    "search_personal_housing_npc": "Privates Haus NPC",
+    "search_couple_housing_npc": "Privates Haus NPC",
+    "search_guild_housing_npc": "Gildenhaus NPC",
+    "enable_swordcross": "Swordcross an",
+    "enable_waterbomb": "Waterbomb an"
 }

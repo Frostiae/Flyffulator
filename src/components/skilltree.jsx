@@ -57,6 +57,7 @@ function SkillTree() {
         showSearch({
             type: "item",
             category: ["buff", "scroll"],
+            typeLocalization: "search_item",
             onSet: (result) => {
                 Context.player.activeItems.push(result);
             }
@@ -66,8 +67,45 @@ function SkillTree() {
     function addBuffSkill() {
         showSearch({
             type: "skill",
+            typeLocalization: "search_skill",
             onSet: (result) => {
                 Context.player.activeBuffs[parseInt(result.id)] = result.levels.length;
+            }
+        });
+    }
+
+    function addPersonalHousingNpc() {
+        showSearch({
+            type: "personalOrCoupleHousingNpc",
+            typeLocalization: "search_personal_housing_npc",
+            onSet: (result) => {
+                if (!Context.player.activePersonalHousingNpcs.includes(result)) {
+                    Context.player.activePersonalHousingNpcs.push(result);
+                }
+            }
+        });
+    }
+
+    function addCoupleHousingNpc() {
+        showSearch({
+            type: "personalOrCoupleHousingNpc",
+            typeLocalization: "search_couple_housing_npc",
+            onSet: (result) => {
+                if (!Context.player.activeCoupleHousingNpcs.includes(result)) {
+                    Context.player.activeCoupleHousingNpcs.push(result);
+                }
+            }
+        });
+    }
+
+    function addGuildHousingNpc() {
+        showSearch({
+            type: "guildHousingNpc",
+            typeLocalization: "search_guild_housing_npc",
+            onSet: (result) => {
+                if (!Context.player.activeGuildHousingNpcs.includes(result)) {
+                    Context.player.activeGuildHousingNpcs.push(result);
+                }
             }
         });
     }
@@ -101,6 +139,21 @@ function SkillTree() {
 
     function removeSkill(skill) {
         delete Context.player.activeBuffs[skill.id];
+        setRefresh(!refresh);
+    }
+
+    function removePersonalHousingNpc(housingNpc) {
+        Context.player.activePersonalHousingNpcs = Context.player.activePersonalHousingNpcs.filter((i) => i != housingNpc);
+        setRefresh(!refresh);
+    }
+
+    function removeCoupleHousingNpc(housingNpc) {
+        Context.player.activeCoupleHousingNpcs = Context.player.activeCoupleHousingNpcs.filter((i) => i != housingNpc);
+        setRefresh(!refresh);
+    }
+
+    function removeGuildHousingNpc(housingNpc) {
+        Context.player.activeGuildHousingNpcs = Context.player.activeGuildHousingNpcs.filter((i) => i != housingNpc);
         setRefresh(!refresh);
     }
 
@@ -175,6 +228,51 @@ function SkillTree() {
                             <Slot key={id} className={"slot-skill"} content={Utils.getSkillById(id)} onRemove={removeSkill} />
                         )
                     }
+                </div>
+
+                <div className="column">
+                    <div>
+                        <div className="housing-npcs-header">
+                            <h3>{t("skills_and_buffs_active_personal_house_buffs")}</h3>
+                            <button className="flyff-button" onClick={() => addPersonalHousingNpc()}>{t("skills_and_buffs_add")}</button>
+                        </div>
+                        <hr />
+                        <div className="buffs-container">
+                            {
+                                Context.player.activePersonalHousingNpcs.map(personalNpc =>
+                                    <Slot key={personalNpc.id} className={"slot-skill"} content={personalNpc} onRemove={removePersonalHousingNpc} />
+                                )
+                            }
+                        </div>
+                    </div>
+                    <div>
+                        <div className="housing-npcs-header">
+                            <h3>{t("skills_and_buffs_active_personal_couple_buffs")}</h3>
+                            <button className="flyff-button" onClick={() => addCoupleHousingNpc()}>{t("skills_and_buffs_add")}</button>
+                        </div>
+                        <hr />
+                        <div className="buffs-container">
+                            {
+                                Context.player.activeCoupleHousingNpcs.map(coupleNpc =>
+                                    <Slot key={coupleNpc.id} className={"slot-skill"} content={coupleNpc} onRemove={removeCoupleHousingNpc} />
+                                )
+                            }
+                        </div>
+                    </div>
+                    <div>
+                        <div className="housing-npcs-header">
+                            <h3>{t("skills_and_buffs_active_personal_guild_buffs")}</h3>
+                            <button className="flyff-button" onClick={() => addGuildHousingNpc()}>{t("skills_and_buffs_add")}</button>
+                        </div>
+                        <hr />
+                        <div className="buffs-container">
+                            {
+                                Context.player.activeGuildHousingNpcs.map(guildNpc =>
+                                    <Slot key={guildNpc.id} className={"slot-skill"} content={guildNpc} onRemove={removeGuildHousingNpc} />
+                                )
+                            }
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
