@@ -827,10 +827,31 @@ function getBaseSkillPower() {
 }
 
 function getMagicSkillPower() {
+    if (!Context.isSkillAttack() || Context.skill == null) {
+        return 1;
+    }
+
     let attack = getBaseSkillPower();
     attack += attack * Context.attacker.getStat("magicattack", true) / 100.0;
 
-    // TODO: There is a spellType property here for element masteries
+    // Elements
+    let bonus = 0;
+    switch (Context.skill.elementType) {
+        case "fire": bonus = Context.attacker.getStat("firemastery", true); break;
+        case "fireearth": bonus = Context.attacker.getStat("firemastery", true) + Context.attacker.getStat("earthmastery", true); break;
+        case "water": bonus = Context.attacker.getStat("watermastery", true); break;
+        case "electricity": bonus = Context.attacker.getStat("electricitymastery", true); break;
+        case "electricitywind": bonus = Context.attacker.getStat("electricitymastery", true) + Context.attacker.getStat("windmastery", true); break;
+        case "wind": bonus = Context.attacker.getStat("windmastery", true); break;
+        case "earth": bonus = Context.attacker.getStat("earthmastery", true); break;
+        case "earthwind": bonus = Context.attacker.getStat("earthmastery", true) + Context.attacker.getStat("windmastery", true); break;
+        case "earthwater": bonus = Context.attacker.getStat("earthmastery", true) + Context.attacker.getStat("watermastery", true); break;
+        default: break;
+    }
+
+    if (bonus != 0) {
+        return Math.floor(attack * (1 + bonus / 100));
+    }
 
     return Math.floor(attack);
 }

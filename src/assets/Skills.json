@@ -51,6 +51,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -163,6 +164,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -265,6 +267,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -357,6 +360,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -424,6 +428,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -546,6 +551,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -708,6 +714,7 @@
 		"level": 1,
 		"element": "fire",
 		"magic": true,
+		"elementType": "fire",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -800,6 +807,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"weapon": "stick",
 		"combo": "general",
@@ -846,6 +854,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -891,6 +900,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -936,6 +946,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -981,6 +992,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -1026,6 +1038,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -1071,6 +1084,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -1116,6 +1130,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -1184,6 +1199,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -1251,6 +1267,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -1316,6 +1333,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -1382,6 +1400,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -1447,6 +1466,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -1512,6 +1532,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -1578,6 +1599,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -1643,6 +1665,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -1708,6 +1731,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -1773,6 +1797,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -1839,6 +1864,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -1904,6 +1930,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -1969,6 +1996,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -2034,6 +2062,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -2099,6 +2128,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -2164,6 +2194,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -2229,6 +2260,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -2294,6 +2326,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -2359,6 +2392,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -2424,6 +2458,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -2489,6 +2524,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -2575,6 +2611,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -2652,6 +2689,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -2717,6 +2755,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -2839,6 +2878,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -2964,6 +3004,7 @@
 			{ "parameter": "removedebuff", "add": 1, "rate": false }
 		],
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -3032,6 +3073,7 @@
 			{ "parameter": "removedebuff", "set": 0, "rate": false }
 		],
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -3097,6 +3139,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -3158,6 +3201,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -3219,6 +3263,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -3280,6 +3325,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -3341,6 +3387,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -3402,6 +3449,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -3463,6 +3511,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -3524,6 +3573,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -3585,6 +3635,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -3650,6 +3701,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -3721,6 +3773,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -3813,6 +3866,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -3879,6 +3933,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -3944,6 +3999,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -4026,6 +4082,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -4092,6 +4149,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -4158,6 +4216,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -4264,6 +4323,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -4346,6 +4406,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -4411,6 +4472,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -4477,6 +4539,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -4543,6 +4606,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -4606,6 +4670,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -4669,6 +4734,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -4747,6 +4813,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 0 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"weapon": "bow",
 		"consumedItem": "arrow",
@@ -4815,6 +4882,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -4882,6 +4950,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -4959,6 +5028,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -5036,6 +5106,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -5116,6 +5187,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -5185,6 +5257,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -5267,6 +5340,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -5349,6 +5423,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -5467,6 +5542,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -5566,6 +5642,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -5658,6 +5735,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -5740,6 +5818,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -5806,6 +5885,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -5871,6 +5951,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -5937,6 +6018,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -6002,6 +6084,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -6068,6 +6151,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -6134,6 +6218,7 @@
 		"element": "none",
 		"flyBackProbability": 100,
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -6199,6 +6284,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "circle",
 		"debuff": true,
@@ -6267,6 +6353,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "",
 		"debuff": true,
@@ -6333,6 +6420,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -6400,6 +6488,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -6465,6 +6554,7 @@
 		"level": 1,
 		"element": "fire",
 		"magic": true,
+		"elementType": "fire",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -6533,6 +6623,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -6601,6 +6692,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -6669,6 +6761,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -6746,6 +6839,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -6824,6 +6918,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -6905,6 +7000,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -6974,6 +7070,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -7051,6 +7148,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -7128,6 +7226,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -7205,6 +7304,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -7283,6 +7383,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -7375,6 +7476,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -7446,6 +7548,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -7511,6 +7614,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -7577,6 +7681,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -7654,6 +7759,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "",
 		"debuff": true,
@@ -7737,6 +7843,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -7807,6 +7914,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -7875,6 +7983,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -7940,6 +8049,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "",
 		"debuff": true,
@@ -8023,6 +8133,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -8089,6 +8200,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -8156,6 +8268,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -8224,6 +8337,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -8289,6 +8403,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -8372,6 +8487,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -8455,6 +8571,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -8545,6 +8662,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -8628,6 +8746,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -8711,6 +8830,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -8794,6 +8914,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -8877,6 +8998,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -8960,6 +9082,7 @@
 		"level": 1,
 		"element": "none",
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -9045,6 +9168,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 0 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "step",
 		"debuff": true,
@@ -9140,6 +9264,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 0 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 9660, "level": 3 }
 		],
@@ -9237,6 +9362,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 0 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 8102, "level": 3 }
 		],
@@ -9334,6 +9460,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 79 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"weapon": "bow",
 		"consumedItem": "arrow",
@@ -9461,6 +9588,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 27 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"weapon": "yoyo",
 		"combo": "general",
@@ -9647,6 +9775,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 1 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"weapon": "yoyo",
 		"combo": "general",
@@ -9733,6 +9862,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 0 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"weapon": "stick",
 		"combo": "general",
@@ -9939,6 +10069,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 26 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"weapon": "stick",
 		"combo": "general",
@@ -10105,6 +10236,7 @@
 		"element": "none",
 		"treePosition": { "x": 46, "y": 78 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 5653, "level": 3 }
 		],
@@ -10233,6 +10365,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 0 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"weapon": "wandorstaff",
 		"combo": "general",
@@ -10359,6 +10492,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 13 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "step",
 		"debuff": true,
@@ -10484,6 +10618,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 0 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 1986, "level": 4 }
 		],
@@ -10609,6 +10744,7 @@
 		"level": 15,
 		"element": "none",
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"weapon": "shield",
 		"combo": "general",
@@ -10677,6 +10813,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 0 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 4985, "level": 4 }
 		],
@@ -10805,6 +10942,7 @@
 		"element": "none",
 		"treePosition": { "x": 46, "y": 0 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 5653, "level": 3 }
 		],
@@ -10993,6 +11131,7 @@
 		"element": "none",
 		"treePosition": { "x": 46, "y": 52 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 5653, "level": 3 }
 		],
@@ -11181,6 +11320,7 @@
 		"element": "fire",
 		"treePosition": { "x": 50, "y": 0 },
 		"magic": true,
+		"elementType": "fire",
 		"requirements": [
 			{ "skill": 4729, "level": 3 }
 		],
@@ -11349,6 +11489,7 @@
 		"element": "electricity",
 		"treePosition": { "x": 50, "y": 78 },
 		"magic": true,
+		"elementType": "electricity",
 		"requirements": [
 			{ "skill": 4729, "level": 5 }
 		],
@@ -11517,6 +11658,7 @@
 		"element": "earth",
 		"treePosition": { "x": 50, "y": 104 },
 		"magic": true,
+		"elementType": "earth",
 		"requirements": [
 			{ "skill": 4729, "level": 2 }
 		],
@@ -11685,6 +11827,7 @@
 		"element": "none",
 		"treePosition": { "x": 92, "y": 0 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 2678, "level": 4 }
 		],
@@ -11873,6 +12016,7 @@
 		"element": "none",
 		"treePosition": { "x": 92, "y": 52 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 1129, "level": 4 }
 		],
@@ -12061,6 +12205,7 @@
 		"element": "none",
 		"treePosition": { "x": 46, "y": 26 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 5653, "level": 3 }
 		],
@@ -12249,6 +12394,7 @@
 		"element": "wind",
 		"treePosition": { "x": 50, "y": 26 },
 		"magic": true,
+		"elementType": "wind",
 		"requirements": [
 			{ "skill": 4729, "level": 5 }
 		],
@@ -12437,6 +12583,7 @@
 		"element": "water",
 		"treePosition": { "x": 50, "y": 52 },
 		"magic": true,
+		"elementType": "water",
 		"requirements": [
 			{ "skill": 4729, "level": 3 }
 		],
@@ -12625,6 +12772,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 65 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"weapon": "shield",
 		"combo": "general",
@@ -12771,6 +12919,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 78 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 5774, "level": 5 }
 		],
@@ -12899,6 +13048,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 26 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 1986, "level": 3 }
 		],
@@ -13066,6 +13216,7 @@
 		"element": "none",
 		"treePosition": { "x": 92, "y": 26 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 3964, "level": 3 }
 		],
@@ -13294,6 +13445,7 @@
 		"element": "none",
 		"treePosition": { "x": 138, "y": 0 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 8485, "level": 4 }
 		],
@@ -13462,6 +13614,7 @@
 		"element": "none",
 		"treePosition": { "x": 138, "y": 52 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 7661, "level": 4 }
 		],
@@ -13650,6 +13803,7 @@
 		"element": "none",
 		"treePosition": { "x": 92, "y": 78 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 2615, "level": 4 }
 		],
@@ -13837,6 +13991,7 @@
 		"element": "water",
 		"treePosition": { "x": 100, "y": 52 },
 		"magic": true,
+		"elementType": "water",
 		"requirements": [
 			{ "skill": 1515, "level": 5 }
 		],
@@ -13965,6 +14120,7 @@
 		"element": "electricity",
 		"treePosition": { "x": 100, "y": 78 },
 		"magic": true,
+		"elementType": "electricity",
 		"requirements": [
 			{ "skill": 2704, "level": 5 }
 		],
@@ -14093,6 +14249,7 @@
 		"element": "earth",
 		"treePosition": { "x": 100, "y": 104 },
 		"magic": true,
+		"elementType": "earth",
 		"requirements": [
 			{ "skill": 5458, "level": 5 }
 		],
@@ -14221,6 +14378,7 @@
 		"element": "fire",
 		"treePosition": { "x": 100, "y": 0 },
 		"magic": true,
+		"elementType": "fire",
 		"requirements": [
 			{ "skill": 3592, "level": 5 }
 		],
@@ -14389,6 +14547,7 @@
 		"element": "wind",
 		"treePosition": { "x": 100, "y": 26 },
 		"magic": true,
+		"elementType": "wind",
 		"requirements": [
 			{ "skill": 8946, "level": 5 }
 		],
@@ -14517,6 +14676,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 0 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 226, "level": 6 }
 		],
@@ -14684,6 +14844,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 52 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 5774, "level": 3 }
 		],
@@ -14852,6 +15013,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 26 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 571, "level": 8 }
 		],
@@ -14979,6 +15141,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 104 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 3827, "level": 4 }
 		],
@@ -15127,6 +15290,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 78 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 3827, "level": 4 }
 		],
@@ -15275,6 +15439,7 @@
 		"element": "none",
 		"treePosition": { "x": 138, "y": 78 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 3494, "level": 4 }
 		],
@@ -15423,6 +15588,7 @@
 		"element": "none",
 		"treePosition": { "x": 138, "y": 26 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 9852, "level": 4 }
 		],
@@ -15611,6 +15777,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 26 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 7414, "level": 3 }
 		],
@@ -15739,6 +15906,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 78 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 1526, "level": 5 }
 		],
@@ -15867,6 +16035,7 @@
 		"element": "none",
 		"treePosition": { "x": 184, "y": 52 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 690, "level": 4 }
 		],
@@ -16055,6 +16224,7 @@
 		"element": "wind",
 		"treePosition": { "x": 0, "y": 52 },
 		"magic": true,
+		"elementType": "wind",
 		"requirements": [
 			{ "skill": 4729, "level": 3 }
 		],
@@ -16143,6 +16313,7 @@
 		"element": "none",
 		"treePosition": { "x": 150, "y": 0 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 2418, "level": 8 }
 		],
@@ -16270,6 +16441,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 52 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 6488, "level": 10 }
 		],
@@ -16397,6 +16569,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 0 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 3456, "level": 6 }
 		],
@@ -16525,6 +16698,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 104 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 2030, "level": 5 }
 		],
@@ -16654,6 +16828,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 78 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 2030, "level": 4 }
 		],
@@ -16783,6 +16958,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 53 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 6482, "level": 4 }
 		],
@@ -16951,6 +17127,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 26 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 6482, "level": 8 }
 		],
@@ -17079,6 +17256,7 @@
 		"element": "none",
 		"treePosition": { "x": 184, "y": 26 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 3721, "level": 4 }
 		],
@@ -17267,6 +17445,7 @@
 		"element": "none",
 		"treePosition": { "x": 150, "y": 26 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 1947, "level": 10 }
 		],
@@ -17394,6 +17573,7 @@
 		"element": "none",
 		"treePosition": { "x": 150, "y": 53 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 3268, "level": 10 }
 		],
@@ -17562,6 +17742,7 @@
 		"element": "none",
 		"treePosition": { "x": 150, "y": 26 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 2554, "level": 10 }
 		],
@@ -17770,6 +17951,7 @@
 		"element": "fire",
 		"treePosition": { "x": 150, "y": 0 },
 		"magic": true,
+		"elementType": "fire",
 		"requirements": [
 			{ "skill": 5637, "level": 7 }
 		],
@@ -17938,6 +18120,7 @@
 		"element": "wind",
 		"treePosition": { "x": 150, "y": 26 },
 		"magic": true,
+		"elementType": "wind",
 		"requirements": [
 			{ "skill": 1783, "level": 7 }
 		],
@@ -18106,6 +18289,7 @@
 		"element": "water",
 		"treePosition": { "x": 150, "y": 52 },
 		"magic": true,
+		"elementType": "water",
 		"requirements": [
 			{ "skill": 2619, "level": 7 }
 		],
@@ -18274,6 +18458,7 @@
 		"element": "electricity",
 		"treePosition": { "x": 150, "y": 78 },
 		"magic": true,
+		"elementType": "electricity",
 		"requirements": [
 			{ "skill": 3754, "level": 7 }
 		],
@@ -18442,6 +18627,7 @@
 		"element": "earth",
 		"treePosition": { "x": 150, "y": 104 },
 		"magic": true,
+		"elementType": "earth",
 		"requirements": [
 			{ "skill": 6034, "level": 7 }
 		],
@@ -18610,6 +18796,7 @@
 		"element": "none",
 		"treePosition": { "x": 150, "y": 104 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 755, "level": 9 }
 		],
@@ -18738,6 +18925,7 @@
 		"element": "none",
 		"treePosition": { "x": 150, "y": 78 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 4531, "level": 9 }
 		],
@@ -18866,6 +19054,7 @@
 		"element": "none",
 		"treePosition": { "x": 150, "y": 0 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 7395, "level": 8 }
 		],
@@ -18994,6 +19183,7 @@
 		"element": "none",
 		"treePosition": { "x": 150, "y": 78 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 8916, "level": 9 }
 		],
@@ -19163,6 +19353,7 @@
 		"element": "none",
 		"treePosition": { "x": 184, "y": 0 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 964, "level": 4 }
 		],
@@ -19351,6 +19542,7 @@
 		"element": "none",
 		"treePosition": { "x": 184, "y": 78 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 7773, "level": 4 }
 		],
@@ -19479,6 +19671,7 @@
 		"element": "none",
 		"treePosition": { "x": 150, "y": 104 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 6910, "level": 5 }
 		],
@@ -19608,6 +19801,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 26 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 6451, "level": 5 }
 		],
@@ -19706,6 +19900,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 0 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"weapon": "knuckle",
 		"consumedItem": "charm",
@@ -19833,6 +20028,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 0 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 4927, "level": 3 }
 		],
@@ -19960,6 +20156,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 26 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 8973, "level": 3 }
 		],
@@ -20067,6 +20264,7 @@
 		"element": "fire",
 		"treePosition": { "x": 0, "y": 0 },
 		"magic": true,
+		"elementType": "fire",
 		"requirements": [
 			{ "skill": 3974, "level": 7 }
 		],
@@ -20165,6 +20363,7 @@
 		"element": "electricity",
 		"treePosition": { "x": 0, "y": 78 },
 		"magic": true,
+		"elementType": "electricity",
 		"requirements": [
 			{ "skill": 3177, "level": 7 }
 		],
@@ -20263,6 +20462,7 @@
 		"element": "earth",
 		"treePosition": { "x": 0, "y": 26 },
 		"magic": true,
+		"elementType": "earth",
 		"requirements": [
 			{ "skill": 997, "level": 7 }
 		],
@@ -20361,6 +20561,7 @@
 		"element": "water",
 		"treePosition": { "x": 0, "y": 104 },
 		"magic": true,
+		"elementType": "water",
 		"requirements": [
 			{ "skill": 4720, "level": 7 }
 		],
@@ -20459,6 +20660,7 @@
 		"element": "wind",
 		"treePosition": { "x": 0, "y": 52 },
 		"magic": true,
+		"elementType": "wind",
 		"requirements": [
 			{ "skill": 527, "level": 7 }
 		],
@@ -20557,6 +20759,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 0 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 146, "level": 4 }
 		],
@@ -20685,6 +20888,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 26 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"weapon": "yoyo",
 		"combo": "general",
@@ -20811,6 +21015,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 26 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 9959, "level": 3 }
 		],
@@ -20919,6 +21124,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 52 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 317, "level": 6 }
 		],
@@ -21017,6 +21223,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 0 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 4927, "level": 3 }
 		],
@@ -21134,6 +21341,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 26 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 8973, "level": 3 }
 		],
@@ -21261,6 +21469,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 78 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -21376,6 +21585,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 0 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"weapon": "wand",
 		"combo": "general",
@@ -21492,6 +21702,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 26 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 4729, "level": 10 }
 		],
@@ -21610,6 +21821,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 52 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 4729, "level": 10 }
 		],
@@ -21728,6 +21940,7 @@
 		"element": "water",
 		"treePosition": { "x": 0, "y": 0 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 1234, "level": 4 }
 		],
@@ -21868,6 +22081,7 @@
 		"triggerSkill": 1143,
 		"treePosition": { "x": 0, "y": 26 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"weapon": "bow",
 		"consumedItem": "arrow",
@@ -21975,6 +22189,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 52 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 4058, "level": 3 }
 		],
@@ -22104,6 +22319,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 26 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"weapon": "stick",
 		"combo": "general",
@@ -22173,6 +22389,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 0 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 7661, "level": 6 }
 		],
@@ -22321,6 +22538,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 52 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 6432, "level": 4 }
 		],
@@ -22420,6 +22638,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 52 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -22545,6 +22764,7 @@
 		"element": "none",
 		"treePosition": { "x": 0, "y": 52 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": false,
@@ -22650,6 +22870,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 0 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 6017, "level": 3 }
 		],
@@ -22748,6 +22969,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 26 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 1432, "level": 2 }
 		],
@@ -22887,6 +23109,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 0 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 3399, "level": 5 }
 		],
@@ -22984,6 +23207,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 26 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 9538, "level": 5 }
 		],
@@ -23111,6 +23335,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 52 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 9740, "level": 4 }
 		],
@@ -23238,6 +23463,7 @@
 		"element": "fire",
 		"treePosition": { "x": 50, "y": 0 },
 		"magic": true,
+		"elementType": "fire",
 		"requirements": [
 			{ "skill": 3956, "level": 5 }
 		],
@@ -23336,6 +23562,7 @@
 		"element": "electricity",
 		"treePosition": { "x": 50, "y": 78 },
 		"magic": true,
+		"elementType": "electricity",
 		"requirements": [
 			{ "skill": 6808, "level": 4 }
 		],
@@ -23454,6 +23681,7 @@
 		"element": "earth",
 		"treePosition": { "x": 50, "y": 26 },
 		"magic": true,
+		"elementType": "earth",
 		"requirements": [
 			{ "skill": 935, "level": 4 }
 		],
@@ -23572,6 +23800,7 @@
 		"element": "water",
 		"treePosition": { "x": 50, "y": 104 },
 		"magic": true,
+		"elementType": "water",
 		"requirements": [
 			{ "skill": 9293, "level": 5 }
 		],
@@ -23700,6 +23929,7 @@
 		"element": "wind",
 		"treePosition": { "x": 50, "y": 52 },
 		"magic": true,
+		"elementType": "wind",
 		"requirements": [
 			{ "skill": 3623, "level": 5 }
 		],
@@ -23828,6 +24058,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 0 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 8499, "level": 3 }
 		],
@@ -23956,6 +24187,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 52 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 9876, "level": 5 }
 		],
@@ -24093,6 +24325,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 0 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 2911, "level": 4 }
 		],
@@ -24210,6 +24443,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 26 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 2564, "level": 4 }
 		],
@@ -24327,6 +24561,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 78 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 3714, "level": 4 }
 		],
@@ -24444,6 +24679,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 78 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [],
 		"combo": "general",
 		"debuff": true,
@@ -24512,6 +24748,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 0 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 8191, "level": 3 }
 		],
@@ -24630,6 +24867,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 26 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 7175, "level": 6 }
 		],
@@ -24738,6 +24976,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 52 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 1579, "level": 7 }
 		],
@@ -24856,6 +25095,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 0 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 563, "level": 3 }
 		],
@@ -24974,6 +25214,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 0 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 579, "level": 3 }
 		],
@@ -25092,6 +25333,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 26 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 8183, "level": 1 }
 		],
@@ -25221,6 +25463,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 0 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 4448, "level": 5 }
 		],
@@ -25359,6 +25602,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 26 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 3228, "level": 5 }
 		],
@@ -25458,6 +25702,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 52 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 4369, "level": 7 }
 		],
@@ -25565,6 +25810,7 @@
 		"element": "fire",
 		"treePosition": { "x": 150, "y": 0 },
 		"magic": true,
+		"elementType": "fire",
 		"requirements": [
 			{ "skill": 3974, "level": 7 }
 		],
@@ -25663,6 +25909,7 @@
 		"element": "electricity",
 		"treePosition": { "x": 150, "y": 78 },
 		"magic": true,
+		"elementType": "electricity",
 		"requirements": [
 			{ "skill": 3177, "level": 7 }
 		],
@@ -25761,6 +26008,7 @@
 		"element": "earth",
 		"treePosition": { "x": 150, "y": 26 },
 		"magic": true,
+		"elementType": "earth",
 		"requirements": [
 			{ "skill": 6034, "level": 3 }
 		],
@@ -25859,6 +26107,7 @@
 		"element": "water",
 		"treePosition": { "x": 150, "y": 104 },
 		"magic": true,
+		"elementType": "water",
 		"requirements": [
 			{ "skill": 4720, "level": 7 }
 		],
@@ -25957,6 +26206,7 @@
 		"element": "wind",
 		"treePosition": { "x": 150, "y": 52 },
 		"magic": true,
+		"elementType": "wind",
 		"requirements": [
 			{ "skill": 527, "level": 7 }
 		],
@@ -26055,6 +26305,7 @@
 		"element": "fire",
 		"treePosition": { "x": 100, "y": 12 },
 		"magic": true,
+		"elementType": "fireearth",
 		"requirements": [
 			{ "skill": 6741, "level": 6 },
 			{ "skill": 8059, "level": 5 }
@@ -26154,6 +26405,7 @@
 		"element": "electricity",
 		"treePosition": { "x": 100, "y": 64 },
 		"magic": true,
+		"elementType": "electricitywind",
 		"requirements": [
 			{ "skill": 6390, "level": 6 },
 			{ "skill": 5171, "level": 5 }
@@ -26273,6 +26525,7 @@
 		"element": "earth",
 		"treePosition": { "x": 100, "y": 38 },
 		"magic": true,
+		"elementType": "earthwind",
 		"requirements": [
 			{ "skill": 6390, "level": 6 },
 			{ "skill": 8059, "level": 5 }
@@ -26392,6 +26645,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 52 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 6199, "level": 3 }
 		],
@@ -26520,6 +26774,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 52 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 5775, "level": 4 }
 		],
@@ -26637,6 +26892,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 13 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 9712, "level": 4 },
 			{ "skill": 6206, "level": 5 }
@@ -26766,6 +27022,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 26 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 6216, "level": 3 }
 		],
@@ -26865,6 +27122,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 52 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 6157, "level": 4 }
 		],
@@ -26993,6 +27251,7 @@
 		"element": "none",
 		"treePosition": { "x": 50, "y": 52 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 8275, "level": 3 }
 		],
@@ -27111,6 +27370,7 @@
 		"element": "none",
 		"treePosition": { "x": 150, "y": 12 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 8813, "level": 7 },
 			{ "skill": 447, "level": 6 }
@@ -27210,6 +27470,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 12 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 51, "level": 7 }
 		],
@@ -27317,6 +27578,7 @@
 		"element": "water",
 		"treePosition": { "x": 100, "y": 104 },
 		"magic": true,
+		"elementType": "earthwater",
 		"requirements": [
 			{ "skill": 9628, "level": 7 },
 			{ "skill": 8059, "level": 7 }
@@ -27436,6 +27698,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 52 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 4756, "level": 4 }
 		],
@@ -27534,6 +27797,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 12 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 7429, "level": 7 }
 		],
@@ -27631,6 +27895,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 52 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 8140, "level": 7 },
 			{ "skill": 6026, "level": 5 }
@@ -27730,6 +27995,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 52 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 4045, "level": 4 }
 		],
@@ -27849,6 +28115,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 12 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 39, "level": 4 },
 			{ "skill": 9047, "level": 7 }
@@ -27999,6 +28266,7 @@
 		"element": "none",
 		"treePosition": { "x": 150, "y": 52 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 3840, "level": 7 }
 		],
@@ -28098,6 +28366,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 12 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 758, "level": 4 },
 			{ "skill": 7023, "level": 7 }
@@ -28197,6 +28466,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 12 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 3564, "level": 4 },
 			{ "skill": 8094, "level": 7 }
@@ -28317,6 +28587,7 @@
 		"element": "none",
 		"treePosition": { "x": 100, "y": 52 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 7411, "level": 4 }
 		],
@@ -28395,6 +28666,7 @@
 		"element": "none",
 		"treePosition": { "x": 200, "y": 52 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 5041, "level": 6 }
 		],
@@ -28489,6 +28761,7 @@
 		"element": "none",
 		"treePosition": { "x": 150, "y": 52 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 51, "level": 7 }
 		],
@@ -28586,6 +28859,7 @@
 		"element": "none",
 		"treePosition": { "x": 200, "y": 0 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [],
 		"weapon": "staff",
 		"combo": "general",
@@ -28653,6 +28927,7 @@
 		"element": "none",
 		"treePosition": { "x": 150, "y": 12 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 5162, "level": 6 }
 		],
@@ -28741,6 +29016,7 @@
 		"element": "none",
 		"treePosition": { "x": 150, "y": 52 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 7429, "level": 4 }
 		],
@@ -28823,6 +29099,7 @@
 		"element": "none",
 		"treePosition": { "x": 150, "y": 13 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 8140, "level": 6 }
 		],
@@ -28921,6 +29198,7 @@
 		"element": "none",
 		"treePosition": { "x": 150, "y": 32 },
 		"magic": false,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 8094, "level": 4 }
 		],
@@ -29005,6 +29283,7 @@
 		"element": "none",
 		"treePosition": { "x": 150, "y": 52 },
 		"magic": true,
+		"elementType": "none",
 		"requirements": [
 			{ "skill": 1555, "level": 2 }
 		],

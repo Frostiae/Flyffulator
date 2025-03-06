@@ -170,7 +170,7 @@ export default class Entity {
         if (Object.keys(shrinked.equipment).length === 0) {
             delete shrinked.equipment;
         }
-        
+
         return shrinked;
     }
 
@@ -313,7 +313,7 @@ export default class Entity {
             return 0;
         }
 
-        let total = 
+        let total =
             Math.min(this.level, 20) * 2 - 2 + // Levels 1-20
             Math.min(Math.max(this.level - 20, 0), 20) * 3 + // Levels 21-40
             Math.min(Math.max(this.level - 40, 0), 20) * 4 + // Levels 41-60
@@ -778,6 +778,10 @@ export default class Entity {
         let stat;
         let resistance;
 
+        // TODO: The suit element has some special extra calculations
+        // same with armor with inherent resistance like clockworks sets
+        // see updateDestParamEquip
+
         switch (element) {
             case "fire":
                 stat = "firedefense";
@@ -924,6 +928,18 @@ export default class Entity {
         let targetStats = [stat];
         if (stat == "sta" || stat == "str" || stat == "dex" || stat == "int") {
             targetStats.push("allstats");
+        }
+
+        if (stat == "earthmastery" || stat == "firemastery" || stat == "watermastery" || stat == "electricitymastery" || stat == "windmastery") {
+            targetStats.push("allelementsmastery");
+        }
+
+        if (stat == "earthdefense" || stat == "firedefense" || stat == "waterdefense" || stat == "electricitydefense" || stat == "winddefense") {
+            targetStats.push("allelementsdefense");
+        }
+
+        if (stat == "speed" || stat == "attackspeed" || stat == "decreasedcastingtime") {
+            targetStats.push("allspeed");
         }
 
         if (stat == "meleeblock" || stat == "rangedblock") {
