@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { useSearch } from '../searchcontext';
 import { useTranslation } from "react-i18next";
 import { getDamage, getHealing } from '../flyff/flyffdamagecalculator';
@@ -15,6 +15,8 @@ function Calculations() {
     const { showSearch } = useSearch();
     const [targetType, setTargetType] = useState(0);
     const [refresh, setRefresh] = useState(false);
+    const [blocked, setBlocked] = useState(true);
+    const [missed, setMissed] = useState(true);
     const { t } = useTranslation();
     var shortCode = "en";
     if (t.resolvedLanguage) {
@@ -100,6 +102,10 @@ function Calculations() {
                 afterDamageProps: Context.afterDamageProps
             }
 
+            if (!blocked && res.block || !missed && res.miss) {
+                continue;
+            }
+
             out.push(res);
         }
         return out;
@@ -167,6 +173,10 @@ function Calculations() {
                     parry: (Context.attackFlags & Utils.ATTACK_FLAGS.PARRY) != 0,
                     double: (Context.attackFlags & Utils.ATTACK_FLAGS.DOUBLE) != 0,
                     afterDamageProps: Context.afterDamageProps
+                }
+
+                if (!blocked && res.block || !missed && res.miss) {
+                    continue;
                 }
 
                 out.push(res);
@@ -385,6 +395,14 @@ function Calculations() {
                         <div>
                             <input type="radio" id="target-monster" name="target-type" checked={targetType == 2} onChange={() => setTarget(2)} />
                             <label htmlFor="target-monster">{t("monster_target")}</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="blocked" name="blocked" defaultChecked={blocked} onChange={(event) => setBlocked(event.target.checked)} />
+                            <label htmlFor="blocked">{t("Blocked")}</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="missed" name="missed" defaultChecked={missed} onChange={(event) => setMissed(event.target.checked)} />
+                            <label htmlFor="missed">{t("Missed")}</label>
                         </div>
                     </div>
 
