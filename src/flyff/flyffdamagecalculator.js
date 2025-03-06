@@ -56,7 +56,7 @@ export function getDamage(leftHand) {
     Context.afterDamageProps = {};
 
     // Check for miss is the first thing
-    if (!Context.isSkillAttack() && (Context.attackFlags & Utils.ATTACK_FLAGS.MAGIC) == 0) {
+    if (Context.settings.missingEnabled && !Context.isSkillAttack() && (Context.attackFlags & Utils.ATTACK_FLAGS.MAGIC) == 0) {
         const hitResult = checkHitRate();
         if (hitResult != 0) {
             Context.attackFlags |= hitResult;
@@ -708,7 +708,7 @@ function applyAutoAttackDefense(attack) {
             // Knock down here
         }
 
-        const blockFactor = getBlockFactor();
+        const blockFactor = Context.settings.blockingEnabled ? getBlockFactor() : 1;
         if (blockFactor < 1) {
             Context.attackFlags |= Utils.ATTACK_FLAGS.BLOCKING;
             damage = Math.floor(damage * blockFactor);

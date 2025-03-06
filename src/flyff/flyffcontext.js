@@ -42,7 +42,9 @@ export default class Context
     static settings = {
         swordcrossEnabled: true,
         waterbombEnabled: true,
-        lifestealEnabled: true
+        lifestealEnabled: true,
+        missingEnabled: true,
+        blockingEnabled: true
     };
 
     static isPVP() {

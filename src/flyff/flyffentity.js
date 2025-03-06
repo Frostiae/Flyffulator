@@ -1342,7 +1342,7 @@ export default class Entity {
                 blockPenetration += attacker.getStat("pvpblockpenetration", true);
             }
 
-            blockRate = blockRate * (1 - blockPenetration / 100);
+            blockRate = Math.floor(blockRate * (1 - blockPenetration / 100));
 
             return blockRate;
         }
