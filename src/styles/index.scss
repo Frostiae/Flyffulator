@@ -175,6 +175,10 @@ input[type="radio"], input[type="checkbox"] {
   
 }
 
+input[type="radio"] {
+  border-radius: 50%;
+}
+
 img.info-icon {
   width: 16px;
   opacity: 0.6;
