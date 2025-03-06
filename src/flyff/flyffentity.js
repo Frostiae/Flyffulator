@@ -61,8 +61,128 @@ export default class Entity {
     /**
      * Serialize this player into a JSON string.
      */
-    serialize() {
-        return JSON.stringify(this);
+    serialize(buildName) {
+        return JSON.stringify({
+            ...this.toJSON(),
+            ...(buildName && { buildName }),
+        });
+    }
+
+    toJSON() {
+        const { equipSets, job, equipment, ...rest } = this;
+
+        let shrinked = {
+            ...rest,
+            equipment: { ...equipment }, // Copy this so we don't overwrite its contents when shrinking later.
+            job: job.id,
+        };
+
+        // Strip even further by removing properties with default values and thus reducing the JSON size substantially.
+        if (shrinked.monsterProp === null) {
+            delete shrinked.monsterProp;
+        }
+
+        if (shrinked.job === 9686) { // vagrant
+            delete shrinked.job;
+        }
+
+        if (Object.keys(shrinked.skillLevels).length === 0) {
+            delete shrinked.skillLevels;
+        }
+
+        if (Object.keys(shrinked.activeBuffs).length === 0) {
+            delete shrinked.activeBuffs;
+        }
+
+        if (shrinked.activePersonalHousingNpcs.length === 0) {
+            delete shrinked.activePersonalHousingNpcs;
+        }
+
+        if (shrinked.activeCoupleHousingNpcs.length === 0) {
+            delete shrinked.activeCoupleHousingNpcs;
+        }
+
+        if (shrinked.activeGuildHousingNpcs.length === 0) {
+            delete shrinked.activeGuildHousingNpcs;
+        }
+
+        if (shrinked.activeItems.length === 0) {
+            delete shrinked.activeItems;
+        }
+
+        if (shrinked.level === 1) {
+            delete shrinked.level;
+        }
+
+        if (shrinked.str === 15) {
+            delete shrinked.str;
+        }
+
+        if (shrinked.sta === 15) {
+            delete shrinked.sta;
+        }
+
+        if (shrinked.dex === 15) {
+            delete shrinked.dex;
+        }
+
+        if (shrinked.int === 15) {
+            delete shrinked.int;
+        }
+
+        if (shrinked.bufferStr === 15) {
+            delete shrinked.bufferStr;
+        }
+
+        if (shrinked.bufferSta === 15) {
+            delete shrinked.bufferSta;
+        }
+
+        if (shrinked.bufferDex === 15) {
+            delete shrinked.bufferDex;
+        }
+
+        if (shrinked.bufferInt === 15) {
+            delete shrinked.bufferInt;
+        }
+
+        for (const key of Object.keys(shrinked.equipment)) {
+            if (shrinked.equipment[key] === null || shrinked.equipment[key] === Utils.DEFAULT_WEAPON) {
+                delete shrinked.equipment[key];
+            }
+        }
+
+        if (Object.keys(shrinked.equipment).length === 0) {
+            delete shrinked.equipment;
+        }
+        
+        return shrinked;
+    }
+
+    /**
+     * Deserializes an item list, retaining backwards compatibility
+     * @param {(ItemProp | number)[]} itemList 
+     */
+    deserializeItemList(itemList) {
+        const items = [];
+
+        // In case the property was stripped away during serialization
+        if (!itemList) {
+            return items;
+        }
+
+        for (const item of itemList) {
+            if (typeof item === 'number') {
+                const itemElem = new ItemElem(Utils.getItemById(item));
+                items.push(itemElem);
+            } else {
+                let itemElem = new ItemElem(item.itemProp);
+                itemElem = Object.assign(itemElem, item);
+                items.push(itemElem);
+            }
+        }
+
+        return items;
     }
 
     /**
@@ -70,7 +190,17 @@ export default class Entity {
      * @param {string} json The JSON string representing a character.
      */
     unserialize(json) {
-        Object.assign(this, JSON.parse(json));
+        const obj = JSON.parse(json);
+
+        if (typeof obj !== 'object' || Array.isArray(obj) || !obj) {
+            throw new Error('Not an object.');
+        }
+
+        const { job, equipment, activeItems, activePersonalHousingNpcs, activeCoupleHousingNpcs, activeGuildHousingNpcs, ...rest } = obj;
+
+        // Quick hack to reset the properties of `this` to their default values
+        Object.assign(this, new Entity(this.monsterProp), rest);
+        Object.assign(this.equipment, equipment);
 
         // Need to unserialize any items to ItemElem instances
 
@@ -79,28 +209,26 @@ export default class Entity {
                 continue;
             }
 
-            const itemElem = new ItemElem(item.itemProp);
+            const itemElem = new ItemElem(item.itemProp ?? Utils.getItemById(item.id));
             this.equipment[slot] = Object.assign(itemElem, item);
-
-            for (let i = 0; i < itemElem.piercings.length; i++) {
-                const cardElem = new ItemElem(itemElem.piercings[i].itemProp);
-                itemElem.piercings[i] = cardElem;
-            }
-
-            for (let i = 0; i < itemElem.ultimateJewels.length; i++) {
-                const jewelElem = new ItemElem(itemElem.ultimateJewels[i].itemProp);
-                itemElem.ultimateJewels[i] = jewelElem;
-            }
+            itemElem.piercings = this.deserializeItemList(itemElem.piercings);
+            itemElem.ultimateJewels = this.deserializeItemList(itemElem.ultimateJewels);
         }
 
-        const tempItems = [];
-        for (let item of this.activeItems) {
-            let itemElem = new ItemElem(item.itemProp);
-            itemElem = Object.assign(itemElem, item);
-            tempItems.push(itemElem);
+        this.activeItems = this.deserializeItemList(activeItems);
+        this.activePersonalHousingNpcs = this.deserializeItemList(activePersonalHousingNpcs);
+        this.activeCoupleHousingNpcs = this.deserializeItemList(activeCoupleHousingNpcs);
+        this.activeGuildHousingNpcs = this.deserializeItemList(activeGuildHousingNpcs);
+
+        // Job
+        if (typeof job === 'object') {
+            // Backwards compatibility.
+            this.job = job;
+        } else if (typeof job === 'number') {
+            this.job = Utils.getClassById(job);
         }
 
-        this.activeItems = tempItems;
+        return obj;
     }
 
     isMonster() {
