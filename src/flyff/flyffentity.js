@@ -143,33 +143,22 @@ export default class Entity {
             return 0;
         }
 
-        // TODO: This level based stuff isn't correct past level 120
-
-        let total = 0;
-        if (this.level <= 20) {
-            total = 2 * this.level - 2;
-        }
-        else if (this.level <= 40) {
-            total = 3 * this.level - 22;
-        }
-        else if (this.level <= 60) {
-            total = 4 * this.level - 62;
-        }
-        else if (this.level <= 80) {
-            total = 5 * this.level - 122;
-        }
-        else if (this.level <= 100) {
-            total = 6 * this.level - 202;
-        }
-        else {
-            total = 7 * this.level - 302;
-        }
+        let total = 
+            Math.min(this.level, 20) * 2 - 2 + // Levels 1-20
+            Math.min(Math.max(this.level - 20, 0), 20) * 3 + // Levels 21-40
+            Math.min(Math.max(this.level - 40, 0), 20) * 4 + // Levels 41-60
+            Math.min(Math.max(this.level - 60, 0), 20) * 5 + // Levels 61-80
+            Math.min(Math.max(this.level - 80, 0), 20) * 6 + // Levels 81-100
+            Math.min(Math.max(this.level - 100, 0), 20) * 7 + // Levels 101-120
+            Math.min(Math.max(this.level - 120, 0), 20) * 8 + // Levels 121-140
+            Math.min(Math.max(this.level - 140, 0), 10) * 1 + // Levels 141-150
+            Math.min(Math.max(this.level - 150, 0), 15) * 2; // Levels 151-165
 
         // Job change quest reward
 
         switch (this.job.name.en) {
             case "Mercenary":
-                total += 40;
+                total += 60;
                 break;
             case "Acrobat":
                 total += 50;
@@ -182,7 +171,7 @@ export default class Entity {
                 break;
             case "Knight":
             case "Blade":
-                total += 120;
+                total += 140;
                 break;
             case "Ranger":
             case "Jester":
@@ -816,6 +805,13 @@ export default class Entity {
                 total += ability.value;
             }
 
+            // Item awake (for e.g. healing)
+            if (itemElem.skillAwake != undefined) {
+                if (itemElem.skillAwake.parameter === stat && rate) {
+                    total += itemElem.skillAwake.add;
+                }
+            }
+
             // Accessories
             if (itemElem.itemProp.upgradeLevels != undefined) {
                 for (const ability of itemElem.itemProp.upgradeLevels[itemElem.upgradeLevel].abilities) {
@@ -849,6 +845,17 @@ export default class Entity {
                     total += ability.add;
                 }
             }
+
+            // Ultimate jewels
+            for (const jewel of itemElem.ultimateJewels.slice(0, itemElem.upgradeLevel)) {
+                for (const ability of jewel.itemProp.abilities) {
+                    if (!targetStats.includes(ability.parameter) || ability.rate != rate) {
+                        continue;
+                    }
+
+                    total += ability.add;
+                }
+            }
         }
 
         // Armor set stuff
@@ -872,6 +879,7 @@ export default class Entity {
         for (const set of this.equipSets) {
             const equippedCount = this.getEquipSetPieceCountBySet(set);
             const bonuses = {};
+
             for (const bonus of set.bonus) {
                 if (bonus.equipped > equippedCount) {
                     continue;
@@ -885,15 +893,11 @@ export default class Entity {
                     continue;
                 }
 
-                // Use the largest bonus
                 if (bonuses[bonus.ability.parameter] == undefined) {
                     bonuses[bonus.ability.parameter] = bonus.ability.add;
                 }
-                else if (bonuses[bonus.ability.parameter] < bonus.ability.add) {
-                    bonuses[bonus.ability.parameter = bonus.ability.add];
-                }
                 else {
-                    continue;
+                    bonuses[bonus.ability.parameter] += bonus.ability.add;
                 }
 
                 total += bonus.ability.add;

@@ -385,24 +385,29 @@ function setupItem(itemElem, i18n) {
 
             const bonusStyle = { color: "#ff9d00" };
             const bonuses = {};
+
+            // Accumulate all bonuses first then emit their sum
             for (const bonus of set.bonus) {
                 if (bonus.equipped > equippedCount) {
                     continue;
                 }
 
-                // Use the largest bonus
-                if (bonuses[bonus.ability.parameter] == undefined) {
-                    bonuses[bonus.ability.parameter] = bonus.ability.add;
-                }
-                else if (bonuses[bonus.ability.parameter] < bonus.ability.add) {
-                    bonuses[bonus.ability.parameter = bonus.ability.add];
+                const bonusKey = `${bonus.ability.parameter}.${bonus.ability.rate ? 'Y' : 'N'}`;
+
+                if (bonuses[bonusKey] == undefined) {
+                    bonuses[bonusKey] = bonus.ability.add;
                 }
                 else {
-                    continue;
+                    bonuses[bonusKey] += bonus.ability.add;
                 }
+            }
 
-                out.push(<span style={bonusStyle}><br />Set Effect: {bonus.ability.parameter} +{bonus.ability.add}</span>);
-                if (bonus.ability.rate) {
+            for (const [key, bonus] of Object.entries(bonuses)) {
+                const [parameter, rateString] = key.split('.');
+                const rate = rateString === 'Y';
+
+                out.push(<span style={bonusStyle}><br />Set Effect: {parameter} +{bonus}</span>);
+                if (rate) {
                     out.push(<span style={bonusStyle}>%</span>);
                 }
             }
