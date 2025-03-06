@@ -9,7 +9,7 @@
     "percent_loaded": "% loaded",
     "training_dummy_target": "Training Dummy target",
     "monster_target": "Monster target",
-    "player_target": "Other player target (disabled)",
+    "player_target": "Other player target",
     "enter_build_name": "Enter a name for the build",
     "flyff_universe_character_simulator": "Flyff Universe Character Simulator",
     "loaded_build": "Loaded build:",
@@ -52,5 +52,7 @@
     "search_guild_housing_npc": "Guild Housing NPC",
     "enable_swordcross": "Swordcross enabled",
     "enable_waterbomb": "Waterbomb enabled",
-    "enable_lifesteal": "Lifesteal enabled"
+    "enable_lifesteal": "Lifesteal enabled",
+    "enable_missing": "Missing enabled",
+    "enable_blocking": "Blocking enabled"
 }

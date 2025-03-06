@@ -10,12 +10,15 @@ import * as Utils from "../flyff/flyffutils";
 import HoverInfo from '../components/hoverinfo';
 import LineChart from '../components/linechart';
 import BasicStat from '../components/basicstat';
+import ImportCharacter from '../components/importcharacter';
 
 function Calculations() {
     const { showSearch } = useSearch();
-    const [targetType, setTargetType] = useState(0);
+    const [targetType, setTargetType] = useState(Context.defender.isPlayer() ? 1 : (Context.defender.monsterProp.dummy ? 0 : 2));
     const [refresh, setRefresh] = useState(false);
+    const [isImporting, setIsImporting] = useState(false);
     const { t } = useTranslation();
+
     var shortCode = "en";
     if (t.resolvedLanguage) {
         shortCode = t.resolvedLanguage.split('-')[0];
@@ -27,7 +30,7 @@ function Calculations() {
             setTargetType(index);
         }
         else if (index == 1) { // Other player
-            //
+            setIsImporting(true);
         }
         else if (index == 2) { // Monster
             showSearch({
@@ -67,6 +70,13 @@ function Calculations() {
         Context.attacker = Context.player;
 
         return out;
+    }
+
+    function importCharacter(json) {
+        Context.defender = new Entity(null);
+        Context.defender.unserialize(json);
+        setIsImporting(false);
+        setTargetType(1);
     }
 
     function generateAutoAttack() {
@@ -389,77 +399,57 @@ function Calculations() {
                     </div>
 
                     {
-                        targetType == 0 && // training dummy
+                        (targetType == 0 || targetType == 2) && // training dummy or monster
                         <div id="target-information">
                             <div className="column">
                                 <b id="target-name">
                                     {Context.defender.monsterProp.name[shortCode] ?? Context.defender.monsterProp.name.en}
                                 </b>
-                                <div className="basic-stat">
-                                    <span className="basic-label">HP</span>
-                                    <span className="basic-value">∞</span>
-                                </div>
+                                <BasicStat title={"HP"} value={targetType == 0 ? "∞" : Context.defender.monsterProp.hp} />
                             </div>
                             <div className="column">
-                                <div className="basic-stat">
-                                    <span className="basic-label">STR</span>
-                                    <span className="basic-value">{Context.defender.monsterProp.str}</span>
-                                </div>
-                                <div className="basic-stat">
-                                    <span className="basic-label">STA</span>
-                                    <span className="basic-value">{Context.defender.monsterProp.sta}</span>
-                                </div>
+                                <BasicStat title={"STR"} value={Context.defender.str} />
+                                <BasicStat title={"STA"} value={Context.defender.sta} />
                             </div>
                             <div className="column">
-                                <div className="basic-stat">
-                                    <span className="basic-label">DEX</span>
-                                    <span className="basic-value">{Context.defender.monsterProp.dex}</span>
-                                </div>
-                                <div className="basic-stat">
-                                    <span className="basic-label">INT</span>
-                                    <span className="basic-value">{Context.defender.monsterProp.int}</span>
-                                </div>
+                                <BasicStat title={"DEX"} value={Context.defender.dex} />
+                                <BasicStat title={"INT"} value={Context.defender.int} />
                             </div>
                         </div>
                     }
 
                     {
-                        targetType == 2 && // Monster
+                        targetType == 1 && // Player
                         <div id="target-information">
                             <div className="column">
                                 <b id="target-name">
-                                    {Context.defender.monsterProp.name[shortCode] ?? Context.defender.monsterProp.name.en}
+                                    {Context.defender.buildName}
                                 </b>
-                                <div className="basic-stat">
-                                    <span className="basic-label">HP</span>
-                                    <span className="basic-value">{Context.defender.monsterProp.hp}</span>
-                                </div>
+                                <BasicStat title={"HP"} value={Context.defender.getHP()} />
                             </div>
                             <div className="column">
-                                <div className="basic-stat">
-                                    <span className="basic-label">STR</span>
-                                    <span className="basic-value">{Context.defender.str}</span>
-                                </div>
-                                <div className="basic-stat">
-                                    <span className="basic-label">STA</span>
-                                    <span className="basic-value">{Context.defender.sta}</span>
-                                </div>
+                                <BasicStat title={"STR"} value={Context.defender.getBaseStat("str")} />
+                                <BasicStat title={"STA"} value={Context.defender.getBaseStat("sta")} />
                             </div>
                             <div className="column">
-                                <div className="basic-stat">
-                                    <span className="basic-label">DEX</span>
-                                    <span className="basic-value">{Context.defender.dex}</span>
-                                </div>
-                                <div className="basic-stat">
-                                    <span className="basic-label">INT</span>
-                                    <span className="basic-value">{Context.defender.int}</span>
-                                </div>
+                                <BasicStat title={"DEX"} value={Context.defender.getBaseStat("dex")} />
+                                <BasicStat title={"INT"} value={Context.defender.getBaseStat("int")} />
                             </div>
                         </div>
                     }
                 </div>
 
                 <div className="grid">
+                    <div>
+                        <input type="checkbox" id="missing" checked={Context.settings.missingEnabled} onChange={() => setSetting("missingEnabled", !Context.settings.missingEnabled)} />
+                        <label htmlFor="missing">{t("enable_missing")}</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="blocking" checked={Context.settings.blockingEnabled} onChange={() => setSetting("blockingEnabled", !Context.settings.blockingEnabled)} />
+                        <label htmlFor="blocking">{t("enable_blocking")}</label>
+                    </div>
+
                     {
                         (Context.player.equipment.mainhand.itemProp.triggerSkill != undefined && Context.player.equipment.mainhand.itemProp.triggerSkill == 3124) &&
                         <div>
@@ -559,6 +549,7 @@ function Calculations() {
 
             </div>
 
+            <ImportCharacter open={isImporting} onImport={importCharacter} close={() => setIsImporting(false)} />
         </div>
     )
 }

@@ -63,8 +63,14 @@ function App() {
     }
 
     const json = Context.player.serialize(buildName);
-    await navigator.clipboard.writeText(json);
-    alert("The build's JSON was copied to your clipboard.");
+    try {
+      await navigator.clipboard.writeText(json);
+      alert("The build's JSON was copied to your clipboard.");
+    }
+    catch (e) {
+      console.error(e); // Some extensions block clipboard access randomly
+      alert("Something prevented access to your clipboard. Please try again.")
+    }
   }
 
   function importCharacter(json) {
