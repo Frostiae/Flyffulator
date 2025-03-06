@@ -208,7 +208,7 @@ function SkillTree() {
                 <div className="buffs-container">
                     {
                         Context.player.activeItems.map(item =>
-                            <Slot key={item.id} className={"slot-item"} content={item} onRemove={removeBuffItem} />
+                            <Slot key={item.itemProp.id} className={"slot-item"} content={item} onRemove={removeBuffItem} />
                         )
                     }
                 </div>
