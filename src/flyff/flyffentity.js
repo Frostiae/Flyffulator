@@ -1,6 +1,7 @@
 import Context from "./flyffcontext";
 import ItemElem from "./flyffitemelem";
 import * as Utils from "./flyffutils";
+import housingNpcs from "../assets/HousingNPCs.json";
 
 /**
  * A Flyff character or monster.
@@ -69,12 +70,26 @@ export default class Entity {
     }
 
     toJSON() {
-        const { equipSets, job, equipment, ...rest } = this;
+        const {
+            equipSets,
+            activePersonalHousingNpcs,
+            activeCoupleHousingNpcs,
+            activeGuildHousingNpcs,
+            activeItems,
+            job,
+            equipment,
+            ...rest
+        } = this;
 
         let shrinked = {
             ...rest,
             equipment: { ...equipment }, // Copy this so we don't overwrite its contents when shrinking later.
             job: job.id,
+            // Housing NPCs and active items are serialized by their IDs only
+            activePersonalHousingNpcs: activePersonalHousingNpcs.map(npc => npc.id),
+            activeCoupleHousingNpcs: activeCoupleHousingNpcs.map(npc => npc.id),
+            activeGuildHousingNpcs: activeGuildHousingNpcs.map(npc => npc.id),
+            activeItems: activeItems.map(itemElem => itemElem.itemProp.id),
         };
 
         // Strip even further by removing properties with default values and thus reducing the JSON size substantially.
@@ -186,6 +201,33 @@ export default class Entity {
     }
 
     /**
+     * Deserializes an NPC list, retaining backwards compatibility
+     * @param {(number)[]} npcList
+     */
+    deserializeNpcList(npcList) {
+        const npcs = [];
+
+        // In case the property was stripped away during serialization
+        if (!npcList) {
+            return npcs;
+        }
+
+        for (const item of npcList) {
+            if (typeof item === 'number') {
+                const npc = housingNpcs[item];
+                // Npcs dont have an icon. Assign a more or less fitting icon here (ref: src/components/search.jsx)
+                npc.icon = "asschecatsre.png"
+                npcs.push(npc);
+            } else {
+                // Serialized as a whole object - backwards compatibility
+                npcs.push(item);
+            }
+        }
+
+        return npcs;
+    }
+
+    /**
      * Unserialize this instance into a player represented by the given JSON string.
      * @param {string} json The JSON string representing a character.
      */
@@ -216,9 +258,9 @@ export default class Entity {
         }
 
         this.activeItems = this.deserializeItemList(activeItems);
-        this.activePersonalHousingNpcs = this.deserializeItemList(activePersonalHousingNpcs);
-        this.activeCoupleHousingNpcs = this.deserializeItemList(activeCoupleHousingNpcs);
-        this.activeGuildHousingNpcs = this.deserializeItemList(activeGuildHousingNpcs);
+        this.activePersonalHousingNpcs = this.deserializeNpcList(activePersonalHousingNpcs);
+        this.activeCoupleHousingNpcs = this.deserializeNpcList(activeCoupleHousingNpcs);
+        this.activeGuildHousingNpcs = this.deserializeNpcList(activeGuildHousingNpcs);
 
         // Job
         if (typeof job === 'object') {
