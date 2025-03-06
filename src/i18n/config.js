@@ -1,5 +1,5 @@
-import i18n from "i18next";   
-import HttpApi from "i18next-http-backend";                   
+import i18n from "i18next";
+import HttpApi from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
@@ -7,9 +7,11 @@ import LanguageDetector from "i18next-browser-languagedetector";
 // show the user in our locale
 // switcher.
 export const supportedLngs = {
-   "en-US": "English",
-   "de-DE": "Deutsch",
-};
+  "en-US": "English",
+  "de-DE": "Deutsch",
+  "zh-TW": "繁體中文",
+  "zh-CN": "简体中文",
+}
 
 i18n
   .use(HttpApi)
@@ -20,7 +22,7 @@ i18n
 
     // Fallback locale used when a translation is
     // missing in the active locale. Again, use your
-    // preferred locale here. 
+    // preferred locale here.
     fallbackLng: "en-US",
 
     supportedLngs: Object.keys(supportedLngs),
@@ -36,7 +38,7 @@ i18n
     // ensures that i18next escapes any code in
     // translation messages, safeguarding against
     // XSS (cross-site scripting) attacks. However,
-    // React does this escaping itself, so we turn 
+    // React does this escaping itself, so we turn
     // it off in i18next.
     interpolation: {
       escapeValue: false,
