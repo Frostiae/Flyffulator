@@ -493,16 +493,16 @@ function getElementDamageFactorAutoAttack() {
         case relations.Strong:
             level = attackLevel - (defenseLevel > 5 ? defenseLevel - 5 : 0);
             if (level > 0) {
-                factor += (Utils.getUpgradeBonus(level).elementAttackStrong * 100) ?? 0;
+                factor += (Utils.getUpgradeBonus(Math.min(level, 10)).elementAttackStrong * 100) ?? 0;
             }
             attackFactor += plusAttack;
             break;
         default:
             if (attackLevel > 0 && defenseLevel == 0) {
-                factor += (Utils.getUpgradeBonus(attackLevel).elementAttack * 100) ?? 0;
+                factor += (Utils.getUpgradeBonus(Math.min(attackLevel, 10)).elementAttack * 100) ?? 0;
             }
             else if (attackLevel == 0 && defenseLevel > 0) {
-                factor -= (Utils.getUpgradeBonus(Math.max(defenseLevel - 3, 1)).elementDefense * 100) ?? 0;
+                factor -= (Utils.getUpgradeBonus(Math.min(Math.max(defenseLevel - 3, 1), 10)).elementDefense * 100) ?? 0;
             }
             else if (attackLevel > 0 && defenseLevel > 0) {
                 level = attackLevel - defenseLevel;
@@ -512,10 +512,10 @@ function getElementDamageFactorAutoAttack() {
 
     if (level != 0) {
         if (level > 0) {
-            factor += (Utils.getUpgradeBonus(level).elementAttack * 100) ?? 0;
+            factor += (Utils.getUpgradeBonus(Math.min(level, 10)).elementAttack * 100) ?? 0;
         }
         else {
-            factor -= (Utils.getUpgradeBonus(-level).elementDefense * 100) ?? 0;
+            factor -= (Utils.getUpgradeBonus(Math.min(-level, 10)).elementDefense * 100) ?? 0;
         }
     }
 
