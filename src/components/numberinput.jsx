@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function NumberInput({ min, max, value, onChange, label, hasButtons, prefix, suffix }) {
+function NumberInput({ min, max, value, onChange, label, hasButtons, prefix, suffix, disabled = false }) {
     const [refresh, setRefresh] = useState(false);
     const [val, setVal] = useState(value);
 
@@ -38,7 +38,7 @@ function NumberInput({ min, max, value, onChange, label, hasButtons, prefix, suf
                 hasButtons &&
                 <button className="flyff-button small" onClick={() => { handleChange(val - 1, true) }}>-</button>
             }
-            <input type="text" id={label} onBlur={(e) => handleChange(e.target.value, true)} onChange={(e) => handleChange(e.target.value, false)} value={`${prefix ? prefix : ""}${val}${suffix ? suffix : ""}`} />
+            <input disabled={disabled} type="text" id={label} onBlur={(e) => handleChange(e.target.value, true)} onChange={(e) => handleChange(e.target.value, false)} value={`${prefix ? prefix : ""}${val}${suffix ? suffix : ""}`} />
             {
                 hasButtons &&
                 <button className="flyff-button small" onClick={() => { handleChange(val + 1, true) }}>+</button>

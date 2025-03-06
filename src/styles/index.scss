@@ -137,6 +137,10 @@ input[type="text"], input[type="number"] {
   &#search-field {
     padding: 15px;
   }
+
+  &:disabled {
+    filter: grayscale(1);
+  }
 }
 
 input[type="radio"], input[type="checkbox"] {
@@ -216,7 +220,6 @@ img.info-icon {
     background-color: v.$input-bg-color;
     border: 1px solid v.$input-border-color;
     border-radius: 3px;
-    top: 110%;
     left: 0;
     right: 0;
     max-height: 250px;
