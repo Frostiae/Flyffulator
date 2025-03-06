@@ -172,7 +172,14 @@ input[type="radio"], input[type="checkbox"] {
       opacity: 1;
     }
   }
-  
+
+  &:hover {
+    outline: 1px solid v.$border-color;
+  }
+}
+
+input[type="radio"] {
+  border-radius: 50%;
 }
 
 img.info-icon {
@@ -422,6 +429,7 @@ button.flyff-button {
   height: 100%;
   z-index: 2000;
   top: 0;
+  left: 0;
   backdrop-filter: blur(3px);
 
   #search-box {

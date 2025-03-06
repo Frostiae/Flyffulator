@@ -191,7 +191,7 @@ function Search() {
                         results.length > 0 &&
                         <hr />
                     }
-                    <div id="search-results">
+                    <div id="search-results" tabIndex={-1}>
                         {
                             searchProperties.type == "item" &&
                             results.map(result =>
