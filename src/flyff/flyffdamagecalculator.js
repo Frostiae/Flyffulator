@@ -241,7 +241,7 @@ function computeAttack() {
 function getAttackMultiplier() {
     let sumPower = Context.attacker.getStat("attack", true);
     if (Context.isSkillAttack()) {
-        sumPower += Context.attacker.getStat("skilldamage", true) / 10;
+        sumPower += Context.attacker.getStat("skilldamage", true);
         if (Context.skill.target == "single") {
             // 1v1 skill damage. not used at all rn
         }
