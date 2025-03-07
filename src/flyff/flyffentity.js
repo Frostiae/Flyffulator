@@ -1,6 +1,6 @@
 import Context from "./flyffcontext";
-import ItemElem from "./flyffitemelem";
 import * as Utils from "./flyffutils";
+import ItemElem from "./flyffitemelem";
 import housingNpcs from "../assets/HousingNPCs.json";
 
 /**
@@ -32,7 +32,7 @@ export default class Entity {
     };
     skillLevels = {};
     activeBuffs = {};
-    activePartyBuffs = {};
+    activePartyBuffs = [];
     activePersonalHousingNpcs = [];
     activeCoupleHousingNpcs = [];
     activeGuildHousingNpcs = [];
@@ -91,7 +91,7 @@ export default class Entity {
             activePersonalHousingNpcs: activePersonalHousingNpcs.map(npc => npc.id),
             activeCoupleHousingNpcs: activeCoupleHousingNpcs.map(npc => npc.id),
             activeGuildHousingNpcs: activeGuildHousingNpcs.map(npc => npc.id),
-            activeItems: activeItems.map(itemElem => itemElem.itemProp.id),
+            activeItems: activeItems.map(itemElem => itemElem.itemProp.id)
         };
 
         // Strip even further by removing properties with default values and thus reducing the JSON size substantially.
@@ -125,6 +125,10 @@ export default class Entity {
 
         if (shrinked.activeItems.length === 0) {
             delete shrinked.activeItems;
+        }
+
+        if (shrinked.activePartyBuffs.length === 0) {
+            delete shrinked.activePartyBuffs;
         }
 
         if (shrinked.level === 1) {
@@ -163,8 +167,12 @@ export default class Entity {
             delete shrinked.bufferInt;
         }
 
+        if (shrinked.activePartyMembers === 8) {
+            delete shrinked.activePartyMembers;
+        }
+
         for (const key of Object.keys(shrinked.equipment)) {
-            if (shrinked.equipment[key] === null || shrinked.equipment[key] === Utils.DEFAULT_WEAPON) {
+            if (shrinked.equipment[key] === null || shrinked.equipment[key].itemProp?.id === -1 || Object.keys(shrinked.equipment[key]).length === 0) {
                 delete shrinked.equipment[key];
             }
         }
@@ -271,6 +279,9 @@ export default class Entity {
         } else if (typeof job === 'number') {
             this.job = Utils.getClassById(job);
         }
+
+        // Have to update cached equipment sets otherwise none of them will be checked
+        this.updateEquipSets();
 
         return obj;
     }
@@ -1152,14 +1163,6 @@ export default class Entity {
             }
         }
 
-        // Party buffs
-        // Not sure if the calculation is correct.
-        for (const [, id] of Object.entries(this.activePartyBuffs)) {
-            if (stat == "partycriticalchance" && id == 5942) {
-                total += Utils.clamp(this.activePartyMembers, 1, 8) * 0.5
-            }
-        }
-
         // Pet
 
         if (this.equipment.pet) {
@@ -1293,10 +1296,15 @@ export default class Entity {
 
         if (this.isPlayer()) {
             chance = Math.floor(chance * this.job.critical);
-            chance += this.getStat("partycriticalchance", true) // Not sure if the calculation is correct.
         }
 
         chance += this.getStat("criticalchance", true);
+
+        // Party skill precision
+        if (this.activePartyBuffs.includes(5942)) {
+            chance += Utils.clamp(this.activePartyMembers, 1, 8) * 0.5
+        }
+
         return Math.max(chance, 0);
     }
 

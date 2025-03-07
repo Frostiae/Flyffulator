@@ -2,9 +2,9 @@ import ItemElem from "./flyffitemelem";
 import pets from "../assets/Pets.json";
 import items from "../assets/Items.json";
 import skills from "../assets/Skills.json";
-import partySkills from "../assets/PartySkills.json";
 import classes from "../assets/Classes.json";
 import equipSets from "../assets/EquipSets.json";
+import partySkills from "../assets/PartySkills.json";
 import upgradeBonus from "../assets/UpgradeBonus.json";
 
 export const JOBS = {
@@ -29,6 +29,7 @@ export const JOBS = {
 };
 
 export const DEFAULT_WEAPON = new ItemElem({
+    id: -1,
     minAttack: 1,
     maxAttack: 2,
     attackSpeedValue: 0.07,
@@ -98,11 +99,7 @@ export function getSkillById(id) {
 }
 
 export function getPartySkillById(id) {
-    for (const [, partySkill] of Object.entries(partySkills)) {
-        if (partySkill.id == id) {
-            return partySkill
-        }
-    }
+    return partySkills[id];
 }
 
 /**

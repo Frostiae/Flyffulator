@@ -136,22 +136,18 @@ function SkillTree() {
         setRefresh(!refresh);
     }
 
-    function addPartyBuffs(){
-        const partyBuffs = [
-			// 18, // Gift Box
-			1093, // Linked Attack
-			// 2475, // Blitz
-			// 2651, // Retreat
-			4686, // Global Attack
-			5942, // Precision
-			// 6464, // Lucky Drop
-			// 7632, // Resting
-			// 8037, // Call
-        ]
-
-		for (const id of partyBuffs) {
-            Context.player.activePartyBuffs[id] = Utils.getPartySkillById(id).id;
-        }
+    function addPartyBuffs() {
+        Context.player.activePartyBuffs = [
+            // 18, // Gift Box
+            1093, // Linked Attack
+            // 2475, // Blitz
+            // 2651, // Retreat
+            4686, // Global Attack
+            5942, // Precision
+            // 6464, // Lucky Drop
+            // 7632, // Resting
+            // 8037, // Call
+        ];
 
         setRefresh(!refresh);
     }
@@ -166,8 +162,8 @@ function SkillTree() {
         setRefresh(!refresh);
     }
 
-	function removePartySkill(skill) {
-        delete Context.player.activePartyBuffs[skill.id];
+    function removePartySkill(skill) {
+        Context.player.activePartyBuffs = Context.player.activePartyBuffs.filter((i) => i != skill.id);
         setRefresh(!refresh);
     }
 
@@ -237,6 +233,48 @@ function SkillTree() {
                         )
                     }
                 </div>
+                <div>
+                    <div className="buffs-header">
+                        <h3>{t("skills_and_buffs_active_personal_house_buffs")}</h3>
+                        <button className="flyff-button" onClick={() => addPersonalHousingNpc()}>{t("skills_and_buffs_add")}</button>
+                    </div>
+                    <hr />
+                    <div className="buffs-container">
+                        {
+                            Context.player.activePersonalHousingNpcs.map(personalNpc =>
+                                <Slot key={personalNpc.id} className={"slot-skill"} content={personalNpc} onRemove={removePersonalHousingNpc} />
+                            )
+                        }
+                    </div>
+                </div>
+                <div>
+                    <div className="buffs-header">
+                        <h3>{t("skills_and_buffs_active_personal_couple_buffs")}</h3>
+                        <button className="flyff-button" onClick={() => addCoupleHousingNpc()}>{t("skills_and_buffs_add")}</button>
+                    </div>
+                    <hr />
+                    <div className="buffs-container">
+                        {
+                            Context.player.activeCoupleHousingNpcs.map(coupleNpc =>
+                                <Slot key={coupleNpc.id} className={"slot-skill"} content={coupleNpc} onRemove={removeCoupleHousingNpc} />
+                            )
+                        }
+                    </div>
+                </div>
+                <div>
+                    <div className="buffs-header">
+                        <h3>{t("skills_and_buffs_active_personal_guild_buffs")}</h3>
+                        <button className="flyff-button" onClick={() => addGuildHousingNpc()}>{t("skills_and_buffs_add")}</button>
+                    </div>
+                    <hr />
+                    <div className="buffs-container">
+                        {
+                            Context.player.activeGuildHousingNpcs.map(guildNpc =>
+                                <Slot key={guildNpc.id} className={"slot-skill"} content={guildNpc} onRemove={removeGuildHousingNpc} />
+                            )
+                        }
+                    </div>
+                </div>
             </div>
             <div className="buffs">
                 <div className="buffs-header">
@@ -259,65 +297,21 @@ function SkillTree() {
                     }
                 </div>
 
-                <div className="column">
-                    <div>
-                        <div className="buffs-header">
-							<h3>{t("skills_and_buffs_active_party_buffs")}</h3>
-							<button className="flyff-button" onClick={() => addPartyBuffs()}>{t("skills_and_buffs_add_party")}</button>
-						</div>
-                        <div>
-                            <NumberInput hasButtons min={1} max={8} onChange={(v) => {Context.player.activePartyMembers = v}} value={Context.player.activePartyMembers} label={t("skills_and_buffs_active_party_members")}/>
-                        </div>
-						<hr />
-						<div className="buffs-container">
-							{
-								Object.entries(Context.player.activePartyBuffs).map(([id,]) =>
-									<Slot key={id} className={"slot-skill"} content={Utils.getPartySkillById(id)} onRemove={removePartySkill} />
-								)
-							}
-						</div>
-					</div>
-                    <div>
-                        <div className="buffs-header">
-                            <h3>{t("skills_and_buffs_active_personal_house_buffs")}</h3>
-                            <button className="flyff-button" onClick={() => addPersonalHousingNpc()}>{t("skills_and_buffs_add")}</button>
-                        </div>
-                        <hr />
-                        <div className="buffs-container">
-                            {
-                                Context.player.activePersonalHousingNpcs.map(personalNpc =>
-                                    <Slot key={personalNpc.id} className={"slot-skill"} content={personalNpc} onRemove={removePersonalHousingNpc} />
-                                )
-                            }
-                        </div>
+                <div>
+                    <div className="buffs-header">
+                        <h3>{t("skills_and_buffs_active_party_buffs")}</h3>
+                        <button className="flyff-button" onClick={() => addPartyBuffs()}>{t("skills_and_buffs_add_party")}</button>
                     </div>
                     <div>
-                        <div className="buffs-header">
-                            <h3>{t("skills_and_buffs_active_personal_couple_buffs")}</h3>
-                            <button className="flyff-button" onClick={() => addCoupleHousingNpc()}>{t("skills_and_buffs_add")}</button>
-                        </div>
-                        <hr />
-                        <div className="buffs-container">
-                            {
-                                Context.player.activeCoupleHousingNpcs.map(coupleNpc =>
-                                    <Slot key={coupleNpc.id} className={"slot-skill"} content={coupleNpc} onRemove={removeCoupleHousingNpc} />
-                                )
-                            }
-                        </div>
+                        <NumberInput hasButtons min={1} max={8} onChange={(v) => { Context.player.activePartyMembers = v }} value={Context.player.activePartyMembers} label={t("skills_and_buffs_active_party_members")} />
                     </div>
-                    <div>
-                        <div className="buffs-header">
-                            <h3>{t("skills_and_buffs_active_personal_guild_buffs")}</h3>
-                            <button className="flyff-button" onClick={() => addGuildHousingNpc()}>{t("skills_and_buffs_add")}</button>
-                        </div>
-                        <hr />
-                        <div className="buffs-container">
-                            {
-                                Context.player.activeGuildHousingNpcs.map(guildNpc =>
-                                    <Slot key={guildNpc.id} className={"slot-skill"} content={guildNpc} onRemove={removeGuildHousingNpc} />
-                                )
-                            }
-                        </div>
+                    <hr />
+                    <div className="buffs-container">
+                        {
+                            Context.player.activePartyBuffs.map((id) =>
+                                <Slot key={id} className={"slot-skill"} content={Utils.getPartySkillById(id)} onRemove={removePartySkill} />
+                            )
+                        }
                     </div>
                 </div>
             </div>
