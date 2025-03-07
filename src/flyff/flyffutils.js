@@ -1,7 +1,8 @@
 import ItemElem from "./flyffitemelem";
 import pets from "../assets/Pets.json";
 import items from "../assets/Items.json";
-import skills from "../assets/Skills.json"
+import skills from "../assets/Skills.json";
+import partySkills from "../assets/PartySkills.json";
 import classes from "../assets/Classes.json";
 import equipSets from "../assets/EquipSets.json";
 import upgradeBonus from "../assets/UpgradeBonus.json";
@@ -94,6 +95,14 @@ export function getItemById(id) {
 
 export function getSkillById(id) {
     return skills[id];
+}
+
+export function getPartySkillById(id) {
+    for (const [, partySkill] of Object.entries(partySkills)) {
+        if (partySkill.id == id) {
+            return partySkill
+        }
+    }
 }
 
 /**

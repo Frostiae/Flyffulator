@@ -32,6 +32,7 @@ export default class Entity {
     };
     skillLevels = {};
     activeBuffs = {};
+    activePartyBuffs = {};
     activePersonalHousingNpcs = [];
     activeCoupleHousingNpcs = [];
     activeGuildHousingNpcs = [];
@@ -46,6 +47,7 @@ export default class Entity {
     bufferSta = 15;
     bufferDex = 15;
     bufferInt = 15;
+    activePartyMembers = 8;
 
     constructor(monsterProp) {
         this.monsterProp = monsterProp;
@@ -1150,6 +1152,14 @@ export default class Entity {
             }
         }
 
+        // Party buffs
+        // Not sure if the calculation is correct.
+        for (const [, id] of Object.entries(this.activePartyBuffs)) {
+            if (stat == "partycriticalchance" && id == 5942) {
+                total += Utils.clamp(this.activePartyMembers, 1, 8) * 0.5
+            }
+        }
+
         // Pet
 
         if (this.equipment.pet) {
@@ -1283,6 +1293,7 @@ export default class Entity {
 
         if (this.isPlayer()) {
             chance = Math.floor(chance * this.job.critical);
+            chance += this.getStat("partycriticalchance", true) // Not sure if the calculation is correct.
         }
 
         chance += this.getStat("criticalchance", true);

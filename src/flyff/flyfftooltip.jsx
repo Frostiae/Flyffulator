@@ -14,7 +14,11 @@ export function createTooltip(content, i18n) {
     }
     else if (content.passive != undefined) {
         return setupSkill(content, i18n);
-    } else {
+    }
+    else if (content.consumedPoints != undefined) {
+        return setupPartySkill(content, i18n);
+    }
+    else {
         return setupHousingNpc(content, i18n);
     }
 }
@@ -645,6 +649,24 @@ function setupSkill(skill, i18n) {
     }
 
     out.push(`\n${skill.description[shortLanguageCode] ?? skill.description.en}`);
+
+    return (<div>{out.map((v, i) => <span key={i}>{v}</span>)}</div>);
+}
+
+/**
+ * Get the tooltip text for the given partySkill
+ * @param {object} partySkill The partySkill property
+ * @param {I18n} i18n Localization
+ */
+function setupPartySkill(partySkill, i18n) {
+    const out = []
+    var shortLanguageCode = 'en'
+    if (i18n.resolvedLanguage) {
+        shortLanguageCode = i18n.resolvedLanguage.split('-')[0]
+    }
+
+    out.push(<span style={{ color: "#2fbe6d", fontWeight: 600 }}>{partySkill.name[shortLanguageCode] ?? partySkill.name.en}</span>);
+    out.push(`\n${partySkill.description[shortLanguageCode] ?? partySkill.description.en}`)
 
     return (<div>{out.map((v, i) => <span key={i}>{v}</span>)}</div>);
 }
