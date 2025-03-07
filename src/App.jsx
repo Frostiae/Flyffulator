@@ -51,6 +51,20 @@ function App() {
     statValue = Number(statValue);
     if (Context.player[statKey] != statValue) {
       Context.player[statKey] = statValue;
+
+      // If we have negative remaining stat points, remove enough from other stats to make up for it.
+      let remainder = Context.player.getRemainingStatPoints();
+      const otherStats = ["str", "sta", "dex", "int"]
+        .filter(s => s !== statKey)
+        .sort((a, b) => Context.player[a] - Context.player[b]);
+
+      while (remainder < 0 && otherStats.length > 0) {
+        const nextStat = otherStats.pop();
+        const nextStatValue = Math.max(15, Context.player[nextStat] + remainder); // reminder: remainder is negative
+        remainder += Context.player[nextStat] - nextStatValue;
+        Context.player[nextStat] = nextStatValue;
+      }
+
       setState(!state); // Just to re-render...
     }
   }
@@ -184,18 +198,18 @@ function App() {
               </div>
               <div className="stat-block">
                 <div className="stat-row">
-                  <NumberInput min={15} max={Context.player.str + Context.player.getRemainingStatPoints()} label={"STR"} onChange={(v) => setPlayerStat("str", v)} value={Context.player.str} />
+                  <NumberInput min={15} max={15 + Context.player.level * 2 - 2} label={"STR"} onChange={(v) => setPlayerStat("str", v)} value={Context.player.str} />
                 </div>
                 <div className="stat-row">
-                  <NumberInput min={15} max={Context.player.sta + Context.player.getRemainingStatPoints()} label={"STA"} onChange={(v) => setPlayerStat("sta", v)} value={Context.player.sta} />
+                  <NumberInput min={15} max={15 + Context.player.level * 2 - 2} label={"STA"} onChange={(v) => setPlayerStat("sta", v)} value={Context.player.sta} />
                 </div>
               </div>
               <div className="stat-block">
                 <div className="stat-row">
-                  <NumberInput min={15} max={Context.player.dex + Context.player.getRemainingStatPoints()} label={"DEX"} onChange={(v) => setPlayerStat("dex", v)} value={Context.player.dex} />
+                  <NumberInput min={15} max={15 + Context.player.level * 2 - 2} label={"DEX"} onChange={(v) => setPlayerStat("dex", v)} value={Context.player.dex} />
                 </div>
                 <div className="stat-row">
-                  <NumberInput min={15} max={Context.player.int + Context.player.getRemainingStatPoints()} label={"INT"} onChange={(v) => setPlayerStat("int", v)} value={Context.player.int} />
+                  <NumberInput min={15} max={15 + Context.player.level * 2 - 2} label={"INT"} onChange={(v) => setPlayerStat("int", v)} value={Context.player.int} />
                 </div>
               </div>
             </div>
