@@ -116,6 +116,7 @@ function triggerSkills() {
     if ((Context.attackFlags & Utils.ATTACK_FLAGS.DAMAGE_OVER_TIME) == 0 && Context.attacker.isPlayer()) {
         // Damage slow rate
 
+        /* Waterbomb doesn't really do damage to the target that it was casted from, only surrounding targets
         if (Context.settings.waterbombEnabled && Context.skill?.id != 11389 && Math.random() * 100 <= Context.attacker.getStat("skillchance", true, 11389)) {
             // Waterbomb
             const oldSkill = Context.skill;
@@ -132,6 +133,7 @@ function triggerSkills() {
             Context.attackFlags = oldFlags;
             Context.afterDamageProps.triggeredSkill = 11389;
         }
+        */
     }
 
     if ((Context.attackFlags & Utils.ATTACK_FLAGS.MAGICSKILL) != 0 && Context.attacker.isPlayer()) {
