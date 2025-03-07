@@ -309,7 +309,7 @@ function applyDefense(attack) {
     }
 
     // TODO: Party link/global attack here
-    damage += computePartyLinkGlobalDamage(damage)
+    damage += computePartyLinkGlobalAttackDamage(damage)
 
     let factor = 1;
     if (Context.isSkillAttack()) {
@@ -905,7 +905,7 @@ function getWeaponAttackPower(weaponElem) {
     return power;
 }
 
-function computePartyLinkGlobalDamage(damage){
+function computePartyLinkGlobalAttackDamage(damage){
     // Not sure if the calculation is correct.
     let nAdd = 0
     if(Context.attacker.isPlayer() && Object.keys(Context.attacker.activePartyBuffs).length > 0){
@@ -917,9 +917,8 @@ function computePartyLinkGlobalDamage(damage){
             if (linkedAttackEnabled && Context.settings.partyLeaderEnabled) {
                 multiplier = 0.05 // Linked Attack with Party Leader enabled
             }
-            nAdd = damage * Context.attacker.activePartyMembers * multiplier
+            nAdd = Math.floor(damage * Context.attacker.activePartyMembers * multiplier)
         }
-        return nAdd
     }
     return nAdd
 }
