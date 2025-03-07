@@ -908,12 +908,15 @@ function getWeaponAttackPower(weaponElem) {
 function computePartyLinkGlobalAttackDamage(damage){
     // Not sure if the calculation is correct.
     let nAdd = 0
-    if(Context.attacker.isPlayer() && Object.keys(Context.attacker.activePartyBuffs).length > 0){
-        let activePartyBuffs = Object.values(Context.attacker.activePartyBuffs)
-        let linkedAttackEnabled = activePartyBuffs.includes(1093) // Linked Attack
-        let globalAttackEnabled = activePartyBuffs.includes(4686) // Global Attack
-        if (linkedAttackEnabled || globalAttackEnabled) {
-            let multiplier = 0.025 // Default multiplier
+    if(Context.attacker.isPlayer() && Context.isPVE() && damage > 0){
+        if (Object.keys(Context.attacker.activePartyBuffs).length > 0){
+            let activePartyBuffs = Object.values(Context.attacker.activePartyBuffs)
+            let linkedAttackEnabled = activePartyBuffs.includes(1093) // Linked Attack
+            let globalAttackEnabled = activePartyBuffs.includes(4686) // Global Attack
+            let multiplier = 0
+            if (globalAttackEnabled) {
+                multiplier = 0.025 // Default multiplier
+            }
             if (linkedAttackEnabled && Context.settings.partyLeaderEnabled) {
                 multiplier = 0.05 // Linked Attack with Party Leader enabled
             }
