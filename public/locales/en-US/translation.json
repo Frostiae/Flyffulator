@@ -21,8 +21,11 @@
     "calculations_tab_name": "Calculations",
     "skills_and_buffs_active_items": "Active Items",
     "skills_and_buffs_active_buffs": "Active Buffs",
+    "skills_and_buffs_active_party_buffs": "Active Party Buffs",
+    "skills_and_buffs_active_party_members": "Party Members",
     "skills_and_buffs_add": "Add",
     "skills_and_buffs_add_rm": "RM Buffs",
+    "skills_and_buffs_add_party": "Party Buffs",
     "skills_and_buffs_skills_points_available": "skill points available",
     "skills_and_buffs_active_personal_house_buffs": "Active Personal NPCs",
     "skills_and_buffs_active_personal_couple_buffs": "Active Couple NPCs",
@@ -54,5 +57,6 @@
     "enable_waterbomb": "Waterbomb enabled",
     "enable_lifesteal": "Lifesteal enabled",
     "enable_missing": "Missing enabled",
-    "enable_blocking": "Blocking enabled"
+    "enable_blocking": "Blocking enabled",
+    "enable_party_leader": "Party Leader enabled"
 }

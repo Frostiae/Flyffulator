@@ -44,7 +44,8 @@ export default class Context
         waterbombEnabled: true,
         lifestealEnabled: true,
         missingEnabled: true,
-        blockingEnabled: true
+        blockingEnabled: true,
+        partyLeaderEnabled: true,
     };
 
     static isPVP() {

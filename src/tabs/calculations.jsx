@@ -450,6 +450,11 @@ function Calculations() {
                         <label htmlFor="blocking">{t("enable_blocking")}</label>
                     </div>
 
+                    <div>
+                        <input type="checkbox" id="plartyLeader" checked={Context.settings.partyLeaderEnabled} onChange={() => setSetting("partyLeaderEnabled", !Context.settings.partyLeaderEnabled)} />
+                        <label htmlFor="plartyLeader">{t("enable_party_leader")}</label>
+                    </div>
+
                     {
                         (Context.player.equipment.mainhand.itemProp.triggerSkill != undefined && Context.player.equipment.mainhand.itemProp.triggerSkill == 3124) &&
                         <div>
