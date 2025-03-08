@@ -255,17 +255,35 @@ export function getUpgradeBonus(upgradeLevel) {
 
 export function getItemNameColor(itemProp) {
     switch (itemProp.rarity) {
-        case "uncommon":
-            return "#c46200";
-        case "rare":
-            return "#00aa00";
+        case "uncommon": return "#c46200";
+        case "rare": return "#00aa00";
         case "veryrare":
         case "unique":
             return "#d20000";
-        case "ultimate":
-            return "#7f00ff";
-        default:
-            return "#78d9ff";
+        case "ultimate": return "#7f00ff";
+        default: return "#78d9ff";
+    }
+}
+
+export function getWeakElement(element) {
+    switch (element) {
+        case "fire": return "water";
+        case "water": return "electricity";
+        case "wind": return "fire";
+        case "electricity": return "earth";
+        case "earth": return "wind";
+        default: return "fire";
+    }
+}
+
+export function getStrongElement(element) {
+    switch (element) {
+        case "fire": return "wind";
+        case "water": return "fire";
+        case "wind": return "earth";
+        case "electricity": return "water";
+        case "earth": return "electricity";
+        default: return "fire";
     }
 }
 

@@ -947,8 +947,10 @@ export default class Entity {
             targetStats.push("allelementsmastery");
         }
 
+        let isElementResistance = false;
         if (stat == "earthdefense" || stat == "firedefense" || stat == "waterdefense" || stat == "electricitydefense" || stat == "winddefense") {
             targetStats.push("allelementsdefense");
+            isElementResistance = true;
         }
 
         if (stat == "speed" || stat == "attackspeed" || stat == "decreasedcastingtime") {
@@ -1209,7 +1211,7 @@ export default class Entity {
             }
         }
 
-        //Guild Housing
+        // Guild Housing
 
         if (this.activeGuildHousingNpcs) {
             for (const guildHouseNpc of this.activeGuildHousingNpcs) {
@@ -1219,6 +1221,32 @@ export default class Entity {
                     }
 
                     total += ability.add;
+                }
+            }
+        }
+
+        // Element resistance effects from armor elements
+        if (isElementResistance && rate) {
+            const armorToCheck = [ this.equipment.suit ];
+
+            /* Can't actually element upgrade shields
+            if (this.equipment.offhand != null && this.equipment.offhand.itemProp.subcategory == "shield") {
+                armorToCheck.push(this.equipment.offhand);
+            }
+            */
+
+            for (const itemElem of armorToCheck) {
+                if (itemElem == null) {
+                    continue;
+                }
+
+                if (itemElem.element != "none" && itemElem.elementUpgradeLevel > 0) {
+                    if (targetStats.includes(Utils.getWeakElement(itemElem.element) + "defense")) {
+                        total -= itemElem.elementUpgradeLevel * 2;
+                    }
+                    else if (targetStats.includes(Utils.getStrongElement(itemElem.element) + "defense")) {
+                        total += itemElem.elementUpgradeLevel * 2;
+                    }
                 }
             }
         }
@@ -1315,8 +1343,8 @@ export default class Entity {
      */
     getBlockChance(ranged, attacker) {
         if (this.isPlayer()) {
-            // minimum of 6.25% chance to block
-            // maxmium of 93.75% chance to block
+            // minimum of 7.5% chance to block
+            // maxmium of 92.5% chance to block
 
             // Block based on dex and level
             const attackerLevel = attacker.level == -1 ? this.level : attacker.level;
@@ -1366,8 +1394,8 @@ export default class Entity {
             return blockRate;
         }
         else {
-            // maximum of 95% chance blockrate
-            // minimum of 5% chance blockrate
+            // maximum of 94% chance blockrate
+            // minimum of 6% chance blockrate
             const defenderLevel = this.level == -1 ? attacker.level : this.level;
             let blockRate = Math.floor((this.getParry() - defenderLevel) * 0.5);
             const blockPenetration = attacker.getStat("blockpenetration", true);
