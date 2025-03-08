@@ -1,8 +1,8 @@
 import { Line } from "react-chartjs-2";
 import { useTranslation } from "react-i18next";
 
-import HoverInfo from "./hoverinfo";
-import * as Utils from "../flyff/flyffutils";
+import HoverInfo from "../../shared/hoverinfo";
+import * as Utils from "../../../utils/flyffutils";
 
 function LineChart({ chartData, title, info, label, sourceLink, skillId = 0 }) {
     const { i18n } = useTranslation();

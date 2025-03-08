@@ -1,15 +1,15 @@
 import { Canvas } from '@react-three/fiber';
 import { useTranslation } from "react-i18next";
-import { useTooltip } from '../../tooltipcontext';
+import { useTooltip } from '../../../tooltipcontext';
 import { Suspense, useState, useRef } from "react";
-import { createTooltip } from '../../flyff/flyfftooltip';
+import { createTooltip } from '../../../flyff/flyfftooltip';
 
 import PetTier from "./pettier";
-import Loader from "../fallbackloader";
-import PlayerModel from "../playermodel";
-import items from "../../assets/Items.json";
-import Context from "../../flyff/flyffcontext";
-import * as Utils from "./../../flyff/flyffutils";
+import Loader from "../../shared/fallbackloader";
+import PlayerModel from "../playermodel/playermodel";
+import items from "../../../assets/Items.json";
+import Context from "../../../flyff/flyffcontext";
+import * as Utils from "../../../utils/flyffutils";
 
 function PetWindow({ raisedPetDefinition, petLevels, editable = false, onEditLevels = null }) {
     const { showTooltip, hideTooltip } = useTooltip();

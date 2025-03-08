@@ -1,5 +1,5 @@
 import Context from "./flyffcontext";
-import * as Utils from "./flyffutils";
+import * as Utils from "../utils/flyffutils";
 import ItemElem from "./flyffitemelem";
 import housingNpcs from "../assets/HousingNPCs.json";
 

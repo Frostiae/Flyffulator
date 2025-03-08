@@ -1,4 +1,4 @@
-import HoverInfo from './hoverinfo';
+import HoverInfo from '../../shared/hoverinfo';
 import { useTranslation } from "react-i18next";
 
 function BasicStat({ title, information, sourceLink, value, percentage }) {

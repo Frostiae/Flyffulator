@@ -1,14 +1,14 @@
 import { useState } from 'react';
-import { useSearch } from '../searchcontext';
+import { useSearch } from '../../../searchcontext';
 import { useTranslation } from "react-i18next";
 
-import Slot from './slot';
-import Dropdown from './dropdown';
-import RangeInput from './rangeinput';
-import NumberInput from './numberinput';
-import * as Utils from '../flyff/flyffutils';
-import blessings from '../assets/Blessings.json';
-import skillAwakes from '../assets/SkillAwakes.json';
+import Slot from '../inventory/slot';
+import Dropdown from '../../shared/dropdown';
+import RangeInput from '../../shared/rangeinput';
+import NumberInput from '../../shared/numberinput';
+import * as Utils from '../../../utils/flyffutils';
+import blessings from '../../../assets/Blessings.json';
+import skillAwakes from '../../../assets/SkillAwakes.json';
 
 function ItemEdit({ itemElem }) {
     const [state, setState] = useState(false);

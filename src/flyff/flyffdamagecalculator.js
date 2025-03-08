@@ -1,5 +1,5 @@
 import Context from "./flyffcontext";
-import * as Utils from "./flyffutils";
+import * as Utils from "../utils/flyffutils";
 
 let leftHanded = false; // If this attack is using the left hand weapon.
 let elementDefenseFactor = 0; // Element defense factor

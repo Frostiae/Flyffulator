@@ -1,4 +1,4 @@
-import { useTooltip } from "../tooltipcontext";
+import { useTooltip } from "../../tooltipcontext";
 
 function Tooltip() {
     const { isTooltipOpen, tooltipContent } = useTooltip();

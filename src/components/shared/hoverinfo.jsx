@@ -1,4 +1,4 @@
-import { useTooltip } from "../tooltipcontext";
+import { useTooltip } from "../../tooltipcontext";
 import { useRef } from 'react';
 
 function HoverInfo({ text, icon="info-icon.svg", link=null }) {

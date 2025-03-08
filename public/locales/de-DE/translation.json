@@ -45,9 +45,9 @@
     "search_title": "Suchen",
     "search_item": "Item",
     "search_skill": "Skill",
-    "search_personal_housing_npc": "Privates Haus NPC",
-    "search_couple_housing_npc": "Privates Haus NPC",
-    "search_guild_housing_npc": "Gildenhaus NPC",
+    "search_personal_housing_npc": "Aktive Privat NPCs",
+    "search_couple_housing_npc": "Aktive Couple NPCs",
+    "search_guild_housing_npc": "Aktive Gilden NPCs",
     "enable_swordcross": "Swordcross an",
     "enable_waterbomb": "Waterbomb an"
 }

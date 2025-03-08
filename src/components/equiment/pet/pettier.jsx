@@ -1,4 +1,4 @@
-import * as Utils from "../../flyff/flyffutils"
+import * as Utils from "../../../utils/flyffutils"
 
 function PetTier({ petTier, petTierLevel, isEditable = false, currentlyEditing = false, onChange = null, onClick = null, canRemove = false }) {
     return (

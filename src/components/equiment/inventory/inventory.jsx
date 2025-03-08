@@ -1,13 +1,13 @@
 import { Canvas } from '@react-three/fiber';
-import { useSearch } from '../searchcontext';
+import { useSearch } from '../../../searchcontext';
 import { OrbitControls } from '@react-three/drei';
 import { Suspense, useRef, useState } from 'react';
 
-import Slot from '../components/slot';
-import Loader from './fallbackloader';
-import PlayerModel from './playermodel';
-import Context from '../flyff/flyffcontext';
-import * as Utils from "../flyff/flyffutils";
+import Slot from './slot';
+import Loader from '../../shared/fallbackloader';
+import PlayerModel from '../playermodel/playermodel';
+import Context from '../../../flyff/flyffcontext';
+import * as Utils from "../../../utils/flyffutils";
 import { useTranslation } from "react-i18next";
 
 function Inventory({ onSelectItem }) {

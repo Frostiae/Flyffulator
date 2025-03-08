@@ -1,5 +1,5 @@
 import upgradeBonus from "../assets/UpgradeBonus.json";
-import * as Utils from "../flyff/flyffutils"
+import * as Utils from "../utils/flyffutils"
 
 /**
  * An instance of an in-game item.
