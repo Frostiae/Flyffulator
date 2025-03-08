@@ -237,96 +237,103 @@ function ItemEdit({ itemElem }) {
     }
 
     // Stat Awakening
-    function getPossibleStatAwakeningParameter(index) {
-        const possibleStatAwakeningParameter = ["None"];
-        for(const availableOption of Utils.getAvailableStatAwakeOptions(itemElem?.statAwake)) {
-            for(const ability of availableOption.abilities) {
-                if(!possibleStatAwakeningParameter.includes(ability.parameter)) {
-                    possibleStatAwakeningParameter.push(ability.parameter);
-                }
-            }
+    const allStatAwakeningParameters = ["None", ...new Set(Utils.getAvailableStatAwakeOptions(null).flatMap((option) => option.abilities.map(ability => ability.parameter)))];
+    function getPossibleStatAwakeningParameter(i) {
+        const currentAbbilitiesWithoutThis = [...(itemElem?.statAwake?.abilities ?? [])];
+        if(currentAbbilitiesWithoutThis[i]) currentAbbilitiesWithoutThis.splice(i, 1)
+
+        const parameters = [
+            "None",
+            ...new Set(Utils.getAvailableStatAwakeOptions({abilities: currentAbbilitiesWithoutThis})
+                .flatMap((option) => option.abilities.map(ability => ability.parameter)))
+            ]
+
+        for(const [index, el] of (itemElem?.statAwake?.abilities ?? []).entries()) {
+            if(el === null) continue;
+            if(index == i) continue;
+
+            parameters.splice(parameters.indexOf(el.parameter), 1)
         }
 
-        const theOtherParameter = itemElem.statAwake?.abilities[index == 0 ? 1 : 0]?.parameter;
-        if(theOtherParameter) {
-            possibleStatAwakeningParameter.splice(possibleStatAwakeningParameter.indexOf(theOtherParameter), 1);
-        }
-
-        return possibleStatAwakeningParameter;
+        return parameters;
     }
-
-    function setStatAwakeOption(index, optionId) { 
-        const parameter = getPossibleStatAwakeningParameter(index, optionId)[optionId];
-
-        const foundAwake = Utils.getAvailableStatAwakeOptions(itemElem?.statAwake).find((option) => {
-            const abilityIndex = option.abilities.findIndex((e) => e.parameter === parameter);
-            if(abilityIndex < 0) return false;
-
-            if(option.abilities[abilityIndex].add != 1) {
-                return false;
+    function setStatAwakeOption(index, parameter) {
+        if(parameter == "None") {
+            if(index == 0) {
+                itemElem.statAwake = null;
+            } else {
+                itemElem.statAwake.abilities.splice(index, 1); 
             }
 
-            return true; 
+            setState(!state)
+            return;
+        }
+
+        if(index == 0) {
+            itemElem.statAwake = null;
+        } else {
+            if(itemElem.statAwake.abilities[index] != null) {
+                itemElem.statAwake.abilities.splice(index, 1);
+            }
+        }
+        
+        let searchStatAwake = {abilities: [...(itemElem.statAwake?.abilities ?? [])]};
+        if(index == 0) searchStatAwake = {abilities: [{parameter: parameter, add: 1, rate: false}]}
+        else searchStatAwake.abilities.push({parameter: parameter, add: 1, rate: false})
+
+        const modifiedOptions = Utils.getAvailableStatAwakeOptions(searchStatAwake);
+        const foundStatAwake = modifiedOptions.find((statAwakey) => {
+            if(statAwakey.abilities.length != searchStatAwake.abilities.length) {
+                return false; 
+            }
+
+            for(const ability of statAwakey.abilities) {
+                if(ability.parameter != parameter) continue;
+                if(ability.add !== 1) continue;
+
+                return true; 
+            }
+
+            return false;
         })
 
-        itemElem.statAwake = foundAwake;
+        const oldStatAwake = [...(itemElem?.statAwake?.abilities ?? [])]
+        itemElem.statAwake = {...foundStatAwake};
+        itemElem.statAwake.abilities = oldStatAwake;
+        itemElem.statAwake.abilities[index] = {...foundStatAwake.abilities.find((e) => e.parameter == parameter)}
 
-        setState(!state);
+        setState(!state)
     }
 
     function setStatAwakeValue(index, value) {
-        const parameter = itemElem.statAwake.abilities[index].parameter;
-        
-        const foundAwake = Utils.getAvailableStatAwakeOptions(itemElem?.statAwake, false).find((option) => {
-            for(const [i, localAbility] of Object.entries(itemElem.statAwake.abilities)) {
-                const abilityIndex = option.abilities.findIndex((e) => e.parameter === localAbility.parameter);
-                if(abilityIndex < 0) return false;
+        if(value == 4) {
+            for(const [i, el] of (itemElem.statAwake?.abilities ?? []).entries()) {
+                if(i === index) continue;
 
-                // The stat to be changed
-                if(option.abilities[abilityIndex].parameter === parameter) {
-                    if(option.abilities[abilityIndex].add != value) {
-                        return false; 
-                    } 
-                } else {
-                    if(option.abilities[abilityIndex].add != itemElem.statAwake.abilities[i].add) {
-                        return false;   
-                    }
-                }
+                itemElem.statAwake.abilities.splice(i, 1)
             }
+        }
 
-            return true;
-        })
-
-        itemElem.statAwake = foundAwake;
-        
-
-        setState(!state);
+        itemElem.statAwake.abilities[index].add = value
+        setState(!state)
     }
 
-    function getStatAwakePossibleRange(index) {
-        const range = [4, 0];        
-        const parameter = itemElem.statAwake?.abilities[index]?.parameter;
+    function getStatAwakeMaxValue(index) {
+        let parameter = itemElem.statAwake?.abilities[index]?.parameter
+        let currentMax = 0;
+        
+        const currentAbilitiesWithoutIndex = [...(itemElem?.statAwake?.abilities ?? [])]
+        currentAbilitiesWithoutIndex.splice(index, 1);
 
-        const theOtherIndex = index == 0 ? 1 : 0;
-        const parameterOther = itemElem.statAwake?.abilities[theOtherIndex]?.parameter;
+        for(const option of Utils.getAvailableStatAwakeOptions({abilities: currentAbilitiesWithoutIndex})) {
+            for(const ability of option.abilities) {
+                if(ability.parameter != parameter) continue;
 
-        Utils.getAvailableStatAwakeOptions(itemElem?.statAwake, false).forEach((option) => {
-            if(parameterOther) {
-                const abilityIndexOther = option.abilities.findIndex((e) => e.parameter === parameterOther)
-                
-                if(option.abilities[abilityIndexOther].add != itemElem.statAwake.abilities[theOtherIndex].add) {
-                    return false; 
-                }
+                currentMax = Math.max(currentMax, ability.add)
             }
-
-            const abilityIndex = option.abilities.findIndex((e) => e.parameter === parameter);
-            if(abilityIndex < 0) return false;
-
-            range[0] = Math.min(range[0], option.abilities[abilityIndex].add)
-            range[1] = Math.max(range[1], option.abilities[abilityIndex].add)
-        })
-
-        return range;
+        }
+        
+        return currentMax;
     }
 
     return (
@@ -517,38 +524,40 @@ function ItemEdit({ itemElem }) {
                 <div className="column">
                     <h3>Stat Awake</h3>
                     <Dropdown
-                        options={getPossibleStatAwakeningParameter(0, itemElem ?? null)}
-                        onSelectionChanged={(optionId) => setStatAwakeOption(0, optionId)}
-                        valueKey={itemElem.statAwake?.abilities[0] == null ? 0 : getPossibleStatAwakeningParameter(0, itemElem ?? null).indexOf(itemElem.statAwake.abilities[0].parameter)}
+                        options={allStatAwakeningParameters}
+                        onSelectionChanged={(i) => {setStatAwakeOption(0, allStatAwakeningParameters[i])}}
+                        valueKey={Math.max(allStatAwakeningParameters.indexOf(itemElem.statAwake?.abilities[0]?.parameter), 0)}
                         style={{ minWidth: "200px" }}
                     />
                     <div className="row">
                         <RangeInput
+                            key={itemElem.statAwake?.abilities[0]?.parameter ?? "null0"}
                             disabled={itemElem.statAwake?.abilities[0] == null}
                             onChange={(x) => setStatAwakeValue(0, x)}
-                            value={itemElem.statAwake?.abilities[0]?.add ?? 0}
+                            value={itemElem.statAwake?.abilities[0]?.add ?? 1}
                             prefix={"+"}
                             step={1}
-                            min={getStatAwakePossibleRange(0)[0]}
-                            max={getStatAwakePossibleRange(0)[1]}
+                            min={1}
+                            max={getStatAwakeMaxValue(0)}
                         />
                     </div>
 
                     <Dropdown
-                        options={getPossibleStatAwakeningParameter(1, itemElem ?? null)}
-                        onSelectionChanged={(optionId) => setStatAwakeOption(1, optionId)}
-                        valueKey={itemElem.statAwake?.abilities[1] == null ? 0 : getPossibleStatAwakeningParameter(1, itemElem ?? null).indexOf(itemElem.statAwake.abilities[1].parameter)}
+                        options={getPossibleStatAwakeningParameter(1)}
+                        onSelectionChanged={(i) => {setStatAwakeOption(1, getPossibleStatAwakeningParameter(1)[i])}}
+                        valueKey={Math.max(getPossibleStatAwakeningParameter(1).indexOf(itemElem.statAwake?.abilities[1]?.parameter), 0)}
                         style={{ minWidth: "200px" }}
                     />
                     <div className="row">
                         <RangeInput
+                            key={itemElem.statAwake?.abilities[1]?.parameter ?? "null1"}
                             disabled={itemElem.statAwake?.abilities[1] == null}
                             onChange={(x) => setStatAwakeValue(1, x)}
-                            value={itemElem.statAwake?.abilities[1]?.add ?? 0}
+                            value={itemElem.statAwake?.abilities[1]?.add ?? 1}
                             prefix={"+"}
                             step={1}
-                            min={getStatAwakePossibleRange(1)[0]}
-                            max={getStatAwakePossibleRange(1)[1]}
+                            min={1}
+                            max={getStatAwakeMaxValue(1)}
                         />
                     </div>
                 </div>

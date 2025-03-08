@@ -7,6 +7,7 @@ import equipSets from "../assets/EquipSets.json";
 import partySkills from "../assets/PartySkills.json";
 import upgradeBonus from "../assets/UpgradeBonus.json";
 import statAwakes from "../assets/StatAwakes.json"
+import { cloneUniformsGroups } from "three/src/renderers/shaders/UniformsUtils.js";
 
 export const JOBS = {
     9686: 0, // Vagrant
@@ -327,10 +328,10 @@ export function getAvailableStatAwakeOptions(currentStatAwake, checkAddValue = t
         return statAwakes;
     }
 
-    const currentAbilitiesFormatted = currentStatAwake.abilities.map((e) => `${e.parameter}${checkAddValue ? e.add : ''}${e.rate}`)
+    const currentAbilitiesFormatted = currentStatAwake.abilities.filter(e => e).map((e) => `${e.parameter}${checkAddValue ? e.add : ''}${e.rate}`)
     const possibleStatOptions = statAwakes.filter((nextStatAwake) => {
         const nextAbilitiesFormatted = nextStatAwake.abilities.map((e) => `${e.parameter}${checkAddValue ? e.add : ''}${e.rate}`)
-
+        
         for(const currentAbilityFormatted of currentAbilitiesFormatted) {
             if(!nextAbilitiesFormatted.includes(currentAbilityFormatted)) {
                 return false;
@@ -341,4 +342,14 @@ export function getAvailableStatAwakeOptions(currentStatAwake, checkAddValue = t
     })
 
     return possibleStatOptions;
+}
+
+export function getIndexOfParameter(parameter, statAwake) {
+    for(const [index, abilitiy] of statAwake.abilities) {
+        if(abilitiy.parameter == parameter) {
+            return index;
+        }
+    }
+
+    return 0; 
 }
