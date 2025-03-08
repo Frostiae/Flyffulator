@@ -58,5 +58,7 @@
     "enable_lifesteal": "Lifesteal enabled",
     "enable_missing": "Missing enabled",
     "enable_blocking": "Blocking enabled",
-    "enable_party_leader": "Party Leader enabled"
+    "enable_party_leader": "Party Leader enabled",
+    "your_health": "Your health",
+    "target_health": "Target health"
 }

@@ -166,20 +166,26 @@ input[type="radio"], input[type="checkbox"] {
     background-size: contain;
   }
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &:checked {
     background: v.$input-bg-color;
     &::before {
       opacity: 1;
     }
   }
-
-  &:hover {
-    outline: 1px solid v.$border-color;
-  }
 }
 
 input[type="radio"] {
   border-radius: 50%;
+}
+
+input {
+  &:hover {
+    outline: 1px solid v.$border-color;
+  }
 }
 
 img.info-icon {

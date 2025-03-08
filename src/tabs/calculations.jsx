@@ -10,6 +10,7 @@ import * as Utils from "../flyff/flyffutils";
 import HoverInfo from '../components/hoverinfo';
 import LineChart from '../components/linechart';
 import BasicStat from '../components/basicstat';
+import NumberInput from '../components/numberinput';
 import ImportCharacter from '../components/importcharacter';
 
 function Calculations() {
@@ -439,7 +440,7 @@ function Calculations() {
                     }
                 </div>
 
-                <div className="grid">
+                <div className="grid" style={{marginBottom: "20px"}}>
                     <div>
                         <input type="checkbox" id="missing" checked={Context.settings.missingEnabled} onChange={() => setSetting("missingEnabled", !Context.settings.missingEnabled)} />
                         <label htmlFor="missing">{t("enable_missing")}</label>
@@ -478,6 +479,17 @@ function Calculations() {
                             <label htmlFor="lifesteal">{t("enable_lifesteal")}</label>
                         </div>
                     }
+
+                </div>
+
+                <div className="column" style={{width: "fit-content"}}>
+                    <div>
+                        <NumberInput min={1} max={100} suffix={"%"} hasButtons={false} label={t("your_health")} onChange={(v) => setSetting("playerHealthPercent", v)} value={Context.settings.playerHealthPercent} />
+                    </div>
+
+                    <div>
+                        <NumberInput min={1} max={100} suffix={"%"} hasButtons={false} label={t("target_health")} onChange={(v) => setSetting("targetHealthPercent", v)} value={Context.settings.targetHealthPercent} />
+                    </div>
                 </div>
 
                 <div className="category-header">

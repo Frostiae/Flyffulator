@@ -366,6 +366,13 @@ function applyDefense(attack) {
         }
     }
 
+    if (Context.attacker.isMonster()) {
+        const berserkThreshold = Context.attacker.monsterProp.berserkThresholdHP;
+        if (berserkThreshold != undefined && berserkThreshold > 0 && Context.settings.targetHealthPercent <= berserkThreshold) {
+            factor *= 1 + Context.attacker.monsterProp.berserkAttackPower / 100;
+        }
+    }
+
     if (Context.isPVP()) {
         factor *= 0.6;
     }

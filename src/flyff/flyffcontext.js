@@ -46,6 +46,8 @@ export default class Context
         missingEnabled: true,
         blockingEnabled: true,
         partyLeaderEnabled: true,
+        playerHealthPercent: 100,
+        targetHealthPercent: 100
     };
 
     static isPVP() {

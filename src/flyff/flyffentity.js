@@ -1324,6 +1324,11 @@ export default class Entity {
 
         if (this.isPlayer()) {
             chance = Math.floor(chance * this.job.critical);
+
+            const healthPercent = this == Context.player ? Context.settings.playerHealthPercent : Context.settings.targetHealthPercent;
+            if (healthPercent < 30) {
+                chance += Math.floor(22 - (healthPercent * 22 / 30));
+            }
         }
 
         chance += this.getStat("criticalchance", true);
