@@ -1,4 +1,4 @@
-import * as Utils from "../flyff/flyffutils";
+import * as Utils from "../utils/flyffutils";
 import ItemElem from "../flyff/flyffitemelem";
 import Context from "../flyff/flyffcontext";
 

@@ -1,5 +1,5 @@
 import Entity from "./flyffentity";
-import * as Utils from "./flyffutils";
+import * as Utils from "../utils/flyffutils";
 
 /**
  * Context for all calculations, such as the current player, the target, and more.

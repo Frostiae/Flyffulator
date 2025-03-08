@@ -1,4 +1,4 @@
-import ItemElem from "./flyffitemelem";
+import ItemElem from "../flyff/flyffitemelem";
 import pets from "../assets/Pets.json";
 import items from "../assets/Items.json";
 import skills from "../assets/Skills.json";

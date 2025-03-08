@@ -1,10 +1,10 @@
 import { useRef, forwardRef, useImperativeHandle } from 'react';
-import { useTooltip } from '../tooltipcontext';
-import { createTooltip } from '../flyff/flyfftooltip';
-import * as Utils from '../flyff/flyffutils';
+import { useTooltip } from '../../../tooltipcontext';
+import { createTooltip } from '../../../flyff/flyfftooltip';
+import * as Utils from '../../../utils/flyffutils';
 import { useTranslation } from "react-i18next";
 
-import '../styles/equipment.scss';
+import '../equipment.scss';
 
 function Slot({ backgroundIcon, content, className, onRemove }, ref) {
   const { showTooltip, hideTooltip } = useTooltip();

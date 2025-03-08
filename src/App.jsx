@@ -3,18 +3,18 @@ import { useTranslation } from "react-i18next";
 import { SearchProvider } from './searchcontext';
 import { TooltipProvider } from './tooltipcontext';
 
-import './styles/App.scss';
-import Equipment from './tabs/equipment';
-import Search from './components/search';
-import Tooltip from './components/tooltip';
+import './App.scss';
+import Equipment from './components/equiment/equipment';
+import Search from './components/shared/search';
+import Tooltip from './components/shared/tooltip';
 import Context from './flyff/flyffcontext';
 import Classes from './assets/Classes.json';
-import * as Utils from './flyff/flyffutils';
-import Dropdown from './components/dropdown';
-import SkillsBuffs from './tabs/skillsbuffs';
-import Calculations from './tabs/calculations';
-import NumberInput from './components/numberinput';
-import ImportCharacter from './components/importcharacter';
+import * as Utils from './utils/flyffutils';
+import Dropdown from './components/shared/dropdown';
+import SkillsBuffs from './components/skillsandbuffs/skillsbuffs';
+import Calculations from './components/calculation/calculations';
+import NumberInput from './components/shared/numberinput';
+import ImportCharacter from './components/base/importcharacter';
 
 
 function App() {
