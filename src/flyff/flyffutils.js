@@ -7,7 +7,6 @@ import equipSets from "../assets/EquipSets.json";
 import partySkills from "../assets/PartySkills.json";
 import upgradeBonus from "../assets/UpgradeBonus.json";
 import statAwakes from "../assets/StatAwakes.json"
-import { cloneUniformsGroups } from "three/src/renderers/shaders/UniformsUtils.js";
 
 export const JOBS = {
     9686: 0, // Vagrant

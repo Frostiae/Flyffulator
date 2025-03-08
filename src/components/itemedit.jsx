@@ -9,7 +9,6 @@ import NumberInput from './numberinput';
 import * as Utils from '../flyff/flyffutils';
 import blessings from '../assets/Blessings.json';
 import skillAwakes from '../assets/SkillAwakes.json';
-import { AlwaysStencilFunc } from 'three';
 
 function ItemEdit({ itemElem }) {
     const [state, setState] = useState(false);
