@@ -769,12 +769,12 @@ function getBlockFactor() {
         const minBlock = Context.attacker.isPlayer() ? 0.3 : 0.2;
         const r = Math.floor(Math.random() * 80);
 
-        // 6.25% chance to take full damage
+        // 7.5% chance to take full damage
         if (r <= 5) {
             return 1;
         }
 
-        // 6.25% chance to block the attack
+        // 7.5% chance to block the attack
         if (r >= 75) {
             return minBlock;
         }
