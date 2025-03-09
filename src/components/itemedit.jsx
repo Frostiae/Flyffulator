@@ -235,6 +235,106 @@ function ItemEdit({ itemElem }) {
         setState(!state);
     }
 
+    // Stat Awakening
+    const allStatAwakeningParameters = ["None", ...new Set(Utils.getAvailableStatAwakeOptions(null).flatMap((option) => option.abilities.map(ability => ability.parameter)))];
+    function getPossibleStatAwakeningParameter(i) {
+        const currentAbbilitiesWithoutThis = [...(itemElem?.statAwake?.abilities ?? [])];
+        if(currentAbbilitiesWithoutThis[i]) currentAbbilitiesWithoutThis.splice(i, 1)
+
+        const parameters = [
+            "None",
+            ...new Set(Utils.getAvailableStatAwakeOptions({abilities: currentAbbilitiesWithoutThis})
+                .flatMap((option) => option.abilities.map(ability => ability.parameter)))
+            ]
+
+        for(const [index, el] of (itemElem?.statAwake?.abilities ?? []).entries()) {
+            if(el === null) continue;
+            if(index == i) continue;
+
+            parameters.splice(parameters.indexOf(el.parameter), 1)
+        }
+
+        return parameters;
+    }
+    function setStatAwakeOption(index, parameter) {
+        if(parameter == "None") {
+            if(index == 0) {
+                itemElem.statAwake = null;
+            } else {
+                itemElem.statAwake.abilities.splice(index, 1); 
+            }
+
+            setState(!state)
+            return;
+        }
+
+        if(index == 0) {
+            itemElem.statAwake = null;
+        } else {
+            if(itemElem.statAwake.abilities[index] != null) {
+                itemElem.statAwake.abilities.splice(index, 1);
+            }
+        }
+        
+        let searchStatAwake = {abilities: [...(itemElem.statAwake?.abilities ?? [])]};
+        if(index == 0) searchStatAwake = {abilities: [{parameter: parameter, add: 1, rate: false}]}
+        else searchStatAwake.abilities.push({parameter: parameter, add: 1, rate: false})
+
+        const modifiedOptions = Utils.getAvailableStatAwakeOptions(searchStatAwake);
+        const foundStatAwake = modifiedOptions.find((statAwakey) => {
+            if(statAwakey.abilities.length != searchStatAwake.abilities.length) {
+                return false; 
+            }
+
+            for(const ability of statAwakey.abilities) {
+                if(ability.parameter != parameter) continue;
+                if(ability.add !== 1) continue;
+
+                return true; 
+            }
+
+            return false;
+        })
+
+        const oldStatAwake = [...(itemElem?.statAwake?.abilities ?? [])]
+        itemElem.statAwake = {...foundStatAwake};
+        itemElem.statAwake.abilities = oldStatAwake;
+        itemElem.statAwake.abilities[index] = {...foundStatAwake.abilities.find((e) => e.parameter == parameter)}
+
+        setState(!state)
+    }
+
+    function setStatAwakeValue(index, value) {
+        if(value == 4) {
+            for(const [i, el] of (itemElem.statAwake?.abilities ?? []).entries()) {
+                if(i === index) continue;
+
+                itemElem.statAwake.abilities.splice(i, 1)
+            }
+        }
+
+        itemElem.statAwake.abilities[index].add = value
+        setState(!state)
+    }
+
+    function getStatAwakeMaxValue(index) {
+        let parameter = itemElem.statAwake?.abilities[index]?.parameter
+        let currentMax = 0;
+        
+        const currentAbilitiesWithoutIndex = [...(itemElem?.statAwake?.abilities ?? [])]
+        currentAbilitiesWithoutIndex.splice(index, 1);
+
+        for(const option of Utils.getAvailableStatAwakeOptions({abilities: currentAbilitiesWithoutIndex})) {
+            for(const ability of option.abilities) {
+                if(ability.parameter != parameter) continue;
+
+                currentMax = Math.max(currentMax, ability.add)
+            }
+        }
+        
+        return currentMax;
+    }
+
     return (
         <div className="item-edit">
             <div id="edit-header">
@@ -413,6 +513,50 @@ function ItemEdit({ itemElem }) {
                             prefix={"+"}
                             step={1}
                             allowedValues={itemElem.skillAwake ? possibleSkillAwakeValues[itemElem.skillAwake.id] : [0, 1]}
+                        />
+                    </div>
+                </div>
+            }
+
+            {
+                itemElem.isStatAwakeAble() &&
+                <div className="column">
+                    <h3>Stat Awake</h3>
+                    <Dropdown
+                        options={allStatAwakeningParameters}
+                        onSelectionChanged={(i) => {setStatAwakeOption(0, allStatAwakeningParameters[i])}}
+                        valueKey={Math.max(allStatAwakeningParameters.indexOf(itemElem.statAwake?.abilities[0]?.parameter), 0)}
+                        style={{ minWidth: "200px" }}
+                    />
+                    <div className="row">
+                        <RangeInput
+                            key={itemElem.statAwake?.abilities[0]?.parameter ?? "null0"}
+                            disabled={itemElem.statAwake?.abilities[0] == null}
+                            onChange={(x) => setStatAwakeValue(0, x)}
+                            value={itemElem.statAwake?.abilities[0]?.add ?? 1}
+                            prefix={"+"}
+                            step={1}
+                            min={1}
+                            max={getStatAwakeMaxValue(0)}
+                        />
+                    </div>
+
+                    <Dropdown
+                        options={getPossibleStatAwakeningParameter(1)}
+                        onSelectionChanged={(i) => {setStatAwakeOption(1, getPossibleStatAwakeningParameter(1)[i])}}
+                        valueKey={Math.max(getPossibleStatAwakeningParameter(1).indexOf(itemElem.statAwake?.abilities[1]?.parameter), 0)}
+                        style={{ minWidth: "200px" }}
+                    />
+                    <div className="row">
+                        <RangeInput
+                            key={itemElem.statAwake?.abilities[1]?.parameter ?? "null1"}
+                            disabled={itemElem.statAwake?.abilities[1] == null}
+                            onChange={(x) => setStatAwakeValue(1, x)}
+                            value={itemElem.statAwake?.abilities[1]?.add ?? 1}
+                            prefix={"+"}
+                            step={1}
+                            min={1}
+                            max={getStatAwakeMaxValue(1)}
                         />
                     </div>
                 </div>

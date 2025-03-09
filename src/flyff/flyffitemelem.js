@@ -16,6 +16,7 @@ export default class ItemElem {
     originAwake = null;
     skillAwake = null;
     petStats = { F: 1, E: null, D: null, C: null, B: null, A: null, S: null }; // default value
+    statAwake = null;
 
 
     constructor(itemProp) {
@@ -117,6 +118,13 @@ export default class ItemElem {
      */
     isSkillAwakeAble() {
         return this.itemProp.category == "weapon" || this.itemProp.subcategory == "shield";
+    }
+
+    /**
+     * @returns Whether or not this item can be stat awakened.
+     */
+    isStatAwakeAble() {
+        return this.itemProp.category == "weapon" || this.itemProp.subcategory == "shield" || this.itemProp.category == "armor"; 
     }
 
     /**

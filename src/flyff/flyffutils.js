@@ -6,6 +6,7 @@ import classes from "../assets/Classes.json";
 import equipSets from "../assets/EquipSets.json";
 import partySkills from "../assets/PartySkills.json";
 import upgradeBonus from "../assets/UpgradeBonus.json";
+import statAwakes from "../assets/StatAwakes.json"
 
 export const JOBS = {
     9686: 0, // Vagrant
@@ -315,4 +316,39 @@ export function getGuid() {
     return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
         (c ^ (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))).toString(16)
     );
+}
+
+/**
+ * Gets the possible StatAwake Options based on the current awake
+ * e.g. current is str+3, than return all options that also include str+3
+ */
+export function getAvailableStatAwakeOptions(currentStatAwake, checkAddValue = true) {
+    if(currentStatAwake == null) {
+        return statAwakes;
+    }
+
+    const currentAbilitiesFormatted = currentStatAwake.abilities.filter(e => e).map((e) => `${e.parameter}${checkAddValue ? e.add : ''}${e.rate}`)
+    const possibleStatOptions = statAwakes.filter((nextStatAwake) => {
+        const nextAbilitiesFormatted = nextStatAwake.abilities.map((e) => `${e.parameter}${checkAddValue ? e.add : ''}${e.rate}`)
+        
+        for(const currentAbilityFormatted of currentAbilitiesFormatted) {
+            if(!nextAbilitiesFormatted.includes(currentAbilityFormatted)) {
+                return false;
+            }
+        }
+
+        return true;
+    })
+
+    return possibleStatOptions;
+}
+
+export function getIndexOfParameter(parameter, statAwake) {
+    for(const [index, abilitiy] of statAwake.abilities) {
+        if(abilitiy.parameter == parameter) {
+            return index;
+        }
+    }
+
+    return 0; 
 }

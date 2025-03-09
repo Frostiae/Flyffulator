@@ -1057,6 +1057,17 @@ export default class Entity {
                     total += ability.add;
                 }
             }
+
+            // statscrolls
+            if(itemElem.statAwake) {
+                for(const ability of itemElem.statAwake.abilities) {
+                    if(ability.parameter != stat || ability.rate != rate) {
+                        continue;
+                    }
+
+                    total += ability.add;
+                }
+            }
         }
 
         // Armor set stuff
