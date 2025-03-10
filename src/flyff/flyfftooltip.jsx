@@ -192,10 +192,10 @@ function setupItem(itemElem, i18n) {
 
     if (itemElem.element != "none" && itemElem.elementUpgradeLevel > 0) {
         // TODO: Element stones here
-        out.push(`\n${<Localizer prefix="element_" parameter={itemElem.element}/>}+${itemElem.elementUpgradeLevel}`);
+        out.push(<span><br /><Localizer prefix="element_" parameter={itemElem.element}/>+{itemElem.elementUpgradeLevel}</span>);
     }
     if (itemProp.element != "none") {
-        out.push(`\n${i18n.t("tooltip_element")}${<Localizer prefix="element_" parameter={itemProp.element}/>}`);
+        out.push(<span><br /><Localizer prefix="element_" parameter={itemProp.element}/></span>);
     }
 
     // Stats
@@ -493,7 +493,7 @@ function setupSkill(skill, i18n) {
     }
 
     if (skill.element != "none") {
-        out.push(`\nElement: ${<Localizer prefix="element_" parameter={skill.element}/>}`);
+        out.push(<span><br />Element: <Localizer prefix="element_" parameter={skill.element}/></span>)
     }
 
     if (levelProp.consumedMP != undefined) {

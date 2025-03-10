@@ -88,7 +88,7 @@ function PetWindow({ raisedPetDefinition, petLevels, editable = false, onEditLev
 
                         <div className="stat-group">
                             <span className='stat-title'>Stat</span>
-                            <span className='stat-value'>{`${<Localizer prefix="stat_" parameter={raisedPetDefinition.parameter}/>} +${Utils.getPetStatSum(raisedPetDefinition, petLevels)}${raisedPetDefinition.rate ? '%' : ''}`}</span>
+                            <span className='stat-value'><Localizer prefix="stat_" parameter={raisedPetDefinition.parameter}/>{` +${Utils.getPetStatSum(raisedPetDefinition, petLevels)}${raisedPetDefinition.rate ? '%' : ''}`}</span>
                         </div>
                     </div>
                 </div>
