@@ -1,8 +1,13 @@
 import HoverInfo from './hoverinfo';
 import { useTranslation } from "react-i18next";
 
-function BasicStat({ title, information, sourceLink, value, percentage }) {
+function BasicStat({ title, information, sourceLink, value, percentage, optional }) {
     const { t } = useTranslation();
+
+    if (value === 0 && optional) {
+        return null;
+    }
+
     return (
         <div className="basic-stat">
             <span className="basic-label">{title}</span>
