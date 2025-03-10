@@ -363,13 +363,13 @@ function Calculations() {
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L535"}
                 />
 
-                <BasicStat title={"Melee Block"} value={Utils.clamp(Context.player.getBlockChance(false, Context.defender), 7.5, 92.5)}
+                <BasicStat title={"Melee Block"} value={Utils.clamp(Context.player.getBlockChance(false, Context.defender), 7.5, 93.75)}
                     information={"How often you block melee attacks from the current target.\n\nThis value may be different than the one you see in the character window as it takes everything into account, such as minimums, maximums and the opponent's stats. This is your true block rate."}
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L965"}
                     percentage
                 />
 
-                <BasicStat title={"Ranged Block"} value={Utils.clamp(Context.player.getBlockChance(true, Context.defender), 7.5, 92.5)}
+                <BasicStat title={"Ranged Block"} value={Utils.clamp(Context.player.getBlockChance(true, Context.defender), 7.5, 93.75)}
                     information={"How often you block ranged attacks from the current target.\n\nThis value may be different than the one you see in the character window as it takes everything into account, such as minimums, maximums and the opponent's stats. This is your true block rate."}
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L965"}
                     percentage

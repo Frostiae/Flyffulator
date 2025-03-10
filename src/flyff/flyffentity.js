@@ -1362,7 +1362,7 @@ export default class Entity {
     getBlockChance(ranged, attacker) {
         if (this.isPlayer()) {
             // minimum of 7.5% chance to block
-            // maxmium of 92.5% chance to block
+            // maxmium of 93.75% chance to block
 
             // Block based on dex and level
             const attackerLevel = attacker.level == -1 ? this.level : attacker.level;
@@ -1413,7 +1413,7 @@ export default class Entity {
         }
         else {
             // maximum of 94% chance blockrate
-            // minimum of 6% chance blockrate
+            // minimum of 5% chance blockrate
             const defenderLevel = this.level == -1 ? attacker.level : this.level;
             let blockRate = Math.floor((this.getParry() - defenderLevel) * 0.5);
             const blockPenetration = attacker.getStat("blockpenetration", true);
