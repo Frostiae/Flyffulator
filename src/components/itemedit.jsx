@@ -291,8 +291,8 @@ function ItemEdit({ itemElem }) {
                             <div className="row" key={index}>
                                 {ability.parameter}
                                 <RangeInput
-                                    min={ability.add}
-                                    max={ability.addMax}
+                                    min={Math.min(ability.add, ability.addMax)}
+                                    max={Math.max(ability.addMax, ability.add)}
                                     onChange={(e) => setStatRange(index, e)}
                                     value={ability.value}
                                     isRange={ability.rate}
