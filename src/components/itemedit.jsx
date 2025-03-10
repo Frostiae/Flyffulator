@@ -339,7 +339,7 @@ function ItemEdit({ itemElem }) {
         <div className="item-edit">
             <div id="edit-header">
                 <Slot className={"slot-item"} content={itemElem} />
-                {itemElem.itemProp.name.en}
+                {itemElem.itemProp.name[shortCode] ?? itemElem.itemProp.name.en}
 
                 {
                     itemElem.getMaximumUpgradeLevel() > 0 &&
@@ -365,7 +365,7 @@ function ItemEdit({ itemElem }) {
             {
                 itemElem.statRanges.length > 0 &&
                 <div className="column">
-                    <h3>Stat Ranges</h3>
+                    <h3>{i18n.t("itemedit_stat_ranges")}</h3>
                     {
                         itemElem.statRanges.map((ability, index) =>
                             <div className="row" key={index}>
@@ -388,7 +388,7 @@ function ItemEdit({ itemElem }) {
             {
                 itemElem.itemProp.possibleRandomStats != undefined &&
                 <div className="column">
-                    <h3>Random Bonus (Ultimate)</h3>
+                    <h3>{i18n.t("itemedit_random_bonus_ultimate")}</h3>
                     <Dropdown options={possibleRandomStats} onSelectionChanged={(e) => setRandomStatOption(0, e)} valueKey={itemElem.randomStats[0]?.id} style={{ minWidth: "200px" }} />
                     <div className="row">
                         <RangeInput
@@ -420,7 +420,7 @@ function ItemEdit({ itemElem }) {
             {
                 itemElem.itemProp.category == "fashion" &&
                 <div className="column">
-                    <h3>Blessing of the Goddess / Demon</h3>
+                    <h3>{i18n.t("itemedit_goddess_demons")}</h3>
                     <Dropdown options={possibleBlessings} onSelectionChanged={(e) => setBlessingOption(0, e)} valueKey={itemElem.randomStats[0]?.id ?? 0} style={{ minWidth: "200px" }} />
                     <div className="row">
                         <RangeInput
