@@ -36,12 +36,12 @@ function NumberInput({ min, max, value, onChange, label, hasButtons, prefix, suf
             <label htmlFor={label}>{label}</label>
             {
                 hasButtons &&
-                <button className="flyff-button small" onClick={() => { handleChange(val - 1, true) }}>-</button>
+                <button disabled={disabled || val <= min} className="flyff-button small" onClick={() => { handleChange(val - 1, true) }}>-</button>
             }
             <input disabled={disabled} type="text" id={label} onBlur={(e) => handleChange(e.target.value, true)} onChange={(e) => handleChange(e.target.value, false)} value={`${prefix ? prefix : ""}${val}${suffix ? suffix : ""}`} />
             {
                 hasButtons &&
-                <button className="flyff-button small" onClick={() => { handleChange(val + 1, true) }}>+</button>
+                <button disabled={disabled || val >= max} className="flyff-button small" onClick={() => { handleChange(val + 1, true) }}>+</button>
             }
         </div>
     );
