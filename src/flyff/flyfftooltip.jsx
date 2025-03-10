@@ -1,6 +1,7 @@
 import * as Utils from "../flyff/flyffutils";
 import ItemElem from "../flyff/flyffitemelem";
 import Context from "../flyff/flyffcontext";
+import Localizer from "../components/localizer"
 
 /**
  * Create a tooltip for the given item or skill
@@ -178,7 +179,7 @@ function setupItem(itemElem, i18n) {
 
         for (const blessing of itemElem.randomStats) {
             if (blessing) {
-                out.push(<span style={{ color: "#d386ff" }}><br />{blessing.parameter}+{blessing.value}{blessing.rate ? "%" : ""}</span>);
+                out.push(<span style={{ color: "#d386ff" }}><br /><Localizer prefix="stat_" parameter={blessing.parameter}/>+{blessing.value}{blessing.rate ? "%" : ""}</span>);
             }
         }
     }
@@ -191,10 +192,10 @@ function setupItem(itemElem, i18n) {
 
     if (itemElem.element != "none" && itemElem.elementUpgradeLevel > 0) {
         // TODO: Element stones here
-        out.push(`\n${itemElem.element}+${itemElem.elementUpgradeLevel}`);
+        out.push(`\n${<Localizer prefix="element_" parameter={itemElem.element}/>}+${itemElem.elementUpgradeLevel}`);
     }
     if (itemProp.element != "none") {
-        out.push(`\n${i18n.t("tooltip_element")}${itemProp.element}`);
+        out.push(`\n${i18n.t("tooltip_element")}${<Localizer prefix="element_" parameter={itemProp.element}/>}`);
     }
 
     // Stats
@@ -208,7 +209,7 @@ function setupItem(itemElem, i18n) {
 
         if (itemElem.statRanges.length == 0) {
             for (const ability of itemProp.abilities) {
-                out.push(<span style={abilityStyle}><br />{ability.parameter}+{ability.add}</span>);
+                out.push(<span style={abilityStyle}><br /><Localizer prefix="stat_" parameter={ability.parameter}/>+{ability.add}</span>);
                 if (ability.rate) {
                     out.push(<span style={abilityStyle}>%</span>);
                 }
@@ -216,7 +217,7 @@ function setupItem(itemElem, i18n) {
         }
         else {
             for (const ability of itemElem.statRanges) {
-                out.push(<span style={abilityStyle}><br />{ability.parameter}+{ability.value}</span>);
+                out.push(<span style={abilityStyle}><br /><Localizer prefix="stat_" parameter={ability.parameter}/>+{ability.value}</span>);
                 if (ability.rate) {
                     out.push(<span style={abilityStyle}>%</span>);
                 }
@@ -234,13 +235,13 @@ function setupItem(itemElem, i18n) {
 
     if (itemProp.possibleRandomStats != undefined) {
         for (const stat of itemElem.randomStats) {
-            out.push(<span style={{ color: "#ffff00" }}><br />{stat.parameter}+{stat.value}{stat.rate ? "%" : ""}</span>);
+            out.push(<span style={{ color: "#ffff00" }}><br /><Localizer prefix="stat_" parameter={stat.parameter}/>+{stat.value}{stat.rate ? "%" : ""}</span>);
         }
     }
 
     if(itemElem.statAwake != null) {
         for(const ability of itemElem.statAwake.abilities) {
-            out.push(<span><br />{`${ability.parameter} +${ability.add}`}</span>)
+            out.push(<span><br /><Localizer prefix="stat_" parameter={ability.parameter}/>{` +${ability.add}`}</span>)
         }
     }
 
@@ -249,7 +250,7 @@ function setupItem(itemElem, i18n) {
     if (itemProp.category == "jewelry" && itemProp.upgradeLevels != undefined) {
         const abilityStyle = { color: "#ffeaa1" };
         for (const ability of itemProp.upgradeLevels[itemElem.upgradeLevel].abilities) {
-            out.push(<span style={abilityStyle}><br />{ability.parameter}+{ability.add}</span>);
+            out.push(<span style={abilityStyle}><br /><Localizer prefix="stat_jewel_" parameter={ability.parameter}/>+{ability.add}</span>);
             if (ability.rate) {
                 out.push(<span style={abilityStyle}>%</span>);
             }
@@ -265,7 +266,7 @@ function setupItem(itemElem, i18n) {
         if (upgradeLevel > 0) {
             const bonus = Utils.getUpgradeBonus(upgradeLevel);
             for (const ability of bonus.setAbilities) {
-                out.push(<span><br />{ability.parameter}+{ability.add}</span>);
+                out.push(<span><br /><Localizer prefix="stat_" parameter={ability.parameter}/>+{ability.add}</span>);
                 if (ability.rate) {
                     out.push(<span>%</span>);
                 }
@@ -335,7 +336,7 @@ function setupItem(itemElem, i18n) {
         const petDefinition = Utils.getPetDefinitionByItemId(pet.itemProp.id)
 
         out.push(<span style={{ color: '#009e00' }}><br />Tier: {Utils.getPetTierByLevels(pet.petStats)} Tier</span>)
-        out.push(<span style={{ color: '#ff0000' }}><br />Bonus: {`${petDefinition.parameter} +${Utils.getPetStatSum(petDefinition, pet.petStats)}${petDefinition.rate ? '%' : ''}`}</span>)
+        out.push(<span style={{ color: '#ff0000' }}><br />Bonus: <Localizer prefix="stat_" parameter={petDefinition.parameter}/>{`+${Utils.getPetStatSum(petDefinition, pet.petStats)}${petDefinition.rate ? '%' : ''}`}</span>)
         out.push(<span style={{ color: '#007fff' }}><br />({Object.values(pet.petStats).map((lv) => lv ? `Lv${lv}` : null).filter(_ => _).join('/')})</span>)
 
         out.push(<span style={{ color: '#7878dc' }}><br />Exp: 99.99%</span>)
@@ -347,7 +348,7 @@ function setupItem(itemElem, i18n) {
     // Rarity
 
     out.push(`\n${i18n.t("tooltip_rarity")}`);
-    out.push(<span style={{ color: Utils.getItemNameColor(itemProp) }}>{itemProp.rarity}</span>);
+    out.push(<span style={{ color: Utils.getItemNameColor(itemProp) }}><Localizer prefix="rarity_" parameter={itemProp.rarity}/></span>);
 
     // Description
 
@@ -416,7 +417,7 @@ function setupItem(itemElem, i18n) {
                 const [parameter, rateString] = key.split('.');
                 const rate = rateString === 'Y';
 
-                out.push(<span style={bonusStyle}><br />Set Effect: {parameter} +{bonus}</span>);
+                out.push(<span style={bonusStyle}><br />Set Effect: <Localizer prefix="stat_" parameter={parameter}/> +{bonus}</span>);
                 if (rate) {
                     out.push(<span style={bonusStyle}>%</span>);
                 }
@@ -456,7 +457,7 @@ function setupItem(itemElem, i18n) {
     }
 
     for (const [parameter, effect] of Object.entries(piercingBonuses)) {
-        out.push(<span style={{ color: "#d386ff" }}><br />{parameter}+{effect.add}{effect.rate && "%"}</span>);
+        out.push(<span style={{ color: "#d386ff" }}><br /><Localizer prefix="stat_" parameter={parameter}/>+{effect.add}{effect.rate && "%"}</span>);
     }
 
     // Ultimate jewels
@@ -464,7 +465,7 @@ function setupItem(itemElem, i18n) {
     for (const jewel of itemElem.ultimateJewels) {
         //#00c8ff
         for (const ability of jewel.itemProp.abilities) {
-            out.push(<span style={{ color: "#00c8ff" }}><br />{ability.parameter}+{ability.add}{ability.rate && "%"}</span>);
+            out.push(<span style={{ color: "#00c8ff" }}><br /><Localizer prefix="stat_" parameter={ability.parameter}/>+{ability.add}{ability.rate && "%"}</span>);
         }
     }
 
@@ -492,7 +493,7 @@ function setupSkill(skill, i18n) {
     }
 
     if (skill.element != "none") {
-        out.push(`\nElement: ${skill.element}`);
+        out.push(`\nElement: ${<Localizer prefix="element_" parameter={skill.element}/>}`);
     }
 
     if (levelProp.consumedMP != undefined) {
@@ -638,7 +639,7 @@ function setupSkill(skill, i18n) {
     if (levelProp.abilities != undefined) {
         for (const ability of levelProp.abilities) {
             const abilityStyle = { color: "#6161ff" };
-            out.push(<span style={abilityStyle}><br />{ability.parameter}{ability.set != undefined ? "=" : "+"}{ability.set != undefined ? ability.set : ability.add}{ability.rate && "%"}</span>);
+            out.push(<span style={abilityStyle}><br /><Localizer prefix="stat_" parameter={ability.parameter}/>{ability.set != undefined ? "=" : "+"}{ability.set != undefined ? ability.set : ability.add}{ability.rate && "%"}</span>);
         }
 
         if (levelProp.scalingParameters != undefined) {
@@ -693,9 +694,9 @@ function setupHousingNpc(housingNpc, i18n) {
     const abilityStyle = { color: "#6161ff" };
     for (const ability of housingNpc.abilities) {
         if (ability.rate) {
-            out.push(<span style={abilityStyle}><br />{ability.parameter}{"+"}{ability.add}{"%"}</span>);
+            out.push(<span style={abilityStyle}><br /><Localizer prefix="stat_" parameter={ability.parameter}/>{"+"}{ability.add}{"%"}</span>);
         } else {
-            out.push(<span style={abilityStyle}><br />{ability.parameter}{"+"}{ability.add}</span>);
+            out.push(<span style={abilityStyle}><br /><Localizer prefix="stat_" parameter={ability.parameter}/>{"+"}{ability.add}</span>);
         }
     }
 
