@@ -1,5 +1,4 @@
 import upgradeBonus from "../assets/UpgradeBonus.json";
-import * as Utils from "../flyff/flyffutils"
 
 /**
  * An instance of an in-game item.
@@ -13,10 +12,9 @@ export default class ItemElem {
     ultimateJewels = [];
     statRanges = []; // Values for item abilities when the item is ultimate with a range
     randomStats = [null, null]; // Random stats if the item has possible random stats
-    originAwake = null;
+    statAwake = [null, null];
     skillAwake = null;
     petStats = { F: 1, E: null, D: null, C: null, B: null, A: null, S: null }; // default value
-    statAwake = null;
 
 
     constructor(itemProp) {
@@ -83,8 +81,8 @@ export default class ItemElem {
             delete shrinked.randomStats;
         }
 
-        if (shrinked.originAwake === null) {
-            delete shrinked.originAwake;
+        if (shrinked.statAwake.length === 2 && shrinked.statAwake[0] === null && shrinked.statAwake[1] === null) {
+            delete shrinked.statAwake;
         }
 
         if (shrinked.skillAwake === null) {
@@ -101,9 +99,8 @@ export default class ItemElem {
     /**
      * @returns Whether or not this item can take an origin awake (of STR, etc).
      */
-    isOriginAwakeAble() {
-        return false; // TODO: Add something to the API. There are tons of combinations
-        //return this.itemProp.category == "weapon" || this.itemProp.category == "armor";
+    isStatAwakeAble() {
+        return this.itemProp.category == "weapon" || this.itemProp.category == "armor";
     }
 
     /**
@@ -118,13 +115,6 @@ export default class ItemElem {
      */
     isSkillAwakeAble() {
         return this.itemProp.category == "weapon" || this.itemProp.subcategory == "shield";
-    }
-
-    /**
-     * @returns Whether or not this item can be stat awakened.
-     */
-    isStatAwakeAble() {
-        return this.itemProp.category == "weapon" || this.itemProp.subcategory == "shield" || this.itemProp.category == "armor"; 
     }
 
     /**

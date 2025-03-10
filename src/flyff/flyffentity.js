@@ -1058,15 +1058,17 @@ export default class Entity {
                 }
             }
 
-            // statscrolls
-            if(itemElem.statAwake) {
-                for(const ability of itemElem.statAwake.abilities) {
-                    if(ability.parameter != stat || ability.rate != rate) {
-                        continue;
-                    }
-
-                    total += ability.add;
+            // Stat scrolls
+            for (const awake of itemElem.statAwake) {
+                if (awake == null) {
+                    continue;
                 }
+
+                if (!targetStats.includes(awake.parameter) || rate) {
+                    continue;
+                }
+
+                total += awake.value;
             }
         }
 

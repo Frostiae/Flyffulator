@@ -4,9 +4,9 @@ import items from "../assets/Items.json";
 import skills from "../assets/Skills.json";
 import classes from "../assets/Classes.json";
 import equipSets from "../assets/EquipSets.json";
+import statAwakes from "../assets/StatAwakes.json";
 import partySkills from "../assets/PartySkills.json";
 import upgradeBonus from "../assets/UpgradeBonus.json";
-import statAwakes from "../assets/StatAwakes.json"
 
 export const JOBS = {
     9686: 0, // Vagrant
@@ -289,6 +289,122 @@ export function getStrongElement(element) {
 }
 
 /**
+ * @param {string} otherOption The current other parameter set
+ * @param {number} itemLevel The level of the item
+ * @returns An object containing the possible options that can be set alongside the given option
+ */
+export function getPossibleStatAwakeParams(otherOption, itemLevel) {
+    if (otherOption == null || otherOption == "none") {
+        return {
+            "none": "None",
+            "str": "STR",
+            "sta": "STA",
+            "dex": "DEX",
+            "int": "INT"
+        };
+    }
+
+    const res = { "none": "None" };
+    for (const awake of statAwakes) {
+        const params = awake.abilities.map((e) => e.parameter);
+        if (!params.includes(otherOption) || params.length < 2) {
+            continue;
+        }
+
+        const p = params.find((e) => e != otherOption);
+        if (!Object.keys(res).includes(p)) {
+            res[p] = p.toUpperCase();
+
+            if (Object.keys(res).length >= 4) {
+                break;
+            }
+        }
+    }
+
+    return res;
+}
+
+/**
+ * @param {string} currentOption The current option to check allowed values for
+ * @param {string} otherOption The other option currently set
+ * @param {number} otherValue The value of the other set option
+ * @param {number} itemLevel The level of the item
+ * @returns A list of allowed values the current option can be set to
+ */
+export function getPossibleStatAwakeValues(currentOption, otherOption, otherValue, itemLevel) {
+    if (currentOption == "none") {
+        return [0];
+    }
+
+    if (otherOption == null || otherOption == "none") {
+        return [1, 2, 3, 4];
+    }
+
+    const values = [1];
+    for (const awake of statAwakes) {
+        if (awake.abilities.length != 2) {
+            continue;
+        }
+
+        const currentAbility = awake.abilities.find((e) => e.parameter == currentOption);
+        const otherAbility = awake.abilities.find((e) => e.parameter == otherOption);
+
+        if (!currentAbility || !otherAbility) {
+            continue;
+        }
+
+        if (otherAbility.add != otherValue) {
+            continue;
+        }
+
+        if (!values.includes(currentAbility.add)) {
+            values.push(currentAbility.add);
+        }
+    }
+
+    return values;
+}
+
+/**
+ * @param {ItemElem} itemElem The item with a stat awake
+ * @param {object} i18n Localization
+ * @returns A string matching the appropriate stat awake title
+ */
+export function getStatAwakeTitle(itemElem, i18n) {
+    const awakes = itemElem.statAwake.filter((e) => e);
+    if (awakes.length == 0) {
+        return "";
+    }
+
+    var shortLanguageCode = "en";
+    if (i18n.resolvedLanguage) {
+        shortLanguageCode = i18n.resolvedLanguage.split('-')[0];
+    }
+
+
+    for (const statAwake of statAwakes) {
+        if (statAwake.abilities.length != awakes.length) {
+            continue;
+        }
+
+        let match = true;
+        for (const awake of awakes) {
+            if (!statAwake.abilities.find((e) => e.parameter == awake.parameter && e.add == awake.value)) {
+                match = false;
+                break;
+            }
+        }
+
+        if (match) {
+            return statAwake.title[shortLanguageCode] ?? statAwake.title.en;
+        }
+    }
+
+    console.error("Could not find an appropriate stat awake with the chosen values.");
+    return "";
+}
+
+/**
  * Clamp a value between a minimum and maximum.
  * @param {Number} value The value to clamp.
  * @param {Number} min The minimum acceptable value.
@@ -316,39 +432,4 @@ export function getGuid() {
     return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
         (c ^ (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))).toString(16)
     );
-}
-
-/**
- * Gets the possible StatAwake Options based on the current awake
- * e.g. current is str+3, than return all options that also include str+3
- */
-export function getAvailableStatAwakeOptions(currentStatAwake, checkAddValue = true) {
-    if(currentStatAwake == null) {
-        return statAwakes;
-    }
-
-    const currentAbilitiesFormatted = currentStatAwake.abilities.filter(e => e).map((e) => `${e.parameter}${checkAddValue ? e.add : ''}${e.rate}`)
-    const possibleStatOptions = statAwakes.filter((nextStatAwake) => {
-        const nextAbilitiesFormatted = nextStatAwake.abilities.map((e) => `${e.parameter}${checkAddValue ? e.add : ''}${e.rate}`)
-        
-        for(const currentAbilityFormatted of currentAbilitiesFormatted) {
-            if(!nextAbilitiesFormatted.includes(currentAbilityFormatted)) {
-                return false;
-            }
-        }
-
-        return true;
-    })
-
-    return possibleStatOptions;
-}
-
-export function getIndexOfParameter(parameter, statAwake) {
-    for(const [index, abilitiy] of statAwake.abilities) {
-        if(abilitiy.parameter == parameter) {
-            return index;
-        }
-    }
-
-    return 0; 
 }

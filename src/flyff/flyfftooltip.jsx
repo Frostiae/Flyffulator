@@ -25,7 +25,7 @@ export function createTooltip(content, i18n) {
 
 /**
  * Get the tooltip text for the given item
- * @param {object} itemElem The item elem
+ * @param {ItemElem} itemElem The item elem
  * @param {object} i18n Localization
  */
 function setupItem(itemElem, i18n) {
@@ -59,10 +59,12 @@ function setupItem(itemElem, i18n) {
         out.push(<br />); // Line break for all the ultimate tag and jewels
     }
 
+    const statAwakeString = Utils.getStatAwakeTitle(itemElem, i18n);
+
     out.push(<span style={{
         fontWeight: 700,
         color: Utils.getItemNameColor(itemProp)
-    }}>{itemProp.name[shortLanguageCode] ?? itemProp.name.en} {itemElem.statAwake?.title[shortLanguageCode] ?? itemElem.statAwake?.title.en}</span>);
+    }}>{itemProp.name[shortLanguageCode] ?? itemProp.name.en} {statAwakeString}</span>);
 
     // TODO: Origin awakes (STA+, etc.)
 
@@ -238,13 +240,13 @@ function setupItem(itemElem, i18n) {
         }
     }
 
-    if(itemElem.statAwake != null) {
-        for(const ability of itemElem.statAwake.abilities) {
-            out.push(<span><br />{`${ability.parameter} +${ability.add}`}</span>)
+    for (const statAwake of itemElem.statAwake) {
+        if (statAwake != null) {
+            out.push(`\n${statAwake.parameter} +${statAwake.value}`);
         }
     }
 
-    // Jewelry stats
+    // Jewelery stats
 
     if (itemProp.category == "jewelry" && itemProp.upgradeLevels != undefined) {
         const abilityStyle = { color: "#ffeaa1" };
