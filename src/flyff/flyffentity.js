@@ -434,8 +434,37 @@ export default class Entity {
             return false;
         }
 
-        if (skillProp.weapon != undefined && this.equipment.mainhand.itemProp.subcategory != skillProp.weapon) {
-            return false;
+        if (skillProp.weapon != undefined) {
+            switch (skillProp.weapon) {
+                case "enchantedweapon":
+                    if (this.equipment.mainhand.itemProp.category != "weapon") {
+                        return false;
+                    }
+                    break;
+                case "shield":
+                    if (!this.equipment.offhand ||
+                        this.equipment.offhand.itemProp.subcategory != "shield") {
+                        return false;
+                    }
+                    break;
+                case "wandorstaff":
+                    if (this.equipment.mainhand.itemProp.subcategory != "wand" &&
+                        this.equipment.mainhand.itemProp.subcategory != "staff") {
+                        return false;
+                    }
+                    break;
+                case "yoyoorbow":
+                    if (this.equipment.mainhand.itemProp.subcategory != "yoyo" &&
+                        this.equipment.mainhand.itemProp.subcategory != "bow") {
+                        return false;
+                    }
+                    break;
+                default:
+                    if (this.equipment.mainhand.itemProp.subcategory != skillProp.weapon) {
+                        return false;
+                    }
+                    break;
+            }
         }
 
         if (skillProp.requirements != undefined) {
