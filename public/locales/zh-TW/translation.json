@@ -53,7 +53,12 @@
     "search_personal_housing_npc": "個人小屋 NPC",
     "search_couple_housing_npc": "情侶小屋 NPC",
     "search_guild_housing_npc": "公會小屋 NPC",
-    "enable_swordcross": "啟用 Swordcross",
-    "enable_waterbomb": "啟用 Waterbomb",
-    "enable_lifesteal": "啟用 Lifesteal"
+    "enable_swordcross": "使用 劍光交錯 Swordcross",
+    "enable_waterbomb": "使用 水炸彈 Waterbomb",
+    "enable_lifesteal": "使用 生命偷取 Lifesteal",
+    "enable_missing": "使用 閃避 Missing",
+    "enable_blocking": "使用 格檔 Blocking",
+    "enable_party_leader": "劇團團長",
+    "your_health": "你的生命值",
+    "target_health": "目標的生命值"
 }

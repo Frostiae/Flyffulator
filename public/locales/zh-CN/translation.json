@@ -53,7 +53,12 @@
     "search_personal_housing_npc": "个人小屋 NPC",
     "search_couple_housing_npc": "情侣小屋 NPC",
     "search_guild_housing_npc": "公会小屋 NPC",
-    "enable_swordcross": "启用 刺伤",
-    "enable_waterbomb": "启用 水弹",
-    "enable_lifesteal": "启用 生命吸取"
+    "enable_swordcross": "使用 刺伤",
+    "enable_waterbomb": "使用 水弹",
+    "enable_lifesteal": "使用 生命吸取",
+    "enable_missing": "使用 闪避",
+    "enable_blocking": "使用 格档",
+    "enable_party_leader": "剧团团长",
+    "your_health": "你的生命值",
+    "target_health": "目标的生命值"
 }
