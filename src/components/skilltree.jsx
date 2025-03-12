@@ -126,7 +126,8 @@ function SkillTree() {
             1029, // cannon ball
             6858, // accuracy
             579,  // protect
-            9047 // spirit fortune
+            9047, // spirit fortune
+            6845  // geburah tiphreth
         ];
 
         for (const id of buffs) {
