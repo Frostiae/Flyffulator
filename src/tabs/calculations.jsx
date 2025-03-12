@@ -226,13 +226,13 @@ function Calculations() {
     return (
         <div id="calculations">
             <div id="basic-stats">
-                <BasicStat title={"Stamina"} value={Context.player.getBaseStat("sta")}
-                    information={"This is your total stamina, including any bonuses from equipment or elsewhere."}
+                <BasicStat title={"Strength"} value={Context.player.getBaseStat("str")}
+                    information={"This is your total strength, including any bonuses from equipment or elsewhere."}
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L290"}
                 />
 
-                <BasicStat title={"Strength"} value={Context.player.getBaseStat("str")}
-                    information={"This is your total strength, including any bonuses from equipment or elsewhere."}
+                <BasicStat title={"Stamina"} value={Context.player.getBaseStat("sta")}
+                    information={"This is your total stamina, including any bonuses from equipment or elsewhere."}
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L290"}
                 />
 
