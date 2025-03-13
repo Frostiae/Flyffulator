@@ -52,8 +52,11 @@ function Slot({ backgroundIcon, content, className, onRemove }, ref) {
         content != null &&
         <>
           {
-            (content.itemProp != undefined && content.passive == undefined) ? 
+            (content.itemProp != undefined && content.passive == undefined) ?
             <img src={`https://api.flyff.com/image/item/${content.itemProp.icon}`} draggable={false} id="slot-content" />
+            :
+            (content.skillProp != undefined) ?
+            <img src={`https://api.flyff.com/image/skill/colored/${content.skillProp.icon}`} draggable={false} id="slot-content" />
             :
             <img src={`https://api.flyff.com/image/skill/colored/${content.icon}`} draggable={false} id="slot-content" />
           }

@@ -8,6 +8,7 @@ import NumberInput from "./numberinput";
 import Context from "../flyff/flyffcontext";
 import SkillTreeIcon from "./skilltreeicon";
 import * as Utils from "../flyff/flyffutils";
+import SkillElem from "../flyff/flyffskillelem";
 
 function SkillTree() {
     const { showSearch } = useSearch();
@@ -158,8 +159,8 @@ function SkillTree() {
         setRefresh(!refresh);
     }
 
-    function removeSkill(skill) {
-        delete Context.player.activeBuffs[skill.id];
+    function removeSkill(skillElem) {
+        delete Context.player.activeBuffs[skillElem.skillProp.id];
         setRefresh(!refresh);
     }
 
@@ -207,7 +208,7 @@ function SkillTree() {
                                                 <SkillTreeIcon
                                                     clickHandle={(e) => clickSkill(skill, 1, e)}
                                                     rightClickHandle={(e) => clickSkill(skill, -1, e)}
-                                                    skill={skill}
+                                                    skillElem={new SkillElem(skill)}
                                                     key={skill.id}
                                                     disabled={!Context.player.canUseSkill(skill)}
                                                     level={Context.player.getSkillLevel(skill.id)}
@@ -293,7 +294,7 @@ function SkillTree() {
                 <div className="buffs-container">
                     {
                         Object.entries(Context.player.activeBuffs).map(([id,]) =>
-                            <Slot key={id} className={"slot-skill"} content={Utils.getSkillById(id)} onRemove={removeSkill} />
+                            <Slot key={id} className={"slot-skill"} content={new SkillElem(Utils.getSkillById(id), true)} onRemove={removeSkill} />
                         )
                     }
                 </div>

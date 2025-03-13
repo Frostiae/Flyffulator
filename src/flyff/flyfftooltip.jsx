@@ -1,5 +1,6 @@
 import * as Utils from "../flyff/flyffutils";
 import ItemElem from "../flyff/flyffitemelem";
+import SkillElem from "../flyff/flyffskillelem";
 import Context from "../flyff/flyffcontext";
 
 /**
@@ -12,7 +13,7 @@ export function createTooltip(content, i18n) {
     if (content instanceof ItemElem) {
         return setupItem(content, i18n);
     }
-    else if (content.passive != undefined) {
+    else if (content instanceof SkillElem) {
         return setupSkill(content, i18n);
     }
     else if (content.consumedPoints != undefined) {
@@ -475,17 +476,20 @@ function setupItem(itemElem, i18n) {
 
 /**
  * Get the tooltip text for the given skill
- * @param {object} skill The skill property
+ * @param {SkillElem} skillElem The skill elem
  * @param {I18n} i18n Localization
  */
-function setupSkill(skill, i18n) {
+function setupSkill(skillElem, i18n) {
     const out = [];
+    const skill = skillElem.skillProp
     var shortLanguageCode = "en";
     if (i18n.resolvedLanguage) {
         shortLanguageCode = i18n.resolvedLanguage.split('-')[0];
     }
 
-    const skillLevel = Context.player.skillLevels[skill.id];
+    const isFromBuffer = skillElem.isFromBuffer;
+
+    const skillLevel = isFromBuffer ? Context.player.activeBuffs[skill.id] : Context.player.skillLevels[skill.id];
     const levelProp = skillLevel != undefined ? skill.levels[skillLevel - 1] : skill.levels[0];
 
     out.push(<span style={{ color: "#2fbe6d", fontWeight: 600 }}>{skill.name[shortLanguageCode] ?? skill.name.en}</span>);
@@ -505,23 +509,25 @@ function setupSkill(skill, i18n) {
         out.push(`\nFP: ${levelProp.consumedFP}`);
     }
 
-    for (const requirement of skill.requirements) {
-        const req = Utils.getSkillById(requirement.skill);
-        const playerLevel = Context.player.skillLevels[requirement.skill];
+    if (!isFromBuffer) {
+        for (const requirement of skill.requirements) {
+            const req = Utils.getSkillById(requirement.skill);
+            const playerLevel = Context.player.skillLevels[requirement.skill];
 
-        if (playerLevel == undefined || playerLevel < requirement.level) {
-            out.push(<span style={{ color: "#ff0000" }}><br />{req.name[shortLanguageCode] ?? req.name.en} skill level {requirement.level} is needed.</span>);
+            if (playerLevel == undefined || playerLevel < requirement.level) {
+                out.push(<span style={{ color: "#ff0000" }}><br />{req.name[shortLanguageCode] ?? req.name.en} skill level {requirement.level} is needed.</span>);
+            }
+            else {
+                out.push(`\n${req.name[shortLanguageCode] ?? req.name.en} skill level ${requirement.level} is needed.`);
+            }
+        }
+
+        if (Context.player.level < skill.level) {
+            out.push(<span style={{ color: "#ff0000" }}><br />Character Level: {skill.level}</span>);
         }
         else {
-            out.push(`\n${req.name[shortLanguageCode] ?? req.name.en} skill level ${requirement.level} is needed.`);
+            out.push(`\nCharacter Level: ${skill.level}`);
         }
-    }
-
-    if (Context.player.level < skill.level) {
-        out.push(<span style={{ color: "#ff0000" }}><br />Character Level: {skill.level}</span>);
-    }
-    else {
-        out.push(`\nCharacter Level: ${skill.level}`);
     }
 
     const statsStyle = { fontWeight: 800 };
@@ -536,7 +542,10 @@ function setupSkill(skill, i18n) {
     if (levelProp.scalingParameters != undefined) {
         for (const scale of levelProp.scalingParameters) {
             if (scale.parameter == "attack" && scale.maximum == undefined) {
-                out.push(<span style={statsStyle}><br />Attack Scaling: {scale.stat} x {scale.scale}</span>);
+                let pveOrPvp = (scale.pvp != undefined && scale.pve != undefined)
+                    ? (scale.pvp && !scale.pve ? " (PVP)" : !scale.pvp && scale.pve ? " (PVE)" : "")
+                    : "";
+                out.push(<span style={statsStyle}><br />Attack Scaling{pveOrPvp}: {scale.stat} x {scale.scale}</span>);
             }
         }
     }
@@ -640,7 +649,34 @@ function setupSkill(skill, i18n) {
     if (levelProp.abilities != undefined) {
         for (const ability of levelProp.abilities) {
             const abilityStyle = { color: "#6161ff" };
-            out.push(<span style={abilityStyle}><br />{ability.parameter}{ability.set != undefined ? "=" : "+"}{ability.set != undefined ? ability.set : ability.add}{ability.rate && "%"}</span>);
+            let add = 0;
+            if (isFromBuffer && levelProp.scalingParameters != undefined) {
+                for (const scale of levelProp.scalingParameters) {
+                    if (scale.parameter == ability.parameter && scale.maximum != undefined) {
+                        if (scale.stat == "int") {
+                            add += Math.floor(Math.min(Context.player.bufferInt * scale.scale, scale.maximum));
+                        }
+                        else if (scale.stat == "str") {
+                            add += Math.floor(Math.min(Context.player.bufferStr * scale.scale, scale.maximum));
+                        }
+                        else if (scale.stat == "sta") {
+                            add += Math.floor(Math.min(Context.player.bufferSta * scale.scale, scale.maximum));
+                        }
+                        else if (scale.stat == "dex") {
+                            add += Math.floor(Math.min(Context.player.bufferDex * scale.scale, scale.maximum));
+                        }
+                    }
+                }
+            }
+            let pveOrPvp = (ability.pvp != undefined && ability.pve != undefined)
+                ? (ability.pvp && !ability.pve ? " (PVP)" : !ability.pvp && ability.pve ? " (PVE)" : "")
+                : "";
+            ability.parameter == "attribute" ?
+                out.push(<span style={abilityStyle}><br />{ability.attribute}</span>) :
+                out.push(<span style={abilityStyle}><br />{ability.parameter}{ability.set != undefined ? "=" : ability.add && ability.add > 0 ? "+" : ""}{ability.set != undefined ? ability.set : ability.add && ability.add + add}{ability.rate && "%"}{pveOrPvp}</span>);
+            if (add > 0) {
+                out.push(<span style={{ color: "#ffaa00" }}> ({ability.add}+{add})</span>);
+            }
         }
 
         if (levelProp.scalingParameters != undefined) {
