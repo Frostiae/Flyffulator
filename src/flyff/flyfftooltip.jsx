@@ -14,7 +14,12 @@ export function createTooltip(content, i18n) {
         return setupItem(content, i18n);
     }
     else if (content instanceof SkillElem) {
-        return setupSkill(content, i18n);
+        if (content.isFromBuffer){
+            return setupSkillFromBuffer(content.skillProp, i18n);
+        }
+        else {
+            return setupSkill(content.skillProp, i18n);
+        }
     }
     else if (content.consumedPoints != undefined) {
         return setupPartySkill(content, i18n);
@@ -476,20 +481,17 @@ function setupItem(itemElem, i18n) {
 
 /**
  * Get the tooltip text for the given skill
- * @param {SkillElem} skillElem The skill elem
+ * @param {object} skill The skill property
  * @param {I18n} i18n Localization
  */
-function setupSkill(skillElem, i18n) {
+function setupSkill(skill, i18n) {
     const out = [];
-    const skill = skillElem.skillProp
     var shortLanguageCode = "en";
     if (i18n.resolvedLanguage) {
         shortLanguageCode = i18n.resolvedLanguage.split('-')[0];
     }
 
-    const isFromBuffer = skillElem.isFromBuffer;
-
-    const skillLevel = isFromBuffer ? Context.player.activeBuffs[skill.id] : Context.player.skillLevels[skill.id];
+    const skillLevel = Context.player.skillLevels[skill.id];
     const levelProp = skillLevel != undefined ? skill.levels[skillLevel - 1] : skill.levels[0];
 
     out.push(<span style={{ color: "#2fbe6d", fontWeight: 600 }}>{skill.name[shortLanguageCode] ?? skill.name.en}</span>);
@@ -509,25 +511,23 @@ function setupSkill(skillElem, i18n) {
         out.push(`\nFP: ${levelProp.consumedFP}`);
     }
 
-    if (!isFromBuffer) {
-        for (const requirement of skill.requirements) {
-            const req = Utils.getSkillById(requirement.skill);
-            const playerLevel = Context.player.skillLevels[requirement.skill];
+    for (const requirement of skill.requirements) {
+        const req = Utils.getSkillById(requirement.skill);
+        const playerLevel = Context.player.skillLevels[requirement.skill];
 
-            if (playerLevel == undefined || playerLevel < requirement.level) {
-                out.push(<span style={{ color: "#ff0000" }}><br />{req.name[shortLanguageCode] ?? req.name.en} skill level {requirement.level} is needed.</span>);
-            }
-            else {
-                out.push(`\n${req.name[shortLanguageCode] ?? req.name.en} skill level ${requirement.level} is needed.`);
-            }
-        }
-
-        if (Context.player.level < skill.level) {
-            out.push(<span style={{ color: "#ff0000" }}><br />Character Level: {skill.level}</span>);
+        if (playerLevel == undefined || playerLevel < requirement.level) {
+            out.push(<span style={{ color: "#ff0000" }}><br />{req.name[shortLanguageCode] ?? req.name.en} skill level {requirement.level} is needed.</span>);
         }
         else {
-            out.push(`\nCharacter Level: ${skill.level}`);
+            out.push(`\n${req.name[shortLanguageCode] ?? req.name.en} skill level ${requirement.level} is needed.`);
         }
+    }
+
+    if (Context.player.level < skill.level) {
+        out.push(<span style={{ color: "#ff0000" }}><br />Character Level: {skill.level}</span>);
+    }
+    else {
+        out.push(`\nCharacter Level: ${skill.level}`);
     }
 
     const statsStyle = { fontWeight: 800 };
@@ -649,8 +649,59 @@ function setupSkill(skillElem, i18n) {
     if (levelProp.abilities != undefined) {
         for (const ability of levelProp.abilities) {
             const abilityStyle = { color: "#6161ff" };
+            let pveOrPvp = (ability.pvp != undefined && ability.pve != undefined)
+                ? (ability.pvp && !ability.pve ? " (PVP)" : !ability.pvp && ability.pve ? " (PVE)" : "")
+                : "";
+            ability.parameter == "attribute" ?
+                out.push(<span style={abilityStyle}><br />{ability.attribute}</span>) :
+                out.push(<span style={abilityStyle}><br />{ability.parameter}{ability.set != undefined ? "=" : ability.add && ability.add > 0 ? "+" : ""}{ability.set != undefined ? ability.set : ability.add && ability.add}{ability.rate && "%"}{pveOrPvp}</span>);
+        }
+
+        if (levelProp.scalingParameters != undefined) {
+            for (const ability of levelProp.abilities) {
+                for (const scale of levelProp.scalingParameters) {
+                    if (scale.parameter == ability.parameter && scale.maximum != undefined) {
+                        out.push(<span style={{ color: "#ffaa00" }}><br />
+                            {scale.parameter} Scaling: +{scale.scale * 25}{ability.rate && "%"} per 25 {scale.stat} (max {scale.maximum}{ability.rate && "%"})
+                        </span>);
+                    }
+                }
+            }
+        }
+    }
+
+    out.push(`\n${skill.description[shortLanguageCode] ?? skill.description.en}`);
+
+    return (<div>{out.map((v, i) => <span key={i}>{v}</span>)}</div>);
+}
+
+/**
+ * Get the tooltip text for the given skill from buffer
+ * @param {object} skill The skill property
+ * @param {I18n} i18n Localization
+ */
+function setupSkillFromBuffer(skill, i18n){
+    const out = [];
+    var shortLanguageCode = "en";
+    if (i18n.resolvedLanguage) {
+        shortLanguageCode = i18n.resolvedLanguage.split('-')[0];
+    }
+
+    const skillLevel = Context.player.activeBuffs[skill.id];
+    const levelProp = skillLevel != undefined ? skill.levels[skillLevel - 1] : skill.levels[0];
+
+    out.push(<span style={{ color: "#2fbe6d", fontWeight: 600 }}>{skill.name[shortLanguageCode] ?? skill.name.en}</span>);
+    if (skillLevel != undefined) {
+        out.push(`  Lv. ${skillLevel}`);
+    }
+
+    out.push(`\n${skill.description[shortLanguageCode] ?? skill.description.en}`);
+
+    if (levelProp.abilities != undefined) {
+        for (const ability of levelProp.abilities) {
+            const abilityStyle = { color: "#6161ff" };
             let add = 0;
-            if (isFromBuffer && levelProp.scalingParameters != undefined) {
+            if (levelProp.scalingParameters != undefined) {
                 for (const scale of levelProp.scalingParameters) {
                     if (scale.parameter == ability.parameter && scale.maximum != undefined) {
                         if (scale.stat == "int") {
@@ -678,21 +729,32 @@ function setupSkill(skillElem, i18n) {
                 out.push(<span style={{ color: "#ffaa00" }}> ({ability.add}+{add})</span>);
             }
         }
+    }
 
+    if (levelProp.duration != undefined) {
+        let duration = levelProp.duration;
         if (levelProp.scalingParameters != undefined) {
-            for (const ability of levelProp.abilities) {
-                for (const scale of levelProp.scalingParameters) {
-                    if (scale.parameter == ability.parameter && scale.maximum != undefined) {
-                        out.push(<span style={{ color: "#ffaa00" }}><br />
-                            {scale.parameter} Scaling: +{scale.scale * 25}{ability.rate && "%"} per 25 {scale.stat} (max {scale.maximum}{ability.rate && "%"})
-                        </span>);
+            for (const scale of levelProp.scalingParameters) {
+                if (scale.parameter == "duration") {
+                    if (scale.stat == "int") {
+                        duration += Math.floor(Context.player.bufferInt * scale.scale);
+                    }
+                    else if (scale.stat == "str") {
+                        duration += Math.floor(Context.player.bufferStr * scale.scale);
+                    }
+                    else if (scale.stat == "sta") {
+                        duration += Math.floor(Context.player.bufferSta * scale.scale);
+                    }
+                    else if (scale.stat == "dex") {
+                        duration += Math.floor(Context.player.bufferDex * scale.scale);
                     }
                 }
             }
         }
+        const secs = duration % 60;
+        const mins = Math.floor(duration / 60);
+        out.push(<span><br/>{String(mins).padStart(2, "0")}:{String(secs).padStart(2, "0")}</span>);
     }
-
-    out.push(`\n${skill.description[shortLanguageCode] ?? skill.description.en}`);
 
     return (<div>{out.map((v, i) => <span key={i}>{v}</span>)}</div>);
 }
