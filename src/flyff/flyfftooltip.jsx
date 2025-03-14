@@ -722,9 +722,12 @@ function setupSkillFromBuffer(skill, i18n){
             let pveOrPvp = (ability.pvp != undefined && ability.pve != undefined)
                 ? (ability.pvp && !ability.pve ? " (PVP)" : !ability.pvp && ability.pve ? " (PVE)" : "")
                 : "";
-            ability.parameter == "attribute" ?
-                out.push(<span style={abilityStyle}><br />{ability.attribute}</span>) :
+            if (ability.parameter == "attribute") {
+                out.push(<span style={abilityStyle}><br />{ability.attribute}</span>);
+            }
+            else {
                 out.push(<span style={abilityStyle}><br />{ability.parameter}{ability.set != undefined ? "=" : ability.add && ability.add > 0 ? "+" : ""}{ability.set != undefined ? ability.set : ability.add && ability.add + add}{ability.rate && "%"}{pveOrPvp}</span>);
+            }
             if (add > 0) {
                 out.push(<span style={{ color: "#ffaa00" }}> ({ability.add}+{add})</span>);
             }
@@ -751,9 +754,15 @@ function setupSkillFromBuffer(skill, i18n){
                 }
             }
         }
+        const hours = Math.floor(duration / 3600);
+        const mins = Math.floor((duration % 3600) / 60);
         const secs = duration % 60;
-        const mins = Math.floor(duration / 60);
-        out.push(<span><br/>{String(mins).padStart(2, "0")}:{String(secs).padStart(2, "0")}</span>);
+        if (hours > 0) {
+            out.push(<span><br/>{String(hours).padStart(2, "0")}:{String(mins).padStart(2, "0")}:{String(secs).padStart(2, "0")}</span>);
+        }
+        else {
+            out.push(<span><br/>{String(mins).padStart(2, "0")}:{String(secs).padStart(2, "0")}</span>);
+        }
     }
 
     return (<div>{out.map((v, i) => <span key={i}>{v}</span>)}</div>);
@@ -773,6 +782,12 @@ function setupPartySkill(partySkill, i18n) {
 
     out.push(<span style={{ color: "#2fbe6d", fontWeight: 600 }}>{partySkill.name[shortLanguageCode] ?? partySkill.name.en}</span>);
     out.push(`\n${partySkill.description[shortLanguageCode] ?? partySkill.description.en}`)
+
+    if (partySkill.duration != undefined) {
+        const mins = Math.floor(partySkill.duration / 60);
+        const secs = partySkill.duration % 60;
+        out.push(<span><br/>{String(mins).padStart(2, "0")}:{String(secs).padStart(2, "0")}</span>);
+    }
 
     return (<div>{out.map((v, i) => <span key={i}>{v}</span>)}</div>);
 }
