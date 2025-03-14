@@ -60,5 +60,6 @@
     "enable_blocking": "Blocking enabled",
     "enable_party_leader": "Party Leader enabled",
     "your_health": "Your health",
-    "target_health": "Target health"
+    "target_health": "Target health",
+    "achievement_attack_bonus": "Achievements: Attack rate on target(s)"
 }

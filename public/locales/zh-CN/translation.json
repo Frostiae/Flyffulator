@@ -60,5 +60,6 @@
     "enable_blocking": "使用 格档",
     "enable_party_leader": "剧团团长",
     "your_health": "你的生命值",
-    "target_health": "目标的生命值"
+    "target_health": "目标的生命值",
+    "achievement_attack_bonus": "成就: 对目标攻击力增加"
 }
