@@ -249,7 +249,10 @@ function getAttackMultiplier() {
         }
     }
 
-    // Achievement bonus is here
+    // Achievement bonus
+    if (Context.attacker.isPlayer() && Context.defender.isMonster()) {
+        sumPower += Context.settings.achievementAttackBonus;
+    }
 
     let factor = 1 + sumPower / 100;
 

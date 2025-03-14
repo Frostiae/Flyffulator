@@ -60,5 +60,6 @@
     "enable_blocking": "使用 格檔 Blocking",
     "enable_party_leader": "劇團團長",
     "your_health": "你的生命值",
-    "target_health": "目標的生命值"
+    "target_health": "目標的生命值",
+    "achievement_attack_bonus": "成就: 對目標攻擊力增加"
 }
