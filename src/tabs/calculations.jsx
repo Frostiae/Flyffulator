@@ -274,14 +274,23 @@ function Calculations() {
 
                 <BasicStat title={"Jump Height"} value={(Context.player.getStat("jumpheight", false) + 200) / 2}
                     information={"This is your current jumping height factor."}
-                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L735"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935"}
                     percentage
                 />
 
                 <BasicStat title={"Casting Speed"} value={100 + Context.player.getStat("decreasedcastingtime", true)}
                     information={"This is your current casting speed bonus. Casting speed affects how long it takes you to cast magic skills."}
-                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L735"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935"}
                     percentage
+                />
+
+                <BasicStat
+                    title='Healing'
+                    value={Context.player.getStat("healing", true)}
+                    information='This value increases the amount of healing done by your healing skills.'
+                    sourceLink='https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935'
+                    percentage
+                    optional
                 />
 
                 <hr />
@@ -293,20 +302,23 @@ function Calculations() {
 
                 <BasicStat title={"Skill Damage"} value={Context.player.getStat("skilldamage", true)}
                     information={"This value is a bonus multiplier for your skill damage."}
-                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L735"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935"}
                     percentage
+                    optional
                 />
 
                 <BasicStat title={"PvE Damage"} value={Context.player.getStat("pvedamage", true)}
                     information={"This value is a bonus multiplier for your damage against monsters."}
-                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L735"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935"}
                     percentage
+                    optional
                 />
 
                 <BasicStat title={"PvP Damage"} value={Context.player.getStat("pvpdamage", true)}
                     information={"This value is a bonus multiplier for your damage against other players."}
-                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L735"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935"}
                     percentage
+                    optional
                 />
 
                 <BasicStat title={"Attack Speed"} value={Math.floor(Context.player.getAttackSpeed() * 100) / 2}
@@ -329,14 +341,15 @@ function Calculations() {
 
                 <BasicStat title={"Critical Damage"} value={Context.player.getStat("criticaldamage", true)}
                     information={"This value is a bonus multiplier on your critical hits' damage."}
-                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L735"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935"}
                     percentage
                 />
 
                 <BasicStat title={"Block Penetration"} value={Context.player.getStat("blockpenetration", true)}
                     information={"This value lowers your target's chance to block your auto attacks.\n\nThis is a factor, meaning that 50% block penetration will lower your target's block chance by 50%, leaving them with half of what they would have otherwise."}
-                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L735"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935"}
                     percentage
+                    optional
                 />
 
                 <hr />
@@ -351,13 +364,47 @@ function Calculations() {
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/tabs/calculations.jsx#L166"}
                 />
 
+                <BasicStat
+                    title='Magic Resistance'
+                    value={Context.player.getStat('magicdefense', true)}
+                    information='This value reduces magic damage received by this percentage.'
+                    sourceLink='https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935'
+                    percentage
+                    optional
+                />
+
                 <BasicStat title={"Critical Resist"} value={Context.player.getStat("criticalresist", true)}
                     information={"This value lowers your target's chance to land critical hits against you.\n\nThis is a factor, meaning that 50% critical resist will leave your target with 50% of their original critical chance."}
-                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L735"}
+                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935"}
                     percentage
                 />
 
-                {/* TODO: There are some stats missing here like PVP damage, incoming damage, etc */}
+                <BasicStat
+                    title='Incoming Damage'
+                    value={Context.player.getStat("incomingdamage", true)}
+                    information='This value multiplies the amount of damage you take. Negative values reduce the amount of damage you take.'
+                    sourceLink='https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935'
+                    percentage
+                    optional
+                />
+
+                <BasicStat
+                    title='PvE Damage Reduction'
+                    value={Context.player.getStat('pvedamagereduction', true)}
+                    information='This value reduces the amount of damage you take from monsters.'
+                    sourceLink='https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935'
+                    percentage
+                    optional
+                />
+
+                <BasicStat
+                    title='PvP Damage Reduction'
+                    value={Context.player.getStat('pvpdamagereduction', true)}
+                    information='This value reduces the amount of damage you take from other players.'
+                    sourceLink='https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935'
+                    percentage
+                    optional
+                />
 
                 <BasicStat title={"Parry"} value={Context.player.getParry()}
                     information={"This is your parry."}
