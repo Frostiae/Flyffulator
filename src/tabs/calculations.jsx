@@ -11,6 +11,7 @@ import HoverInfo from '../components/hoverinfo';
 import LineChart from '../components/linechart';
 import BasicStat from '../components/basicstat';
 import NumberInput from '../components/numberinput';
+import RangeInput from '../components/rangeinput';
 import ImportCharacter from '../components/importcharacter';
 
 function Calculations() {
@@ -480,6 +481,11 @@ function Calculations() {
                         </div>
                     }
 
+                </div>
+
+                <div className="row" style={{marginBottom: "20px"}}>
+                    <span>{t("achievement_attack_bonus")}</span>
+                    <RangeInput min={0} max={15} onChange={(v) => setSetting("achievementAttackBonus", v)} value={Context.settings.achievementAttackBonus} isRange={true} step={3}/>
                 </div>
 
                 <div className="column" style={{width: "fit-content"}}>

@@ -4,7 +4,7 @@ import * as Utils from "./flyffutils";
 /**
  * Context for all calculations, such as the current player, the target, and more.
  */
-export default class Context 
+export default class Context
 {
     /**
      * The current player.
@@ -47,7 +47,8 @@ export default class Context
         blockingEnabled: true,
         partyLeaderEnabled: true,
         playerHealthPercent: 100,
-        targetHealthPercent: 100
+        targetHealthPercent: 100,
+        achievementAttackBonus: 0
     };
 
     static isPVP() {
