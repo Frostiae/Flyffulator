@@ -269,6 +269,25 @@ function getAttackMultiplier() {
     return factor;
 }
 
+function getElementAdditionalAttack(leftHand) {
+    let plusAttack = 0;
+    if (leftHand && Context.attacker.attackResistLeft != 255) {
+        plusAttack = 2000;
+    }
+    else if (Context.attacker.attackResistRight != 255) {
+        plusAttack = 2000;
+    }
+    return plusAttack;
+}
+
+function getElementAdditionalDefense() {
+    let plusDefense = 0;
+    if (Context.defender.defenseResist != 255) {
+        plusDefense = 2000;
+    }
+    return plusDefense;
+}
+
 function applyDefense(attack) {
     // Monster attacks are always reduced by level difference.
     if (!Context.isSkillAttack() && Context.attacker.isMonster() && Context.defender.isPlayer()) {
@@ -440,6 +459,7 @@ function getElementDamageFactorAutoAttack() {
         }
 
         // TODO: Element upcuts here I think
+        plusAttack = getElementAdditionalAttack(leftHanded);
     }
     else {
         attackType = Context.attacker.monsterProp.element;
@@ -457,6 +477,7 @@ function getElementDamageFactorAutoAttack() {
         }
 
         // TODO: Def element upcut or something idk
+        plusDefense = getElementAdditionalDefense();
     }
     else {
         defenseType = Context.defender.monsterProp.element;
@@ -466,16 +487,6 @@ function getElementDamageFactorAutoAttack() {
     if (attackType == "none" && defenseType == "none") {
         return attackFactor;
     }
-
-    // Element to index
-    const indices = {
-        "none": 0,
-        "fire": 1,
-        "water": 2,
-        "electricity": 3,
-        "wind": 4,
-        "earth": 5
-    };
 
     const relations = {
         None: 0, // One has no element
@@ -493,7 +504,7 @@ function getElementDamageFactorAutoAttack() {
         [relations.None, relations.None, relations.None, relations.Strong, relations.Weak, relations.Same]
     ];
 
-    const result = table[indices[attackType]][indices[defenseType]];
+    const result = table[Utils.ELEMENT_PROP_TYPE[attackType]][Utils.ELEMENT_PROP_TYPE[defenseType]];
 
     let factor = 0;
     let level = 0;

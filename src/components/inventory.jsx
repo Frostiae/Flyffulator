@@ -44,6 +44,7 @@ function Inventory({ onSelectItem }) {
   }
 
   function removeItem(slot) {
+    Context.player.doSMItemUnEquip(Context.player.equipment[slot]);
     if (slot == "mainhand") {
       Context.player.equipment[slot] = Utils.DEFAULT_WEAPON;
     }

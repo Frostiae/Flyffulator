@@ -7,6 +7,7 @@ import Dropdown from './dropdown';
 import RangeInput from './rangeinput';
 import NumberInput from './numberinput';
 import * as Utils from '../flyff/flyffutils';
+import Context from "../flyff/flyffcontext";
 import blessings from '../assets/Blessings.json';
 import skillAwakes from '../assets/SkillAwakes.json';
 
@@ -201,6 +202,10 @@ function ItemEdit({ itemElem }) {
     };
 
     function setElement(option) {
+        if (option == "none" || itemElem.element != option) {
+            Context.player.doSMItemUnEquip(itemElem);
+        }
+
         itemElem.element = option;
 
         if (option == "none") {
@@ -210,6 +215,25 @@ function ItemEdit({ itemElem }) {
         setState(!state);
     }
 
+    function setElementalStoneSlot() {
+        const stoneMap = {
+            fire: { weapon: 8241, suit: 2972 },
+            water: { weapon: 2541, suit: 7785 },
+            electricity: { weapon: 547, suit: 706 },
+            wind: { weapon: 5088, suit: 9041 },
+            earth: { weapon: 4053, suit: 8738 }
+        };
+        const stoneId = stoneMap[itemElem.element]
+            ? (itemElem.itemProp.category === "weapon" ? stoneMap[itemElem.element].weapon : stoneMap[itemElem.element].suit)
+            : undefined;
+        showSearch({
+            type: "item", subcategory: "specialstone", searchByStats: true, id: stoneId, onSet: (stone) => {
+                itemElem.elementalStone = stone;
+                Context.player.doSMItemEquip(itemElem);
+            }
+        });
+    }
+
     function setUpgradeLevel(level) {
         itemElem.upgradeLevel = level;
         setState(!state);
@@ -217,6 +241,9 @@ function ItemEdit({ itemElem }) {
 
     function setElementUpgradeLevel(level) {
         itemElem.elementUpgradeLevel = level;
+        if (itemElem.elementUpgradeLevel == 0){
+            Context.player.doSMItemUnEquip(itemElem);
+        }
         setState(!state);
     }
 
@@ -232,6 +259,11 @@ function ItemEdit({ itemElem }) {
 
     function clearPiercing(i) {
         itemElem.piercings.splice(i, 1);
+        setState(!state);
+    }
+
+    function clearElementalStone() {
+        Context.player.doSMItemUnEquip(itemElem);
         setState(!state);
     }
 
@@ -368,6 +400,18 @@ function ItemEdit({ itemElem }) {
                     <Dropdown options={possibleElementValues} onSelectionChanged={setElement} valueKey={itemElem.element} />
                     <div className="row">
                         <NumberInput disabled={itemElem.element == "none"} hasButtons min={0} max={10} value={itemElem.elementUpgradeLevel} onChange={setElementUpgradeLevel} label={"+"} />
+                    </div>
+                </div>
+            }
+
+            {
+                itemElem.isElementalStoneAble() && itemElem.element != "none" && itemElem.elementUpgradeLevel >= 1 &&
+                <div className="column">
+                    <h3>Elemental Stone</h3>
+                    <div className="row">
+                        <div onClick={() => setElementalStoneSlot()}>
+                            <Slot className={"slot-item slot-editable"} content={itemElem.elementalStone} onRemove={() => clearElementalStone()} />
+                        </div>
                     </div>
                 </div>
             }

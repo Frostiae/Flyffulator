@@ -48,6 +48,9 @@ export default class Entity {
     bufferDex = 15;
     bufferInt = 15;
     activePartyMembers = 8;
+    attackResistLeft = 255;
+    attackResistRight = 255;
+    defenseResist = 255;
 
     constructor(monsterProp) {
         this.monsterProp = monsterProp;
@@ -80,6 +83,9 @@ export default class Entity {
             activeItems,
             job,
             equipment,
+            attackResistLeft,
+            attackResistRight,
+            defenseResist,
             ...rest
         } = this;
 
@@ -265,6 +271,7 @@ export default class Entity {
             this.equipment[slot] = Object.assign(itemElem, item);
             itemElem.piercings = this.deserializeItemList(itemElem.piercings);
             itemElem.ultimateJewels = this.deserializeItemList(itemElem.ultimateJewels);
+            itemElem.elementalStone = itemElem.elementalStone ? new ItemElem(Utils.getItemById(itemElem.elementalStone.id)) : null;
         }
 
         this.activeItems = this.deserializeItemList(activeItems);
@@ -282,6 +289,7 @@ export default class Entity {
 
         // Have to update cached equipment sets otherwise none of them will be checked
         this.updateEquipSets();
+        this.updateSMItemEquip();
 
         return obj;
     }
@@ -303,6 +311,7 @@ export default class Entity {
         }
 
         this.equipment.mainhand = Utils.DEFAULT_WEAPON;
+        this.clearAllSMMode();
     }
 
     /**
@@ -1539,5 +1548,84 @@ export default class Entity {
         }
 
         console.log("Updated currently equipped sets.");
+    }
+
+    /**
+     * Equips a SM item.
+     * @param {ItemElem} itemElem The item elem
+     */
+    doSMItemEquip(itemElem) {
+        if (itemElem != undefined && itemElem.elementalStone != undefined) {
+            let nResist = 0;
+            switch (itemElem.elementalStone.itemProp.element) {
+                case "none":
+                default:
+                    nResist = 255;
+                    break;
+                case "fire":
+                    nResist = Utils.ELEMENT_PROP_TYPE.fire;
+                    break;
+                case "water":
+                    nResist = Utils.ELEMENT_PROP_TYPE.water;
+                    break;
+                case "electricity":
+                    nResist = Utils.ELEMENT_PROP_TYPE.electricity;
+                    break;
+                case "wind":
+                    nResist = Utils.ELEMENT_PROP_TYPE.wind;
+                    break;
+                case "earth":
+                    nResist = Utils.ELEMENT_PROP_TYPE.earth;
+                    break;
+            }
+
+            if (itemElem == this.equipment.mainhand) {
+                this.attackResistRight = nResist;
+            }
+            else if (itemElem == this.equipment.offhand) {
+                this.attackResistLeft = nResist;
+            }
+            else {
+                this.defenseResist = nResist;
+            }
+        }
+    }
+
+    /**
+     * Unequips a SM item.
+     * @param {ItemElem} itemElem The item elem
+     */
+    doSMItemUnEquip(itemElem) {
+        if (itemElem != undefined) {
+            if (itemElem == this.equipment.mainhand) {
+                this.attackResistRight = 255;
+            }
+            else if (itemElem == this.equipment.offhand) {
+                this.attackResistLeft = 255;
+            }
+            else if (itemElem == this.equipment.suit) {
+                this.defenseResist = 255;
+            }
+            itemElem.elementalStone = null;
+        }
+    }
+
+    /**
+     * Updates the equipped SM items.
+     */
+    updateSMItemEquip() {
+        this.clearAllSMMode();
+        this.doSMItemEquip(this.equipment.mainhand);
+        this.doSMItemEquip(this.equipment.offhand);
+        this.doSMItemEquip(this.equipment.suit);
+    }
+
+    /**
+     * Clears all SM items.
+     */
+    clearAllSMMode() {
+        this.attackResistRight = 255;
+        this.attackResistLeft = 255;
+        this.defenseResist = 255;
     }
 }
