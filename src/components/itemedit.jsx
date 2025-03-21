@@ -219,8 +219,8 @@ function ItemEdit({ itemElem }) {
         const stoneMap = {
             fire: { weapon: 8241, suit: 2972 },
             water: { weapon: 2541, suit: 7785 },
-            electricity: { weapon: 547, suit: 706 },
-            wind: { weapon: 5088, suit: 9041 },
+            electricity: { weapon: 5088, suit: 706 },
+            wind: { weapon: 547, suit: 9041 },
             earth: { weapon: 4053, suit: 8738 }
         };
         const stoneId = stoneMap[itemElem.element]
