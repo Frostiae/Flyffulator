@@ -6,6 +6,7 @@ import upgradeBonus from "../assets/UpgradeBonus.json";
 export default class ItemElem {
     itemProp = null; // Static game item property from the API
     element = "none";
+    elementalStone = null; // ResistSMItemId
     upgradeLevel = 0;
     elementUpgradeLevel = 0;
     piercings = [];
@@ -55,6 +56,10 @@ export default class ItemElem {
         // When ItemElem gets deserialized the default properties are restored.
         if (shrinked.element === 'none') {
             delete shrinked.element;
+        }
+
+        if (shrinked.elementalStone === null) {
+            delete shrinked.elementalStone;
         }
 
         if (shrinked.upgradeLevel === 0) {
@@ -115,6 +120,13 @@ export default class ItemElem {
      */
     isSkillAwakeAble() {
         return this.itemProp.category == "weapon" || this.itemProp.subcategory == "shield";
+    }
+
+    /**
+     * @returns Whether or not this item can be use elemental stone.
+     */
+    isElementalStoneAble(){
+        return this.itemProp.category == "weapon" || this.itemProp.subcategory == "suit";
     }
 
     /**

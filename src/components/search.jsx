@@ -84,6 +84,10 @@ function Search() {
                         }
                     }
 
+                    if (searchProperties.id != undefined && item.id != searchProperties.id ) {
+                        continue;
+                    }
+
                     // Check if the item supports that locale
                     var selectedLanguageItemName = item.name[shortCode] ?? item.name.en;
                     if (selectedLanguageItemName.toLowerCase().includes(query)) {

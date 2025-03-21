@@ -193,7 +193,12 @@ function setupItem(itemElem, i18n) {
 
     if (itemElem.element != "none" && itemElem.elementUpgradeLevel > 0) {
         // TODO: Element stones here
-        out.push(`\n${itemElem.element}+${itemElem.elementUpgradeLevel}`);
+        if (itemElem.elementalStone != undefined) {
+            out.push(<><br /><strong>{itemElem.element}+{itemElem.elementUpgradeLevel}</strong></>);
+        }
+        else {
+            out.push(`\n${itemElem.element}+${itemElem.elementUpgradeLevel}`);
+        }
     }
     if (itemProp.element != "none") {
         out.push(`\n${i18n.t("tooltip_element")}${itemProp.element}`);

@@ -87,6 +87,15 @@ export const ATTACK_FLAGS = {
     REGION: 1 << 15 // AoE skill.
 };
 
+export const ELEMENT_PROP_TYPE = {
+    none: 0,
+    fire: 1,
+    water: 2,
+    electricity: 3,
+    wind: 4,
+    earth: 5
+}
+
 export function getClassById(id) {
     return classes[id];
 }
