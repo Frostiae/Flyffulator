@@ -1,5 +1,6 @@
 import * as Utils from "../flyff/flyffutils";
 import ItemElem from "../flyff/flyffitemelem";
+import SkillElem from "../flyff/flyffskillelem";
 import Context from "../flyff/flyffcontext";
 
 /**
@@ -12,8 +13,13 @@ export function createTooltip(content, i18n) {
     if (content instanceof ItemElem) {
         return setupItem(content, i18n);
     }
-    else if (content.passive != undefined) {
-        return setupSkill(content, i18n);
+    else if (content instanceof SkillElem) {
+        if (content.isFromBuffer){
+            return setupSkillFromBuffer(content.skillProp, i18n);
+        }
+        else {
+            return setupSkill(content.skillProp, i18n);
+        }
     }
     else if (content.consumedPoints != undefined) {
         return setupPartySkill(content, i18n);
@@ -535,7 +541,10 @@ function setupSkill(skill, i18n) {
     if (levelProp.scalingParameters != undefined) {
         for (const scale of levelProp.scalingParameters) {
             if (scale.parameter == "attack" && scale.maximum == undefined) {
-                out.push(<span style={statsStyle}><br />Attack Scaling: {scale.stat} x {scale.scale}</span>);
+                let pveOrPvp = (scale.pvp != undefined && scale.pve != undefined)
+                    ? (scale.pvp && !scale.pve ? " (PVP)" : !scale.pvp && scale.pve ? " (PVE)" : "")
+                    : "";
+                out.push(<span style={statsStyle}><br />Attack Scaling{pveOrPvp}: {scale.stat} x {scale.scale}</span>);
             }
         }
     }
@@ -639,7 +648,12 @@ function setupSkill(skill, i18n) {
     if (levelProp.abilities != undefined) {
         for (const ability of levelProp.abilities) {
             const abilityStyle = { color: "#6161ff" };
-            out.push(<span style={abilityStyle}><br />{ability.parameter}{ability.set != undefined ? "=" : "+"}{ability.set != undefined ? ability.set : ability.add}{ability.rate && "%"}</span>);
+            let pveOrPvp = (ability.pvp != undefined && ability.pve != undefined)
+                ? (ability.pvp && !ability.pve ? " (PVP)" : !ability.pvp && ability.pve ? " (PVE)" : "")
+                : "";
+            ability.parameter == "attribute" ?
+                out.push(<span style={abilityStyle}><br />{ability.attribute}</span>) :
+                out.push(<span style={abilityStyle}><br />{ability.parameter}{ability.set != undefined ? "=" : ability.add && ability.add > 0 ? "+" : ""}{ability.set != undefined ? ability.set : ability.add && ability.add}{ability.rate && "%"}{pveOrPvp}</span>);
         }
 
         if (levelProp.scalingParameters != undefined) {
@@ -661,6 +675,99 @@ function setupSkill(skill, i18n) {
 }
 
 /**
+ * Get the tooltip text for the given skill from buffer
+ * @param {object} skill The skill property
+ * @param {I18n} i18n Localization
+ */
+function setupSkillFromBuffer(skill, i18n){
+    const out = [];
+    var shortLanguageCode = "en";
+    if (i18n.resolvedLanguage) {
+        shortLanguageCode = i18n.resolvedLanguage.split('-')[0];
+    }
+
+    const skillLevel = Context.player.activeBuffs[skill.id];
+    const levelProp = skillLevel != undefined ? skill.levels[skillLevel - 1] : skill.levels[0];
+
+    out.push(<span style={{ color: "#2fbe6d", fontWeight: 600 }}>{skill.name[shortLanguageCode] ?? skill.name.en}</span>);
+    if (skillLevel != undefined) {
+        out.push(`  Lv. ${skillLevel}`);
+    }
+
+    out.push(`\n${skill.description[shortLanguageCode] ?? skill.description.en}`);
+
+    if (levelProp.abilities != undefined) {
+        for (const ability of levelProp.abilities) {
+            const abilityStyle = { color: "#6161ff" };
+            let add = 0;
+            if (levelProp.scalingParameters != undefined) {
+                for (const scale of levelProp.scalingParameters) {
+                    if (scale.parameter == ability.parameter && scale.maximum != undefined) {
+                        if (scale.stat == "int") {
+                            add += Math.floor(Math.min(Context.player.bufferInt * scale.scale, scale.maximum));
+                        }
+                        else if (scale.stat == "str") {
+                            add += Math.floor(Math.min(Context.player.bufferStr * scale.scale, scale.maximum));
+                        }
+                        else if (scale.stat == "sta") {
+                            add += Math.floor(Math.min(Context.player.bufferSta * scale.scale, scale.maximum));
+                        }
+                        else if (scale.stat == "dex") {
+                            add += Math.floor(Math.min(Context.player.bufferDex * scale.scale, scale.maximum));
+                        }
+                    }
+                }
+            }
+            let pveOrPvp = (ability.pvp != undefined && ability.pve != undefined)
+                ? (ability.pvp && !ability.pve ? " (PVP)" : !ability.pvp && ability.pve ? " (PVE)" : "")
+                : "";
+            if (ability.parameter == "attribute") {
+                out.push(<span style={abilityStyle}><br />{ability.attribute}</span>);
+            }
+            else {
+                out.push(<span style={abilityStyle}><br />{ability.parameter}{ability.set != undefined ? "=" : ability.add && ability.add > 0 ? "+" : ""}{ability.set != undefined ? ability.set : ability.add && ability.add + add}{ability.rate && "%"}{pveOrPvp}</span>);
+            }
+            if (add > 0) {
+                out.push(<span style={{ color: "#ffaa00" }}> ({ability.add}+{add})</span>);
+            }
+        }
+    }
+
+    if (levelProp.duration != undefined) {
+        let duration = levelProp.duration;
+        if (levelProp.scalingParameters != undefined) {
+            for (const scale of levelProp.scalingParameters) {
+                if (scale.parameter == "duration") {
+                    if (scale.stat == "int") {
+                        duration += Math.floor(Context.player.bufferInt * scale.scale);
+                    }
+                    else if (scale.stat == "str") {
+                        duration += Math.floor(Context.player.bufferStr * scale.scale);
+                    }
+                    else if (scale.stat == "sta") {
+                        duration += Math.floor(Context.player.bufferSta * scale.scale);
+                    }
+                    else if (scale.stat == "dex") {
+                        duration += Math.floor(Context.player.bufferDex * scale.scale);
+                    }
+                }
+            }
+        }
+        const hours = Math.floor(duration / 3600);
+        const mins = Math.floor((duration % 3600) / 60);
+        const secs = duration % 60;
+        if (hours > 0) {
+            out.push(<span><br/>{String(hours).padStart(2, "0")}:{String(mins).padStart(2, "0")}:{String(secs).padStart(2, "0")}</span>);
+        }
+        else {
+            out.push(<span><br/>{String(mins).padStart(2, "0")}:{String(secs).padStart(2, "0")}</span>);
+        }
+    }
+
+    return (<div>{out.map((v, i) => <span key={i}>{v}</span>)}</div>);
+}
+
+/**
  * Get the tooltip text for the given partySkill
  * @param {object} partySkill The partySkill property
  * @param {I18n} i18n Localization
@@ -674,6 +781,12 @@ function setupPartySkill(partySkill, i18n) {
 
     out.push(<span style={{ color: "#2fbe6d", fontWeight: 600 }}>{partySkill.name[shortLanguageCode] ?? partySkill.name.en}</span>);
     out.push(`\n${partySkill.description[shortLanguageCode] ?? partySkill.description.en}`)
+
+    if (partySkill.duration != undefined) {
+        const mins = Math.floor(partySkill.duration / 60);
+        const secs = partySkill.duration % 60;
+        out.push(<span><br/>{String(mins).padStart(2, "0")}:{String(secs).padStart(2, "0")}</span>);
+    }
 
     return (<div>{out.map((v, i) => <span key={i}>{v}</span>)}</div>);
 }

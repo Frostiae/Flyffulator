@@ -3,7 +3,7 @@ import { useTooltip } from '../tooltipcontext';
 import { createTooltip } from '../flyff/flyfftooltip';
 import { useTranslation } from "react-i18next";
 
-function SkillTreeIcon({ skill, disabled, level, clickHandle, rightClickHandle }) {
+function SkillTreeIcon({ skillElem, disabled, level, clickHandle, rightClickHandle }) {
     const { showTooltip, hideTooltip } = useTooltip();
     const slotRef = useRef(null);
     const { i18n } = useTranslation();
@@ -12,17 +12,17 @@ function SkillTreeIcon({ skill, disabled, level, clickHandle, rightClickHandle }
         shortCode = i18n.resolvedLanguage.split('-')[0];
     }
 
-    const levelText = level == skill.levels.length ? "MAX" : level;
+    const levelText = level == skillElem.skillProp.levels.length ? "MAX" : level;
 
     function toggleTooltip(enabled) {
-        if (skill == null) {
+        if (skillElem == null) {
             return;
         }
 
         if (enabled) {
             const settings = {
                 rect: slotRef.current.getBoundingClientRect(),
-                text: createTooltip(skill, i18n)
+                text: createTooltip(skillElem, i18n)
             };
             showTooltip(settings);
         }
@@ -31,8 +31,8 @@ function SkillTreeIcon({ skill, disabled, level, clickHandle, rightClickHandle }
         }
     }
 
-    const xPos = skill.treePosition.x * 2;
-    const yPos = skill.treePosition.y * 2;
+    const xPos = skillElem.skillProp.treePosition.x * 2;
+    const yPos = skillElem.skillProp.treePosition.y * 2;
 
     return (
         <div onClick={clickHandle} onContextMenu={rightClickHandle} className={`skill-tree-icon ${disabled && "disabled"} ${level > 0 && "active"}`}
@@ -42,9 +42,9 @@ function SkillTreeIcon({ skill, disabled, level, clickHandle, rightClickHandle }
             ref={slotRef}
         >
             <img
-                key={skill.id}
-                src={`https://api.flyff.com/image/skill/colored/${skill.icon}`}
-                alt={skill.name[shortCode] ?? skill.name.en}
+                key={skillElem.skillProp.id}
+                src={`https://api.flyff.com/image/skill/colored/${skillElem.skillProp.icon}`}
+                alt={skillElem.skillProp.name[shortCode] ?? skillElem.skillProp.name.en}
                 style={{
                     width: 50, height: 50,
                     transform: "scale(1.15)"
