@@ -240,6 +240,11 @@ function ItemEdit({ itemElem }) {
         setState(!state);
     }
 
+    function toggleElementStone() {
+        itemElem.hasElementStone = !itemElem.hasElementStone;
+        setState(!state);
+    }
+
     return (
         <div className="item-edit">
             <div id="edit-header">
@@ -369,6 +374,14 @@ function ItemEdit({ itemElem }) {
                     <div className="row">
                         <NumberInput disabled={itemElem.element == "none"} hasButtons min={0} max={10} value={itemElem.elementUpgradeLevel} onChange={setElementUpgradeLevel} label={"+"} />
                     </div>
+                </div>
+            }
+
+            {
+                (itemElem.element != "none" && itemElem.elementUpgradeLevel > 0) &&
+                <div>
+                    <input type="checkbox" id="element-stone" checked={itemElem.hasElementStone} onChange={() => toggleElementStone()} />
+                    <label htmlFor="element-stone">Element stone</label>
                 </div>
             }
 

@@ -192,8 +192,7 @@ function setupItem(itemElem, i18n) {
     // Element
 
     if (itemElem.element != "none" && itemElem.elementUpgradeLevel > 0) {
-        // TODO: Element stones here
-        out.push(`\n${itemElem.element}+${itemElem.elementUpgradeLevel}`);
+        out.push(<span style={{ fontWeight: itemElem.hasElementStone ? 800 : 'inherit' }}><br />{itemElem.element}+{itemElem.elementUpgradeLevel}</span>);
     }
     if (itemProp.element != "none") {
         out.push(`\n${i18n.t("tooltip_element")}${itemProp.element}`);

@@ -439,7 +439,10 @@ function getElementDamageFactorAutoAttack() {
             attackType = weapon.itemProp.element;
         }
 
-        // TODO: Element upcuts here I think
+        // Element upcuts
+        if (weapon.hasElementStone && weapon.element != "none" && weapon.elementUpgradeLevel > 0) {
+            plusAttack = 2000;
+        }
     }
     else {
         attackType = Context.attacker.monsterProp.element;
@@ -454,9 +457,12 @@ function getElementDamageFactorAutoAttack() {
         if (Context.defender.equipment.suit != null) {
             defenseType = Context.defender.equipment.suit.element;
             defenseLevel = Context.defender.equipment.suit.elementUpgradeLevel;
-        }
 
-        // TODO: Def element upcut or something idk
+            // Element upcuts
+            if (Context.defender.equipment.suit.hasElementStone && defenseType != "none" && defenseLevel > 0) {
+                plusDefense = 2000;
+            }
+        }
     }
     else {
         defenseType = Context.defender.monsterProp.element;

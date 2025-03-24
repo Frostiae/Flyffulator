@@ -15,7 +15,7 @@ export default class ItemElem {
     statAwake = [null, null];
     skillAwake = null;
     petStats = { F: 1, E: null, D: null, C: null, B: null, A: null, S: null }; // default value
-
+    hasElementStone = false;
 
     constructor(itemProp) {
         this.itemProp = itemProp;
@@ -91,6 +91,10 @@ export default class ItemElem {
 
         if (this.itemProp.category !== 'raisedpet') {
             delete shrinked.petStats;
+        }
+
+        if (shrinked.hasElementStone === false) {
+            delete shrinked.hasElementStone;
         }
 
         return shrinked;
