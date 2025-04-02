@@ -484,7 +484,7 @@ function setupSkill(skill, i18n) {
         shortLanguageCode = i18n.resolvedLanguage.split('-')[0];
     }
 
-    const skillLevel = Context.player.skillLevels[skill.id];
+    const skillLevel = Context.player.skillLevels[skill.id] ?? skill.levels.length;
     const levelProp = skillLevel != undefined ? skill.levels[skillLevel - 1] : skill.levels[0];
 
     out.push(<span style={{ color: "#2fbe6d", fontWeight: 600 }}>{skill.name[shortLanguageCode] ?? skill.name.en}</span>);
@@ -639,7 +639,37 @@ function setupSkill(skill, i18n) {
     if (levelProp.abilities != undefined) {
         for (const ability of levelProp.abilities) {
             const abilityStyle = { color: "#6161ff" };
-            out.push(<span style={abilityStyle}><br />{ability.parameter}{ability.set != undefined ? "=" : "+"}{ability.set != undefined ? ability.set : ability.add}{ability.rate && "%"}</span>);
+            let add = ability.add;
+            let extra = 0;
+
+            if (levelProp.scalingParameters != undefined) {
+                for (const scale of levelProp.scalingParameters) {
+                    if (scale.parameter == ability.parameter && scale.maximum != undefined) {
+                        let bufferStat = 0;
+                        switch (scale.stat) {
+                            case "int":
+                                bufferStat = Context.player.bufferInt;
+                                break;
+                            case "str":
+                                bufferStat = Context.player.bufferStr;
+                                break;
+                            case "dex":
+                                bufferStat = Context.player.bufferDex;
+                                break;
+                            default:
+                                bufferStat = Context.player.bufferSta;
+                                break;
+                        }
+    
+                        extra = Math.floor(Math.min(scale.scale * bufferStat, scale.maximum));
+                    }
+                }
+            }
+
+            out.push(<span style={abilityStyle}><br />{ability.parameter}{ability.set != undefined ? "=" : "+"}{ability.set != undefined ? ability.set : add + extra}{ability.rate && "%"}</span>);
+            if (extra > 0) {
+                out.push(<span style={{ color: "#ffaa00" }}> ({add}+{extra})</span>)
+            }
         }
 
         if (levelProp.scalingParameters != undefined) {
