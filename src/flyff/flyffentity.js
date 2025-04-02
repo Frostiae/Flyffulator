@@ -434,8 +434,16 @@ export default class Entity {
             return false;
         }
 
-        if (skillProp.weapon != undefined && this.equipment.mainhand.itemProp.subcategory != skillProp.weapon) {
-            return false;
+        if (skillProp.weapon != undefined) {
+            const currentWeapon = this.equipment.mainhand.itemProp.subcategory;
+            const possibleWeapons = [currentWeapon];
+            if (currentWeapon == "wand" || currentWeapon == "staff") {
+                possibleWeapons.push("wandorstaff");
+            }
+
+            if (!possibleWeapons.includes(skillProp.weapon)) {
+                return false;
+            }
         }
 
         if (skillProp.requirements != undefined) {
