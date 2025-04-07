@@ -1,18 +1,18 @@
 import { useState } from 'react';
-import { useSearch } from '../searchcontext';
+import { useSearch } from '../../searchcontext';
 import { useTranslation } from "react-i18next";
-import { getDamage, getHealing } from '../flyff/flyffdamagecalculator';
+import { getDamage, getHealing } from '../../flyff/flyffdamagecalculator';
 
-import '../styles/calculations.scss';
-import Entity from '../flyff/flyffentity';
-import Context from '../flyff/flyffcontext';
-import * as Utils from "../flyff/flyffutils";
-import HoverInfo from '../components/hoverinfo';
-import LineChart from '../components/linechart';
-import BasicStat from '../components/basicstat';
-import NumberInput from '../components/numberinput';
-import RangeInput from '../components/rangeinput';
-import ImportCharacter from '../components/importcharacter';
+import '../../styles/calculations.scss';
+import Entity from '../../flyff/flyffentity';
+import Context from '../../flyff/flyffcontext';
+import * as Utils from "../../flyff/flyffutils";
+import HoverInfo from '../shared/hoverinfo';
+import LineChart from './charts/linechart';
+import BasicStat from './charts/basicstat';
+import NumberInput from '../shared/numberinput';
+import RangeInput from '../shared/rangeinput';
+import ImportCharacter from '../base/importcharacter';
 
 function Calculations() {
     const { showSearch } = useSearch();

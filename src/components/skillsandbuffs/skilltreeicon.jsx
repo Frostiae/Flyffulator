@@ -1,6 +1,6 @@
 import { useRef } from 'react';
-import { useTooltip } from '../tooltipcontext';
-import { createTooltip } from '../flyff/flyfftooltip';
+import { useTooltip } from '../../tooltipcontext';
+import { createTooltip } from '../../flyff/flyfftooltip';
 import { useTranslation } from "react-i18next";
 
 function SkillTreeIcon({ skill, disabled, level, clickHandle, rightClickHandle }) {

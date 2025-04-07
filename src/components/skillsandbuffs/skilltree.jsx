@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { useSearch } from '../searchcontext';
+import { useSearch } from '../../searchcontext';
 import { useTranslation } from "react-i18next";
 
-import Slot from "./slot";
-import HoverInfo from './hoverinfo';
-import NumberInput from "./numberinput";
-import Context from "../flyff/flyffcontext";
+import Slot from "../equipment/inventory/slot";
+import HoverInfo from '../shared/hoverinfo';
+import NumberInput from "../shared/numberinput";
+import Context from "../../flyff/flyffcontext";
 import SkillTreeIcon from "./skilltreeicon";
-import * as Utils from "../flyff/flyffutils";
+import * as Utils from "../../flyff/flyffutils";
 
 function SkillTree() {
     const { showSearch } = useSearch();

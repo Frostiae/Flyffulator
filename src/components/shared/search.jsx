@@ -1,17 +1,17 @@
 import { useState } from "react";
-import { useSearch } from "../searchcontext";
+import { useSearch } from "../../searchcontext";
 import { useTranslation } from "react-i18next";
 
-import Slot from '../components/slot';
-import pets from "../assets/Pets.json";
-import items from "../assets/Items.json";
-import Entity from "../flyff/flyffentity";
-import skills from "../assets/Skills.json";
-import Context from "../flyff/flyffcontext";
-import * as Utils from "../flyff/flyffutils";
-import ItemElem from "../flyff/flyffitemelem";
-import monsters from "../assets/Monsters.json";
-import housingNpcs from "../assets/HousingNPCs.json";
+import Slot from '../equipment/inventory/slot';
+import pets from "../../assets/Pets.json";
+import items from "../../assets/Items.json";
+import Entity from "../../flyff/flyffentity";
+import skills from "../../assets/Skills.json";
+import Context from "../../flyff/flyffcontext";
+import * as Utils from "../../flyff/flyffutils";
+import ItemElem from "../../flyff/flyffitemelem";
+import monsters from "../../assets/Monsters.json";
+import housingNpcs from "../../assets/HousingNPCs.json";
 
 function Search() {
     const { isSearchOpen, searchProperties, hideSearch } = useSearch();

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import PetWindow from './pet/petwindow';
-import * as Utils from './../flyff/flyffutils'
+import PetWindow from './petwindow';
+import * as Utils from '../../../flyff/flyffutils'
 
 function ItemEditPet({ itemElem }) {
     const [currentPetLevels, setPetLevels] = useState(itemElem.petStats);
