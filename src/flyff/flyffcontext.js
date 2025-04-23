@@ -1,4 +1,5 @@
 import Entity from "./flyffentity";
+import Teammate from "./flyffteammate";
 import * as Utils from "./flyffutils";
 
 /**
@@ -49,6 +50,17 @@ export default class Context
         playerHealthPercent: 100,
         targetHealthPercent: 100,
         achievementAttackBonus: 0
+    };
+
+    /**
+     * Settings for experience calculations.
+     */
+    static expSettings = {
+        partySetting: "contribution",
+        hasCheer: false,
+        singleTargetBonus: false,
+        multiplier: 1,
+        teammates: [new Teammate(1)],
     };
 
     static isPVP() {

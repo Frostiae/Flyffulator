@@ -4,18 +4,18 @@ import { SearchProvider } from './searchcontext';
 import { TooltipProvider } from './tooltipcontext';
 
 import './styles/App.scss';
-import Equipment from './components/equipment/equipment';
-import Search from './components/shared/search';
-import Tooltip from './components/shared/tooltip';
 import Context from './flyff/flyffcontext';
 import Classes from './assets/Classes.json';
 import * as Utils from './flyff/flyffutils';
+import Search from './components/shared/search';
+import Tooltip from './components/shared/tooltip';
 import Dropdown from './components/shared/dropdown';
+import Equipment from './components/equipment/equipment';
+import NumberInput from './components/shared/numberinput';
+import Experience from './components/experience/experience';
+import ImportCharacter from './components/base/importcharacter';
 import SkillsBuffs from './components/skillsandbuffs/skillsbuffs';
 import Calculations from './components/calculations/calculations';
-import NumberInput from './components/shared/numberinput';
-import ImportCharacter from './components/base/importcharacter';
-
 
 function App() {
   const [currentTab, setCurrentTab] = useState(0);
@@ -234,6 +234,10 @@ function App() {
               <div className="tab-button-border"></div>
               {t("calculations_tab_name")}
             </button>
+            <button onClick={() => setCurrentTab(3)} className={"tab-button" + (currentTab == 3 ? " active" : "")}>
+              <div className="tab-button-border"></div>
+              {t("experience_tab_name")}
+            </button>
           </div>
           {
             currentTab == 0 &&
@@ -246,6 +250,10 @@ function App() {
           {
             currentTab == 2 &&
             <Calculations />
+          }
+          {
+            currentTab == 3 &&
+            <Experience />
           }
 
           <ImportCharacter open={isImporting} onImport={importCharacter} close={() => setIsImporting(false)} />

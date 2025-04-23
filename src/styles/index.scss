@@ -121,6 +121,10 @@ body {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   column-gap: 10px;
+
+  &.four {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
 }
 
 input[type="text"], input[type="number"] {
@@ -207,6 +211,11 @@ img.info-icon {
   position: relative;
   box-shadow: 0 0 5px black;
   width: fit-content;
+  
+  &:hover {
+    cursor: pointer;
+    outline: 1px solid v.$border-color;
+  }
 
   .flyff-dropdown-arrow {
     display: flex;
@@ -215,9 +224,6 @@ img.info-icon {
     color: v.$border-color;
     gap: 40px;
 
-    &:hover {
-      cursor: pointer;
-    }
 
     img {
       width: 13px;

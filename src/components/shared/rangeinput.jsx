@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import NumberInput from "./numberinput";
 
-function RangeInput({ min, max, step = 0.1, value, onChange, isRange, disabled, prefix, allowedValues }) {
+function RangeInput({ min, max, step = 0.1, value, onChange, isRange, disabled, prefix, allowedValues, style, showValue = true }) {
     const [currentValue, setCurrentValue] = useState(value);
 
     useEffect(() => {
@@ -30,9 +30,13 @@ function RangeInput({ min, max, step = 0.1, value, onChange, isRange, disabled, 
     }
 
     return (
-        <div className="flyff-range" >
+        <div className="flyff-range" style={{...style}}>
             <input type="range" min={minValue} max={maxValue} id="range" onChange={(e) => handleChange(e.target.value)} disabled={disabled} step={step} value={currentValue} />
-            <NumberInput disabled={disabled} min={minValue} max={maxValue} prefix={prefix} suffix={isRange && "%"} onChange={handleChange} value={currentValue} />
+
+            {
+                showValue &&
+                <NumberInput disabled={disabled} min={minValue} max={maxValue} prefix={prefix} suffix={isRange && "%"} onChange={handleChange} value={currentValue} />
+            }
         </div>
     );
 }

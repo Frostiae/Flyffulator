@@ -3,10 +3,12 @@ import pets from "../assets/Pets.json";
 import items from "../assets/Items.json";
 import skills from "../assets/Skills.json";
 import classes from "../assets/Classes.json";
+import monsters from "../assets/Monsters.json"
 import equipSets from "../assets/EquipSets.json";
 import statAwakes from "../assets/StatAwakes.json";
 import partySkills from "../assets/PartySkills.json";
 import upgradeBonus from "../assets/UpgradeBonus.json";
+import levelDifferencePenalties from "../assets/LevelDifferencePenalties.json";
 
 export const JOBS = {
     9686: 0, // Vagrant
@@ -103,6 +105,14 @@ export function getPartySkillById(id) {
     return partySkills[id];
 }
 
+export function getMonsterById(id) {
+    return monsters[id];
+}
+
+export function getMonsterRange(startLevel, endLevel) {
+    return Object.values(monsters).filter((m) => m.level >= startLevel && m.level <= endLevel);
+}
+
 /**
  * @param {Number} baseJobId The ID of the job to compare to.
  * @param {Number} otherJobId The ID of the job to check.
@@ -159,6 +169,10 @@ export function getEquipSetByItemId(id) {
     }
 
     return null;
+}
+
+export function getLevelDifferencePenalties(levelDifference) {
+    return levelDifferencePenalties[clamp(levelDifference, 0, levelDifferencePenalties.length - 1)];
 }
 
 export function getPetDefinitionByItemId(itemId) {

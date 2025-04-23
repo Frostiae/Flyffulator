@@ -1,0 +1,13 @@
+[
+	{ "itemDrop": 100, "goldDrop": 100, "soloExp": 100, "partyExp": 100 },
+	{ "itemDrop": 100, "goldDrop": 100, "soloExp": 70, "partyExp": 80 },
+	{ "itemDrop": 80, "goldDrop": 100, "soloExp": 70, "partyExp": 80 },
+	{ "itemDrop": 80, "goldDrop": 100, "soloExp": 40, "partyExp": 60 },
+	{ "itemDrop": 60, "goldDrop": 80, "soloExp": 40, "partyExp": 35 },
+	{ "itemDrop": 60, "goldDrop": 80, "soloExp": 10, "partyExp": 20 },
+	{ "itemDrop": 60, "goldDrop": 80, "soloExp": 10, "partyExp": 12 },
+	{ "itemDrop": 30, "goldDrop": 65, "soloExp": 10, "partyExp": 8 },
+	{ "itemDrop": 30, "goldDrop": 65, "soloExp": 10, "partyExp": 4 },
+	{ "itemDrop": 30, "goldDrop": 65, "soloExp": 10, "partyExp": 2 },
+	{ "itemDrop": 10, "goldDrop": 50, "soloExp": 10, "partyExp": 1 }
+]

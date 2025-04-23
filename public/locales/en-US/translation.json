@@ -19,6 +19,7 @@
     "equipment_tab_name": "Equipment",
     "skills_and_buffs_tab_name": "Skills & Buffs",
     "calculations_tab_name": "Calculations",
+    "experience_tab_name": "Experience",
     "skills_and_buffs_active_items": "Active Items",
     "skills_and_buffs_active_buffs": "Active Buffs",
     "skills_and_buffs_active_party_buffs": "Active Party Buffs",
@@ -61,5 +62,6 @@
     "enable_party_leader": "Party Leader enabled",
     "your_health": "Your health",
     "target_health": "Target health",
-    "achievement_attack_bonus": "Achievements: Attack rate on target(s)"
+    "achievement_attack_bonus": "Achievements: Attack rate on target(s)",
+    "exp_cheer": "Cheered"
 }

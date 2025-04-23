@@ -7,6 +7,53 @@
   width: 100%;
 }
 
+#experience {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  img#monster-icon {
+    width: 128px;
+    height: 128px;
+    object-fit: contain;
+    padding: 4px;
+    background-color: #121212;
+    border: 1px solid #2f291d;
+    box-shadow: inset 0 0 36px black;
+  }
+
+  #target-select {
+    display: flex;
+    gap: 20px;
+  }
+
+  #team-setup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .teammate {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    h4 {
+      margin: 0;
+    }
+
+    input[type=text] {
+      margin-left: 10px;
+      font-style: italic;
+    }
+
+    hr {
+      margin: 20px 0;
+    }
+  }
+}
+
 #basic-stats {
   flex-grow: 1;
   display: flex;
@@ -102,6 +149,13 @@
   outline: 1px solid v.$border-color;
   border-radius: 3px;
   padding: 3px 12px;
+
+  &.bar {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
 
   .chart-title {
     display: flex;

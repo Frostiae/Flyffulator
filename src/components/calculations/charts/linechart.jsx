@@ -88,6 +88,9 @@ function LineChart({ chartData, title, info, label, sourceLink, skillId = 0 }) {
                         legend: {
                             display: false
                         },
+                        datalabels: {
+                            display: false
+                        },
                         tooltip: {
                             backgroundColor: "rgba(0,0,0,0.95)",
                             borderWidth: 2,

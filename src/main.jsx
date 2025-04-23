@@ -6,10 +6,11 @@ import App from './App.jsx';
 import './styles/index.scss';
 import flyffulatorLogo from '/logonew.png';
 import Annotation from 'chartjs-plugin-annotation';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 import LocaleSwitcher from "./i18n/LocaleSwitcher";
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler } from 'chart.js';
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, BarElement } from 'chart.js';
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Annotation);
+ChartJS.register(BarElement, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Annotation, ChartDataLabels);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

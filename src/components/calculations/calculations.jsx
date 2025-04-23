@@ -39,6 +39,12 @@ function Calculations() {
                 type: "monster", onSet: (res) => {
                     Context.defender = res;
                     setTargetType(index);
+
+                    // Reset the damage done for experience calculations
+                    Context.expSettings.teammates[0].totalDamageFactor = 100;
+                    for (let i = 1; i < Context.expSettings.teammates.length; i++) {
+                        Context.expSettings.teammates[i].totalDamageFactor = 0;
+                    }
                 }
             });
         }
