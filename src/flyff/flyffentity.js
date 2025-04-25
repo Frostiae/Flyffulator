@@ -398,26 +398,6 @@ export default class Entity {
     }
 
     /**
-     * Whether or not this player can equip the given item.
-     * @param {object} itemProp The item property to check.
-     */
-    canEquip(itemProp) {
-        if (this.isMonster()) {
-            return false;
-        }
-
-        if (itemProp.level > this.level) {
-            return false;
-        }
-
-        if (itemProp.class != undefined && !Utils.isAnteriorJob(this.job.id, itemProp.class)) {
-            return false;
-        }
-
-        return true;
-    }
-
-    /**
      * Whether or not this player can use the given skill.
      * @param {object} skillProp The skill to check.
      */
@@ -470,7 +450,7 @@ export default class Entity {
             return false;
         }
 
-        if (itemProp.level != undefined && itemProp.level > this.level) {
+        if (itemProp.level != undefined && itemProp.level > this.level + 10) {
             return false;
         }
 
