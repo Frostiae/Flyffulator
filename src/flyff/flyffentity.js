@@ -470,7 +470,7 @@ export default class Entity {
             return false;
         }
 
-        if (itemProp.level != undefined && itemProp.level > this.level) {
+        if (itemProp.level != undefined && itemProp.level > this.level + 10) {
             return false;
         }
 
