@@ -322,6 +322,12 @@ function setupItem(itemElem, i18n) {
 
     if (itemProp.level != undefined && itemProp.level > 1) {
         out.push(`\n${i18n.t("tooltip_required_level")}${itemProp.level}`);
+        let levelsBelowRequirement = itemProp.level - Context.player.level;
+        if (levelsBelowRequirement >= 1 && levelsBelowRequirement <= 5) {
+            out.push(<span style={{ color: "#ff0000" }}> (-5)</span>);
+        } else if (levelsBelowRequirement >= 6 && levelsBelowRequirement <= 10) {
+            out.push(<span style={{ color: "#ff0000" }}> (-10)</span>);
+        }
     }
 
     // Required material item level
