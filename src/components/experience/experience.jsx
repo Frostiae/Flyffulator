@@ -135,6 +135,15 @@ function Experience() {
             (m.rank == "small" || m.rank == "normal" || m.rank == "captain")
         );
 
+        // Remove berry carriers
+        monsters = monsters.filter((m) =>
+            m.id != 8386 &&
+            m.id != 9217 &&
+            m.id != 551 &&
+            m.id != 1610 &&
+            m.id != 2786
+        );
+
         if (madrigalOnly) {
             monsters = monsters.filter((m) => m.area == "normal");
         }
