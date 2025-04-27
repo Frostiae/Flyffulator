@@ -297,7 +297,7 @@ function Experience() {
                         )
                     }
                     {
-                        Context.expSettings.teammates.length < 7 &&
+                        Context.expSettings.teammates.length < 8 &&
                         <div>
                             <br />
                             <button className="flyff-button" onClick={addTeammate}>Add Teammate</button>
