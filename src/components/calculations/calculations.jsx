@@ -19,11 +19,11 @@ function Calculations() {
     const [targetType, setTargetType] = useState(Context.defender.isPlayer() ? 1 : (Context.defender.monsterProp.dummy ? 0 : 2));
     const [refresh, setRefresh] = useState(false);
     const [isImporting, setIsImporting] = useState(false);
-    const { t } = useTranslation();
+    const { i18n } = useTranslation();
 
     var shortCode = "en";
-    if (t.resolvedLanguage) {
-        shortCode = t.resolvedLanguage.split('-')[0];
+    if (i18n.resolvedLanguage) {
+        shortCode = i18n.resolvedLanguage.split('-')[0];
     }
 
     function setTarget(index) {
@@ -441,15 +441,15 @@ function Calculations() {
                     <div id="target-options">
                         <div>
                             <input type="radio" id="target-dummy" name="target-type" checked={targetType == 0} onChange={() => setTarget(0)} />
-                            <label htmlFor="target-dummy">{t("training_dummy_target")}</label>
+                            <label htmlFor="target-dummy">{i18n.t("training_dummy_target")}</label>
                         </div>
                         <div>
                             <input type="radio" id="target-player" name="target-type" checked={targetType == 1} onChange={() => setTarget(1)} />
-                            <label htmlFor="target-player">{t("player_target")}</label>
+                            <label htmlFor="target-player">{i18n.t("player_target")}</label>
                         </div>
                         <div>
                             <input type="radio" id="target-monster" name="target-type" checked={targetType == 2} onChange={() => setTarget(2)} />
-                            <label htmlFor="target-monster">{t("monster_target")}</label>
+                            <label htmlFor="target-monster">{i18n.t("monster_target")}</label>
                         </div>
                     </div>
 
@@ -497,24 +497,24 @@ function Calculations() {
                 <div className="grid" style={{marginBottom: "20px"}}>
                     <div>
                         <input type="checkbox" id="missing" checked={Context.settings.missingEnabled} onChange={() => setSetting("missingEnabled", !Context.settings.missingEnabled)} />
-                        <label htmlFor="missing">{t("enable_missing")}</label>
+                        <label htmlFor="missing">{i18n.t("enable_missing")}</label>
                     </div>
 
                     <div>
                         <input type="checkbox" id="blocking" checked={Context.settings.blockingEnabled} onChange={() => setSetting("blockingEnabled", !Context.settings.blockingEnabled)} />
-                        <label htmlFor="blocking">{t("enable_blocking")}</label>
+                        <label htmlFor="blocking">{i18n.t("enable_blocking")}</label>
                     </div>
 
                     <div>
                         <input type="checkbox" id="plartyLeader" checked={Context.settings.partyLeaderEnabled} onChange={() => setSetting("partyLeaderEnabled", !Context.settings.partyLeaderEnabled)} />
-                        <label htmlFor="plartyLeader">{t("enable_party_leader")}</label>
+                        <label htmlFor="plartyLeader">{i18n.t("enable_party_leader")}</label>
                     </div>
 
                     {
                         (Context.player.equipment.mainhand.itemProp.triggerSkill != undefined && Context.player.equipment.mainhand.itemProp.triggerSkill == 3124) &&
                         <div>
                             <input type="checkbox" id="swordcross" checked={Context.settings.swordcrossEnabled} onChange={() => setSetting("swordcrossEnabled", !Context.settings.swordcrossEnabled)} />
-                            <label htmlFor="swordcross">{t("enable_swordcross")}</label>
+                            <label htmlFor="swordcross">{i18n.t("enable_swordcross")}</label>
                         </div>
                     }
 
@@ -522,7 +522,7 @@ function Calculations() {
                         Context.attacker.getStat("skillchance", true, 11389) > 0 &&
                         <div>
                             <input type="checkbox" id="waterbomb" checked={Context.settings.waterbombEnabled} onChange={() => setSetting("waterbombEnabled", !Context.settings.waterbombEnabled)} />
-                            <label htmlFor="waterbomb">{t("enable_waterbomb")}</label>
+                            <label htmlFor="waterbomb">{i18n.t("enable_waterbomb")}</label>
                         </div>
                     }
 
@@ -530,29 +530,29 @@ function Calculations() {
                         Context.attacker.getStat("skillchance", true, 7513) > 0 &&
                         <div>
                             <input type="checkbox" id="lifesteal" checked={Context.settings.lifestealEnabled} onChange={() => setSetting("lifestealEnabled", !Context.settings.lifestealEnabled)} />
-                            <label htmlFor="lifesteal">{t("enable_lifesteal")}</label>
+                            <label htmlFor="lifesteal">{i18n.t("enable_lifesteal")}</label>
                         </div>
                     }
 
                 </div>
 
                 <div className="row" style={{marginBottom: "20px"}}>
-                    <span>{t("achievement_attack_bonus")}</span>
+                    <span>{i18n.t("achievement_attack_bonus")}</span>
                     <RangeInput min={0} max={15} onChange={(v) => setSetting("achievementAttackBonus", v)} value={Context.settings.achievementAttackBonus} isRange={true} step={3}/>
                 </div>
 
                 <div className="column" style={{width: "fit-content"}}>
                     <div>
-                        <NumberInput min={1} max={100} suffix={"%"} hasButtons={false} label={t("your_health")} onChange={(v) => setSetting("playerHealthPercent", v)} value={Context.settings.playerHealthPercent} />
+                        <NumberInput min={1} max={100} suffix={"%"} hasButtons={false} label={i18n.t("your_health")} onChange={(v) => setSetting("playerHealthPercent", v)} value={Context.settings.playerHealthPercent} />
                     </div>
 
                     <div>
-                        <NumberInput min={1} max={100} suffix={"%"} hasButtons={false} label={t("target_health")} onChange={(v) => setSetting("targetHealthPercent", v)} value={Context.settings.targetHealthPercent} />
+                        <NumberInput min={1} max={100} suffix={"%"} hasButtons={false} label={i18n.t("target_health")} onChange={(v) => setSetting("targetHealthPercent", v)} value={Context.settings.targetHealthPercent} />
                     </div>
                 </div>
 
                 <div className="category-header">
-                    <h3>Offensive calculations</h3>
+                    <h3>{i18n.t("calculations_offensive")}</h3>
                     <HoverInfo text={"Information about damage dealt using auto attacks and allocated skills."} />
                 </div>
                 <hr />

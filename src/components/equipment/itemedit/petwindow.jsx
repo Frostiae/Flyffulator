@@ -16,6 +16,10 @@ function PetWindow({ raisedPetDefinition, petLevels, editable = false, onEditLev
     const [currentlyEditingTier, setEditingTier] = useState(null);
     const slotRef = useRef(null);
     const { i18n } = useTranslation();
+    var shortLanguageCode = "en";
+    if (i18n.resolvedLanguage) {
+        shortLanguageCode = i18n.resolvedLanguage.split('-')[0];
+    }
 
     function toggleTooltip(enabled) {
         if (Context.player.equipment.pet == null) {
@@ -55,7 +59,7 @@ function PetWindow({ raisedPetDefinition, petLevels, editable = false, onEditLev
 
     return (
         <div className="pet-edit">
-            <div className="window-title">{items[raisedPetDefinition.petItemId].name.en}</div>
+            <div className="window-title">{items[raisedPetDefinition.petItemId].name[shortLanguageCode] ?? items[raisedPetDefinition.petItemId].name.en}</div>
             <div className="window-content">
                 <div id="base-container">
                     <div id="image-container" ref={slotRef}
@@ -83,7 +87,7 @@ function PetWindow({ raisedPetDefinition, petLevels, editable = false, onEditLev
 
                         <div className="stat-group">
                             <span className='stat-title'>Stat</span>
-                            <span className='stat-value'>{`${raisedPetDefinition.parameter} +${Utils.getPetStatSum(raisedPetDefinition, petLevels)}${raisedPetDefinition.rate ? '%' : ''}`}</span>
+                            <span className='stat-value'>{`${Utils.getStatNameByIdOrDefault(raisedPetDefinition.parameter, i18n)} +${Utils.getPetStatSum(raisedPetDefinition, petLevels)}${raisedPetDefinition.rate ? '%' : ''}`}</span>
                         </div>
                     </div>
                 </div>
