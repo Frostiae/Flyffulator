@@ -159,6 +159,7 @@ function Search() {
                     if (searchProperties.searchByStats && housingNpc.abilities != undefined) {
                         for (const ability of housingNpc.abilities) {
                             if (ability.parameter != undefined && ability.parameter.toLowerCase().includes(query)) {
+                                housingNpc.icon = "asschecatsre.png";
                                 res.push(housingNpc);
                                 break;
                             }

@@ -5,6 +5,7 @@ import skills from "../assets/Skills.json";
 import classes from "../assets/Classes.json";
 import monsters from "../assets/Monsters.json"
 import equipSets from "../assets/EquipSets.json";
+import statNames from '../assets/StatNames.json';
 import statAwakes from "../assets/StatAwakes.json";
 import partySkills from "../assets/PartySkills.json";
 import upgradeBonus from "../assets/UpgradeBonus.json";
@@ -107,6 +108,25 @@ export function getPartySkillById(id) {
 
 export function getMonsterById(id) {
     return monsters[id];
+}
+
+/**
+ * @param {string} id The stat id
+ * @param {object} i18n Localization
+ * @returns A string matching the appropriate stat name
+ */
+export function getStatNameByIdOrDefault(id, i18n) {
+    var stat = statNames[id];
+    if (stat == null) {
+        return id;
+    }
+
+    var shortLanguageCode = "en";
+    if (i18n.resolvedLanguage) {
+        shortLanguageCode = i18n.resolvedLanguage.split('-')[0];
+    }
+
+    return stat[shortLanguageCode] ?? stat.en;
 }
 
 export function getMonsterRange(startLevel, endLevel) {
@@ -307,14 +327,14 @@ export function getStrongElement(element) {
  * @param {number} itemLevel The level of the item
  * @returns An object containing the possible options that can be set alongside the given option
  */
-export function getPossibleStatAwakeParams(otherOption, itemLevel) {
+export function getPossibleStatAwakeParams(otherOption, itemLevel, i18n) {
     if (otherOption == null || otherOption == "none") {
         return {
             "none": "None",
-            "str": "STR",
-            "sta": "STA",
-            "dex": "DEX",
-            "int": "INT"
+            "str": getStatNameByIdOrDefault("str", i18n),
+            "sta": getStatNameByIdOrDefault("sta", i18n),
+            "dex": getStatNameByIdOrDefault("dex", i18n),
+            "int": getStatNameByIdOrDefault("int", i18n)
         };
     }
 
