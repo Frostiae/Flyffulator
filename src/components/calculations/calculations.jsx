@@ -584,7 +584,7 @@ function Calculations() {
                 </div>
 
                 <div className="category-header">
-                    <h3>Defensive calculations</h3>
+                    <h3>{i18n.t("calculations_defensive")}</h3>
                     <HoverInfo text={"Information about your defensive capabilities against the current target."} />
                 </div>
                 <hr />
