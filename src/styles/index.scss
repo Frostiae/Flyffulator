@@ -195,7 +195,7 @@ input {
 img.info-icon {
   width: 16px;
   opacity: 0.6;
-  
+
   &:hover {
     opacity: 1.0;
   }
@@ -211,7 +211,7 @@ img.info-icon {
   position: relative;
   box-shadow: 0 0 5px black;
   width: fit-content;
-  
+
   &:hover {
     cursor: pointer;
     outline: 1px solid v.$border-color;
@@ -246,6 +246,16 @@ img.info-icon {
     z-index: 1000;
 
     option {
+    display: contents;
+    /* Chrome UA styles */
+    /* Adding back for consistency */
+    font-weight: normal;
+    padding-block-start: 0px;
+    padding-block-end: 1px;
+    min-block-size: 1.2em;
+    padding-inline: 2px;
+    white-space: nowrap;
+
       &:hover {
         color: v.$border-color;
         cursor: pointer;
