@@ -19,6 +19,8 @@
     "equipment_tab_name": "Equipment",
     "skills_and_buffs_tab_name": "Skills & Buffs",
     "calculations_tab_name": "Calculations",
+    "calculations_offensive": "Offensive calculations",
+    "calculations_defensive": "Defensive calculations",
     "experience_tab_name": "Experience",
     "skills_and_buffs_active_items": "Active Items",
     "skills_and_buffs_active_buffs": "Active Buffs",
@@ -63,5 +65,8 @@
     "your_health": "Your health",
     "target_health": "Target health",
     "achievement_attack_bonus": "Achievements: Attack rate on target(s)",
-    "exp_cheer": "Cheered"
+    "exp_cheer": "Cheered",
+    "itemedit_stat_ranges": "Stat Ranges",
+    "itemedit_random_bonus_ultimate": "Ultimate Bonus",
+    "itemedit_goddess_demons": "Blessing of the Goddess / Demon"
 }

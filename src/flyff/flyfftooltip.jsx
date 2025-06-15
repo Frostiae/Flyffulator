@@ -180,7 +180,7 @@ function setupItem(itemElem, i18n) {
 
         for (const blessing of itemElem.randomStats) {
             if (blessing) {
-                out.push(<span style={{ color: "#d386ff" }}><br />{blessing.parameter}+{blessing.value}{blessing.rate ? "%" : ""}</span>);
+                out.push(<span style={{ color: "#d386ff" }}><br />{Utils.getStatNameByIdOrDefault(blessing.parameter, i18n)}+{blessing.value}{blessing.rate ? "%" : ""}</span>);
             }
         }
     }
@@ -209,7 +209,7 @@ function setupItem(itemElem, i18n) {
 
         if (itemElem.statRanges.length == 0) {
             for (const ability of itemProp.abilities) {
-                out.push(<span style={abilityStyle}><br />{ability.parameter}+{ability.add}</span>);
+                out.push(<span style={abilityStyle}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}+{ability.add}</span>);
                 if (ability.rate) {
                     out.push(<span style={abilityStyle}>%</span>);
                 }
@@ -217,7 +217,7 @@ function setupItem(itemElem, i18n) {
         }
         else {
             for (const ability of itemElem.statRanges) {
-                out.push(<span style={abilityStyle}><br />{ability.parameter}+{ability.value}</span>);
+                out.push(<span style={abilityStyle}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}+{ability.value}</span>);
                 if (ability.rate) {
                     out.push(<span style={abilityStyle}>%</span>);
                 }
@@ -235,13 +235,13 @@ function setupItem(itemElem, i18n) {
 
     if (itemProp.possibleRandomStats != undefined) {
         for (const stat of itemElem.randomStats) {
-            out.push(<span style={{ color: "#ffff00" }}><br />{stat.parameter}+{stat.value}{stat.rate ? "%" : ""}</span>);
+            out.push(<span style={{ color: "#ffff00" }}><br />{Utils.getStatNameByIdOrDefault(stat.parameter, i18n)}+{stat.value}{stat.rate ? "%" : ""}</span>);
         }
     }
 
     for (const statAwake of itemElem.statAwake) {
         if (statAwake != null) {
-            out.push(`\n${statAwake.parameter} +${statAwake.value}`);
+            out.push(`\n${Utils.getStatNameByIdOrDefault(statAwake.parameter, i18n)} +${statAwake.value}`);
         }
     }
 
@@ -250,7 +250,7 @@ function setupItem(itemElem, i18n) {
     if (itemProp.category == "jewelry" && itemProp.upgradeLevels != undefined) {
         const abilityStyle = { color: "#ffeaa1" };
         for (const ability of itemProp.upgradeLevels[itemElem.upgradeLevel].abilities) {
-            out.push(<span style={abilityStyle}><br />{ability.parameter}+{ability.add}</span>);
+            out.push(<span style={abilityStyle}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}+{ability.add}</span>);
             if (ability.rate) {
                 out.push(<span style={abilityStyle}>%</span>);
             }
@@ -266,7 +266,7 @@ function setupItem(itemElem, i18n) {
         if (upgradeLevel > 0) {
             const bonus = Utils.getUpgradeBonus(upgradeLevel);
             for (const ability of bonus.setAbilities) {
-                out.push(<span><br />{ability.parameter}+{ability.add}</span>);
+                out.push(<span><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}+{ability.add}</span>);
                 if (ability.rate) {
                     out.push(<span>%</span>);
                 }
@@ -343,7 +343,7 @@ function setupItem(itemElem, i18n) {
         const petDefinition = Utils.getPetDefinitionByItemId(pet.itemProp.id)
 
         out.push(<span style={{ color: '#009e00' }}><br />Tier: {Utils.getPetTierByLevels(pet.petStats)} Tier</span>)
-        out.push(<span style={{ color: '#ff0000' }}><br />Bonus: {`${petDefinition.parameter} +${Utils.getPetStatSum(petDefinition, pet.petStats)}${petDefinition.rate ? '%' : ''}`}</span>)
+        out.push(<span style={{ color: '#ff0000' }}><br />Bonus: {`${Utils.getStatNameByIdOrDefault(petDefinition.parameter, i18n)} +${Utils.getPetStatSum(petDefinition, pet.petStats)}${petDefinition.rate ? '%' : ''}`}</span>)
         out.push(<span style={{ color: '#007fff' }}><br />({Object.values(pet.petStats).map((lv) => lv ? `Lv${lv}` : null).filter(_ => _).join('/')})</span>)
 
         out.push(<span style={{ color: '#7878dc' }}><br />Exp: 99.99%</span>)
@@ -410,7 +410,7 @@ function setupItem(itemElem, i18n) {
                     continue;
                 }
 
-                const bonusKey = `${bonus.ability.parameter}.${bonus.ability.rate ? 'Y' : 'N'}`;
+                const bonusKey = `${Utils.getStatNameByIdOrDefault(bonus.ability.parameter, i18n)}.${bonus.ability.rate ? 'Y' : 'N'}`;
 
                 if (bonuses[bonusKey] == undefined) {
                     bonuses[bonusKey] = bonus.ability.add;
@@ -424,7 +424,7 @@ function setupItem(itemElem, i18n) {
                 const [parameter, rateString] = key.split('.');
                 const rate = rateString === 'Y';
 
-                out.push(<span style={bonusStyle}><br />Set Effect: {parameter} +{bonus}</span>);
+                out.push(<span style={bonusStyle}><br />Set Effect: {Utils.getStatNameByIdOrDefault(parameter, i18n)} +{bonus}</span>);
                 if (rate) {
                     out.push(<span style={bonusStyle}>%</span>);
                 }
@@ -440,7 +440,7 @@ function setupItem(itemElem, i18n) {
             out.push(<span style={{ color: "#ff007b" }}><br />{skill.name[shortLanguageCode] ?? skill.name.en} damage+{itemElem.skillAwake.add}%</span>)
         }
         else if (itemElem.skillAwake.parameter != undefined) {
-            out.push(<span style={{ color: "#ff007b" }}><br />{itemElem.skillAwake.parameter}+{itemElem.skillAwake.add}%</span>)
+            out.push(<span style={{ color: "#ff007b" }}><br />{Utils.getStatNameByIdOrDefault(itemElem.skillAwake.parameter, i18n)}+{itemElem.skillAwake.add}%</span>)
         }
     }
 
@@ -455,16 +455,16 @@ function setupItem(itemElem, i18n) {
 
         for (const ability of card.itemProp.abilities) {
             if (ability.parameter in piercingBonuses) {
-                piercingBonuses[ability.parameter].add += ability.add;
+                piercingBonuses[Utils.getStatNameByIdOrDefault(ability.parameter, i18n)].add += ability.add;
             }
             else {
-                piercingBonuses[ability.parameter] = { ...ability };
+                piercingBonuses[Utils.getStatNameByIdOrDefault(ability.parameter, i18n)] = { ...ability };
             }
         }
     }
 
     for (const [parameter, effect] of Object.entries(piercingBonuses)) {
-        out.push(<span style={{ color: "#d386ff" }}><br />{parameter}+{effect.add}{effect.rate && "%"}</span>);
+        out.push(<span style={{ color: "#d386ff" }}><br />{Utils.getStatNameByIdOrDefault(parameter, i18n)}+{effect.add}{effect.rate && "%"}</span>);
     }
 
     // Ultimate jewels
@@ -472,7 +472,7 @@ function setupItem(itemElem, i18n) {
     for (const jewel of itemElem.ultimateJewels) {
         //#00c8ff
         for (const ability of jewel.itemProp.abilities) {
-            out.push(<span style={{ color: "#00c8ff" }}><br />{ability.parameter}+{ability.add}{ability.rate && "%"}</span>);
+            out.push(<span style={{ color: "#00c8ff" }}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}+{ability.add}{ability.rate && "%"}</span>);
         }
     }
 
@@ -673,7 +673,7 @@ function setupSkill(skill, i18n) {
                 }
             }
 
-            out.push(<span style={abilityStyle}><br />{ability.parameter}{ability.set != undefined ? "=" : "+"}{ability.set != undefined ? ability.set : add + extra}{ability.rate && "%"}</span>);
+            out.push(<span style={abilityStyle}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}{ability.set != undefined ? "=" : "+"}{ability.set != undefined ? ability.set : add + extra}{ability.rate && "%"}</span>);
             if (extra > 0) {
                 out.push(<span style={{ color: "#ffaa00" }}> ({add}+{extra})</span>)
             }
@@ -731,9 +731,9 @@ function setupHousingNpc(housingNpc, i18n) {
     const abilityStyle = { color: "#6161ff" };
     for (const ability of housingNpc.abilities) {
         if (ability.rate) {
-            out.push(<span style={abilityStyle}><br />{ability.parameter}{"+"}{ability.add}{"%"}</span>);
+            out.push(<span style={abilityStyle}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}{"+"}{ability.add}{"%"}</span>);
         } else {
-            out.push(<span style={abilityStyle}><br />{ability.parameter}{"+"}{ability.add}</span>);
+            out.push(<span style={abilityStyle}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}{"+"}{ability.add}</span>);
         }
     }
 
