@@ -101,7 +101,7 @@ function ItemEdit({ itemElem }) {
 
     function setPiercingSlot(index) {
         showSearch({
-            type: "item", subcategory: "piercingcard", searchByStats: true, onSet: (cardItem) => {
+            type: "item", subcategory: "piercingcard", searchByStats: true, targetItemLevel: itemElem.itemProp.level, onSet: (cardItem) => {
                 itemElem.piercings[index] = cardItem;
             }
         });

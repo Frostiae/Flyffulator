@@ -41,6 +41,12 @@ function Search() {
                         }
                     }
 
+                    if (searchProperties.targetItemLevel != undefined) {
+                        if (item.minimumTargetItemLevel != undefined && item.minimumTargetItemLevel > searchProperties.targetItemLevel) {
+                            continue;
+                        }
+                    }
+
                     if (searchProperties.subcategory != null) {
                         if (searchProperties.subcategory instanceof Array) {
                             if (!searchProperties.subcategory.includes(item.subcategory)) {
