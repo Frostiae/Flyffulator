@@ -1349,8 +1349,8 @@ export default class Entity {
      */
     getBlockChance(ranged, attacker) {
         if (this.isPlayer()) {
-            // minimum of 7.5% chance to block
-            // maxmium of 93.75% chance to block
+            // minimum of 6.25% chance to block
+            // maximum of 92.5% chance to block
 
             // Block based on dex and level
             const attackerLevel = attacker.level == -1 ? this.level : attacker.level;
