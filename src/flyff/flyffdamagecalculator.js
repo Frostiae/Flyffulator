@@ -790,7 +790,7 @@ function getBlockFactor() {
             return 1;
         }
 
-        // 7.5% chance to block the attack
+        // 6.25% chance to block the attack
         if (r >= 75) {
             return minBlock;
         }
@@ -802,7 +802,7 @@ function getBlockFactor() {
     else {
         const r = Math.floor(Math.random() * 100);
 
-        // 5% chance to take full damage
+        // 6% chance to take full damage
         if (r <= 5) {
             return 1;
         }
