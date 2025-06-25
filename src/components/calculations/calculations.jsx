@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSearch } from '../../searchcontext';
 import { useTranslation } from "react-i18next";
-import { getDamage, getHealing } from '../../flyff/flyffdamagecalculator';
+import { getHealing } from '../../flyff/flyffdamagecalculator';
 import { runAutoAttackWorker } from './utils/runAutoAttackWorker';
 import { runSkillWorker } from './utils/runSkillWorker';
 import { runMonsterWorker } from './utils/runMonsterWorker';
@@ -16,7 +16,6 @@ import BasicStat from './charts/basicstat';
 import NumberInput from '../shared/numberinput';
 import RangeInput from '../shared/rangeinput';
 import ImportCharacter from '../base/importcharacter';
-import { Loader } from '@react-three/drei';
 
 function Calculations() {
     const AA_DEFAULT_SAMPLE_SIZE = 200;
