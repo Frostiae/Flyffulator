@@ -15,24 +15,24 @@ import RangeInput from '../shared/rangeinput';
 import ImportCharacter from '../base/importcharacter';
 
 function Calculations() {
+    const AA_DEFAULT_SAMPLE_SIZE = 200;
+    const AA_MAX_SAMPLE_SIZE = 10000;
+  
+    const SKILL_DEFAULT_SAMPLE_SIZE = 100;
+    const SKILL_MAX_SAMPLE_SIZE = 10000;
+  
+    const MONSTER_DEFAULT_SAMPLE_SIZE = 100;
+    const MONSTER_MAX_SAMPLE_SIZE = 10000;
+
     const { showSearch } = useSearch();
     const [bigSampleActive, setBigSampleActive] = useState(false);
+    const [aaBigSampleSize, setAaBigSampleSize] = useState(2000);
+    const [skillBigSampleSize, setSkillBigSampleSize] = useState(100);
+    const [monsterBigSampleSize, setMonsterBigSampleSize] = useState(100);
     const [targetType, setTargetType] = useState(Context.defender.isPlayer() ? 1 : (Context.defender.monsterProp.dummy ? 0 : 2));
     const [refresh, setRefresh] = useState(false);
     const [isImporting, setIsImporting] = useState(false);
     const { i18n } = useTranslation();
-
-    const AA_DEFAULT_SAMPLE_SIZE = 200;
-    let AA_BIGGER_SAMPLE_SIZE = 10000;
-    const AA_MAX_SAMPLE_SIZE = 10000;
-  
-    const SKILL_DEFAULT_SAMPLE_SIZE = 100;
-    let SKILL_BIGGER_SAMPLE_SIZE = 100;
-    const SKILL_MAX_SAMPLE_SIZE = 10000;
-  
-    const MONSTER_DEFAULT_SAMPLE_SIZE = 100;
-    let MONSTER_BIGGER_SAMPLE_SIZE = 300;
-    const MONSTER_MAX_SAMPLE_SIZE = 10000;
 
     useEffect(() => {
         setBigSampleActive(false);
@@ -41,6 +41,9 @@ function Calculations() {
         Context.defender,
         refresh,
         targetType,
+        aaBigSampleSize,
+        skillBigSampleSize,
+        monsterBigSampleSize,
     ]);
 
     var shortCode = "en";
@@ -593,17 +596,17 @@ function Calculations() {
                 
                 <div className="row" style={{marginBottom: "20px"}}>
                     <span>{i18n.t("aa_sample_size")}</span>
-                    <RangeInput min={100} max={AA_MAX_SAMPLE_SIZE} onChange={(v) => AA_BIGGER_SAMPLE_SIZE = v } value={AA_BIGGER_SAMPLE_SIZE} isRange={false} step={100}/>
+                    <RangeInput min={100} max={AA_MAX_SAMPLE_SIZE} onChange={(v) => setAaBigSampleSize(v) } value={aaBigSampleSize} isRange={false} step={100}/>
                 </div>
                 
                 <div className="row" style={{marginBottom: "20px"}}>
                     <span>{i18n.t("skill_sample_size")}</span>
-                    <RangeInput min={100} max={SKILL_MAX_SAMPLE_SIZE} onChange={(v) => SKILL_BIGGER_SAMPLE_SIZE = v } value={SKILL_BIGGER_SAMPLE_SIZE} isRange={false} step={100}/>
+                    <RangeInput min={100} max={SKILL_MAX_SAMPLE_SIZE} onChange={(v) => setSkillBigSampleSize(v) } value={skillBigSampleSize} isRange={false} step={100}/>
                 </div>
                 
                 <div className="row" style={{marginBottom: "20px"}}>
                     <span>{i18n.t("monster_sample_size")}</span>
-                    <RangeInput min={100} max={MONSTER_MAX_SAMPLE_SIZE} onChange={(v) => MONSTER_BIGGER_SAMPLE_SIZE = v } value={MONSTER_BIGGER_SAMPLE_SIZE} isRange={false} step={100}/>
+                    <RangeInput min={100} max={MONSTER_MAX_SAMPLE_SIZE} onChange={(v) => setMonsterBigSampleSize(v) } value={monsterBigSampleSize} isRange={false} step={100}/>
                 </div>
 
                 <div className="category-header">
@@ -615,11 +618,11 @@ function Calculations() {
                 <div className="charts">
                 <LineChart
                     chartData={generateAutoAttack(
-                    bigSampleActive ? AA_BIGGER_SAMPLE_SIZE : AA_DEFAULT_SAMPLE_SIZE
+                    bigSampleActive ? aaBigSampleSize : AA_DEFAULT_SAMPLE_SIZE
                     )}
                     title={"Auto Attack Damage"}
                     info={`This is the result of ${
-                    bigSampleActive ? AA_BIGGER_SAMPLE_SIZE : AA_DEFAULT_SAMPLE_SIZE
+                    bigSampleActive ? aaBigSampleSize : AA_DEFAULT_SAMPLE_SIZE
                     } simulated auto attacks against the selected target.`}
                     label={"Damage"}
                     sourceLink={
@@ -632,7 +635,7 @@ function Calculations() {
                     {Object.entries(
                         generateSkillDamage(
                         bigSampleActive
-                            ? SKILL_BIGGER_SAMPLE_SIZE
+                            ? skillBigSampleSize
                             : SKILL_DEFAULT_SAMPLE_SIZE
                         )
                     ).map(([skill, data]) => (
@@ -644,11 +647,11 @@ function Calculations() {
                         }
                         info={`This is the result of ${
                             bigSampleActive
-                            ? SKILL_BIGGER_SAMPLE_SIZE
+                            ? skillBigSampleSize
                             : SKILL_DEFAULT_SAMPLE_SIZE
                         } simulated attacks of this skill against the selected target. On the chart is each iteration's final damage, the highest attack highlighted with a white point, and the average of all ${
                             bigSampleActive
-                            ? SKILL_BIGGER_SAMPLE_SIZE
+                            ? skillBigSampleSize
                             : SKILL_DEFAULT_SAMPLE_SIZE
                         } simulations.`}
                         key={skill}
@@ -671,17 +674,17 @@ function Calculations() {
                 <LineChart
                     chartData={generateMonsterAttack(
                     bigSampleActive
-                        ? MONSTER_BIGGER_SAMPLE_SIZE
+                        ? monsterBigSampleSize
                         : MONSTER_DEFAULT_SAMPLE_SIZE
                     )}
                     title={"Monster Damage"}
                     info={`This is the result of ${
                     bigSampleActive
-                        ? MONSTER_BIGGER_SAMPLE_SIZE
+                        ? monsterBigSampleSize
                         : MONSTER_DEFAULT_SAMPLE_SIZE
                     } simulated attacks taken from the selected target. On the chart is each iteration's final damage, the highest attack highlighted with a white point, and the average of all ${
                     bigSampleActive
-                        ? MONSTER_BIGGER_SAMPLE_SIZE
+                        ? monsterBigSampleSize
                         : MONSTER_DEFAULT_SAMPLE_SIZE
                     } simulations.`}
                     label={"Damage"}
