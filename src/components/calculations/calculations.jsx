@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useSearch } from '../../searchcontext';
 import { useTranslation } from "react-i18next";
 import { getDamage, getHealing } from '../../flyff/flyffdamagecalculator';
@@ -16,10 +16,32 @@ import ImportCharacter from '../base/importcharacter';
 
 function Calculations() {
     const { showSearch } = useSearch();
+    const [bigSampleActive, setBigSampleActive] = useState(false);
     const [targetType, setTargetType] = useState(Context.defender.isPlayer() ? 1 : (Context.defender.monsterProp.dummy ? 0 : 2));
     const [refresh, setRefresh] = useState(false);
     const [isImporting, setIsImporting] = useState(false);
     const { i18n } = useTranslation();
+
+    const AA_DEFAULT_SAMPLE_SIZE = 200;
+    let AA_BIGGER_SAMPLE_SIZE = 10000;
+    const AA_MAX_SAMPLE_SIZE = 10000;
+  
+    const SKILL_DEFAULT_SAMPLE_SIZE = 100;
+    let SKILL_BIGGER_SAMPLE_SIZE = 100;
+    const SKILL_MAX_SAMPLE_SIZE = 10000;
+  
+    const MONSTER_DEFAULT_SAMPLE_SIZE = 100;
+    let MONSTER_BIGGER_SAMPLE_SIZE = 300;
+    const MONSTER_MAX_SAMPLE_SIZE = 10000;
+
+    useEffect(() => {
+        setBigSampleActive(false);
+    }, [
+        Context.player,
+        Context.defender,
+        refresh,
+        targetType,
+    ]);
 
     var shortCode = "en";
     if (i18n.resolvedLanguage) {
@@ -50,14 +72,14 @@ function Calculations() {
         }
     }
 
-    function generateMonsterAttack() {
+    function generateMonsterAttack(cycles = 200) {
         let out = [];
 
         const defender = Context.defender;
         Context.attacker = Context.defender;
         Context.defender = Context.player;
 
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < cycles; i++) {
             Context.skill = null;
             Context.attackFlags = Utils.ATTACK_FLAGS.GENERIC;
 
@@ -87,14 +109,14 @@ function Calculations() {
         setTargetType(1);
     }
 
-    function generateAutoAttack() {
+    function generateAutoAttack(cycles = 200) {
         let out = [];
         Context.defender.activeBuffs = []; // Reset their debuffs from any previous simulations
 
         // TODO: This isn't too accurate for blades, the pattern is a bit different
         let leftHand = false;
 
-        for (let i = 0; i < 200; i++) {
+        for (let i = 0; i < cycles; i++) {
             Context.skill = null;
 
             if (Context.attacker.equipment.mainhand.itemProp.subcategory == "wand") {
@@ -143,7 +165,7 @@ function Calculations() {
         return data;
     }
 
-    function generateSkillDamage() {
+    function generateSkillDamage(cycles = 100) {
         let data = {};
 
         // Add waterbomb
@@ -173,7 +195,7 @@ function Calculations() {
             }
 
             let out = [];
-            for (let i = 0; i < 100; i++) {
+            for (let i = 0; i < cycles; i++) {
                 Context.skill = skillProp;
                 Context.attackFlags = skillProp.magic ? Utils.ATTACK_FLAGS.MAGICSKILL : Utils.ATTACK_FLAGS.MELEESKILL;
 
@@ -541,7 +563,7 @@ function Calculations() {
                     <RangeInput min={0} max={15} onChange={(v) => setSetting("achievementAttackBonus", v)} value={Context.settings.achievementAttackBonus} isRange={true} step={3}/>
                 </div>
 
-                <div className="column" style={{width: "fit-content"}}>
+                <div className="column" style={{width: "fit-content", marginBottom: "20px"}}>
                     <div>
                         <NumberInput min={1} max={100} suffix={"%"} hasButtons={false} label={i18n.t("your_health")} onChange={(v) => setSetting("playerHealthPercent", v)} value={Context.settings.playerHealthPercent} />
                     </div>
@@ -551,6 +573,39 @@ function Calculations() {
                     </div>
                 </div>
 
+                
+
+                <div className="column flex" style={{width: "fit-content", marginBottom: "20px"}}>
+                <button
+                    className="flyff-button"
+                    onClick={() => setBigSampleActive(true)}
+                >
+                    {i18n.t("bigger_sample")}
+                </button>
+                <button
+                    className="flyff-button"
+                    onClick={() => setBigSampleActive(false)}
+                    disabled={!bigSampleActive}
+                >
+                    {i18n.t("clear_sample")}
+                </button>
+                </div>
+                
+                <div className="row" style={{marginBottom: "20px"}}>
+                    <span>{i18n.t("aa_sample_size")}</span>
+                    <RangeInput min={100} max={AA_MAX_SAMPLE_SIZE} onChange={(v) => AA_BIGGER_SAMPLE_SIZE = v } value={AA_BIGGER_SAMPLE_SIZE} isRange={false} step={100}/>
+                </div>
+                
+                <div className="row" style={{marginBottom: "20px"}}>
+                    <span>{i18n.t("skill_sample_size")}</span>
+                    <RangeInput min={100} max={SKILL_MAX_SAMPLE_SIZE} onChange={(v) => SKILL_BIGGER_SAMPLE_SIZE = v } value={SKILL_BIGGER_SAMPLE_SIZE} isRange={false} step={100}/>
+                </div>
+                
+                <div className="row" style={{marginBottom: "20px"}}>
+                    <span>{i18n.t("monster_sample_size")}</span>
+                    <RangeInput min={100} max={MONSTER_MAX_SAMPLE_SIZE} onChange={(v) => MONSTER_BIGGER_SAMPLE_SIZE = v } value={MONSTER_BIGGER_SAMPLE_SIZE} isRange={false} step={100}/>
+                </div>
+
                 <div className="category-header">
                     <h3>{i18n.t("calculations_offensive")}</h3>
                     <HoverInfo text={"Information about damage dealt using auto attacks and allocated skills."} />
@@ -558,30 +613,53 @@ function Calculations() {
                 <hr />
 
                 <div className="charts">
-                    <LineChart
-                        chartData={generateAutoAttack()}
-                        title={"Auto Attack Damage"}
-                        info={"This is the result of 200 simulated auto attacks against the selected target. On the chart is each iteration's final damage, the highest attack highlighted with a white point, and the average of all 200 simulations."}
-                        label={"Damage"}
-                        sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffdamagecalculator.js#L50"}
-                    />
+                <LineChart
+                    chartData={generateAutoAttack(
+                    bigSampleActive ? AA_BIGGER_SAMPLE_SIZE : AA_DEFAULT_SAMPLE_SIZE
+                    )}
+                    title={"Auto Attack Damage"}
+                    info={`This is the result of ${
+                    bigSampleActive ? AA_BIGGER_SAMPLE_SIZE : AA_DEFAULT_SAMPLE_SIZE
+                    } simulated auto attacks against the selected target.`}
+                    label={"Damage"}
+                    sourceLink={
+                    "https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffdamagecalculator.js#L50"
+                    }
+                />
 
                     {/* Skills */}
 
-                    {
-                        Object.entries(generateSkillDamage()).map(([skill, data]) =>
-                            <LineChart
-                                chartData={data}
-                                title={(Utils.getSkillById(skill).name[shortCode] ?? Utils.getSkillById(skill).name.en) + " Damage"}
-                                info={"This is the result of 100 simulated attacks of this skill against the selected target. On the chart is each iteration's final damage, the highest attack highlighted with a white point, and the average of all 200 simulations."}
-                                key={skill}
-                                label={"Damage"}
-                                sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffdamagecalculator.js#L50"}
-                                skillId={skill}
-                            />
+                    {Object.entries(
+                        generateSkillDamage(
+                        bigSampleActive
+                            ? SKILL_BIGGER_SAMPLE_SIZE
+                            : SKILL_DEFAULT_SAMPLE_SIZE
                         )
-                    }
-                </div>
+                    ).map(([skill, data]) => (
+                        <LineChart
+                        chartData={data}
+                        title={
+                            (Utils.getSkillById(skill).name[shortCode] ??
+                            Utils.getSkillById(skill).name.en) + " Damage"
+                        }
+                        info={`This is the result of ${
+                            bigSampleActive
+                            ? SKILL_BIGGER_SAMPLE_SIZE
+                            : SKILL_DEFAULT_SAMPLE_SIZE
+                        } simulated attacks of this skill against the selected target. On the chart is each iteration's final damage, the highest attack highlighted with a white point, and the average of all ${
+                            bigSampleActive
+                            ? SKILL_BIGGER_SAMPLE_SIZE
+                            : SKILL_DEFAULT_SAMPLE_SIZE
+                        } simulations.`}
+                        key={skill}
+                        label={"Damage"}
+                        sourceLink={
+                            "https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffdamagecalculator.js#L50"
+                        }
+                        skillId={skill}
+                        />
+                    ))}
+                    </div>
 
                 <div className="category-header">
                     <h3>{i18n.t("calculations_defensive")}</h3>
@@ -590,13 +668,27 @@ function Calculations() {
                 <hr />
 
                 <div className="charts">
-                    <LineChart
-                        chartData={generateMonsterAttack()}
-                        title={"Monster Damage"}
-                        info={"This is the result of 100 simulated attacks taken from the selected target. On the chart is each iteration's final damage, the highest attack highlighted with a white point, and the average of all 100 simulations."}
-                        label={"Damage"}
-                        sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/tabs/calculations.jsx#L34"}
-                    />
+                <LineChart
+                    chartData={generateMonsterAttack(
+                    bigSampleActive
+                        ? MONSTER_BIGGER_SAMPLE_SIZE
+                        : MONSTER_DEFAULT_SAMPLE_SIZE
+                    )}
+                    title={"Monster Damage"}
+                    info={`This is the result of ${
+                    bigSampleActive
+                        ? MONSTER_BIGGER_SAMPLE_SIZE
+                        : MONSTER_DEFAULT_SAMPLE_SIZE
+                    } simulated attacks taken from the selected target. On the chart is each iteration's final damage, the highest attack highlighted with a white point, and the average of all ${
+                    bigSampleActive
+                        ? MONSTER_BIGGER_SAMPLE_SIZE
+                        : MONSTER_DEFAULT_SAMPLE_SIZE
+                    } simulations.`}
+                    label={"Damage"}
+                    sourceLink={
+                    "https://github.com/Frostiae/Flyffulator/blob/main/src/tabs/calculations.jsx#L34"
+                    }
+                />
                 </div>
 
                 <div className="category-header">
