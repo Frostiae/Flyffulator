@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import { useSearch } from '../../searchcontext';
 import { useTranslation } from "react-i18next";
 import { getDamage, getHealing } from '../../flyff/flyffdamagecalculator';
+import { runAutoAttackWorker } from './utils/runAutoAttackWorker';
+import { runSkillWorker } from './utils/runSkillWorker';
+import { runMonsterWorker } from './utils/runMonsterWorker';
 
 import '../../styles/calculations.scss';
 import Entity from '../../flyff/flyffentity';
@@ -13,6 +16,7 @@ import BasicStat from './charts/basicstat';
 import NumberInput from '../shared/numberinput';
 import RangeInput from '../shared/rangeinput';
 import ImportCharacter from '../base/importcharacter';
+import { Loader } from '@react-three/drei';
 
 function Calculations() {
     const AA_DEFAULT_SAMPLE_SIZE = 200;
@@ -32,7 +36,23 @@ function Calculations() {
     const [targetType, setTargetType] = useState(Context.defender.isPlayer() ? 1 : (Context.defender.monsterProp.dummy ? 0 : 2));
     const [refresh, setRefresh] = useState(false);
     const [isImporting, setIsImporting] = useState(false);
+
+    const [autoAttackData, setAutoAttackData] = useState([]);
+    const [skillData, setSkillData] = useState([]);
+    const [monsterData, setMonsterData] = useState([]);
+    const [isLoadingAA, setIsLoadingAA] = useState(false);
+    const [isLoadingSkill, setIsLoadingSkill] = useState(false);
+    const [isLoadingMonster, setIsLoadingMonster] = useState(false);
+
     const { i18n } = useTranslation();
+
+    function SpinnerOverlay() {
+        return (
+            <div className="spinner-overlay">
+                <div className="spinner" />
+            </div>
+        );
+    }    
 
     useEffect(() => {
         setBigSampleActive(false);
@@ -45,6 +65,64 @@ function Calculations() {
         skillBigSampleSize,
         monsterBigSampleSize,
     ]);
+
+    useEffect(() => {
+        let cancelled = false;
+        setIsLoadingAA(true);
+        setIsLoadingSkill(true);
+        setIsLoadingMonster(true);
+    
+        const context = {
+            player: Context.player.serialize(),
+            attacker: Context.attacker.serialize(),
+            defender: Context.defender.serialize(),
+            attackFlags: Context.attackFlags,
+            skill: Context.skill,
+            settings: Context.settings,
+            expSettings: Context.expSettings
+        }
+
+        runAutoAttackWorker(context, bigSampleActive ? aaBigSampleSize : AA_DEFAULT_SAMPLE_SIZE)
+            .then(data => {
+                if (!cancelled) {
+                    setAutoAttackData(data);
+                    setIsLoadingAA(false);
+                }
+            })
+            .catch(error => {
+                console.error("Error in auto attack worker:", error);
+                setIsLoadingAA(false);
+            });
+
+        runSkillWorker(context, bigSampleActive ?  skillBigSampleSize : SKILL_DEFAULT_SAMPLE_SIZE)
+            .then(data => {
+                if (!cancelled) {
+                    setSkillData(data);
+                    setIsLoadingSkill(false);
+                }
+            })
+            .catch(error => {
+                console.error("Error in auto attack worker:", error);
+                setIsLoadingSkill(false);
+            });
+
+        runMonsterWorker(context, bigSampleActive ?  monsterBigSampleSize : MONSTER_DEFAULT_SAMPLE_SIZE)
+            .then(data => {
+                if (!cancelled) {
+                    console.log(data);
+                    setMonsterData(data);
+                    setIsLoadingMonster(false);
+                }
+            })
+            .catch(error => {
+                console.error("Error in auto attack worker:", error);
+                setIsLoadingMonster(false);
+            });
+    
+        return () => {
+            cancelled = true;
+        };
+    }, [Context.player, Context.defender, bigSampleActive, refresh]);
 
     var shortCode = "en";
     if (i18n.resolvedLanguage) {
@@ -75,77 +153,11 @@ function Calculations() {
         }
     }
 
-    function generateMonsterAttack(cycles = 200) {
-        let out = [];
-
-        const defender = Context.defender;
-        Context.attacker = Context.defender;
-        Context.defender = Context.player;
-
-        for (let i = 0; i < cycles; i++) {
-            Context.skill = null;
-            Context.attackFlags = Utils.ATTACK_FLAGS.GENERIC;
-
-            const res = {
-                damage: getDamage(false),
-                critical: (Context.attackFlags & Utils.ATTACK_FLAGS.CRITICAL) != 0,
-                block: (Context.attackFlags & Utils.ATTACK_FLAGS.BLOCKING) != 0,
-                miss: (Context.attackFlags & Utils.ATTACK_FLAGS.MISS) != 0,
-                parry: (Context.attackFlags & Utils.ATTACK_FLAGS.PARRY) != 0,
-                double: (Context.attackFlags & Utils.ATTACK_FLAGS.DOUBLE) != 0,
-                afterDamageProps: Context.afterDamageProps
-            }
-
-            out.push(res);
-        }
-
-        Context.defender = defender;
-        Context.attacker = Context.player;
-
-        return out;
-    }
-
     function importCharacter(json) {
         Context.defender = new Entity(null);
         Context.defender.unserialize(json);
         setIsImporting(false);
         setTargetType(1);
-    }
-
-    function generateAutoAttack(cycles = 200) {
-        let out = [];
-        Context.defender.activeBuffs = []; // Reset their debuffs from any previous simulations
-
-        // TODO: This isn't too accurate for blades, the pattern is a bit different
-        let leftHand = false;
-
-        for (let i = 0; i < cycles; i++) {
-            Context.skill = null;
-
-            if (Context.attacker.equipment.mainhand.itemProp.subcategory == "wand") {
-                Context.attackFlags = Utils.ATTACK_FLAGS.MAGIC;
-            }
-            else {
-                Context.attackFlags = Utils.ATTACK_FLAGS.GENERIC;
-            }
-
-            if (Context.player.job.id == 2246 && Context.player.equipment.offhand != null) {
-                leftHand = !leftHand;
-            }
-
-            const res = {
-                damage: getDamage(leftHand),
-                critical: (Context.attackFlags & Utils.ATTACK_FLAGS.CRITICAL) != 0,
-                block: (Context.attackFlags & Utils.ATTACK_FLAGS.BLOCKING) != 0,
-                miss: (Context.attackFlags & Utils.ATTACK_FLAGS.MISS) != 0,
-                parry: (Context.attackFlags & Utils.ATTACK_FLAGS.PARRY) != 0,
-                double: (Context.attackFlags & Utils.ATTACK_FLAGS.DOUBLE) != 0,
-                afterDamageProps: Context.afterDamageProps
-            }
-
-            out.push(res);
-        }
-        return out;
     }
 
     function generateHealing() {
@@ -165,60 +177,6 @@ function Calculations() {
             data[skill] = healing;
         }
 
-        return data;
-    }
-
-    function generateSkillDamage(cycles = 100) {
-        let data = {};
-
-        // Add waterbomb
-        if (Context.settings.waterbombEnabled && Context.attacker.getStat("skillchance", true, 11389) > 0) {
-            Context.player.skillLevels[11389] = 1;
-        }
-
-        // Counter attack
-        if (Context.player.skillLevels[2506] != undefined) {
-            Context.player.skillLevels[6725] = Context.player.skillLevels[2506];
-        }
-
-        for (const [skill, level] of Object.entries(Context.player.skillLevels)) {
-            if (level <= 0) {
-                continue; // Shouldn't happen
-            }
-
-            const skillProp = Utils.getSkillById(skill);
-            const levelProp = skillProp.levels[level - 1];
-
-            if (!Context.player.canUseSkill(skillProp)) {
-                continue;
-            }
-
-            if (levelProp.minAttack == undefined) {
-                continue;
-            }
-
-            let out = [];
-            for (let i = 0; i < cycles; i++) {
-                Context.skill = skillProp;
-                Context.attackFlags = skillProp.magic ? Utils.ATTACK_FLAGS.MAGICSKILL : Utils.ATTACK_FLAGS.MELEESKILL;
-
-                const res = {
-                    damage: getDamage(false),
-                    critical: (Context.attackFlags & Utils.ATTACK_FLAGS.CRITICAL) != 0,
-                    block: (Context.attackFlags & Utils.ATTACK_FLAGS.BLOCKING) != 0,
-                    miss: (Context.attackFlags & Utils.ATTACK_FLAGS.MISS) != 0,
-                    parry: (Context.attackFlags & Utils.ATTACK_FLAGS.PARRY) != 0,
-                    double: (Context.attackFlags & Utils.ATTACK_FLAGS.DOUBLE) != 0,
-                    afterDamageProps: Context.afterDamageProps
-                }
-
-                out.push(res);
-            }
-
-            data[skill] = out;
-        }
-
-        delete Context.player.skillLevels[11389];
         return data;
     }
 
@@ -614,111 +572,103 @@ function Calculations() {
                     <HoverInfo text={"Information about damage dealt using auto attacks and allocated skills."} />
                 </div>
                 <hr />
-
+                
                 <div className="charts">
-                <LineChart
-                    chartData={generateAutoAttack(
-                    bigSampleActive ? aaBigSampleSize : AA_DEFAULT_SAMPLE_SIZE
-                    )}
-                    title={"Auto Attack Damage"}
-                    info={`This is the result of ${
-                    bigSampleActive ? aaBigSampleSize : AA_DEFAULT_SAMPLE_SIZE
-                    } simulated auto attacks against the selected target.`}
-                    label={"Damage"}
-                    sourceLink={
-                    "https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffdamagecalculator.js#L50"
-                    }
-                />
-
-                    {/* Skills */}
-
-                    {Object.entries(
-                        generateSkillDamage(
-                        bigSampleActive
-                            ? skillBigSampleSize
-                            : SKILL_DEFAULT_SAMPLE_SIZE
-                        )
-                    ).map(([skill, data]) => (
-                        <LineChart
-                        chartData={data}
-                        title={
-                            (Utils.getSkillById(skill).name[shortCode] ??
-                            Utils.getSkillById(skill).name.en) + " Damage"
-                        }
+                {(isLoadingAA || isLoadingMonster || isLoadingSkill) && <SpinnerOverlay />}
+                    <LineChart
+                        chartData={autoAttackData}
+                        title={"Auto Attack Damage"}
                         info={`This is the result of ${
-                            bigSampleActive
-                            ? skillBigSampleSize
-                            : SKILL_DEFAULT_SAMPLE_SIZE
-                        } simulated attacks of this skill against the selected target. On the chart is each iteration's final damage, the highest attack highlighted with a white point, and the average of all ${
-                            bigSampleActive
-                            ? skillBigSampleSize
-                            : SKILL_DEFAULT_SAMPLE_SIZE
-                        } simulations.`}
-                        key={skill}
+                            bigSampleActive ? aaBigSampleSize : AA_DEFAULT_SAMPLE_SIZE
+                        } simulated auto attacks against the selected target.`}
                         label={"Damage"}
                         sourceLink={
                             "https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffdamagecalculator.js#L50"
                         }
-                        skillId={skill}
-                        />
-                    ))}
-                    </div>
-
-                <div className="category-header">
-                    <h3>{i18n.t("calculations_defensive")}</h3>
-                    <HoverInfo text={"Information about your defensive capabilities against the current target."} />
-                </div>
-                <hr />
-
-                <div className="charts">
-                <LineChart
-                    chartData={generateMonsterAttack(
-                    bigSampleActive
-                        ? monsterBigSampleSize
-                        : MONSTER_DEFAULT_SAMPLE_SIZE
-                    )}
-                    title={"Monster Damage"}
-                    info={`This is the result of ${
-                    bigSampleActive
-                        ? monsterBigSampleSize
-                        : MONSTER_DEFAULT_SAMPLE_SIZE
-                    } simulated attacks taken from the selected target. On the chart is each iteration's final damage, the highest attack highlighted with a white point, and the average of all ${
-                    bigSampleActive
-                        ? monsterBigSampleSize
-                        : MONSTER_DEFAULT_SAMPLE_SIZE
-                    } simulations.`}
-                    label={"Damage"}
-                    sourceLink={
-                    "https://github.com/Frostiae/Flyffulator/blob/main/src/tabs/calculations.jsx#L34"
-                    }
-                />
-                </div>
-
-                <div className="category-header">
-                    <h3>Other skill calculations</h3>
-                    <HoverInfo text={"Other calculations about allocated skills such as healing."} />
-                </div>
-                <hr />
-
-                <div className="charts">
-                    <BasicStat title={"Waterbomb chance"} value={Context.attacker.getStat("skillchance", true, 11389)}
-                        information={"This value lowers how much damage you take from auto attacks.\n\nWhile this value is significantly lower than the value you would see in-game, it is the real value used during damage calculations."}
-                        sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/tabs/calculations.jsx#L147"}
-                        percentage
                     />
 
-                    {/* Healing Skills */}
 
-                    {
-                        Object.entries(generateHealing()).map(([skill, data]) =>
-                            <BasicStat key={skill} title={(Utils.getSkillById(skill).name[shortCode] ?? Utils.getSkillById(skill).name.en) + " Healing"} value={data}
-                                sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffdamagecalculator.js#L11"}
+                        {/* Skills */}
+
+                        {Object.entries(
+                            skillData
+                        ).map(([skill, data]) => (
+                            <LineChart
+                            chartData={data}
+                            title={
+                                (Utils.getSkillById(skill).name[shortCode] ??
+                                Utils.getSkillById(skill).name.en) + " Damage"
+                            }
+                            info={`This is the result of ${
+                                bigSampleActive
+                                ? skillBigSampleSize
+                                : SKILL_DEFAULT_SAMPLE_SIZE
+                            } simulated attacks of this skill against the selected target. On the chart is each iteration's final damage, the highest attack highlighted with a white point, and the average of all ${
+                                bigSampleActive
+                                ? skillBigSampleSize
+                                : SKILL_DEFAULT_SAMPLE_SIZE
+                            } simulations.`}
+                            key={skill}
+                            label={"Damage"}
+                            sourceLink={
+                                "https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffdamagecalculator.js#L50"
+                            }
+                            skillId={skill}
                             />
-                        )
-                    }
-                </div>
+                        ))}
+                        </div>
 
-            </div>
+                    <div className="category-header">
+                        <h3>{i18n.t("calculations_defensive")}</h3>
+                        <HoverInfo text={"Information about your defensive capabilities against the current target."} />
+                    </div>
+                    <hr />
+
+                    <div className="charts">
+                    <LineChart
+                        chartData={monsterData}
+                        title={"Monster Damage"}
+                        info={`This is the result of ${
+                        bigSampleActive
+                            ? monsterBigSampleSize
+                            : MONSTER_DEFAULT_SAMPLE_SIZE
+                        } simulated attacks taken from the selected target. On the chart is each iteration's final damage, the highest attack highlighted with a white point, and the average of all ${
+                        bigSampleActive
+                            ? monsterBigSampleSize
+                            : MONSTER_DEFAULT_SAMPLE_SIZE
+                        } simulations.`}
+                        label={"Damage"}
+                        sourceLink={
+                        "https://github.com/Frostiae/Flyffulator/blob/main/src/tabs/calculations.jsx#L34"
+                        }
+                    />
+                    </div>
+
+                    <div className="category-header">
+                        <h3>Other skill calculations</h3>
+                        <HoverInfo text={"Other calculations about allocated skills such as healing."} />
+                    </div>
+                    <hr />
+
+                    <div className="charts">
+                        <BasicStat title={"Waterbomb chance"} value={Context.attacker.getStat("skillchance", true, 11389)}
+                            information={"This value lowers how much damage you take from auto attacks.\n\nWhile this value is significantly lower than the value you would see in-game, it is the real value used during damage calculations."}
+                            sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/tabs/calculations.jsx#L147"}
+                            percentage
+                        />
+
+                        {/* Healing Skills */}
+
+                        {
+                            Object.entries(generateHealing()).map(([skill, data]) =>
+                                <BasicStat key={skill} title={(Utils.getSkillById(skill).name[shortCode] ?? Utils.getSkillById(skill).name.en) + " Healing"} value={data}
+                                    sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffdamagecalculator.js#L11"}
+                                />
+                            )
+                        }
+                    </div>
+
+                </div>
 
             <ImportCharacter open={isImporting} onImport={importCharacter} close={() => setIsImporting(false)} />
         </div>
