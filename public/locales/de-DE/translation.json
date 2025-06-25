@@ -63,5 +63,10 @@
     "exp_cheer": "Cheered",
     "itemedit_stat_ranges": "Stat Ranges",
     "itemedit_random_bonus_ultimate": "Ultimate Bonus",
-    "itemedit_goddess_demons": "Blessing of the Goddess / Demon"
+    "itemedit_goddess_demons": "Blessing of the Goddess / Demon",
+    "bigger_sample": "Größere Stichprobe nehmen",
+    "clear_sample": "Große Stichprobe löschen",
+    "aa_sample_size": "Stichprobengröße für Auto-Angriff",
+    "skills_sample_size": "Stichprobengröße für Fähigkeiten",
+    "monster_sample_size": "Stichprobengröße für Monsterangriff"
 }
