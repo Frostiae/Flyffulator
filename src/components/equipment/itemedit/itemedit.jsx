@@ -339,7 +339,7 @@ function ItemEdit({ itemElem }) {
             }
 
             {
-                itemElem.itemProp.category == "fashion" &&
+                (itemElem.itemProp.category == "fashion" && itemElem.itemProp.subcategory != "mask") &&
                 <div className="column">
                     <h3>{i18n.t("itemedit_goddess_demons")}</h3>
                     <Dropdown options={possibleBlessings} onSelectionChanged={(e) => setBlessingOption(0, e)} valueKey={itemElem.randomStats[0]?.id ?? 0} style={{ minWidth: "200px" }} />
