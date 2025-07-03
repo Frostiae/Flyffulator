@@ -63,7 +63,6 @@
     "target_health": "目标的生命值",
     "achievement_attack_bonus": "成就: 对目标攻击力增加",
     "bigger_sample": "获取更大的样本",
-    "clear_sample": "清除大样本",
     "aa_sample_size": "自动攻击样本大小",
     "skills_sample_size": "技能样本大小",
     "monster_sample_size": "怪物攻击样本大小"
