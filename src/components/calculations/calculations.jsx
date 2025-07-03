@@ -70,7 +70,6 @@ function Calculations() {
         setIsLoadingAA(true);
         setIsLoadingSkill(true);
         setIsLoadingMonster(true);
-
         
         // Add waterbomb
         if (Context.settings.waterbombEnabled && Context.attacker.getStat("skillchance", true, 11389) > 0) {
@@ -543,38 +542,29 @@ function Calculations() {
                         <NumberInput min={1} max={100} suffix={"%"} hasButtons={false} label={i18n.t("target_health")} onChange={(v) => setSetting("targetHealthPercent", v)} value={Context.settings.targetHealthPercent} />
                     </div>
                 </div>
-
                 
+                {/* Big sample inputs */}
 
                 <div className="column flex" style={{width: "fit-content", marginBottom: "20px"}}>
-                <button
-                    className="flyff-button"
-                    onClick={() => setBigSampleActive(true)}
-                >
-                    {i18n.t("bigger_sample")}
-                </button>
-                <button
-                    className="flyff-button"
-                    onClick={() => setBigSampleActive(false)}
-                    disabled={!bigSampleActive}
-                >
-                    {i18n.t("clear_sample")}
-                </button>
+                    <div>
+                        <input type="checkbox" id="bigSample" checked={bigSampleActive} onChange={() => setBigSampleActive(!bigSampleActive)} />
+                        <label htmlFor="bigSample">{i18n.t("bigger_sample")}</label>
+                    </div>
                 </div>
                 
                 <div className="row" style={{marginBottom: "20px"}}>
                     <span>{i18n.t("aa_sample_size")}</span>
-                    <RangeInput min={100} max={AA_MAX_SAMPLE_SIZE} onChange={(v) => setAaBigSampleSize(v) } value={aaBigSampleSize} isRange={false} step={100}/>
+                    <RangeInput min={100} max={AA_MAX_SAMPLE_SIZE} onChange={(v) => setAaBigSampleSize(v) } value={aaBigSampleSize} isRange={false} step={100} />
                 </div>
                 
                 <div className="row" style={{marginBottom: "20px"}}>
                     <span>{i18n.t("skill_sample_size")}</span>
-                    <RangeInput min={100} max={SKILL_MAX_SAMPLE_SIZE} onChange={(v) => setSkillBigSampleSize(v) } value={skillBigSampleSize} isRange={false} step={100}/>
+                    <RangeInput min={100} max={SKILL_MAX_SAMPLE_SIZE} onChange={(v) => setSkillBigSampleSize(v) } value={skillBigSampleSize} isRange={false} step={100} />
                 </div>
                 
                 <div className="row" style={{marginBottom: "20px"}}>
                     <span>{i18n.t("monster_sample_size")}</span>
-                    <RangeInput min={100} max={MONSTER_MAX_SAMPLE_SIZE} onChange={(v) => setMonsterBigSampleSize(v) } value={monsterBigSampleSize} isRange={false} step={100}/>
+                    <RangeInput min={100} max={MONSTER_MAX_SAMPLE_SIZE} onChange={(v) => setMonsterBigSampleSize(v) } value={monsterBigSampleSize} isRange={false} step={100} />
                 </div>
 
                 <div className="category-header">
