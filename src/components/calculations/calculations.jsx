@@ -70,6 +70,18 @@ function Calculations() {
         setIsLoadingAA(true);
         setIsLoadingSkill(true);
         setIsLoadingMonster(true);
+
+        
+        // Add waterbomb
+        if (Context.settings.waterbombEnabled && Context.attacker.getStat("skillchance", true, 11389) > 0) {
+            Context.player.skillLevels[11389] = 1;
+        }
+
+        
+        // Counter attack
+        if (Context.player.skillLevels[2506] != undefined) {
+            Context.player.skillLevels[6725] = Context.player.skillLevels[2506];
+        }
     
         const context = {
             player: Context.player.serialize(),
@@ -108,7 +120,6 @@ function Calculations() {
         runMonsterWorker(context, bigSampleActive ?  monsterBigSampleSize : MONSTER_DEFAULT_SAMPLE_SIZE)
             .then(data => {
                 if (!cancelled) {
-                    console.log(data);
                     setMonsterData(data);
                     setIsLoadingMonster(false);
                 }

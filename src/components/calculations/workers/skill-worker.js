@@ -26,16 +26,6 @@ self.onmessage = function (event) {
 
     let data = {};
 
-    // Add waterbomb
-    if (Context.settings.waterbombEnabled && Context.attacker.getStat("skillchance", true, 11389) > 0) {
-        Context.player.skillLevels[11389] = 1;
-    }
-
-    // Counter attack
-    if (Context.player.skillLevels[2506] != undefined) {
-        Context.player.skillLevels[6725] = Context.player.skillLevels[2506];
-    }
-
     for (const [skill, level] of Object.entries(Context.player.skillLevels)) {
         if (level <= 0) {
             continue; // Shouldn't happen
