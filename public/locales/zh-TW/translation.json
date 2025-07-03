@@ -61,5 +61,9 @@
     "enable_party_leader": "劇團團長",
     "your_health": "你的生命值",
     "target_health": "目標的生命值",
-    "achievement_attack_bonus": "成就: 對目標攻擊力增加"
+    "achievement_attack_bonus": "成就: 對目標攻擊力增加",
+    "bigger_sample": "取得更大的樣本",
+    "aa_sample_size": "自動攻擊樣本大小",
+    "skills_sample_size": "技能樣本大小",
+    "monster_sample_size": "怪物攻擊樣本大小"
 }
