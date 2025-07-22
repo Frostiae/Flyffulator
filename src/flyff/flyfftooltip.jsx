@@ -454,7 +454,7 @@ function setupItem(itemElem, i18n) {
         }
 
         for (const ability of card.itemProp.abilities) {
-            if (ability.parameter in piercingBonuses) {
+            if (Utils.getStatNameByIdOrDefault(ability.parameter, i18n) in piercingBonuses) {
                 piercingBonuses[Utils.getStatNameByIdOrDefault(ability.parameter, i18n)].add += ability.add;
             }
             else {
