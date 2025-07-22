@@ -1412,6 +1412,32 @@ export default class Entity {
         }
     }
 
+    getTrueBlockChance(ranged, attacker) {
+        const blockChance = this.getBlockChance(ranged, attacker);
+        if (this.isPlayer()) {
+            if (blockChance <= 6) {
+                // minimum of 6.25% chance to block
+                return 6.25;
+            }
+            if (blockChance >= 75) {
+                // maximum of 92.5% chance to block
+                return 92.5;
+            }
+            return (blockChance - 1) / 80 * 100;
+        }
+        else {
+            if (blockChance <= 6) {
+                // minimum of 5% chance blockrate
+                return 5;
+            }
+            if (blockChance >= 95) {
+                // maximum of 94% chance blockrate
+                return 94;
+            }
+            return blockChance - 1;
+        }
+    }
+
     getStatScale(parameter, skillProp, level) {
         const levelProp = skillProp.levels[level];
         if (levelProp == undefined) {
