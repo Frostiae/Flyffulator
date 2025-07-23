@@ -63,5 +63,9 @@
     "your_health": "Sua vida",
     "target_health": "Vida do alvo",
     "achievement_attack_bonus": "Conquistas: Frequência de Ataque no(s) alvo(s)",
-    "exp_cheer": "Com Cheer"
+    "exp_cheer": "Com Cheer",
+    "bigger_sample": "Pegar amostra maior",
+    "aa_sample_size": "Tamanho da amostra de ataque automático",
+    "skills_sample_size": "Tamanho da amostra de habilidades",
+    "monster_sample_size": "Tamanho da amostra de ataque de monstro"
 }
