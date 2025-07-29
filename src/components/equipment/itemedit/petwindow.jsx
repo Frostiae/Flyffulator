@@ -18,7 +18,7 @@ function PetWindow({ raisedPetDefinition, petLevels, editable = false, onEditLev
     const { i18n } = useTranslation();
     var shortLanguageCode = "en";
     if (i18n.resolvedLanguage) {
-        shortLanguageCode = i18n.resolvedLanguage.split('-')[0];
+        shortLanguageCode = Utils.getFlyffLanguageShortCodeFromLanguage(i18n);
     }
 
     function toggleTooltip(enabled) {
