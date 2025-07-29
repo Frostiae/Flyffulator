@@ -808,7 +808,7 @@ export default class Entity {
                 return 0;
         }
 
-        return (this.getStat(stat, true) + resistance) / 100;
+        return this.getStat(stat, true) + resistance;
     }
 
     /**
