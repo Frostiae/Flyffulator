@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { useTooltip } from '../../tooltipcontext';
 import { createTooltip } from '../../flyff/flyfftooltip';
+import { getFlyffLanguageShortCodeFromLanguage } from '../../flyff/flyffutils';
 import { useTranslation } from "react-i18next";
 
 function SkillTreeIcon({ skill, disabled, level, clickHandle, rightClickHandle }) {
@@ -9,7 +10,7 @@ function SkillTreeIcon({ skill, disabled, level, clickHandle, rightClickHandle }
     const { i18n } = useTranslation();
     var shortCode = "en";
     if(i18n.resolvedLanguage) {
-        shortCode = i18n.resolvedLanguage.split('-')[0];
+        shortCode = getFlyffLanguageShortCodeFromLanguage(i18n);
     }
 
     const levelText = level == skill.levels.length ? "MAX" : level;
