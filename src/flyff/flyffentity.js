@@ -996,7 +996,7 @@ export default class Entity {
 
             // Item awake (for e.g. healing)
             if (itemElem.skillAwake != undefined) {
-                if (itemElem.skillAwake.parameter === stat && rate) {
+                if ((itemElem.skillAwake.parameter === stat || targetStats.includes(itemElem.skillAwake.parameter)) && rate) {
                     total += itemElem.skillAwake.add;
                 }
             }
