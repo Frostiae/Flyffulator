@@ -212,6 +212,9 @@ export default class ItemElem {
                 case "boots":
                     upgradeFactor = upgradeBonus[upgradeLevel - 1].bootsDefense;
                     break;
+                case "shield":
+                    upgradeFactor = upgradeBonus[upgradeLevel - 1].shieldDefense;
+                    break;
             }
 
             value += value * upgradeFactor / 100;
