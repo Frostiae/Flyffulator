@@ -1406,7 +1406,7 @@ export default class Entity {
             let blockRate = Math.floor((this.getParry() - defenderLevel) * 0.5);
             const blockPenetration = attacker.getStat("blockpenetration", true);
             blockRate = blockRate * (1 - blockPenetration / 100);
-            blockRate = Math.min(blockRate, 0);
+            blockRate = Math.max(blockRate, 0);
 
             return blockRate;
         }
