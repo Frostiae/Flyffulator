@@ -221,5 +221,55 @@
 		"bootsDefense": 20,
 		"shieldDefense": 20,
 		"setAbilities": []
+	},
+	{
+		"upgradeLevel": 16,
+		"weaponAttack": 41,
+		"helmetDefense": 20,
+		"suitDefense": 20,
+		"gauntletDefense": 20,
+		"bootsDefense": 20,
+		"shieldDefense": 20,
+		"setAbilities": []
+	},
+	{
+		"upgradeLevel": 17,
+		"weaponAttack": 43,
+		"helmetDefense": 20,
+		"suitDefense": 20,
+		"gauntletDefense": 20,
+		"bootsDefense": 20,
+		"shieldDefense": 20,
+		"setAbilities": []
+	},
+	{
+		"upgradeLevel": 18,
+		"weaponAttack": 45,
+		"helmetDefense": 20,
+		"suitDefense": 20,
+		"gauntletDefense": 20,
+		"bootsDefense": 20,
+		"shieldDefense": 20,
+		"setAbilities": []
+	},
+	{
+		"upgradeLevel": 19,
+		"weaponAttack": 47,
+		"helmetDefense": 20,
+		"suitDefense": 20,
+		"gauntletDefense": 20,
+		"bootsDefense": 20,
+		"shieldDefense": 20,
+		"setAbilities": []
+	},
+	{
+		"upgradeLevel": 20,
+		"weaponAttack": 50,
+		"helmetDefense": 20,
+		"suitDefense": 20,
+		"gauntletDefense": 20,
+		"bootsDefense": 20,
+		"shieldDefense": 20,
+		"setAbilities": []
 	}
 ]
