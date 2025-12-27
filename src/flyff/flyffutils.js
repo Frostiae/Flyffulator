@@ -18,7 +18,7 @@ export const JOBS = {
     9098: 2, // Acrobat
     8962: 3, // Assist
     9581: 4, // Magician
-    0: 5,
+    0: 5, // Puppeteer
 
     5330: 6, // Knight
     2246: 7, // Blade
@@ -28,8 +28,19 @@ export const JOBS = {
     7424: 11, // Billposter
     5709: 12, // Psykeeper
     9150: 13, // Elementor
-    1: 14,
-    2: 15
+    1: 14, // Gatekeeper
+    2: 15, // Doppler
+
+    28125: 16, // Templar
+    23509: 17, // Slayer
+    20311: 18, // Harlequin
+    28695: 19, // Crackshooter
+    21680: 20, // Seraph
+    23623: 21, // Forcemaster
+    22213: 22, // Mentalist
+    25863: 23, // Arcanist
+    3: 24, // Summoner
+    4: 25, // Trapmaster
 };
 
 export const DEFAULT_WEAPON = new ItemElem({
@@ -139,15 +150,14 @@ export function getMonsterRange(startLevel, endLevel) {
  * @returns Whether or not the base job is or has been through the given job.
  */
 export function isAnteriorJob(baseJobId, otherJobId) {
-    if (otherJobId == 9686 || otherJobId == baseJobId) {
-        return true;
-    }
+    let theClass = classes[baseJobId];
 
-    const defineId = JOBS[otherJobId];
-    if (defineId > JOBS[9686] && defineId < 6) {
-        if (defineId * 2 + 4 == JOBS[baseJobId] || defineId * 2 + 5 == JOBS[baseJobId]) {
+    while (theClass) {
+        if (theClass.id == otherJobId) {
             return true;
         }
+
+        theClass = classes[theClass.parent];
     }
 
     return false;
@@ -160,10 +170,11 @@ export function isAnteriorJob(baseJobId, otherJobId) {
 export function getAnteriorClassIds(classId) {
     const ids = [classId];
 
-    for (const [id,] of Object.entries(classes)) {
-        if (id != classId && isAnteriorJob(classId, id)) {
-            ids.push(id);
-        }
+    let theClass = classes[classId];
+
+    while (theClass && theClass.parent) {
+        ids.push(theClass.parent);
+        theClass = classes[theClass.parent];
     }
 
     return ids.reverse();
@@ -172,7 +183,8 @@ export function getAnteriorClassIds(classId) {
 export function getClassSkills(classId) {
     const res = [];
     for (const [, skill] of Object.entries(skills)) {
-        if (skill.class == classId) {
+        // TODO: The !skill.inheritSkill condition removes master variations - undo when adding master variations
+        if (skill.class == classId && !skill.inheritSkill) {
             res.push(skill);
         }
     }

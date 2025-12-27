@@ -23,7 +23,7 @@ function SkillTree() {
     function clickSkill(skill, inc, e) {
         e.preventDefault();
 
-        if (!Context.player.canUseSkill(skill)) {
+        if (!Context.player.canUseSkill(skill, true)) {
             return;
         }
 
@@ -209,12 +209,20 @@ function SkillTree() {
                                                     rightClickHandle={(e) => clickSkill(skill, -1, e)}
                                                     skill={skill}
                                                     key={skill.id}
-                                                    disabled={!Context.player.canUseSkill(skill)}
+                                                    disabled={!Context.player.canUseSkill(skill, true)}
                                                     level={Context.player.getSkillLevel(skill.id)}
                                                 />
                                             )
                                         }
                                     </div>
+                                    {c.minLevel >= 165 && (
+                                        <>
+                                            <hr />
+                                            <div style={{ fontSize: '0.8em', color: '#aaa' }}>
+                                                {t("skills_and_buffs_master_variations_unsupported")}
+                                            </div>
+                                        </>
+                                    )}
                                 </div>
                             )
                         })

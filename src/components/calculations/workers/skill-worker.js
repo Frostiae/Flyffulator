@@ -32,6 +32,12 @@ self.onmessage = function (event) {
         }
 
         const skillProp = Utils.getSkillById(skill);
+
+        // TODO: This skips master variations.
+        if (skillProp.inheritSkill) {
+            continue;
+        }
+
         const levelProp = skillProp.levels[level - 1];
 
         if (!Context.player.canUseSkill(skillProp)) {

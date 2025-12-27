@@ -134,10 +134,6 @@ export default class ItemElem {
         }
 
         if (this.itemProp.category == "weapon" || this.itemProp.category == "armor") {
-            if (this.itemProp.rarity == "ultimate") {
-                return 5;
-            }
-
             return 10;
         }
 
