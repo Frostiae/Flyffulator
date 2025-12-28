@@ -11,38 +11,6 @@ import partySkills from "../assets/PartySkills.json";
 import upgradeBonus from "../assets/UpgradeBonus.json";
 import levelDifferencePenalties from "../assets/LevelDifferencePenalties.json";
 
-export const JOBS = {
-    9686: 0, // Vagrant
-
-    764: 1, // Mercenary
-    9098: 2, // Acrobat
-    8962: 3, // Assist
-    9581: 4, // Magician
-    0: 5, // Puppeteer
-
-    5330: 6, // Knight
-    2246: 7, // Blade
-    3545: 8, // Jester
-    9295: 9, // Ranger
-    9389: 10, // Ringmaster
-    7424: 11, // Billposter
-    5709: 12, // Psykeeper
-    9150: 13, // Elementor
-    1: 14, // Gatekeeper
-    2: 15, // Doppler
-
-    28125: 16, // Templar
-    23509: 17, // Slayer
-    20311: 18, // Harlequin
-    28695: 19, // Crackshooter
-    21680: 20, // Seraph
-    23623: 21, // Forcemaster
-    22213: 22, // Mentalist
-    25863: 23, // Arcanist
-    3: 24, // Summoner
-    4: 25, // Trapmaster
-};
-
 export const DEFAULT_WEAPON = new ItemElem({
     id: -1,
     minAttack: 1,

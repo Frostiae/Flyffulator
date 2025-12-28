@@ -258,14 +258,14 @@ function ItemEdit({ itemElem }) {
 
         if (itemElem.itemProp.rarity === "ultimate") {
             if (level < 10) {
-                delete itemElem.randomStats[3];
+                itemElem.randomStats.splice(3);
             } else if (!itemElem.randomStats[3]) {
                 const stat = itemElem.itemProp.possibleRandomStats[Math.min(3, itemElem.itemProp.possibleRandomStats.length)];
                 itemElem.randomStats[3] = { ...stat, id: 3, value: halfStat(stat.parameter, Math.floor(stat.add + (stat.addMax - stat.add) / 2)) };
             }
 
             if (level < 6) {
-                delete itemElem.randomStats[2];
+                itemElem.randomStats.splice(2);
             } else if (!itemElem.randomStats[2]) {
                 const stat = itemElem.itemProp.possibleRandomStats[Math.min(2, itemElem.itemProp.possibleRandomStats.length)];
                 itemElem.randomStats[2] = { ...stat, id: 2, value: halfStat(stat.parameter, Math.floor(stat.add + (stat.addMax - stat.add) / 2)) };
@@ -440,7 +440,7 @@ function ItemEdit({ itemElem }) {
                         value={itemElem.randomStats[0]?.value ?? 0}
                         isRange={itemElem.randomStats[0]?.rate ?? true}
                         prefix={"+"}
-                        step={STAT_STEPS[itemElem.randomStats[1].parameter] ?? 1}
+                        step={STAT_STEPS[itemElem.randomStats[1]?.parameter] ?? 1}
                         disabled={itemElem.randomStats[0] == null}
                         allowedValues={itemElem.randomStats[0] ? getAllowedBlessingValues(itemElem.randomStats[0].parameter) : [0, 1]}
                     />
@@ -451,7 +451,7 @@ function ItemEdit({ itemElem }) {
                         value={itemElem.randomStats[1]?.value ?? 0}
                         isRange={itemElem.randomStats[1]?.rate ?? true}
                         prefix={"+"}
-                        step={STAT_STEPS[itemElem.randomStats[1].parameter] ?? 1}
+                        step={STAT_STEPS[itemElem.randomStats[1]?.parameter] ?? 1}
                         disabled={itemElem.randomStats[1] == null}
                         allowedValues={itemElem.randomStats[1] ? getAllowedBlessingValues(itemElem.randomStats[1].parameter) : [0, 1]}
                     />
