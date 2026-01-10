@@ -329,7 +329,15 @@ function applyDefense(attack) {
             probability = levelProp.probability;
         }
 
-        factor = levelProp.damageMultiplier != undefined ? levelProp.damageMultiplier : factor;
+        if (levelProp.damageMultiplier != undefined) {
+            for (const mul of levelProp.damageMultiplier) {
+                if (mul.condition != undefined) {
+                    continue; // TODO: Handle conditional multipliers
+                }
+
+                factor *= mul.multiplier;
+            }
+        }
 
         // Vital stab/silent shot with dark illusion
         if (Context.skill.id == 5162 || Context.skill.id == 8916) {
