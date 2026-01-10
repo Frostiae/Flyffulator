@@ -1280,6 +1280,8 @@ export default class Entity {
             }
         }
 
+        // Floating point precision problems
+        total = Math.round(total * 1000.0) / 1000.0;
         return total;
     }
 
