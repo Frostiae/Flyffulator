@@ -335,7 +335,8 @@ export default class Entity {
             Math.min(Math.max(this.level - 100, 0), 20) * 7 + // Levels 101-120
             Math.min(Math.max(this.level - 120, 0), 20) * 8 + // Levels 121-140
             Math.min(Math.max(this.level - 140, 0), 10) * 1 + // Levels 141-150
-            Math.min(Math.max(this.level - 150, 0), 15) * 2; // Levels 151-165
+            Math.min(Math.max(this.level - 150, 0), 16) * 2 + // Levels 151-166
+            Math.min(Math.max(this.level - 166, 0), 24) * 10; // Levels 166-190
 
         // Job change quest reward
 
@@ -370,6 +371,31 @@ export default class Entity {
             case "Elementor":
                 total += 390;
                 break;
+            case "Templar":
+                total += 270;
+                break;
+            case "Slayer":
+                total += 370;
+                break;
+            case "Harlequin":
+                total += 350;
+                break;
+            case "Crackshooter":
+                total += 400;
+                break;
+            case "Seraph":
+                total += 560;
+                break;
+            case "Forcemaster":
+                total += 600;
+                break;
+            case "Mentalist":
+                total += 480;
+                break;
+            case "Arcanist":
+                total += 1190;
+                break;
+            
             default:
                 break;
         }
@@ -379,15 +405,17 @@ export default class Entity {
         for (const [skillId, level] of Object.entries(this.skillLevels)) {
             const skillProp = Utils.getSkillById(skillId);
 
-            if (!this.canUseSkill(skillProp)) {
+            if (!this.canUseSkill(skillProp, true)) {
                 continue; // Skill could have points saved but can't use it
             }
 
             let multiplier = 1;
-            if (skillProp.level >= 60) {
+
+            if (skillProp.level >= 166) {
+                multiplier = 10;
+            } else if (skillProp.level >= 60) {
                 multiplier = 3;
-            }
-            else if (skillProp.level >= 15) {
+            } else if (skillProp.level >= 15) {
                 multiplier = 2;
             }
 
@@ -401,7 +429,7 @@ export default class Entity {
      * Whether or not this player can use the given skill.
      * @param {object} skillProp The skill to check.
      */
-    canUseSkill(skillProp) {
+    canUseSkill(skillProp, skipWeaponCheck = false) {
         if (this.isMonster()) {
             return false;
         }
@@ -414,7 +442,7 @@ export default class Entity {
             return false;
         }
 
-        if (skillProp.weapon != undefined) {
+        if (!skipWeaponCheck && skillProp.weapon != undefined) {
             const currentWeapon = this.equipment.mainhand.itemProp.subcategory;
             const possibleWeapons = [currentWeapon];
             if (currentWeapon == "wand" || currentWeapon == "staff") {

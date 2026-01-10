@@ -234,8 +234,10 @@ function setupItem(itemElem, i18n) {
     // Ultimate stats
 
     if (itemProp.possibleRandomStats != undefined) {
-        for (const stat of itemElem.randomStats) {
-            out.push(<span style={{ color: "#ffff00" }}><br />{Utils.getStatNameByIdOrDefault(stat.parameter, i18n)}+{stat.value}{stat.rate ? "%" : ""}</span>);
+        for (let i = 0; i < itemElem.randomStats.length; i++) {
+            const stat = itemElem.randomStats[i];
+            const color = i < 2 ? "#ffff00" : "#ff9900";
+            out.push(<span style={{ color }}><br />{Utils.getStatNameByIdOrDefault(stat.parameter, i18n)}+{stat.value}{stat.rate ? "%" : ""}</span>);
         }
     }
 
@@ -454,11 +456,10 @@ function setupItem(itemElem, i18n) {
         }
 
         for (const ability of card.itemProp.abilities) {
-            if (Utils.getStatNameByIdOrDefault(ability.parameter, i18n) in piercingBonuses) {
-                piercingBonuses[Utils.getStatNameByIdOrDefault(ability.parameter, i18n)].add += ability.add;
-            }
-            else {
-                piercingBonuses[Utils.getStatNameByIdOrDefault(ability.parameter, i18n)] = { ...ability };
+            if (ability.parameter in piercingBonuses) {
+                piercingBonuses[ability.parameter].add += ability.add;
+            } else {
+                piercingBonuses[ability.parameter] = { ...ability };
             }
         }
     }
@@ -468,12 +469,19 @@ function setupItem(itemElem, i18n) {
     }
 
     // Ultimate jewels
-
+    const ultimateJewelBonuses = {};
     for (const jewel of itemElem.ultimateJewels) {
-        //#00c8ff
         for (const ability of jewel.itemProp.abilities) {
-            out.push(<span style={{ color: "#00c8ff" }}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}+{ability.add}{ability.rate && "%"}</span>);
+            if (ability.parameter in ultimateJewelBonuses) {
+                ultimateJewelBonuses[ability.parameter].add += ability.add;
+            } else {
+                ultimateJewelBonuses[ability.parameter] = { ...ability };
+            }
         }
+    }
+
+    for (const [parameter, effect] of Object.entries(ultimateJewelBonuses)) {
+        out.push(<span style={{ color: "#00c8ff" }}><br />{Utils.getStatNameByIdOrDefault(parameter, i18n)}+{effect.add}{effect.rate && "%"}</span>);
     }
 
     return (<div>{out.map((v, i) => <span key={i}>{v}</span>)}</div>);

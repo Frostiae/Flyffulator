@@ -10,6 +10,31 @@ import * as Utils from '../../../flyff/flyffutils';
 import blessings from '../../../assets/Blessings.json';
 import skillAwakes from '../../../assets/SkillAwakes.json';
 
+const STAT_STEPS = {
+    "stealhp": 0.1,
+    "attack": 0.1,
+    "criticaldamage": 0.1,
+    "criticalchance": 0.1,
+    "attackspeed": 0.05,
+    "blockpenetration": 0.1,
+};
+
+function halfStat(parameter, initialValue) {
+    let theValue = initialValue;
+    
+    // Scale the value up by step
+    theValue /= STAT_STEPS[parameter] ?? 1;
+
+    // Halve & round down
+    theValue /= 2;
+    theValue = Math.floor(theValue);
+
+    // Scale down
+    theValue *= STAT_STEPS[parameter] ?? 1;
+
+    return theValue;
+}
+
 function ItemEdit({ itemElem }) {
     const [state, setState] = useState(false);
     const { showSearch } = useSearch();
@@ -102,7 +127,11 @@ function ItemEdit({ itemElem }) {
     function setPiercingSlot(index) {
         showSearch({
             type: "item", subcategory: "piercingcard", searchByStats: true, targetItemLevel: itemElem.itemProp.level, onSet: (cardItem) => {
-                itemElem.piercings[index] = cardItem;
+                if (itemElem.piercings.length < index) {
+                    itemElem.piercings.push(cardItem);
+                } else {
+                    itemElem.piercings[index] = cardItem;
+                }
             }
         });
     }
@@ -110,7 +139,11 @@ function ItemEdit({ itemElem }) {
     function setJewelSlot(index) {
         showSearch({
             type: "item", subcategory: "ultimatejewel", searchByStats: true, onSet: (jewel) => {
-                itemElem.ultimateJewels[index] = jewel;
+                if (itemElem.ultimateJewels.length < index) {
+                    itemElem.ultimateJewels.push(jewel);
+                } else {
+                    itemElem.ultimateJewels[index] = jewel;
+                }
             }
         });
     }
@@ -168,7 +201,17 @@ function ItemEdit({ itemElem }) {
 
     function setRandomStatOption(index, option) {
         const ability = itemElem.itemProp.possibleRandomStats[option];
-        itemElem.randomStats[index] = { ...ability, id: option, value: Math.floor(ability.add + (ability.addMax - ability.add) / 2) }
+        let value = Math.floor(ability.add + (ability.addMax - ability.add) / 2);
+
+        if (index >= 2) {
+            value = halfStat(ability.parameter, value);
+        }
+    
+        itemElem.randomStats[index] = {
+            ...ability,
+            id: option,
+            value,
+        };
         setState(!state);
     }
 
@@ -212,6 +255,25 @@ function ItemEdit({ itemElem }) {
 
     function setUpgradeLevel(level) {
         itemElem.upgradeLevel = level;
+
+        if (itemElem.itemProp.rarity === "ultimate") {
+            if (level < 10) {
+                itemElem.randomStats.splice(3);
+            } else if (!itemElem.randomStats[3]) {
+                const stat = itemElem.itemProp.possibleRandomStats[Math.min(3, itemElem.itemProp.possibleRandomStats.length)];
+                itemElem.randomStats[3] = { ...stat, id: 3, value: halfStat(stat.parameter, Math.floor(stat.add + (stat.addMax - stat.add) / 2)) };
+            }
+
+            if (level < 6) {
+                itemElem.randomStats.splice(2);
+            } else if (!itemElem.randomStats[2]) {
+                const stat = itemElem.itemProp.possibleRandomStats[Math.min(2, itemElem.itemProp.possibleRandomStats.length)];
+                itemElem.randomStats[2] = { ...stat, id: 2, value: halfStat(stat.parameter, Math.floor(stat.add + (stat.addMax - stat.add) / 2)) };
+            }
+
+            itemElem.ultimateJewels.splice(level);
+        }
+        
         setState(!state);
     }
 
@@ -302,7 +364,7 @@ function ItemEdit({ itemElem }) {
                                     value={ability.value}
                                     isRange={ability.rate}
                                     prefix={"+"}
-                                    step={0.1}
+                                    step={STAT_STEPS[ability.parameter] ?? 1}
                                 />
                             </div>
                         )
@@ -322,7 +384,7 @@ function ItemEdit({ itemElem }) {
                         value={itemElem.randomStats[0]?.value ?? 0}
                         isRange={itemElem.randomStats[0]?.rate ?? true}
                         prefix={"+"}
-                        step={0.1}
+                        step={STAT_STEPS[itemElem.randomStats[0]?.parameter] ?? 1}
                     />
 
                     <Dropdown options={possibleRandomStats} onSelectionChanged={(e) => setRandomStatOption(1, e)} valueKey={itemElem.randomStats[1]?.id} style={{ minWidth: "200px" }} />
@@ -333,8 +395,38 @@ function ItemEdit({ itemElem }) {
                         value={itemElem.randomStats[1]?.value ?? 0}
                         isRange={itemElem.randomStats[1]?.rate ?? true}
                         prefix={"+"}
-                        step={0.1}
+                        step={STAT_STEPS[itemElem.randomStats[1].parameter] ?? 1}
                     />
+
+                    {itemElem.upgradeLevel >= 6 && (
+                        <>
+                            <Dropdown options={possibleRandomStats} onSelectionChanged={(e) => setRandomStatOption(2, e)} valueKey={itemElem.randomStats[2]?.id} style={{ minWidth: "200px" }} />
+                            <RangeInput
+                                min={halfStat(itemElem.randomStats[2]?.parameter, itemElem.randomStats[2]?.add ?? 0)}
+                                max={halfStat(itemElem.randomStats[2]?.parameter, itemElem.randomStats[2]?.addMax ?? 0)}
+                                onChange={(e) => setRandomStatValue(2, e)}
+                                value={itemElem.randomStats[2]?.value ?? 0}
+                                isRange={itemElem.randomStats[2]?.rate ?? true}
+                                prefix={"+"}
+                                step={STAT_STEPS[itemElem.randomStats[2]?.parameter] ?? 1}
+                            />
+
+                            {itemElem.upgradeLevel >= 10 && (
+                                <>
+                                    <Dropdown options={possibleRandomStats} onSelectionChanged={(e) => setRandomStatOption(3, e)} valueKey={itemElem.randomStats[3]?.id} style={{ minWidth: "200px" }} />
+                                    <RangeInput
+                                        min={halfStat(itemElem.randomStats[3]?.parameter, itemElem.randomStats[3]?.add ?? 0)}
+                                        max={halfStat(itemElem.randomStats[3]?.parameter, itemElem.randomStats[3]?.addMax ?? 0)}
+                                        onChange={(e) => setRandomStatValue(3, e)}
+                                        value={itemElem.randomStats[3]?.value ?? 0}
+                                        isRange={itemElem.randomStats[3]?.rate ?? true}
+                                        prefix={"+"}
+                                        step={STAT_STEPS[itemElem.randomStats[3]?.parameter] ?? 1}
+                                    />
+                                </>
+                            )}
+                        </>
+                    )}
                 </div>
             }
 
@@ -348,7 +440,7 @@ function ItemEdit({ itemElem }) {
                         value={itemElem.randomStats[0]?.value ?? 0}
                         isRange={itemElem.randomStats[0]?.rate ?? true}
                         prefix={"+"}
-                        step={0.1}
+                        step={STAT_STEPS[itemElem.randomStats[1]?.parameter] ?? 1}
                         disabled={itemElem.randomStats[0] == null}
                         allowedValues={itemElem.randomStats[0] ? getAllowedBlessingValues(itemElem.randomStats[0].parameter) : [0, 1]}
                     />
@@ -359,7 +451,7 @@ function ItemEdit({ itemElem }) {
                         value={itemElem.randomStats[1]?.value ?? 0}
                         isRange={itemElem.randomStats[1]?.rate ?? true}
                         prefix={"+"}
-                        step={0.1}
+                        step={STAT_STEPS[itemElem.randomStats[1]?.parameter] ?? 1}
                         disabled={itemElem.randomStats[1] == null}
                         allowedValues={itemElem.randomStats[1] ? getAllowedBlessingValues(itemElem.randomStats[1].parameter) : [0, 1]}
                     />

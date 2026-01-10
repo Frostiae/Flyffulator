@@ -33,6 +33,7 @@
     "skills_and_buffs_active_personal_house_buffs": "Active Personal NPCs",
     "skills_and_buffs_active_personal_couple_buffs": "Active Couple NPCs",
     "skills_and_buffs_active_personal_guild_buffs": "Active Guild NPCs",
+    "skills_and_buffs_master_variations_unsupported": "Note: Master variations are not currently supported",
     "tooltip_attack": "Attack: ",
     "tooltip_defense": "Defense: ",
     "tooltip_rarity": "Rarity: ",

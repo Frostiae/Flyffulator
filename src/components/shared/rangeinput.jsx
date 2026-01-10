@@ -31,7 +31,7 @@ function RangeInput({ min, max, step = 0.1, value, onChange, isRange, disabled, 
 
     return (
         <div className="flyff-range" style={{...style}}>
-            <input type="range" min={minValue} max={maxValue} id="range" onChange={(e) => handleChange(e.target.value)} disabled={disabled} step={step} value={currentValue} />
+            <input type="range" min={minValue} max={maxValue + 0.0005} id="range" onChange={(e) => handleChange(e.target.value)} disabled={disabled} step={step} value={currentValue} />
 
             {
                 showValue &&

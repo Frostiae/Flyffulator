@@ -178,6 +178,11 @@ function Calculations() {
 
             const skillProp = Utils.getSkillById(skill);
 
+            // TODO: Skip master variations for now
+            if (skillProp.inheritSkill) {
+                continue;
+            }
+
             const healing = getHealing(skillProp);
             if (healing <= 0) {
                 continue; // Not a healing skill
