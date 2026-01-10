@@ -550,7 +550,14 @@ function setupSkill(skill, i18n) {
     if (levelProp.scalingParameters != undefined) {
         for (const scale of levelProp.scalingParameters) {
             if (scale.parameter == "attack" && scale.maximum == undefined) {
-                out.push(<span style={statsStyle}><br />Attack Scaling: {scale.stat} x {scale.scale}</span>);
+                let stat = "";
+                if (scale.stat != undefined) {
+                    stat = Utils.getStatNameByIdOrDefault(scale.stat, i18n);
+                }
+                else {
+                    // TODO: Part scaling
+                }
+                out.push(<span style={statsStyle}><br />Attack Scaling: {stat} x {scale.scale}</span>);
             }
         }
     }
@@ -568,7 +575,14 @@ function setupSkill(skill, i18n) {
     if (levelProp.scalingParameters != undefined) {
         for (const scale of levelProp.scalingParameters) {
             if (scale.parameter == "hp") {
-                out.push(<span style={statsStyle}><br />Heal Scaling: {scale.stat} x {scale.scale}</span>);
+                let stat = "";
+                if (scale.stat != undefined) {
+                    stat = Utils.getStatNameByIdOrDefault(scale.stat, i18n);
+                }
+                else {
+                    // TODO: Part scaling
+                }
+                out.push(<span style={statsStyle}><br />Heal Scaling: {stat} x {scale.scale}</span>);
             }
         }
     }
@@ -583,7 +597,14 @@ function setupSkill(skill, i18n) {
     if (levelProp.scalingParameters != undefined) {
         for (const scale of levelProp.scalingParameters) {
             if (scale.parameter == "duration") {
-                out.push(<span style={statsStyle}><br />Time Scaling: {scale.stat} x {scale.scale}</span>);
+                let stat = "";
+                if (scale.stat != undefined) {
+                    stat = Utils.getStatNameByIdOrDefault(scale.stat, i18n);
+                }
+                else {
+                    // TODO: Part scaling
+                }
+                out.push(<span style={statsStyle}><br />Time Scaling: {stat} x {scale.scale}</span>);
             }
         }
     }
@@ -661,19 +682,25 @@ function setupSkill(skill, i18n) {
                 for (const scale of levelProp.scalingParameters) {
                     if (scale.parameter == ability.parameter && scale.maximum != undefined) {
                         let bufferStat = 0;
-                        switch (scale.stat) {
-                            case "int":
-                                bufferStat = Context.player.bufferInt;
-                                break;
-                            case "str":
-                                bufferStat = Context.player.bufferStr;
-                                break;
-                            case "dex":
-                                bufferStat = Context.player.bufferDex;
-                                break;
-                            default:
-                                bufferStat = Context.player.bufferSta;
-                                break;
+                        
+                        if (scale.stat != undefined) {
+                            switch (scale.stat) {
+                                case "int":
+                                    bufferStat = Context.player.bufferInt;
+                                    break;
+                                case "str":
+                                    bufferStat = Context.player.bufferStr;
+                                    break;
+                                case "dex":
+                                    bufferStat = Context.player.bufferDex;
+                                    break;
+                                default:
+                                    bufferStat = Context.player.bufferSta;
+                                    break;
+                            }
+                        }
+                        else {
+                            // TODO: Part scaling
                         }
     
                         extra = Math.floor(Math.min(scale.scale * bufferStat, scale.maximum));
@@ -691,8 +718,16 @@ function setupSkill(skill, i18n) {
             for (const ability of levelProp.abilities) {
                 for (const scale of levelProp.scalingParameters) {
                     if (scale.parameter == ability.parameter && scale.maximum != undefined) {
+                        let stat = "";
+                        if (scale.stat != undefined) {
+                            stat = Utils.getStatNameByIdOrDefault(scale.stat, i18n);
+                        }
+                        else {
+                            // TODO: Part scaling
+                        }
+
                         out.push(<span style={{ color: "#ffaa00" }}><br />
-                            {scale.parameter} Scaling: +{scale.scale * 25}{ability.rate && "%"} per 25 {scale.stat} (max {scale.maximum}{ability.rate && "%"})
+                            {scale.parameter} Scaling: +{scale.scale * 25}{ability.rate && "%"} per 25 {stat} (max {scale.maximum}{ability.rate && "%"})
                         </span>);
                     }
                 }

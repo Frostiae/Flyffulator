@@ -1175,17 +1175,22 @@ export default class Entity {
                             continue;
                         }
 
-                        if (scale.stat == "int") {
-                            add += Math.floor(Math.min(this.bufferInt * scale.scale, scale.maximum));
+                        if (scale.stat != undefined) {
+                            if (scale.stat == "int") {
+                                add += Math.floor(Math.min(this.bufferInt * scale.scale, scale.maximum));
+                            }
+                            else if (scale.stat == "str") {
+                                add += Math.floor(Math.min(this.bufferStr * scale.scale, scale.maximum));
+                            }
+                            else if (scale.stat == "sta") {
+                                add += Math.floor(Math.min(this.bufferSta * scale.scale, scale.maximum));
+                            }
+                            else if (scale.stat == "dex") {
+                                add += Math.floor(Math.min(this.bufferDex * scale.scale, scale.maximum));
+                            }
                         }
-                        else if (scale.stat == "str") {
-                            add += Math.floor(Math.min(this.bufferStr * scale.scale, scale.maximum));
-                        }
-                        else if (scale.stat == "sta") {
-                            add += Math.floor(Math.min(this.bufferSta * scale.scale, scale.maximum));
-                        }
-                        else if (scale.stat == "dex") {
-                            add += Math.floor(Math.min(this.bufferDex * scale.scale, scale.maximum));
+                        else if (scale.part != undefined) {
+                            // TODO: part scaling
                         }
                     }
 
@@ -1467,7 +1472,14 @@ export default class Entity {
                 continue;
             }
 
-            let statValue = this.getBaseStat(scale.stat);
+            let statValue = 0;
+            if (scale.stat != undefined) {
+                statValue = this.getBaseStat(scale.stat);
+            }
+            else if (scale.part != undefined) {
+                // TODO: Part scaling
+            }
+            
             if (scale.maximum != undefined && statValue > scale.max) {
                 statValue = scale.maximum;
             }
