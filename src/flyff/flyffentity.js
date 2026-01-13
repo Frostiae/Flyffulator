@@ -814,23 +814,23 @@ export default class Entity {
         switch (element) {
             case "fire":
                 stat = "firedefense";
-                resistance = this.isMonster() ? this.monsterProp.resistFire : 0;
+                resistance = this.isMonster() ? this.monsterProp.resistFire * 100 : 0;
                 break;
             case "water":
                 stat = "waterdefense";
-                resistance = this.isMonster() ? this.monsterProp.resistWater : 0;
+                resistance = this.isMonster() ? this.monsterProp.resistWater * 100 : 0;
                 break;
             case "elctricity":
                 stat = "electricitydefense";
-                resistance = this.isMonster() ? this.monsterProp.resistElectricity : 0;
+                resistance = this.isMonster() ? this.monsterProp.resistElectricity * 100 : 0;
                 break;
             case "wind":
                 stat = "winddefense";
-                resistance = this.isMonster() ? this.monsterProp.resistWind : 0;
+                resistance = this.isMonster() ? this.monsterProp.resistWind * 100 : 0;
                 break;
             case "earth":
                 stat = "earthdefense";
-                resistance = this.isMonster() ? this.monsterProp.resistEarth : 0;
+                resistance = this.isMonster() ? this.monsterProp.resistEarth * 100 : 0;
                 break;
             default:
                 return 0;
