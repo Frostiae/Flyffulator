@@ -9,7 +9,7 @@ function LineChart({ chartData, title, info, label, sourceLink, skillId = 0 }) {
 
     var shortCode = "en";
     if (i18n.resolvedLanguage) {
-        shortCode = i18n.resolvedLanguage.split('-')[0];
+        shortCode = Utils.getFlyffLanguageShortCodeFromLanguage(i18n);
     }
 
     const skillProp = skillId > 0 ? Utils.getSkillById(skillId) : null;

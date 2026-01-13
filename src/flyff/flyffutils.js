@@ -69,6 +69,13 @@ export const ATTACK_FLAGS = {
     REGION: 1 << 15 // AoE skill.
 };
 
+export const LANGUAGE_CODE_MAP = {
+    "zh-tw": "tw",
+    "zh-cn": "cns",
+    "zh": "cns",
+    "pt-br": "br",
+};
+
 export function getClassById(id) {
     return classes[id];
 }
@@ -102,7 +109,7 @@ export function getStatNameByIdOrDefault(id, i18n) {
 
     var shortLanguageCode = "en";
     if (i18n.resolvedLanguage) {
-        shortLanguageCode = i18n.resolvedLanguage.split('-')[0];
+        shortLanguageCode = getFlyffLanguageShortCodeFromLanguage(i18n);
     }
 
     return stat[shortLanguageCode] ?? stat.en;
@@ -392,7 +399,7 @@ export function getStatAwakeTitle(itemElem, i18n) {
 
     var shortLanguageCode = "en";
     if (i18n.resolvedLanguage) {
-        shortLanguageCode = i18n.resolvedLanguage.split('-')[0];
+        shortLanguageCode = getFlyffLanguageShortCodeFromLanguage(i18n);
     }
 
 
@@ -446,4 +453,22 @@ export function getGuid() {
     return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
         (c ^ (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))).toString(16)
     );
+}
+
+/**
+ * Get the Flyff language short code based on the resolved i18n language.
+ *
+ * @param {object} i18n Localization
+ * @returns {string} The mapped Flyff language short code, or the base language, or "en" as fallback.
+ */
+export function getFlyffLanguageShortCodeFromLanguage(i18n) {
+    const lang = i18n.resolvedLanguage.toLowerCase();
+
+    // Return mapped code if available
+    if (LANGUAGE_CODE_MAP[lang]) {
+        return LANGUAGE_CODE_MAP[lang];
+    }
+
+    const baseLang = lang.split("-")[0];
+    return baseLang || "en";
 }

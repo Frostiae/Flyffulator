@@ -33,7 +33,7 @@ function setupItem(itemElem, i18n) {
     const itemProp = itemElem.itemProp;
     var shortLanguageCode = "en";
     if (i18n.resolvedLanguage) {
-        shortLanguageCode = i18n.resolvedLanguage.split('-')[0];
+        shortLanguageCode = Utils.getFlyffLanguageShortCodeFromLanguage(i18n);
     }
 
     const isUltimate = itemProp.rarity == "ultimate";
@@ -496,7 +496,7 @@ function setupSkill(skill, i18n) {
     const out = [];
     var shortLanguageCode = "en";
     if (i18n.resolvedLanguage) {
-        shortLanguageCode = i18n.resolvedLanguage.split('-')[0];
+        shortLanguageCode = Utils.getFlyffLanguageShortCodeFromLanguage(i18n);
     }
 
     const skillLevel = Context.player.skillLevels[skill.id] ?? skill.levels.length;
@@ -749,7 +749,7 @@ function setupPartySkill(partySkill, i18n) {
     const out = []
     var shortLanguageCode = 'en'
     if (i18n.resolvedLanguage) {
-        shortLanguageCode = i18n.resolvedLanguage.split('-')[0]
+        shortLanguageCode = Utils.getFlyffLanguageShortCodeFromLanguage(i18n);
     }
 
     out.push(<span style={{ color: "#2fbe6d", fontWeight: 600 }}>{partySkill.name[shortLanguageCode] ?? partySkill.name.en}</span>);
@@ -767,7 +767,7 @@ function setupHousingNpc(housingNpc, i18n) {
     const out = [];
     var shortLanguageCode = "en";
     if (i18n.resolvedLanguage) {
-        shortLanguageCode = i18n.resolvedLanguage.split('-')[0];
+        shortLanguageCode = Utils.getFlyffLanguageShortCodeFromLanguage(i18n);
     }
 
     out.push(<span style={{ color: "#2fbe6d", fontWeight: 600 }}>{housingNpc.name[shortLanguageCode] ?? housingNpc.name.en}</span>);

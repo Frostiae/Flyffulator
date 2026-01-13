@@ -41,7 +41,7 @@ function ItemEdit({ itemElem }) {
     const { i18n } = useTranslation();
     var shortCode = "en";
     if (i18n.resolvedLanguage) {
-        shortCode = i18n.resolvedLanguage.split('-')[0];
+        shortCode = Utils.getFlyffLanguageShortCodeFromLanguage(i18n);
     }
 
     if (itemElem == null) {
