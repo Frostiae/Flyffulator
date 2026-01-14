@@ -66,7 +66,7 @@ function Inventory({ onSelectItem }) {
             content={Context.player.equipment.mainhand.itemProp.subcategory == "hand" ? null : Context.player.equipment.mainhand}
           />
         </div>
-        <div onClick={Context.player.equipment.mainhand.itemProp.twoHanded ? null : () => selectSlot(Context.player.job.id == 2246 ? null : "shield", Context.player.job.id == 2246 ? "weapon" : null, offhandSlot, (result) => { Context.player.equipment.offhand = result })}>
+        <div onClick={Context.player.equipment.mainhand.itemProp.twoHanded ? null : () => selectSlot((Context.player.job.id == 2246 || Context.player.job.id == 23509) ? null : "shield", (Context.player.job.id == 2246 || Context.player.job.id == 23509) ? "weapon" : null, offhandSlot, (result) => { Context.player.equipment.offhand = result })}>
           <Slot backgroundIcon='/offhand.png' className={`slot-equipment slot-editable ${Context.player.equipment.mainhand.itemProp.twoHanded ? "slot-disabled" : ""}`} ref={offhandSlot} onRemove={Context.player.equipment.mainhand.itemProp.twoHanded ? null : () => removeItem("offhand")}
             content={Context.player.equipment.mainhand.itemProp.twoHanded ? Context.player.equipment.mainhand : Context.player.equipment.offhand} />
         </div>
