@@ -20,7 +20,7 @@ function Search() {
 
     var shortCode = "en";
     if (i18n.resolvedLanguage) {
-        shortCode = i18n.resolvedLanguage.split('-')[0];
+        shortCode = Utils.getFlyffLanguageShortCodeFromLanguage(i18n);
     }
 
     if (!isSearchOpen) {
