@@ -37,7 +37,7 @@ function Dropdown({ options, onSelectionChanged, valueKey, onRemove, style }) {
     return (
         <div className="flyff-dropdown" style={{ ...style }}>
             <span onClick={() => setOpened(!opened)} className="flyff-dropdown-arrow">
-                {options[valueKey]}
+                <span className="flyff-dropdown-label">{options[valueKey]}</span>
                 <img style={{ transform: opened ? "scale(-1)" : "scale(1)" }} draggable={false} src="/arrow-down.png" />
             </span>
             {

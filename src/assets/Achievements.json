@@ -1,0 +1,200 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "en": "2026 FWC Brawler",
+      "ar": "2026 FWC Brawler",
+      "br": "2026 FWC Brawler",
+      "cns": "2026 FWC Brawler",
+      "de": "2026 FWC Brawler",
+      "fi": "2026 FWC Brawler",
+      "fil": "2026 FWC Brawler",
+      "fr": "Bagarreur FWC 2026",
+      "id": "2026 FWC Brawler",
+      "it": "2026 FWC Brawler",
+      "jp": "2026 FWC Brawler",
+      "kr": "2026 FWC 투사",
+      "nl": "2026 FWC Brawler",
+      "pl": "2026 FWC Brawler",
+      "ru": "2026 FWC Brawler",
+      "sp": "2026 FWC Brawler",
+      "sw": "2026 FWC Brawler",
+      "th": "2026 FWC Brawler",
+      "tw": "2026 FWC 鬥士",
+      "vi": "2026 FWC Brawler"
+    },
+    "image": "fwc2026_brawler.png",
+    "abilities": [
+      {
+        "parameter": "allstats",
+        "add": 3
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "2026 FWC Warrior",
+      "ar": "2026 FWC Warrior",
+      "br": "2026 FWC Warrior",
+      "cns": "2026 FWC Warrior",
+      "de": "2026 FWC Warrior",
+      "fi": "2026 FWC Warrior",
+      "fil": "2026 FWC Warrior",
+      "fr": "Guerrier FWC 2026",
+      "id": "2026 FWC Warrior",
+      "it": "2026 FWC Warrior",
+      "jp": "2026 FWC Warrior",
+      "kr": "2026 FWC 전사",
+      "nl": "2026 FWC Warrior",
+      "pl": "2026 FWC Warrior",
+      "ru": "2026 FWC Warrior",
+      "sp": "2026 FWC Warrior",
+      "sw": "2026 FWC Warrior",
+      "th": "2026 FWC Warrior",
+      "tw": "2026 FWC 戰士",
+      "vi": "2026 FWC Warrior"
+    },
+    "image": "fwc2026_warrior.png",
+    "abilities": [
+      {
+        "parameter": "allstats",
+        "add": 5
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "2026 FWC Savior",
+      "ar": "2026 FWC Savior",
+      "br": "2026 FWC Savior",
+      "cns": "2026 FWC Savior",
+      "de": "2026 FWC Savior",
+      "fi": "2026 FWC Savior",
+      "fil": "2026 FWC Savior",
+      "fr": "Sauveur FWC 2026",
+      "id": "2026 FWC Savior",
+      "it": "2026 FWC Savior",
+      "jp": "2026 FWC Savior",
+      "kr": "2026 FWC 구원자",
+      "nl": "2026 FWC Savior",
+      "pl": "2026 FWC Savior",
+      "ru": "2026 FWC Savior",
+      "sp": "2026 FWC Savior",
+      "sw": "2026 FWC Savior",
+      "th": "2026 FWC Savior",
+      "tw": "2026 FWC 救世主",
+      "vi": "2026 FWC Savior"
+    },
+    "image": "fwc2026_savior.png",
+    "abilities": [
+      {
+        "parameter": "allstats",
+        "add": 10
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "2026 FWC Overlord",
+      "ar": "2026 FWC Overlord",
+      "br": "2026 FWC Overlord",
+      "cns": "2026 FWC Overlord",
+      "de": "2026 FWC Overlord",
+      "fi": "2026 FWC Overlord",
+      "fil": "2026 FWC Overlord",
+      "fr": "Suzerain FWC 2026",
+      "id": "2026 FWC Overlord",
+      "it": "2026 FWC Overlord",
+      "jp": "2026 FWC Overlord",
+      "kr": "2026 FWC 지배자",
+      "nl": "2026 FWC Overlord",
+      "pl": "2026 FWC Overlord",
+      "ru": "2026 FWC Overlord",
+      "sp": "2026 FWC Overlord",
+      "sw": "2026 FWC Overlord",
+      "th": "2026 FWC Overlord",
+      "tw": "2026 FWC 統治者",
+      "vi": "2026 FWC Overlord"
+    },
+    "image": "fwc2026_overload.png",
+    "abilities": [
+      {
+        "parameter": "allstats",
+        "add": 15
+      },
+      {
+        "parameter": "maxhp",
+        "add": 1000
+      },
+      {
+        "parameter": "speed",
+        "add": 5,
+        "rate": true
+      },
+      {
+        "parameter": "criticalchance",
+        "add": 1,
+        "rate": true
+      },
+      {
+        "parameter": "parry",
+        "add": 1,
+        "rate": true
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": {
+      "en": "2026 FWC Master",
+      "ar": "2026 FWC Master",
+      "br": "2026 FWC Master",
+      "cns": "2026 FWC Master",
+      "de": "2026 FWC Master",
+      "fi": "2026 FWC Master",
+      "fil": "2026 FWC Master",
+      "fr": "Maître FWC 2026",
+      "id": "2026 FWC Master",
+      "it": "2026 FWC Master",
+      "jp": "2026 FWC Master",
+      "kr": "2026 FWC 마스터",
+      "nl": "2026 FWC Master",
+      "pl": "2026 FWC Master",
+      "ru": "2026 FWC Master",
+      "sp": "2026 FWC Master",
+      "sw": "2026 FWC Master",
+      "th": "2026 FWC Master",
+      "tw": "2026 FWC 大師",
+      "vi": "2026 FWC Master"
+    },
+    "image": "fwc2026_master.png",
+    "abilities": [
+      {
+        "parameter": "allstats",
+        "add": 20
+      },
+      {
+        "parameter": "maxhp",
+        "add": 2000
+      },
+      {
+        "parameter": "speed",
+        "add": 5,
+        "rate": true
+      },
+      {
+        "parameter": "criticalchance",
+        "add": 3,
+        "rate": true
+      },
+      {
+        "parameter": "parry",
+        "add": 3,
+        "rate": true
+      }
+    ]
+  }
+]

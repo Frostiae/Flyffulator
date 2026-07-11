@@ -378,7 +378,7 @@ function setupItem(itemElem, i18n) {
 
     if (itemProp.category == "buff") {
         for (const ability of itemProp.abilities) {
-            out.push(<span style={{ color: "#ffeaa1" }}><br />{ability.parameter}+{ability.add}{ability.rate && "%"}</span>);
+            out.push(<span style={{ color: "#ffeaa1" }}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}+{ability.add}{ability.rate && "%"}</span>);
         }
     }
 
@@ -675,6 +675,18 @@ function setupSkill(skill, i18n) {
     if (levelProp.abilities != undefined) {
         for (const ability of levelProp.abilities) {
             const abilityStyle = { color: "#6161ff" };
+
+            // "attribute" abilities apply a status effect (bleeding, stun, slow,
+            // ...) rather than a numeric stat, so show the effect name instead of
+            // a value (they carry no add/set, which otherwise renders as NaN).
+            if (ability.parameter == "attribute") {
+                const effect = ability.attribute
+                    ? ability.attribute.charAt(0).toUpperCase() + ability.attribute.slice(1)
+                    : ability.parameter;
+                out.push(<span style={abilityStyle}><br />{effect}</span>);
+                continue;
+            }
+
             let add = ability.add;
             let extra = 0;
 
@@ -708,7 +720,11 @@ function setupSkill(skill, i18n) {
                 }
             }
 
-            out.push(<span style={abilityStyle}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}{ability.set != undefined ? "=" : "+"}{ability.set != undefined ? ability.set : add + extra}{ability.rate && "%"}</span>);
+            const value = ability.set != undefined ? ability.set : add + extra;
+            // Negative values already carry their own minus sign, so only prefix
+            // "+" for non-negative additive values ("=" for absolute/set values).
+            const prefix = ability.set != undefined ? "=" : (value < 0 ? "" : "+");
+            out.push(<span style={abilityStyle}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}{prefix}{value}{ability.rate && "%"}</span>);
             if (extra > 0) {
                 out.push(<span style={{ color: "#ffaa00" }}> ({add}+{extra})</span>)
             }
@@ -727,7 +743,7 @@ function setupSkill(skill, i18n) {
                         }
 
                         out.push(<span style={{ color: "#ffaa00" }}><br />
-                            {scale.parameter} Scaling: +{scale.scale * 25}{ability.rate && "%"} per 25 {stat} (max {scale.maximum}{ability.rate && "%"})
+                            {Utils.getStatNameByIdOrDefault(scale.parameter, i18n)} Scaling: +{scale.scale * 25}{ability.rate && "%"} per 25 {stat} (max {scale.maximum}{ability.rate && "%"})
                         </span>);
                     }
                 }

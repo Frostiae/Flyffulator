@@ -10,6 +10,7 @@ import statAwakes from "../assets/StatAwakes.json";
 import partySkills from "../assets/PartySkills.json";
 import upgradeBonus from "../assets/UpgradeBonus.json";
 import levelDifferencePenalties from "../assets/LevelDifferencePenalties.json";
+import achievements from "../assets/Achievements.json";
 
 export const DEFAULT_WEAPON = new ItemElem({
     id: -1,
@@ -83,6 +84,14 @@ export function getSkillById(id) {
 
 export function getPartySkillById(id) {
     return partySkills[id];
+}
+
+export function getAchievements() {
+    return achievements;
+}
+
+export function getAchievementById(id) {
+    return achievements.find((achievement) => achievement.id == id);
 }
 
 export function getMonsterById(id) {

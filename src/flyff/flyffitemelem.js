@@ -1,4 +1,5 @@
 import upgradeBonus from "../assets/UpgradeBonus.json";
+import classes from "../assets/Classes.json";
 
 /**
  * An instance of an in-game item.
@@ -19,6 +20,14 @@ export default class ItemElem {
 
     constructor(itemProp) {
         this.itemProp = itemProp;
+
+        // Guard against a missing item property. This happens when a saved build
+        // references an item that a game patch has since removed from the API
+        // data. Callers are expected to skip such items, but bailing here too
+        // keeps a stray reference from taking down the whole app.
+        if (itemProp == null) {
+            return;
+        }
 
         // Stat ranges
         if (itemProp.abilities != undefined) {
@@ -173,6 +182,28 @@ export default class ItemElem {
 
         if (this.itemProp.category != "weapon") {
             return 0;
+        }
+
+        // One-handed swords and axes don't gain a jewel slot on every upgrade
+        // past +5. Instead they keep 5 slots until +8 (6th slot) and +10 (7th
+        // slot, the cap). Templar's one-handed swords (Curtana) are the sole
+        // exception and follow the normal one-slot-per-upgrade progression.
+        const subcategory = this.itemProp.subcategory;
+        const isOneHandedSwordOrAxe = !this.itemProp.twoHanded && (subcategory == "sword" || subcategory == "axe");
+        const isTemplarSword = subcategory == "sword" && classes[this.itemProp.class]?.name?.en == "Templar";
+
+        if (isOneHandedSwordOrAxe && !isTemplarSword) {
+            let slots = Math.min(this.upgradeLevel, 5);
+
+            if (this.upgradeLevel >= 8) {
+                slots = 6;
+            }
+
+            if (this.upgradeLevel >= 10) {
+                slots = 7;
+            }
+
+            return slots;
         }
 
         return this.upgradeLevel;

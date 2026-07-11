@@ -1,1001 +1,1250 @@
 {
-	"0": {
-		"id": 0,
+	"479": {
+		"id": 479,
 		"name": {
-			"en": "[Personal House NPC] Casanova",
-			"ar": "[Personal House NPC] Casanova",
-			"br": "[NPC Casa Pessoal] Casanova",
-			"cn": "[个人房屋非玩家角色] 卡萨诺瓦",
-			"cns": "[Personal House NPC] Casanova",
-			"de": "[Privates Haus NPC] Casanova",
-			"fi": "[Personal House NPC] Casanova",
-			"fil": "[Personal House NPC] Casanova",
-			"fr": "[Personal House NPC] Casanova",
-			"id": "[Personal House NPC] Casanova",
-			"it": "[Personal House NPC] Casanova",
-			"jp": "[パーソナルハウスNPC]カサノバ",
-			"kr": "[개인 하우스 NPC] 카사노바",
-			"nl": "[Personal House NPC] Casanova",
-			"pl": "[Personal House NPC] Casanova",
-			"ru": "[Personal House NPC] Casanova",
-			"sp": "[NPC Casa Personal] Casanova",
-			"sw": "[Personal House NPC] Casanova",
-			"th": "[NPC ประจำบ้าน] Casanova",
-			"tw": "[Personal House NPC] Casanova",
-			"vi": "[Personal House NPC] Casanova"
-		},
-		"abilities": [ { "parameter": "exprate", "add": 5, "rate": true } ]
-	},
-	"1": {
-		"id": 1,
-		"name": {
-			"en": "[Personal House NPC] Misun",
-			"ar": "[Personal House NPC] Misun",
-			"br": "[NPC Casa Pessoal] Misun",
-			"cn": "[个人房屋非玩家角色]米菘",
-			"cns": "[Personal House NPC] Misun",
-			"de": "[Privates Haus NPC] Misun",
-			"fi": "[Personal House NPC] Misun",
-			"fil": "[Personal House NPC] Misun",
-			"fr": "[Personal House NPC] Misun",
-			"id": "[Personal House NPC] Misun",
-			"it": "[Personal House NPC] Misun",
-			"jp": "[パーソナルハウスNPC]ミスン",
-			"kr": "[개인 하우스 NPC] 미선",
-			"nl": "[Personal House NPC] Misun",
-			"pl": "[Personal House NPC] Misun",
-			"ru": "[Personal House NPC] Misun",
-			"sp": "[NPC Casa Personal] Misun",
-			"sw": "[Personal House NPC] Misun",
-			"th": "[NPC ประจำบ้าน] Misun",
-			"tw": "[Personal House NPC] Misun",
-			"vi": "[Personal House NPC] Misun"
-		},
-		"abilities": [ { "parameter": "droprate", "add": 5, "rate": true } ]
-	},
-	"2": {
-		"id": 2,
-		"name": {
-			"en": "[Personal House NPC] Temas",
-			"ar": "[Personal House NPC] Temas",
-			"br": "[NPC Casa Pessoal] Temas",
-			"cn": "[个人房屋非玩家角色] 特马斯",
-			"cns": "[Personal House NPC] Temas",
-			"de": "[Privates Haus NPC] Temas",
-			"fi": "[Personal House NPC] Temas",
-			"fil": "[Personal House NPC] Temas",
-			"fr": "[Personal House NPC] Temas",
-			"id": "[Personal House NPC] Temas",
-			"it": "[Personal House NPC] Temas",
-			"jp": "[パーソナルハウスNPC]テマス",
-			"kr": "[개인 하우스 NPC] 테마스",
-			"nl": "[Personal House NPC] Temas",
-			"pl": "[Personal House NPC] Temas",
-			"ru": "[Personal House NPC] Temas",
-			"sp": "[NPC Casa Personal] Temas",
-			"sw": "[Personal House NPC] Temas",
-			"th": "[NPC ประจำบ้าน] Temas",
-			"tw": "[Personal House NPC] Temas",
-			"vi": "[Personal House NPC] Temas"
-		},
-		"abilities": [ { "parameter": "speed", "add": 5, "rate": true } ]
-	},
-	"3": {
-		"id": 3,
-		"name": {
-			"en": "[Personal House NPC] BB Wolf",
-			"ar": "[Personal House NPC] BB Wolf",
-			"br": "[NPC Casa Pessoal] BB Wolf",
-			"cn": "[个人房屋非玩家角色] 比比狼",
-			"cns": "[Personal House NPC] BB Wolf",
-			"de": "[Privates Haus NPC] BB Wolf",
-			"fi": "[Personal House NPC] BB Wolf",
-			"fil": "[Personal House NPC] BB Wolf",
-			"fr": "[Personal House NPC] BB Wolf",
-			"id": "[Personal House NPC] BB Wolf",
-			"it": "[Personal House NPC] BB Wolf",
-			"jp": "[パーソナルハウスNPC]BBウルフ",
-			"kr": "[개인 하우스 NPC] BB 늑대",
-			"nl": "[Personal House NPC] BB Wolf",
-			"pl": "[Personal House NPC] BB Wolf",
-			"ru": "[Personal House NPC] BB Wolf",
-			"sp": "[NPC Casa Personal] BB Wolf",
-			"sw": "[Personal House NPC] BB Wolf",
-			"th": "[NPC ประจำบ้าน] BB wolf",
-			"tw": "[Personal House NPC] BB Wolf",
-			"vi": "[Personal House NPC] BB Wolf"
-		},
-		"abilities": [ { "parameter": "jumpheight", "add": 30, "rate": false } ]
-	},
-	"4": {
-		"id": 4,
-		"name": {
-			"en": "[Personal House NPC] Hatter",
-			"ar": "[Personal House NPC] Hatter",
-			"br": "[NPC Casa Pessoal] Hatter",
-			"cn": "[个人房屋非玩家角色] 哈特",
-			"cns": "[Personal House NPC] Hatter",
-			"de": "[Privates Haus NPC] Hatter",
-			"fi": "[Personal House NPC] Hatter",
-			"fil": "[Personal House NPC] Hatter",
-			"fr": "[Personal House NPC] Hatter",
-			"id": "[Personal House NPC] Hatter",
-			"it": "[Personal House NPC] Hatter",
-			"jp": "[パーソナルハウスNPC]ハッター",
-			"kr": "[개인 하우스 NPC] 해터",
-			"nl": "[Personal House NPC] Hatter",
-			"pl": "[Personal House NPC] Hatter",
-			"ru": "[Personal House NPC] Hatter",
-			"sp": "[NPC Casa Personal] Hatter",
-			"sw": "[Personal House NPC] Hatter",
-			"th": "[NPC ประจำบ้าน] Hatter",
-			"tw": "[Personal House NPC] Hatter",
-			"vi": "[Personal House NPC] Hatter"
-		},
-		"abilities": [ { "parameter": "pvedamage", "add": 3, "rate": true } ]
-	},
-	"5": {
-		"id": 5,
-		"name": {
-			"en": "[Personal House NPC] Alice",
-			"ar": "[Personal House NPC] Alice",
-			"br": "[NPC Casa Pessoal] Alice",
-			"cn": "[个人房屋非玩家角色] 艾莉丝",
-			"cns": "[Personal House NPC] Alice",
-			"de": "[Privates Haus NPC] Alice",
-			"fi": "[Personal House NPC] Alice",
-			"fil": "[Personal House NPC] Alice",
-			"fr": "[Personal House NPC] Alice",
-			"id": "[Personal House NPC] Alice",
-			"it": "[Personal House NPC] Alice",
-			"jp": "[パーソナルハウスNPC]アリス",
-			"kr": "[개인 하우스 NPC] 앨리스",
-			"nl": "[Personal House NPC] Alice",
-			"pl": "[Personal House NPC] Alice",
-			"ru": "[Personal House NPC] Alice",
-			"sp": "[NPC Casa Personal] Alice",
-			"sw": "[Personal House NPC] Alice",
-			"th": "[NPC ประจำบ้าน] Alice",
-			"tw": "[Personal House NPC] Alice",
-			"vi": "[Personal House NPC] Alice"
-		},
-		"abilities": [ { "parameter": "pvedamagereduction", "add": 3, "rate": true } ]
-	},
-	"6": {
-		"id": 6,
-		"name": {
-			"en": "[Guild House NPC] Gira",
-			"ar": "[Guild House NPC] Gira",
-			"br": "[NPC Casa da Guilda] Gira",
-			"cn": "[公会房屋非玩家角色] 吉拉",
-			"cns": "[Guild House NPC] Gira",
-			"de": "[Gildenhaus NPC] Gira",
-			"fi": "[Guild House NPC] Gira",
-			"fil": "[Guild House NPC] Gira",
-			"fr": "[Guild House NPC] Gira",
-			"id": "[Guild House NPC] Gira",
-			"it": "[Guild House NPC] Gira",
-			"jp": "[ギルドハウスNPC]ギラ",
-			"kr": "[길드 하우스 NPC] 지라",
-			"nl": "[Guild House NPC] Gira",
-			"pl": "[Guild House NPC] Gira",
-			"ru": "[Guild House NPC] Gira",
-			"sp": "[NPC Casa de Gremio] Gira",
-			"sw": "[Guild House NPC] Gira",
-			"th": "[NPC ประจำบ้าน] Gira",
-			"tw": "[Guild House NPC] Gira",
-			"vi": "[Guild House NPC] Gira"
-		},
-		"abilities": [ { "parameter": "decreasedmpconsumption", "add": 10, "rate": true } ]
-	},
-	"7": {
-		"id": 7,
-		"name": {
-			"en": "[Guild House NPC] Affe",
-			"ar": "[Guild House NPC] Affe",
-			"br": "[NPC Casa da Guilda] Affe",
-			"cn": "[公会房屋非玩家角色] 阿菲",
-			"cns": "[Guild House NPC] Affe",
-			"de": "[Gildenhaus NPC] Affe",
-			"fi": "[Guild House NPC] Affe",
-			"fil": "[Guild House NPC] Affe",
-			"fr": "[Guild House NPC] Affe",
-			"id": "[Guild House NPC] Affe",
-			"it": "[Guild House NPC] Affe",
-			"jp": "[ギルドハウスNPC]アフェ",
-			"kr": "[길드 하우스 NPC] 아페",
-			"nl": "[Guild House NPC] Affe",
-			"pl": "[Guild House NPC] Affe",
-			"ru": "[Guild House NPC] Affe",
-			"sp": "[NPC Casa de Gremio] Affe",
-			"sw": "[Guild House NPC] Affe",
-			"th": "[NPC ประจำบ้าน] Affe",
-			"tw": "[Guild House NPC] Affe",
-			"vi": "[Guild House NPC] Affe"
-		},
-		"abilities": [ { "parameter": "decreasedfpconsumption", "add": 10, "rate": true } ]
-	},
-	"8": {
-		"id": 8,
-		"name": {
-			"en": "[Guild House NPC] Lamew",
-			"ar": "[Guild House NPC] Lamew",
-			"br": "[NPC Casa da Guilda] Lamew",
-			"cn": "[公会房屋非玩家角色] 拉梅乌",
-			"cns": "[Guild House NPC] Lamew",
-			"de": "[Gildenhaus NPC] Lamew",
-			"fi": "[Guild House NPC] Lamew",
-			"fil": "[Guild House NPC] Lamew",
-			"fr": "[Guild House NPC] Lamew",
-			"id": "[Guild House NPC] Lamew",
-			"it": "[Guild House NPC] Lamew",
-			"jp": "[ギルドハウスNPC]ラミュー",
-			"kr": "[길드 하우스 NPC] 라뮤",
-			"nl": "[Guild House NPC] Lamew",
-			"pl": "[Guild House NPC] Lamew",
-			"ru": "[Guild House NPC] Lamew",
-			"sp": "[NPC Casa de Gremio] Lamew",
-			"sw": "[Guild House NPC] Lamew",
-			"th": "[NPC ประจำบ้าน] Lamew",
-			"tw": "[Guild House NPC] Lamew",
-			"vi": "[Guild House NPC] Lamew"
-		},
-		"abilities": [ { "parameter": "maxfp", "add": 10, "rate": true } ]
-	},
-	"9": {
-		"id": 9,
-		"name": {
-			"en": "[Guild House NPC] Quarter",
-			"ar": "[Guild House NPC] Quarter",
-			"br": "[NPC Casa da Guilda] Quarter",
-			"cn": "[公会房屋非玩家角色] 夸特",
-			"cns": "[Guild House NPC] Quarter",
-			"de": "[Gildenhaus NPC] Quarter",
-			"fi": "[Guild House NPC] Quarter",
-			"fil": "[Guild House NPC] Quarter",
-			"fr": "[Guild House NPC] Quarter",
-			"id": "[Guild House NPC] Quarter",
-			"it": "[Guild House NPC] Quarter",
-			"jp": "[ギルドハウスNPC]クオーター",
-			"kr": "[길드 하우스 NPC] 쿼터",
-			"nl": "[Guild House NPC] Quarter",
-			"pl": "[Guild House NPC] Quarter",
-			"ru": "[Guild House NPC] Quarter",
-			"sp": "[NPC Casa de Gremio] Quarter",
-			"sw": "[Guild House NPC] Quarter",
-			"th": "[NPC ประจำบ้าน] Quarter",
-			"tw": "[Guild House NPC] Quarter",
-			"vi": "[Guild House NPC] Quarter"
-		},
-		"abilities": [ { "parameter": "maxhp", "add": 10, "rate": true } ]
-	},
-	"10": {
-		"id": 10,
-		"name": {
-			"en": "[Guild House NPC] Chord",
-			"ar": "[Guild House NPC] Chord",
+			"en": "[Guild Ship NPC] Chord",
+			"ar": "[Guild Ship NPC] Chord",
 			"br": "[NPC Casa da Guilda] Chord",
-			"cn": "[公会房屋非玩家角色] 科德",
-			"cns": "[Guild House NPC] Chord",
+			"cns": "[Guild Ship NPC] Chord",
 			"de": "[Gildenhaus NPC] Chord",
-			"fi": "[Guild House NPC] Chord",
-			"fil": "[Guild House NPC] Chord",
-			"fr": "[Guild House NPC] Chord",
-			"id": "[Guild House NPC] Chord",
-			"it": "[Guild House NPC] Chord",
+			"fi": "[Guild Ship NPC] Chord",
+			"fil": "[Guild Ship NPC] Chord",
+			"fr": "[PNJ de Maison de Guilde] Chord",
+			"id": "[Guild Ship NPC] Chord",
+			"it": "[Guild Ship NPC] Chord",
 			"jp": "[ギルドハウスNPC]コード",
 			"kr": "[길드 하우스 NPC] 코드",
-			"nl": "[Guild House NPC] Chord",
-			"pl": "[Guild House NPC] Chord",
-			"ru": "[Guild House NPC] Chord",
+			"nl": "[Guild Ship NPC] Chord",
+			"pl": "[NPC Domu Gildii] Chord",
+			"ru": "[Guild Ship NPC] Chord",
 			"sp": "[NPC Casa de Gremio] Chord",
-			"sw": "[Guild House NPC] Chord",
+			"sw": "[Guild Ship NPC] Chord",
 			"th": "[NPC ประจำบ้าน] Chord",
-			"tw": "[Guild House NPC] Chord",
-			"vi": "[Guild House NPC] Chord"
+			"tw": "[公會飛船 NPC] Chord",
+			"vi": "[Guild Ship NPC] Chord"
 		},
-		"abilities": [ { "parameter": "pvpdamage", "add": 3, "rate": true } ]
+		"abilities": [
+			{
+				"parameter": "pvpdamage",
+				"add": 3,
+				"rate": true
+			}
+		]
 	},
-	"11": {
-		"id": 11,
+	"10227": {
+		"id": 10227,
 		"name": {
-			"en": "[Guild House NPC] Anura",
-			"ar": "[Guild House NPC] Anura",
-			"br": "[NPC Casa da Guilda] Anura",
-			"cn": "[公会房屋非玩家角色] 阿努拉",
-			"cns": "[Guild House NPC] Anura",
-			"de": "[Gildenhaus NPC] Anura",
-			"fi": "[Guild House NPC] Anura",
-			"fil": "[Guild House NPC] Anura",
-			"fr": "[Guild House NPC] Anura",
-			"id": "[Guild House NPC] Anura",
-			"it": "[Guild House NPC] Anura",
-			"jp": "[ギルドハウスNPC]アヌーラ",
-			"kr": "[길드 하우스 NPC] 아누라",
-			"nl": "[Guild House NPC] Anura",
-			"pl": "[Guild House NPC] Anura",
-			"ru": "[Guild House NPC] Anura",
-			"sp": "[NPC Casa de Gremio] Anura",
-			"sw": "[Guild House NPC] Anura",
-			"th": "[NPC ประจำบ้าน] Anura",
-			"tw": "[Guild House NPC] Anura",
-			"vi": "[Guild House NPC] Anura"
+			"en": "[Guild Ship NPC] Dolphie",
+			"ar": "[Guild Ship NPC] Dolphie",
+			"br": "[NPC Casa da Guilda] Dolphie",
+			"cns": "[Guild Ship NPC] Dolphie",
+			"de": "[Gildenhaus NPC] Dolphie",
+			"fi": "[Guild Ship NPC] Dolphie",
+			"fil": "[Guild Ship NPC] Dolphie",
+			"fr": "[PNJ de Maison de Guilde] Dolphie",
+			"id": "[Guild Ship NPC] Dolphie",
+			"it": "[Guild Ship NPC] Dolphie",
+			"jp": "[ギルドハウスNPC]ドルフィー",
+			"kr": "[길드 하우스 NPC] 돌피",
+			"nl": "[Guild Ship NPC] Dolphie",
+			"pl": "[NPC Domu Gildii] Dolphie",
+			"ru": "[Guild Ship NPC] Dolphie",
+			"sp": "[NPC Casa de Gremio] Dolphie",
+			"sw": "[Guild Ship NPC] Dolphie",
+			"th": "[NPC ประจำบ้าน] Dolphie",
+			"tw": "[公會飛船 NPC] Dolphie",
+			"vi": "[Guild Ship NPC] Dolphie"
 		},
-		"abilities": [ { "parameter": "pvpdamagereduction", "add": 3, "rate": true } ]
+		"abilities": [
+			{
+				"parameter": "guildartifactdef",
+				"add": 10,
+				"rate": true
+			}
+		]
 	},
-	"12": {
-		"id": 12,
-		"name": {
-			"en": "[Guild House NPC] Cobao",
-			"ar": "[Guild House NPC] Cobao",
-			"br": "[NPC Casa da Guilda] Cobao",
-			"cn": "[公会房屋非玩家角色] 科巴奥",
-			"cns": "[Guild House NPC] Cobao",
-			"de": "[Gildenhaus NPC] Cobao",
-			"fi": "[Guild House NPC] Cobao",
-			"fil": "[Guild House NPC] Cobao",
-			"fr": "[Guild House NPC] Cobao",
-			"id": "[Guild House NPC] Cobao",
-			"it": "[Guild House NPC] Cobao",
-			"jp": "[ギルドハウスNPC]コバオ",
-			"kr": "[길드 하우스 NPC] 코바오",
-			"nl": "[Guild House NPC] Cobao",
-			"pl": "[Guild House NPC] Cobao",
-			"ru": "[Guild House NPC] Cobao",
-			"sp": "[NPC Casa de Gremio] Cobao",
-			"sw": "[Guild House NPC] Cobao",
-			"th": "[NPC ประจำบ้าน] Cobao",
-			"tw": "[Guild House NPC] Cobao",
-			"vi": "[Guild House NPC] Cobao"
-		},
-		"abilities": [ { "parameter": "healing", "add": 3, "rate": true } ]
-	},
-	"13": {
-		"id": 13,
-		"name": {
-			"en": "[Guild House NPC] Aibao",
-			"ar": "[Guild House NPC] Aibao",
-			"br": "[NPC Casa da Guilda] Aibao",
-			"cn": "[公会房屋非玩家角色] 艾宝",
-			"cns": "[Guild House NPC] Aibao",
-			"de": "[Gildenhaus NPC] Aibao",
-			"fi": "[Guild House NPC] Aibao",
-			"fil": "[Guild House NPC] Aibao",
-			"fr": "[Guild House NPC] Aibao",
-			"id": "[Guild House NPC] Aibao",
-			"it": "[Guild House NPC] Aibao",
-			"jp": "[ギルドハウスNPC]アイバオ",
-			"kr": "[길드 하우스 NPC] 아이바오",
-			"nl": "[Guild House NPC] Aibao",
-			"pl": "[Guild House NPC] Aibao",
-			"ru": "[Guild House NPC] Aibao",
-			"sp": "[NPC Casa de Gremio] Aibao",
-			"sw": "[Guild House NPC] Aibao",
-			"th": "[NPC ประจำบ้าน] Aibao",
-			"tw": "[Guild House NPC] Aibao",
-			"vi": "[Guild House NPC] Aibao"
-		},
-		"abilities": [ { "parameter": "magicdefense", "add": 3, "rate": true } ]
-	},
-	"14": {
-		"id": 14,
-		"name": {
-			"en": "[Guild House NPC] Nanco",
-			"ar": "[Guild House NPC] Nanco",
-			"br": "[NPC Casa da Guilda] Nanco",
-			"cn": "[公会房屋非玩家角色] 南科",
-			"cns": "[Guild House NPC] Nanco",
-			"de": "[Gildenhaus NPC] Nanco",
-			"fi": "[Guild House NPC] Nanco",
-			"fil": "[Guild House NPC] Nanco",
-			"fr": "[Guild House NPC] Nanco",
-			"id": "[Guild House NPC] Nanco",
-			"it": "[Guild House NPC] Nanco",
-			"jp": "[ギルドハウスNPC]ナンコ",
-			"kr": "[길드 하우스 NPC] 난코",
-			"nl": "[Guild House NPC] Nanco",
-			"pl": "[Guild House NPC] Nanco",
-			"ru": "[Guild House NPC] Nanco",
-			"sp": "[NPC Casa de Gremio] Nanco",
-			"sw": "[Guild House NPC] Nanco",
-			"th": "[NPC ประจำบ้าน] Nanco",
-			"tw": "[Guild House NPC] Nanco",
-			"vi": "[Guild House NPC] Nanco"
-		},
-		"abilities": [ { "parameter": "criticalresist", "add": 3, "rate": true } ]
-	},
-	"15": {
-		"id": 15,
-		"name": {
-			"en": "[Personal House NPC] Chacha",
-			"ar": "[Personal House NPC] Chacha",
-			"br": "[NPC Casa Pessoal] Chacha",
-			"cn": "[个人房屋非玩家角色] 茶茶",
-			"cns": "[Personal House NPC] Chacha",
-			"de": "[Privates Haus NPC] Chacha",
-			"fi": "[Personal House NPC] Chacha",
-			"fil": "[Personal House NPC] Chacha",
-			"fr": "[Personal House NPC] Chacha",
-			"id": "[Personal House NPC] Chacha",
-			"it": "[Personal House NPC] Chacha",
-			"jp": "[パーソナルハウスNPC]チャチャ",
-			"kr": "[개인 하우스 NPC] 차차",
-			"nl": "[Personal House NPC] Chacha",
-			"pl": "[Personal House NPC] Chacha",
-			"ru": "[Personal House NPC] Chacha",
-			"sp": "[NPC Casa Personal] Chacha",
-			"sw": "[Personal House NPC] Chacha",
-			"th": "[NPC ประจำบ้าน] Chacha",
-			"tw": "[Personal House NPC] Chacha",
-			"vi": "[Personal House NPC] Chacha"
-		},
-		"abilities": [ { "parameter": "flyspeed", "add": 5, "rate": true } ]
-	},
-	"16": {
-		"id": 16,
-		"name": {
-			"en": "[Personal House NPC] Rulu",
-			"ar": "[Personal House NPC] Rulu",
-			"br": "[NPC Casa Pessoal] Rulu",
-			"cn": "[个人房屋非玩家角色] 噜噜",
-			"cns": "[Personal House NPC] Rulu",
-			"de": "[Privates Haus NPC] Rulu",
-			"fi": "[Personal House NPC] Rulu",
-			"fil": "[Personal House NPC] Rulu",
-			"fr": "[Personal House NPC] Rulu",
-			"id": "[Personal House NPC] Rulu",
-			"it": "[Personal House NPC] Rulu",
-			"jp": "[パーソナルハウスNPC]ルル",
-			"kr": "[개인 하우스 NPC] 룰루",
-			"nl": "[Personal House NPC] Rulu",
-			"pl": "[Personal House NPC] Rulu",
-			"ru": "[Personal House NPC] Rulu",
-			"sp": "[NPC Casa Personal] Rulu",
-			"sw": "[Personal House NPC] Rulu",
-			"th": "[NPC ประจำบ้าน] Rulu",
-			"tw": "[Personal House NPC] Rulu",
-			"vi": "Fennia Boots"
-		},
-		"abilities": [ { "parameter": "explossreduction", "add": 3, "rate": true } ]
-	},
-	"17": {
-		"id": 17,
+	"10368": {
+		"id": 10368,
 		"name": {
 			"en": "[Personal House NPC] Demon",
 			"ar": "[Personal House NPC] Demon",
 			"br": "[NPC Casa Pessoal] Demon",
-			"cn": "[个人房屋非玩家角色] 恶魔",
-			"cns": "[Personal House NPC] Demon",
+			"cns": "[个人小屋 NPC] Demon",
 			"de": "[Privates Haus NPC] Demon",
 			"fi": "[Personal House NPC] Demon",
 			"fil": "[Personal House NPC] Demon",
-			"fr": "[Personal House NPC] Demon",
+			"fr": "[PNJ Personnel] Demon",
 			"id": "[Personal House NPC] Demon",
 			"it": "[Personal House NPC] Demon",
 			"jp": "[パーソナルハウスNPC]デーモン",
 			"kr": "[개인 하우스 NPC] 데몬",
 			"nl": "[Personal House NPC] Demon",
-			"pl": "[Personal House NPC] Demon",
+			"pl": "[NPC Domu Osobistego] Demon",
 			"ru": "[Personal House NPC] Demon",
 			"sp": "[NPC Casa Personal] Demon",
 			"sw": "[Personal House NPC] Demon",
 			"th": "[NPC ประจำบ้าน] Demon",
-			"tw": "[Personal House NPC] Demon",
+			"tw": "[個人小屋 NPC] Demon",
 			"vi": "[Personal House NPC] Demon"
 		},
-		"abilities": [ { "parameter": "reviverestorehp", "add": 500, "rate": false } ]
+		"abilities": [
+			{
+				"parameter": "reviverestorehp",
+				"add": 500,
+				"rate": false
+			}
+		]
 	},
-	"18": {
-		"id": 18,
+	"10493": {
+		"id": 10493,
 		"name": {
-			"en": "[Personal House NPC] Gevil",
-			"ar": "[Personal House NPC] Gevil",
-			"br": "[NPC Casa Pessoal] Gevil",
-			"cn": "[个人房屋非玩家角色] 吉维尔",
-			"cns": "[Personal House NPC] Gevil",
-			"de": "[Privates Haus NPC] Gevil",
-			"fi": "[Personal House NPC] Gevil",
-			"fil": "[Personal House NPC] Gevil",
-			"fr": "[Personal House NPC] Gevil",
-			"id": "[Personal House NPC] Gevil",
-			"it": "[Personal House NPC] Gevil",
-			"jp": "[パーソナルハウスNPC]ジービル",
-			"kr": "[개인 하우스 NPC] 게빌",
-			"nl": "[Personal House NPC] Gevil",
-			"pl": "[Personal House NPC] Gevil",
-			"ru": "[Personal House NPC] Gevil",
-			"sp": "[NPC Casa Personal] Gevil",
-			"sw": "[Personal House NPC] Gevil",
-			"th": "[NPC ประจำบ้าน] Gevil",
-			"tw": "[Personal House NPC] Gevil",
-			"vi": "[Personal House NPC] Gevil"
+			"en": "[Guild Ship NPC] Affe",
+			"ar": "[Guild Ship NPC] Affe",
+			"br": "[NPC Casa da Guilda] Affe",
+			"cns": "[Guild Ship NPC] Affe",
+			"de": "[Gildenhaus NPC] Affe",
+			"fi": "[Guild Ship NPC] Affe",
+			"fil": "[Guild Ship NPC] Affe",
+			"fr": "[PNJ de Maison de Guilde] Affe",
+			"id": "[Guild Ship NPC] Affe",
+			"it": "[Guild Ship NPC] Affe",
+			"jp": "[ギルドハウスNPC]アフェ",
+			"kr": "[길드 하우스 NPC] 아페",
+			"nl": "[Guild Ship NPC] Affe",
+			"pl": "[NPC Domu Gildii] Affe",
+			"ru": "[Guild Ship NPC] Affe",
+			"sp": "[NPC Casa de Gremio] Affe",
+			"sw": "[Guild Ship NPC] Affe",
+			"th": "[NPC ประจำบ้าน] Affe",
+			"tw": "[公會飛船 NPC] Affe",
+			"vi": "[Guild Ship NPC] Affe"
 		},
-		"abilities": [ { "parameter": "reviverestoremp", "add": 100, "rate": false } ]
+		"abilities": [
+			{
+				"parameter": "decreasedfpconsumption",
+				"add": 10,
+				"rate": true
+			}
+		]
 	},
-	"19": {
-		"id": 19,
+	"10508": {
+		"id": 10508,
+		"name": {
+			"en": "[Guild Ship NPC] Cobao",
+			"ar": "[Guild Ship NPC] Cobao",
+			"br": "[NPC Casa da Guilda] Cobao",
+			"cns": "[Guild Ship NPC] Cobao",
+			"de": "[Gildenhaus NPC] Cobao",
+			"fi": "[Guild Ship NPC] Cobao",
+			"fil": "[Guild Ship NPC] Cobao",
+			"fr": "[PNJ de Maison de Guilde] Cobao",
+			"id": "[Guild Ship NPC] Cobao",
+			"it": "[Guild Ship NPC] Cobao",
+			"jp": "[ギルドハウスNPC]コバオ",
+			"kr": "[길드 하우스 NPC] 코바오",
+			"nl": "[Guild Ship NPC] Cobao",
+			"pl": "[NPC Domu Gildii] Cobao",
+			"ru": "[Guild Ship NPC] Cobao",
+			"sp": "[NPC Casa de Gremio] Cobao",
+			"sw": "[Guild Ship NPC] Cobao",
+			"th": "[NPC ประจำบ้าน] Cobao",
+			"tw": "[公會飛船 NPC] Cobao",
+			"vi": "[Guild Ship NPC] Cobao"
+		},
+		"abilities": [
+			{
+				"parameter": "healing",
+				"add": 3,
+				"rate": true
+			}
+		]
+	},
+	"10885": {
+		"id": 10885,
+		"name": {
+			"en": "[Guild Ship NPC] Soz",
+			"ar": "[Guild Ship NPC] Soz",
+			"br": "[NPC Casa da Guilda] Soz",
+			"cns": "[Guild Ship NPC] Soz",
+			"de": "[Gildenhaus NPC] Soz",
+			"fi": "[Guild Ship NPC] Soz",
+			"fil": "[Guild Ship NPC] Soz",
+			"fr": "[PNJ de Maison de Guilde] Soz",
+			"id": "[Guild Ship NPC] Soz",
+			"it": "[Guild Ship NPC] Soz",
+			"jp": "[ギルドハウスNPC]ソズ",
+			"kr": "[길드 하우스 NPC] 소즈",
+			"nl": "[Guild Ship NPC] Soz",
+			"pl": "[NPC Domu Gildii] Soz",
+			"ru": "[Guild Ship NPC] Soz",
+			"sp": "[NPC Casa de Gremio] Soz",
+			"sw": "[Guild Ship NPC] Soz",
+			"th": "[NPC ประจำบ้าน] Soz",
+			"tw": "[公會飛船 NPC] Soz",
+			"vi": "[Guild Ship NPC] Soz"
+		},
+		"abilities": [
+			{
+				"parameter": "pvpblockpenetration",
+				"add": 3,
+				"rate": true
+			}
+		]
+	},
+	"11279": {
+		"id": 11279,
+		"name": {
+			"en": "[Guild Ship NPC] Wina",
+			"ar": "[Guild Ship NPC] Wina",
+			"br": "[NPC Casa da Guilda] Wina",
+			"cns": "[Guild Ship NPC] Wina",
+			"de": "[Gildenhaus NPC] Wina",
+			"fi": "[Guild Ship NPC] Wina",
+			"fil": "[Guild Ship NPC] Wina",
+			"fr": "[PNJ de Maison de Guilde] Wina",
+			"id": "[Guild Ship NPC] Wina",
+			"it": "[Guild Ship NPC] Wina",
+			"jp": "[ギルドハウスNPC]ウィナ",
+			"kr": "[길드 하우스 NPC] 위나",
+			"nl": "[Guild Ship NPC] Wina",
+			"pl": "[NPC Domu Gildii] Wina",
+			"ru": "[Guild Ship NPC] Wina",
+			"sp": "[NPC Casa de Gremio] Wina",
+			"sw": "[Guild Ship NPC] Wina",
+			"th": "[NPC ประจำบ้าน] Wina",
+			"tw": "[公會飛船 NPC] Wina",
+			"vi": "[Guild Ship NPC] Wina"
+		},
+		"abilities": [
+			{
+				"parameter": "deffromnearbyguildartifact",
+				"add": 3,
+				"rate": true
+			}
+		]
+	},
+	"11289": {
+		"id": 11289,
+		"name": {
+			"en": "[Guild Ship NPC] Nuso",
+			"ar": "[Guild Ship NPC] Nuso",
+			"br": "[NPC Casa da Guilda] Nuso",
+			"cns": "[Guild Ship NPC] Nuso",
+			"de": "[Gildenhaus NPC] Nuso",
+			"fi": "[Guild Ship NPC] Nuso",
+			"fil": "[Guild Ship NPC] Nuso",
+			"fr": "[PNJ de Maison de Guilde] Nuso",
+			"id": "[Guild Ship NPC] Nuso",
+			"it": "[Guild Ship NPC] Nuso",
+			"jp": "[ギルドハウスNPC]ヌソ",
+			"kr": "[길드 하우스 NPC] 누소",
+			"nl": "[Guild Ship NPC] Nuso",
+			"pl": "[NPC Domu Gildii] Nuso",
+			"ru": "[Guild Ship NPC] Nuso",
+			"sp": "[NPC Casa de Gremio] Nuso",
+			"sw": "[Guild Ship NPC] Nuso",
+			"th": "[NPC ประจำบ้าน] Nuso",
+			"tw": "[公會飛船 NPC] Nuso",
+			"vi": "[Guild Ship NPC] Nuso"
+		},
+		"abilities": [
+			{
+				"parameter": "pvpcriticaldamage",
+				"add": 3,
+				"rate": true
+			}
+		]
+	},
+	"11312": {
+		"id": 11312,
+		"name": {
+			"en": "[Guild Ship NPC] Catch",
+			"ar": "[Guild Ship NPC] Catch",
+			"br": "[NPC Casa da Guilda] Catch",
+			"cns": "[Guild Ship NPC] Catch",
+			"de": "[Gildenhaus NPC] Catch",
+			"fi": "[Guild Ship NPC] Catch",
+			"fil": "[Guild Ship NPC] Catch",
+			"fr": "[PNJ de Maison de Guilde] Catch",
+			"id": "[Guild Ship NPC] Catch",
+			"it": "[Guild Ship NPC] Catch",
+			"jp": "[ギルドハウスNPC]キャッチ",
+			"kr": "[길드 하우스 NPC] 캐치",
+			"nl": "[Guild Ship NPC] Catch",
+			"pl": "[NPC Domu Gildii] Catch",
+			"ru": "[Guild Ship NPC] Catch",
+			"sp": "[NPC Casa de Gremio] Catch",
+			"sw": "[Guild Ship NPC] Catch",
+			"th": "[NPC ประจำบ้าน] Catch",
+			"tw": "[公會飛船 NPC] Catch",
+			"vi": "[Guild Ship NPC] Catch"
+		},
+		"abilities": [
+			{
+				"parameter": "decreasedcastingtimefromnearbyguildartifact",
+				"add": 5,
+				"rate": true
+			}
+		]
+	},
+	"11383": {
+		"id": 11383,
 		"name": {
 			"en": "[Personal House NPC] Sevil",
 			"ar": "[Personal House NPC] Sevil",
 			"br": "[NPC Casa Pessoal] Sevil",
-			"cn": "[个人房屋非玩家角色] 塞维尔",
-			"cns": "[Personal House NPC] Sevil",
+			"cns": "[个人小屋 NPC] Sevil",
 			"de": "[Privates Haus NPC] Sevil",
 			"fi": "[Personal House NPC] Sevil",
 			"fil": "[Personal House NPC] Sevil",
-			"fr": "[Personal House NPC] Sevil",
+			"fr": "[PNJ Personnel] Sevil",
 			"id": "[Personal House NPC] Sevil",
 			"it": "[Personal House NPC] Sevil",
 			"jp": "[パーソナルハウスNPC]セビル",
 			"kr": "[개인 하우스 NPC] 세빌",
 			"nl": "[Personal House NPC] Sevil",
-			"pl": "[Personal House NPC] Sevil",
+			"pl": "[NPC Domu Osobistego] Sevil",
 			"ru": "[Personal House NPC] Sevil",
 			"sp": "[NPC Casa Personal] Sevil",
 			"sw": "[Personal House NPC] Sevil",
 			"th": "[NPC ประจำบ้าน] Sevil",
-			"tw": "[Personal House NPC] Sevil",
+			"tw": "[個人小屋 NPC] Sevil",
 			"vi": "[Personal House NPC] Sevil"
 		},
-		"abilities": [ { "parameter": "reviverestorefp", "add": 50, "rate": false } ]
+		"abilities": [
+			{
+				"parameter": "reviverestorefp",
+				"add": 50,
+				"rate": false
+			}
+		]
 	},
-	"20": {
-		"id": 20,
+	"11403": {
+		"id": 11403,
 		"name": {
-			"en": "[Guild House NPC] Alyn",
-			"ar": "[Guild House NPC] Alyn",
-			"br": "[NPC Casa da Guilda] Alyn",
-			"cn": "[公会房屋非玩家角色] 阿林",
-			"cns": "[Guild House NPC] Alyn",
-			"de": "[Gildenhaus NPC] Alyn",
-			"fi": "[Guild House NPC] Alyn",
-			"fil": "[Guild House NPC] Alyn",
-			"fr": "[Guild House NPC] Alyn",
-			"id": "[Guild House NPC] Alyn",
-			"it": "[Guild House NPC] Alyn",
-			"jp": "[ギルドハウスNPC]アリン",
-			"kr": "[길드 하우스 NPC] 알린",
-			"nl": "[Guild House NPC] Alyn",
-			"pl": "[Guild House NPC] Alyn",
-			"ru": "[Guild House NPC] Alyn",
-			"sp": "[NPC Casa de Gremio] Alyn",
-			"sw": "[Guild House NPC] Alyn",
-			"th": "[NPC ประจำบ้าน] Alyn",
-			"tw": "[Guild House NPC] Alyn",
-			"vi": "[Guild House NPC] Alyn"
-		},
-		"abilities": [ { "parameter": "generalupgraderate", "add": 3, "rate": true } ]
-	},
-	"21": {
-		"id": 21,
-		"name": {
-			"en": "[Guild House NPC] Lane",
-			"ar": "[Guild House NPC] Lane",
-			"br": "[NPC Casa da Guilda] Lane",
-			"cn": "[公会房屋非玩家角色] 莱恩",
-			"cns": "[Guild House NPC] Lane",
-			"de": "[Gildenhaus NPC] Lane",
-			"fi": "[Guild House NPC] Lane",
-			"fil": "[Guild House NPC] Lane",
-			"fr": "[Guild House NPC] Lane",
-			"id": "[Guild House NPC] Lane",
-			"it": "[Guild House NPC] Lane",
-			"jp": "[ギルドハウスNPC]レーン",
-			"kr": "[길드 하우스 NPC] 레인",
-			"nl": "[Guild House NPC] Lane",
-			"pl": "[Guild House NPC] Lane",
-			"ru": "[Guild House NPC] Lane",
-			"sp": "[NPC Casa de Gremio] Lane",
-			"sw": "[Guild House NPC] Lane",
-			"th": "[NPC ประจำบ้าน] Lane",
-			"tw": "[Guild House NPC] Lane",
-			"vi": "[Guild House NPC] Lane"
-		},
-		"abilities": [ { "parameter": "accessoryupgraderate", "add": 3, "rate": true } ]
-	},
-	"22": {
-		"id": 22,
-		"name": {
-			"en": "[Guild House NPC] Runni",
-			"ar": "[Guild House NPC] Runni",
-			"br": "[NPC Casa da Guilda] Runni",
-			"cn": "[公会房屋非玩家角色] 鲁尼",
-			"cns": "[Guild House NPC] Runni",
-			"de": "[Gildenhaus NPC] Runni",
-			"fi": "[Guild House NPC] Runni",
-			"fil": "[Guild House NPC] Runni",
-			"fr": "[Guild House NPC] Runni",
-			"id": "[Guild House NPC] Runni",
-			"it": "[Guild House NPC] Runni",
-			"jp": "[ギルドハウスNPC]ルンニ",
-			"kr": "[길드 하우스 NPC] 루니",
-			"nl": "[Guild House NPC] Runni",
-			"pl": "[Guild House NPC] Runni",
-			"ru": "[Guild House NPC] Runni",
-			"sp": "[NPC Casa de Gremio] Runni",
-			"sw": "[Guild House NPC] Runni",
-			"th": "[NPC ประจำบ้าน] Runni",
-			"tw": "[Guild House NPC] Runni",
-			"vi": "Guild House NPC] Runni"
-		},
-		"abilities": [ { "parameter": "piercingrate", "add": 3, "rate": true } ]
-	},
-	"23": {
-		"id": 23,
-		"name": {
-			"en": "[Guild House NPC] Duron",
-			"ar": "[Guild House NPC] Duron",
-			"br": "[NPC Casa da Guilda] Duron",
-			"cn": "[公会房屋非玩家角色] 杜伦",
-			"cns": "[Guild House NPC] Duron",
-			"de": "[Gildenhaus NPC] Duron",
-			"fi": "[Guild House NPC] Duron",
-			"fil": "[Guild House NPC] Duron",
-			"fr": "[Guild House NPC] Duron",
-			"id": "[Guild House NPC] Duron",
-			"it": "[Guild House NPC] Duron",
-			"jp": "[ギルドハウスNPC]デュロン",
-			"kr": "[길드 하우스 NPC] 듀론",
-			"nl": "[Guild House NPC] Duron",
-			"pl": "[Guild House NPC] Duron",
-			"ru": "[Guild House NPC] Duron",
-			"sp": "[NPC Casa de Gremio] Duron",
-			"sw": "[Guild House NPC] Duron",
-			"th": "[NPC ประจำบ้าน] Duron",
-			"tw": "[Guild House NPC] Duron",
-			"vi": "[Guild House NPC] Duron"
-		},
-		"abilities": [ { "parameter": "guildartifactmaxhp", "add": 10, "rate": true } ]
-	},
-	"24": {
-		"id": 24,
-		"name": {
-			"en": "[Guild House NPC] Dolphie",
-			"ar": "[Guild House NPC] Dolphie",
-			"br": "[NPC Casa da Guilda] Dolphie",
-			"cn": "[公会房屋非玩家角色] 多尔菲",
-			"cns": "[Guild House NPC] Dolphie",
-			"de": "[Gildenhaus NPC] Dolphie",
-			"fi": "[Guild House NPC] Dolphie",
-			"fil": "[Guild House NPC] Dolphie",
-			"fr": "[Guild House NPC] Dolphie",
-			"id": "[Guild House NPC] Dolphie",
-			"it": "[Guild House NPC] Dolphie",
-			"jp": "[ギルドハウスNPC]ドルフィー",
-			"kr": "[길드 하우스 NPC] 돌피",
-			"nl": "[Guild House NPC] Dolphie",
-			"pl": "[Guild House NPC] Dolphie",
-			"ru": "[Guild House NPC] Dolphie",
-			"sp": "[NPC Casa de Gremio] Dolphie",
-			"sw": "[Guild House NPC] Dolphie",
-			"th": "[NPC ประจำบ้าน] Dolphie",
-			"tw": "[Guild House NPC] Dolphie",
-			"vi": "[Guild House NPC] Dolphie"
-		},
-		"abilities": [ { "parameter": "guildartifactdef", "add": 10, "rate": true } ]
-	},
-	"25": {
-		"id": 25,
-		"name": {
-			"en": "[Guild House NPC] Fuba",
-			"ar": "[Guild House NPC] Fuba",
+			"en": "[Guild Ship NPC] Fuba",
+			"ar": "[Guild Ship NPC] Fuba",
 			"br": "[NPC Casa da Guilda] Fuba",
-			"cn": "[公会房屋非玩家角色] 富巴",
-			"cns": "[Guild House NPC] Fuba",
+			"cns": "[Guild Ship NPC] Fuba",
 			"de": "[Gildenhaus NPC] Fuba",
-			"fi": "[Guild House NPC] Fuba",
-			"fil": "[Guild House NPC] Fuba",
-			"fr": "[Guild House NPC] Fuba",
-			"id": "[Guild House NPC] Fuba",
-			"it": "[Guild House NPC] Fuba",
+			"fi": "[Guild Ship NPC] Fuba",
+			"fil": "[Guild Ship NPC] Fuba",
+			"fr": "[PNJ de Maison de Guilde] Fuba",
+			"id": "[Guild Ship NPC] Fuba",
+			"it": "[Guild Ship NPC] Fuba",
 			"jp": "[ギルドハウスNPC]フバ",
 			"kr": "[길드 하우스 NPC] 푸바",
-			"nl": "[Guild House NPC] Fuba",
-			"pl": "[Guild House NPC] Fuba",
-			"ru": "[Guild House NPC] Fuba",
+			"nl": "[Guild Ship NPC] Fuba",
+			"pl": "[NPC Domu Gildii] Fuba",
+			"ru": "[Guild Ship NPC] Fuba",
 			"sp": "[NPC Casa de Gremio] Fuba",
-			"sw": "[Guild House NPC] Fuba",
+			"sw": "[Guild Ship NPC] Fuba",
 			"th": "[NPC ประจำบ้าน] Fuba",
-			"tw": "[Guild House NPC] Fuba",
-			"vi": "[Guild House NPC] Fuba"
+			"tw": "[公會飛船 NPC] Fuba",
+			"vi": "[Guild Ship NPC] Fuba"
 		},
-		"abilities": [ { "parameter": "guildartifacthprecovery", "add": 10, "rate": true } ]
+		"abilities": [
+			{
+				"parameter": "guildartifacthprecovery",
+				"add": 10,
+				"rate": true
+			}
+		]
 	},
-	"26": {
-		"id": 26,
+	"11441": {
+		"id": 11441,
+		"name": {
+			"en": "[Guild Ship NPC] Vikel",
+			"ar": "[Guild Ship NPC] Vikel",
+			"br": "[NPC Casa da Guilda] Vikel",
+			"cns": "[Guild Ship NPC] Vikel",
+			"de": "[Gildenhaus NPC] Vikel",
+			"fi": "[Guild Ship NPC] Vikel",
+			"fil": "[Guild Ship NPC] Vikel",
+			"fr": "[PNJ de Maison de Guilde] Vikel",
+			"id": "[Guild Ship NPC] Vikel",
+			"it": "[Guild Ship NPC] Vikel",
+			"jp": "[ギルドハウスNPC]ビケル",
+			"kr": "[길드 하우스 NPC] 비켈",
+			"nl": "[Guild Ship NPC] Vikel",
+			"pl": "[NPC Domu Gildii] Vikel",
+			"ru": "[Guild Ship NPC] Vikel",
+			"sp": "[NPC Casa de Gremio] Vikel",
+			"sw": "[Guild Ship NPC] Vikel",
+			"th": "[NPC ประจำบ้าน] Vikel",
+			"tw": "[公會飛船 NPC] Vikel",
+			"vi": "[Guild Ship NPC] Vikel"
+		},
+		"abilities": [
+			{
+				"parameter": "pvpblock",
+				"add": 3,
+				"rate": true
+			}
+		]
+	},
+	"11593": {
+		"id": 11593,
 		"name": {
 			"en": "[Personal House NPC] Tino",
 			"ar": "[Personal House NPC] Tino",
 			"br": "[NPC Casa Pessoal] Tino",
-			"cn": "[个人房屋非玩家角色] 蒂诺",
-			"cns": "[Personal House NPC] Tino",
+			"cns": "[个人小屋 NPC] Tino",
 			"de": "[Privates Haus NPC] Tino",
 			"fi": "[Personal House NPC] Tino",
 			"fil": "[Personal House NPC] Tino",
-			"fr": "[Personal House NPC] Tino",
+			"fr": "[PNJ Personnel] Tino",
 			"id": "[Personal House NPC] Tino",
 			"it": "[Personal House NPC] Tino",
 			"jp": "[パーソナルハウスNPC]ティノ",
 			"kr": "[개인 하우스 NPC] 티노",
 			"nl": "[Personal House NPC] Tino",
-			"pl": "[Personal House NPC] Tino",
+			"pl": "[NPC Domu Osobistego] Tino",
 			"ru": "[Personal House NPC] Tino",
 			"sp": "[NPC Casa Personal] Tino",
 			"sw": "[Personal House NPC] Tino",
 			"th": "[NPC ประจำบ้าน] Tino",
-			"tw": "[Personal House NPC] Tino",
+			"tw": "[個人小屋 NPC] Tino",
 			"vi": "[Personal House NPC] Tino"
 		},
-		"abilities": [ { "parameter": "addedvendordays", "add": 1, "rate": false } ]
+		"abilities": [
+			{
+				"parameter": "addedvendordays",
+				"add": 1,
+				"rate": false
+			}
+		]
 	},
-	"27": {
-		"id": 27,
+	"11693": {
+		"id": 11693,
+		"name": {
+			"en": "[Guild Ship NPC] Gira",
+			"ar": "[Guild Ship NPC] Gira",
+			"br": "[NPC Casa da Guilda] Gira",
+			"cns": "[Guild Ship NPC] Gira",
+			"de": "[Gildenhaus NPC] Gira",
+			"fi": "[Guild Ship NPC] Gira",
+			"fil": "[Guild Ship NPC] Gira",
+			"fr": "[PNJ de Maison de Guilde] Gira",
+			"id": "[Guild Ship NPC] Gira",
+			"it": "[Guild Ship NPC] Gira",
+			"jp": "[ギルドハウスNPC]ギラ",
+			"kr": "[길드 하우스 NPC] 지라",
+			"nl": "[Guild Ship NPC] Gira",
+			"pl": "[NPC Domu Gildii] Gira",
+			"ru": "[Guild Ship NPC] Gira",
+			"sp": "[NPC Casa de Gremio] Gira",
+			"sw": "[Guild Ship NPC] Gira",
+			"th": "[NPC ประจำบ้าน] Gira",
+			"tw": "[公會飛船 NPC] Gira",
+			"vi": "[Guild Ship NPC] Gira"
+		},
+		"abilities": [
+			{
+				"parameter": "decreasedmpconsumption",
+				"add": 10,
+				"rate": true
+			}
+		]
+	},
+	"11758": {
+		"id": 11758,
+		"name": {
+			"en": "[Personal House NPC] Rulu",
+			"ar": "[Personal House NPC] Rulu",
+			"br": "[NPC Casa Pessoal] Rulu",
+			"cns": "[个人小屋 NPC] Rulu",
+			"de": "[Privates Haus NPC] Rulu",
+			"fi": "[Personal House NPC] Rulu",
+			"fil": "[Personal House NPC] Rulu",
+			"fr": "[PNJ Personnel] Rulu",
+			"id": "[Personal House NPC] Rulu",
+			"it": "[Personal House NPC] Rulu",
+			"jp": "[パーソナルハウスNPC]ルル",
+			"kr": "[개인 하우스 NPC] 룰루",
+			"nl": "[Personal House NPC] Rulu",
+			"pl": "[NPC Domu Osobistego] Rulu",
+			"ru": "[Personal House NPC] Rulu",
+			"sp": "[NPC Casa Personal] Rulu",
+			"sw": "[Personal House NPC] Rulu",
+			"th": "[NPC ประจำบ้าน] Rulu",
+			"tw": "[個人小屋 NPC] Rulu",
+			"vi": "Fennia Boots"
+		},
+		"abilities": [
+			{
+				"parameter": "explossreduction",
+				"add": 3,
+				"rate": true
+			}
+		]
+	},
+	"11866": {
+		"id": 11866,
+		"name": {
+			"en": "[Personal House NPC] Chacha",
+			"ar": "[Personal House NPC] Chacha",
+			"br": "[NPC Casa Pessoal] Chacha",
+			"cns": "[个人小屋 NPC] Chacha",
+			"de": "[Privates Haus NPC] Chacha",
+			"fi": "[Personal House NPC] Chacha",
+			"fil": "[Personal House NPC] Chacha",
+			"fr": "[PNJ Personnel] Chacha",
+			"id": "[Personal House NPC] Chacha",
+			"it": "[Personal House NPC] Chacha",
+			"jp": "[パーソナルハウスNPC]チャチャ",
+			"kr": "[개인 하우스 NPC] 차차",
+			"nl": "[Personal House NPC] Chacha",
+			"pl": "[NPC Domu Osobistego] Chacha",
+			"ru": "[Personal House NPC] Chacha",
+			"sp": "[NPC Casa Personal] Chacha",
+			"sw": "[Personal House NPC] Chacha",
+			"th": "[NPC ประจำบ้าน] Chacha",
+			"tw": "[個人小屋 NPC] Chacha",
+			"vi": "[Personal House NPC] Chacha"
+		},
+		"abilities": [
+			{
+				"parameter": "flyspeed",
+				"add": 5,
+				"rate": true
+			}
+		]
+	},
+	"11960": {
+		"id": 11960,
+		"name": {
+			"en": "[Personal House NPC] Alice",
+			"ar": "[Personal House NPC] Alice",
+			"br": "[NPC Casa Pessoal] Alice",
+			"cns": "[个人小屋 NPC] Alice",
+			"de": "[Privates Haus NPC] Alice",
+			"fi": "[Personal House NPC] Alice",
+			"fil": "[Personal House NPC] Alice",
+			"fr": "[PNJ Personnel] Alice",
+			"id": "[Personal House NPC] Alice",
+			"it": "[Personal House NPC] Alice",
+			"jp": "[パーソナルハウスNPC]アリス",
+			"kr": "[개인 하우스 NPC] 앨리스",
+			"nl": "[Personal House NPC] Alice",
+			"pl": "[NPC Domu Osobistego] Alice",
+			"ru": "[Personal House NPC] Alice",
+			"sp": "[NPC Casa Personal] Alice",
+			"sw": "[Personal House NPC] Alice",
+			"th": "[NPC ประจำบ้าน] Alice",
+			"tw": "[個人小屋 NPC] Alice",
+			"vi": "[Personal House NPC] Alice"
+		},
+		"abilities": [
+			{
+				"parameter": "pvedamagereduction",
+				"add": 3,
+				"rate": true
+			}
+		]
+	},
+	"12165": {
+		"id": 12165,
+		"name": {
+			"en": "[Personal House NPC] Misun",
+			"ar": "[Personal House NPC] Misun",
+			"br": "[NPC Casa Pessoal] Misun",
+			"cns": "[个人小屋 NPC] Misun",
+			"de": "[Privates Haus NPC] Misun",
+			"fi": "[Personal House NPC] Misun",
+			"fil": "[Personal House NPC] Misun",
+			"fr": "[PNJ Personnel] Misun",
+			"id": "[Personal House NPC] Misun",
+			"it": "[Personal House NPC] Misun",
+			"jp": "[パーソナルハウスNPC]ミスン",
+			"kr": "[개인 하우스 NPC] 미선",
+			"nl": "[Personal House NPC] Misun",
+			"pl": "[NPC Domu Osobistego] Misun",
+			"ru": "[Personal House NPC] Misun",
+			"sp": "[NPC Casa Personal] Misun",
+			"sw": "[Personal House NPC] Misun",
+			"th": "[NPC ประจำบ้าน] Misun",
+			"tw": "[個人小屋 NPC] Misun",
+			"vi": "[Personal House NPC] Misun"
+		},
+		"abilities": [
+			{
+				"parameter": "droprate",
+				"add": 5,
+				"rate": true
+			}
+		]
+	},
+	"12199": {
+		"id": 12199,
+		"name": {
+			"en": "[Personal House NPC] Temas",
+			"ar": "[Personal House NPC] Temas",
+			"br": "[NPC Casa Pessoal] Temas",
+			"cns": "[个人小屋 NPC] Temas",
+			"de": "[Privates Haus NPC] Temas",
+			"fi": "[Personal House NPC] Temas",
+			"fil": "[Personal House NPC] Temas",
+			"fr": "[PNJ Personnel] Temas",
+			"id": "[Personal House NPC] Temas",
+			"it": "[Personal House NPC] Temas",
+			"jp": "[パーソナルハウスNPC]テマス",
+			"kr": "[개인 하우스 NPC] 테마스",
+			"nl": "[Personal House NPC] Temas",
+			"pl": "[NPC Domu Osobistego] Temas",
+			"ru": "[Personal House NPC] Temas",
+			"sp": "[NPC Casa Personal] Temas",
+			"sw": "[Personal House NPC] Temas",
+			"th": "[NPC ประจำบ้าน] Temas",
+			"tw": "[個人小屋 NPC] Temas",
+			"vi": "[Personal House NPC] Temas"
+		},
+		"abilities": [
+			{
+				"parameter": "speed",
+				"add": 5,
+				"rate": true
+			}
+		]
+	},
+	"12342": {
+		"id": 12342,
+		"name": {
+			"en": "[Personal House NPC] Hatter",
+			"ar": "[Personal House NPC] Hatter",
+			"br": "[NPC Casa Pessoal] Hatter",
+			"cns": "[个人小屋 NPC] Hatter",
+			"de": "[Privates Haus NPC] Hatter",
+			"fi": "[Personal House NPC] Hatter",
+			"fil": "[Personal House NPC] Hatter",
+			"fr": "[PNJ Personnel] Chapelier",
+			"id": "[Personal House NPC] Hatter",
+			"it": "[Personal House NPC] Hatter",
+			"jp": "[パーソナルハウスNPC]ハッター",
+			"kr": "[개인 하우스 NPC] 해터",
+			"nl": "[Personal House NPC] Hatter",
+			"pl": "[NPC Domu Osobistego] Hatter",
+			"ru": "[Personal House NPC] Hatter",
+			"sp": "[NPC Casa Personal] Hatter",
+			"sw": "[Personal House NPC] Hatter",
+			"th": "[NPC ประจำบ้าน] Hatter",
+			"tw": "[個人小屋 NPC] Hatter",
+			"vi": "[Personal House NPC] Hatter"
+		},
+		"abilities": [
+			{
+				"parameter": "pvedamage",
+				"add": 3,
+				"rate": true
+			}
+		]
+	},
+	"12671": {
+		"id": 12671,
+		"name": {
+			"en": "[Guild Ship NPC] Bako",
+			"ar": "[Guild Ship NPC] Bako",
+			"br": "[NPC Casa da Guilda] Bako",
+			"cns": "[Guild Ship NPC] Bako",
+			"de": "[Gildenhaus NPC] Bako",
+			"fi": "[Guild Ship NPC] Bako",
+			"fil": "[Guild Ship NPC] Bako",
+			"fr": "[PNJ de Maison de Guilde] Bako",
+			"id": "[Guild Ship NPC] Bako",
+			"it": "[Guild Ship NPC] Bako",
+			"jp": "[ギルドハウスNPC]バコ",
+			"kr": "[길드 하우스 NPC] 바코",
+			"nl": "[Guild Ship NPC] Bako",
+			"pl": "[NPC Domu Gildii] Bako",
+			"ru": "[Guild Ship NPC] Bako",
+			"sp": "[NPC Casa de Gremio] Bako",
+			"sw": "[Guild Ship NPC] Bako",
+			"th": "[NPC ประจำบ้าน] Bako",
+			"tw": "[公會飛船 NPC] Bako",
+			"vi": "[Guild Ship NPC] Bako"
+		},
+		"abilities": [
+			{
+				"parameter": "hpfromnearbyguildartifact",
+				"add": 500,
+				"rate": true
+			}
+		]
+	},
+	"12676": {
+		"id": 12676,
+		"name": {
+			"en": "[Guild Ship NPC] Pitch",
+			"ar": "[Guild Ship NPC] Pitch",
+			"br": "[NPC Casa da Guilda] Pitch",
+			"cns": "[Guild Ship NPC] Pitch",
+			"de": "[Gildenhaus NPC] Pitch",
+			"fi": "[Guild Ship NPC] Pitch",
+			"fil": "[Guild Ship NPC] Pitch",
+			"fr": "[PNJ de Maison de Guilde] Pitch",
+			"id": "[Guild Ship NPC] Pitch",
+			"it": "[Guild Ship NPC] Pitch",
+			"jp": "[ギルドハウスNPC]ピッチ",
+			"kr": "[길드 하우스 NPC] 피치",
+			"nl": "[Guild Ship NPC] Pitch",
+			"pl": "[NPC Domu Gildii] Pitch",
+			"ru": "[Guild Ship NPC] Pitch",
+			"sp": "[NPC Casa de Gremio] Pitch",
+			"sw": "[Guild Ship NPC] Pitch",
+			"th": "[NPC ประจำบ้าน] Pitch",
+			"tw": "[公會飛船 NPC] Pitch",
+			"vi": "[Guild Ship NPC] Pitch"
+		},
+		"abilities": [
+			{
+				"parameter": "attackspeedratefromnearbyguildartifact",
+				"add": 100,
+				"rate": true
+			}
+		]
+	},
+	"13066": {
+		"id": 13066,
+		"name": {
+			"en": "[Guild Ship NPC] Lamew",
+			"ar": "[Guild Ship NPC] Lamew",
+			"br": "[NPC Casa da Guilda] Lamew",
+			"cns": "[Guild Ship NPC] Lamew",
+			"de": "[Gildenhaus NPC] Lamew",
+			"fi": "[Guild Ship NPC] Lamew",
+			"fil": "[Guild Ship NPC] Lamew",
+			"fr": "[PNJ de Maison de Guilde] Lamew",
+			"id": "[Guild Ship NPC] Lamew",
+			"it": "[Guild Ship NPC] Lamew",
+			"jp": "[ギルドハウスNPC]ラミュー",
+			"kr": "[길드 하우스 NPC] 라뮤",
+			"nl": "[Guild Ship NPC] Lamew",
+			"pl": "[NPC Domu Gildii] Lamew",
+			"ru": "[Guild Ship NPC] Lamew",
+			"sp": "[NPC Casa de Gremio] Lamew",
+			"sw": "[Guild Ship NPC] Lamew",
+			"th": "[NPC ประจำบ้าน] Lamew",
+			"tw": "[公會飛船 NPC] Lamew",
+			"vi": "[Guild Ship NPC] Lamew"
+		},
+		"abilities": [
+			{
+				"parameter": "maxfp",
+				"add": 10,
+				"rate": true
+			}
+		]
+	},
+	"13117": {
+		"id": 13117,
+		"name": {
+			"en": "[Personal House NPC] BB Wolf",
+			"ar": "[Personal House NPC] BB Wolf",
+			"br": "[NPC Casa Pessoal] BB Wolf",
+			"cns": "[个人小屋 NPC] BB Wolf",
+			"de": "[Privates Haus NPC] BB Wolf",
+			"fi": "[Personal House NPC] BB Wolf",
+			"fil": "[Personal House NPC] BB Wolf",
+			"fr": "[PNJ Personnel] BB Lou",
+			"id": "[Personal House NPC] BB Wolf",
+			"it": "[Personal House NPC] BB Wolf",
+			"jp": "[パーソナルハウスNPC]BBウルフ",
+			"kr": "[개인 하우스 NPC] BB 늑대",
+			"nl": "[Personal House NPC] BB Wolf",
+			"pl": "[NPC Domu Osobistego] BB Wolf",
+			"ru": "[Personal House NPC] BB Wolf",
+			"sp": "[NPC Casa Personal] BB Wolf",
+			"sw": "[Personal House NPC] BB Wolf",
+			"th": "[NPC ประจำบ้าน] BB wolf",
+			"tw": "[個人小屋 NPC] BB Wolf",
+			"vi": "[Personal House NPC] BB Wolf"
+		},
+		"abilities": [
+			{
+				"parameter": "jumpheight",
+				"add": 30,
+				"rate": false
+			}
+		]
+	},
+	"13322": {
+		"id": 13322,
+		"name": {
+			"en": "[Guild Ship NPC] Duron",
+			"ar": "[Guild Ship NPC] Duron",
+			"br": "[NPC Casa da Guilda] Duron",
+			"cns": "[Guild Ship NPC] Duron",
+			"de": "[Gildenhaus NPC] Duron",
+			"fi": "[Guild Ship NPC] Duron",
+			"fil": "[Guild Ship NPC] Duron",
+			"fr": "[PNJ de Maison de Guilde] Duron",
+			"id": "[Guild Ship NPC] Duron",
+			"it": "[Guild Ship NPC] Duron",
+			"jp": "[ギルドハウスNPC]デュロン",
+			"kr": "[길드 하우스 NPC] 듀론",
+			"nl": "[Guild Ship NPC] Duron",
+			"pl": "[NPC Domu Gildii] Duron",
+			"ru": "[Guild Ship NPC] Duron",
+			"sp": "[NPC Casa de Gremio] Duron",
+			"sw": "[Guild Ship NPC] Duron",
+			"th": "[NPC ประจำบ้าน] Duron",
+			"tw": "[公會飛船 NPC] Duron",
+			"vi": "[Guild Ship NPC] Duron"
+		},
+		"abilities": [
+			{
+				"parameter": "guildartifactmaxhp",
+				"add": 10,
+				"rate": true
+			}
+		]
+	},
+	"13649": {
+		"id": 13649,
+		"name": {
+			"en": "[Guild Ship NPC] Naso",
+			"ar": "[Guild Ship NPC] Naso",
+			"br": "[NPC Casa da Guilda] Naso",
+			"cns": "[Guild Ship NPC] Naso",
+			"de": "[Gildenhaus NPC] Naso",
+			"fi": "[Guild Ship NPC] Naso",
+			"fil": "[Guild Ship NPC] Naso",
+			"fr": "[PNJ de Maison de Guilde] Naso",
+			"id": "[Guild Ship NPC] Naso",
+			"it": "[Guild Ship NPC] Naso",
+			"jp": "[ギルドハウスNPC]ナソ",
+			"kr": "[길드 하우스 NPC] 나소",
+			"nl": "[Guild Ship NPC] Naso",
+			"pl": "[NPC Domu Gildii] Naso",
+			"ru": "[Guild Ship NPC] Naso",
+			"sp": "[NPC Casa de Gremio] Naso",
+			"sw": "[Guild Ship NPC] Naso",
+			"th": "[NPC ประจำบ้าน] Naso",
+			"tw": "[公會飛船 NPC] Naso",
+			"vi": "[Guild Ship NPC] Naso"
+		},
+		"abilities": [
+			{
+				"parameter": "pvpcriticalchance",
+				"add": 3,
+				"rate": true
+			}
+		]
+	},
+	"13881": {
+		"id": 13881,
+		"name": {
+			"en": "[Guild Ship NPC] Aibao",
+			"ar": "[Guild Ship NPC] Aibao",
+			"br": "[NPC Casa da Guilda] Aibao",
+			"cns": "[Guild Ship NPC] Aibao",
+			"de": "[Gildenhaus NPC] Aibao",
+			"fi": "[Guild Ship NPC] Aibao",
+			"fil": "[Guild Ship NPC] Aibao",
+			"fr": "[PNJ de Maison de Guilde] Aibao",
+			"id": "[Guild Ship NPC] Aibao",
+			"it": "[Guild Ship NPC] Aibao",
+			"jp": "[ギルドハウスNPC]アイバオ",
+			"kr": "[길드 하우스 NPC] 아이바오",
+			"nl": "[Guild Ship NPC] Aibao",
+			"pl": "[NPC Domu Gildii] Aibao",
+			"ru": "[Guild Ship NPC] Aibao",
+			"sp": "[NPC Casa de Gremio] Aibao",
+			"sw": "[Guild Ship NPC] Aibao",
+			"th": "[NPC ประจำบ้าน] Aibao",
+			"tw": "[公會飛船 NPC] Aibao",
+			"vi": "[Guild Ship NPC] Aibao"
+		},
+		"abilities": [
+			{
+				"parameter": "magicdefense",
+				"add": 3,
+				"rate": true
+			}
+		]
+	},
+	"13978": {
+		"id": 13978,
+		"name": {
+			"en": "[Guild Ship NPC] Anura",
+			"ar": "[Guild Ship NPC] Anura",
+			"br": "[NPC Casa da Guilda] Anura",
+			"cns": "[Guild Ship NPC] Anura",
+			"de": "[Gildenhaus NPC] Anura",
+			"fi": "[Guild Ship NPC] Anura",
+			"fil": "[Guild Ship NPC] Anura",
+			"fr": "[PNJ de Maison de Guilde] Anura",
+			"id": "[Guild Ship NPC] Anura",
+			"it": "[Guild Ship NPC] Anura",
+			"jp": "[ギルドハウスNPC]アヌーラ",
+			"kr": "[길드 하우스 NPC] 아누라",
+			"nl": "[Guild Ship NPC] Anura",
+			"pl": "[NPC Domu Gildii] Anura",
+			"ru": "[Guild Ship NPC] Anura",
+			"sp": "[NPC Casa de Gremio] Anura",
+			"sw": "[Guild Ship NPC] Anura",
+			"th": "[NPC ประจำบ้าน] Anura",
+			"tw": "[公會飛船 NPC] Anura",
+			"vi": "[Guild Ship NPC] Anura"
+		},
+		"abilities": [
+			{
+				"parameter": "pvpdamagereduction",
+				"add": 3,
+				"rate": true
+			}
+		]
+	},
+	"14035": {
+		"id": 14035,
+		"name": {
+			"en": "[Guild Ship NPC] Quarter",
+			"ar": "[Guild Ship NPC] Quarter",
+			"br": "[NPC Casa da Guilda] Quarter",
+			"cns": "[Guild Ship NPC] Quarter",
+			"de": "[Gildenhaus NPC] Quarter",
+			"fi": "[Guild Ship NPC] Quarter",
+			"fil": "[Guild Ship NPC] Quarter",
+			"fr": "[PNJ de Maison de Guilde] Quarter",
+			"id": "[Guild Ship NPC] Quarter",
+			"it": "[Guild Ship NPC] Quarter",
+			"jp": "[ギルドハウスNPC]クオーター",
+			"kr": "[길드 하우스 NPC] 쿼터",
+			"nl": "[Guild Ship NPC] Quarter",
+			"pl": "[NPC Domu Gildii] Quarter",
+			"ru": "[Guild Ship NPC] Quarter",
+			"sp": "[NPC Casa de Gremio] Quarter",
+			"sw": "[Guild Ship NPC] Quarter",
+			"th": "[NPC ประจำบ้าน] Quarter",
+			"tw": "[公會飛船 NPC] Quarter",
+			"vi": "[Guild Ship NPC] Quarter"
+		},
+		"abilities": [
+			{
+				"parameter": "maxhp",
+				"add": 10,
+				"rate": true
+			}
+		]
+	},
+	"14073": {
+		"id": 14073,
+		"name": {
+			"en": "[Personal House NPC] Gevil",
+			"ar": "[Personal House NPC] Gevil",
+			"br": "[NPC Casa Pessoal] Gevil",
+			"cns": "[个人小屋 NPC] Gevil",
+			"de": "[Privates Haus NPC] Gevil",
+			"fi": "[Personal House NPC] Gevil",
+			"fil": "[Personal House NPC] Gevil",
+			"fr": "[PNJ Personnel] Gevil",
+			"id": "[Personal House NPC] Gevil",
+			"it": "[Personal House NPC] Gevil",
+			"jp": "[パーソナルハウスNPC]ジービル",
+			"kr": "[개인 하우스 NPC] 게빌",
+			"nl": "[Personal House NPC] Gevil",
+			"pl": "[NPC Domu Osobistego] Gevil",
+			"ru": "[Personal House NPC] Gevil",
+			"sp": "[NPC Casa Personal] Gevil",
+			"sw": "[Personal House NPC] Gevil",
+			"th": "[NPC ประจำบ้าน] Gevil",
+			"tw": "[個人小屋 NPC] Gevil",
+			"vi": "[Personal House NPC] Gevil"
+		},
+		"abilities": [
+			{
+				"parameter": "reviverestoremp",
+				"add": 100,
+				"rate": false
+			}
+		]
+	},
+	"14180": {
+		"id": 14180,
+		"name": {
+			"en": "[Guild Ship NPC] Alyn",
+			"ar": "[Guild Ship NPC] Alyn",
+			"br": "[NPC Casa da Guilda] Alyn",
+			"cns": "[Guild Ship NPC] Alyn",
+			"de": "[Gildenhaus NPC] Alyn",
+			"fi": "[Guild Ship NPC] Alyn",
+			"fil": "[Guild Ship NPC] Alyn",
+			"fr": "[PNJ de Maison de Guilde] Alyn",
+			"id": "[Guild Ship NPC] Alyn",
+			"it": "[Guild Ship NPC] Alyn",
+			"jp": "[ギルドハウスNPC]アリン",
+			"kr": "[길드 하우스 NPC] 알린",
+			"nl": "[Guild Ship NPC] Alyn",
+			"pl": "[NPC Domu Gildii] Alyn",
+			"ru": "[Guild Ship NPC] Alyn",
+			"sp": "[NPC Casa de Gremio] Alyn",
+			"sw": "[Guild Ship NPC] Alyn",
+			"th": "[NPC ประจำบ้าน] Alyn",
+			"tw": "[公會飛船 NPC] Alyn",
+			"vi": "[Guild Ship NPC] Alyn"
+		},
+		"abilities": [
+			{
+				"parameter": "generalupgraderate",
+				"add": 3,
+				"rate": true
+			}
+		]
+	},
+	"14583": {
+		"id": 14583,
+		"name": {
+			"en": "[Guild Ship NPC] Wick",
+			"ar": "[Guild Ship NPC] Wick",
+			"br": "[NPC Casa da Guilda] Wick",
+			"cns": "[Guild Ship NPC] Wick",
+			"de": "[Gildenhaus NPC] Wick",
+			"fi": "[Guild Ship NPC] Wick",
+			"fil": "[Guild Ship NPC] Wick",
+			"fr": "[PNJ de Maison de Guilde] Wick",
+			"id": "[Guild Ship NPC] Wick",
+			"it": "[Guild Ship NPC] Wick",
+			"jp": "[ギルドハウスNPC]ウィック",
+			"kr": "[길드 하우스 NPC] 윅",
+			"nl": "[Guild Ship NPC] Wick",
+			"pl": "[NPC Domu Gildii] Wick",
+			"ru": "[Guild Ship NPC] Wick",
+			"sp": "[NPC Casa de Gremio] Wick",
+			"sw": "[Guild Ship NPC] Wick",
+			"th": "[NPC ประจำบ้าน] Wick",
+			"tw": "[公會飛船 NPC] Wick",
+			"vi": "[Guild Ship NPC] Wick"
+		},
+		"abilities": [
+			{
+				"parameter": "attackfromnearbyguildartifact",
+				"add": 30,
+				"rate": true
+			}
+		]
+	},
+	"14760": {
+		"id": 14760,
 		"name": {
 			"en": "[Personal House NPC] Cachu",
 			"ar": "[Personal House NPC] Cachu",
 			"br": "[NPC Casa Pessoal] Cachu",
-			"cn": "[个人房屋非玩家角色] 咔啾",
-			"cns": "[Personal House NPC] Cachu",
+			"cns": "[个人小屋 NPC] Cachu",
 			"de": "[Privates Haus NPC] Cachu",
 			"fi": "[Personal House NPC] Cachu",
 			"fil": "[Personal House NPC] Cachu",
-			"fr": "[Personal House NPC] Cachu",
+			"fr": "[PNJ Personnel] Cachu",
 			"id": "[Personal House NPC] Cachu",
 			"it": "[Personal House NPC] Cachu",
 			"jp": "[パーソナルハウスNPC]カチュウ",
 			"kr": "[개인 하우스 NPC] 카추",
 			"nl": "[Personal House NPC] Cachu",
-			"pl": "[Personal House NPC] Cachu",
+			"pl": "[NPC Domu Osobistego] Cachu",
 			"ru": "[Personal House NPC] Cachu",
 			"sp": "[NPC Casa Personal] Cachu",
 			"sw": "[Personal House NPC] Cachu",
 			"th": "[NPC ประจำบ้าน] Cachu",
-			"tw": "[Personal House NPC] Cachu",
+			"tw": "[個人小屋 NPC] Cachu",
 			"vi": "[Personal House NPC] Cachu"
 		},
-		"abilities": [ { "parameter": "partyexp", "add": 10, "rate": true } ]
+		"abilities": [
+			{
+				"parameter": "partyexp",
+				"add": 10,
+				"rate": true
+			}
+		]
 	},
-	"28": {
-		"id": 28,
+	"15274": {
+		"id": 15274,
 		"name": {
-			"en": "[Guild House NPC] Bako",
-			"ar": "[Guild House NPC] Bako",
-			"br": "[NPC Casa da Guilda] Bako",
-			"cn": "[公会房屋非玩家角色] 巴科",
-			"cns": "[Guild House NPC] Bako",
-			"de": "[Gildenhaus NPC] Bako",
-			"fi": "[Guild House NPC] Bako",
-			"fil": "[Guild House NPC] Bako",
-			"fr": "[Guild House NPC] Bako",
-			"id": "[Guild House NPC] Bako",
-			"it": "[Guild House NPC] Bako",
-			"jp": "[ギルドハウスNPC]バコ",
-			"kr": "[길드 하우스 NPC] 바코",
-			"nl": "[Guild House NPC] Bako",
-			"pl": "[Guild House NPC] Bako",
-			"ru": "[Guild House NPC] Bako",
-			"sp": "[NPC Casa de Gremio] Bako",
-			"sw": "[Guild House NPC] Bako",
-			"th": "[NPC ประจำบ้าน] Bako",
-			"tw": "[Guild House NPC] Bako",
-			"vi": "[Guild House NPC] Bako"
+			"en": "[Personal House NPC] Casanova",
+			"ar": "[Personal House NPC] Casanova",
+			"br": "[NPC Casa Pessoal] Casanova",
+			"cns": "[个人小屋 NPC] Casanova",
+			"de": "[Privates Haus NPC] Casanova",
+			"fi": "[Personal House NPC] Casanova",
+			"fil": "[Personal House NPC] Casanova",
+			"fr": "[PNJ Personnel] Casanova",
+			"id": "[Personal House NPC] Casanova",
+			"it": "[Personal House NPC] Casanova",
+			"jp": "[パーソナルハウスNPC]カサノバ",
+			"kr": "[개인 하우스 NPC] 카사노바",
+			"nl": "[Personal House NPC] Casanova",
+			"pl": "[NPC Domu Osobistego] Casanova",
+			"ru": "[Personal House NPC] Casanova",
+			"sp": "[NPC Casa Personal] Casanova",
+			"sw": "[Personal House NPC] Casanova",
+			"th": "[NPC ประจำบ้าน] Casanova",
+			"tw": "[個人小屋 NPC] Casanova",
+			"vi": "[Personal House NPC] Casanova"
 		},
-		"abilities": [ { "parameter": "hpfromnearbyguildartifact", "add": 500, "rate": true } ]
+		"abilities": [
+			{
+				"parameter": "exprate",
+				"add": 5,
+				"rate": true
+			}
+		]
 	},
-	"29": {
-		"id": 29,
+	"15276": {
+		"id": 15276,
 		"name": {
-			"en": "[Guild House NPC] Wick",
-			"ar": "[Guild House NPC] Wick",
-			"br": "[NPC Casa da Guilda] Wick",
-			"cn": "[公会房屋非玩家角色] 威克",
-			"cns": "[Guild House NPC] Wick",
-			"de": "[Gildenhaus NPC] Wick",
-			"fi": "[Guild House NPC] Wick",
-			"fil": "[Guild House NPC] Wick",
-			"fr": "[Guild House NPC] Wick",
-			"id": "[Guild House NPC] Wick",
-			"it": "[Guild House NPC] Wick",
-			"jp": "[ギルドハウスNPC]ウィック",
-			"kr": "[길드 하우스 NPC] 윅",
-			"nl": "[Guild House NPC] Wick",
-			"pl": "[Guild House NPC] Wick",
-			"ru": "[Guild House NPC] Wick",
-			"sp": "[NPC Casa de Gremio] Wick",
-			"sw": "[Guild House NPC] Wick",
-			"th": "[NPC ประจำบ้าน] Wick",
-			"tw": "[Guild House NPC] Wick",
-			"vi": "[Guild House NPC] Wick"
+			"en": "[Guild Ship NPC] Nanco",
+			"ar": "[Guild Ship NPC] Nanco",
+			"br": "[NPC Casa da Guilda] Nanco",
+			"cns": "[Guild Ship NPC] Nanco",
+			"de": "[Gildenhaus NPC] Nanco",
+			"fi": "[Guild Ship NPC] Nanco",
+			"fil": "[Guild Ship NPC] Nanco",
+			"fr": "[PNJ de Maison de Guilde] Nanco",
+			"id": "[Guild Ship NPC] Nanco",
+			"it": "[Guild Ship NPC] Nanco",
+			"jp": "[ギルドハウスNPC]ナンコ",
+			"kr": "[길드 하우스 NPC] 난코",
+			"nl": "[Guild Ship NPC] Nanco",
+			"pl": "[NPC Domu Gildii] Nanco",
+			"ru": "[Guild Ship NPC] Nanco",
+			"sp": "[NPC Casa de Gremio] Nanco",
+			"sw": "[Guild Ship NPC] Nanco",
+			"th": "[NPC ประจำบ้าน] Nanco",
+			"tw": "[公會飛船 NPC] Nanco",
+			"vi": "[Guild Ship NPC] Nanco"
 		},
-		"abilities": [ { "parameter": "attackfromnearbyguildartifact", "add": 3, "rate": true } ]
+		"abilities": [
+			{
+				"parameter": "criticalresist",
+				"add": 3,
+				"rate": true
+			}
+		]
 	},
-	"30": {
-		"id": 30,
+	"15613": {
+		"id": 15613,
 		"name": {
-			"en": "[Guild House NPC] Wina",
-			"ar": "[Guild House NPC] Wina",
-			"br": "[NPC Casa da Guilda] Wina",
-			"cn": "[公会房屋非玩家角色] 薇娜",
-			"cns": "[Guild House NPC] Wina",
-			"de": "[Gildenhaus NPC] Wina",
-			"fi": "[Guild House NPC] Wina",
-			"fil": "[Guild House NPC] Wina",
-			"fr": "[Guild House NPC] Wina",
-			"id": "[Guild House NPC] Wina",
-			"it": "[Guild House NPC] Wina",
-			"jp": "[ギルドハウスNPC]ウィナ",
-			"kr": "[길드 하우스 NPC] 위나",
-			"nl": "[Guild House NPC] Wina",
-			"pl": "[Guild House NPC] Wina",
-			"ru": "[Guild House NPC] Wina",
-			"sp": "[NPC Casa de Gremio] Wina",
-			"sw": "[Guild House NPC] Wina",
-			"th": "[NPC ประจำบ้าน] Wina",
-			"tw": "[Guild House NPC] Wina",
-			"vi": "[Guild House NPC] Wina"
+			"en": "[Guild Ship NPC] Runni",
+			"ar": "[Guild Ship NPC] Runni",
+			"br": "[NPC Casa da Guilda] Runni",
+			"cns": "[Guild Ship NPC] Runni",
+			"de": "[Gildenhaus NPC] Runni",
+			"fi": "[Guild Ship NPC] Runni",
+			"fil": "[Guild Ship NPC] Runni",
+			"fr": "[PNJ de Maison de Guilde] Runni",
+			"id": "[Guild Ship NPC] Runni",
+			"it": "[Guild Ship NPC] Runni",
+			"jp": "[ギルドハウスNPC]ルンニ",
+			"kr": "[길드 하우스 NPC] 루니",
+			"nl": "[Guild Ship NPC] Runni",
+			"pl": "[NPC Domu Gildii] Runni",
+			"ru": "[Guild Ship NPC] Runni",
+			"sp": "[NPC Casa de Gremio] Runni",
+			"sw": "[Guild Ship NPC] Runni",
+			"th": "[NPC ประจำบ้าน] Runni",
+			"tw": "[公會飛船 NPC] Runni",
+			"vi": "Guild House NPC] Runni"
 		},
-		"abilities": [ { "parameter": "deffromnearbyguildartifact", "add": 3, "rate": true } ]
+		"abilities": [
+			{
+				"parameter": "piercingrate",
+				"add": 3,
+				"rate": true
+			}
+		]
 	},
-	"31": {
-		"id": 31,
+	"16730": {
+		"id": 16730,
 		"name": {
-			"en": "[Guild House NPC] Pitch",
-			"ar": "[Guild House NPC] Pitch",
-			"br": "[NPC Casa da Guilda] Pitch",
-			"cn": "[公会房屋非玩家角色] 皮奇",
-			"cns": "[Guild House NPC] Pitch",
-			"de": "[Gildenhaus NPC] Pitch",
-			"fi": "[Guild House NPC] Pitch",
-			"fil": "[Guild House NPC] Pitch",
-			"fr": "[Guild House NPC] Pitch",
-			"id": "[Guild House NPC] Pitch",
-			"it": "[Guild House NPC] Pitch",
-			"jp": "[ギルドハウスNPC]ピッチ",
-			"kr": "[길드 하우스 NPC] 피치",
-			"nl": "[Guild House NPC] Pitch",
-			"pl": "[Guild House NPC] Pitch",
-			"ru": "[Guild House NPC] Pitch",
-			"sp": "[NPC Casa de Gremio] Pitch",
-			"sw": "[Guild House NPC] Pitch",
-			"th": "[NPC ประจำบ้าน] Pitch",
-			"tw": "[Guild House NPC] Pitch",
-			"vi": "[Guild House NPC] Pitch"
+			"en": "[Personal House NPC] Lala",
+			"ar": "[Personal House NPC] Lala",
+			"br": "[NPC Casa Pessoal] Lala",
+			"cns": "[个人小屋 NPC] Lala",
+			"de": "[Privates Haus NPC] Lala",
+			"fi": "[Personal House NPC] Lala",
+			"fil": "[Personal House NPC] Lala",
+			"fr": "[PNJ Personnel] Lala",
+			"id": "[Personal House NPC] Lala",
+			"it": "[Personal House NPC] Lala",
+			"jp": "[パーソナルハウスNPC]ララ",
+			"kr": "[개인 하우스 NPC] 랄라",
+			"nl": "[Personal House NPC] Lala",
+			"pl": "[NPC Domu Osobistego] Lala",
+			"ru": "[Personal House NPC] Lala",
+			"sp": "[NPC Casa Personal] Lala",
+			"sw": "[Personal House NPC] Lala",
+			"th": "[NPC ประจำบ้าน] Lala",
+			"tw": "[個人小屋 NPC] Lala",
+			"vi": "[Personal House NPC] Lala"
 		},
-		"abilities": [ { "parameter": "attackspeedratefromnearbyguildartifact", "add": 100, "rate": true } ]
+		"abilities": [
+			{
+				"parameter": "freedungeonentry",
+				"add": 1,
+				"rate": false
+			}
+		]
 	},
-	"32": {
-		"id": 32,
+	"18450": {
+		"id": 18450,
 		"name": {
-			"en": "[Guild House NPC] Catch",
-			"ar": "[Guild House NPC] Catch",
-			"br": "[NPC Casa da Guilda] Catch",
-			"cn": "[公会房屋非玩家角色] 卡奇",
-			"cns": "[Guild House NPC] Catch",
-			"de": "[Gildenhaus NPC] Catch",
-			"fi": "[Guild House NPC] Catch",
-			"fil": "[Guild House NPC] Catch",
-			"fr": "[Guild House NPC] Catch",
-			"id": "[Guild House NPC] Catch",
-			"it": "[Guild House NPC] Catch",
-			"jp": "[ギルドハウスNPC]キャッチ",
-			"kr": "[길드 하우스 NPC] 캐치",
-			"nl": "[Guild House NPC] Catch",
-			"pl": "[Guild House NPC] Catch",
-			"ru": "[Guild House NPC] Catch",
-			"sp": "[NPC Casa de Gremio] Catch",
-			"sw": "[Guild House NPC] Catch",
-			"th": "[NPC ประจำบ้าน] Catch",
-			"tw": "[Guild House NPC] Catch",
-			"vi": "[Guild House NPC] Catch"
+			"en": "[Guild Ship NPC] Lane",
+			"ar": "[Guild Ship NPC] Lane",
+			"br": "[NPC Casa da Guilda] Lane",
+			"cns": "[Guild Ship NPC] Lane",
+			"de": "[Gildenhaus NPC] Lane",
+			"fi": "[Guild Ship NPC] Lane",
+			"fil": "[Guild Ship NPC] Lane",
+			"fr": "[PNJ de Maison de Guilde] Lane",
+			"id": "[Guild Ship NPC] Lane",
+			"it": "[Guild Ship NPC] Lane",
+			"jp": "[ギルドハウスNPC]レーン",
+			"kr": "[길드 하우스 NPC] 레인",
+			"nl": "[Guild Ship NPC] Lane",
+			"pl": "[NPC Domu Gildii] Lane",
+			"ru": "[Guild Ship NPC] Lane",
+			"sp": "[NPC Casa de Gremio] Lane",
+			"sw": "[Guild Ship NPC] Lane",
+			"th": "[NPC ประจำบ้าน] Lane",
+			"tw": "[公會飛船 NPC] Lane",
+			"vi": "[Guild Ship NPC] Lane"
 		},
-		"abilities": [ { "parameter": "decreasedcastingtimefromnearbyguildartifact", "add": 5, "rate": true } ]
+		"abilities": [
+			{
+				"parameter": "accessoryupgraderate",
+				"add": 3,
+				"rate": true
+			}
+		]
 	},
-	"33": {
-		"id": 33,
+	"19378": {
+		"id": 19378,
 		"name": {
-			"en": "[Guild House NPC] Vikel",
-			"ar": "[Guild House NPC] Vikel",
-			"br": "[NPC Casa da Guilda] Vikel",
-			"cn": "[公会房屋非玩家角色] 维克尔",
-			"cns": "[Guild House NPC] Vikel",
-			"de": "[Gildenhaus NPC] Vikel",
-			"fi": "[Guild House NPC] Vikel",
-			"fil": "[Guild House NPC] Vikel",
-			"fr": "[Guild House NPC] Vikel",
-			"id": "[Guild House NPC] Vikel",
-			"it": "[Guild House NPC] Vikel",
-			"jp": "[ギルドハウスNPC]ビケル",
-			"kr": "[길드 하우스 NPC] 비켈",
-			"nl": "[Guild House NPC] Vikel",
-			"pl": "[Guild House NPC] Vikel",
-			"ru": "[Guild House NPC] Vikel",
-			"sp": "[NPC Casa de Gremio] Vikel",
-			"sw": "[Guild House NPC] Vikel",
-			"th": "[NPC ประจำบ้าน] Vikel",
-			"tw": "[Guild House NPC] Vikel",
-			"vi": "[Guild House NPC] Vikel"
+			"en": "[Personal House NPC] Klock",
+			"ar": "[Personal House NPC] Klock",
+			"br": "[Personal House NPC] Klock",
+			"cns": "[个人小屋 NPC] 克洛可",
+			"de": "[Privates Haus NPC] Klock",
+			"fi": "[Personal House NPC] Klock",
+			"fil": "[Personal House NPC] Klock",
+			"fr": "[PNJ Personnel] Klock",
+			"id": "[Personal House NPC] Klock",
+			"it": "[Personal House NPC] Klock",
+			"jp": "[Personal House NPC] Klock",
+			"kr": "[개인 하우스 NPC] 클록",
+			"nl": "[Personal House NPC] Klock",
+			"pl": "[NPC Domu Osobistego] Klock",
+			"ru": "[Personal House NPC] Klock",
+			"sp": "[Personal House NPC] Klock",
+			"sw": "[Personal House NPC] Klock",
+			"th": "[Personal House NPC] Klock",
+			"tw": "[個人小屋 NPC] 克洛可",
+			"vi": "[Personal House NPC] Klock"
 		},
-		"abilities": [ { "parameter": "pvpblock", "add": 3, "rate": true } ]
-	},
-	"34": {
-		"id": 34,
-		"name": {
-			"en": "[Guild House NPC] Soz",
-			"ar": "[Guild House NPC] Soz",
-			"br": "[NPC Casa da Guilda] Soz",
-			"cn": "[公会房屋非玩家角色] 索兹",
-			"cns": "[Guild House NPC] Soz",
-			"de": "[Gildenhaus NPC] Soz",
-			"fi": "[Guild House NPC] Soz",
-			"fil": "[Guild House NPC] Soz",
-			"fr": "[Guild House NPC] Soz",
-			"id": "[Guild House NPC] Soz",
-			"it": "[Guild House NPC] Soz",
-			"jp": "[ギルドハウスNPC]ソズ",
-			"kr": "[길드 하우스 NPC] 소즈",
-			"nl": "[Guild House NPC] Soz",
-			"pl": "[Guild House NPC] Soz",
-			"ru": "[Guild House NPC] Soz",
-			"sp": "[NPC Casa de Gremio] Soz",
-			"sw": "[Guild House NPC] Soz",
-			"th": "[NPC ประจำบ้าน] Soz",
-			"tw": "[Guild House NPC] Soz",
-			"vi": "[Guild House NPC] Soz"
-		},
-		"abilities": [ { "parameter": "pvpblockpenetration", "add": 3, "rate": true } ]
-	},
-	"35": {
-		"id": 35,
-		"name": {
-			"en": "[Guild House NPC] Naso",
-			"ar": "[Guild House NPC] Naso",
-			"br": "[NPC Casa da Guilda] Naso",
-			"cn": "[公会房屋非玩家角色] 纳索",
-			"cns": "[Guild House NPC] Naso",
-			"de": "[Gildenhaus NPC] Naso",
-			"fi": "[Guild House NPC] Naso",
-			"fil": "[Guild House NPC] Naso",
-			"fr": "[Guild House NPC] Naso",
-			"id": "[Guild House NPC] Naso",
-			"it": "[Guild House NPC] Naso",
-			"jp": "[ギルドハウスNPC]ナソ",
-			"kr": "[길드 하우스 NPC] 나소",
-			"nl": "[Guild House NPC] Naso",
-			"pl": "[Guild House NPC] Naso",
-			"ru": "[Guild House NPC] Naso",
-			"sp": "[NPC Casa de Gremio] Naso",
-			"sw": "[Guild House NPC] Naso",
-			"th": "[NPC ประจำบ้าน] Naso",
-			"tw": "[Guild House NPC] Naso",
-			"vi": "[Guild House NPC] Naso"
-		},
-		"abilities": [ { "parameter": "pvpcriticalchance", "add": 3, "rate": true } ]
-	},
-	"36": {
-		"id": 36,
-		"name": {
-			"en": "[Guild House NPC] Nuso",
-			"ar": "[Guild House NPC] Nuso",
-			"br": "[NPC Casa da Guilda] Nuso",
-			"cn": "[公会房屋非玩家角色] 努索",
-			"cns": "[Guild House NPC] Nuso",
-			"de": "[Gildenhaus NPC] Nuso",
-			"fi": "[Guild House NPC] Nuso",
-			"fil": "[Guild House NPC] Nuso",
-			"fr": "[Guild House NPC] Nuso",
-			"id": "[Guild House NPC] Nuso",
-			"it": "[Guild House NPC] Nuso",
-			"jp": "[ギルドハウスNPC]ヌソ",
-			"kr": "[길드 하우스 NPC] 누소",
-			"nl": "[Guild House NPC] Nuso",
-			"pl": "[Guild House NPC] Nuso",
-			"ru": "[Guild House NPC] Nuso",
-			"sp": "[NPC Casa de Gremio] Nuso",
-			"sw": "[Guild House NPC] Nuso",
-			"th": "[NPC ประจำบ้าน] Nuso",
-			"tw": "[Guild House NPC] Nuso",
-			"vi": "[Guild House NPC] Nuso"
-		},
-		"abilities": [ { "parameter": "pvpcriticaldamage", "add": 3, "rate": true } ]
+		"abilities": [
+			{
+				"parameter": "samejewelenchant",
+				"add": 10,
+				"rate": false
+			}
+		]
 	}
 }

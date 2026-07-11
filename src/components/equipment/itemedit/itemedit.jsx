@@ -60,7 +60,7 @@ function ItemEdit({ itemElem }) {
     if (itemElem.itemProp.possibleRandomStats != undefined) {
         for (let i = 0; i < itemElem.itemProp.possibleRandomStats.length; ++i) {
             const ability = itemElem.itemProp.possibleRandomStats[i];
-            possibleRandomStats[i] = ability.parameter;
+            possibleRandomStats[i] = Utils.getStatNameByIdOrDefault(ability.parameter, i18n);
         }
     }
 
@@ -99,6 +99,14 @@ function ItemEdit({ itemElem }) {
 
         // Skills
         for (const [skill, rarities] of Object.entries(value.skills)) {
+            // SkillAwakes references skill ids that may be absent from the
+            // current game data (e.g. removed by a patch). Skip any that are
+            // missing so the editor stays usable.
+            const skillProp = Utils.getSkillById(skill);
+            if (skillProp == null) {
+                continue;
+            }
+
             if (rarities[itemElem.itemProp.rarity] != undefined) {
                 possibleSkillAwakeValues[skill] = rarities[itemElem.itemProp.rarity];
             }
@@ -107,7 +115,7 @@ function ItemEdit({ itemElem }) {
                 possibleSkillAwakeValues[skill] = rarities[Object.keys(rarities).at(-1)];
             }
 
-            possibleSkillAwakeOptions[skill] = Utils.getSkillById(skill).name.en;
+            possibleSkillAwakeOptions[skill] = skillProp.name.en;
         }
 
         // Parameters
@@ -120,7 +128,7 @@ function ItemEdit({ itemElem }) {
                 possibleSkillAwakeValues[parameter] = rarities[Object.keys(rarities).at(-1)];
             }
 
-            possibleSkillAwakeOptions[parameter] = parameter;
+            possibleSkillAwakeOptions[parameter] = Utils.getStatNameByIdOrDefault(parameter, i18n);
         }
     }
 
@@ -171,11 +179,6 @@ function ItemEdit({ itemElem }) {
             return;
         }
         else {
-            const range = {
-                min: possibleSkillAwakeValues[option][0],
-                max: possibleSkillAwakeValues[option].at(-1)
-            };
-
             if (!isNaN(parseInt(option))) {
                 // Is a skill
                 itemElem.skillAwake = { id: option, skill: option, add: possibleSkillAwakeValues[option][Math.floor(possibleSkillAwakeValues[option].length / 2)] };
@@ -325,27 +328,29 @@ function ItemEdit({ itemElem }) {
                 itemElem.isStatAwakeAble() &&
                 <div className="column">
                     <h3>Stat Awake</h3>
-                    <Dropdown options={Utils.getPossibleStatAwakeParams(itemElem.statAwake[1]?.parameter, itemElem.itemProp.level, i18n)} onSelectionChanged={(v) => setStatAwakeParameter(v, 0)} valueKey={itemElem.statAwake[0]?.parameter ?? "none"} style={{ minWidth: "100px" }} />
+                    <div className="stat-edit-row">
+                        <Dropdown options={Utils.getPossibleStatAwakeParams(itemElem.statAwake[1]?.parameter, itemElem.itemProp.level, i18n)} onSelectionChanged={(v) => setStatAwakeParameter(v, 0)} valueKey={itemElem.statAwake[0]?.parameter ?? "none"} />
+                        <RangeInput
+                            onChange={(e) => setStatAwakeValue(e, 0)}
+                            value={itemElem.statAwake[0]?.value ?? 0}
+                            prefix={"+"}
+                            step={1}
+                            disabled={itemElem.statAwake[0] == null}
+                            allowedValues={Utils.getPossibleStatAwakeValues(itemElem.statAwake[0]?.parameter ?? "none", itemElem.statAwake[1]?.parameter ?? "none", itemElem.statAwake[1]?.value ?? 0, itemElem.itemProp.level)}
+                        />
+                    </div>
 
-                    <RangeInput
-                        onChange={(e) => setStatAwakeValue(e, 0)}
-                        value={itemElem.statAwake[0]?.value ?? 0}
-                        prefix={"+"}
-                        step={1}
-                        disabled={itemElem.statAwake[0] == null}
-                        allowedValues={Utils.getPossibleStatAwakeValues(itemElem.statAwake[0]?.parameter ?? "none", itemElem.statAwake[1]?.parameter ?? "none", itemElem.statAwake[1]?.value ?? 0, itemElem.itemProp.level)}
-                    />
-
-                    <Dropdown options={Utils.getPossibleStatAwakeParams(itemElem.statAwake[0]?.parameter, itemElem.itemProp.level, i18n)} onSelectionChanged={(v) => setStatAwakeParameter(v, 1)} valueKey={itemElem.statAwake[1]?.parameter ?? "none"} style={{ minWidth: "100px" }} />
-
-                    <RangeInput
-                        onChange={(e) => setStatAwakeValue(e, 1)}
-                        value={itemElem.statAwake[1]?.value ?? 0}
-                        prefix={"+"}
-                        step={1}
-                        disabled={itemElem.statAwake[1] == null}
-                        allowedValues={Utils.getPossibleStatAwakeValues(itemElem.statAwake[1]?.parameter ?? "none", itemElem.statAwake[0]?.parameter ?? "none", itemElem.statAwake[0]?.value ?? 0, itemElem.itemProp.level)}
-                    />
+                    <div className="stat-edit-row">
+                        <Dropdown options={Utils.getPossibleStatAwakeParams(itemElem.statAwake[0]?.parameter, itemElem.itemProp.level, i18n)} onSelectionChanged={(v) => setStatAwakeParameter(v, 1)} valueKey={itemElem.statAwake[1]?.parameter ?? "none"} />
+                        <RangeInput
+                            onChange={(e) => setStatAwakeValue(e, 1)}
+                            value={itemElem.statAwake[1]?.value ?? 0}
+                            prefix={"+"}
+                            step={1}
+                            disabled={itemElem.statAwake[1] == null}
+                            allowedValues={Utils.getPossibleStatAwakeValues(itemElem.statAwake[1]?.parameter ?? "none", itemElem.statAwake[0]?.parameter ?? "none", itemElem.statAwake[0]?.value ?? 0, itemElem.itemProp.level)}
+                        />
+                    </div>
                 </div>
             }
 
@@ -355,8 +360,8 @@ function ItemEdit({ itemElem }) {
                     <h3>{i18n.t("itemedit_stat_ranges")}</h3>
                     {
                         itemElem.statRanges.map((ability, index) =>
-                            <div className="row" key={index}>
-                                {ability.parameter}
+                            <div className="stat-edit-row" key={index}>
+                                <span className="stat-edit-label">{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}</span>
                                 <RangeInput
                                     min={Math.min(ability.add, ability.addMax)}
                                     max={Math.max(ability.addMax, ability.add)}
@@ -376,31 +381,35 @@ function ItemEdit({ itemElem }) {
                 itemElem.itemProp.possibleRandomStats != undefined &&
                 <div className="column">
                     <h3>{i18n.t("itemedit_random_bonus_ultimate")}</h3>
-                    <Dropdown options={possibleRandomStats} onSelectionChanged={(e) => setRandomStatOption(0, e)} valueKey={itemElem.randomStats[0]?.id} style={{ minWidth: "200px" }} />
-                    <RangeInput
-                        min={itemElem.randomStats[0]?.add ?? 0}
-                        max={itemElem.randomStats[0]?.addMax ?? 1}
-                        onChange={(e) => setRandomStatValue(0, e)}
-                        value={itemElem.randomStats[0]?.value ?? 0}
-                        isRange={itemElem.randomStats[0]?.rate ?? true}
-                        prefix={"+"}
-                        step={STAT_STEPS[itemElem.randomStats[0]?.parameter] ?? 1}
-                    />
+                    <div className="stat-edit-row">
+                        <Dropdown options={possibleRandomStats} onSelectionChanged={(e) => setRandomStatOption(0, e)} valueKey={itemElem.randomStats[0]?.id} />
+                        <RangeInput
+                            min={itemElem.randomStats[0]?.add ?? 0}
+                            max={itemElem.randomStats[0]?.addMax ?? 1}
+                            onChange={(e) => setRandomStatValue(0, e)}
+                            value={itemElem.randomStats[0]?.value ?? 0}
+                            isRange={itemElem.randomStats[0]?.rate ?? true}
+                            prefix={"+"}
+                            step={STAT_STEPS[itemElem.randomStats[0]?.parameter] ?? 1}
+                        />
+                    </div>
 
-                    <Dropdown options={possibleRandomStats} onSelectionChanged={(e) => setRandomStatOption(1, e)} valueKey={itemElem.randomStats[1]?.id} style={{ minWidth: "200px" }} />
-                    <RangeInput
-                        min={itemElem.randomStats[1]?.add ?? 0}
-                        max={itemElem.randomStats[1]?.addMax ?? 0}
-                        onChange={(e) => setRandomStatValue(1, e)}
-                        value={itemElem.randomStats[1]?.value ?? 0}
-                        isRange={itemElem.randomStats[1]?.rate ?? true}
-                        prefix={"+"}
-                        step={STAT_STEPS[itemElem.randomStats[1].parameter] ?? 1}
-                    />
+                    <div className="stat-edit-row">
+                        <Dropdown options={possibleRandomStats} onSelectionChanged={(e) => setRandomStatOption(1, e)} valueKey={itemElem.randomStats[1]?.id} />
+                        <RangeInput
+                            min={itemElem.randomStats[1]?.add ?? 0}
+                            max={itemElem.randomStats[1]?.addMax ?? 0}
+                            onChange={(e) => setRandomStatValue(1, e)}
+                            value={itemElem.randomStats[1]?.value ?? 0}
+                            isRange={itemElem.randomStats[1]?.rate ?? true}
+                            prefix={"+"}
+                            step={STAT_STEPS[itemElem.randomStats[1].parameter] ?? 1}
+                        />
+                    </div>
 
                     {itemElem.upgradeLevel >= 6 && (
-                        <>
-                            <Dropdown options={possibleRandomStats} onSelectionChanged={(e) => setRandomStatOption(2, e)} valueKey={itemElem.randomStats[2]?.id} style={{ minWidth: "200px" }} />
+                        <div className="stat-edit-row">
+                            <Dropdown options={possibleRandomStats} onSelectionChanged={(e) => setRandomStatOption(2, e)} valueKey={itemElem.randomStats[2]?.id} />
                             <RangeInput
                                 min={halfStat(itemElem.randomStats[2]?.parameter, itemElem.randomStats[2]?.add ?? 0)}
                                 max={halfStat(itemElem.randomStats[2]?.parameter, itemElem.randomStats[2]?.addMax ?? 0)}
@@ -410,22 +419,22 @@ function ItemEdit({ itemElem }) {
                                 prefix={"+"}
                                 step={STAT_STEPS[itemElem.randomStats[2]?.parameter] ?? 1}
                             />
+                        </div>
+                    )}
 
-                            {itemElem.upgradeLevel >= 10 && (
-                                <>
-                                    <Dropdown options={possibleRandomStats} onSelectionChanged={(e) => setRandomStatOption(3, e)} valueKey={itemElem.randomStats[3]?.id} style={{ minWidth: "200px" }} />
-                                    <RangeInput
-                                        min={halfStat(itemElem.randomStats[3]?.parameter, itemElem.randomStats[3]?.add ?? 0)}
-                                        max={halfStat(itemElem.randomStats[3]?.parameter, itemElem.randomStats[3]?.addMax ?? 0)}
-                                        onChange={(e) => setRandomStatValue(3, e)}
-                                        value={itemElem.randomStats[3]?.value ?? 0}
-                                        isRange={itemElem.randomStats[3]?.rate ?? true}
-                                        prefix={"+"}
-                                        step={STAT_STEPS[itemElem.randomStats[3]?.parameter] ?? 1}
-                                    />
-                                </>
-                            )}
-                        </>
+                    {itemElem.upgradeLevel >= 10 && (
+                        <div className="stat-edit-row">
+                            <Dropdown options={possibleRandomStats} onSelectionChanged={(e) => setRandomStatOption(3, e)} valueKey={itemElem.randomStats[3]?.id} />
+                            <RangeInput
+                                min={halfStat(itemElem.randomStats[3]?.parameter, itemElem.randomStats[3]?.add ?? 0)}
+                                max={halfStat(itemElem.randomStats[3]?.parameter, itemElem.randomStats[3]?.addMax ?? 0)}
+                                onChange={(e) => setRandomStatValue(3, e)}
+                                value={itemElem.randomStats[3]?.value ?? 0}
+                                isRange={itemElem.randomStats[3]?.rate ?? true}
+                                prefix={"+"}
+                                step={STAT_STEPS[itemElem.randomStats[3]?.parameter] ?? 1}
+                            />
+                        </div>
                     )}
                 </div>
             }
@@ -434,27 +443,31 @@ function ItemEdit({ itemElem }) {
                 (itemElem.itemProp.category == "fashion" && itemElem.itemProp.subcategory != "mask") &&
                 <div className="column">
                     <h3>{i18n.t("itemedit_goddess_demons")}</h3>
-                    <Dropdown options={possibleBlessings} onSelectionChanged={(e) => setBlessingOption(0, e)} valueKey={itemElem.randomStats[0]?.id ?? 0} style={{ minWidth: "200px" }} />
-                    <RangeInput
-                        onChange={(e) => setRandomStatValue(0, e)}
-                        value={itemElem.randomStats[0]?.value ?? 0}
-                        isRange={itemElem.randomStats[0]?.rate ?? true}
-                        prefix={"+"}
-                        step={STAT_STEPS[itemElem.randomStats[1]?.parameter] ?? 1}
-                        disabled={itemElem.randomStats[0] == null}
-                        allowedValues={itemElem.randomStats[0] ? getAllowedBlessingValues(itemElem.randomStats[0].parameter) : [0, 1]}
-                    />
+                    <div className="stat-edit-row">
+                        <Dropdown options={possibleBlessings} onSelectionChanged={(e) => setBlessingOption(0, e)} valueKey={itemElem.randomStats[0]?.id ?? 0} />
+                        <RangeInput
+                            onChange={(e) => setRandomStatValue(0, e)}
+                            value={itemElem.randomStats[0]?.value ?? 0}
+                            isRange={itemElem.randomStats[0]?.rate ?? true}
+                            prefix={"+"}
+                            step={STAT_STEPS[itemElem.randomStats[1]?.parameter] ?? 1}
+                            disabled={itemElem.randomStats[0] == null}
+                            allowedValues={itemElem.randomStats[0] ? getAllowedBlessingValues(itemElem.randomStats[0].parameter) : [0, 1]}
+                        />
+                    </div>
 
-                    <Dropdown options={possibleBlessings} onSelectionChanged={(e) => setBlessingOption(1, e)} valueKey={itemElem.randomStats[1]?.id ?? 0} style={{ minWidth: "200px" }} />
-                    <RangeInput
-                        onChange={(e) => setRandomStatValue(1, e)}
-                        value={itemElem.randomStats[1]?.value ?? 0}
-                        isRange={itemElem.randomStats[1]?.rate ?? true}
-                        prefix={"+"}
-                        step={STAT_STEPS[itemElem.randomStats[1]?.parameter] ?? 1}
-                        disabled={itemElem.randomStats[1] == null}
-                        allowedValues={itemElem.randomStats[1] ? getAllowedBlessingValues(itemElem.randomStats[1].parameter) : [0, 1]}
-                    />
+                    <div className="stat-edit-row">
+                        <Dropdown options={possibleBlessings} onSelectionChanged={(e) => setBlessingOption(1, e)} valueKey={itemElem.randomStats[1]?.id ?? 0} />
+                        <RangeInput
+                            onChange={(e) => setRandomStatValue(1, e)}
+                            value={itemElem.randomStats[1]?.value ?? 0}
+                            isRange={itemElem.randomStats[1]?.rate ?? true}
+                            prefix={"+"}
+                            step={STAT_STEPS[itemElem.randomStats[1]?.parameter] ?? 1}
+                            disabled={itemElem.randomStats[1] == null}
+                            allowedValues={itemElem.randomStats[1] ? getAllowedBlessingValues(itemElem.randomStats[1].parameter) : [0, 1]}
+                        />
+                    </div>
                 </div>
             }
 
@@ -462,8 +475,8 @@ function ItemEdit({ itemElem }) {
                 itemElem.isElementUpgradeAble() &&
                 <div className="column">
                     <h3>Element</h3>
-                    <Dropdown options={possibleElementValues} onSelectionChanged={setElement} valueKey={itemElem.element} />
-                    <div className="row">
+                    <div className="stat-edit-row">
+                        <Dropdown options={possibleElementValues} onSelectionChanged={setElement} valueKey={itemElem.element} />
                         <NumberInput disabled={itemElem.element == "none"} hasButtons min={0} max={10} value={itemElem.elementUpgradeLevel} onChange={setElementUpgradeLevel} label={"+"} />
                     </div>
                 </div>
@@ -520,8 +533,8 @@ function ItemEdit({ itemElem }) {
                 itemElem.isSkillAwakeAble() &&
                 <div className="column">
                     <h3>Skill Awake</h3>
-                    <Dropdown options={possibleSkillAwakeOptions} onSelectionChanged={setSkillAwakeOption} valueKey={itemElem.skillAwake == null ? 0 : itemElem.skillAwake.id} style={{ minWidth: "200px" }} />
-                    <div className="row">
+                    <div className="stat-edit-row">
+                        <Dropdown options={possibleSkillAwakeOptions} onSelectionChanged={setSkillAwakeOption} valueKey={itemElem.skillAwake == null ? 0 : itemElem.skillAwake.id} />
                         <RangeInput
                             disabled={itemElem.skillAwake == null}
                             onChange={setSkillAwakeValue}

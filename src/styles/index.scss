@@ -432,6 +432,24 @@ button.flyff-button {
       width: 100%;
       font-family: 'Courier New', Courier, monospace;
     }
+
+    #import-name-row {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      label {
+        color: #d8b46a;
+        font-weight: 600;
+        font-size: 0.9em;
+      }
+
+      #import-name-field {
+        width: 100%;
+        padding: 8px;
+      }
+    }
   }
 
   #import-error {
@@ -439,7 +457,7 @@ button.flyff-button {
       color: red;
   }
 
-  #import-name {
+  #import-details {
     color: #00ff00;
   }
 }

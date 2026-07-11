@@ -3,12 +3,12 @@ import { useTooltip } from '../../tooltipcontext';
 import { createTooltip } from '../../flyff/flyfftooltip';
 import { useTranslation } from "react-i18next";
 
-function SkillTreeIcon({ skill, disabled, level, clickHandle, rightClickHandle }) {
+function SkillTreeIcon({ skill, disabled, level, selected, inline = false, onSelect }) {
     const { showTooltip, hideTooltip } = useTooltip();
     const slotRef = useRef(null);
     const { i18n } = useTranslation();
     var shortCode = "en";
-    if(i18n.resolvedLanguage) {
+    if (i18n.resolvedLanguage) {
         shortCode = i18n.resolvedLanguage.split('-')[0];
     }
 
@@ -34,9 +34,15 @@ function SkillTreeIcon({ skill, disabled, level, clickHandle, rightClickHandle }
     const xPos = skill.treePosition.x * 2;
     const yPos = skill.treePosition.y * 2;
 
+    // Passives and master variations flow inline in their panels; tree skills are
+    // absolutely positioned on the tree image.
+    const positionStyle = inline ? {} : { left: xPos, top: yPos };
+
     return (
-        <div onClick={clickHandle} onContextMenu={rightClickHandle} className={`skill-tree-icon ${disabled && "disabled"} ${level > 0 && "active"}`}
-            style={{ left: xPos, top: yPos }}
+        <div
+            onClick={() => onSelect(skill)}
+            className={`skill-tree-icon ${inline ? "inline" : ""} ${disabled ? "disabled" : ""} ${level > 0 ? "active" : ""} ${selected ? "selected" : ""}`}
+            style={positionStyle}
             onMouseEnter={() => toggleTooltip(true)}
             onMouseLeave={() => toggleTooltip(false)}
             ref={slotRef}
@@ -50,7 +56,7 @@ function SkillTreeIcon({ skill, disabled, level, clickHandle, rightClickHandle }
                     transform: "scale(1.15)"
                 }}
             />
-            <b id="skill-level">{(!disabled && level > 0) && levelText}</b>
+            <b id="skill-level">{level > 0 && levelText}</b>
         </div>
     );
 }
