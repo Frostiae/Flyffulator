@@ -37,6 +37,7 @@ export default class Entity {
     activeCoupleHousingNpcs = [];
     activeGuildHousingNpcs = [];
     activeItems = [];
+    activeAchievements = []; // FWC achievements whose stat bonuses are applied.
     equipSets = []; // Current armor sets equipped. Cached because the lookup is really slow.
     level = 1;
     str = 15;
@@ -78,6 +79,7 @@ export default class Entity {
             activeCoupleHousingNpcs,
             activeGuildHousingNpcs,
             activeItems,
+            activeAchievements,
             job,
             equipment,
             ...rest
@@ -87,11 +89,12 @@ export default class Entity {
             ...rest,
             equipment: { ...equipment }, // Copy this so we don't overwrite its contents when shrinking later.
             job: job.id,
-            // Housing NPCs and active items are serialized by their IDs only
+            // Housing NPCs, active items and achievements are serialized by their IDs only
             activePersonalHousingNpcs: activePersonalHousingNpcs.map(npc => npc.id),
             activeCoupleHousingNpcs: activeCoupleHousingNpcs.map(npc => npc.id),
             activeGuildHousingNpcs: activeGuildHousingNpcs.map(npc => npc.id),
-            activeItems: activeItems.map(itemElem => itemElem.itemProp.id)
+            activeItems: activeItems.map(itemElem => itemElem.itemProp.id),
+            activeAchievements: activeAchievements.map(achievement => achievement.id)
         };
 
         // Strip even further by removing properties with default values and thus reducing the JSON size substantially.
@@ -125,6 +128,10 @@ export default class Entity {
 
         if (shrinked.activeItems.length === 0) {
             delete shrinked.activeItems;
+        }
+
+        if (shrinked.activeAchievements.length === 0) {
+            delete shrinked.activeAchievements;
         }
 
         if (shrinked.activePartyBuffs.length === 0) {
@@ -197,14 +204,23 @@ export default class Entity {
         }
 
         for (const item of itemList) {
-            if (typeof item === 'number') {
-                const itemElem = new ItemElem(Utils.getItemById(item));
-                items.push(itemElem);
-            } else {
-                let itemElem = new ItemElem(item.itemProp);
-                itemElem = Object.assign(itemElem, item);
-                items.push(itemElem);
+            // Resolve the static item property, whether the entry is a bare id
+            // (piercings / ultimate jewels) or a full serialized item.
+            const itemProp = typeof item === 'number' ? Utils.getItemById(item) : item.itemProp;
+
+            // Skip items a patch has removed from the game data rather than
+            // constructing a broken ItemElem that crashes downstream.
+            if (itemProp == null) {
+                console.warn(`Dropping item ${typeof item === 'number' ? item : item.id}: no longer exists in the game data.`);
+                continue;
             }
+
+            let itemElem = new ItemElem(itemProp);
+            if (typeof item !== 'number') {
+                itemElem = Object.assign(itemElem, item);
+            }
+
+            items.push(itemElem);
         }
 
         return items;
@@ -225,6 +241,11 @@ export default class Entity {
         for (const item of npcList) {
             if (typeof item === 'number') {
                 const npc = housingNpcs[item];
+                if (npc == null) {
+                    console.warn(`Dropping housing NPC ${item}: no longer exists in the game data.`);
+                    continue;
+                }
+
                 // Npcs dont have an icon. Assign a more or less fitting icon here (ref: src/components/search.jsx)
                 npc.icon = "asschecatsre.png"
                 npcs.push(npc);
@@ -238,6 +259,34 @@ export default class Entity {
     }
 
     /**
+     * Deserializes an achievement list (stored as ids) into achievement objects.
+     * @param {(number)[]} achievementList
+     */
+    deserializeAchievementList(achievementList) {
+        const achievements = [];
+
+        // In case the property was stripped away during serialization
+        if (!achievementList) {
+            return achievements;
+        }
+
+        for (const id of achievementList) {
+            const achievement = Utils.getAchievementById(id);
+
+            // The achievement may have been removed from the game data since this
+            // build was saved. Skip it instead of crashing the app.
+            if (achievement == null) {
+                console.warn(`Dropping achievement ${id}: no longer exists in the game data.`);
+                continue;
+            }
+
+            achievements.push(achievement);
+        }
+
+        return achievements;
+    }
+
+    /**
      * Unserialize this instance into a player represented by the given JSON string.
      * @param {string} json The JSON string representing a character.
      */
@@ -248,7 +297,7 @@ export default class Entity {
             throw new Error('Not an object.');
         }
 
-        const { job, equipment, activeItems, activePersonalHousingNpcs, activeCoupleHousingNpcs, activeGuildHousingNpcs, ...rest } = obj;
+        const { job, equipment, activeItems, activePersonalHousingNpcs, activeCoupleHousingNpcs, activeGuildHousingNpcs, activeAchievements, ...rest } = obj;
 
         // Quick hack to reset the properties of `this` to their default values
         Object.assign(this, new Entity(this.monsterProp), rest);
@@ -261,7 +310,18 @@ export default class Entity {
                 continue;
             }
 
-            const itemElem = new ItemElem(item.itemProp ?? Utils.getItemById(item.id));
+            // The item may have been removed from the game data by a patch since
+            // this build was saved. Empty the slot instead of crashing the app.
+            // The mainhand is special: it must always hold a weapon, so fall back
+            // to the default bare-hands weapon rather than null.
+            const itemProp = item.itemProp ?? Utils.getItemById(item.id);
+            if (itemProp == null) {
+                console.warn(`Dropping equipment slot "${slot}": item ${item.id} no longer exists in the game data.`);
+                this.equipment[slot] = slot === "mainhand" ? Utils.DEFAULT_WEAPON : null;
+                continue;
+            }
+
+            const itemElem = new ItemElem(itemProp);
             this.equipment[slot] = Object.assign(itemElem, item);
             itemElem.piercings = this.deserializeItemList(itemElem.piercings);
             itemElem.ultimateJewels = this.deserializeItemList(itemElem.ultimateJewels);
@@ -271,6 +331,7 @@ export default class Entity {
         this.activePersonalHousingNpcs = this.deserializeNpcList(activePersonalHousingNpcs);
         this.activeCoupleHousingNpcs = this.deserializeNpcList(activeCoupleHousingNpcs);
         this.activeGuildHousingNpcs = this.deserializeNpcList(activeGuildHousingNpcs);
+        this.activeAchievements = this.deserializeAchievementList(activeAchievements);
 
         // Job
         if (typeof job === 'object') {
@@ -306,22 +367,34 @@ export default class Entity {
     }
 
     /**
-     * @returns The total number of stat points this player has available.
+     * @returns The total number of stat points this player has earned (the pool
+     * from which allocated points are spent).
+     */
+    getTotalStatPoints() {
+        if (this.isMonster()) {
+            return 0;
+        }
+
+        return this.level * 2 - 2;
+    }
+
+    /**
+     * @returns The number of unspent stat points this player has available.
      */
     getRemainingStatPoints() {
         if (this.isMonster()) {
             return 0;
         }
 
-        const total = this.level * 2 - 2;
         const extra = (this.str + this.sta + this.dex + this.int) - 60;
-        return total - extra;
+        return this.getTotalStatPoints() - extra;
     }
 
     /**
-     * @returns The total number of skill points this player has available.
+     * @returns The total number of skill points this player has earned (the pool
+     * from which allocated points are spent).
      */
-    getRemainingSkillPoints() {
+    getTotalSkillPoints() {
         if (this.isMonster()) {
             return 0;
         }
@@ -399,6 +472,19 @@ export default class Entity {
             default:
                 break;
         }
+
+        return total;
+    }
+
+    /**
+     * @returns The number of unspent skill points this player has available.
+     */
+    getRemainingSkillPoints() {
+        if (this.isMonster()) {
+            return 0;
+        }
+
+        let total = this.getTotalSkillPoints();
 
         // Subtract allocated points
 
@@ -1221,7 +1307,7 @@ export default class Entity {
 
         if (this.activePersonalHousingNpcs) {
             for (const personalHouseNpc of this.activePersonalHousingNpcs) {
-                for (const ability of personalHouseNpc.abilities) {
+                for (const ability of (personalHouseNpc?.abilities ?? [])) {
                     if (!targetStats.includes(ability.parameter) || ability.rate != rate) {
                         continue;
                     }
@@ -1235,7 +1321,7 @@ export default class Entity {
 
         if (this.activeCoupleHousingNpcs) {
             for (const coupleHouseNpc of this.activeCoupleHousingNpcs) {
-                for (const ability of coupleHouseNpc.abilities) {
+                for (const ability of (coupleHouseNpc?.abilities ?? [])) {
                     if (!targetStats.includes(ability.parameter) || ability.rate != rate) {
                         continue;
                     }
@@ -1249,8 +1335,23 @@ export default class Entity {
 
         if (this.activeGuildHousingNpcs) {
             for (const guildHouseNpc of this.activeGuildHousingNpcs) {
-                for (const ability of guildHouseNpc.abilities) {
+                for (const ability of (guildHouseNpc?.abilities ?? [])) {
                     if (!targetStats.includes(ability.parameter) || ability.rate != rate) {
+                        continue;
+                    }
+
+                    total += ability.add;
+                }
+            }
+        }
+
+        // Achievements. Their flat abilities omit the `rate` field, so treat a
+        // missing rate as false (flat) rather than requiring it like the sources
+        // above do.
+        if (this.activeAchievements) {
+            for (const achievement of this.activeAchievements) {
+                for (const ability of achievement.abilities) {
+                    if (!targetStats.includes(ability.parameter) || (ability.rate ?? false) != rate) {
                         continue;
                     }
 

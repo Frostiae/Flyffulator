@@ -83,7 +83,9 @@
 
     #build-stats {
         display: flex;
-        align-items: center;
+        // Top-align the blocks so the first-row inputs (Level, STR, DEX) line up.
+        // Centering pushed the shorter Level block (input + points note) down.
+        align-items: flex-start;
         justify-content: center;
         gap: 5px;
         flex-grow: 1;
@@ -102,6 +104,12 @@
                 display: flex;
                 justify-content: space-between;
                 gap: 5px;
+
+                // Fixed label width so the inputs line up regardless of the
+                // label's letters (e.g. DEX vs INT rendering at different widths).
+                label {
+                    min-width: 32px;
+                }
             }
         }
     }

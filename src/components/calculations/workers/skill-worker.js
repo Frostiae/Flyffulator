@@ -32,19 +32,27 @@ self.onmessage = function (event) {
         }
 
         const skillProp = Utils.getSkillById(skill);
-
-        // TODO: This skips master variations.
-        if (skillProp.inheritSkill) {
+        if (skillProp == null) {
             continue;
+        }
+
+        // Master variations are leveled like skills. A base skill whose variation
+        // is active is skipped here (the variation is calculated from its own
+        // skillLevels entry instead), so the chosen variation replaces the base.
+        if (!skillProp.inheritSkill) {
+            if (!Context.player.canUseSkill(skillProp)) {
+                continue;
+            }
+
+            const activeVariation = (skillProp.masterVariations ?? []).find(id => Context.player.skillLevels[id] > 0);
+            if (activeVariation) {
+                continue;
+            }
         }
 
         const levelProp = skillProp.levels[level - 1];
 
-        if (!Context.player.canUseSkill(skillProp)) {
-            continue;
-        }
-
-        if (levelProp.minAttack == undefined) {
+        if (levelProp == null || levelProp.minAttack == undefined) {
             continue;
         }
 
@@ -66,7 +74,9 @@ self.onmessage = function (event) {
             out.push(res);
         }
 
-        data[skill] = out;
+        // Key by the calculated skill (base or chosen variation) so the chart
+        // shows the correct name.
+        data[skillProp.id] = out;
     }
 
     delete Context.player.skillLevels[11389];

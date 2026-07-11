@@ -10,21 +10,19 @@
 
 .skill-tree {
     position: relative;
-    display: flex;
+    display: grid;
+    // minmax(0, …) lets both columns shrink below their content's min-width so
+    // the buffs grids reflow instead of forcing the whole page wider.
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
     width: 100%;
-    justify-content: space-between;
-    gap: 30px;
-
-    #skill-tree-base {
-        position: relative;
-        display: flex;
-
-        #skill-points {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-    }
+    // The app card is shrink-to-fit around its content, so this tab's two-column
+    // max-content would stretch the card past the baseline width every other tab
+    // sits at. Cap to that baseline — app min-width (1300px) minus its 2×30px
+    // padding — so the card stays a consistent width across tabs.
+    max-width: 1240px;
+    margin: 0 auto;
+    gap: 20px;
 
     #edit-skill {
         display: flex;
@@ -33,12 +31,407 @@
     }
 }
 
+// Left column: in-game style Skills window.
+.skills-window {
+    border: 1px solid #a07d3e;
+    border-radius: 4px;
+    background: rgba(20, 17, 11, 0.55);
+    padding: 10px;
+
+    .skills-window-titlebar {
+        text-align: center;
+        color: #f0d9a0;
+        font-weight: 600;
+        letter-spacing: 1px;
+        padding: 2px 0 8px;
+        border-bottom: 1px solid #3a3222;
+        margin-bottom: 10px;
+    }
+}
+
+.class-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.class-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 4px;
+    width: 84px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.3);
+    filter: grayscale(0.7);
+    opacity: 0.65;
+    transition: opacity 0.1s, filter 0.1s;
+
+    img {
+        width: 64px;
+        height: 64px;
+        object-fit: contain;
+        user-select: none;
+    }
+
+    span {
+        font-size: 0.75em;
+        color: #cfc2a0;
+        text-align: center;
+        user-select: none;
+    }
+
+    &:hover {
+        opacity: 1;
+        filter: grayscale(0.25);
+    }
+
+    &.active {
+        opacity: 1;
+        filter: none;
+        border-color: #ffcc33;
+        background: rgba(74, 60, 30, 0.5);
+        box-shadow: 0 0 6px rgba(255, 204, 51, 0.35);
+
+        span {
+            color: #ffcc33;
+        }
+    }
+}
+
+.class-name-banner {
+    text-align: center;
+    color: #f0d9a0;
+    font-weight: 600;
+    padding: 5px 0;
+    margin-bottom: 10px;
+    border-top: 1px solid #3a3222;
+    border-bottom: 1px solid #3a3222;
+}
+
+.skills-panel {
+    border: 1px solid #6b5426;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 8px;
+    margin-bottom: 10px;
+
+    .skills-panel-header {
+        text-align: center;
+        color: #d8b46a;
+        font-weight: 600;
+        font-size: 0.9em;
+        padding-bottom: 6px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid #3a3222;
+    }
+
+    .skills-panel-body {
+        min-height: 62px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        gap: 8px;
+    }
+}
+
+.active-skills-row {
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+    margin-bottom: 10px;
+
+    .active-skills-panel {
+        flex: 1;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    // The tree image + its absolutely positioned icons, centered both axes.
+    // zoom scales the image and the positioned icons together (keeping the
+    // in-game icon-to-frame ratio) while collapsing the layout box, so
+    // margin: auto still centers it — unlike transform, which leaves a
+    // full-size phantom gap.
+    .skill-tree-canvas {
+        position: relative;
+        width: fit-content;
+        margin: auto;
+        zoom: 0.75;
+    }
+
+    .skill-detail-panel {
+        width: 190px;
+        flex-shrink: 0;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-detail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 0;
+
+        .skill-detail-icon {
+            width: 56px;
+            height: 56px;
+        }
+
+        .skill-detail-name {
+            color: #f0d9a0;
+            font-weight: 600;
+            text-align: center;
+            font-size: 0.85em;
+        }
+
+        .skill-detail-level {
+            color: #cfc2a0;
+            font-size: 0.85em;
+        }
+
+        // + and - sit next to each other as squares; max goes below them.
+        .skill-detail-buttons {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .flyff-button.square {
+            width: 36px;
+            height: 36px;
+            padding: 0;
+            font-size: 1.1em;
+            line-height: 1;
+        }
+
+        .skill-detail-max {
+            min-width: 78px;
+        }
+    }
+
+    .skill-detail-empty {
+        color: #8a8266;
+        font-size: 0.85em;
+        text-align: center;
+        padding: 24px 8px;
+    }
+}
+
+// Skill points + point cost, centered at the very bottom of the window.
+.skills-window-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid #3a3222;
+
+    .skills-footer-field {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: #cfc2a0;
+        font-size: 0.85em;
+
+        .skills-footer-label {
+            color: #d8b46a;
+            font-weight: 600;
+        }
+    }
+}
+
+.skills-bottom-panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    .skills-panel {
+        margin-bottom: 0;
+    }
+}
+
+// Right column: buffs, items and housing NPCs — each its own bordered section,
+// laid out in two columns.
+.buffs-column {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-content: start;
+    gap: 10px;
+
+    .buffs {
+        border: 1px solid #6b5426;
+        border-radius: 3px;
+        background: rgba(0, 0, 0, 0.2);
+        padding: 4px 12px 10px;
+
+        hr {
+            margin: 0.6rem 0;
+        }
+
+        // These sections are narrow (two per row), so the default big title +
+        // 2rem button margin no longer fit on one line. Keep the title on a
+        // single line and let the action button(s) drop beneath it only when
+        // they truly don't fit, rather than letting the title wrap mid-phrase.
+        .buffs-header,
+        .housing-npcs-header {
+            flex-wrap: wrap;
+            gap: 6px;
+
+            h3 {
+                margin: 0.6rem 0;
+                font-size: 0.95rem;
+                white-space: nowrap;
+            }
+
+            // Compact buttons so even the two-button header (Add + RM Buffs)
+            // fits on the title line rather than wrapping.
+            button {
+                margin-left: 0;
+                white-space: nowrap;
+                font-size: 0.78rem;
+                padding: 2px 8px;
+            }
+        }
+
+        // Keep multi-button headers (e.g. Active Buffs: Add + RM Buffs) grouped
+        // together and right-aligned on the title line.
+        .buffs-header-actions {
+            display: flex;
+            gap: 6px;
+            margin-left: auto;
+        }
+
+        // Achievements: a single-select picker of icons (plus a "None" option),
+        // dimmed when inactive and lit with a gold outline when active.
+        &.achievements-section {
+            grid-column: 1 / -1;
+        }
+
+        .achievements-picker {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            justify-items: center;
+            gap: 8px;
+
+            .achievement {
+                cursor: pointer;
+                border: 1px solid transparent;
+                border-radius: 3px;
+                padding: 2px;
+                opacity: 0.4;
+                filter: grayscale(0.6);
+                transition: opacity 0.1s, filter 0.1s;
+
+                // The crests are wide banners (~2.2:1), so fix the height and let
+                // the width follow their natural aspect rather than squaring them.
+                img {
+                    display: block;
+                    height: 60px;
+                    width: auto;
+                    user-select: none;
+                }
+
+                // The "None" option is a matching-height labelled box (no image).
+                &.none {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 60px;
+                    padding: 0 20px;
+                    color: #cfc2a0;
+                    background: rgba(0, 0, 0, 0.3);
+                }
+
+                &:hover {
+                    opacity: 1;
+                    filter: grayscale(0.2);
+                }
+
+                &.active {
+                    opacity: 1;
+                    filter: none;
+                    border-color: #ffcc33;
+                    background: rgba(74, 60, 30, 0.5);
+                    box-shadow: 0 0 6px rgba(255, 204, 51, 0.35);
+                }
+            }
+        }
+
+        // The selected/hovered achievement's name and stat bonuses, shown inline
+        // in the panel rather than in a native tooltip.
+        .achievement-details {
+            margin-top: 10px;
+            padding-top: 8px;
+            border-top: 1px solid #3a3222;
+
+            .achievement-name {
+                color: #f0d9a0;
+                font-weight: 600;
+                margin-bottom: 6px;
+            }
+
+            .achievement-abilities {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4px 16px;
+
+                .achievement-ability {
+                    color: #9fd08a;
+                    font-size: 0.85em;
+                }
+            }
+        }
+
+        // Input labels (e.g. "Party Members") shouldn't break mid-phrase in the
+        // narrow sections.
+        label {
+            white-space: nowrap;
+        }
+
+        // The stepper input (Party Members) has −/＋ buttons; in the narrow
+        // section space-between starves them to slivers while the input balloons.
+        // Let the label take the slack so the −, input and ＋ cluster together at
+        // sane sizes on the right.
+        .row:has(button.small) {
+            label {
+                flex: 1;
+            }
+
+            input {
+                flex: 0 0 auto;
+                width: 48px;
+                text-align: center;
+            }
+
+            button.small {
+                flex: 0 0 auto;
+                min-width: 22px;
+                padding: 2px 0;
+            }
+        }
+    }
+}
+
 .skill-tree-icon {
     position: absolute;
-    opacity: 0.5;
+    opacity: 0.45;
+    cursor: pointer;
 
+    // Skills whose prerequisites aren't met are dimmed but still selectable;
+    // selecting and leveling one auto-satisfies its prerequisites.
     &.disabled {
-        opacity: 0;
+        opacity: 0.3;
     }
 
     &.active {
@@ -46,8 +439,23 @@
     }
 
     &:hover {
-        &:not(.disabled) {
-            opacity: 1;
+        opacity: 1;
+    }
+
+    &.selected img {
+        outline: 2px solid v.$border-color;
+        outline-offset: -2px;
+        border-radius: 4px;
+    }
+
+    // Passives and master variations flow inline in their panels rather than
+    // being positioned on the tree image.
+    &.inline {
+        position: relative;
+        opacity: 0.85;
+
+        &.disabled {
+            opacity: 0.4;
         }
     }
 
@@ -67,11 +475,39 @@
     }
 }
 
+// Master variations: centered horizontally, wrapping. Zoomed to match the tree
+// icons' scaled size so all skill icons read at the same size.
+.skills-panel-body.master-variations-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    zoom: 0.75;
+}
+
+// Passives: hard cap of 5 per row via a 5-column grid, centered. Empty trailing
+// columns collapse to zero width so fewer-than-5 rows still center correctly.
+// Zoomed to match the tree icons' scaled size.
+.skills-panel-body.skill-tree-passives {
+    display: grid;
+    grid-template-columns: repeat(5, max-content);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    zoom: 0.75;
+}
+
 .skill-tree-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.apply-passives-button {
+    margin-top: 10px;
+    width: 100%;
 }
 
 .buffs {
@@ -89,9 +525,11 @@
         }
     }
 
+    // auto-fill packs as many 34px slots as the section width allows and wraps
+    // the rest, so narrow columns reflow instead of overflowing / widening.
     .buffs-container {
         display: grid;
-        grid-template-columns: auto auto auto auto auto;
+        grid-template-columns: repeat(auto-fill, 34px);
         row-gap: 10px;
         column-gap: 10px;
     }

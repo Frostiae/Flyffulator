@@ -37,9 +37,21 @@
 		"elementAttackStrong": 5.6,
 		"elementDefense": 2.56,
 		"setAbilities": [
-			{ "parameter": "hitrate", "add": 5, "rate": true },
-			{ "parameter": "block", "add": 3, "rate": true },
-			{ "parameter": "allstats", "add": 1, "rate": false }
+			{
+				"parameter": "hitrate",
+				"add": 5,
+				"rate": true
+			},
+			{
+				"parameter": "block",
+				"add": 3,
+				"rate": true
+			},
+			{
+				"parameter": "allstats",
+				"add": 1,
+				"rate": false
+			}
 		]
 	},
 	{
@@ -54,9 +66,21 @@
 		"elementAttackStrong": 6.12,
 		"elementDefense": 3.05,
 		"setAbilities": [
-			{ "parameter": "hitrate", "add": 10, "rate": true },
-			{ "parameter": "block", "add": 3, "rate": true },
-			{ "parameter": "allstats", "add": 2, "rate": false }
+			{
+				"parameter": "hitrate",
+				"add": 10,
+				"rate": true
+			},
+			{
+				"parameter": "block",
+				"add": 3,
+				"rate": true
+			},
+			{
+				"parameter": "allstats",
+				"add": 2,
+				"rate": false
+			}
 		]
 	},
 	{
@@ -71,10 +95,26 @@
 		"elementAttackStrong": 6.8,
 		"elementDefense": 3.68,
 		"setAbilities": [
-			{ "parameter": "hitrate", "add": 15, "rate": true },
-			{ "parameter": "block", "add": 3, "rate": true },
-			{ "parameter": "maxhp", "add": 5, "rate": true },
-			{ "parameter": "allstats", "add": 3, "rate": false }
+			{
+				"parameter": "hitrate",
+				"add": 15,
+				"rate": true
+			},
+			{
+				"parameter": "block",
+				"add": 3,
+				"rate": true
+			},
+			{
+				"parameter": "maxhp",
+				"add": 5,
+				"rate": true
+			},
+			{
+				"parameter": "allstats",
+				"add": 3,
+				"rate": false
+			}
 		]
 	},
 	{
@@ -89,11 +129,31 @@
 		"elementAttackStrong": 7.63,
 		"elementDefense": 4.46,
 		"setAbilities": [
-			{ "parameter": "hitrate", "add": 20, "rate": true },
-			{ "parameter": "block", "add": 6, "rate": true },
-			{ "parameter": "maxhp", "add": 5, "rate": true },
-			{ "parameter": "allstats", "add": 4, "rate": false },
-			{ "parameter": "attack", "add": 1, "rate": true }
+			{
+				"parameter": "hitrate",
+				"add": 20,
+				"rate": true
+			},
+			{
+				"parameter": "block",
+				"add": 6,
+				"rate": true
+			},
+			{
+				"parameter": "maxhp",
+				"add": 5,
+				"rate": true
+			},
+			{
+				"parameter": "allstats",
+				"add": 4,
+				"rate": false
+			},
+			{
+				"parameter": "attack",
+				"add": 1,
+				"rate": true
+			}
 		]
 	},
 	{
@@ -108,11 +168,31 @@
 		"elementAttackStrong": 8.6,
 		"elementDefense": 5.37,
 		"setAbilities": [
-			{ "parameter": "hitrate", "add": 25, "rate": true },
-			{ "parameter": "block", "add": 6, "rate": true },
-			{ "parameter": "maxhp", "add": 5, "rate": true },
-			{ "parameter": "allstats", "add": 5, "rate": false },
-			{ "parameter": "attack", "add": 2, "rate": true }
+			{
+				"parameter": "hitrate",
+				"add": 25,
+				"rate": true
+			},
+			{
+				"parameter": "block",
+				"add": 6,
+				"rate": true
+			},
+			{
+				"parameter": "maxhp",
+				"add": 5,
+				"rate": true
+			},
+			{
+				"parameter": "allstats",
+				"add": 5,
+				"rate": false
+			},
+			{
+				"parameter": "attack",
+				"add": 2,
+				"rate": true
+			}
 		]
 	},
 	{
@@ -127,11 +207,31 @@
 		"elementAttackStrong": 9.73,
 		"elementDefense": 6.42,
 		"setAbilities": [
-			{ "parameter": "hitrate", "add": 30, "rate": true },
-			{ "parameter": "block", "add": 10, "rate": true },
-			{ "parameter": "maxhp", "add": 10, "rate": true },
-			{ "parameter": "allstats", "add": 6, "rate": false },
-			{ "parameter": "attack", "add": 3, "rate": true }
+			{
+				"parameter": "hitrate",
+				"add": 30,
+				"rate": true
+			},
+			{
+				"parameter": "block",
+				"add": 10,
+				"rate": true
+			},
+			{
+				"parameter": "maxhp",
+				"add": 10,
+				"rate": true
+			},
+			{
+				"parameter": "allstats",
+				"add": 6,
+				"rate": false
+			},
+			{
+				"parameter": "attack",
+				"add": 3,
+				"rate": true
+			}
 		]
 	},
 	{
@@ -146,11 +246,31 @@
 		"elementAttackStrong": 11.01,
 		"elementDefense": 7.61,
 		"setAbilities": [
-			{ "parameter": "hitrate", "add": 35, "rate": true },
-			{ "parameter": "block", "add": 10, "rate": true },
-			{ "parameter": "maxhp", "add": 15, "rate": true },
-			{ "parameter": "allstats", "add": 7, "rate": false },
-			{ "parameter": "attack", "add": 4, "rate": true }
+			{
+				"parameter": "hitrate",
+				"add": 35,
+				"rate": true
+			},
+			{
+				"parameter": "block",
+				"add": 10,
+				"rate": true
+			},
+			{
+				"parameter": "maxhp",
+				"add": 15,
+				"rate": true
+			},
+			{
+				"parameter": "allstats",
+				"add": 7,
+				"rate": false
+			},
+			{
+				"parameter": "attack",
+				"add": 4,
+				"rate": true
+			}
 		]
 	},
 	{
@@ -165,11 +285,31 @@
 		"elementAttackStrong": 12.44,
 		"elementDefense": 8.95,
 		"setAbilities": [
-			{ "parameter": "hitrate", "add": 45, "rate": true },
-			{ "parameter": "block", "add": 15, "rate": true },
-			{ "parameter": "maxhp", "add": 20, "rate": true },
-			{ "parameter": "allstats", "add": 8, "rate": false },
-			{ "parameter": "attack", "add": 5, "rate": true }
+			{
+				"parameter": "hitrate",
+				"add": 45,
+				"rate": true
+			},
+			{
+				"parameter": "block",
+				"add": 15,
+				"rate": true
+			},
+			{
+				"parameter": "maxhp",
+				"add": 20,
+				"rate": true
+			},
+			{
+				"parameter": "allstats",
+				"add": 8,
+				"rate": false
+			},
+			{
+				"parameter": "attack",
+				"add": 5,
+				"rate": true
+			}
 		]
 	},
 	{

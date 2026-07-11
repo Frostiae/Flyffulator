@@ -41,11 +41,89 @@
     align-items: center;
     gap: 15px;
     font-size: 20px;
+
+    // The upgrade-level stepper otherwise renders a full-width text input, which
+    // pushes the whole card wider for long item names. Keep it just wide enough
+    // for the "+NN" value.
+    .row input[type="text"] {
+      width: 44px;
+      text-align: center;
+      font-size: 14px;
+    }
   }
 
   #edit-piercing {
     display: flex;
     gap: 5px;
+  }
+
+  // Stat editing rows: the dropdown / stat label sits on the left at a fixed
+  // width so every slider — and its numeric input — lines up down the panel,
+  // with the slider filling the space between them. Capped so the slider stays
+  // a sensible length instead of stretching the whole panel.
+  .stat-edit-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 460px;
+
+    > .flyff-dropdown,
+    > .stat-edit-label {
+      flex: 0 0 170px;
+      width: 170px;
+      min-width: 0;
+    }
+
+    > .stat-edit-label {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    // A plain stepper on the row (the Element upgrade level) otherwise renders a
+    // full-width text input; keep it compact like the header's.
+    > .row input[type="text"] {
+      width: 44px;
+      text-align: center;
+    }
+
+    // Tighten the dropdown's internal spacing (its default 40px text/arrow gap
+    // forces longer names onto a second line) and truncate rather than wrap.
+    > .flyff-dropdown .flyff-dropdown-arrow {
+      gap: 8px;
+
+      .flyff-dropdown-label {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        min-width: 0;
+      }
+    }
+
+    > .flyff-range {
+      flex: 1;
+      min-width: 0;
+
+      input[type="range"] {
+        flex: 1;
+        min-width: 0;
+      }
+
+      // The value input keeps a fixed size so inputs align on the right; the
+      // empty placeholder label the NumberInput renders here is hidden.
+      .row {
+        flex: 0 0 auto;
+      }
+
+      label:empty {
+        display: none;
+      }
+
+      input[type="text"] {
+        width: 56px;
+        text-align: center;
+      }
+    }
   }
 }
 

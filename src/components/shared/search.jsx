@@ -150,7 +150,7 @@ function Search() {
             }
             else if (searchProperties.type == "guildHousingNpc") {
                 for (const [, housingNpc] of Object.entries(housingNpcs)) {
-                    if (!housingNpc.name.en.includes("Guild House NPC")) {
+                    if (!housingNpc.name.en.includes("Guild Ship NPC")) {
                         continue;
                     }
 

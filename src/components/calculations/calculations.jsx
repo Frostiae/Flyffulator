@@ -177,10 +177,17 @@ function Calculations() {
             }
 
             const skillProp = Utils.getSkillById(skill);
-
-            // TODO: Skip master variations for now
-            if (skillProp.inheritSkill) {
+            if (skillProp == null) {
                 continue;
+            }
+
+            // Master variations are leveled like skills; skip a base skill whose
+            // variation is active (the variation is computed from its own entry).
+            if (!skillProp.inheritSkill) {
+                const activeVariation = (skillProp.masterVariations ?? []).find(id => Context.player.skillLevels[id] > 0);
+                if (activeVariation) {
+                    continue;
+                }
             }
 
             const healing = getHealing(skillProp);

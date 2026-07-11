@@ -859,7 +859,9 @@ function getMagicSkillPower() {
     }
 
     let attack = getBaseSkillPower();
-    attack += attack * Context.attacker.getStat("magicattack", true) / 100.0;
+    // magicattack is stored 10x (see getScaledStatValue) so it can express 0.1%
+    // steps; scale it back down before applying it as a percentage.
+    attack += attack * Utils.getScaledStatValue("magicattack", Context.attacker.getStat("magicattack", true)) / 100.0;
 
     // Elements
     let bonus = 0;

@@ -87,10 +87,10 @@ function App() {
     }
   }
 
-  function importCharacter(json) {
+  function importCharacter(json, nameOverride) {
     const deserialized = Context.player.unserialize(json);
     setIsImporting(false);
-    const buildName = deserialized.buildName ?? 'Imported';
+    const buildName = (nameOverride && nameOverride.length > 0) ? nameOverride : (deserialized.buildName ?? 'Imported');
     const key = `${buildName}_${Utils.getGuid()}`;
     localStorage.setItem(key, Context.player.serialize());
     loadBuild(key);
@@ -194,7 +194,7 @@ function App() {
             <div id="build-stats">
               <div className="stat-block">
                 <NumberInput min={Context.player.job.minLevel} max={Context.player.job.maxLevel} label={"Level"} onChange={(v) => setPlayerStat("level", v)} value={Context.player.level} />
-                <i>{Context.player.getRemainingStatPoints()} {t("stat_points_available")}</i>
+                <i>{Context.player.getRemainingStatPoints()}/{Context.player.getTotalStatPoints()} {t("stat_points_available")}</i>
               </div>
               <div className="stat-block">
                 <div className="stat-row">

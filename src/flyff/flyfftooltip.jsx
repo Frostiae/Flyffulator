@@ -209,7 +209,7 @@ function setupItem(itemElem, i18n) {
 
         if (itemElem.statRanges.length == 0) {
             for (const ability of itemProp.abilities) {
-                out.push(<span style={abilityStyle}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}+{ability.add}</span>);
+                out.push(<span style={abilityStyle}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}+{Utils.getScaledStatValue(ability.parameter, ability.add)}</span>);
                 if (ability.rate) {
                     out.push(<span style={abilityStyle}>%</span>);
                 }
@@ -217,12 +217,12 @@ function setupItem(itemElem, i18n) {
         }
         else {
             for (const ability of itemElem.statRanges) {
-                out.push(<span style={abilityStyle}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}+{ability.value}</span>);
+                out.push(<span style={abilityStyle}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}+{Utils.getScaledStatValue(ability.parameter, ability.value)}</span>);
                 if (ability.rate) {
                     out.push(<span style={abilityStyle}>%</span>);
                 }
 
-                out.push(<span style={abilityStyle}> ({ability.add}~{ability.addMax})</span>);
+                out.push(<span style={abilityStyle}> ({Utils.getScaledStatValue(ability.parameter, ability.add)}~{Utils.getScaledStatValue(ability.parameter, ability.addMax)})</span>);
 
                 if (ability.rate) {
                     out.push(<span style={abilityStyle}>%</span>);
@@ -237,7 +237,7 @@ function setupItem(itemElem, i18n) {
         for (let i = 0; i < itemElem.randomStats.length; i++) {
             const stat = itemElem.randomStats[i];
             const color = i < 2 ? "#ffff00" : "#ff9900";
-            out.push(<span style={{ color }}><br />{Utils.getStatNameByIdOrDefault(stat.parameter, i18n)}+{stat.value}{stat.rate ? "%" : ""}</span>);
+            out.push(<span style={{ color }}><br />{Utils.getStatNameByIdOrDefault(stat.parameter, i18n)}+{Utils.getScaledStatValue(stat.parameter, stat.value)}{stat.rate ? "%" : ""}</span>);
         }
     }
 
@@ -252,7 +252,7 @@ function setupItem(itemElem, i18n) {
     if (itemProp.category == "jewelry" && itemProp.upgradeLevels != undefined) {
         const abilityStyle = { color: "#ffeaa1" };
         for (const ability of itemProp.upgradeLevels[itemElem.upgradeLevel].abilities) {
-            out.push(<span style={abilityStyle}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}+{ability.add}</span>);
+            out.push(<span style={abilityStyle}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}+{Utils.getScaledStatValue(ability.parameter, ability.add)}</span>);
             if (ability.rate) {
                 out.push(<span style={abilityStyle}>%</span>);
             }
@@ -268,7 +268,7 @@ function setupItem(itemElem, i18n) {
         if (upgradeLevel > 0) {
             const bonus = Utils.getUpgradeBonus(upgradeLevel);
             for (const ability of bonus.setAbilities) {
-                out.push(<span><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}+{ability.add}</span>);
+                out.push(<span><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}+{Utils.getScaledStatValue(ability.parameter, ability.add)}</span>);
                 if (ability.rate) {
                     out.push(<span>%</span>);
                 }
@@ -675,6 +675,18 @@ function setupSkill(skill, i18n) {
     if (levelProp.abilities != undefined) {
         for (const ability of levelProp.abilities) {
             const abilityStyle = { color: "#6161ff" };
+
+            // "attribute" abilities apply a status effect (bleeding, stun, slow,
+            // ...) rather than a numeric stat, so show the effect name instead of
+            // a value (they carry no add/set, which otherwise renders as NaN).
+            if (ability.parameter == "attribute") {
+                const effect = ability.attribute
+                    ? ability.attribute.charAt(0).toUpperCase() + ability.attribute.slice(1)
+                    : ability.parameter;
+                out.push(<span style={abilityStyle}><br />{effect}</span>);
+                continue;
+            }
+
             let add = ability.add;
             let extra = 0;
 
@@ -708,7 +720,11 @@ function setupSkill(skill, i18n) {
                 }
             }
 
-            out.push(<span style={abilityStyle}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}{ability.set != undefined ? "=" : "+"}{ability.set != undefined ? ability.set : add + extra}{ability.rate && "%"}</span>);
+            const value = ability.set != undefined ? ability.set : add + extra;
+            // Negative values already carry their own minus sign, so only prefix
+            // "+" for non-negative additive values ("=" for absolute/set values).
+            const prefix = ability.set != undefined ? "=" : (value < 0 ? "" : "+");
+            out.push(<span style={abilityStyle}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}{prefix}{value}{ability.rate && "%"}</span>);
             if (extra > 0) {
                 out.push(<span style={{ color: "#ffaa00" }}> ({add}+{extra})</span>)
             }
@@ -727,7 +743,7 @@ function setupSkill(skill, i18n) {
                         }
 
                         out.push(<span style={{ color: "#ffaa00" }}><br />
-                            {scale.parameter} Scaling: +{scale.scale * 25}{ability.rate && "%"} per 25 {stat} (max {scale.maximum}{ability.rate && "%"})
+                            {Utils.getStatNameByIdOrDefault(scale.parameter, i18n)} Scaling: +{scale.scale * 25}{ability.rate && "%"} per 25 {stat} (max {scale.maximum}{ability.rate && "%"})
                         </span>);
                     }
                 }
