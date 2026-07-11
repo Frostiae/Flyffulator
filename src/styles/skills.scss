@@ -67,16 +67,15 @@
     cursor: pointer;
     border: 1px solid transparent;
     border-radius: 3px;
-    background: rgba(0, 0, 0, 0.3);
-    filter: grayscale(0.7);
-    opacity: 0.65;
-    transition: opacity 0.1s, filter 0.1s;
+    filter: grayscale(1);
+    transition: filter 0.25s;
 
     img {
         width: 64px;
         height: 64px;
-        object-fit: contain;
+        object-fit: cover;
         user-select: none;
+        object-position: -128px 0px;
     }
 
     span {
@@ -87,16 +86,11 @@
     }
 
     &:hover {
-        opacity: 1;
         filter: grayscale(0.25);
     }
 
     &.active {
-        opacity: 1;
-        filter: none;
-        border-color: #ffcc33;
-        background: rgba(74, 60, 30, 0.5);
-        box-shadow: 0 0 6px rgba(255, 204, 51, 0.35);
+        filter: saturate(1.35);
 
         span {
             color: #ffcc33;
@@ -154,19 +148,15 @@
     }
 
     // The tree image + its absolutely positioned icons, centered both axes.
-    // zoom scales the image and the positioned icons together (keeping the
-    // in-game icon-to-frame ratio) while collapsing the layout box, so
-    // margin: auto still centers it — unlike transform, which leaves a
-    // full-size phantom gap.
     .skill-tree-canvas {
         position: relative;
         width: fit-content;
         margin: auto;
-        zoom: 0.75;
+        transform: scale(0.75);
     }
 
     .skill-detail-panel {
-        width: 190px;
+        width: 110px;
         flex-shrink: 0;
         margin-bottom: 0;
         display: flex;

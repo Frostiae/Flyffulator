@@ -356,7 +356,7 @@ function SkillTree() {
                                 className={`class-tab ${c.id === activeClassId ? "active" : ""}`}
                                 onClick={() => { setSelectedClassId(c.id); setSelectedSkillId(null); }}
                             >
-                                <img src={`https://api.flyff.com/image/class/target/${c.icon}`} alt={c.name.en} draggable={false} />
+                                <img src={`/tree/${c.tree.slice(0, -4)}Slot.png`} alt={c.name.en} draggable={false} />
                                 <span>{c.name.en}</span>
                             </div>
                         ))

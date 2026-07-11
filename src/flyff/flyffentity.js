@@ -339,6 +339,10 @@ export default class Entity {
             this.job = job;
         } else if (typeof job === 'number') {
             this.job = Utils.getClassById(job);
+
+            if (!this.job) {
+                this.job = Utils.getClassById(9686); // Fallback to vagrant.
+            }
         }
 
         // Have to update cached equipment sets otherwise none of them will be checked

@@ -103,23 +103,6 @@ export function getMonsterById(id) {
  * @param {object} i18n Localization
  * @returns A string matching the appropriate stat name
  */
-// Some ability values are stored as integers scaled up so the game can express
-// fractional percentage steps. magicattack is stored 10x (a stored value of 50
-// means +5%). Divide by the scale to get the real value for both display and
-// damage calculations.
-const STAT_VALUE_SCALES = {
-    magicattack: 10,
-};
-
-/**
- * @param {string} parameter The ability parameter id (e.g. "magicattack").
- * @param {number} value The raw stored value.
- * @returns The value scaled to its real (displayed) magnitude.
- */
-export function getScaledStatValue(parameter, value) {
-    return value / (STAT_VALUE_SCALES[parameter] ?? 1);
-}
-
 export function getStatNameByIdOrDefault(id, i18n) {
     var stat = statNames[id];
     if (stat == null) {
