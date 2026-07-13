@@ -4,6 +4,8 @@
     "import": "导入",
     "cancel": "取消",
     "build_share_save": "保存",
+    "build_share_save_as": "另存为",
+    "build_overwrite_confirm": "已存在名为 \"{{name}}\" 的构建。要覆盖它吗？",
     "build_share_share": "分享",
     "build_share_import": "导入",
     "percent_loaded": "% 已加载",

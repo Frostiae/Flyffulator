@@ -108,13 +108,36 @@ function App() {
   }
 
   function save() {
-    // Crude way of saving for now
-    const buildName = prompt(t("enter_build_name"));
-    if (buildName == null || buildName.length == 0) {
+    // Quick save: overwrite the currently loaded build in place, no prompt.
+    if (loadedBuild != null && localStorage.getItem(loadedBuild) != null) {
+      localStorage.setItem(loadedBuild, Context.player.serialize());
+      setState(!state);
       return;
     }
 
-    const key = `${buildName}_${Utils.getGuid()}`;
+    // Nothing loaded to overwrite, fall back to naming a new build.
+    saveAs();
+  }
+
+  function saveAs() {
+    const buildName = prompt(t("enter_build_name"));
+    if (buildName == null || buildName.trim().length == 0) {
+      return;
+    }
+    const trimmedName = buildName.trim();
+
+    const existingKey = Object.entries(buildOptions).find(([, name]) => name === trimmedName)?.[0];
+    if (existingKey != null) {
+      if (!confirm(t("build_overwrite_confirm", { name: trimmedName }))) {
+        return;
+      }
+
+      localStorage.setItem(existingKey, Context.player.serialize());
+      loadBuild(existingKey);
+      return;
+    }
+
+    const key = `${trimmedName}_${Utils.getGuid()}`;
     localStorage.setItem(key, Context.player.serialize());
     loadBuild(key);
   }
@@ -215,6 +238,7 @@ function App() {
             </div>
             <div id="build-share">
               <button className='flyff-button' onClick={save}>{t("build_share_save")}</button>
+              <button className='flyff-button' onClick={saveAs}>{t("build_share_save_as")}</button>
               <div>
                 <button className='flyff-button' onClick={share}>{t("build_share_share")}</button>
                 <button className='flyff-button' onClick={() => setIsImporting(true)}>{t("build_share_import")}</button>

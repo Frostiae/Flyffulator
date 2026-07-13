@@ -4,6 +4,8 @@
     "import": "Importar",
     "cancel": "Cancelar",
     "build_share_save": "Salvar",
+    "build_share_save_as": "Salvar como",
+    "build_overwrite_confirm": "Já existe uma build chamada \"{{name}}\". Sobrescrever?",
     "build_share_share": "Compartilhar",
     "build_share_import": "Importar",
     "percent_loaded": "% carregado",

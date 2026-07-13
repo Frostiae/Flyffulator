@@ -4,6 +4,8 @@
     "import": "Importieren",
     "cancel": "Zurück",
     "build_share_save": "Speichern",
+    "build_share_save_as": "Speichern als",
+    "build_overwrite_confirm": "Ein Build namens \"{{name}}\" existiert bereits. Überschreiben?",
     "build_share_share": "Teilen",
     "build_share_import": "Importieren",
     "percent_loaded": "% loaded",
