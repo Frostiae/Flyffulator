@@ -260,17 +260,19 @@ function ItemEdit({ itemElem }) {
         itemElem.upgradeLevel = level;
 
         if (itemElem.itemProp.rarity === "ultimate") {
+            const possibleRandomStats = itemElem.itemProp.possibleRandomStats;
+
             if (level < 10) {
                 itemElem.randomStats.splice(3);
-            } else if (!itemElem.randomStats[3]) {
-                const stat = itemElem.itemProp.possibleRandomStats[Math.min(3, itemElem.itemProp.possibleRandomStats.length)];
+            } else if (possibleRandomStats != undefined && !itemElem.randomStats[3]) {
+                const stat = possibleRandomStats[Math.min(3, possibleRandomStats.length)];
                 itemElem.randomStats[3] = { ...stat, id: 3, value: halfStat(stat.parameter, Math.floor(stat.add + (stat.addMax - stat.add) / 2)) };
             }
 
             if (level < 6) {
                 itemElem.randomStats.splice(2);
-            } else if (!itemElem.randomStats[2]) {
-                const stat = itemElem.itemProp.possibleRandomStats[Math.min(2, itemElem.itemProp.possibleRandomStats.length)];
+            } else if (possibleRandomStats != undefined && !itemElem.randomStats[2]) {
+                const stat = possibleRandomStats[Math.min(2, possibleRandomStats.length)];
                 itemElem.randomStats[2] = { ...stat, id: 2, value: halfStat(stat.parameter, Math.floor(stat.add + (stat.addMax - stat.add) / 2)) };
             }
 
