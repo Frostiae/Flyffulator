@@ -222,7 +222,7 @@ img.info-icon {
     align-items: center;
     justify-content: space-between;
     color: v.$border-color;
-    gap: 40px;
+    gap: 70px;
 
 
     img {
@@ -244,6 +244,7 @@ img.info-icon {
     max-height: 250px;
     overflow-y: scroll;
     z-index: 1000;
+    padding: 10px 20px;
 
     option {
     display: contents;
