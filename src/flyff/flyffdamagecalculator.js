@@ -45,12 +45,11 @@ export function getHealing(skillProp) {
 
 /**
  * Get the damage done by a simulated attack in the current context.
- * @param {boolean} leftHand If the attacker is using their left hand for this attack.
+ * @param {number} handFlag The current handed flags.
  * @returns The amount of damage done for this attack.
  * @see {@link Context}
  */
-export function getDamage(leftHand) {
-    leftHanded = leftHand;
+export function getDamage(handFlag) {
     elementDefenseFactor = 0;
     lifestealPercent = 0;
     Context.afterDamageProps = {};
@@ -65,12 +64,21 @@ export function getDamage(leftHand) {
     }
 
     let totalDamage = 0;
-    const attack = computeAttack();
-    const damage = applyDefense(attack);
+    const originalAttackFlags = Context.attackFlags;
 
-    if (damage > 0) {
-        totalDamage += triggerSkills();
-        totalDamage += damage;
+    for (let flag = 0x1; flag <= 0x2; ++flag) {
+        if ((handFlag & flag) != 0) {
+            leftHanded = (flag & 0x1) == 0;
+            Context.attackFlags = originalAttackFlags;
+
+            const attack = computeAttack();
+            const damage = applyDefense(attack);
+        
+            if (damage > 0) {
+                totalDamage += triggerSkills();
+                totalDamage += damage;
+            }
+        }
     }
 
     // if (not damage over time)
@@ -126,7 +134,7 @@ function triggerSkills() {
             Context.skill = Utils.getSkillById(11389);
             Context.attackFlags = Context.skill.magic ? Utils.ATTACK_FLAGS.MAGICSKILL : Utils.ATTACK_FLAGS.MELEESKILL; // its always magic
 
-            extraDamage += getDamage(false);
+            extraDamage += getDamage(0x1);
 
             //delete Context.attacker.skillLevels[11389];
             Context.skill = oldSkill;
@@ -383,13 +391,15 @@ function applyDefense(attack) {
             factor *= 1 + Context.attacker.monsterProp.berserkAttackPower / 100;
         }
     }
+    else {
+        if (Context.isPVP()) {
+            factor *= 0.6;
+        }
+        if (leftHanded) {
+            factor *= 0.75;
+        }
+    }
 
-    if (Context.isPVP()) {
-        factor *= 0.6;
-    }
-    if (leftHanded) {
-        factor *= 0.75;
-    }
 
     if (Context.defender.removeAttribute("double")) {
         factor *= 2.0;

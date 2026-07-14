@@ -24,9 +24,10 @@ self.onmessage = function (event) {
     Context.settings = context.settings
     Context.expSettings = context.expSettings
 
-    let leftHand = false;
-    Context.defender.activeBuffs = [];
     let out = [];
+
+    // Dual wield stuff
+    let currentAnimation = 0;
 
     for (let i = 0; i < cycles; i++) {
         Context.skill = null;
@@ -37,12 +38,28 @@ self.onmessage = function (event) {
             Context.attackFlags = Utils.ATTACK_FLAGS.GENERIC;
         }
 
-        if (Context.player.jobId === 2246 && Context.player.equipment.offhand != null) {
-            leftHand = !leftHand;
+        let handedParam = 0x1;
+
+        if ((Context.player.job.id == 2246 || Context.player.job.id == 35369) && Context.player.equipment.offhand != null) {
+            // Left hand and main hand damage behaviour. Yes, bitwise
+            // OR is actually what happens in the game, even if it
+            // might not make sense...
+            if (currentAnimation == 0) {
+                handedParam |= 0x1;
+            }
+            else if (currentAnimation == 1) {
+                handedParam |= 0x2;
+            }
+            else if (currentAnimation == 2) {
+                handedParam |= 0x1;
+            }
+            else {
+                handedParam |= 0x3;
+            }
         }
 
         const res = {
-            damage: getDamage(leftHand),
+            damage: getDamage(handedParam),
             critical: (Context.attackFlags & Utils.ATTACK_FLAGS.CRITICAL) !== 0,
             block: (Context.attackFlags & Utils.ATTACK_FLAGS.BLOCKING) !== 0,
             miss: (Context.attackFlags & Utils.ATTACK_FLAGS.MISS) !== 0,
@@ -52,6 +69,8 @@ self.onmessage = function (event) {
         };
 
         out.push(res);
+
+        currentAnimation = (currentAnimation + 1) % 4;
     }
 
     self.postMessage(out);

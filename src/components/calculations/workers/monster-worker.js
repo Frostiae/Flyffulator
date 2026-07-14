@@ -35,7 +35,7 @@ self.onmessage = function (event) {
         Context.attackFlags = Utils.ATTACK_FLAGS.GENERIC;
 
         const res = {
-            damage: getDamage(false),
+            damage: getDamage(0x1),
             critical: (Context.attackFlags & Utils.ATTACK_FLAGS.CRITICAL) != 0,
             block: (Context.attackFlags & Utils.ATTACK_FLAGS.BLOCKING) != 0,
             miss: (Context.attackFlags & Utils.ATTACK_FLAGS.MISS) != 0,

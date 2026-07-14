@@ -473,7 +473,8 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    zoom: 0.75;
+    //zoom: 0.75;
+    transform: scale(0.75);
 }
 
 // Passives: hard cap of 5 per row via a 5-column grid, centered. Empty trailing
@@ -485,7 +486,8 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    zoom: 0.75;
+    //zoom: 0.75;
+    transform: scale(0.75);
 }
 
 .skill-tree-header {

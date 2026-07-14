@@ -1278,6 +1278,10 @@ export default class Entity {
                             else if (scale.stat == "dex") {
                                 add += Math.floor(Math.min(this.bufferDex * scale.scale, scale.maximum));
                             }
+                            else {
+                                // arbitrary stat
+                                //add += Math.floor(Math.min(this.getStat(scale.stat, true), scale.maximum));
+                            }
                         }
                         else if (scale.part != undefined) {
                             // TODO: part scaling
@@ -1584,7 +1588,7 @@ export default class Entity {
             else if (scale.part != undefined) {
                 // TODO: Part scaling
             }
-            
+
             if (scale.maximum != undefined && statValue > scale.max) {
                 statValue = scale.maximum;
             }
