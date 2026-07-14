@@ -31,7 +31,7 @@ createRoot(document.getElementById('root')).render(
             <br />
             <b>Flyffulator</b> is an extensive Flyff Universe character simulator and damage calculator.
             <br />
-            <b>Flyffulator</b> 2025.
+            <b>Flyffulator</b> 2026.
             <br />
             <br />
             <i>Feedback? <a href="https://github.com/Frostiae/Flyffulator/issues">GitHub</a> or <a href="https://discord.gg/DpyPpyU4TR">Discord</a></i>
