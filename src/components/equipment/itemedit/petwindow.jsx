@@ -3,11 +3,11 @@ import { useTranslation } from "react-i18next";
 import { useTooltip } from '../../../tooltipcontext';
 import { Suspense, useState, useRef } from "react";
 import { createTooltip } from '../../../flyff/flyfftooltip';
+import { API } from '../../../data';
 
 import PetTier from "./pettier";
 import Loader from "../../shared/fallbackloader";
 import PlayerModel from "../../base/playermodel";
-import items from "../../../assets/Items.json";
 import Context from "../../../flyff/flyffcontext";
 import * as Utils from "../../../flyff/flyffutils";
 
@@ -59,7 +59,7 @@ function PetWindow({ raisedPetDefinition, petLevels, editable = false, onEditLev
 
     return (
         <div className="pet-edit">
-            <div className="window-title">{items[raisedPetDefinition.petItemId].name[shortLanguageCode] ?? items[raisedPetDefinition.petItemId].name.en}</div>
+            <div className="window-title">{API.Items[raisedPetDefinition.petItemId].name[shortLanguageCode] ?? API.Items[raisedPetDefinition.petItemId].name.en}</div>
             <div className="window-content">
                 <div id="base-container">
                     <div id="image-container" ref={slotRef}

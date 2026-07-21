@@ -1,7 +1,7 @@
 import Context from "./flyffcontext";
 import * as Utils from "./flyffutils";
 import ItemElem from "./flyffitemelem";
-import housingNpcs from "../assets/HousingNPCs.json";
+import { API } from '../data';
 
 /**
  * A Flyff character or monster.
@@ -240,7 +240,7 @@ export default class Entity {
 
         for (const item of npcList) {
             if (typeof item === 'number') {
-                const npc = housingNpcs[item];
+                const npc = API.HousingNPCs[item];
                 if (npc == null) {
                     console.warn(`Dropping housing NPC ${item}: no longer exists in the game data.`);
                     continue;

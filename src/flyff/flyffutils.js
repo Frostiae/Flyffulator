@@ -1,16 +1,6 @@
+import { API } from '../data';
+
 import ItemElem from "./flyffitemelem";
-import pets from "../assets/Pets.json";
-import items from "../assets/Items.json";
-import skills from "../assets/Skills.json";
-import classes from "../assets/Classes.json";
-import monsters from "../assets/Monsters.json"
-import equipSets from "../assets/EquipSets.json";
-import statNames from '../assets/StatNames.json';
-import statAwakes from "../assets/StatAwakes.json";
-import partySkills from "../assets/PartySkills.json";
-import upgradeBonus from "../assets/UpgradeBonus.json";
-import levelDifferencePenalties from "../assets/LevelDifferencePenalties.json";
-import achievements from "../assets/Achievements.json";
 
 export const DEFAULT_WEAPON = new ItemElem({
     id: -1,
@@ -71,31 +61,31 @@ export const ATTACK_FLAGS = {
 };
 
 export function getClassById(id) {
-    return classes[id];
+    return API.Classes[id];
 }
 
 export function getItemById(id) {
-    return items[id];
+    return API.Items[id];
 }
 
 export function getSkillById(id) {
-    return skills[id];
+    return API.Skills[id];
 }
 
 export function getPartySkillById(id) {
-    return partySkills[id];
+    return API.PartySkills[id];
 }
 
 export function getAchievements() {
-    return achievements;
+    return API.Achievements;
 }
 
 export function getAchievementById(id) {
-    return achievements.find((achievement) => achievement.id == id);
+    return API.Achievements.find((achievement) => achievement.id == id);
 }
 
 export function getMonsterById(id) {
-    return monsters[id];
+    return API.Monsters[id];
 }
 
 /**
@@ -123,7 +113,7 @@ export function isSkillOrInherit(skillId, baseId) {
  * @returns A string matching the appropriate stat name
  */
 export function getStatNameByIdOrDefault(id, i18n) {
-    var stat = statNames[id];
+    var stat = API.StatNames[id];
     if (stat == null) {
         return id;
     }
@@ -137,7 +127,7 @@ export function getStatNameByIdOrDefault(id, i18n) {
 }
 
 export function getMonsterRange(startLevel, endLevel) {
-    return Object.values(monsters).filter((m) => m.level >= startLevel && m.level <= endLevel);
+    return Object.values(API.Monsters).filter((m) => m.level >= startLevel && m.level <= endLevel);
 }
 
 /**
@@ -146,14 +136,14 @@ export function getMonsterRange(startLevel, endLevel) {
  * @returns Whether or not the base job is or has been through the given job.
  */
 export function isAnteriorJob(baseJobId, otherJobId) {
-    let theClass = classes[baseJobId];
+    let theClass = API.Classes[baseJobId];
 
     while (theClass) {
         if (theClass.id == otherJobId) {
             return true;
         }
 
-        theClass = classes[theClass.parent];
+        theClass = API.Classes[theClass.parent];
     }
 
     return false;
@@ -166,11 +156,11 @@ export function isAnteriorJob(baseJobId, otherJobId) {
 export function getAnteriorClassIds(classId) {
     const ids = [classId];
 
-    let theClass = classes[classId];
+    let theClass = API.Classes[classId];
 
     while (theClass && theClass.parent) {
         ids.push(theClass.parent);
-        theClass = classes[theClass.parent];
+        theClass = API.Classes[theClass.parent];
     }
 
     return ids.reverse();
@@ -178,7 +168,7 @@ export function getAnteriorClassIds(classId) {
 
 export function getClassSkills(classId) {
     const res = [];
-    for (const [, skill] of Object.entries(skills)) {
+    for (const [, skill] of Object.entries(API.Skills)) {
         // TODO: The !skill.inheritSkill condition removes master variations - undo when adding master variations
         if (skill.class == classId && !skill.inheritSkill) {
             res.push(skill);
@@ -190,7 +180,7 @@ export function getClassSkills(classId) {
 
 export function getEquipSetByItemId(id) {
     // this is kinda slow but what can you do
-    for (const [, set] of Object.entries(equipSets)) {
+    for (const [, set] of Object.entries(API.EquipSets)) {
         if (set.parts.includes(id)) {
             return set;
         }
@@ -200,11 +190,11 @@ export function getEquipSetByItemId(id) {
 }
 
 export function getLevelDifferencePenalties(levelDifference) {
-    return levelDifferencePenalties[clamp(levelDifference, 0, levelDifferencePenalties.length - 1)];
+    return API.LevelDifferencePenalties[clamp(levelDifference, 0, API.LevelDifferencePenalties.length - 1)];
 }
 
 export function getPetDefinitionByItemId(itemId) {
-    for (const [, pet] of Object.entries(pets)) {
+    for (const [, pet] of Object.entries(API.Pets)) {
         if (pet.petItemId == itemId) {
             return pet;
         }
@@ -293,7 +283,7 @@ export function getPetCameraLookAt(itemId) {
 }
 
 export function getUpgradeBonus(upgradeLevel) {
-    return upgradeBonus[upgradeLevel - 1];
+    return API.UpgradeBonus[upgradeLevel - 1];
 }
 
 export function getItemNameColor(itemProp) {
@@ -347,7 +337,7 @@ export function getPossibleStatAwakeParams(otherOption, itemLevel, i18n) {
     }
 
     const res = { "none": "None" };
-    for (const awake of statAwakes) {
+    for (const awake of API.StatAwakes) {
         const params = awake.abilities.map((e) => e.parameter);
         if (!params.includes(otherOption) || params.length < 2) {
             continue;
@@ -383,7 +373,7 @@ export function getPossibleStatAwakeValues(currentOption, otherOption, otherValu
     }
 
     const values = [1];
-    for (const awake of statAwakes) {
+    for (const awake of API.StatAwakes) {
         if (awake.abilities.length != 2) {
             continue;
         }
@@ -424,7 +414,7 @@ export function getStatAwakeTitle(itemElem, i18n) {
     }
 
 
-    for (const statAwake of statAwakes) {
+    for (const statAwake of API.StatAwakes) {
         if (statAwake.abilities.length != awakes.length) {
             continue;
         }

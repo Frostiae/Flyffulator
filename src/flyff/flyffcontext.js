@@ -7,20 +7,47 @@ import * as Utils from "./flyffutils";
  */
 export default class Context
 {
+    static #player = null;
+    
     /**
      * The current player.
      */
-    static player = new Entity(null);
+    static get player() {
+        if (!this.#player) this.#player = new Entity(null);
+        return this.#player;
+    }
+
+    static set player(v) {
+        this.#player = v;
+    }
+
+    static #attacker = null;
 
     /**
      * The current attacker, monster or player.
      */
-    static attacker = this.player;
+    static get attacker() {
+        if (!this.#attacker) this.#attacker = this.player;
+        return this.#attacker;
+    }
 
+    static set attacker(v) {
+        this.#attacker = v;
+    }
+
+    static #defender = null;
+    
     /**
      * The current defender, monster or player.
      */
-    static defender = new Entity(Utils.TRAINING_DUMMY);
+    static get defender() {
+        if (!this.#defender) this.#defender = new Entity(Utils.TRAINING_DUMMY);
+        return this.#defender;
+    }
+
+    static set defender(v) {
+        this.#defender = v;
+    }
 
     /**
      * The current attack's bitwise flags.

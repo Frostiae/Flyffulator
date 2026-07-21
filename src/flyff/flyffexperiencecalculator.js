@@ -2,7 +2,7 @@ import Entity from "./flyffentity";
 import Context from "./flyffcontext";
 import * as Utils from "./flyffutils";
 
-let g_defender = new Entity(null);
+let g_defender = null;
 let g_monsterProp = null;
 
 export function getExperience(monsterEntity, teammateIndex) {

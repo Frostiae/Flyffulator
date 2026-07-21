@@ -3,8 +3,13 @@ import Context from '../../../flyff/flyffcontext';
 import * as Utils from "../../../flyff/flyffutils";
 import Entity from "../../../flyff/flyffentity";
 import { getDamage } from '../../../flyff/flyffdamagecalculator';
+import { loadData } from '../../../data';
 
-self.onmessage = function (event) {
+const ready = loadData();
+
+self.onmessage = async function (event) {
+    await ready;
+    
     const { context, cycles = 100 } = event.data;
 
     const player = new Entity(null);

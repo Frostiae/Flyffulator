@@ -1,5 +1,4 @@
-import upgradeBonus from "../assets/UpgradeBonus.json";
-import classes from "../assets/Classes.json";
+import { API } from '../data';
 
 /**
  * An instance of an in-game item.
@@ -190,7 +189,7 @@ export default class ItemElem {
         // exception and follow the normal one-slot-per-upgrade progression.
         const subcategory = this.itemProp.subcategory;
         const isOneHandedSwordOrAxe = !this.itemProp.twoHanded && (subcategory == "sword" || subcategory == "axe");
-        const isTemplarSword = subcategory == "sword" && classes[this.itemProp.class]?.name?.en == "Templar";
+        const isTemplarSword = subcategory == "sword" && API.Classes[this.itemProp.class]?.name?.en == "Templar";
 
         if (isOneHandedSwordOrAxe && !isTemplarSword) {
             let slots = Math.min(this.upgradeLevel, 5);
@@ -224,23 +223,23 @@ export default class ItemElem {
         }
 
         if (upgradeLevel > 0) {
-            let upgradeFactor = upgradeBonus[upgradeLevel - 1].weaponAttack;
+            let upgradeFactor = API.UpgradeBonus[upgradeLevel - 1].weaponAttack;
 
             switch (this.itemProp.subcategory) {
                 case "helmet":
-                    upgradeFactor = upgradeBonus[upgradeLevel - 1].helmetDefense;
+                    upgradeFactor = API.UpgradeBonus[upgradeLevel - 1].helmetDefense;
                     break;
                 case "suit":
-                    upgradeFactor = upgradeBonus[upgradeLevel - 1].suitDefense;
+                    upgradeFactor = API.UpgradeBonus[upgradeLevel - 1].suitDefense;
                     break;
                 case "gauntlet":
-                    upgradeFactor = upgradeBonus[upgradeLevel - 1].gauntletDefense;
+                    upgradeFactor = API.UpgradeBonus[upgradeLevel - 1].gauntletDefense;
                     break;
                 case "boots":
-                    upgradeFactor = upgradeBonus[upgradeLevel - 1].bootsDefense;
+                    upgradeFactor = API.UpgradeBonus[upgradeLevel - 1].bootsDefense;
                     break;
                 case "shield":
-                    upgradeFactor = upgradeBonus[upgradeLevel - 1].shieldDefense;
+                    upgradeFactor = API.UpgradeBonus[upgradeLevel - 1].shieldDefense;
                     break;
             }
 

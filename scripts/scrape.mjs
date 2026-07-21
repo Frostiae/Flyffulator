@@ -44,7 +44,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ASSETS_DIR = join(__dirname, "..", "src", "assets");
+const ASSETS_DIR = join(__dirname, "..", "public", "data");
 const API_BASE = "https://api.flyff.com";
 
 // Id-list collections: a list endpoint returns the ids, then the full objects

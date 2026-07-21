@@ -1,17 +1,13 @@
+import { API } from '../../data';
 import { useState } from "react";
 import { useSearch } from "../../searchcontext";
 import { useTranslation } from "react-i18next";
 
 import Slot from '../equipment/inventory/slot';
-import pets from "../../assets/Pets.json";
-import items from "../../assets/Items.json";
 import Entity from "../../flyff/flyffentity";
-import skills from "../../assets/Skills.json";
 import Context from "../../flyff/flyffcontext";
 import * as Utils from "../../flyff/flyffutils";
 import ItemElem from "../../flyff/flyffitemelem";
-import monsters from "../../assets/Monsters.json";
-import housingNpcs from "../../assets/HousingNPCs.json";
 
 function Search() {
     const { isSearchOpen, searchProperties, hideSearch } = useSearch();
@@ -34,7 +30,7 @@ function Search() {
             query = query.toLowerCase();
 
             if (searchProperties.type == "item") {
-                for (const [, item] of Object.entries(items)) {
+                for (const [, item] of Object.entries(API.Items)) {
                     if (searchProperties.checkCanUse) {
                         if (!Context.player.canUseItem(item)) {
                             continue;
@@ -108,7 +104,7 @@ function Search() {
                 }
             }
             else if (searchProperties.type == "monster") {
-                for (const [, monster] of Object.entries(monsters)) {
+                for (const [, monster] of Object.entries(API.Monsters)) {
                     if (monster.name.en.toLowerCase().includes(query)) {
                         res.push(new Entity(monster));
                     }
@@ -117,14 +113,14 @@ function Search() {
                 res.sort((a, b) => a.level - b.level);
             }
             else if (searchProperties.type == "skill") {
-                for (const [, skill] of Object.entries(skills)) {
+                for (const [, skill] of Object.entries(API.Skills)) {
                     if (skill.name.en.toLowerCase().includes(query)) {
                         res.push(skill);
                     }
                 }
             }
             else if (searchProperties.type == "personalOrCoupleHousingNpc") {
-                for (const [, housingNpc] of Object.entries(housingNpcs)) {
+                for (const [, housingNpc] of Object.entries(API.HousingNPCs)) {
                     if (!housingNpc.name.en.includes("Personal House NPC")) {
                         continue;
                     }
@@ -149,7 +145,7 @@ function Search() {
                 }
             }
             else if (searchProperties.type == "guildHousingNpc") {
-                for (const [, housingNpc] of Object.entries(housingNpcs)) {
+                for (const [, housingNpc] of Object.entries(API.HousingNPCs)) {
                     if (!housingNpc.name.en.includes("Guild Ship NPC")) {
                         continue;
                     }

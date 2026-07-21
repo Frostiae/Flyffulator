@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import { SearchProvider } from './searchcontext';
 import { TooltipProvider } from './tooltipcontext';
+import { API } from './data';
 
 import './styles/App.scss';
 import Context from './flyff/flyffcontext';
-import Classes from './assets/Classes.json';
 import * as Utils from './flyff/flyffutils';
 import Search from './components/shared/search';
 import Tooltip from './components/shared/tooltip';
@@ -25,7 +25,7 @@ function App() {
   const { t } = useTranslation();
 
   const jobOptions = {};
-  for (const [k, v] of Object.entries(Classes)) {
+  for (const [k, v] of Object.entries(API.Classes)) {
     jobOptions[k] = v.name.en;
   }
 

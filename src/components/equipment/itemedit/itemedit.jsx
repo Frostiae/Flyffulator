@@ -7,8 +7,7 @@ import Dropdown from '../../shared/dropdown';
 import RangeInput from '../../shared/rangeinput';
 import NumberInput from '../../shared/numberinput';
 import * as Utils from '../../../flyff/flyffutils';
-import blessings from '../../../assets/Blessings.json';
-import skillAwakes from '../../../assets/SkillAwakes.json';
+import { API } from '../../../data';
 
 const STAT_STEPS = {
     "stealhp": 0.1,
@@ -67,7 +66,7 @@ function ItemEdit({ itemElem }) {
     // Fashion blessings
 
     const possibleBlessings = { "0": "None" };
-    for (const [parameter,] of Object.entries(blessings)) {
+    for (const [parameter,] of Object.entries(API.Blessings)) {
         possibleBlessings[parameter] = Utils.getStatNameByIdOrDefault(parameter, i18n);
     }
 
@@ -76,7 +75,7 @@ function ItemEdit({ itemElem }) {
             return [0, 1];
         }
 
-        const values = blessings[parameter].map((e) => e.add);
+        const values = API.Blessings[parameter].map((e) => e.add);
         return values;
     }
 
@@ -92,7 +91,7 @@ function ItemEdit({ itemElem }) {
         skillAwakeCategories.push("wandorstaff");
     }
 
-    for (const [type, value] of Object.entries(skillAwakes)) {
+    for (const [type, value] of Object.entries(API.SkillAwakes)) {
         if (!skillAwakeCategories.includes(type)) {
             continue;
         }
@@ -228,7 +227,7 @@ function ItemEdit({ itemElem }) {
             itemElem.randomStats[index] = null;
         }
         else {
-            const values = blessings[option];
+            const values = API.Blessings[option];
             itemElem.randomStats[index] = { ...values[0], id: option, value: values[0].add };
         }
 
