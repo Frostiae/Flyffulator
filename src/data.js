@@ -20,9 +20,10 @@ const FILES = [
 export const API = {};
 
 export async function loadData() {
-  await Promise.all(
-    FILES.map(async (name) => {
-      API[name] = await fetch(`/data/${name}.json`).then(r => r.json());
-    })
-  );
+  await Promise.all(FILES.map(async (name) => {
+    const buf = await fetch(`/data/${name}.json.gz`).then(r => r.arrayBuffer());
+    const stream = new Blob([buf]).stream()
+      .pipeThrough(new DecompressionStream('gzip'));
+    API[name] = JSON.parse(await new Response(stream).text());
+  }));
 }
