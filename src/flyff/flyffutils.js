@@ -99,6 +99,25 @@ export function getMonsterById(id) {
 }
 
 /**
+ * Check if a skill is or inherits another skill.
+ * @param {number} skillId The skill ID to check.
+ * @param {number} baseId The base skill to check against.
+ * @returns True if the given skill is or inherits the base skill.
+ */
+export function isSkillOrInherit(skillId, baseId) {
+    if (skillId == baseId) {
+        return true;
+    }
+
+    const skillProp = getSkillById(skillId);
+    if (skillProp && skillProp.inheritSkill != undefined && skillProp.inheritSkill == baseId) {
+        return true;
+    }
+
+    return false;
+}
+
+/**
  * @param {string} id The stat id
  * @param {object} i18n Localization
  * @returns A string matching the appropriate stat name
@@ -425,6 +444,15 @@ export function getStatAwakeTitle(itemElem, i18n) {
 
     console.error("Could not find an appropriate stat awake with the chosen values.");
     return "";
+}
+
+/**
+ * Whether or not the given job ID is a third job.
+ * @param {number} jobId The ID of the job to check.
+ */
+export function isThirdJob(jobId) {
+    const job = getClassById(jobId);
+    return job.type == "specialist";
 }
 
 /**

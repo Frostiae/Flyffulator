@@ -1266,25 +1266,38 @@ export default class Entity {
                         }
 
                         if (scale.stat != undefined) {
+                            let scaleStat = 0;
                             if (scale.stat == "int") {
-                                add += Math.floor(Math.min(this.bufferInt * scale.scale, scale.maximum));
+                                scaleStat = Math.min(this.bufferInt * scale.scale, scale.maximum);
                             }
                             else if (scale.stat == "str") {
-                                add += Math.floor(Math.min(this.bufferStr * scale.scale, scale.maximum));
+                                scaleStat = Math.min(this.bufferStr * scale.scale, scale.maximum);
                             }
                             else if (scale.stat == "sta") {
-                                add += Math.floor(Math.min(this.bufferSta * scale.scale, scale.maximum));
+                                scaleStat = Math.min(this.bufferSta * scale.scale, scale.maximum);
                             }
                             else if (scale.stat == "dex") {
-                                add += Math.floor(Math.min(this.bufferDex * scale.scale, scale.maximum));
+                                scaleStat = Math.min(this.bufferDex * scale.scale, scale.maximum);
+                            }
+                            else if (scale.stat == "hp") {
+                                scaleStat = Math.min(this.getHP(), scale.maximum);
                             }
                             else {
                                 // arbitrary stat
-                                //add += Math.floor(Math.min(this.getStat(scale.stat, true), scale.maximum));
+                                scaleStat = Math.min(this.getStat(scale.stat, true) * scale.scale, scale.maximum);
+                            }
+
+                            if (scale.add) {
+                                add += Math.floor(scaleStat);
+                            }
+                            else {
+                                add += Math.floor(add * scaleStat);
                             }
                         }
                         else if (scale.part != undefined) {
                             // TODO: part scaling
+                            // TODO: Item kind scaling
+                            Context.unimplementedWarnings.add("Stat equipment part scaling");
                         }
                     }
 
@@ -1556,6 +1569,37 @@ export default class Entity {
         }
     }
 
+
+    addSkillSynergy(parameter, levelProp, out) {
+        for (const [, synergy] of Object.entries(levelProp.synergies ?? [])) {
+            if (synergy.parameter != parameter) {
+                continue;
+            }
+
+            if (Context.isPVP() && !synergy.pvp) {
+                continue;
+            }
+
+            if (Context.isPVE() && !synergy.pve) {
+                continue;
+            }
+
+            const skillLevel = this.skillLevels[synergy.skill];
+            if (skillLevel == undefined) {
+                continue;
+            }
+
+            if (synergy.add) {
+                out += (skillLevel - synergy.minLevel) * synergy.scale / 100;
+            }
+            else {
+                out *= 1.0 + ((skillLevel - synergy.minLevel) * synergy.scale / 100);
+            }
+        }
+
+        return out;
+    }
+
     getStatScale(parameter, skillProp, level) {
         const levelProp = skillProp.levels[level];
         if (levelProp == undefined) {
@@ -1584,17 +1628,49 @@ export default class Entity {
             let statValue = 0;
             if (scale.stat != undefined) {
                 statValue = this.getBaseStat(scale.stat);
+                if (statValue == 0) {
+                    if (scale.stat == "hp") {
+                        statValue = this.getHP();
+                    }
+                    else {
+                        statValue = this.getStat(scale.stat, true); // Assume it's a rate...
+                    }
+                }
             }
             else if (scale.part != undefined) {
-                // TODO: Part scaling
+                let scaleItemElem = null;
+                if (scale.part == "righthandweapon") {
+                    scaleItemElem = this.equipment.mainhand;
+                }
+                else if (scale.part == "lefthandweapon" || scale.part == "shield") {
+                    scaleItemElem = this.equipment.offhand;
+                }
+
+                if (scaleItemElem) {
+                    if (scaleItemElem.itemProp.category == "weapon") {
+                        statValue = (scaleItemElem.itemProp.minAttack + scaleItemElem.itemProp.maxAttack) / 2;
+                    }
+                    else {
+                        statValue = (scaleItemElem.itemProp.minDefense + scaleItemElem.itemProp.maxDefense) / 2;
+                    }
+                }
             }
+
+            // TODO: Item kind scaling like master of sword/axe
 
             if (scale.maximum != undefined && statValue > scale.max) {
                 statValue = scale.maximum;
             }
 
             const realScale = (scale.scale * 50 - level + 1) / 5;
-            total += Math.floor(((realScale / 10) * statValue) + ((level - 1) * (statValue / 50)));
+
+            if (scale.add) {
+                total += Math.floor(((realScale / 10) * statValue) + ((level - 1) * (statValue / 50)));
+            }
+            else {
+                // TODO: need the base stat here to multiply?
+                Context.unimplementedWarnings.add("Non-additive stat scale");
+            }
         }
 
         return total;
@@ -1604,7 +1680,77 @@ export default class Entity {
      * Check if this entity currently has the given skill activated. 
      */
     hasSkillBuff(skillId) {
-        return skillId in this.activeBuffs;
+        for (const [id, _] of Object.entries(this.activeBuffs)) {
+            if (id == skillId) {
+                return true;
+            }
+
+            const skillProp = Utils.getSkillById(id);
+            if (skillProp && skillProp.inheritSkill != undefined && skillProp.inheritSkill == skillId) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Check if this entity currently has a hymn buff active.
+     */
+    hasHymnBuff() {
+        for (const [id, _] of Object.entries(this.activeBuffs)) {
+            const skillProp = Utils.getSkillById(id);
+            
+            if (skillProp.hymnSkill != undefined) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Check if this entity has the given attribute from its' buffs.
+     * @param {string} attribute The attribute to check for.
+     */
+    hasAttribute(attribute) {
+        for (const [id, level] of Object.entries(this.activeBuffs)) {
+            const skillProp = Utils.getSkillById(id);
+            const levelProp = skillProp.levels[level - 1];
+            
+            for (const ability of levelProp.abilities ?? []) {
+                if (ability.parameter != undefined && ability.parameter == "attribute" &&
+                    ability.attribute != undefined && ability.attribute == attribute
+                ) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Check how many debuffs of the given type are present on this entity.
+     * @param {string} type The type of debuff to check for, or any type if blank.
+     * @returns The total number of debuffs of this type.
+     */
+    getDebuffCount(type = "") {
+        let count = 0;
+        for (const [id, _] of Object.entries(this.activeBuffs)) {
+            const skillProp = Utils.getSkillById(id);
+            
+            if (skillProp.debuff) {
+                if (type != "" && skillProp.debuffType != undefined && skillProp.debuffType == type) {
+                    ++count;
+                }
+                else {
+                    ++count;
+                }
+            }
+        }
+
+        return count;
     }
 
     /**

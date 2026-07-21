@@ -65,7 +65,8 @@ self.onmessage = function (event) {
             miss: (Context.attackFlags & Utils.ATTACK_FLAGS.MISS) !== 0,
             parry: (Context.attackFlags & Utils.ATTACK_FLAGS.PARRY) !== 0,
             double: (Context.attackFlags & Utils.ATTACK_FLAGS.DOUBLE) !== 0,
-            afterDamageProps: Context.afterDamageProps
+            afterDamageProps: Context.afterDamageProps,
+            unimplementedWarnings: Context.unimplementedWarnings
         };
 
         out.push(res);

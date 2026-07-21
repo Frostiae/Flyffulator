@@ -53,6 +53,11 @@ export default class Context
     };
 
     /**
+     * Warning texts if the current build has calculations that are not yet implemented.
+     */
+    static unimplementedWarnings = new Set([]);
+
+    /**
      * Settings for experience calculations.
      */
     static expSettings = {

@@ -85,14 +85,109 @@ export function getDamage(handFlag) {
     // Various multipliers
     totalDamage += Math.floor(totalDamage * Context.attacker.getStat(Context.isPVP() ? "pvpdamage" : "pvedamage", true) / 100);
 
+    const behindDarkFactor = Context.attacker.getStat("rearinvisibledamage", true);
+    if (behindDarkFactor > 0 && (Context.attacker.hasSkillBuff(7395) || Context.attacker.hasSkillBuff(24399))) {
+        // TODO: Behind dark damage
+        Context.unimplementedWarnings.add("Rear dark illusion damage");
+    }
+
+    let muransWrath = Context.attacker.getStat("muranswrath", true);
+    if (muransWrath > 0 && Context.settings.targetHealthPercent == 100) {
+        if (Context.isPVP()) {
+            muransWrath /= 2;
+        }
+        totalDamage += Math.floor(totalDamage * muransWrath / 100);
+    }
+
+    let ankousHarvest = Context.attacker.getStat("ankousharvest", true);
+    if (ankousHarvest > 0 && Context.settings.targetHealthPercent < 25) {
+        if (Context.isPVP()) {
+            ankousHarvest /= 2;
+        }
+        totalDamage += Math.floor(totalDamage * ankousHarvest / 100);
+    }
+
+    // Templar's Last one Standing doesnt have a cap...
     totalDamage += Math.floor(totalDamage * Math.max(Context.defender.getStat("incomingdamage", true), -50) / 100);
+    
+    const lowHPDmgReduct = Context.defender.getStat("lowhpdamagereduction", true);
+    if (lowHPDmgReduct != 0) {
+        totalDamage -= Math.floor(totalDamage * Utils.mix(0.0, (lowHPDmgReduct / 100), 100.0 - Context.settings.targetHealthPercent));
+    }
+
+    const hymnDamageReduct = Context.defender.getStat("hymndamagereduction", true);
+    if (hymnDamageReduct > 0 && Context.defender.hasHymnBuff()) {
+        totalDamage -= Math.floor(totalDamage * hymnDamageReduct / 100);
+    }
+
+    const shockDamageFactor = Context.defender.getStat("damagefromshocked", true);
+    if (shockDamageFactor != 0 && Context.attacker.hasSkillBuff(54749)) {
+        totalDamage += Math.floor(totalDamage * shockDamageFactor / 100);
+    }
+
+    const waterDamageFactor = Context.defender.getStat("damagefromwatered", true);
+    if (waterDamageFactor != 0 && (Context.attacker.hasSkillBuff(26287) || Context.attacker.hasSkillBuff(44237))) {
+        totalDamage += Math.floor(totalDamage * waterDamageFactor / 100);
+    }
+
+    const fireDamageFactor = Context.defender.getStat("damagefromburned", true);
+    if (fireDamageFactor != 0 && Context.attacker.hasSkillBuff(57839)) {
+        totalDamage += Math.floor(totalDamage * fireDamageFactor / 100);
+    }
+
+    const windDamageFactor = Context.defender.getStat("damagefromsuffocated", true);
+    if (windDamageFactor != 0 && Context.attacker.hasSkillBuff(41916)) {
+        totalDamage += Math.floor(totalDamage * windDamageFactor / 100);
+    }
+    
     if (Context.defender.isMonster() && Context.defender.monsterProp.rank == "giant") {
         totalDamage += Math.floor(totalDamage * Context.attacker.getStat("bossmonsterdamage", true) / 100);
     }
 
     if (Context.defender.isPlayer()) {
+        if (Context.attacker.isMonster()) {
+            totalDamage -= Context.defender.getStat("pveincomingdamage", false);
+            if (Context.attacker.monsterProp.rank == "giant") {
+                totalDamage *= 1.0 + Context.defender.getStat("bossincomingdamage", true) / 100;
+            }
+        }
+
         totalDamage -= Math.floor(totalDamage * Math.min(20, Context.defender.getStat(Context.isPVP() ? "pvpdamagereduction" : "pvedamagereduction", true)) / 100);
         totalDamage -= Math.floor(totalDamage * Context.defender.getStat("damageoffload", true) / 100);
+    }
+
+    const posionDamageFactor = Context.defender.getStat("damagefrompoisoned", true);
+    if (posionDamageFactor != 0 && Context.attacker.hasAttribute("poison")) {
+        totalDamage += Math.floor(totamDamage * posionDamageFactor / 100);
+    }
+
+    const poisonDefenseFactor = Context.attacker.getStat("damagevspoisoned", true);
+    if (poisonDefenseFactor != 0 && Context.defender.hasAttribute("poison")) {
+        totalDamage += Math.floor(totalDamage * poisonDefenseFactor / 100);
+    }
+
+    const perDisableFactor = Context.attacker.getStat("perdisabledebuffdamage", true);
+    if (perDisableFactor > 0) {
+        const count = Context.defender.getDebuffCount("disable");
+        if (count > 0) {
+            totalDamage += Math.floor(totalDamage * perDisableFactor / 100 * count);
+        }
+    }
+
+    const perWeakenFactor = Context.attacker.getStat("perweakendebuffdamage", true);
+    if (perWeakenFactor > 0) {
+        const count = Context.defender.getDebuffCount("weaken");
+        if (count > 0) {
+            totalDamage += Math.floor(totalDamage * perWeakenFactor / 100 * count);
+        }
+    }
+
+    const perDebuffFactor = Context.defender.getStat("damagetakenperdebuff", true);
+    if (perDebuffFactor > 0) {
+        const count = Math.min(Context.attacker.getDebuffCount(), 8); // Cap of 8
+        if (count > 0) {
+            totalDamage -= Math.floor(totalDamage * perDebuffFactor / 100 * count);
+        }
     }
 
     totalDamage = Math.max(totalDamage, 1);
@@ -226,11 +321,22 @@ function computeAttack() {
     else if (Context.attackFlags & Utils.ATTACK_FLAGS.GENERIC) {
         // Regular autos
         const elementFactor = getElementDamageFactorAutoAttack();
-        const hit = Context.attacker.getHitMinMax(leftHanded);
+        let hit = Context.attacker.getHitMinMax(leftHanded);
+
         attack = Math.floor(Math.random() * (Math.floor(hit.max) - Math.ceil(hit.min) + 1) + Math.ceil(hit.min));
         attack = Math.floor((attack * elementFactor) / 10000);
 
         // Bow charge factor here
+
+        const closeBonus = Context.attacker.getStat("closedamage", true);
+        if (closeBonus > 0) {
+            Context.unimplementedWarnings.add("Close damage bonus");
+        }
+
+        const farBonus = Context.attacker.getStat("fardamage", true);
+        if (farBonus > 0) {
+            Context.unimplementedWarnings.add("Far damage bonus");
+        }
     }
 
     attack = Math.floor(attack * getAttackMultiplier());
@@ -252,6 +358,11 @@ function getAttackMultiplier() {
     let sumPower = Context.attacker.getStat("attack", true);
     if (Context.isSkillAttack()) {
         sumPower += Context.attacker.getStat("skilldamage", true);
+
+        if (Context.skill.class != undefined && Utils.isThirdJob(Context.skill.class)) {
+            sumPower += Context.attacker.getStat("thirdjobskilldamage", true);
+        }
+
         if (Context.skill.target == "single") {
             // 1v1 skill damage. not used at all rn
         }
@@ -279,7 +390,7 @@ function getAttackMultiplier() {
 
 function applyDefense(attack) {
     // Monster attacks are always reduced by level difference.
-    if (!Context.isSkillAttack() && Context.attacker.isMonster() && Context.defender.isPlayer()) {
+    if ((Context.attackFlags & Utils.ATTACK_FLAGS.MAGICSKILL) == 0 && Context.attacker.isMonster() && Context.defender.isPlayer()) {
         const attackerLevel = Context.attacker.level == -1 ? Context.defender.level : Context.attacker.level;
         const delta = attackerLevel - Context.defender.level;
         if (delta > 0) {
@@ -340,7 +451,10 @@ function applyDefense(attack) {
         if (levelProp.damageMultiplier != undefined) {
             for (const mul of levelProp.damageMultiplier) {
                 if (mul.condition != undefined) {
-                    continue; // TODO: Handle conditional multipliers
+                    const checkTarget = mul.condition.onTarget ? Context.defender : Context.attacker;
+                    if (!checkTarget.hasSkillBuff(mul.condition.requiredBuff)) {
+                        continue;
+                    }
                 }
 
                 factor *= mul.multiplier;
@@ -352,6 +466,24 @@ function applyDefense(attack) {
             if (Context.attacker.hasSkillBuff(7395)) {
                 factor *= 1.4;
             }
+        }
+        else if (Utils.isSkillOrInherit(Context.skill.id, 38885)) {
+            // Storm strike
+            if (Context.defender.hasSkillBuff(38885)) {
+                factor *= Context.skill.id == 55718 ? 1.8 : 1.4;
+            }
+        }
+        else if (Utils.isSkillOrInherit(Context.skill.id, 30021)) {
+            // TODO: Hammer of Judgement damage over time
+            Context.unimplementedWarnings.add("Hammer of Judgement damage over time");
+        }
+        else if (Utils.isSkillOrInherit(Context.skill.id, 38988)) {
+            // TODO: Aura bomb damage over time
+            Context.unimplementedWarnings.add("Aura Bomb damager over time");
+        }
+        else if (Utils.isSkillOrInherit(Context.skill.id, 36544)) {
+            // TODO: Stone pillar damage over time
+            Context.unimplementedWarnings.add("Stone Pillar damage over time");
         }
 
         switch (Context.skill.id) {
@@ -371,6 +503,9 @@ function applyDefense(attack) {
                 // TODO: Multiplier from skill level. this is assuming max level
                 factor *= 3;
                 break;
+            case 5041: // Asal
+                factor *= 1.0 + Context.attacker.getStat("asaldamage", true) / 100;
+                break;
         }
 
         let weapon = Context.attacker.equipment.mainhand;
@@ -384,6 +519,9 @@ function applyDefense(attack) {
             factor *= 1 + weapon.skillAwake.add / 100;
         }
     }
+    else if (Context.attacker.isPlayer()) {
+        // TODO: Auto attack stacking stuff
+    }
 
     if (Context.attacker.isMonster()) {
         const berserkThreshold = Context.attacker.monsterProp.berserkThresholdHP;
@@ -396,14 +534,17 @@ function applyDefense(attack) {
             factor *= 0.6;
         }
         if (leftHanded) {
-            factor *= 0.75;
+            factor *= 0.75 + (Context.attacker.getStat("lefthanddamage", true) / 100);
         }
     }
-
 
     if (Context.defender.removeAttribute("double")) {
         factor *= 2.0;
         Context.attackFlags |= Utils.ATTACK_FLAGS.DOUBLE;
+    }
+
+    if (!Context.isSkillAttack()) {
+        factor *= 1.0 + (Context.attacker.getStat("autoattackdamage", true) / 100);
     }
 
     // Level difference
@@ -424,11 +565,24 @@ function applyDefense(attack) {
         }
     }
 
-    // Herd would be here
+    // TODO: Herd would be here
 
     damage = Math.floor(damage * factor);
 
-    // TODO: afterDamage like riposte, aura burst, etc
+    // After damage stuff like riposte reflex, reflex hit, etc.
+
+    const riposteProb = Context.defender.getStat("ripostereflexchance", true);
+    if (riposteProb > 0 && Math.random() * 100 < riposteProb) {
+        damage *= 0.1;
+        Context.attackFlags = Utils.ATTACK_FLAGS.BLOCKING; // Yes it just sets it
+        // Attacker also takes damage here
+    }
+
+    // TODO: HoP penya stuff
+    if (Context.isSkillAttack() && Context.skill.id == 7156) {
+        Context.unimplementedWarnings.add("Hit of Penya damage from penya");
+    }
+
     return damage;
 }
 
@@ -623,6 +777,11 @@ function applyElementDefense(attack) {
         weaponElement = weapon.itemProp.element;
     }
 
+    // Infusion
+    if (skillElement != "none" && weaponElement != "none" && Context.attacker.hasSkillBuff(12579)) {
+        skillElement = weaponElement;
+    }
+
     // Prioritize the skill element
     let attackerElement = skillElement != "none" ? skillElement : weaponElement;
     if (Context.attacker.isMonster() && skillElement == "none") {
@@ -720,6 +879,9 @@ function applyAutoAttackDefense(attack) {
 
     let damage = applyAttackDefense(attack, defense);
     if (damage > 0) {
+        // TODO: Clear reflection
+
+
         if (isCriticalAttack()) {
             Context.attackFlags |= Utils.ATTACK_FLAGS.CRITICAL;
 
@@ -739,7 +901,13 @@ function applyAutoAttackDefense(attack) {
             }
 
             const criticalFactor = minCritical + Math.random() * (maxCritical - minCritical);
-            const criticalBonus = Math.max(0.1, 1 + Context.attacker.getStat("criticaldamage", true) / 100);
+            let criticalBonus = Math.max(0.1, 1 + Context.attacker.getStat("criticaldamage", true) / 100);
+
+            const pitBonus = Context.attacker.getStat("pittedcriticaldamage", true);
+            if (pitBonus > 0 && Context.defender.hasAttribute("pit")) {
+                criticalBonus *= 1.0 + pitBonus / 100.0;
+            }
+
             damage = Math.floor(criticalFactor * criticalBonus * damage);
 
             // Knock down here
@@ -780,6 +948,8 @@ function isCriticalAttack() {
     if (Context.isSkillAttack()) {
         return false;
     }
+
+    // Forced crit flag here and removed after one hit
 
     let critChance = Context.attacker.getCriticalChance();
 
@@ -846,16 +1016,41 @@ function getBaseSkillPower() {
     const weapon = Context.attacker.equipment.mainhand;
     const weaponAttack = getWeaponAttackPower(weapon);
 
-    const referStat = Context.attacker.getStatScale("attack", Context.skill, skillLevel);
+    let statScaleSkillLevel = skillLevel;
+    let formulaLevel = skillLevel;
+    if (Context.skill.inheritSkill != undefined) {
+        const inheritedSkillProp = Utils.getSkillById(Context.skill.inheritSkill);
+        if (inheritedSkillProp != null) {
+            for (const variationId of inheritedSkillProp.masterVariations ?? []) {
+                if (variationId == Context.skill.id) {
+                    statScaleSkillLevel = inheritedSkillProp.levels.length - 1; // - 1 is wrong?
+                    formulaLevel = statScaleSkillLevel;
+                    break;
+                }
+            }
+        }
+    }
+
+    const referStat = Context.attacker.getStatScale("attack", Context.skill, statScaleSkillLevel);
 
     let power = {
-        min: (((weaponAttack.min + (levelProp.minAttack + weapon.itemProp.additionalSkillDamage) * 5 + referStat - 20) * (16 + skillLevel) / 13)),
-        max: (((weaponAttack.max + (levelProp.maxAttack + weapon.itemProp.additionalSkillDamage) * 5 + referStat - 20) * (16 + skillLevel) / 13))
+        min: (((weaponAttack.min + (levelProp.minAttack + weapon.itemProp.additionalSkillDamage) * 5 + referStat - 20) * (16 + formulaLevel) / 13)),
+        max: (((weaponAttack.max + (levelProp.maxAttack + weapon.itemProp.additionalSkillDamage) * 5 + referStat - 20) * (16 + formulaLevel) / 13))
     };
 
     const weaponDamage = Math.floor(Context.attacker.getStat(weapon.itemProp.subcategory + "attack", false));
     power.min += Context.attacker.getStat("damage", false) + weaponDamage;
     power.max += Context.attacker.getStat("damage", false) + weaponDamage;
+
+    power.min = Context.attacker.addSkillSynergy("attack", levelProp, power.min);
+    power.max = Context.attacker.addSkillSynergy("attack", levelProp, power.max);
+
+    // Thunder Strike or EVA Storm with shocked debuff
+    if (Utils.isSkillOrInherit(Context.skill.id, 22731) || Utils.isSkillOrInherit(Context.skill.id, 37809)) {
+        if (Context.defender.hasSkillBuff(54749)) {
+            power.min = power.max;
+        }
+    }
 
     let minMax = (power.max - power.min) + 1;
     minMax = Math.max(1, minMax);
@@ -873,7 +1068,17 @@ function getMagicSkillPower() {
 
     // Elements
     let bonus = 0;
-    switch (Context.skill.elementType) {
+
+    // Arcanist infusion
+    let elementType = Context.skill.elementType;
+    if (elementType != "none" && Context.attacker.hasSkillBuff(12579)) {
+        const weaponElement = Context.attacker.equipment.mainhand.element;
+        if (weaponElement != "none") {
+            elementType = weaponElement;
+        }
+    }
+
+    switch (elementType) {
         case "fire": bonus = Context.attacker.getStat("firemastery", true); break;
         case "fireearth": bonus = Context.attacker.getStat("firemastery", true) + Context.attacker.getStat("earthmastery", true); break;
         case "water": bonus = Context.attacker.getStat("watermastery", true); break;

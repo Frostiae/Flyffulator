@@ -51,7 +51,7 @@ function Calculations() {
                 <div className="spinner" />
             </div>
         );
-    }    
+    }
 
     useEffect(() => {
         setBigSampleActive(false);
@@ -66,6 +66,8 @@ function Calculations() {
     ]);
 
     useEffect(() => {
+        Context.unimplementedWarnings.clear(); // Clear before any calculations
+
         let cancelled = false;
         setIsLoadingAA(true);
         setIsLoadingSkill(true);
@@ -75,7 +77,6 @@ function Calculations() {
         if (Context.settings.waterbombEnabled && Context.attacker.getStat("skillchance", true, 11389) > 0) {
             Context.player.skillLevels[11389] = 1;
         }
-
         
         // Counter attack
         if (Context.player.skillLevels[2506] != undefined) {
@@ -97,6 +98,7 @@ function Calculations() {
                 if (!cancelled) {
                     setAutoAttackData(data);
                     setIsLoadingAA(false);
+                    Context.unimplementedWarnings = Context.unimplementedWarnings.union(data[0]?.unimplementedWarnings ?? new Set());
                 }
             })
             .catch(error => {
@@ -109,10 +111,11 @@ function Calculations() {
                 if (!cancelled) {
                     setSkillData(data);
                     setIsLoadingSkill(false);
+                    Context.unimplementedWarnings = Context.unimplementedWarnings.union(data[0]?.unimplementedWarnings ?? new Set());
                 }
             })
             .catch(error => {
-                console.error("Error in auto attack worker:", error);
+                console.error("Error in skill worker:", error);
                 setIsLoadingSkill(false);
             });
 
@@ -121,10 +124,11 @@ function Calculations() {
                 if (!cancelled) {
                     setMonsterData(data);
                     setIsLoadingMonster(false);
+                    Context.unimplementedWarnings = Context.unimplementedWarnings.union(data[0]?.unimplementedWarnings ?? new Set());
                 }
             })
             .catch(error => {
-                console.error("Error in auto attack worker:", error);
+                console.error("Error in monster worker:", error);
                 setIsLoadingMonster(false);
             });
     
@@ -435,6 +439,23 @@ function Calculations() {
             </div>
 
             <div id="extra-stats">
+                {
+                    Context.unimplementedWarnings.size > 0 &&
+                    (
+                        <div id="calc-warnings">
+                            <div className="category-header">
+                                <h5>Warnings - Inaccurate calculations</h5>
+                                <HoverInfo text={"Some calculations may be inaccurate due to unimplemented mechanics."} />
+                            </div>
+                            <hr />
+                            {
+                                [...Context.unimplementedWarnings].map((w, i) => (
+                                    <p key={i}>Unimplemented warning: {w}</p>    
+                                ))
+                            }
+                        </div>
+                    )
+                }
                 <div className="category-header">
                     <h3>Configuration</h3>
                     <HoverInfo text={"Set configurations for all calculations such as your target, debuffs, and so on."} />

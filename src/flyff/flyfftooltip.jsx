@@ -706,8 +706,14 @@ function setupSkill(skill, i18n) {
                                 case "dex":
                                     bufferStat = Context.player.bufferDex;
                                     break;
-                                default:
+                                case "sta":
                                     bufferStat = Context.player.bufferSta;
+                                    break;
+                                case "hp":
+                                    bufferStat = Context.player.getHP();
+                                    break;
+                                default:
+                                    bufferStat = Context.player.getStat(scale.stat, true);
                                     break;
                             }
                         }
@@ -715,7 +721,12 @@ function setupSkill(skill, i18n) {
                             // TODO: Part scaling
                         }
     
-                        extra = Math.floor(Math.min(scale.scale * bufferStat, scale.maximum));
+                        if (scale.add) {
+                            extra = Math.floor(Math.min(scale.scale * bufferStat, scale.maximum));
+                        }
+                        else {
+                            extra = Math.floor(add * Math.min(scale.scale * bufferStat, scale.maximum));
+                        }
                     }
                 }
             }
