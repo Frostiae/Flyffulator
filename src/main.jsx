@@ -54,6 +54,8 @@ loadData().then(() => {
             Select your Language
             <br />
             <LocaleSwitcher />
+            <br />
+            <i>Commit <a href={`https://github.com/Frostiae/Flyffulator/commit/${__COMMIT_HASH__}`} target='_blank'>{__COMMIT_HASH__}</a></i>
           </div>
         </div>
       </footer>
