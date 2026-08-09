@@ -66,8 +66,7 @@ function Search() {
 
                         // only display actual pets, not skins or the ones with modified flags                        
                         if (item.category === "raisedpet") {
-                            const petFound = Object.values(pets).find((pet) => pet.petItemId === item.id);
-                            if (!petFound) {
+                            if (!Utils.getPetDefinitionByItemId(item.id)) {
                                 continue;
                             }
                         }
