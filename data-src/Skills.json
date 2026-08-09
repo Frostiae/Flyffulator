@@ -3800,7 +3800,7 @@
 			"tw": "瑪德利賈的精英們將為你指引方向！",
 			"vi": "Madrigal's elites guide you!"
 		},
-		"icon": "sklking05.png",
+		"icon": "lord5.png",
 		"level": 1,
 		"element": "none",
 		"magic": false,
@@ -3867,7 +3867,7 @@
 			"tw": "瑪德利賈最幸運的指引你！",
 			"vi": "Madrigal's most fortunate guide you!"
 		},
-		"icon": "sklking01.png",
+		"icon": "lord1.png",
 		"level": 1,
 		"element": "none",
 		"magic": false,
@@ -3934,7 +3934,7 @@
 			"tw": "享受 15% 經驗加成，直到 164 級！",
 			"vi": "Enjoy Exp+15% until level 164!"
 		},
-		"icon": "sklking01.png",
+		"icon": "lord1.png",
 		"level": 1,
 		"element": "none",
 		"magic": false,
@@ -5531,6 +5531,651 @@
 		"target": "single",
 		"levels": []
 	},
+	"39823": {
+		"id": 39823,
+		"name": {
+			"en": "EXP Boost!",
+			"ar": "EXP Boost!",
+			"br": "Bônus de Experiência!",
+			"cns": "经验提升！",
+			"de": "EXP Boost!",
+			"fi": "EXP Boost!",
+			"fil": "Pag-boost ng EXP!",
+			"fr": "Boost d'Exp !",
+			"id": "EXP Boost!",
+			"it": "EXP Boost!",
+			"jp": "経験値ブースト!",
+			"kr": "경험치 부스트!",
+			"nl": "EXP Boost!",
+			"pl": "Wzmocnienie Doświadczenia!",
+			"ru": "EXP Boost!",
+			"sp": "¡Impulso de Experiencia!",
+			"sw": "EXP Boost!",
+			"th": "EXP Boost!",
+			"tw": "經驗值加成提升！",
+			"vi": "EXP Boost!"
+		},
+		"description": {
+			"en": "null"
+		},
+		"icon": "lordexp.png",
+		"level": 1,
+		"element": "none",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": false,
+		"flying": true,
+		"passive": true,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "abilities": [
+				{ "parameter": "exprate", "add": 5, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "exprate", "add": 6, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "exprate", "add": 10, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "exprate", "add": 11, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "exprate", "add": 15, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "exprate", "add": 17, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "exprate", "add": 20, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "exprate", "add": 22, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "exprate", "add": 25, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "exprate", "add": 28, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "exprate", "add": 30, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "exprate", "add": 33, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "exprate", "add": 35, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "exprate", "add": 39, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "exprate", "add": 40, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "exprate", "add": 44, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "exprate", "add": 45, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "exprate", "add": 50, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "exprate", "add": 55, "rate": true }
+			] }
+		]
+	},
+	"51113": {
+		"id": 51113,
+		"name": {
+			"en": "Drop Boost!",
+			"ar": "Drop Boost!",
+			"br": "Bônus de Drops!",
+			"cns": "掉率提升！",
+			"de": "Drop Boost!",
+			"fi": "Drop Boost!",
+			"fil": "Boost sa Drop!",
+			"fr": "Chance d'avoir des objets augmentée !",
+			"id": "Drop Boost!",
+			"it": "Drop Boost!",
+			"jp": "ドロップブースト!",
+			"kr": "드롭 부스트!",
+			"nl": "Drop Boost!",
+			"pl": "Drop Boost!",
+			"ru": "Drop Boost!",
+			"sp": "¡Impulso de botín!",
+			"sw": "Drop Boost!",
+			"th": "เพิ่มอัตราดรอป!",
+			"tw": "物品掉落率提升！",
+			"vi": "Drop Boost!"
+		},
+		"description": {
+			"en": "null"
+		},
+		"icon": "lorddrop.png",
+		"level": 1,
+		"element": "none",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": false,
+		"flying": true,
+		"passive": true,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "abilities": [
+				{ "parameter": "droprate", "add": 5, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "droprate", "add": 6, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "droprate", "add": 10, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "droprate", "add": 11, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "droprate", "add": 15, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "droprate", "add": 17, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "droprate", "add": 20, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "droprate", "add": 22, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "droprate", "add": 25, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "droprate", "add": 28, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "droprate", "add": 30, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "droprate", "add": 33, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "droprate", "add": 35, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "droprate", "add": 39, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "droprate", "add": 40, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "droprate", "add": 44, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "droprate", "add": 45, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "droprate", "add": 50, "rate": true }
+			] },
+			{ "abilities": [
+				{ "parameter": "droprate", "add": 55, "rate": true }
+			] }
+		]
+	},
+	"25369": {
+		"id": 25369,
+		"name": {
+			"en": "Lord's Cheer",
+			"ar": "Lord's Cheer",
+			"br": "Lord's Cheer",
+			"cns": "Lord's Cheer",
+			"de": "Lord's Cheer",
+			"fi": "Lord's Cheer",
+			"fil": "Lord's Cheer",
+			"fr": "Lord's Cheer",
+			"id": "Lord's Cheer",
+			"it": "Lord's Cheer",
+			"jp": "Lord's Cheer",
+			"kr": "군주의 응원",
+			"nl": "Lord's Cheer",
+			"pl": "Lord's Cheer",
+			"ru": "Lord's Cheer",
+			"sp": "Lord's Cheer",
+			"sw": "Lord's Cheer",
+			"th": "Lord's Cheer",
+			"tw": "Lord's Cheer",
+			"vi": "Lord's Cheer"
+		},
+		"description": {
+			"en": "Increases the experience and drop rate for yourself or one target.",
+			"ar": "Increases the experience and drop rate for yourself or one target.",
+			"br": "Increases the experience and drop rate for yourself or one target.",
+			"cns": "Increases the experience and drop rate for yourself or one target.",
+			"de": "Increases the experience and drop rate for yourself or one target.",
+			"fi": "Increases the experience and drop rate for yourself or one target.",
+			"fil": "Increases the experience and drop rate for yourself or one target.",
+			"fr": "Increases the experience and drop rate for yourself or one target.",
+			"id": "Increases the experience and drop rate for yourself or one target.",
+			"it": "Increases the experience and drop rate for yourself or one target.",
+			"jp": "Increases the experience and drop rate for yourself or one target.",
+			"kr": "자신 또는 대상 1명의 경험치와 드롭 확률을 증가시킵니다.",
+			"nl": "Increases the experience and drop rate for yourself or one target.",
+			"pl": "Increases the experience and drop rate for yourself or one target.",
+			"ru": "Increases the experience and drop rate for yourself or one target.",
+			"sp": "Increases the experience and drop rate for yourself or one target.",
+			"sw": "Increases the experience and drop rate for yourself or one target.",
+			"th": "Increases the experience and drop rate for yourself or one target.",
+			"tw": "Increases the experience and drop rate for yourself or one target.",
+			"vi": "Increases the experience and drop rate for yourself or one target."
+		},
+		"icon": "lord1.png",
+		"level": 1,
+		"element": "none",
+		"treePosition": { "x": 0, "y": 0 },
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": false,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "cooldown": 3600, "duration": 3600, "durationPVP": 3600, "abilities": [
+				{ "parameter": "exprate", "add": 10, "rate": true },
+				{ "parameter": "droprate", "add": 10, "rate": true }
+			] }
+		]
+	},
+	"39986": {
+		"id": 39986,
+		"name": {
+			"en": "Lord's Blessing",
+			"ar": "Lord's Blessing",
+			"br": "Lord's Blessing",
+			"cns": "Lord's Blessing",
+			"de": "Lord's Blessing",
+			"fi": "Lord's Blessing",
+			"fil": "Lord's Blessing",
+			"fr": "Lord's Blessing",
+			"id": "Lord's Blessing",
+			"it": "Lord's Blessing",
+			"jp": "Lord's Blessing",
+			"kr": "군주의 축복",
+			"nl": "Lord's Blessing",
+			"pl": "Lord's Blessing",
+			"ru": "Lord's Blessing",
+			"sp": "Lord's Blessing",
+			"sw": "Lord's Blessing",
+			"th": "Lord's Blessing",
+			"tw": "Lord's Blessing",
+			"vi": "Lord's Blessing"
+		},
+		"description": {
+			"en": "Increases attack and defense for yourself or one target.",
+			"ar": "Increases attack and defense for yourself or one target.",
+			"br": "Increases attack and defense for yourself or one target.",
+			"cns": "Increases attack and defense for yourself or one target.",
+			"de": "Increases attack and defense for yourself or one target.",
+			"fi": "Increases attack and defense for yourself or one target.",
+			"fil": "Increases attack and defense for yourself or one target.",
+			"fr": "Increases attack and defense for yourself or one target.",
+			"id": "Increases attack and defense for yourself or one target.",
+			"it": "Increases attack and defense for yourself or one target.",
+			"jp": "Increases attack and defense for yourself or one target.",
+			"kr": "자신 또는 대상 1명의 공격력과 방어력을 증가시킵니다.",
+			"nl": "Increases attack and defense for yourself or one target.",
+			"pl": "Increases attack and defense for yourself or one target.",
+			"ru": "Increases attack and defense for yourself or one target.",
+			"sp": "Increases attack and defense for yourself or one target.",
+			"sw": "Increases attack and defense for yourself or one target.",
+			"th": "Increases attack and defense for yourself or one target.",
+			"tw": "Increases attack and defense for yourself or one target.",
+			"vi": "Increases attack and defense for yourself or one target."
+		},
+		"icon": "lord2.png",
+		"level": 1,
+		"element": "none",
+		"treePosition": { "x": 0, "y": 0 },
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": false,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "cooldown": 3600, "duration": 3600, "durationPVP": 3600, "abilities": [
+				{ "parameter": "attack", "add": 10, "rate": true },
+				{ "parameter": "def", "add": 10, "rate": true }
+			] }
+		]
+	},
+	"23482": {
+		"id": 23482,
+		"name": {
+			"en": "Lord's Love",
+			"ar": "Lord's Love",
+			"br": "Lord's Love",
+			"cns": "Lord's Love",
+			"de": "Lord's Love",
+			"fi": "Lord's Love",
+			"fil": "Lord's Love",
+			"fr": "Lord's Love",
+			"id": "Lord's Love",
+			"it": "Lord's Love",
+			"jp": "Lord's Love",
+			"kr": "군주의 사랑",
+			"nl": "Lord's Love",
+			"pl": "Lord's Love",
+			"ru": "Lord's Love",
+			"sp": "Lord's Love",
+			"sw": "Lord's Love",
+			"th": "Lord's Love",
+			"tw": "Lord's Love",
+			"vi": "Lord's Love"
+		},
+		"description": {
+			"en": "Increases stats for yourself or one target.",
+			"ar": "Increases stats for yourself or one target.",
+			"br": "Increases stats for yourself or one target.",
+			"cns": "Increases stats for yourself or one target.",
+			"de": "Increases stats for yourself or one target.",
+			"fi": "Increases stats for yourself or one target.",
+			"fil": "Increases stats for yourself or one target.",
+			"fr": "Increases stats for yourself or one target.",
+			"id": "Increases stats for yourself or one target.",
+			"it": "Increases stats for yourself or one target.",
+			"jp": "Increases stats for yourself or one target.",
+			"kr": "자신 또는 대상 1명의 능력치를 증가시킵니다.",
+			"nl": "Increases stats for yourself or one target.",
+			"pl": "Increases stats for yourself or one target.",
+			"ru": "Increases stats for yourself or one target.",
+			"sp": "Increases stats for yourself or one target.",
+			"sw": "Increases stats for yourself or one target.",
+			"th": "Increases stats for yourself or one target.",
+			"tw": "Increases stats for yourself or one target.",
+			"vi": "Increases stats for yourself or one target."
+		},
+		"icon": "lord3.png",
+		"level": 1,
+		"element": "none",
+		"treePosition": { "x": 0, "y": 0 },
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": false,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "cooldown": 3600, "duration": 3600, "durationPVP": 3600, "abilities": [
+				{ "parameter": "allstats", "add": 15, "rate": false }
+			] }
+		]
+	},
+	"23318": {
+		"id": 23318,
+		"name": {
+			"en": "Lord's Shout",
+			"ar": "Lord's Shout",
+			"br": "Lord's Shout",
+			"cns": "Lord's Shout",
+			"de": "Lord's Shout",
+			"fi": "Lord's Shout",
+			"fil": "Lord's Shout",
+			"fr": "Lord's Shout",
+			"id": "Lord's Shout",
+			"it": "Lord's Shout",
+			"jp": "Lord's Shout",
+			"kr": "군주의 외침",
+			"nl": "Lord's Shout",
+			"pl": "Lord's Shout",
+			"ru": "Lord's Shout",
+			"sp": "Lord's Shout",
+			"sw": "Lord's Shout",
+			"th": "Lord's Shout",
+			"tw": "Lord's Shout",
+			"vi": "Lord's Shout"
+		},
+		"description": {
+			"en": "Your shout text is colored in green.",
+			"ar": "Your shout text is colored in green.",
+			"br": "Your shout text is colored in green.",
+			"cns": "Your shout text is colored in green.",
+			"de": "Your shout text is colored in green.",
+			"fi": "Your shout text is colored in green.",
+			"fil": "Your shout text is colored in green.",
+			"fr": "Your shout text is colored in green.",
+			"id": "Your shout text is colored in green.",
+			"it": "Your shout text is colored in green.",
+			"jp": "Your shout text is colored in green.",
+			"kr": "확성기 텍스트가 초록색으로 표시됩니다.",
+			"nl": "Your shout text is colored in green.",
+			"pl": "Your shout text is colored in green.",
+			"ru": "Your shout text is colored in green.",
+			"sp": "Your shout text is colored in green.",
+			"sw": "Your shout text is colored in green.",
+			"th": "Your shout text is colored in green.",
+			"tw": "Your shout text is colored in green.",
+			"vi": "Your shout text is colored in green."
+		},
+		"icon": "lord4.png",
+		"level": 1,
+		"element": "none",
+		"treePosition": { "x": 0, "y": 0 },
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": false,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "currentplayer",
+		"levels": [
+			{ "cooldown": 3600, "duration": 3600, "durationPVP": 3600 }
+		]
+	},
+	"59670": {
+		"id": 59670,
+		"name": {
+			"en": "Lord's Call",
+			"ar": "Lord's Call",
+			"br": "Lord's Call",
+			"cns": "Lord's Call",
+			"de": "Lord's Call",
+			"fi": "Lord's Call",
+			"fil": "Lord's Call",
+			"fr": "Lord's Call",
+			"id": "Lord's Call",
+			"it": "Lord's Call",
+			"jp": "Lord's Call",
+			"kr": "군주의 부름",
+			"nl": "Lord's Call",
+			"pl": "Lord's Call",
+			"ru": "Lord's Call",
+			"sp": "Lord's Call",
+			"sw": "Lord's Call",
+			"th": "Lord's Call",
+			"tw": "Lord's Call",
+			"vi": "Lord's Call"
+		},
+		"description": {
+			"en": "Summon the specified player to yourself.",
+			"ar": "Summon the specified player to yourself.",
+			"br": "Summon the specified player to yourself.",
+			"cns": "Summon the specified player to yourself.",
+			"de": "Summon the specified player to yourself.",
+			"fi": "Summon the specified player to yourself.",
+			"fil": "Summon the specified player to yourself.",
+			"fr": "Summon the specified player to yourself.",
+			"id": "Summon the specified player to yourself.",
+			"it": "Summon the specified player to yourself.",
+			"jp": "Summon the specified player to yourself.",
+			"kr": "지정한 플레이어를 자신에게 소환합니다.",
+			"nl": "Summon the specified player to yourself.",
+			"pl": "Summon the specified player to yourself.",
+			"ru": "Summon the specified player to yourself.",
+			"sp": "Summon the specified player to yourself.",
+			"sw": "Summon the specified player to yourself.",
+			"th": "Summon the specified player to yourself.",
+			"tw": "Summon the specified player to yourself.",
+			"vi": "Summon the specified player to yourself."
+		},
+		"icon": "lord6.png",
+		"level": 1,
+		"element": "none",
+		"treePosition": { "x": 0, "y": 0 },
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": false,
+		"flying": true,
+		"passive": true,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "cooldown": 3600 }
+		]
+	},
+	"43034": {
+		"id": 43034,
+		"name": {
+			"en": "Lord's Teleport",
+			"ar": "Lord's Teleport",
+			"br": "Lord's Teleport",
+			"cns": "Lord's Teleport",
+			"de": "Lord's Teleport",
+			"fi": "Lord's Teleport",
+			"fil": "Lord's Teleport",
+			"fr": "Lord's Teleport",
+			"id": "Lord's Teleport",
+			"it": "Lord's Teleport",
+			"jp": "Lord's Teleport",
+			"kr": "군주의 텔레포트",
+			"nl": "Lord's Teleport",
+			"pl": "Lord's Teleport",
+			"ru": "Lord's Teleport",
+			"sp": "Lord's Teleport",
+			"sw": "Lord's Teleport",
+			"th": "Lord's Teleport",
+			"tw": "Lord's Teleport",
+			"vi": "Lord's Teleport"
+		},
+		"description": {
+			"en": "Teleport to the specified player.",
+			"ar": "Teleport to the specified player.",
+			"br": "Teleport to the specified player.",
+			"cns": "Teleport to the specified player.",
+			"de": "Teleport to the specified player.",
+			"fi": "Teleport to the specified player.",
+			"fil": "Teleport to the specified player.",
+			"fr": "Teleport to the specified player.",
+			"id": "Teleport to the specified player.",
+			"it": "Teleport to the specified player.",
+			"jp": "Teleport to the specified player.",
+			"kr": "지정한 플레이어에게 텔레포트합니다.",
+			"nl": "Teleport to the specified player.",
+			"pl": "Teleport to the specified player.",
+			"ru": "Teleport to the specified player.",
+			"sp": "Teleport to the specified player.",
+			"sw": "Teleport to the specified player.",
+			"th": "Teleport to the specified player.",
+			"tw": "Teleport to the specified player.",
+			"vi": "Teleport to the specified player."
+		},
+		"icon": "lord7.png",
+		"level": 1,
+		"element": "none",
+		"treePosition": { "x": 0, "y": 0 },
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": false,
+		"flying": true,
+		"passive": true,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "cooldown": 600 }
+		]
+	},
+	"41072": {
+		"id": 41072,
+		"name": {
+			"en": "Lord's Party",
+			"ar": "Lord's Party",
+			"br": "Lord's Party",
+			"cns": "Lord's Party",
+			"de": "Lord's Party",
+			"fi": "Lord's Party",
+			"fil": "Lord's Party",
+			"fr": "Lord's Party",
+			"id": "Lord's Party",
+			"it": "Lord's Party",
+			"jp": "Lord's Party",
+			"kr": "군주의 극단",
+			"nl": "Lord's Party",
+			"pl": "Lord's Party",
+			"ru": "Lord's Party",
+			"sp": "Lord's Party",
+			"sw": "Lord's Party",
+			"th": "Lord's Party",
+			"tw": "Lord's Party",
+			"vi": "Lord's Party"
+		},
+		"description": {
+			"en": "Any party skills used by you have increased duration. This skill is permanently enabled.",
+			"ar": "Any party skills used by you have increased duration. This skill is permanently enabled.",
+			"br": "Any party skills used by you have increased duration. This skill is permanently enabled.",
+			"cns": "Any party skills used by you have increased duration. This skill is permanently enabled.",
+			"de": "Any party skills used by you have increased duration. This skill is permanently enabled.",
+			"fi": "Any party skills used by you have increased duration. This skill is permanently enabled.",
+			"fil": "Any party skills used by you have increased duration. This skill is permanently enabled.",
+			"fr": "Any party skills used by you have increased duration. This skill is permanently enabled.",
+			"id": "Any party skills used by you have increased duration. This skill is permanently enabled.",
+			"it": "Any party skills used by you have increased duration. This skill is permanently enabled.",
+			"jp": "Any party skills used by you have increased duration. This skill is permanently enabled.",
+			"kr": "자신이 사용하는 극단 스킬의 지속시간이 증가합니다. 이 스킬은 항상 활성화되어 있습니다.",
+			"nl": "Any party skills used by you have increased duration. This skill is permanently enabled.",
+			"pl": "Any party skills used by you have increased duration. This skill is permanently enabled.",
+			"ru": "Any party skills used by you have increased duration. This skill is permanently enabled.",
+			"sp": "Any party skills used by you have increased duration. This skill is permanently enabled.",
+			"sw": "Any party skills used by you have increased duration. This skill is permanently enabled.",
+			"th": "Any party skills used by you have increased duration. This skill is permanently enabled.",
+			"tw": "Any party skills used by you have increased duration. This skill is permanently enabled.",
+			"vi": "Any party skills used by you have increased duration. This skill is permanently enabled."
+		},
+		"icon": "lord8.png",
+		"level": 1,
+		"element": "none",
+		"treePosition": { "x": 0, "y": 0 },
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": false,
+		"flying": true,
+		"passive": true,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": []
+	},
 	"5973": {
 		"id": 5973,
 		"name": {
@@ -6142,7 +6787,7 @@
 			"tw": "增加怪物的攻擊力，但怪物的承受傷害也增加。",
 			"vi": "Quái vật đã tăng sức tấn công và tăng sát thương nhận vào."
 		},
-		"icon": "sklking08.png",
+		"icon": "lord8.png",
 		"level": 1,
 		"element": "none",
 		"magic": false,
@@ -7645,9 +8290,9 @@
 				{ "parameter": "attribute", "attribute": "poison", "dotMode": "currentdamage", "dotValue": 20 },
 				{ "parameter": "hprestoration", "add": -30, "rate": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 1, "dotTick": 1.5, "duration": 15, "durationPVP": 15, "abilities": [
-				{ "parameter": "attribute", "attribute": "poison", "dotMode": "currentdamage", "dotValue": 20 },
-				{ "parameter": "hprestoration", "add": -30, "rate": true }
+			{ "minAttack": 1, "maxAttack": 1, "dotTick": 1.25, "duration": 15, "durationPVP": 15, "abilities": [
+				{ "parameter": "attribute", "attribute": "poison", "dotMode": "currentdamage", "dotValue": 25 },
+				{ "parameter": "hprestoration", "add": -40, "rate": true }
 			] },
 			{ "minAttack": 1, "maxAttack": 1, "dotTick": 1.5, "duration": 15, "durationPVP": 15, "abilities": [
 				{ "parameter": "attribute", "attribute": "poison", "dotMode": "currentdamage", "dotValue": 20 },
@@ -12331,6 +12976,1628 @@
 				{ "parameter": "incomingdamage", "add": -10, "rate": true },
 				{ "parameter": "droprate", "add": 10, "rate": true }
 			] }
+		]
+	},
+	"28575": {
+		"id": 28575,
+		"name": {
+			"en": "Overlap Damage",
+			"ar": "Overlap Damage",
+			"br": "Overlap Damage",
+			"cns": "Overlap Damage",
+			"de": "Overlap Damage",
+			"fi": "Overlap Damage",
+			"fil": "Overlap Damage",
+			"fr": "Overlap Damage",
+			"id": "Overlap Damage",
+			"it": "Overlap Damage",
+			"jp": "Overlap Damage",
+			"kr": "중첩 피해",
+			"nl": "Overlap Damage",
+			"pl": "Overlap Damage",
+			"ru": "Overlap Damage",
+			"sp": "Overlap Damage",
+			"sw": "Overlap Damage",
+			"th": "Overlap Damage",
+			"tw": "Overlap Damage",
+			"vi": "Overlap Damage"
+		},
+		"description": {
+			"en": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
+			"ar": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
+			"br": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
+			"cns": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
+			"de": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
+			"fi": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
+			"fil": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
+			"fr": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
+			"id": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
+			"it": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
+			"jp": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
+			"kr": "타격할 때마다 중첩되는 화상 효과가 증가하며, 최대 중첩 시 추가 피해를 줍니다.",
+			"nl": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
+			"pl": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
+			"ru": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
+			"sp": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
+			"sw": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
+			"th": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
+			"tw": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
+			"vi": "Overlap burning effect increases with each hit and deals extra damage at full stacks."
+		},
+		"icon": "bilbloodfist.png",
+		"level": 1,
+		"element": "fire",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": true,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "duration": 10, "durationPVP": 10 }
+		]
+	},
+	"39730": {
+		"id": 39730,
+		"name": {
+			"en": "Pull Target",
+			"ar": "Pull Target",
+			"br": "Pull Target",
+			"cns": "Pull Target",
+			"de": "Pull Target",
+			"fi": "Pull Target",
+			"fil": "Pull Target",
+			"fr": "Pull Target",
+			"id": "Pull Target",
+			"it": "Pull Target",
+			"jp": "Pull Target",
+			"kr": "대상 끌어당김",
+			"nl": "Pull Target",
+			"pl": "Pull Target",
+			"ru": "Pull Target",
+			"sp": "Pull Target",
+			"sw": "Pull Target",
+			"th": "Pull Target",
+			"tw": "Pull Target",
+			"vi": "Pull Target"
+		},
+		"description": {
+			"en": "Pulled toward the caster, unable to move.",
+			"ar": "Pulled toward the caster, unable to move.",
+			"br": "Pulled toward the caster, unable to move.",
+			"cns": "Pulled toward the caster, unable to move.",
+			"de": "Pulled toward the caster, unable to move.",
+			"fi": "Pulled toward the caster, unable to move.",
+			"fil": "Pulled toward the caster, unable to move.",
+			"fr": "Pulled toward the caster, unable to move.",
+			"id": "Pulled toward the caster, unable to move.",
+			"it": "Pulled toward the caster, unable to move.",
+			"jp": "Pulled toward the caster, unable to move.",
+			"kr": "시전자에게 끌려가 이동할 수 없습니다.",
+			"nl": "Pulled toward the caster, unable to move.",
+			"pl": "Pulled toward the caster, unable to move.",
+			"ru": "Pulled toward the caster, unable to move.",
+			"sp": "Pulled toward the caster, unable to move.",
+			"sw": "Pulled toward the caster, unable to move.",
+			"th": "Pulled toward the caster, unable to move.",
+			"tw": "Pulled toward the caster, unable to move.",
+			"vi": "Pulled toward the caster, unable to move."
+		},
+		"icon": "acryoypullin.png",
+		"level": 1,
+		"element": "none",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": true,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "cooldown": 10, "duration": 5, "durationPVP": 5 },
+			{ "cooldown": 10, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "attribute", "attribute": "root" }
+			] }
+		]
+	},
+	"41583": {
+		"id": 41583,
+		"name": {
+			"en": "Knock Back",
+			"ar": "Knock Back",
+			"br": "Knock Back",
+			"cns": "Knock Back",
+			"de": "Knock Back",
+			"fi": "Knock Back",
+			"fil": "Knock Back",
+			"fr": "Knock Back",
+			"id": "Knock Back",
+			"it": "Knock Back",
+			"jp": "Knock Back",
+			"kr": "밀어내기",
+			"nl": "Knock Back",
+			"pl": "Knock Back",
+			"ru": "Knock Back",
+			"sp": "Knock Back",
+			"sw": "Knock Back",
+			"th": "Knock Back",
+			"tw": "Knock Back",
+			"vi": "Knock Back"
+		},
+		"description": {
+			"en": "Struck by a powerful blow and knocked back.",
+			"ar": "Struck by a powerful blow and knocked back.",
+			"br": "Struck by a powerful blow and knocked back.",
+			"cns": "Struck by a powerful blow and knocked back.",
+			"de": "Struck by a powerful blow and knocked back.",
+			"fi": "Struck by a powerful blow and knocked back.",
+			"fil": "Struck by a powerful blow and knocked back.",
+			"fr": "Struck by a powerful blow and knocked back.",
+			"id": "Struck by a powerful blow and knocked back.",
+			"it": "Struck by a powerful blow and knocked back.",
+			"jp": "Struck by a powerful blow and knocked back.",
+			"kr": "강력한 일격에 맞아 뒤로 밀려납니다.",
+			"nl": "Struck by a powerful blow and knocked back.",
+			"pl": "Struck by a powerful blow and knocked back.",
+			"ru": "Struck by a powerful blow and knocked back.",
+			"sp": "Struck by a powerful blow and knocked back.",
+			"sw": "Struck by a powerful blow and knocked back.",
+			"th": "Struck by a powerful blow and knocked back.",
+			"tw": "Struck by a powerful blow and knocked back.",
+			"vi": "Struck by a powerful blow and knocked back."
+		},
+		"icon": "eleearearsqk.png",
+		"level": 1,
+		"element": "none",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": true,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "cooldown": 20 },
+			{ "cooldown": 20, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "attribute", "attribute": "stun" }
+			] },
+			{}
+		]
+	},
+	"49817": {
+		"id": 49817,
+		"name": {
+			"en": "Burning Impact",
+			"ar": "Burning Impact",
+			"br": "Burning Impact",
+			"cns": "Burning Impact",
+			"de": "Burning Impact",
+			"fi": "Burning Impact",
+			"fil": "Burning Impact",
+			"fr": "Burning Impact",
+			"id": "Burning Impact",
+			"it": "Burning Impact",
+			"jp": "Burning Impact",
+			"kr": "화염 충격",
+			"nl": "Burning Impact",
+			"pl": "Burning Impact",
+			"ru": "Burning Impact",
+			"sp": "Burning Impact",
+			"sw": "Burning Impact",
+			"th": "Burning Impact",
+			"tw": "Burning Impact",
+			"vi": "Burning Impact"
+		},
+		"description": {
+			"en": "Ignited by the fiery impact, taking burn damage.",
+			"ar": "Ignited by the fiery impact, taking burn damage.",
+			"br": "Ignited by the fiery impact, taking burn damage.",
+			"cns": "Ignited by the fiery impact, taking burn damage.",
+			"de": "Ignited by the fiery impact, taking burn damage.",
+			"fi": "Ignited by the fiery impact, taking burn damage.",
+			"fil": "Ignited by the fiery impact, taking burn damage.",
+			"fr": "Ignited by the fiery impact, taking burn damage.",
+			"id": "Ignited by the fiery impact, taking burn damage.",
+			"it": "Ignited by the fiery impact, taking burn damage.",
+			"jp": "Ignited by the fiery impact, taking burn damage.",
+			"kr": "불타는 충격에 점화되어 화상 피해를 입습니다.",
+			"nl": "Ignited by the fiery impact, taking burn damage.",
+			"pl": "Ignited by the fiery impact, taking burn damage.",
+			"ru": "Ignited by the fiery impact, taking burn damage.",
+			"sp": "Ignited by the fiery impact, taking burn damage.",
+			"sw": "Ignited by the fiery impact, taking burn damage.",
+			"th": "Ignited by the fiery impact, taking burn damage.",
+			"tw": "Ignited by the fiery impact, taking burn damage.",
+			"vi": "Ignited by the fiery impact, taking burn damage."
+		},
+		"icon": "elefirbunfil.png",
+		"level": 1,
+		"element": "fire",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": true,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "dotTick": 1, "cooldown": 20.003, "duration": 3, "durationPVP": 3, "abilities": [
+				{ "parameter": "attribute", "attribute": "bleeding", "dotMode": "fixedvalue", "dotValue": 200 }
+			] }
+		]
+	},
+	"54556": {
+		"id": 54556,
+		"name": {
+			"en": "Toxic Impact",
+			"ar": "Toxic Impact",
+			"br": "Toxic Impact",
+			"cns": "Toxic Impact",
+			"de": "Toxic Impact",
+			"fi": "Toxic Impact",
+			"fil": "Toxic Impact",
+			"fr": "Toxic Impact",
+			"id": "Toxic Impact",
+			"it": "Toxic Impact",
+			"jp": "Toxic Impact",
+			"kr": "맹독 충격",
+			"nl": "Toxic Impact",
+			"pl": "Toxic Impact",
+			"ru": "Toxic Impact",
+			"sp": "Toxic Impact",
+			"sw": "Toxic Impact",
+			"th": "Toxic Impact",
+			"tw": "Toxic Impact",
+			"vi": "Toxic Impact"
+		},
+		"description": {
+			"en": "Poisoned by the toxic impact, taking periodic damage.",
+			"ar": "Poisoned by the toxic impact, taking periodic damage.",
+			"br": "Poisoned by the toxic impact, taking periodic damage.",
+			"cns": "Poisoned by the toxic impact, taking periodic damage.",
+			"de": "Poisoned by the toxic impact, taking periodic damage.",
+			"fi": "Poisoned by the toxic impact, taking periodic damage.",
+			"fil": "Poisoned by the toxic impact, taking periodic damage.",
+			"fr": "Poisoned by the toxic impact, taking periodic damage.",
+			"id": "Poisoned by the toxic impact, taking periodic damage.",
+			"it": "Poisoned by the toxic impact, taking periodic damage.",
+			"jp": "Poisoned by the toxic impact, taking periodic damage.",
+			"kr": "독성 충격에 중독되어 주기적으로 피해를 입습니다.",
+			"nl": "Poisoned by the toxic impact, taking periodic damage.",
+			"pl": "Poisoned by the toxic impact, taking periodic damage.",
+			"ru": "Poisoned by the toxic impact, taking periodic damage.",
+			"sp": "Poisoned by the toxic impact, taking periodic damage.",
+			"sw": "Poisoned by the toxic impact, taking periodic damage.",
+			"th": "Poisoned by the toxic impact, taking periodic damage.",
+			"tw": "Poisoned by the toxic impact, taking periodic damage.",
+			"vi": "Poisoned by the toxic impact, taking periodic damage."
+		},
+		"icon": "jstintpoison.png",
+		"level": 1,
+		"element": "none",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": true,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "dotTick": 1, "cooldown": 20.002, "duration": 10, "durationPVP": 10, "abilities": [
+				{ "parameter": "attribute", "attribute": "poison", "dotMode": "fixedvalue", "dotValue": 100 },
+				{ "parameter": "hprestoration", "add": -30, "rate": true }
+			] }
+		]
+	},
+	"34019": {
+		"id": 34019,
+		"name": {
+			"en": "Frost Impact",
+			"ar": "Frost Impact",
+			"br": "Frost Impact",
+			"cns": "Frost Impact",
+			"de": "Frost Impact",
+			"fi": "Frost Impact",
+			"fil": "Frost Impact",
+			"fr": "Frost Impact",
+			"id": "Frost Impact",
+			"it": "Frost Impact",
+			"jp": "Frost Impact",
+			"kr": "냉기 충격",
+			"nl": "Frost Impact",
+			"pl": "Frost Impact",
+			"ru": "Frost Impact",
+			"sp": "Frost Impact",
+			"sw": "Frost Impact",
+			"th": "Frost Impact",
+			"tw": "Frost Impact",
+			"vi": "Frost Impact"
+		},
+		"description": {
+			"en": "Slowed by the chilling impact, reducing movement and attack speed.",
+			"ar": "Slowed by the chilling impact, reducing movement and attack speed.",
+			"br": "Slowed by the chilling impact, reducing movement and attack speed.",
+			"cns": "Slowed by the chilling impact, reducing movement and attack speed.",
+			"de": "Slowed by the chilling impact, reducing movement and attack speed.",
+			"fi": "Slowed by the chilling impact, reducing movement and attack speed.",
+			"fil": "Slowed by the chilling impact, reducing movement and attack speed.",
+			"fr": "Slowed by the chilling impact, reducing movement and attack speed.",
+			"id": "Slowed by the chilling impact, reducing movement and attack speed.",
+			"it": "Slowed by the chilling impact, reducing movement and attack speed.",
+			"jp": "Slowed by the chilling impact, reducing movement and attack speed.",
+			"kr": "차가운 충격에 둔화되어 이동 속도와 공격 속도가 감소합니다.",
+			"nl": "Slowed by the chilling impact, reducing movement and attack speed.",
+			"pl": "Slowed by the chilling impact, reducing movement and attack speed.",
+			"ru": "Slowed by the chilling impact, reducing movement and attack speed.",
+			"sp": "Slowed by the chilling impact, reducing movement and attack speed.",
+			"sw": "Slowed by the chilling impact, reducing movement and attack speed.",
+			"th": "Slowed by the chilling impact, reducing movement and attack speed.",
+			"tw": "Slowed by the chilling impact, reducing movement and attack speed.",
+			"vi": "Slowed by the chilling impact, reducing movement and attack speed."
+		},
+		"icon": "elewaticeshk.png",
+		"level": 1,
+		"element": "none",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": true,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "duration": 10, "durationPVP": 10, "abilities": [
+				{ "parameter": "speed", "add": -5, "rate": true },
+				{ "parameter": "attackspeed", "add": -25, "rate": true },
+				{ "parameter": "attribute", "attribute": "slow" }
+			] }
+		]
+	},
+	"30845": {
+		"id": 30845,
+		"name": {
+			"en": "Shock Impact",
+			"ar": "Shock Impact",
+			"br": "Shock Impact",
+			"cns": "Shock Impact",
+			"de": "Shock Impact",
+			"fi": "Shock Impact",
+			"fil": "Shock Impact",
+			"fr": "Shock Impact",
+			"id": "Shock Impact",
+			"it": "Shock Impact",
+			"jp": "Shock Impact",
+			"kr": "전격 충격",
+			"nl": "Shock Impact",
+			"pl": "Shock Impact",
+			"ru": "Shock Impact",
+			"sp": "Shock Impact",
+			"sw": "Shock Impact",
+			"th": "Shock Impact",
+			"tw": "Shock Impact",
+			"vi": "Shock Impact"
+		},
+		"description": {
+			"en": "Struck by a powerful impact, taking additional fixed damage.",
+			"ar": "Struck by a powerful impact, taking additional fixed damage.",
+			"br": "Struck by a powerful impact, taking additional fixed damage.",
+			"cns": "Struck by a powerful impact, taking additional fixed damage.",
+			"de": "Struck by a powerful impact, taking additional fixed damage.",
+			"fi": "Struck by a powerful impact, taking additional fixed damage.",
+			"fil": "Struck by a powerful impact, taking additional fixed damage.",
+			"fr": "Struck by a powerful impact, taking additional fixed damage.",
+			"id": "Struck by a powerful impact, taking additional fixed damage.",
+			"it": "Struck by a powerful impact, taking additional fixed damage.",
+			"jp": "Struck by a powerful impact, taking additional fixed damage.",
+			"kr": "강력한 충격에 맞아 추가 고정 피해를 입습니다.",
+			"nl": "Struck by a powerful impact, taking additional fixed damage.",
+			"pl": "Struck by a powerful impact, taking additional fixed damage.",
+			"ru": "Struck by a powerful impact, taking additional fixed damage.",
+			"sp": "Struck by a powerful impact, taking additional fixed damage.",
+			"sw": "Struck by a powerful impact, taking additional fixed damage.",
+			"th": "Struck by a powerful impact, taking additional fixed damage.",
+			"tw": "Struck by a powerful impact, taking additional fixed damage.",
+			"vi": "Struck by a powerful impact, taking additional fixed damage."
+		},
+		"icon": "jstintbleedi.png",
+		"level": 1,
+		"element": "none",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": true,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "dotTick": 0.09, "duration": 0.1, "durationPVP": 0.1, "abilities": [
+				{ "parameter": "attribute", "attribute": "bleeding", "dotMode": "fixedvalue", "dotValue": 10 }
+			] }
+		]
+	},
+	"55454": {
+		"id": 55454,
+		"name": {
+			"en": "Bleeding",
+			"ar": "Bleeding",
+			"br": "Bleeding",
+			"cns": "Bleeding",
+			"de": "Bleeding",
+			"fi": "Bleeding",
+			"fil": "Bleeding",
+			"fr": "Bleeding",
+			"id": "Bleeding",
+			"it": "Bleeding",
+			"jp": "Bleeding",
+			"kr": "출혈",
+			"nl": "Bleeding",
+			"pl": "Bleeding",
+			"ru": "Bleeding",
+			"sp": "Bleeding",
+			"sw": "Bleeding",
+			"th": "Bleeding",
+			"tw": "Bleeding",
+			"vi": "Bleeding"
+		},
+		"description": {
+			"en": "Taking continuous damage from bleeding wounds.",
+			"ar": "Taking continuous damage from bleeding wounds.",
+			"br": "Taking continuous damage from bleeding wounds.",
+			"cns": "Taking continuous damage from bleeding wounds.",
+			"de": "Taking continuous damage from bleeding wounds.",
+			"fi": "Taking continuous damage from bleeding wounds.",
+			"fil": "Taking continuous damage from bleeding wounds.",
+			"fr": "Taking continuous damage from bleeding wounds.",
+			"id": "Taking continuous damage from bleeding wounds.",
+			"it": "Taking continuous damage from bleeding wounds.",
+			"jp": "Taking continuous damage from bleeding wounds.",
+			"kr": "출혈 상처로 인해 지속 피해를 입습니다.",
+			"nl": "Taking continuous damage from bleeding wounds.",
+			"pl": "Taking continuous damage from bleeding wounds.",
+			"ru": "Taking continuous damage from bleeding wounds.",
+			"sp": "Taking continuous damage from bleeding wounds.",
+			"sw": "Taking continuous damage from bleeding wounds.",
+			"th": "Taking continuous damage from bleeding wounds.",
+			"tw": "Taking continuous damage from bleeding wounds.",
+			"vi": "Taking continuous damage from bleeding wounds."
+		},
+		"icon": "bilbloodfist.png",
+		"level": 1,
+		"element": "none",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": true,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "dotTick": 1, "cooldown": 20.004, "duration": 10, "durationPVP": 10, "abilities": [
+				{ "parameter": "attribute", "attribute": "bleeding", "dotMode": "fixedvalue", "dotValue": 1 }
+			] }
+		]
+	},
+	"49062": {
+		"id": 49062,
+		"name": {
+			"en": "Rampage",
+			"ar": "Rampage",
+			"br": "Rampage",
+			"cns": "Rampage",
+			"de": "Rampage",
+			"fi": "Rampage",
+			"fil": "Rampage",
+			"fr": "Rampage",
+			"id": "Rampage",
+			"it": "Rampage",
+			"jp": "Rampage",
+			"kr": "광폭화",
+			"nl": "Rampage",
+			"pl": "Rampage",
+			"ru": "Rampage",
+			"sp": "Rampage",
+			"sw": "Rampage",
+			"th": "Rampage",
+			"tw": "Rampage",
+			"vi": "Rampage"
+		},
+		"description": {
+			"en": "Enters a rampage state, increasing speed and attack power.",
+			"ar": "Enters a rampage state, increasing speed and attack power.",
+			"br": "Enters a rampage state, increasing speed and attack power.",
+			"cns": "Enters a rampage state, increasing speed and attack power.",
+			"de": "Enters a rampage state, increasing speed and attack power.",
+			"fi": "Enters a rampage state, increasing speed and attack power.",
+			"fil": "Enters a rampage state, increasing speed and attack power.",
+			"fr": "Enters a rampage state, increasing speed and attack power.",
+			"id": "Enters a rampage state, increasing speed and attack power.",
+			"it": "Enters a rampage state, increasing speed and attack power.",
+			"jp": "Enters a rampage state, increasing speed and attack power.",
+			"kr": "광폭화 상태가 되어 속도와 공격력이 증가합니다.",
+			"nl": "Enters a rampage state, increasing speed and attack power.",
+			"pl": "Enters a rampage state, increasing speed and attack power.",
+			"ru": "Enters a rampage state, increasing speed and attack power.",
+			"sp": "Enters a rampage state, increasing speed and attack power.",
+			"sw": "Enters a rampage state, increasing speed and attack power.",
+			"th": "Enters a rampage state, increasing speed and attack power.",
+			"tw": "Enters a rampage state, increasing speed and attack power.",
+			"vi": "Enters a rampage state, increasing speed and attack power."
+		},
+		"icon": "bldsupberser.png",
+		"level": 1,
+		"element": "none",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": false,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "currentplayer",
+		"levels": [
+			{ "duration": 9999.999, "durationPVP": 9999.999, "abilities": [
+				{ "parameter": "speed", "add": 1, "rate": true },
+				{ "parameter": "attack", "add": 1, "rate": true }
+			] }
+		]
+	},
+	"31045": {
+		"id": 31045,
+		"name": {
+			"en": "Overlap Defense Break",
+			"ar": "Overlap Defense Break",
+			"br": "Overlap Defense Break",
+			"cns": "Overlap Defense Break",
+			"de": "Overlap Defense Break",
+			"fi": "Overlap Defense Break",
+			"fil": "Overlap Defense Break",
+			"fr": "Overlap Defense Break",
+			"id": "Overlap Defense Break",
+			"it": "Overlap Defense Break",
+			"jp": "Overlap Defense Break",
+			"kr": "중첩 방어 붕괴",
+			"nl": "Overlap Defense Break",
+			"pl": "Overlap Defense Break",
+			"ru": "Overlap Defense Break",
+			"sp": "Overlap Defense Break",
+			"sw": "Overlap Defense Break",
+			"th": "Overlap Defense Break",
+			"tw": "Overlap Defense Break",
+			"vi": "Overlap Defense Break"
+		},
+		"description": {
+			"en": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
+			"ar": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
+			"br": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
+			"cns": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
+			"de": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
+			"fi": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
+			"fil": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
+			"fr": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
+			"id": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
+			"it": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
+			"jp": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
+			"kr": "타격할 때마다 중첩되는 전기 효과가 증가하며, 최대 중첩 시 방어력이 감소합니다.",
+			"nl": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
+			"pl": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
+			"ru": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
+			"sp": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
+			"sw": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
+			"th": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
+			"tw": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
+			"vi": "Overlap electric effect increases with each hit and lowers defense at full stacks."
+		},
+		"icon": "mershiepanbar.png",
+		"level": 1,
+		"element": "electricity",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": true,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "duration": 10, "durationPVP": 10 }
+		]
+	},
+	"23533": {
+		"id": 23533,
+		"name": {
+			"en": "Defense Break",
+			"ar": "Defense Break",
+			"br": "Defense Break",
+			"cns": "Defense Break",
+			"de": "Defense Break",
+			"fi": "Defense Break",
+			"fil": "Defense Break",
+			"fr": "Defense Break",
+			"id": "Defense Break",
+			"it": "Defense Break",
+			"jp": "Defense Break",
+			"kr": "방어 붕괴",
+			"nl": "Defense Break",
+			"pl": "Defense Break",
+			"ru": "Defense Break",
+			"sp": "Defense Break",
+			"sw": "Defense Break",
+			"th": "Defense Break",
+			"tw": "Defense Break",
+			"vi": "Defense Break"
+		},
+		"description": {
+			"en": "Reduces target's defense and magic resistance.",
+			"ar": "Reduces target's defense and magic resistance.",
+			"br": "Reduces target's defense and magic resistance.",
+			"cns": "Reduces target's defense and magic resistance.",
+			"de": "Reduces target's defense and magic resistance.",
+			"fi": "Reduces target's defense and magic resistance.",
+			"fil": "Reduces target's defense and magic resistance.",
+			"fr": "Reduces target's defense and magic resistance.",
+			"id": "Reduces target's defense and magic resistance.",
+			"it": "Reduces target's defense and magic resistance.",
+			"jp": "Reduces target's defense and magic resistance.",
+			"kr": "대상의 방어력과 마법 저항력을 감소시킵니다.",
+			"nl": "Reduces target's defense and magic resistance.",
+			"pl": "Reduces target's defense and magic resistance.",
+			"ru": "Reduces target's defense and magic resistance.",
+			"sp": "Reduces target's defense and magic resistance.",
+			"sw": "Reduces target's defense and magic resistance.",
+			"th": "Reduces target's defense and magic resistance.",
+			"tw": "Reduces target's defense and magic resistance.",
+			"vi": "Reduces target's defense and magic resistance."
+		},
+		"icon": "mershiepanbar.png",
+		"level": 1,
+		"element": "none",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": true,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "def", "add": -10, "rate": true },
+				{ "parameter": "magicdefense", "add": -10, "rate": true }
+			] }
+		]
+	},
+	"36503": {
+		"id": 36503,
+		"name": {
+			"en": "All Immunity",
+			"ar": "All Immunity",
+			"br": "All Immunity",
+			"cns": "All Immunity",
+			"de": "All Immunity",
+			"fi": "All Immunity",
+			"fil": "All Immunity",
+			"fr": "All Immunity",
+			"id": "All Immunity",
+			"it": "All Immunity",
+			"jp": "All Immunity",
+			"kr": "전체 면역",
+			"nl": "All Immunity",
+			"pl": "All Immunity",
+			"ru": "All Immunity",
+			"sp": "All Immunity",
+			"sw": "All Immunity",
+			"th": "All Immunity",
+			"tw": "All Immunity",
+			"vi": "All Immunity"
+		},
+		"description": {
+			"en": "Protects the monster from all debuffs.",
+			"ar": "Protects the monster from all debuffs.",
+			"br": "Protects the monster from all debuffs.",
+			"cns": "Protects the monster from all debuffs.",
+			"de": "Protects the monster from all debuffs.",
+			"fi": "Protects the monster from all debuffs.",
+			"fil": "Protects the monster from all debuffs.",
+			"fr": "Protects the monster from all debuffs.",
+			"id": "Protects the monster from all debuffs.",
+			"it": "Protects the monster from all debuffs.",
+			"jp": "Protects the monster from all debuffs.",
+			"kr": "몬스터를 모든 디버프로부터 보호합니다.",
+			"nl": "Protects the monster from all debuffs.",
+			"pl": "Protects the monster from all debuffs.",
+			"ru": "Protects the monster from all debuffs.",
+			"sp": "Protects the monster from all debuffs.",
+			"sw": "Protects the monster from all debuffs.",
+			"th": "Protects the monster from all debuffs.",
+			"tw": "Protects the monster from all debuffs.",
+			"vi": "Protects the monster from all debuffs."
+		},
+		"icon": "stunimmunity.png",
+		"level": 1,
+		"element": "none",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": false,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "currentplayer",
+		"levels": [
+			{ "duration": 3600, "durationPVP": 3600, "abilities": [
+				{ "parameter": "attributeimmunity", "attribute": "all" }
+			] }
+		]
+	},
+	"22940": {
+		"id": 22940,
+		"name": {
+			"en": "Slow",
+			"ar": "Slow",
+			"br": "Slow",
+			"cns": "Slow",
+			"de": "Slow",
+			"fi": "Slow",
+			"fil": "Slow",
+			"fr": "Slow",
+			"id": "Slow",
+			"it": "Slow",
+			"jp": "Slow",
+			"kr": "느림",
+			"nl": "Slow",
+			"pl": "Slow",
+			"ru": "Slow",
+			"sp": "Slow",
+			"sw": "Slow",
+			"th": "Slow",
+			"tw": "Slow",
+			"vi": "Slow"
+		},
+		"description": {
+			"en": "Reduces the target's movement speed for a short time.",
+			"ar": "Reduces the target's movement speed for a short time.",
+			"br": "Reduces the target's movement speed for a short time.",
+			"cns": "Reduces the target's movement speed for a short time.",
+			"de": "Reduces the target's movement speed for a short time.",
+			"fi": "Reduces the target's movement speed for a short time.",
+			"fil": "Reduces the target's movement speed for a short time.",
+			"fr": "Reduces the target's movement speed for a short time.",
+			"id": "Reduces the target's movement speed for a short time.",
+			"it": "Reduces the target's movement speed for a short time.",
+			"jp": "Reduces the target's movement speed for a short time.",
+			"kr": "짧은 시간 동안 대상의 이동 속도를 감소시킵니다.",
+			"nl": "Reduces the target's movement speed for a short time.",
+			"pl": "Reduces the target's movement speed for a short time.",
+			"ru": "Reduces the target's movement speed for a short time.",
+			"sp": "Reduces the target's movement speed for a short time.",
+			"sw": "Reduces the target's movement speed for a short time.",
+			"th": "Reduces the target's movement speed for a short time.",
+			"tw": "Reduces the target's movement speed for a short time.",
+			"vi": "Reduces the target's movement speed for a short time."
+		},
+		"icon": "elemulavalan.png",
+		"level": 1,
+		"element": "none",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": true,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "duration": 3, "durationPVP": 3, "abilities": [
+				{ "parameter": "speed", "add": -3, "rate": true }
+			] },
+			{ "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "speed", "add": -2, "rate": true }
+			] },
+			{ "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "speed", "add": -5, "rate": true }
+			] },
+			{ "duration": 1.5, "durationPVP": 1.5, "abilities": [
+				{ "parameter": "speed", "add": -2, "rate": true }
+			] }
+		]
+	},
+	"36086": {
+		"id": 36086,
+		"name": {
+			"en": "Stun",
+			"ar": "Stun",
+			"br": "Stun",
+			"cns": "Stun",
+			"de": "Stun",
+			"fi": "Stun",
+			"fil": "Stun",
+			"fr": "Stun",
+			"id": "Stun",
+			"it": "Stun",
+			"jp": "Stun",
+			"kr": "기절",
+			"nl": "Stun",
+			"pl": "Stun",
+			"ru": "Stun",
+			"sp": "Stun",
+			"sw": "Stun",
+			"th": "Stun",
+			"tw": "Stun",
+			"vi": "Stun"
+		},
+		"description": {
+			"en": "You are stunned and cannot move.",
+			"ar": "You are stunned and cannot move.",
+			"br": "You are stunned and cannot move.",
+			"cns": "You are stunned and cannot move.",
+			"de": "You are stunned and cannot move.",
+			"fi": "You are stunned and cannot move.",
+			"fil": "You are stunned and cannot move.",
+			"fr": "You are stunned and cannot move.",
+			"id": "You are stunned and cannot move.",
+			"it": "You are stunned and cannot move.",
+			"jp": "You are stunned and cannot move.",
+			"kr": "기절하여 움직일 수 없는 상태입니다.",
+			"nl": "You are stunned and cannot move.",
+			"pl": "You are stunned and cannot move.",
+			"ru": "You are stunned and cannot move.",
+			"sp": "You are stunned and cannot move.",
+			"sw": "You are stunned and cannot move.",
+			"th": "You are stunned and cannot move.",
+			"tw": "You are stunned and cannot move.",
+			"vi": "You are stunned and cannot move."
+		},
+		"icon": "magspekestone.png",
+		"level": 1,
+		"element": "none",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": true,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "duration": 2, "durationPVP": 2, "abilities": [
+				{ "parameter": "attribute", "attribute": "stun" }
+			] },
+			{ "duration": 3, "durationPVP": 3, "abilities": [
+				{ "parameter": "attribute", "attribute": "stun" }
+			] },
+			{ "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "attribute", "attribute": "stun" }
+			] }
+		]
+	},
+	"59629": {
+		"id": 59629,
+		"name": {
+			"en": "Groggy Weakness",
+			"ar": "Groggy Weakness",
+			"br": "Groggy Weakness",
+			"cns": "Groggy Weakness",
+			"de": "Groggy Weakness",
+			"fi": "Groggy Weakness",
+			"fil": "Groggy Weakness",
+			"fr": "Groggy Weakness",
+			"id": "Groggy Weakness",
+			"it": "Groggy Weakness",
+			"jp": "Groggy Weakness",
+			"kr": "그로기 약화",
+			"nl": "Groggy Weakness",
+			"pl": "Groggy Weakness",
+			"ru": "Groggy Weakness",
+			"sp": "Groggy Weakness",
+			"sw": "Groggy Weakness",
+			"th": "Groggy Weakness",
+			"tw": "Groggy Weakness",
+			"vi": "Groggy Weakness"
+		},
+		"description": {
+			"en": "While groggy, the target receives increased damage from all attacks.",
+			"ar": "While groggy, the target receives increased damage from all attacks.",
+			"br": "While groggy, the target receives increased damage from all attacks.",
+			"cns": "While groggy, the target receives increased damage from all attacks.",
+			"de": "While groggy, the target receives increased damage from all attacks.",
+			"fi": "While groggy, the target receives increased damage from all attacks.",
+			"fil": "While groggy, the target receives increased damage from all attacks.",
+			"fr": "While groggy, the target receives increased damage from all attacks.",
+			"id": "While groggy, the target receives increased damage from all attacks.",
+			"it": "While groggy, the target receives increased damage from all attacks.",
+			"jp": "While groggy, the target receives increased damage from all attacks.",
+			"kr": "그로기 상태에서는 모든 공격으로부터 받는 피해가 증가합니다.",
+			"nl": "While groggy, the target receives increased damage from all attacks.",
+			"pl": "While groggy, the target receives increased damage from all attacks.",
+			"ru": "While groggy, the target receives increased damage from all attacks.",
+			"sp": "While groggy, the target receives increased damage from all attacks.",
+			"sw": "While groggy, the target receives increased damage from all attacks.",
+			"th": "While groggy, the target receives increased damage from all attacks.",
+			"tw": "While groggy, the target receives increased damage from all attacks.",
+			"vi": "While groggy, the target receives increased damage from all attacks."
+		},
+		"icon": "mershiepanbar.png",
+		"level": 1,
+		"element": "none",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": false,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "currentplayer",
+		"levels": [
+			{ "duration": 10, "durationPVP": 10, "abilities": [
+				{ "parameter": "incomingdamage", "add": 30, "rate": true },
+				{ "parameter": "attribute", "attribute": "stun" }
+			] }
+		]
+	},
+	"52430": {
+		"id": 52430,
+		"name": {
+			"en": "Slow On Water",
+			"ar": "Slow On Water",
+			"br": "Slow On Water",
+			"cns": "Slow On Water",
+			"de": "Slow On Water",
+			"fi": "Slow On Water",
+			"fil": "Slow On Water",
+			"fr": "Slow On Water",
+			"id": "Slow On Water",
+			"it": "Slow On Water",
+			"jp": "Slow On Water",
+			"kr": "물 위 감속",
+			"nl": "Slow On Water",
+			"pl": "Slow On Water",
+			"ru": "Slow On Water",
+			"sp": "Slow On Water",
+			"sw": "Slow On Water",
+			"th": "Slow On Water",
+			"tw": "Slow On Water",
+			"vi": "Slow On Water"
+		},
+		"description": {
+			"en": "Reduces movement speed while standing in water.",
+			"ar": "Reduces movement speed while standing in water.",
+			"br": "Reduces movement speed while standing in water.",
+			"cns": "Reduces movement speed while standing in water.",
+			"de": "Reduces movement speed while standing in water.",
+			"fi": "Reduces movement speed while standing in water.",
+			"fil": "Reduces movement speed while standing in water.",
+			"fr": "Reduces movement speed while standing in water.",
+			"id": "Reduces movement speed while standing in water.",
+			"it": "Reduces movement speed while standing in water.",
+			"jp": "Reduces movement speed while standing in water.",
+			"kr": "물속에 있는 동안 이동 속도가 감소합니다.",
+			"nl": "Reduces movement speed while standing in water.",
+			"pl": "Reduces movement speed while standing in water.",
+			"ru": "Reduces movement speed while standing in water.",
+			"sp": "Reduces movement speed while standing in water.",
+			"sw": "Reduces movement speed while standing in water.",
+			"th": "Reduces movement speed while standing in water.",
+			"tw": "Reduces movement speed while standing in water.",
+			"vi": "Reduces movement speed while standing in water."
+		},
+		"icon": "elemulavalan.png",
+		"level": 1,
+		"element": "none",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": true,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "duration": 3600, "durationPVP": 3600, "abilities": [
+				{ "parameter": "speed", "add": -2, "rate": true }
+			] }
+		]
+	},
+	"29494": {
+		"id": 29494,
+		"name": {
+			"en": "Overlap Water Heal",
+			"ar": "Overlap Water Heal",
+			"br": "Overlap Water Heal",
+			"cns": "Overlap Water Heal",
+			"de": "Overlap Water Heal",
+			"fi": "Overlap Water Heal",
+			"fil": "Overlap Water Heal",
+			"fr": "Overlap Water Heal",
+			"id": "Overlap Water Heal",
+			"it": "Overlap Water Heal",
+			"jp": "Overlap Water Heal",
+			"kr": "중첩 물 회복",
+			"nl": "Overlap Water Heal",
+			"pl": "Overlap Water Heal",
+			"ru": "Overlap Water Heal",
+			"sp": "Overlap Water Heal",
+			"sw": "Overlap Water Heal",
+			"th": "Overlap Water Heal",
+			"tw": "Overlap Water Heal",
+			"vi": "Overlap Water Heal"
+		},
+		"description": {
+			"en": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
+			"ar": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
+			"br": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
+			"cns": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
+			"de": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
+			"fi": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
+			"fil": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
+			"fr": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
+			"id": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
+			"it": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
+			"jp": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
+			"kr": "대상이 물속에 있는 동안 시간에 따라 HP가 회복됩니다. 효과가 중첩될수록 회복량이 증가합니다.",
+			"nl": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
+			"pl": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
+			"ru": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
+			"sp": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
+			"sw": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
+			"th": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
+			"tw": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
+			"vi": "Restores HP over time while the target is in water. Healing increases with each stack of the effect."
+		},
+		"icon": "rinheahealra.png",
+		"level": 1,
+		"element": "water",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": true,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "duration": 10, "durationPVP": 10 }
+		]
+	},
+	"29906": {
+		"id": 29906,
+		"name": {
+			"en": "Gathering Energy",
+			"ar": "Gathering Energy",
+			"br": "Gathering Energy",
+			"cns": "Gathering Energy",
+			"de": "Gathering Energy",
+			"fi": "Gathering Energy",
+			"fil": "Gathering Energy",
+			"fr": "Gathering Energy",
+			"id": "Gathering Energy",
+			"it": "Gathering Energy",
+			"jp": "Gathering Energy",
+			"kr": "에너지 집중",
+			"nl": "Gathering Energy",
+			"pl": "Gathering Energy",
+			"ru": "Gathering Energy",
+			"sp": "Gathering Energy",
+			"sw": "Gathering Energy",
+			"th": "Gathering Energy",
+			"tw": "Gathering Energy",
+			"vi": "Gathering Energy"
+		},
+		"description": {
+			"en": "Concentrates energy to greatly increase HP recovery for a short duration.",
+			"ar": "Concentrates energy to greatly increase HP recovery for a short duration.",
+			"br": "Concentrates energy to greatly increase HP recovery for a short duration.",
+			"cns": "Concentrates energy to greatly increase HP recovery for a short duration.",
+			"de": "Concentrates energy to greatly increase HP recovery for a short duration.",
+			"fi": "Concentrates energy to greatly increase HP recovery for a short duration.",
+			"fil": "Concentrates energy to greatly increase HP recovery for a short duration.",
+			"fr": "Concentrates energy to greatly increase HP recovery for a short duration.",
+			"id": "Concentrates energy to greatly increase HP recovery for a short duration.",
+			"it": "Concentrates energy to greatly increase HP recovery for a short duration.",
+			"jp": "Concentrates energy to greatly increase HP recovery for a short duration.",
+			"kr": "에너지를 집중하여 짧은 시간 동안 HP 회복량을 크게 증가시킵니다.",
+			"nl": "Concentrates energy to greatly increase HP recovery for a short duration.",
+			"pl": "Concentrates energy to greatly increase HP recovery for a short duration.",
+			"ru": "Concentrates energy to greatly increase HP recovery for a short duration.",
+			"sp": "Concentrates energy to greatly increase HP recovery for a short duration.",
+			"sw": "Concentrates energy to greatly increase HP recovery for a short duration.",
+			"th": "Concentrates energy to greatly increase HP recovery for a short duration.",
+			"tw": "Concentrates energy to greatly increase HP recovery for a short duration.",
+			"vi": "Concentrates energy to greatly increase HP recovery for a short duration."
+		},
+		"icon": "eleeleelemst.png",
+		"level": 1,
+		"element": "none",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": false,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "currentplayer",
+		"levels": [
+			{ "duration": 30, "durationPVP": 30, "abilities": [
+				{ "parameter": "hprecovery", "add": 0.01, "rate": true }
+			] }
+		]
+	},
+	"43989": {
+		"id": 43989,
+		"name": {
+			"en": "Overlap Slow",
+			"ar": "Overlap Slow",
+			"br": "Overlap Slow",
+			"cns": "Overlap Slow",
+			"de": "Overlap Slow",
+			"fi": "Overlap Slow",
+			"fil": "Overlap Slow",
+			"fr": "Overlap Slow",
+			"id": "Overlap Slow",
+			"it": "Overlap Slow",
+			"jp": "Overlap Slow",
+			"kr": "중첩 감속",
+			"nl": "Overlap Slow",
+			"pl": "Overlap Slow",
+			"ru": "Overlap Slow",
+			"sp": "Overlap Slow",
+			"sw": "Overlap Slow",
+			"th": "Overlap Slow",
+			"tw": "Overlap Slow",
+			"vi": "Overlap Slow"
+		},
+		"description": {
+			"en": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
+			"ar": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
+			"br": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
+			"cns": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
+			"de": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
+			"fi": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
+			"fil": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
+			"fr": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
+			"id": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
+			"it": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
+			"jp": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
+			"kr": "이동 속도를 감소시키며, 중첩이 쌓일수록 감속 효과가 강해집니다.",
+			"nl": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
+			"pl": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
+			"ru": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
+			"sp": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
+			"sw": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
+			"th": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
+			"tw": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
+			"vi": "Reduces movement speed, with the slow effect becoming stronger as stacks increase."
+		},
+		"icon": "elemulavalan.png",
+		"level": 1,
+		"element": "earth",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": true,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "duration": 10, "durationPVP": 10 }
+		]
+	},
+	"48641": {
+		"id": 48641,
+		"name": {
+			"en": "Overlap Freeze",
+			"ar": "Overlap Freeze",
+			"br": "Overlap Freeze",
+			"cns": "Overlap Freeze",
+			"de": "Overlap Freeze",
+			"fi": "Overlap Freeze",
+			"fil": "Overlap Freeze",
+			"fr": "Overlap Freeze",
+			"id": "Overlap Freeze",
+			"it": "Overlap Freeze",
+			"jp": "Overlap Freeze",
+			"kr": "중첩 빙결",
+			"nl": "Overlap Freeze",
+			"pl": "Overlap Freeze",
+			"ru": "Overlap Freeze",
+			"sp": "Overlap Freeze",
+			"sw": "Overlap Freeze",
+			"th": "Overlap Freeze",
+			"tw": "Overlap Freeze",
+			"vi": "Overlap Freeze"
+		},
+		"description": {
+			"en": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
+			"ar": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
+			"br": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
+			"cns": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
+			"de": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
+			"fi": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
+			"fil": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
+			"fr": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
+			"id": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
+			"it": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
+			"jp": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
+			"kr": "냉기 효과가 중첩되어 최대 중첩 시 대상이 빙결됩니다.",
+			"nl": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
+			"pl": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
+			"ru": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
+			"sp": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
+			"sw": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
+			"th": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
+			"tw": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
+			"vi": "Applies a stacking chill effect that eventually freezes the target at full stacks."
+		},
+		"icon": "elemulavalan.png",
+		"level": 1,
+		"element": "water",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": true,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "duration": 10, "durationPVP": 10 }
+		]
+	},
+	"59783": {
+		"id": 59783,
+		"name": {
+			"en": "Freeze",
+			"ar": "Freeze",
+			"br": "Freeze",
+			"cns": "Freeze",
+			"de": "Freeze",
+			"fi": "Freeze",
+			"fil": "Freeze",
+			"fr": "Freeze",
+			"id": "Freeze",
+			"it": "Freeze",
+			"jp": "Freeze",
+			"kr": "프리즈",
+			"nl": "Freeze",
+			"pl": "Freeze",
+			"ru": "Freeze",
+			"sp": "Freeze",
+			"sw": "Freeze",
+			"th": "Freeze",
+			"tw": "Freeze",
+			"vi": "Freeze"
+		},
+		"description": {
+			"en": "Freezes the target, preventing movement and actions for a short duration.",
+			"ar": "Freezes the target, preventing movement and actions for a short duration.",
+			"br": "Freezes the target, preventing movement and actions for a short duration.",
+			"cns": "Freezes the target, preventing movement and actions for a short duration.",
+			"de": "Freezes the target, preventing movement and actions for a short duration.",
+			"fi": "Freezes the target, preventing movement and actions for a short duration.",
+			"fil": "Freezes the target, preventing movement and actions for a short duration.",
+			"fr": "Freezes the target, preventing movement and actions for a short duration.",
+			"id": "Freezes the target, preventing movement and actions for a short duration.",
+			"it": "Freezes the target, preventing movement and actions for a short duration.",
+			"jp": "Freezes the target, preventing movement and actions for a short duration.",
+			"kr": "대상을 빙결시켜 짧은 시간 동안 이동과 행동을 할 수 없게 만듭니다.",
+			"nl": "Freezes the target, preventing movement and actions for a short duration.",
+			"pl": "Freezes the target, preventing movement and actions for a short duration.",
+			"ru": "Freezes the target, preventing movement and actions for a short duration.",
+			"sp": "Freezes the target, preventing movement and actions for a short duration.",
+			"sw": "Freezes the target, preventing movement and actions for a short duration.",
+			"th": "Freezes the target, preventing movement and actions for a short duration.",
+			"tw": "Freezes the target, preventing movement and actions for a short duration.",
+			"vi": "Freezes the target, preventing movement and actions for a short duration."
+		},
+		"icon": "elemulavalan.png",
+		"level": 1,
+		"element": "none",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": true,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "duration": 3, "durationPVP": 3, "abilities": [
+				{ "parameter": "attribute", "attribute": "stunandrooting" }
+			] }
+		]
+	},
+	"58751": {
+		"id": 58751,
+		"name": {
+			"en": "Max HP Reduction",
+			"ar": "Max HP Reduction",
+			"br": "Max HP Reduction",
+			"cns": "Max HP Reduction",
+			"de": "Max HP Reduction",
+			"fi": "Max HP Reduction",
+			"fil": "Max HP Reduction",
+			"fr": "Max HP Reduction",
+			"id": "Max HP Reduction",
+			"it": "Max HP Reduction",
+			"jp": "Max HP Reduction",
+			"kr": "최대 HP 감소",
+			"nl": "Max HP Reduction",
+			"pl": "Max HP Reduction",
+			"ru": "Max HP Reduction",
+			"sp": "Max HP Reduction",
+			"sw": "Max HP Reduction",
+			"th": "Max HP Reduction",
+			"tw": "Max HP Reduction",
+			"vi": "Max HP Reduction"
+		},
+		"description": {
+			"en": "Reduces the target's maximum HP for a short duration.",
+			"ar": "Reduces the target's maximum HP for a short duration.",
+			"br": "Reduces the target's maximum HP for a short duration.",
+			"cns": "Reduces the target's maximum HP for a short duration.",
+			"de": "Reduces the target's maximum HP for a short duration.",
+			"fi": "Reduces the target's maximum HP for a short duration.",
+			"fil": "Reduces the target's maximum HP for a short duration.",
+			"fr": "Reduces the target's maximum HP for a short duration.",
+			"id": "Reduces the target's maximum HP for a short duration.",
+			"it": "Reduces the target's maximum HP for a short duration.",
+			"jp": "Reduces the target's maximum HP for a short duration.",
+			"kr": "짧은 시간 동안 대상의 최대 HP를 감소시킵니다.",
+			"nl": "Reduces the target's maximum HP for a short duration.",
+			"pl": "Reduces the target's maximum HP for a short duration.",
+			"ru": "Reduces the target's maximum HP for a short duration.",
+			"sp": "Reduces the target's maximum HP for a short duration.",
+			"sw": "Reduces the target's maximum HP for a short duration.",
+			"th": "Reduces the target's maximum HP for a short duration.",
+			"tw": "Reduces the target's maximum HP for a short duration.",
+			"vi": "Reduces the target's maximum HP for a short duration."
+		},
+		"icon": "elemulavalan.png",
+		"level": 1,
+		"element": "none",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": true,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "duration": 3600, "durationPVP": 3600, "abilities": [
+				{ "parameter": "maxhp", "add": -5, "rate": true }
+			] },
+			{ "duration": 3600, "durationPVP": 3600, "abilities": [
+				{ "parameter": "maxhp", "add": -10, "rate": true }
+			] },
+			{ "duration": 3600, "durationPVP": 3600, "abilities": [
+				{ "parameter": "maxhp", "add": -15, "rate": true }
+			] },
+			{ "duration": 3600, "durationPVP": 3600, "abilities": [
+				{ "parameter": "maxhp", "add": -20, "rate": true }
+			] }
+		]
+	},
+	"14591": {
+		"id": 14591,
+		"name": {
+			"en": "Grabbed by Tentacle",
+			"ar": "Grabbed by Tentacle",
+			"br": "Grabbed by Tentacle",
+			"cns": "Grabbed by Tentacle",
+			"de": "Grabbed by Tentacle",
+			"fi": "Grabbed by Tentacle",
+			"fil": "Grabbed by Tentacle",
+			"fr": "Grabbed by Tentacle",
+			"id": "Grabbed by Tentacle",
+			"it": "Grabbed by Tentacle",
+			"jp": "Grabbed by Tentacle",
+			"kr": "촉수에 붙잡힘",
+			"nl": "Grabbed by Tentacle",
+			"pl": "Grabbed by Tentacle",
+			"ru": "Grabbed by Tentacle",
+			"sp": "Grabbed by Tentacle",
+			"sw": "Grabbed by Tentacle",
+			"th": "Grabbed by Tentacle",
+			"tw": "Grabbed by Tentacle",
+			"vi": "Grabbed by Tentacle"
+		},
+		"description": {
+			"en": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
+			"ar": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
+			"br": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
+			"cns": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
+			"de": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
+			"fi": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
+			"fil": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
+			"fr": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
+			"id": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
+			"it": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
+			"jp": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
+			"kr": "촉수에 붙잡혀 이동할 수 없으며 지속 피해를 입습니다.",
+			"nl": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
+			"pl": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
+			"ru": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
+			"sp": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
+			"sw": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
+			"th": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
+			"tw": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
+			"vi": "The target is restrained by a tentacle, unable to move and taking continuous damage."
+		},
+		"icon": "webbed.png",
+		"level": 1,
+		"element": "none",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": true,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "dotTick": 1, "duration": 100, "durationPVP": 100, "abilities": [
+				{ "parameter": "speed", "add": -10, "rate": true },
+				{ "parameter": "attribute", "attribute": "stunandrooting" }
+			] }
+		]
+	},
+	"43786": {
+		"id": 43786,
+		"name": {
+			"en": "Stun",
+			"ar": "Stun",
+			"br": "Stun",
+			"cns": "Stun",
+			"de": "Stun",
+			"fi": "Stun",
+			"fil": "Stun",
+			"fr": "Stun",
+			"id": "Stun",
+			"it": "Stun",
+			"jp": "Stun",
+			"kr": "기절",
+			"nl": "Stun",
+			"pl": "Stun",
+			"ru": "Stun",
+			"sp": "Stun",
+			"sw": "Stun",
+			"th": "Stun",
+			"tw": "Stun",
+			"vi": "Stun"
+		},
+		"description": {
+			"en": "You are stunned and cannot move.",
+			"ar": "You are stunned and cannot move.",
+			"br": "You are stunned and cannot move.",
+			"cns": "You are stunned and cannot move.",
+			"de": "You are stunned and cannot move.",
+			"fi": "You are stunned and cannot move.",
+			"fil": "You are stunned and cannot move.",
+			"fr": "You are stunned and cannot move.",
+			"id": "You are stunned and cannot move.",
+			"it": "You are stunned and cannot move.",
+			"jp": "You are stunned and cannot move.",
+			"kr": "기절하여 움직일 수 없는 상태입니다.",
+			"nl": "You are stunned and cannot move.",
+			"pl": "You are stunned and cannot move.",
+			"ru": "You are stunned and cannot move.",
+			"sp": "You are stunned and cannot move.",
+			"sw": "You are stunned and cannot move.",
+			"th": "You are stunned and cannot move.",
+			"tw": "You are stunned and cannot move.",
+			"vi": "You are stunned and cannot move."
+		},
+		"icon": "magspekestone.png",
+		"level": 1,
+		"element": "none",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": false,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "currentplayer",
+		"levels": [
+			{ "duration": 3600, "durationPVP": 3600, "abilities": [
+				{ "parameter": "attribute", "attribute": "stun" }
+			] }
+		]
+	},
+	"50169": {
+		"id": 50169,
+		"name": {
+			"en": "Sand Shield",
+			"ar": "Sand Shield",
+			"br": "Sand Shield",
+			"cns": "Sand Shield",
+			"de": "Sand Shield",
+			"fi": "Sand Shield",
+			"fil": "Sand Shield",
+			"fr": "Sand Shield",
+			"id": "Sand Shield",
+			"it": "Sand Shield",
+			"jp": "Sand Shield",
+			"kr": "모래 방패",
+			"nl": "Sand Shield",
+			"pl": "Sand Shield",
+			"ru": "Sand Shield",
+			"sp": "Sand Shield",
+			"sw": "Sand Shield",
+			"th": "Sand Shield",
+			"tw": "Sand Shield",
+			"vi": "Sand Shield"
+		},
+		"description": {
+			"en": "Incoming damage is reduced to 1 for 5 seconds.",
+			"ar": "Incoming damage is reduced to 1 for 5 seconds.",
+			"br": "Incoming damage is reduced to 1 for 5 seconds.",
+			"cns": "Incoming damage is reduced to 1 for 5 seconds.",
+			"de": "Incoming damage is reduced to 1 for 5 seconds.",
+			"fi": "Incoming damage is reduced to 1 for 5 seconds.",
+			"fil": "Incoming damage is reduced to 1 for 5 seconds.",
+			"fr": "Incoming damage is reduced to 1 for 5 seconds.",
+			"id": "Incoming damage is reduced to 1 for 5 seconds.",
+			"it": "Incoming damage is reduced to 1 for 5 seconds.",
+			"jp": "Incoming damage is reduced to 1 for 5 seconds.",
+			"kr": "5초 동안 받는 피해가 1로 감소합니다.",
+			"nl": "Incoming damage is reduced to 1 for 5 seconds.",
+			"pl": "Incoming damage is reduced to 1 for 5 seconds.",
+			"ru": "Incoming damage is reduced to 1 for 5 seconds.",
+			"sp": "Incoming damage is reduced to 1 for 5 seconds.",
+			"sw": "Incoming damage is reduced to 1 for 5 seconds.",
+			"th": "Incoming damage is reduced to 1 for 5 seconds.",
+			"tw": "Incoming damage is reduced to 1 for 5 seconds.",
+			"vi": "Incoming damage is reduced to 1 for 5 seconds."
+		},
+		"icon": "mershiepanbar.png",
+		"level": 1,
+		"element": "none",
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": false,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "currentplayer",
+		"levels": [
+			{ "duration": 5, "durationPVP": 5 }
 		]
 	},
 	"2472": {
@@ -17196,7 +19463,7 @@
 				{ "parameter": "speed", "add": 1, "rate": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "duration", "stat": "int", "scale": 2, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "speed", "stat": "int", "scale": 0.04, "maximum": 18, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "speed", "stat": "int", "scale": 0.04, "maximum": 19, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 30, "casting": 1, "duration": 150, "durationPVP": 150, "abilities": [
 				{ "parameter": "speed", "add": 2, "rate": true }
@@ -17262,31 +19529,31 @@
 				{ "parameter": "speed", "add": 12, "rate": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "duration", "stat": "int", "scale": 2, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "speed", "stat": "int", "scale": 0.04, "maximum": 20, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "speed", "stat": "int", "scale": 0.04, "maximum": 19, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 30, "casting": 1, "duration": 180, "durationPVP": 180, "abilities": [
 				{ "parameter": "speed", "add": 13, "rate": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "duration", "stat": "int", "scale": 2, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "speed", "stat": "int", "scale": 0.04, "maximum": 20, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "speed", "stat": "int", "scale": 0.04, "maximum": 19, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 30, "casting": 1, "duration": 190, "durationPVP": 190, "abilities": [
 				{ "parameter": "speed", "add": 14, "rate": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "duration", "stat": "int", "scale": 2, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "speed", "stat": "int", "scale": 0.04, "maximum": 20, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "speed", "stat": "int", "scale": 0.04, "maximum": 19, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 30, "casting": 1, "duration": 200, "durationPVP": 200, "abilities": [
 				{ "parameter": "speed", "add": 15, "rate": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "duration", "stat": "int", "scale": 2, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "speed", "stat": "int", "scale": 0.04, "maximum": 20, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "speed", "stat": "int", "scale": 0.04, "maximum": 19, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 30, "casting": 1, "duration": 210, "durationPVP": 210, "abilities": [
 				{ "parameter": "speed", "add": 16, "rate": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "duration", "stat": "int", "scale": 2, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "speed", "stat": "int", "scale": 0.04, "maximum": 20, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "speed", "stat": "int", "scale": 0.04, "maximum": 19, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 30, "casting": 1, "duration": 220, "durationPVP": 220, "abilities": [
 				{ "parameter": "speed", "add": 17, "rate": true }
@@ -35541,6 +37808,7 @@
 		"treePosition": { "x": 0, "y": 78 },
 		"magic": true,
 		"elementType": "electricity",
+		"debuffType": "weaken",
 		"requirements": [
 			{ "skill": 7080, "level": 6 }
 		],
@@ -35553,27 +37821,37 @@
 		"target": "area",
 		"skillPoints": 10,
 		"levels": [
-			{ "minAttack": 1, "maxAttack": 199, "dotTick": 2, "maxTargets": 10, "maxTargetsPVP": 1, "consumedMP": 112, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 199, "dotTick": 2, "maxTargets": 10, "maxTargetsPVP": 1, "consumedMP": 112, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
+			], "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 201, "dotTick": 2, "maxTargets": 12, "maxTargetsPVP": 2, "consumedMP": 114, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 201, "dotTick": 2, "maxTargets": 12, "maxTargetsPVP": 2, "consumedMP": 114, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
+			], "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.02, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 203, "dotTick": 2, "maxTargets": 14, "maxTargetsPVP": 3, "consumedMP": 116, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 203, "dotTick": 2, "maxTargets": 14, "maxTargetsPVP": 3, "consumedMP": 116, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
+			], "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.04, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 205, "dotTick": 2, "maxTargets": 16, "maxTargetsPVP": 4, "consumedMP": 118, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 205, "dotTick": 2, "maxTargets": 16, "maxTargetsPVP": 4, "consumedMP": 118, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
+			], "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.06, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 207, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 120, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 207, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 120, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
+			], "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.08, "pvp": true, "pve": true }
@@ -35707,6 +37985,7 @@
 		"treePosition": { "x": 0, "y": 0 },
 		"magic": true,
 		"elementType": "electricity",
+		"debuffType": "weaken",
 		"requirements": [
 			{ "skill": 37809, "level": 5 }
 		],
@@ -35719,27 +37998,37 @@
 		"target": "area",
 		"skillPoints": 10,
 		"levels": [
-			{ "minAttack": 1, "maxAttack": 129, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 6, "consumedMP": 112, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 129, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 6, "consumedMP": 112, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
+			], "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 131, "dotTick": 2, "maxTargets": 35, "maxTargetsPVP": 7, "consumedMP": 114, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 131, "dotTick": 2, "maxTargets": 35, "maxTargetsPVP": 7, "consumedMP": 114, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
+			], "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.02, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 133, "dotTick": 2, "maxTargets": 40, "maxTargetsPVP": 8, "consumedMP": 116, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 133, "dotTick": 2, "maxTargets": 40, "maxTargetsPVP": 8, "consumedMP": 116, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
+			], "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.04, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 135, "dotTick": 2, "maxTargets": 45, "maxTargetsPVP": 9, "consumedMP": 118, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 135, "dotTick": 2, "maxTargets": 45, "maxTargetsPVP": 9, "consumedMP": 118, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
+			], "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.06, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 137, "dotTick": 2, "maxTargets": 50, "maxTargetsPVP": 10, "consumedMP": 120, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 137, "dotTick": 2, "maxTargets": 50, "maxTargetsPVP": 10, "consumedMP": 120, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
+			], "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.08, "pvp": true, "pve": true }
@@ -35801,6 +38090,7 @@
 		"treePosition": { "x": 0, "y": 0 },
 		"magic": true,
 		"elementType": "electricity",
+		"debuffType": "weaken",
 		"requirements": [
 			{ "skill": 37809, "level": 5 }
 		],
@@ -35813,27 +38103,37 @@
 		"target": "area",
 		"skillPoints": 10,
 		"levels": [
-			{ "minAttack": 1, "maxAttack": 199, "dotTick": 1, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 112, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 199, "dotTick": 1, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 112, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
+			], "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 201, "dotTick": 1, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 114, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 201, "dotTick": 1, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 114, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
+			], "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.02, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 203, "dotTick": 1, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 116, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 203, "dotTick": 1, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 116, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
+			], "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.04, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 205, "dotTick": 1, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 118, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 205, "dotTick": 1, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 118, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
+			], "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.06, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 207, "dotTick": 1, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 120, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 207, "dotTick": 1, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 120, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
+			], "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.08, "pvp": true, "pve": true }
@@ -35895,6 +38195,7 @@
 		"treePosition": { "x": 0, "y": 0 },
 		"magic": true,
 		"elementType": "electricity",
+		"debuffType": "weaken",
 		"requirements": [
 			{ "skill": 37809, "level": 5 }
 		],
@@ -35907,27 +38208,37 @@
 		"target": "area",
 		"skillPoints": 10,
 		"levels": [
-			{ "minAttack": 1, "maxAttack": 199, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 112, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 199, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 112, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
+			], "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 201, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 114, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 201, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 114, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
+			], "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.02, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 203, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 116, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 203, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 116, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
+			], "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.04, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 205, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 118, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 205, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 118, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
+			], "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.06, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 207, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 120, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 207, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 120, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
+			], "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.08, "pvp": true, "pve": true }
@@ -54399,35 +56710,35 @@
 		"skillPoints": 10,
 		"levels": [
 			{ "consumedMP": 30, "cooldown": 108, "duration": 20, "durationPVP": 10, "abilities": [
-				{ "parameter": "pvemultistrike", "add": 4, "rate": true },
+				{ "parameter": "pvemultistrike", "add": 5, "rate": true },
 				{ "parameter": "pvpmultistrike", "add": 2, "rate": true }
 			], "synergies": [
 				{ "parameter": "pvemultistrike", "skill": 563, "minLevel": 5, "add": true, "scale": 1, "pvp": true, "pve": true },
 				{ "parameter": "pvemultistrike", "skill": 6910, "minLevel": 15, "add": true, "scale": 1, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 31, "cooldown": 96, "duration": 25, "durationPVP": 12.5, "abilities": [
-				{ "parameter": "pvemultistrike", "add": 8, "rate": true },
+				{ "parameter": "pvemultistrike", "add": 10, "rate": true },
 				{ "parameter": "pvpmultistrike", "add": 4, "rate": true }
 			], "synergies": [
 				{ "parameter": "pvemultistrike", "skill": 563, "minLevel": 5, "add": true, "scale": 1, "pvp": true, "pve": true },
 				{ "parameter": "pvemultistrike", "skill": 6910, "minLevel": 15, "add": true, "scale": 1, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 32, "cooldown": 84, "duration": 30, "durationPVP": 15, "abilities": [
-				{ "parameter": "pvemultistrike", "add": 16, "rate": true },
+				{ "parameter": "pvemultistrike", "add": 20, "rate": true },
 				{ "parameter": "pvpmultistrike", "add": 6, "rate": true }
 			], "synergies": [
 				{ "parameter": "pvemultistrike", "skill": 563, "minLevel": 5, "add": true, "scale": 1, "pvp": true, "pve": true },
 				{ "parameter": "pvemultistrike", "skill": 6910, "minLevel": 15, "add": true, "scale": 1, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 33, "cooldown": 72, "duration": 35, "durationPVP": 17.5, "abilities": [
-				{ "parameter": "pvemultistrike", "add": 24, "rate": true },
+				{ "parameter": "pvemultistrike", "add": 30, "rate": true },
 				{ "parameter": "pvpmultistrike", "add": 8, "rate": true }
 			], "synergies": [
 				{ "parameter": "pvemultistrike", "skill": 563, "minLevel": 5, "add": true, "scale": 1, "pvp": true, "pve": true },
 				{ "parameter": "pvemultistrike", "skill": 6910, "minLevel": 15, "add": true, "scale": 1, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 34, "cooldown": 60, "duration": 40, "durationPVP": 20, "abilities": [
-				{ "parameter": "pvemultistrike", "add": 30, "rate": true },
+				{ "parameter": "pvemultistrike", "add": 40, "rate": true },
 				{ "parameter": "pvpmultistrike", "add": 10, "rate": true }
 			], "synergies": [
 				{ "parameter": "pvemultistrike", "skill": 563, "minLevel": 5, "add": true, "scale": 1, "pvp": true, "pve": true },
@@ -54502,35 +56813,35 @@
 		"skillPoints": 10,
 		"levels": [
 			{ "consumedMP": 30, "cooldown": 60, "duration": 40, "durationPVP": 20, "abilities": [
-				{ "parameter": "pvemultistrike", "add": 32, "rate": true },
+				{ "parameter": "pvemultistrike", "add": 42, "rate": true },
 				{ "parameter": "pvpmultistrike", "add": 11, "rate": true }
 			], "synergies": [
 				{ "parameter": "pvemultistrike", "skill": 563, "minLevel": 5, "add": true, "scale": 1, "pvp": true, "pve": true },
 				{ "parameter": "pvemultistrike", "skill": 6910, "minLevel": 15, "add": true, "scale": 1, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 31, "cooldown": 60, "duration": 40, "durationPVP": 20, "abilities": [
-				{ "parameter": "pvemultistrike", "add": 34, "rate": true },
+				{ "parameter": "pvemultistrike", "add": 44, "rate": true },
 				{ "parameter": "pvpmultistrike", "add": 12, "rate": true }
 			], "synergies": [
 				{ "parameter": "pvemultistrike", "skill": 563, "minLevel": 5, "add": true, "scale": 1, "pvp": true, "pve": true },
 				{ "parameter": "pvemultistrike", "skill": 6910, "minLevel": 15, "add": true, "scale": 1, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 32, "cooldown": 60, "duration": 40, "durationPVP": 20, "abilities": [
-				{ "parameter": "pvemultistrike", "add": 36, "rate": true },
+				{ "parameter": "pvemultistrike", "add": 46, "rate": true },
 				{ "parameter": "pvpmultistrike", "add": 13, "rate": true }
 			], "synergies": [
 				{ "parameter": "pvemultistrike", "skill": 563, "minLevel": 5, "add": true, "scale": 1, "pvp": true, "pve": true },
 				{ "parameter": "pvemultistrike", "skill": 6910, "minLevel": 15, "add": true, "scale": 1, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 33, "cooldown": 60, "duration": 40, "durationPVP": 20, "abilities": [
-				{ "parameter": "pvemultistrike", "add": 38, "rate": true },
+				{ "parameter": "pvemultistrike", "add": 48, "rate": true },
 				{ "parameter": "pvpmultistrike", "add": 14, "rate": true }
 			], "synergies": [
 				{ "parameter": "pvemultistrike", "skill": 563, "minLevel": 5, "add": true, "scale": 1, "pvp": true, "pve": true },
 				{ "parameter": "pvemultistrike", "skill": 6910, "minLevel": 15, "add": true, "scale": 1, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 34, "cooldown": 60, "duration": 40, "durationPVP": 20, "abilities": [
-				{ "parameter": "pvemultistrike", "add": 40, "rate": true },
+				{ "parameter": "pvemultistrike", "add": 50, "rate": true },
 				{ "parameter": "pvpmultistrike", "add": 15, "rate": true }
 			], "synergies": [
 				{ "parameter": "pvemultistrike", "skill": 563, "minLevel": 5, "add": true, "scale": 1, "pvp": true, "pve": true },
@@ -54605,35 +56916,35 @@
 		"skillPoints": 10,
 		"levels": [
 			{ "consumedMP": 30, "cooldown": 60, "duration": 44, "durationPVP": 23, "abilities": [
-				{ "parameter": "pvemultistrike", "add": 30, "rate": true },
+				{ "parameter": "pvemultistrike", "add": 40, "rate": true },
 				{ "parameter": "pvpmultistrike", "add": 10, "rate": true }
 			], "synergies": [
 				{ "parameter": "pvemultistrike", "skill": 563, "minLevel": 5, "add": true, "scale": 1, "pvp": true, "pve": true },
 				{ "parameter": "pvemultistrike", "skill": 6910, "minLevel": 15, "add": true, "scale": 1, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 31, "cooldown": 60, "duration": 48, "durationPVP": 24, "abilities": [
-				{ "parameter": "pvemultistrike", "add": 30, "rate": true },
+				{ "parameter": "pvemultistrike", "add": 40, "rate": true },
 				{ "parameter": "pvpmultistrike", "add": 10, "rate": true }
 			], "synergies": [
 				{ "parameter": "pvemultistrike", "skill": 563, "minLevel": 5, "add": true, "scale": 1, "pvp": true, "pve": true },
 				{ "parameter": "pvemultistrike", "skill": 6910, "minLevel": 15, "add": true, "scale": 1, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 32, "cooldown": 60, "duration": 52, "durationPVP": 25, "abilities": [
-				{ "parameter": "pvemultistrike", "add": 30, "rate": true },
+				{ "parameter": "pvemultistrike", "add": 40, "rate": true },
 				{ "parameter": "pvpmultistrike", "add": 10, "rate": true }
 			], "synergies": [
 				{ "parameter": "pvemultistrike", "skill": 563, "minLevel": 5, "add": true, "scale": 1, "pvp": true, "pve": true },
 				{ "parameter": "pvemultistrike", "skill": 6910, "minLevel": 15, "add": true, "scale": 1, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 33, "cooldown": 60, "duration": 56, "durationPVP": 26, "abilities": [
-				{ "parameter": "pvemultistrike", "add": 30, "rate": true },
+				{ "parameter": "pvemultistrike", "add": 40, "rate": true },
 				{ "parameter": "pvpmultistrike", "add": 10, "rate": true }
 			], "synergies": [
 				{ "parameter": "pvemultistrike", "skill": 563, "minLevel": 5, "add": true, "scale": 1, "pvp": true, "pve": true },
 				{ "parameter": "pvemultistrike", "skill": 6910, "minLevel": 15, "add": true, "scale": 1, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 34, "cooldown": 60, "duration": 60, "durationPVP": 27, "abilities": [
-				{ "parameter": "pvemultistrike", "add": 30, "rate": true },
+				{ "parameter": "pvemultistrike", "add": 40, "rate": true },
 				{ "parameter": "pvpmultistrike", "add": 10, "rate": true }
 			], "synergies": [
 				{ "parameter": "pvemultistrike", "skill": 563, "minLevel": 5, "add": true, "scale": 1, "pvp": true, "pve": true },
@@ -54708,35 +57019,35 @@
 		"skillPoints": 10,
 		"levels": [
 			{ "consumedMP": 30, "cooldown": 54, "duration": 40, "durationPVP": 20, "abilities": [
-				{ "parameter": "pvemultistrike", "add": 30, "rate": true },
+				{ "parameter": "pvemultistrike", "add": 40, "rate": true },
 				{ "parameter": "pvpmultistrike", "add": 10, "rate": true }
 			], "synergies": [
 				{ "parameter": "pvemultistrike", "skill": 563, "minLevel": 5, "add": true, "scale": 1, "pvp": true, "pve": true },
 				{ "parameter": "pvemultistrike", "skill": 6910, "minLevel": 15, "add": true, "scale": 1, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 31, "cooldown": 52, "duration": 40, "durationPVP": 20, "abilities": [
-				{ "parameter": "pvemultistrike", "add": 30, "rate": true },
+				{ "parameter": "pvemultistrike", "add": 40, "rate": true },
 				{ "parameter": "pvpmultistrike", "add": 10, "rate": true }
 			], "synergies": [
 				{ "parameter": "pvemultistrike", "skill": 563, "minLevel": 5, "add": true, "scale": 1, "pvp": true, "pve": true },
 				{ "parameter": "pvemultistrike", "skill": 6910, "minLevel": 15, "add": true, "scale": 1, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 32, "cooldown": 48, "duration": 40, "durationPVP": 20, "abilities": [
-				{ "parameter": "pvemultistrike", "add": 30, "rate": true },
+				{ "parameter": "pvemultistrike", "add": 40, "rate": true },
 				{ "parameter": "pvpmultistrike", "add": 10, "rate": true }
 			], "synergies": [
 				{ "parameter": "pvemultistrike", "skill": 563, "minLevel": 5, "add": true, "scale": 1, "pvp": true, "pve": true },
 				{ "parameter": "pvemultistrike", "skill": 6910, "minLevel": 15, "add": true, "scale": 1, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 33, "cooldown": 44, "duration": 40, "durationPVP": 20, "abilities": [
-				{ "parameter": "pvemultistrike", "add": 30, "rate": true },
+				{ "parameter": "pvemultistrike", "add": 40, "rate": true },
 				{ "parameter": "pvpmultistrike", "add": 10, "rate": true }
 			], "synergies": [
 				{ "parameter": "pvemultistrike", "skill": 563, "minLevel": 5, "add": true, "scale": 1, "pvp": true, "pve": true },
 				{ "parameter": "pvemultistrike", "skill": 6910, "minLevel": 15, "add": true, "scale": 1, "pvp": true, "pve": true }
 			] },
 			{ "consumedMP": 34, "cooldown": 40, "duration": 40, "durationPVP": 20, "abilities": [
-				{ "parameter": "pvemultistrike", "add": 30, "rate": true },
+				{ "parameter": "pvemultistrike", "add": 40, "rate": true },
 				{ "parameter": "pvpmultistrike", "add": 10, "rate": true }
 			], "synergies": [
 				{ "parameter": "pvemultistrike", "skill": 563, "minLevel": 5, "add": true, "scale": 1, "pvp": true, "pve": true },
@@ -57418,40 +59729,40 @@
 		"target": "area",
 		"skillPoints": 10,
 		"levels": [
-			{ "minAttack": 550, "maxAttack": 551, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 30, "cooldown": 180, "casting": 5, "spellRange": 6, "synergies": [
+			{ "minAttack": 440, "maxAttack": 441, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 30, "cooldown": 180, "casting": 5, "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.5, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.5, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.2, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 550, "maxAttack": 551, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 30, "cooldown": 180, "casting": 5, "spellRange": 6, "synergies": [
+			{ "minAttack": 440, "maxAttack": 441, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 30, "cooldown": 180, "casting": 5, "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.52, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.52, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.02, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.02, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.22, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.02, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 551, "maxAttack": 552, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 32, "cooldown": 180, "casting": 5, "spellRange": 6, "synergies": [
+			{ "minAttack": 441, "maxAttack": 442, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 32, "cooldown": 180, "casting": 5, "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.54, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.54, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.04, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.04, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.24, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.04, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 551, "maxAttack": 552, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 32, "cooldown": 180, "casting": 5, "spellRange": 6, "synergies": [
+			{ "minAttack": 441, "maxAttack": 442, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 32, "cooldown": 180, "casting": 5, "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.56, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.56, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.06, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.06, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.26, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.06, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 552, "maxAttack": 553, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 34, "cooldown": 180, "casting": 5, "spellRange": 6, "synergies": [
+			{ "minAttack": 442, "maxAttack": 443, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 34, "cooldown": 180, "casting": 5, "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.58, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.58, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.08, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.08, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.28, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.08, "pvp": true, "pve": true }
 			] }
 		]
 	},
@@ -57518,55 +59829,55 @@
 		"requiresCouple": false,
 		"target": "area",
 		"levels": [
-			{ "minAttack": 550, "maxAttack": 551, "dotTick": 2, "consumedFP": 30, "cooldown": 180, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
+			{ "minAttack": 440, "maxAttack": 441, "dotTick": 2, "consumedFP": 30, "cooldown": 180, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
 				{ "parameter": "attribute", "attribute": "slow" },
 				{ "parameter": "speed", "add": -35, "rate": true }
 			], "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.5, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.5, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.2, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 550, "maxAttack": 551, "dotTick": 2, "consumedFP": 30, "cooldown": 180, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
+			{ "minAttack": 440, "maxAttack": 441, "dotTick": 2, "consumedFP": 30, "cooldown": 180, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
 				{ "parameter": "attribute", "attribute": "slow" },
 				{ "parameter": "speed", "add": -35, "rate": true }
 			], "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.52, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.52, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.02, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.02, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.22, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.02, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 551, "maxAttack": 552, "dotTick": 2, "consumedFP": 32, "cooldown": 180, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
+			{ "minAttack": 441, "maxAttack": 442, "dotTick": 2, "consumedFP": 32, "cooldown": 180, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
 				{ "parameter": "attribute", "attribute": "slow" },
 				{ "parameter": "speed", "add": -35, "rate": true }
 			], "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.54, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.54, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.04, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.04, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.24, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.04, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 551, "maxAttack": 552, "dotTick": 2, "consumedFP": 32, "cooldown": 180, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
+			{ "minAttack": 441, "maxAttack": 442, "dotTick": 2, "consumedFP": 32, "cooldown": 180, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
 				{ "parameter": "attribute", "attribute": "slow" },
 				{ "parameter": "speed", "add": -35, "rate": true }
 			], "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.56, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.56, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.06, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.06, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.26, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.06, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 552, "maxAttack": 553, "dotTick": 2, "consumedFP": 34, "cooldown": 180, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
+			{ "minAttack": 442, "maxAttack": 443, "dotTick": 2, "consumedFP": 34, "cooldown": 180, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
 				{ "parameter": "attribute", "attribute": "slow" },
 				{ "parameter": "speed", "add": -35, "rate": true }
 			], "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.58, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.58, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.08, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.08, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.28, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.08, "pvp": true, "pve": true }
 			] }
 		]
 	},
@@ -57637,40 +59948,40 @@
 		"target": "area",
 		"skillPoints": 10,
 		"levels": [
-			{ "damageMultiplier": [ { "multiplier": 0.9 } ], "minAttack": 552, "maxAttack": 553, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 30, "cooldown": 180, "casting": 4.5, "spellRange": 6, "synergies": [
+			{ "damageMultiplier": [ { "multiplier": 0.9 } ], "minAttack": 442, "maxAttack": 443, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 30, "cooldown": 180, "casting": 4.5, "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.5, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.5, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.2, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44, "pvp": true, "pve": true }
 			] },
-			{ "damageMultiplier": [ { "multiplier": 0.8 } ], "minAttack": 552, "maxAttack": 553, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 30, "cooldown": 180, "casting": 4, "spellRange": 6, "synergies": [
+			{ "damageMultiplier": [ { "multiplier": 0.8 } ], "minAttack": 442, "maxAttack": 443, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 30, "cooldown": 180, "casting": 4, "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.52, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.52, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.02, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.02, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.22, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.02, "pvp": true, "pve": true }
 			] },
-			{ "damageMultiplier": [ { "multiplier": 0.7 } ], "minAttack": 552, "maxAttack": 553, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 32, "cooldown": 180, "casting": 3.5, "spellRange": 6, "synergies": [
+			{ "damageMultiplier": [ { "multiplier": 0.7 } ], "minAttack": 442, "maxAttack": 443, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 32, "cooldown": 180, "casting": 3.5, "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.54, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.54, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.04, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.04, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.24, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.04, "pvp": true, "pve": true }
 			] },
-			{ "damageMultiplier": [ { "multiplier": 0.6 } ], "minAttack": 552, "maxAttack": 553, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 32, "cooldown": 180, "casting": 3, "spellRange": 6, "synergies": [
+			{ "damageMultiplier": [ { "multiplier": 0.6 } ], "minAttack": 442, "maxAttack": 443, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 32, "cooldown": 180, "casting": 3, "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.56, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.56, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.06, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.06, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.26, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.06, "pvp": true, "pve": true }
 			] },
-			{ "damageMultiplier": [ { "multiplier": 0.5 } ], "minAttack": 552, "maxAttack": 553, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 34, "cooldown": 180, "casting": 2.5, "spellRange": 6, "synergies": [
+			{ "damageMultiplier": [ { "multiplier": 0.5 } ], "minAttack": 442, "maxAttack": 443, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 34, "cooldown": 180, "casting": 2.5, "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.58, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.58, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.08, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.08, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.28, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.08, "pvp": true, "pve": true }
 			] }
 		]
 	},
@@ -57737,55 +60048,55 @@
 		"requiresCouple": false,
 		"target": "area",
 		"levels": [
-			{ "damageMultiplier": [ { "multiplier": 0.9 } ], "minAttack": 550, "maxAttack": 551, "dotTick": 2, "consumedFP": 30, "cooldown": 180, "casting": 4.5, "duration": 2, "durationPVP": 2, "abilities": [
+			{ "damageMultiplier": [ { "multiplier": 0.9 } ], "minAttack": 440, "maxAttack": 441, "dotTick": 2, "consumedFP": 30, "cooldown": 180, "casting": 4.5, "duration": 2, "durationPVP": 2, "abilities": [
 				{ "parameter": "attribute", "attribute": "slow" },
 				{ "parameter": "speed", "add": -35, "rate": true }
 			], "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.5, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.5, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.2, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44, "pvp": true, "pve": true }
 			] },
-			{ "damageMultiplier": [ { "multiplier": 0.8 } ], "minAttack": 550, "maxAttack": 551, "dotTick": 2, "consumedFP": 30, "cooldown": 180, "casting": 4, "duration": 2, "durationPVP": 2, "abilities": [
+			{ "damageMultiplier": [ { "multiplier": 0.8 } ], "minAttack": 440, "maxAttack": 441, "dotTick": 2, "consumedFP": 30, "cooldown": 180, "casting": 4, "duration": 2, "durationPVP": 2, "abilities": [
 				{ "parameter": "attribute", "attribute": "slow" },
 				{ "parameter": "speed", "add": -35, "rate": true }
 			], "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.52, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.52, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.02, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.02, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.22, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.02, "pvp": true, "pve": true }
 			] },
-			{ "damageMultiplier": [ { "multiplier": 0.7 } ], "minAttack": 551, "maxAttack": 552, "dotTick": 2, "consumedFP": 32, "cooldown": 180, "casting": 3.5, "duration": 2, "durationPVP": 2, "abilities": [
+			{ "damageMultiplier": [ { "multiplier": 0.7 } ], "minAttack": 441, "maxAttack": 442, "dotTick": 2, "consumedFP": 32, "cooldown": 180, "casting": 3.5, "duration": 2, "durationPVP": 2, "abilities": [
 				{ "parameter": "attribute", "attribute": "slow" },
 				{ "parameter": "speed", "add": -35, "rate": true }
 			], "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.54, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.54, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.04, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.04, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.24, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.04, "pvp": true, "pve": true }
 			] },
-			{ "damageMultiplier": [ { "multiplier": 0.6 } ], "minAttack": 551, "maxAttack": 552, "dotTick": 2, "consumedFP": 32, "cooldown": 180, "casting": 3, "duration": 2, "durationPVP": 2, "abilities": [
+			{ "damageMultiplier": [ { "multiplier": 0.6 } ], "minAttack": 441, "maxAttack": 442, "dotTick": 2, "consumedFP": 32, "cooldown": 180, "casting": 3, "duration": 2, "durationPVP": 2, "abilities": [
 				{ "parameter": "attribute", "attribute": "slow" },
 				{ "parameter": "speed", "add": -35, "rate": true }
 			], "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.56, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.56, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.06, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.06, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.26, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.06, "pvp": true, "pve": true }
 			] },
-			{ "damageMultiplier": [ { "multiplier": 0.5 } ], "minAttack": 552, "maxAttack": 553, "dotTick": 2, "consumedFP": 34, "cooldown": 180, "casting": 2.5, "duration": 2, "durationPVP": 2, "abilities": [
+			{ "damageMultiplier": [ { "multiplier": 0.5 } ], "minAttack": 442, "maxAttack": 443, "dotTick": 2, "consumedFP": 34, "cooldown": 180, "casting": 2.5, "duration": 2, "durationPVP": 2, "abilities": [
 				{ "parameter": "attribute", "attribute": "slow" },
 				{ "parameter": "speed", "add": -35, "rate": true }
 			], "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.58, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.58, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.08, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.08, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.28, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.08, "pvp": true, "pve": true }
 			] }
 		]
 	},
@@ -57856,40 +60167,40 @@
 		"target": "area",
 		"skillPoints": 10,
 		"levels": [
-			{ "minAttack": 552, "maxAttack": 553, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 30, "cooldown": 180, "casting": 5, "spellRange": 7, "synergies": [
+			{ "minAttack": 442, "maxAttack": 443, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 30, "cooldown": 180, "casting": 5, "spellRange": 7, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.5, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.5, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.2, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 552, "maxAttack": 553, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 30, "cooldown": 180, "casting": 5, "spellRange": 8, "synergies": [
+			{ "minAttack": 442, "maxAttack": 443, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 30, "cooldown": 180, "casting": 5, "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.52, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.52, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.02, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.02, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.22, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.02, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 552, "maxAttack": 553, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 32, "cooldown": 180, "casting": 5, "spellRange": 9, "synergies": [
+			{ "minAttack": 442, "maxAttack": 443, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 32, "cooldown": 180, "casting": 5, "spellRange": 9, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.54, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.54, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.04, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.04, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.24, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.04, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 552, "maxAttack": 553, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 32, "cooldown": 180, "casting": 5, "spellRange": 10, "synergies": [
+			{ "minAttack": 442, "maxAttack": 443, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 32, "cooldown": 180, "casting": 5, "spellRange": 10, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.56, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.56, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.06, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.06, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.26, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.06, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 552, "maxAttack": 553, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 34, "cooldown": 180, "casting": 5, "spellRange": 11, "synergies": [
+			{ "minAttack": 442, "maxAttack": 443, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 34, "cooldown": 180, "casting": 5, "spellRange": 11, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.58, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.58, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.08, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.08, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.28, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.08, "pvp": true, "pve": true }
 			] }
 		]
 	},
@@ -57956,55 +60267,55 @@
 		"requiresCouple": false,
 		"target": "area",
 		"levels": [
-			{ "minAttack": 550, "maxAttack": 551, "dotTick": 2, "consumedFP": 30, "cooldown": 180, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
+			{ "minAttack": 440, "maxAttack": 441, "dotTick": 2, "consumedFP": 30, "cooldown": 180, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
 				{ "parameter": "attribute", "attribute": "slow" },
 				{ "parameter": "speed", "add": -35, "rate": true }
 			], "spellRange": 7, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.5, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.5, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.2, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 550, "maxAttack": 551, "dotTick": 2, "consumedFP": 30, "cooldown": 180, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
+			{ "minAttack": 440, "maxAttack": 441, "dotTick": 2, "consumedFP": 30, "cooldown": 180, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
 				{ "parameter": "attribute", "attribute": "slow" },
 				{ "parameter": "speed", "add": -35, "rate": true }
 			], "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.52, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.52, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.02, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.02, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.22, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.02, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 551, "maxAttack": 552, "dotTick": 2, "consumedFP": 32, "cooldown": 180, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
+			{ "minAttack": 441, "maxAttack": 442, "dotTick": 2, "consumedFP": 32, "cooldown": 180, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
 				{ "parameter": "attribute", "attribute": "slow" },
 				{ "parameter": "speed", "add": -35, "rate": true }
 			], "spellRange": 9, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.54, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.54, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.04, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.04, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.24, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.04, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 551, "maxAttack": 552, "dotTick": 2, "consumedFP": 32, "cooldown": 180, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
+			{ "minAttack": 441, "maxAttack": 442, "dotTick": 2, "consumedFP": 32, "cooldown": 180, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
 				{ "parameter": "attribute", "attribute": "slow" },
 				{ "parameter": "speed", "add": -35, "rate": true }
 			], "spellRange": 10, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.56, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.56, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.06, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.06, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.26, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.06, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 552, "maxAttack": 553, "dotTick": 2, "consumedFP": 34, "cooldown": 180, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
+			{ "minAttack": 442, "maxAttack": 443, "dotTick": 2, "consumedFP": 34, "cooldown": 180, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
 				{ "parameter": "attribute", "attribute": "slow" },
 				{ "parameter": "speed", "add": -35, "rate": true }
 			], "spellRange": 11, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.58, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.58, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.08, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.08, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.28, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.08, "pvp": true, "pve": true }
 			] }
 		]
 	},
@@ -58075,40 +60386,40 @@
 		"target": "area",
 		"skillPoints": 10,
 		"levels": [
-			{ "minAttack": 552, "maxAttack": 553, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 30, "cooldown": 170, "casting": 5, "spellRange": 6, "synergies": [
+			{ "minAttack": 442, "maxAttack": 443, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 30, "cooldown": 170, "casting": 5, "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.5, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.5, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.2, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 552, "maxAttack": 553, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 30, "cooldown": 150, "casting": 5, "spellRange": 6, "synergies": [
+			{ "minAttack": 442, "maxAttack": 443, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 30, "cooldown": 150, "casting": 5, "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.52, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.52, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.02, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.02, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.22, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.02, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 552, "maxAttack": 553, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 32, "cooldown": 130, "casting": 5, "spellRange": 6, "synergies": [
+			{ "minAttack": 442, "maxAttack": 443, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 32, "cooldown": 130, "casting": 5, "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.54, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.54, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.04, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.04, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.24, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.04, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 552, "maxAttack": 553, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 32, "cooldown": 110, "casting": 5, "spellRange": 6, "synergies": [
+			{ "minAttack": 442, "maxAttack": 443, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 32, "cooldown": 110, "casting": 5, "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.56, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.56, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.06, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.06, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.26, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.06, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 552, "maxAttack": 553, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 34, "cooldown": 90, "casting": 5, "spellRange": 6, "synergies": [
+			{ "minAttack": 442, "maxAttack": 443, "consumedSkillStacks": { "skill": 53306, "count": 10 }, "consumedFP": 34, "cooldown": 90, "casting": 5, "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.58, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.58, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.08, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.08, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.28, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.08, "pvp": true, "pve": true }
 			] }
 		]
 	},
@@ -58175,55 +60486,55 @@
 		"requiresCouple": false,
 		"target": "area",
 		"levels": [
-			{ "minAttack": 550, "maxAttack": 551, "dotTick": 2, "consumedFP": 30, "cooldown": 170, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
+			{ "minAttack": 440, "maxAttack": 441, "dotTick": 2, "consumedFP": 30, "cooldown": 170, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
 				{ "parameter": "attribute", "attribute": "slow" },
 				{ "parameter": "speed", "add": -35, "rate": true }
 			], "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.5, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.5, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.2, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 550, "maxAttack": 551, "dotTick": 2, "consumedFP": 30, "cooldown": 150, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
+			{ "minAttack": 440, "maxAttack": 441, "dotTick": 2, "consumedFP": 30, "cooldown": 150, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
 				{ "parameter": "attribute", "attribute": "slow" },
 				{ "parameter": "speed", "add": -35, "rate": true }
 			], "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.52, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.52, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.02, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.02, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.22, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.02, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 551, "maxAttack": 552, "dotTick": 2, "consumedFP": 32, "cooldown": 130, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
+			{ "minAttack": 441, "maxAttack": 442, "dotTick": 2, "consumedFP": 32, "cooldown": 130, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
 				{ "parameter": "attribute", "attribute": "slow" },
 				{ "parameter": "speed", "add": -35, "rate": true }
 			], "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.54, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.54, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.04, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.04, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.24, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.04, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 551, "maxAttack": 552, "dotTick": 2, "consumedFP": 32, "cooldown": 110, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
+			{ "minAttack": 441, "maxAttack": 442, "dotTick": 2, "consumedFP": 32, "cooldown": 110, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
 				{ "parameter": "attribute", "attribute": "slow" },
 				{ "parameter": "speed", "add": -35, "rate": true }
 			], "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.56, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.56, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.06, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.06, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.26, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.06, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 552, "maxAttack": 553, "dotTick": 2, "consumedFP": 34, "cooldown": 90, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
+			{ "minAttack": 442, "maxAttack": 443, "dotTick": 2, "consumedFP": 34, "cooldown": 90, "casting": 5, "duration": 2, "durationPVP": 2, "abilities": [
 				{ "parameter": "attribute", "attribute": "slow" },
 				{ "parameter": "speed", "add": -35, "rate": true }
 			], "spellRange": 6, "synergies": [
 				{ "parameter": "attack", "skill": 5041, "minLevel": 6, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
-				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.58, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.58, "pvp": true, "pve": true },
-				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 55.08, "pvp": true, "pve": true }
+				{ "add": true, "parameter": "attack", "stat": "str", "scale": 2.08, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "stat": "int", "scale": 1.28, "pvp": true, "pve": true },
+				{ "add": true, "parameter": "attack", "part": "righthandweapon", "scale": 44.08, "pvp": true, "pve": true }
 			] }
 		]
 	},
@@ -63586,27 +65897,27 @@
 		"target": "single",
 		"skillPoints": 10,
 		"levels": [
-			{ "flyBackProbability": 100, "minAttack": 15, "maxAttack": 16, "probability": 25, "probabilityPVP": 25, "consumedFP": 40, "cooldown": 68, "duration": 3, "durationPVP": 3, "synergies": [
+			{ "flyBackProbability": 100, "minAttack": 15, "maxAttack": 16, "probability": 18, "probabilityPVP": 18, "consumedFP": 40, "cooldown": 68, "duration": 3, "durationPVP": 3, "synergies": [
 				{ "parameter": "attack", "skill": 2418, "minLevel": 11, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "part": "lefthandweapon", "scale": 11, "pvp": true, "pve": true }
 			] },
-			{ "flyBackProbability": 100, "minAttack": 16, "maxAttack": 17, "probability": 25, "probabilityPVP": 25, "consumedFP": 42, "cooldown": 66, "duration": 3, "durationPVP": 3, "synergies": [
+			{ "flyBackProbability": 100, "minAttack": 16, "maxAttack": 17, "probability": 18, "probabilityPVP": 18, "consumedFP": 42, "cooldown": 66, "duration": 3, "durationPVP": 3, "synergies": [
 				{ "parameter": "attack", "skill": 2418, "minLevel": 11, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "part": "lefthandweapon", "scale": 11.02, "pvp": true, "pve": true }
 			] },
-			{ "flyBackProbability": 100, "minAttack": 17, "maxAttack": 18, "probability": 25, "probabilityPVP": 25, "consumedFP": 44, "cooldown": 64, "duration": 3, "durationPVP": 3, "synergies": [
+			{ "flyBackProbability": 100, "minAttack": 17, "maxAttack": 18, "probability": 18, "probabilityPVP": 18, "consumedFP": 44, "cooldown": 64, "duration": 3, "durationPVP": 3, "synergies": [
 				{ "parameter": "attack", "skill": 2418, "minLevel": 11, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "part": "lefthandweapon", "scale": 11.04, "pvp": true, "pve": true }
 			] },
-			{ "flyBackProbability": 100, "minAttack": 18, "maxAttack": 19, "probability": 25, "probabilityPVP": 25, "consumedFP": 46, "cooldown": 62, "duration": 3, "durationPVP": 3, "synergies": [
+			{ "flyBackProbability": 100, "minAttack": 18, "maxAttack": 19, "probability": 18, "probabilityPVP": 18, "consumedFP": 46, "cooldown": 62, "duration": 3, "durationPVP": 3, "synergies": [
 				{ "parameter": "attack", "skill": 2418, "minLevel": 11, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "part": "lefthandweapon", "scale": 11.06, "pvp": true, "pve": true }
 			] },
-			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 25, "probabilityPVP": 25, "consumedFP": 48, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
+			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 18, "probabilityPVP": 18, "consumedFP": 48, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
 				{ "parameter": "attack", "skill": 2418, "minLevel": 11, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "part": "lefthandweapon", "scale": 11.08, "pvp": true, "pve": true }
@@ -63678,27 +65989,27 @@
 		"target": "single",
 		"skillPoints": 10,
 		"levels": [
-			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 25, "probabilityPVP": 25, "consumedFP": 40, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
+			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 18, "probabilityPVP": 18, "consumedFP": 40, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
 				{ "parameter": "attack", "skill": 2418, "minLevel": 11, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "part": "lefthandweapon", "scale": 11, "pvp": true, "pve": true }
 			] },
-			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 25, "probabilityPVP": 25, "consumedFP": 42, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
+			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 18, "probabilityPVP": 18, "consumedFP": 42, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
 				{ "parameter": "attack", "skill": 2418, "minLevel": 11, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "part": "lefthandweapon", "scale": 11.02, "pvp": true, "pve": true }
 			] },
-			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 25, "probabilityPVP": 25, "consumedFP": 44, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
+			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 18, "probabilityPVP": 18, "consumedFP": 44, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
 				{ "parameter": "attack", "skill": 2418, "minLevel": 11, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "part": "lefthandweapon", "scale": 11.04, "pvp": true, "pve": true }
 			] },
-			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 25, "probabilityPVP": 25, "consumedFP": 46, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
+			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 18, "probabilityPVP": 18, "consumedFP": 46, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
 				{ "parameter": "attack", "skill": 2418, "minLevel": 11, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "part": "lefthandweapon", "scale": 11.06, "pvp": true, "pve": true }
 			] },
-			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 25, "probabilityPVP": 25, "consumedFP": 48, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
+			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 18, "probabilityPVP": 18, "consumedFP": 48, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
 				{ "parameter": "attack", "skill": 2418, "minLevel": 11, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "part": "lefthandweapon", "scale": 11.08, "pvp": true, "pve": true }
@@ -63770,27 +66081,27 @@
 		"target": "single",
 		"skillPoints": 10,
 		"levels": [
-			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 28, "probabilityPVP": 28, "consumedFP": 40, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
+			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 22, "probabilityPVP": 22, "consumedFP": 40, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
 				{ "parameter": "attack", "skill": 2418, "minLevel": 11, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "part": "lefthandweapon", "scale": 11, "pvp": true, "pve": true }
 			] },
-			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 31, "probabilityPVP": 31, "consumedFP": 42, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
+			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 24, "probabilityPVP": 24, "consumedFP": 42, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
 				{ "parameter": "attack", "skill": 2418, "minLevel": 11, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "part": "lefthandweapon", "scale": 11.02, "pvp": true, "pve": true }
 			] },
-			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 34, "probabilityPVP": 34, "consumedFP": 44, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
+			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 26, "probabilityPVP": 26, "consumedFP": 44, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
 				{ "parameter": "attack", "skill": 2418, "minLevel": 11, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "part": "lefthandweapon", "scale": 11.04, "pvp": true, "pve": true }
 			] },
-			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 37, "probabilityPVP": 37, "consumedFP": 46, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
+			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 28, "probabilityPVP": 28, "consumedFP": 46, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
 				{ "parameter": "attack", "skill": 2418, "minLevel": 11, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "part": "lefthandweapon", "scale": 11.06, "pvp": true, "pve": true }
 			] },
-			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 40, "probabilityPVP": 40, "consumedFP": 48, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
+			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 30, "probabilityPVP": 30, "consumedFP": 48, "cooldown": 60, "duration": 3, "durationPVP": 3, "synergies": [
 				{ "parameter": "attack", "skill": 2418, "minLevel": 11, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "part": "lefthandweapon", "scale": 11.08, "pvp": true, "pve": true }
@@ -63862,35 +66173,35 @@
 		"target": "single",
 		"skillPoints": 10,
 		"levels": [
-			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 25, "probabilityPVP": 25, "consumedFP": 40, "cooldown": 60, "duration": 6, "durationPVP": 6, "abilities": [
+			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 18, "probabilityPVP": 18, "consumedFP": 40, "cooldown": 60, "duration": 6, "durationPVP": 6, "abilities": [
 				{ "parameter": "speed", "add": -30, "rate": true }
 			], "synergies": [
 				{ "parameter": "attack", "skill": 2418, "minLevel": 11, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "part": "lefthandweapon", "scale": 11, "pvp": true, "pve": true }
 			] },
-			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 25, "probabilityPVP": 25, "consumedFP": 42, "cooldown": 60, "duration": 7, "durationPVP": 7, "abilities": [
+			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 18, "probabilityPVP": 18, "consumedFP": 42, "cooldown": 60, "duration": 7, "durationPVP": 7, "abilities": [
 				{ "parameter": "speed", "add": -30, "rate": true }
 			], "synergies": [
 				{ "parameter": "attack", "skill": 2418, "minLevel": 11, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "part": "lefthandweapon", "scale": 11.02, "pvp": true, "pve": true }
 			] },
-			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 25, "probabilityPVP": 25, "consumedFP": 44, "cooldown": 60, "duration": 8, "durationPVP": 8, "abilities": [
+			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 18, "probabilityPVP": 18, "consumedFP": 44, "cooldown": 60, "duration": 8, "durationPVP": 8, "abilities": [
 				{ "parameter": "speed", "add": -30, "rate": true }
 			], "synergies": [
 				{ "parameter": "attack", "skill": 2418, "minLevel": 11, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "part": "lefthandweapon", "scale": 11.04, "pvp": true, "pve": true }
 			] },
-			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 25, "probabilityPVP": 25, "consumedFP": 46, "cooldown": 60, "duration": 9, "durationPVP": 9, "abilities": [
+			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 18, "probabilityPVP": 18, "consumedFP": 46, "cooldown": 60, "duration": 9, "durationPVP": 9, "abilities": [
 				{ "parameter": "speed", "add": -30, "rate": true }
 			], "synergies": [
 				{ "parameter": "attack", "skill": 2418, "minLevel": 11, "add": false, "scale": 2, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "part": "lefthandweapon", "scale": 11.06, "pvp": true, "pve": true }
 			] },
-			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 25, "probabilityPVP": 25, "consumedFP": 48, "cooldown": 60, "duration": 10, "durationPVP": 10, "abilities": [
+			{ "flyBackProbability": 100, "minAttack": 19, "maxAttack": 20, "probability": 18, "probabilityPVP": 18, "consumedFP": 48, "cooldown": 60, "duration": 10, "durationPVP": 10, "abilities": [
 				{ "parameter": "speed", "add": -30, "rate": true }
 			], "synergies": [
 				{ "parameter": "attack", "skill": 2418, "minLevel": 11, "add": false, "scale": 2, "pvp": true, "pve": true }
@@ -66022,19 +68333,19 @@
 		"skillPoints": 10,
 		"levels": [
 			{ "duration": 3600, "durationPVP": 3600, "abilities": [
-				{ "parameter": "skillchance", "skill": 56636, "skillLevel": 1, "pvp": true, "pve": true, "add": 60, "rate": true }
+				{ "parameter": "skillchance", "skill": 56636, "skillLevel": 1, "pvp": true, "pve": true, "add": 48, "rate": true }
 			] },
 			{ "duration": 3600, "durationPVP": 3600, "abilities": [
-				{ "parameter": "skillchance", "skill": 56636, "skillLevel": 2, "pvp": true, "pve": true, "add": 70, "rate": true }
+				{ "parameter": "skillchance", "skill": 56636, "skillLevel": 2, "pvp": true, "pve": true, "add": 56, "rate": true }
 			] },
 			{ "duration": 3600, "durationPVP": 3600, "abilities": [
-				{ "parameter": "skillchance", "skill": 56636, "skillLevel": 3, "pvp": true, "pve": true, "add": 80, "rate": true }
+				{ "parameter": "skillchance", "skill": 56636, "skillLevel": 3, "pvp": true, "pve": true, "add": 64, "rate": true }
 			] },
 			{ "duration": 3600, "durationPVP": 3600, "abilities": [
-				{ "parameter": "skillchance", "skill": 56636, "skillLevel": 4, "pvp": true, "pve": true, "add": 90, "rate": true }
+				{ "parameter": "skillchance", "skill": 56636, "skillLevel": 4, "pvp": true, "pve": true, "add": 72, "rate": true }
 			] },
 			{ "duration": 3600, "durationPVP": 3600, "abilities": [
-				{ "parameter": "skillchance", "skill": 56636, "skillLevel": 5, "pvp": true, "pve": true, "add": 100, "rate": true }
+				{ "parameter": "skillchance", "skill": 56636, "skillLevel": 5, "pvp": true, "pve": true, "add": 80, "rate": true }
 			] }
 		]
 	},

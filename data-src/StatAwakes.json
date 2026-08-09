@@ -24,11 +24,7 @@
 		},
 		"minimumLevel": 10,
 		"abilities": [
-			{
-				"parameter": "str",
-				"add": 1,
-				"rate": false
-			}
+			{ "parameter": "str", "add": 1, "rate": false }
 		]
 	},
 	{
@@ -56,11 +52,7 @@
 		},
 		"minimumLevel": 10,
 		"abilities": [
-			{
-				"parameter": "dex",
-				"add": 1,
-				"rate": false
-			}
+			{ "parameter": "dex", "add": 1, "rate": false }
 		]
 	},
 	{
@@ -88,11 +80,7 @@
 		},
 		"minimumLevel": 10,
 		"abilities": [
-			{
-				"parameter": "int",
-				"add": 1,
-				"rate": false
-			}
+			{ "parameter": "int", "add": 1, "rate": false }
 		]
 	},
 	{
@@ -120,11 +108,7 @@
 		},
 		"minimumLevel": 10,
 		"abilities": [
-			{
-				"parameter": "sta",
-				"add": 1,
-				"rate": false
-			}
+			{ "parameter": "sta", "add": 1, "rate": false }
 		]
 	},
 	{
@@ -147,21 +131,13 @@
 			"sp": "de STR y STA",
 			"sw": "of STR and STA",
 			"th": "of STR and STA",
-			"tw": "+力量與體力",
+			"tw": "+力量 +體力",
 			"vi": "of STR and STA"
 		},
 		"minimumLevel": 15,
 		"abilities": [
-			{
-				"parameter": "str",
-				"add": 1,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 1,
-				"rate": false
-			}
+			{ "parameter": "str", "add": 1, "rate": false },
+			{ "parameter": "sta", "add": 1, "rate": false }
 		]
 	},
 	{
@@ -184,21 +160,13 @@
 			"sp": "de STR y DEX",
 			"sw": "of STR and DEX",
 			"th": "of STR and DEX",
-			"tw": "+力量與敏捷",
+			"tw": "+力量 +敏捷",
 			"vi": "of STR and DEX"
 		},
 		"minimumLevel": 15,
 		"abilities": [
-			{
-				"parameter": "str",
-				"add": 1,
-				"rate": false
-			},
-			{
-				"parameter": "dex",
-				"add": 1,
-				"rate": false
-			}
+			{ "parameter": "str", "add": 1, "rate": false },
+			{ "parameter": "dex", "add": 1, "rate": false }
 		]
 	},
 	{
@@ -221,21 +189,13 @@
 			"sp": "DEX y STA+",
 			"sw": "DEX and STA+",
 			"th": "DEX and STA+",
-			"tw": "+敏捷與體力",
+			"tw": "+敏捷 +體力",
 			"vi": "DEX and STA+"
 		},
 		"minimumLevel": 15,
 		"abilities": [
-			{
-				"parameter": "dex",
-				"add": 1,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 1,
-				"rate": false
-			}
+			{ "parameter": "dex", "add": 1, "rate": false },
+			{ "parameter": "sta", "add": 1, "rate": false }
 		]
 	},
 	{
@@ -258,21 +218,13 @@
 			"sp": "INT y STA+",
 			"sw": "INT and STA+",
 			"th": "INT and STA+",
-			"tw": "+智力與體力",
+			"tw": "+智力 +體力",
 			"vi": "INT and STA+"
 		},
 		"minimumLevel": 15,
 		"abilities": [
-			{
-				"parameter": "int",
-				"add": 1,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 1,
-				"rate": false
-			}
+			{ "parameter": "int", "add": 1, "rate": false },
+			{ "parameter": "sta", "add": 1, "rate": false }
 		]
 	},
 	{
@@ -300,11 +252,7 @@
 		},
 		"minimumLevel": 22,
 		"abilities": [
-			{
-				"parameter": "str",
-				"add": 2,
-				"rate": false
-			}
+			{ "parameter": "str", "add": 2, "rate": false }
 		]
 	},
 	{
@@ -332,11 +280,7 @@
 		},
 		"minimumLevel": 22,
 		"abilities": [
-			{
-				"parameter": "dex",
-				"add": 2,
-				"rate": false
-			}
+			{ "parameter": "dex", "add": 2, "rate": false }
 		]
 	},
 	{
@@ -364,11 +308,7 @@
 		},
 		"minimumLevel": 22,
 		"abilities": [
-			{
-				"parameter": "int",
-				"add": 2,
-				"rate": false
-			}
+			{ "parameter": "int", "add": 2, "rate": false }
 		]
 	},
 	{
@@ -396,11 +336,7 @@
 		},
 		"minimumLevel": 22,
 		"abilities": [
-			{
-				"parameter": "sta",
-				"add": 2,
-				"rate": false
-			}
+			{ "parameter": "sta", "add": 2, "rate": false }
 		]
 	},
 	{
@@ -423,21 +359,13 @@
 			"sp": "STR y STA+",
 			"sw": "STR and STA+",
 			"th": "STR and STA+",
-			"tw": "+力量與體力",
+			"tw": "+力量 +體力",
 			"vi": "STR and STA+"
 		},
 		"minimumLevel": 30,
 		"abilities": [
-			{
-				"parameter": "str",
-				"add": 2,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 1,
-				"rate": false
-			}
+			{ "parameter": "str", "add": 2, "rate": false },
+			{ "parameter": "sta", "add": 1, "rate": false }
 		]
 	},
 	{
@@ -460,21 +388,13 @@
 			"sp": "STR y STA+",
 			"sw": "STR and STA+",
 			"th": "STR and STA+",
-			"tw": "+力量與體力",
+			"tw": "+力量 +體力",
 			"vi": "STR and STA+"
 		},
 		"minimumLevel": 30,
 		"abilities": [
-			{
-				"parameter": "str",
-				"add": 1,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 2,
-				"rate": false
-			}
+			{ "parameter": "str", "add": 1, "rate": false },
+			{ "parameter": "sta", "add": 2, "rate": false }
 		]
 	},
 	{
@@ -497,21 +417,13 @@
 			"sp": "STR y DEX+",
 			"sw": "STR and DEX+",
 			"th": "STR and DEX+",
-			"tw": "+力量和敏捷",
+			"tw": "+力量 +敏捷",
 			"vi": "STR and DEX+"
 		},
 		"minimumLevel": 30,
 		"abilities": [
-			{
-				"parameter": "str",
-				"add": 2,
-				"rate": false
-			},
-			{
-				"parameter": "dex",
-				"add": 1,
-				"rate": false
-			}
+			{ "parameter": "str", "add": 2, "rate": false },
+			{ "parameter": "dex", "add": 1, "rate": false }
 		]
 	},
 	{
@@ -534,21 +446,13 @@
 			"sp": "STR y DEX+",
 			"sw": "STR and DEX+",
 			"th": "STR and DEX+",
-			"tw": "+力量和敏捷",
+			"tw": "+力量 +敏捷",
 			"vi": "STR and DEX+"
 		},
 		"minimumLevel": 30,
 		"abilities": [
-			{
-				"parameter": "str",
-				"add": 1,
-				"rate": false
-			},
-			{
-				"parameter": "dex",
-				"add": 2,
-				"rate": false
-			}
+			{ "parameter": "str", "add": 1, "rate": false },
+			{ "parameter": "dex", "add": 2, "rate": false }
 		]
 	},
 	{
@@ -571,21 +475,13 @@
 			"sp": "DEX y STA+",
 			"sw": "DEX and STA+",
 			"th": "DEX and STA+",
-			"tw": "+敏捷與體力",
+			"tw": "+敏捷 +體力",
 			"vi": "DEX and STA+"
 		},
 		"minimumLevel": 30,
 		"abilities": [
-			{
-				"parameter": "dex",
-				"add": 2,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 1,
-				"rate": false
-			}
+			{ "parameter": "dex", "add": 2, "rate": false },
+			{ "parameter": "sta", "add": 1, "rate": false }
 		]
 	},
 	{
@@ -608,21 +504,13 @@
 			"sp": "DEX y STA+",
 			"sw": "DEX and STA+",
 			"th": "DEX and STA+",
-			"tw": "+敏捷與體力",
+			"tw": "+敏捷 +體力",
 			"vi": "DEX and STA+"
 		},
 		"minimumLevel": 30,
 		"abilities": [
-			{
-				"parameter": "dex",
-				"add": 1,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 2,
-				"rate": false
-			}
+			{ "parameter": "dex", "add": 1, "rate": false },
+			{ "parameter": "sta", "add": 2, "rate": false }
 		]
 	},
 	{
@@ -645,21 +533,13 @@
 			"sp": "INT y STA+",
 			"sw": "INT and STA+",
 			"th": "INT and STA+",
-			"tw": "+智力與體力",
+			"tw": "+智力 +體力",
 			"vi": "INT and STA+"
 		},
 		"minimumLevel": 30,
 		"abilities": [
-			{
-				"parameter": "int",
-				"add": 2,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 1,
-				"rate": false
-			}
+			{ "parameter": "int", "add": 2, "rate": false },
+			{ "parameter": "sta", "add": 1, "rate": false }
 		]
 	},
 	{
@@ -682,21 +562,13 @@
 			"sp": "INT y STA+",
 			"sw": "INT and STA+",
 			"th": "INT and STA+",
-			"tw": "+智力與體力",
+			"tw": "+智力 +體力",
 			"vi": "INT and STA+"
 		},
 		"minimumLevel": 30,
 		"abilities": [
-			{
-				"parameter": "int",
-				"add": 1,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 2,
-				"rate": false
-			}
+			{ "parameter": "int", "add": 1, "rate": false },
+			{ "parameter": "sta", "add": 2, "rate": false }
 		]
 	},
 	{
@@ -724,11 +596,7 @@
 		},
 		"minimumLevel": 37,
 		"abilities": [
-			{
-				"parameter": "str",
-				"add": 3,
-				"rate": false
-			}
+			{ "parameter": "str", "add": 3, "rate": false }
 		]
 	},
 	{
@@ -756,11 +624,7 @@
 		},
 		"minimumLevel": 37,
 		"abilities": [
-			{
-				"parameter": "dex",
-				"add": 3,
-				"rate": false
-			}
+			{ "parameter": "dex", "add": 3, "rate": false }
 		]
 	},
 	{
@@ -788,11 +652,7 @@
 		},
 		"minimumLevel": 37,
 		"abilities": [
-			{
-				"parameter": "int",
-				"add": 3,
-				"rate": false
-			}
+			{ "parameter": "int", "add": 3, "rate": false }
 		]
 	},
 	{
@@ -820,11 +680,7 @@
 		},
 		"minimumLevel": 37,
 		"abilities": [
-			{
-				"parameter": "sta",
-				"add": 3,
-				"rate": false
-			}
+			{ "parameter": "sta", "add": 3, "rate": false }
 		]
 	},
 	{
@@ -847,21 +703,13 @@
 			"sp": "STR y STA+",
 			"sw": "STR and STA+",
 			"th": "STR and STA+",
-			"tw": "+力量與體力",
+			"tw": "+力量 +體力",
 			"vi": "STR and STA+"
 		},
 		"minimumLevel": 45,
 		"abilities": [
-			{
-				"parameter": "str",
-				"add": 2,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 2,
-				"rate": false
-			}
+			{ "parameter": "str", "add": 2, "rate": false },
+			{ "parameter": "sta", "add": 2, "rate": false }
 		]
 	},
 	{
@@ -884,21 +732,13 @@
 			"sp": "STR y STA+",
 			"sw": "STR and STA+",
 			"th": "STR and STA+",
-			"tw": "+力量與體力",
+			"tw": "+力量 +體力",
 			"vi": "STR and STA+"
 		},
 		"minimumLevel": 45,
 		"abilities": [
-			{
-				"parameter": "str",
-				"add": 1,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 3,
-				"rate": false
-			}
+			{ "parameter": "str", "add": 1, "rate": false },
+			{ "parameter": "sta", "add": 3, "rate": false }
 		]
 	},
 	{
@@ -921,21 +761,13 @@
 			"sp": "STR y STA+",
 			"sw": "STR and STA+",
 			"th": "STR and STA+",
-			"tw": "+力量與體力",
+			"tw": "+力量 +體力",
 			"vi": "STR and STA+"
 		},
 		"minimumLevel": 45,
 		"abilities": [
-			{
-				"parameter": "str",
-				"add": 3,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 1,
-				"rate": false
-			}
+			{ "parameter": "str", "add": 3, "rate": false },
+			{ "parameter": "sta", "add": 1, "rate": false }
 		]
 	},
 	{
@@ -958,21 +790,13 @@
 			"sp": "STR y DEX+",
 			"sw": "STR and DEX+",
 			"th": "STR and DEX+",
-			"tw": "+力量和敏捷",
+			"tw": "+力量 +敏捷",
 			"vi": "STR and DEX+"
 		},
 		"minimumLevel": 45,
 		"abilities": [
-			{
-				"parameter": "str",
-				"add": 2,
-				"rate": false
-			},
-			{
-				"parameter": "dex",
-				"add": 2,
-				"rate": false
-			}
+			{ "parameter": "str", "add": 2, "rate": false },
+			{ "parameter": "dex", "add": 2, "rate": false }
 		]
 	},
 	{
@@ -995,21 +819,13 @@
 			"sp": "STR y DEX+",
 			"sw": "STR and DEX+",
 			"th": "STR and DEX+",
-			"tw": "+力量和敏捷",
+			"tw": "+力量 +敏捷",
 			"vi": "STR and DEX+"
 		},
 		"minimumLevel": 45,
 		"abilities": [
-			{
-				"parameter": "str",
-				"add": 3,
-				"rate": false
-			},
-			{
-				"parameter": "dex",
-				"add": 1,
-				"rate": false
-			}
+			{ "parameter": "str", "add": 3, "rate": false },
+			{ "parameter": "dex", "add": 1, "rate": false }
 		]
 	},
 	{
@@ -1032,21 +848,13 @@
 			"sp": "STR y DEX+",
 			"sw": "STR and DEX+",
 			"th": "STR and DEX+",
-			"tw": "+力量和敏捷",
+			"tw": "+力量 +敏捷",
 			"vi": "STR and DEX+"
 		},
 		"minimumLevel": 45,
 		"abilities": [
-			{
-				"parameter": "str",
-				"add": 1,
-				"rate": false
-			},
-			{
-				"parameter": "dex",
-				"add": 3,
-				"rate": false
-			}
+			{ "parameter": "str", "add": 1, "rate": false },
+			{ "parameter": "dex", "add": 3, "rate": false }
 		]
 	},
 	{
@@ -1069,21 +877,13 @@
 			"sp": "DEX y STA+",
 			"sw": "DEX and STA+",
 			"th": "DEX and STA+",
-			"tw": "+敏捷與體力",
+			"tw": "+敏捷 +體力",
 			"vi": "DEX and STA+"
 		},
 		"minimumLevel": 45,
 		"abilities": [
-			{
-				"parameter": "dex",
-				"add": 2,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 2,
-				"rate": false
-			}
+			{ "parameter": "dex", "add": 2, "rate": false },
+			{ "parameter": "sta", "add": 2, "rate": false }
 		]
 	},
 	{
@@ -1106,21 +906,13 @@
 			"sp": "DEX y STA+",
 			"sw": "DEX and STA+",
 			"th": "DEX and STA+",
-			"tw": "+敏捷與體力",
+			"tw": "+敏捷 +體力",
 			"vi": "DEX and STA+"
 		},
 		"minimumLevel": 45,
 		"abilities": [
-			{
-				"parameter": "dex",
-				"add": 3,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 1,
-				"rate": false
-			}
+			{ "parameter": "dex", "add": 3, "rate": false },
+			{ "parameter": "sta", "add": 1, "rate": false }
 		]
 	},
 	{
@@ -1143,21 +935,13 @@
 			"sp": "DEX y STA+",
 			"sw": "DEX and STA+",
 			"th": "DEX and STA+",
-			"tw": "+敏捷與體力",
+			"tw": "+敏捷 +體力",
 			"vi": "DEX and STA+"
 		},
 		"minimumLevel": 45,
 		"abilities": [
-			{
-				"parameter": "dex",
-				"add": 1,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 3,
-				"rate": false
-			}
+			{ "parameter": "dex", "add": 1, "rate": false },
+			{ "parameter": "sta", "add": 3, "rate": false }
 		]
 	},
 	{
@@ -1180,21 +964,13 @@
 			"sp": "INT y STA+",
 			"sw": "INT and STA+",
 			"th": "INT and STA+",
-			"tw": "+智力與體力",
+			"tw": "+智力 +體力",
 			"vi": "INT and STA+"
 		},
 		"minimumLevel": 45,
 		"abilities": [
-			{
-				"parameter": "int",
-				"add": 2,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 2,
-				"rate": false
-			}
+			{ "parameter": "int", "add": 2, "rate": false },
+			{ "parameter": "sta", "add": 2, "rate": false }
 		]
 	},
 	{
@@ -1217,21 +993,13 @@
 			"sp": "INT y STA+",
 			"sw": "INT and STA+",
 			"th": "INT and STA+",
-			"tw": "+智力與體力",
+			"tw": "+智力 +體力",
 			"vi": "INT and STA+"
 		},
 		"minimumLevel": 45,
 		"abilities": [
-			{
-				"parameter": "int",
-				"add": 3,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 1,
-				"rate": false
-			}
+			{ "parameter": "int", "add": 3, "rate": false },
+			{ "parameter": "sta", "add": 1, "rate": false }
 		]
 	},
 	{
@@ -1254,21 +1022,13 @@
 			"sp": "INT y STA+",
 			"sw": "INT and STA+",
 			"th": "INT and STA+",
-			"tw": "+智力與體力",
+			"tw": "+智力 +體力",
 			"vi": "INT and STA+"
 		},
 		"minimumLevel": 45,
 		"abilities": [
-			{
-				"parameter": "int",
-				"add": 1,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 3,
-				"rate": false
-			}
+			{ "parameter": "int", "add": 1, "rate": false },
+			{ "parameter": "sta", "add": 3, "rate": false }
 		]
 	},
 	{
@@ -1296,11 +1056,7 @@
 		},
 		"minimumLevel": 52,
 		"abilities": [
-			{
-				"parameter": "str",
-				"add": 4,
-				"rate": false
-			}
+			{ "parameter": "str", "add": 4, "rate": false }
 		]
 	},
 	{
@@ -1328,11 +1084,7 @@
 		},
 		"minimumLevel": 52,
 		"abilities": [
-			{
-				"parameter": "dex",
-				"add": 4,
-				"rate": false
-			}
+			{ "parameter": "dex", "add": 4, "rate": false }
 		]
 	},
 	{
@@ -1360,11 +1112,7 @@
 		},
 		"minimumLevel": 52,
 		"abilities": [
-			{
-				"parameter": "int",
-				"add": 4,
-				"rate": false
-			}
+			{ "parameter": "int", "add": 4, "rate": false }
 		]
 	},
 	{
@@ -1392,11 +1140,7 @@
 		},
 		"minimumLevel": 52,
 		"abilities": [
-			{
-				"parameter": "sta",
-				"add": 4,
-				"rate": false
-			}
+			{ "parameter": "sta", "add": 4, "rate": false }
 		]
 	},
 	{
@@ -1419,21 +1163,13 @@
 			"sp": "STR y STA+",
 			"sw": "STR and STA+",
 			"th": "STR and STA+",
-			"tw": "+力量與體力",
+			"tw": "+力量 +體力",
 			"vi": "STR and STA+"
 		},
 		"minimumLevel": 60,
 		"abilities": [
-			{
-				"parameter": "str",
-				"add": 3,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 2,
-				"rate": false
-			}
+			{ "parameter": "str", "add": 3, "rate": false },
+			{ "parameter": "sta", "add": 2, "rate": false }
 		]
 	},
 	{
@@ -1456,21 +1192,13 @@
 			"sp": "STR y STA+",
 			"sw": "STR and STA+",
 			"th": "STR and STA+",
-			"tw": "+力量與體力",
+			"tw": "+力量 +體力",
 			"vi": "STR and STA+"
 		},
 		"minimumLevel": 60,
 		"abilities": [
-			{
-				"parameter": "str",
-				"add": 2,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 3,
-				"rate": false
-			}
+			{ "parameter": "str", "add": 2, "rate": false },
+			{ "parameter": "sta", "add": 3, "rate": false }
 		]
 	},
 	{
@@ -1493,21 +1221,13 @@
 			"sp": "STR y DEX+",
 			"sw": "STR and DEX+",
 			"th": "STR and DEX+",
-			"tw": "+力量和敏捷",
+			"tw": "+力量 +敏捷",
 			"vi": "STR and DEX+"
 		},
 		"minimumLevel": 60,
 		"abilities": [
-			{
-				"parameter": "str",
-				"add": 3,
-				"rate": false
-			},
-			{
-				"parameter": "dex",
-				"add": 2,
-				"rate": false
-			}
+			{ "parameter": "str", "add": 3, "rate": false },
+			{ "parameter": "dex", "add": 2, "rate": false }
 		]
 	},
 	{
@@ -1530,21 +1250,13 @@
 			"sp": "STR y DEX+",
 			"sw": "STR and DEX+",
 			"th": "STR and DEX+",
-			"tw": "+力量和敏捷",
+			"tw": "+力量 +敏捷",
 			"vi": "STR and DEX+"
 		},
 		"minimumLevel": 60,
 		"abilities": [
-			{
-				"parameter": "str",
-				"add": 2,
-				"rate": false
-			},
-			{
-				"parameter": "dex",
-				"add": 3,
-				"rate": false
-			}
+			{ "parameter": "str", "add": 2, "rate": false },
+			{ "parameter": "dex", "add": 3, "rate": false }
 		]
 	},
 	{
@@ -1567,21 +1279,13 @@
 			"sp": "DEX y STA+",
 			"sw": "DEX and STA+",
 			"th": "DEX and STA+",
-			"tw": "+敏捷與體力",
+			"tw": "+敏捷 +體力",
 			"vi": "DEX and STA+"
 		},
 		"minimumLevel": 60,
 		"abilities": [
-			{
-				"parameter": "dex",
-				"add": 3,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 2,
-				"rate": false
-			}
+			{ "parameter": "dex", "add": 3, "rate": false },
+			{ "parameter": "sta", "add": 2, "rate": false }
 		]
 	},
 	{
@@ -1604,21 +1308,13 @@
 			"sp": "DEX y STA+",
 			"sw": "DEX and STA+",
 			"th": "DEX and STA+",
-			"tw": "+敏捷與體力",
+			"tw": "+敏捷 +體力",
 			"vi": "DEX and STA+"
 		},
 		"minimumLevel": 60,
 		"abilities": [
-			{
-				"parameter": "dex",
-				"add": 2,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 3,
-				"rate": false
-			}
+			{ "parameter": "dex", "add": 2, "rate": false },
+			{ "parameter": "sta", "add": 3, "rate": false }
 		]
 	},
 	{
@@ -1641,21 +1337,13 @@
 			"sp": "INT y STA+",
 			"sw": "INT and STA+",
 			"th": "INT and STA+",
-			"tw": "+智力與體力",
+			"tw": "+智力 +體力",
 			"vi": "INT and STA+"
 		},
 		"minimumLevel": 60,
 		"abilities": [
-			{
-				"parameter": "int",
-				"add": 3,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 2,
-				"rate": false
-			}
+			{ "parameter": "int", "add": 3, "rate": false },
+			{ "parameter": "sta", "add": 2, "rate": false }
 		]
 	},
 	{
@@ -1678,21 +1366,13 @@
 			"sp": "INT y STA+",
 			"sw": "INT and STA+",
 			"th": "INT and STA+",
-			"tw": "+智力與體力",
+			"tw": "+智力 +體力",
 			"vi": "INT and STA+"
 		},
 		"minimumLevel": 60,
 		"abilities": [
-			{
-				"parameter": "int",
-				"add": 2,
-				"rate": false
-			},
-			{
-				"parameter": "sta",
-				"add": 3,
-				"rate": false
-			}
+			{ "parameter": "int", "add": 2, "rate": false },
+			{ "parameter": "sta", "add": 3, "rate": false }
 		]
 	}
 ]

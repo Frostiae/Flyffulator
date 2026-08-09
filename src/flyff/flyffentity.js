@@ -31,7 +31,7 @@ export default class Entity {
         pet: null
     };
     skillLevels = {};
-    activeBuffs = {};
+    activeBuffs = [];
     activePartyBuffs = [];
     activePersonalHousingNpcs = [];
     activeCoupleHousingNpcs = [];

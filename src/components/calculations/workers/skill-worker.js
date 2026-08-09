@@ -36,12 +36,12 @@ self.onmessage = async function (event) {
             continue; // Shouldn't happen
         }
 
-        const skillProp = Utils.getSkillById(skill);
+        let skillLevel = level;
+
+        let skillProp = Utils.getSkillById(skill);
         if (skillProp == null) {
             continue;
         }
-
-        // TODO: changeIfHasBuff stuff here
 
         // Master variations are leveled like skills. A base skill whose variation
         // is active is skipped here (the variation is calculated from its own
@@ -56,8 +56,55 @@ self.onmessage = async function (event) {
                 continue;
             }
         }
+        
+        // Change if has buff stuff
+        // Some skills are changed based on some conditions
+        let skillId = skillProp.id;
+        let depth = 0;
+        const maxDepth = 3;
+        while (skillProp.changeSkillIfHasBuff != undefined && depth < maxDepth) {
+            let hasBuff = false;
 
-        const levelProp = skillProp.levels[level - 1];
+            for (const buffId of skillProp.changeSkillIfHasBuff.anyOf) {
+                if (skillProp.changeSkillIfHasBuff.checkBuffOnTarget) {
+                    if (Context.defender.hasSkillBuff(buffId)) {
+                        hasBuff = true;
+                    }
+                }
+                else {
+                    if (Context.attacker.hasSkillBuff(buffId)) {
+                        hasBuff = true;
+                    }
+                }
+
+                if (!hasBuff) {
+                    continue;
+                }
+
+                if (skillProp.changeSkillIfHasBuff.requiredSkillStacks != undefined) {
+                    // TODO:
+                }
+
+                skillLevel = Math.max(skillLevel, Context.attacker.skillLevels[skillId]);
+                skillId = skillProp.changeSkillIfHasBuff.newSkill;
+                skillProp = Utils.getSkillById(skillProp.changeSkillIfHasBuff.newSkill);
+
+                break;
+            }
+
+            if (!hasBuff) {
+                break;
+            }
+
+            ++depth;
+        }
+
+        if (depth > 0) {
+            // We changed skills, set temporary level
+            Context.attacker.skillLevels[skillProp.id] = skillLevel;
+        }
+
+        const levelProp = skillProp.levels[skillLevel - 1];
 
         if (levelProp == null || levelProp.minAttack == undefined) {
             continue;
@@ -80,6 +127,11 @@ self.onmessage = async function (event) {
             }
 
             out.push(res);
+        }
+
+        if (depth > 0) {
+            // We changed skills, remove temporary level
+            delete Context.attacker.skillLevels[skillProp.id];
         }
 
         // Key by the calculated skill (base or chosen variation) so the chart

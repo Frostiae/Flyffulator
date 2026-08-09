@@ -65,6 +65,12 @@
 		{ "parameter": "decreasedcastingtime", "add": 2, "rate": true },
 		{ "parameter": "decreasedcastingtime", "add": 3, "rate": true }
 	],
+	"actionspeed": [
+		{ "parameter": "actionspeed", "add": 0, "rate": true },
+		{ "parameter": "actionspeed", "add": 1, "rate": true },
+		{ "parameter": "actionspeed", "add": 2, "rate": true },
+		{ "parameter": "actionspeed", "add": 3, "rate": true }
+	],
 	"def": [
 		{ "parameter": "def", "add": 0, "rate": false },
 		{ "parameter": "def", "add": 2, "rate": false },

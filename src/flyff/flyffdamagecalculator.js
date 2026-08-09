@@ -152,7 +152,7 @@ export function getDamage(handFlag) {
             }
         }
 
-        totalDamage -= Math.floor(totalDamage * Math.min(20, Context.defender.getStat(Context.isPVP() ? "pvpdamagereduction" : "pvedamagereduction", true)) / 100);
+        totalDamage -= Math.floor(totalDamage * Math.min(50, Context.defender.getStat(Context.isPVP() ? "pvpdamagereduction" : "pvedamagereduction", true)) / 100);
         totalDamage -= Math.floor(totalDamage * Context.defender.getStat("damageoffload", true) / 100);
     }
 

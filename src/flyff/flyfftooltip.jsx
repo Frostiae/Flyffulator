@@ -500,16 +500,67 @@ function setupSkill(skill, i18n) {
     }
 
     const skillLevel = Context.player.skillLevels[skill.id] ?? skill.levels.length;
-    const levelProp = skillLevel != undefined ? skill.levels[skillLevel - 1] : skill.levels[0];
+    let levelProp = skillLevel != undefined ? skill.levels[skillLevel - 1] : skill.levels[0];
 
     out.push(<span style={{ color: "#2fbe6d", fontWeight: 600 }}>{skill.name[shortLanguageCode] ?? skill.name.en}</span>);
     if (skillLevel != undefined) {
         out.push(`  Lv. ${skillLevel}`);
     }
 
-    if (skill.element != "none") {
-        out.push(`\nElement: ${skill.element}`);
+    let weaponIcon;
+    if (skill.weapon != undefined) {
+        switch (skill.weapon) {
+            case "knuckle":
+                weaponIcon = "weaknuspeck.png";
+                break;
+            case "sword":
+                weaponIcon = "weaswostar.png";
+                break;
+            case "axe":
+                weaponIcon = "weaaxekarm.png";
+                break;
+            case "stick":
+                weaponIcon = "weachemay.png";
+                break;
+            case "wand":
+                weaponIcon = "weawanusu.png";
+                break;
+            case "staff":
+                weaponIcon = "weastawiz.png";
+                break;
+            case "yoyo":
+                weaponIcon = "weayoyiron.png";
+                break;
+            case "bow":
+                weaponIcon = "weabowgreen.png";
+                break;
+            case "shield":
+                weaponIcon = "armshiguard.png";
+                break;
+        }
     }
+
+    if (weaponIcon) {
+        out.push(<img src={`https://api.flyff.com/image/item/${weaponIcon}`} style={{ height: "18px", float: "right" }} className="skill-weapon-image"></img>);
+    }
+
+    if (skill.debuffType != undefined) {
+        out.push(`\n(${skill.debuffType})`);
+    }
+
+    let masterSkillPropOrBase = skill;
+    for (const masterVariation of skill.masterVariations ?? []) {
+        const masterLevel = Context.player.skillLevels[masterVariation] ?? 0;
+        if (masterLevel > 0) {
+            masterSkillPropOrBase = Utils.getSkillById(masterVariation);
+            levelProp = masterSkillPropOrBase.levels[masterLevel - 1];
+            break;
+        }
+    }
+
+    //
+    // Requirements Section
+    //
 
     if (levelProp.consumedMP != undefined) {
         out.push(`\nMP: ${levelProp.consumedMP}`);
@@ -518,6 +569,45 @@ function setupSkill(skill, i18n) {
     if (levelProp.consumedFP != undefined) {
         out.push(`\nFP: ${levelProp.consumedFP}`);
     }
+
+    if (levelProp.requiredHPThresholdRate != undefined) {
+        if (levelProp.requiredHPThresholdRate > 0) {
+            out.push(`\nHP Threshold: ${levelProp.requiredHPThresholdRate}%`);
+        }
+        else {
+            out.push(`\nHP Threshold: Below ${levelProp.requiredHPThresholdRate}%`);
+        }
+    }
+
+    if (levelProp.consumedMaxHPRate != undefined) {
+        out.push(`\nHP: ${Context.player.getHP() * (levelProp.consumedMaxHPRate / 100)} (${levelProp.consumedMaxHPRate}%)`);
+    }
+    else if (levelProp.consumedCurrentHPRate != undefined) {
+        // Same but it's just using the current HP in reality
+        out.push(`\nHP: ${Context.player.getHP() * (levelProp.consumedCurrentHPRate / 100)} (${levelProp.consumedCurrentHPRate}%)`);
+    }
+
+    if (levelProp.consumedSkillStacks != undefined) {
+        const requiredStackSkillProp = Utils.getSkillById(levelProp.consumedSkillStacks.skill);
+        out.push(`\n${requiredStackSkillProp.name[shortLanguageCode]} Stacks: ${levelProp.consumedSkillStacks.count}`);
+
+        if (levelProp.consumedSkillStacks.probability != undefined) {
+            out.push(` (${levelProp.consumedSkillStacks.probability}%)`);
+        }
+    }
+
+
+
+
+
+
+
+
+
+    if (skill.element != "none") {
+        out.push(`\nElement: ${skill.element}`);
+    }
+
 
     for (const requirement of skill.requirements) {
         const req = Utils.getSkillById(requirement.skill);
