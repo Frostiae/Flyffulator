@@ -1,6 +1,7 @@
+import Skill from "./flyffskill";
+import Context from "../flyff/flyffcontext";
 import * as Utils from "../flyff/flyffutils";
 import ItemElem from "../flyff/flyffitemelem";
-import Context from "../flyff/flyffcontext";
 
 /**
  * Create a tooltip for the given item or skill
@@ -13,6 +14,9 @@ export function createTooltip(content, i18n) {
         return setupItem(content, i18n);
     }
     else if (content.passive != undefined) {
+        return setupSkill(new Skill(content, 1), i18n);
+    }
+    else if (content instanceof Skill) {
         return setupSkill(content, i18n);
     }
     else if (content.consumedPoints != undefined) {
@@ -489,27 +493,28 @@ function setupItem(itemElem, i18n) {
 
 /**
  * Get the tooltip text for the given skill
- * @param {object} skill The skill property
+ * @param {Skill} skill The skill instance
  * @param {I18n} i18n Localization
  */
 function setupSkill(skill, i18n) {
     const out = [];
+    const skillProp = skill.skillProp;
     var shortLanguageCode = "en";
     if (i18n.resolvedLanguage) {
         shortLanguageCode = i18n.resolvedLanguage.split('-')[0];
     }
 
-    const skillLevel = Context.player.skillLevels[skill.id] ?? skill.levels.length;
-    let levelProp = skillLevel != undefined ? skill.levels[skillLevel - 1] : skill.levels[0];
+    const skillLevel = skill.level;
+    let levelProp = skill.levelProp;
 
-    out.push(<span style={{ color: "#2fbe6d", fontWeight: 600 }}>{skill.name[shortLanguageCode] ?? skill.name.en}</span>);
+    out.push(<span style={{ color: "#2fbe6d", fontWeight: 600 }}>{skillProp.name[shortLanguageCode] ?? skillProp.name.en}</span>);
     if (skillLevel != undefined) {
         out.push(`  Lv. ${skillLevel}`);
     }
 
     let weaponIcon;
-    if (skill.weapon != undefined) {
-        switch (skill.weapon) {
+    if (skillProp.weapon != undefined) {
+        switch (skillProp.weapon) {
             case "knuckle":
                 weaponIcon = "weaknuspeck.png";
                 break;
@@ -540,16 +545,18 @@ function setupSkill(skill, i18n) {
         }
     }
 
+    // TODO: No way to identify trap skills on API yet
+
     if (weaponIcon) {
         out.push(<img src={`https://api.flyff.com/image/item/${weaponIcon}`} style={{ height: "18px", float: "right" }} className="skill-weapon-image"></img>);
     }
 
-    if (skill.debuffType != undefined) {
-        out.push(`\n(${skill.debuffType})`);
+    if (skillProp.debuffType != undefined) {
+        out.push(`\n(${skillProp.debuffType})`);
     }
 
-    let masterSkillPropOrBase = skill;
-    for (const masterVariation of skill.masterVariations ?? []) {
+    let masterSkillPropOrBase = skillProp;
+    for (const masterVariation of skillProp.masterVariations ?? []) {
         const masterLevel = Context.player.skillLevels[masterVariation] ?? 0;
         if (masterLevel > 0) {
             masterSkillPropOrBase = Utils.getSkillById(masterVariation);
@@ -596,36 +603,34 @@ function setupSkill(skill, i18n) {
         }
     }
 
+    out.push(<hr/>);
 
-
-
-
-
-
-
-
-    if (skill.element != "none") {
-        out.push(`\nElement: ${skill.element}`);
-    }
-
-
-    for (const requirement of skill.requirements) {
+    let hasRequirements = false;
+    for (const requirement of skillProp.requirements) {
         const req = Utils.getSkillById(requirement.skill);
         const playerLevel = Context.player.skillLevels[requirement.skill];
 
         if (playerLevel == undefined || playerLevel < requirement.level) {
             out.push(<span style={{ color: "#ff0000" }}><br />{req.name[shortLanguageCode] ?? req.name.en} skill level {requirement.level} is needed.</span>);
-        }
-        else {
-            out.push(`\n${req.name[shortLanguageCode] ?? req.name.en} skill level ${requirement.level} is needed.`);
+            hasRequirements = true;
         }
     }
 
-    if (Context.player.level < skill.level) {
-        out.push(<span style={{ color: "#ff0000" }}><br />Character Level: {skill.level}</span>);
+    if (Context.player.level < skillProp.level) {
+        out.push(<span style={{ color: "#ff0000" }}><br />Character Level: {skillProp.level}</span>);
+        hasRequirements = true;
     }
-    else {
-        out.push(`\nCharacter Level: ${skill.level}`);
+
+    if (hasRequirements) {
+        out.push(<hr/>);
+    }
+
+    //
+    // Properties Section
+    //
+
+    if (skillProp.element != "none") {
+        out.push(`\nElement: ${skillProp.element}`);
     }
 
     const statsStyle = { fontWeight: 800 };
@@ -633,6 +638,10 @@ function setupSkill(skill, i18n) {
     // Attack
     if (levelProp.maxAttack != undefined && levelProp.maxAttack > 0) {
         out.push(<span style={statsStyle}><br />Base Damage: {levelProp.minAttack} ~ {levelProp.maxAttack}</span>);
+    }
+
+    if (levelProp.damageMultiplier != undefined) {
+        out.push(<span style={statsStyle}><br />Damage Multiplier: {levelProp.damageMultiplier[0].multiplier}</span>);
     }
 
     // TODO: Scales for pvp vs pve?
@@ -677,6 +686,14 @@ function setupSkill(skill, i18n) {
         }
     }
 
+
+
+
+
+
+
+    
+
     // Time
     if (levelProp.duration != undefined) {
         const secs = levelProp.duration % 60;
@@ -720,10 +737,10 @@ function setupSkill(skill, i18n) {
     if (levelProp.spellRange != undefined) {
         out.push(<span style={statsStyle}><br />Spell Range: {levelProp.spellRange}</span>);
 
-        if (skill.target == "party") {
+        if (skillProp.target == "party") {
             out.push(<span style={statsStyle}> (Party)</span>);
         }
-        else if (skill.target == "area") {
+        else if (skillProp.target == "area") {
             out.push(<span style={statsStyle}> (Around)</span>);
         }
     }
@@ -753,11 +770,11 @@ function setupSkill(skill, i18n) {
     }
 
     // Combo
-    if (skill.combo != "general") {
-        out.push(<span style={statsStyle}><br />Combo: {skill.combo}</span>);
+    if (skillProp.combo != "general") {
+        out.push(<span style={statsStyle}><br />Combo: {skillProp.combo}</span>);
     }
 
-    if (!skill.flying) {
+    if (!skillProp.flying) {
         out.push(<span style={statsStyle}><br />Flying: No</span>);
     }
 
@@ -852,7 +869,7 @@ function setupSkill(skill, i18n) {
         }
     }
 
-    out.push(`\n${skill.description[shortLanguageCode] ?? skill.description.en}`);
+    out.push(`\n${skillProp.description[shortLanguageCode] ?? skillProp.description.en}`);
 
     return (<div>{out.map((v, i) => <span key={i}>{v}</span>)}</div>);
 }

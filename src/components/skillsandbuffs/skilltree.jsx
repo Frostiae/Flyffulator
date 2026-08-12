@@ -8,6 +8,7 @@ import NumberInput from "../shared/numberinput";
 import Context from "../../flyff/flyffcontext";
 import SkillTreeIcon from "./skilltreeicon";
 import * as Utils from "../../flyff/flyffutils";
+import Skill from "../../flyff/flyffskill";
 
 function SkillTree() {
     const { showSearch } = useSearch();
@@ -196,7 +197,15 @@ function SkillTree() {
             type: "skill",
             typeLocalization: "search_skill",
             onSet: (result) => {
-                Context.player.activeBuffs[parseInt(result.id)] = result.levels.length;
+                const buffLevel = Context.player.skillLevels[result.id] ?? 1;
+                const buff = new Skill(result, buffLevel, 1);
+                const index = Context.player.hasSkillBuff(result.id);
+                if (index != -1) {
+                    Context.player.activeBuffs[index] = buff;
+                }
+                else {
+                    Context.player.activeBuffs.push(buff);
+                }
             }
         });
     }
@@ -257,7 +266,15 @@ function SkillTree() {
         ];
 
         for (const id of buffs) {
-            Context.player.activeBuffs[id] = Utils.getSkillById(id).levels.length;
+            const skillProp = Utils.getSkillById(id);
+            const buff = new Skill(skillProp, skillProp.levels.length, 1);
+            const index = Context.player.hasSkillBuff(id);
+            if (index != -1) {
+                Context.player.activeBuffs[index] = buff;
+            }
+            else {
+                Context.player.activeBuffs.push(buff);
+            }
         }
 
         setRefresh(!refresh);
@@ -271,9 +288,16 @@ function SkillTree() {
                 continue;
             }
 
-            const skill = Utils.getSkillById(id);
-            if (skill && skill.passive) {
-                Context.player.activeBuffs[id] = level;
+            const skillProp = Utils.getSkillById(id);
+            if (skillProp && skillProp.passive) {
+                const buff = new Skill(skillProp, level, 1);
+                const index = Context.player.hasSkillBuff(id);
+                if (index != -1) {
+                    Context.player.activeBuffs[index] = buff;
+                }
+                else {
+                    Context.player.activeBuffs.push(buff);
+                }
             }
         }
 
@@ -301,9 +325,12 @@ function SkillTree() {
         setRefresh(!refresh);
     }
 
-    function removeSkill(skill) {
-        delete Context.player.activeBuffs[skill.id];
-        setRefresh(!refresh);
+    function removeSkill(buff) {
+        const index = Context.player.hasSkillBuff(buff.skillProp.id);
+        if (index != -1) {
+            Context.player.activeBuffs.splice(index, 1);
+            setRefresh(!refresh);
+        }
     }
 
     function removePartySkill(skill) {
@@ -379,7 +406,7 @@ function SkillTree() {
                                         onSelect={selectSkill}
                                         selected={skill.id === selectedSkillId}
                                         disabled={!Context.player.canUseSkill(skill, true)}
-                                        level={Context.player.getSkillLevel(skill.id)}
+                                        level={Context.player.getSkillLevel(skill.id) }
                                     />
                                 )
                             }
@@ -484,8 +511,8 @@ function SkillTree() {
                     <hr />
                     <div className="buffs-container">
                         {
-                            Object.entries(Context.player.activeBuffs).map(([id,]) =>
-                                <Slot key={id} className={"slot-skill"} content={Utils.getSkillById(id)} onRemove={removeSkill} />
+                            Context.player.activeBuffs.map(buff =>
+                                <Slot key={buff.skillProp.id} className={"slot-skill"} content={buff} onRemove={removeSkill} />
                             )
                         }
                     </div>

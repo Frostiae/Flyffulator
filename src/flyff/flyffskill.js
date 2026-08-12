@@ -1,9 +1,9 @@
 import { API } from '../data';
 
 /**
- * An instance of an in-game buff.
+ * An instance of an in-game skill.
  */
-export default class Buff {
+export default class Skill {
   skillProp = null;
   levelProp = null;
   level = 1;
@@ -11,8 +11,10 @@ export default class Buff {
 
   constructor(skillProp, level, stacks = 1) {
     this.skillProp = skillProp;
-    this.levelProp = (skillProp.levels ?? [])[level - 1];
-    this.level = level;
+    if (skillProp.levels) {
+      this.levelProp = skillProp.levels[level - 1];
+      this.level = level;
+    }
     this.stacks = stacks;
   }
 
@@ -25,6 +27,6 @@ export default class Buff {
       return;
     }
 
-    stacks = Math.max(stacks + num, this.levelProp.maxSkillStacks ?? 1);
+    this.stacks = Math.max(1, Math.min(this.stacks + num, this.levelProp.maxSkillStacks ?? 1));
   }
 }

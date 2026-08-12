@@ -110,7 +110,7 @@ export default class Entity {
             delete shrinked.skillLevels;
         }
 
-        if (Object.keys(shrinked.activeBuffs).length === 0) {
+        if (shrinked.activeBuffs.length === 0) {
             delete shrinked.activeBuffs;
         }
 
@@ -1244,64 +1244,67 @@ export default class Entity {
 
         // Buffs
 
-        for (const [id, level] of Object.entries(this.activeBuffs)) {
-            const skillProp = Utils.getSkillById(id);
-            const levelProp = skillProp.levels[level - 1];
+        for (const buff of this.activeBuffs) {
+            const skillProp = buff.skillProp;
+            const levelProp = buff.levelProp;
 
             if (levelProp.abilities != undefined) {
-                for (const ability of levelProp.abilities) {
-                    if (!targetStats.includes(ability.parameter) || ability.rate != rate) {
-                        continue;
-                    }
-
-                    if (stat == "skillchance" && (ability.skill == undefined || ability.skill != skillChanceId)) {
-                        continue;
-                    }
-
-                    let add = ability.add;
-
-                    for (const scale of levelProp.scalingParameters ?? []) {
-                        if (scale.parameter != ability.parameter) {
+                const loops = (levelProp.stackAbilities ?? false) ? buff.stacks : 1;
+                for (let i = 0; i < loops; ++i) {
+                    for (const ability of levelProp.abilities) {
+                        if (!targetStats.includes(ability.parameter) || ability.rate != rate) {
                             continue;
                         }
-
-                        if (scale.stat != undefined) {
-                            let scaleStat = 0;
-                            if (scale.stat == "int") {
-                                scaleStat = Math.min(this.bufferInt * scale.scale, scale.maximum);
+    
+                        if (stat == "skillchance" && (ability.skill == undefined || ability.skill != skillChanceId)) {
+                            continue;
+                        }
+    
+                        let add = ability.add;
+    
+                        for (const scale of levelProp.scalingParameters ?? []) {
+                            if (scale.parameter != ability.parameter) {
+                                continue;
                             }
-                            else if (scale.stat == "str") {
-                                scaleStat = Math.min(this.bufferStr * scale.scale, scale.maximum);
+    
+                            if (scale.stat != undefined) {
+                                let scaleStat = 0;
+                                if (scale.stat == "int") {
+                                    scaleStat = Math.min(this.bufferInt * scale.scale, scale.maximum);
+                                }
+                                else if (scale.stat == "str") {
+                                    scaleStat = Math.min(this.bufferStr * scale.scale, scale.maximum);
+                                }
+                                else if (scale.stat == "sta") {
+                                    scaleStat = Math.min(this.bufferSta * scale.scale, scale.maximum);
+                                }
+                                else if (scale.stat == "dex") {
+                                    scaleStat = Math.min(this.bufferDex * scale.scale, scale.maximum);
+                                }
+                                else if (scale.stat == "hp") {
+                                    scaleStat = Math.min(this.getHP(), scale.maximum);
+                                }
+                                else {
+                                    // arbitrary stat
+                                    scaleStat = Math.min(this.getStat(scale.stat, true) * scale.scale, scale.maximum);
+                                }
+    
+                                if (scale.add) {
+                                    add += Math.floor(scaleStat);
+                                }
+                                else {
+                                    add += Math.floor(add * scaleStat);
+                                }
                             }
-                            else if (scale.stat == "sta") {
-                                scaleStat = Math.min(this.bufferSta * scale.scale, scale.maximum);
-                            }
-                            else if (scale.stat == "dex") {
-                                scaleStat = Math.min(this.bufferDex * scale.scale, scale.maximum);
-                            }
-                            else if (scale.stat == "hp") {
-                                scaleStat = Math.min(this.getHP(), scale.maximum);
-                            }
-                            else {
-                                // arbitrary stat
-                                scaleStat = Math.min(this.getStat(scale.stat, true) * scale.scale, scale.maximum);
-                            }
-
-                            if (scale.add) {
-                                add += Math.floor(scaleStat);
-                            }
-                            else {
-                                add += Math.floor(add * scaleStat);
+                            else if (scale.part != undefined) {
+                                // TODO: part scaling
+                                // TODO: Item kind scaling
+                                Context.unimplementedWarnings.add("Stat equipment part scaling");
                             }
                         }
-                        else if (scale.part != undefined) {
-                            // TODO: part scaling
-                            // TODO: Item kind scaling
-                            Context.unimplementedWarnings.add("Stat equipment part scaling");
-                        }
+    
+                        total += add;
                     }
-
-                    total += add;
                 }
             }
         }
@@ -1420,21 +1423,19 @@ export default class Entity {
     removeAttribute(attribute) {
         const toRemove = [];
 
-        for (const [id, level] of Object.entries(this.activeBuffs)) {
-            const skillProp = Utils.getSkillById(id);
-            const levelProp = skillProp.levels[level - 1];
-
-            if (levelProp.abilities != undefined) {
-                for (const ability of levelProp.abilities) {
+        for (let i = 0; i < this.activeBuffs.length; ++i) {
+            const buff = this.activeBuffs[i];
+            if (buff.levelProp && buff.levelProp.abilities != undefined) {
+                for (const ability of buff.levelProp.abilities) {
                     if (ability.parameter == "attribute" && ability.attribute == attribute) {
-                        toRemove.push(id);
+                        toRemove.push(i);
                     }
                 }
             }
         }
 
-        for (const id of toRemove) {
-            delete this.activeBuffs[id];
+        for (const i of toRemove) {
+            this.activeBuffs.splice(i, 1);
         }
 
         return toRemove.length > 0;
@@ -1677,31 +1678,31 @@ export default class Entity {
     }
 
     /**
-     * Check if this entity currently has the given skill activated. 
+     * Check if this entity currently has the specified buff active.
+     * @param {number} skillId The skill ID to look for.
+     * @returns The index of the buff if it exists, or -1.
      */
     hasSkillBuff(skillId) {
-        for (const [id, _] of Object.entries(this.activeBuffs)) {
-            if (id == skillId) {
-                return true;
+        for (let i = 0; i < this.activeBuffs.length; ++i) {
+            const buff = this.activeBuffs[i];
+            if (buff.skillProp.id == skillId) {
+                return i;
             }
-
-            const skillProp = Utils.getSkillById(id);
-            if (skillProp && skillProp.inheritSkill != undefined && skillProp.inheritSkill == skillId) {
-                return true;
+    
+            if (buff.skillProp.inheritSkill != undefined && buff.skillProp.inheritSkill == skillId) {
+                return i;
             }
         }
 
-        return false;
+        return -1;
     }
 
     /**
      * Check if this entity currently has a hymn buff active.
      */
     hasHymnBuff() {
-        for (const [id, _] of Object.entries(this.activeBuffs)) {
-            const skillProp = Utils.getSkillById(id);
-            
-            if (skillProp.hymnSkill != undefined) {
+        for (const buff of this.activeBuffs) {
+            if (buff.skillProp.hymnSkill != undefined) {
                 return true;
             }
         }
@@ -1714,11 +1715,8 @@ export default class Entity {
      * @param {string} attribute The attribute to check for.
      */
     hasAttribute(attribute) {
-        for (const [id, level] of Object.entries(this.activeBuffs)) {
-            const skillProp = Utils.getSkillById(id);
-            const levelProp = skillProp.levels[level - 1];
-            
-            for (const ability of levelProp.abilities ?? []) {
+        for (const buff of this.activeBuffs) {
+            for (const ability of buff.levelProp.abilities ?? []) {
                 if (ability.parameter != undefined && ability.parameter == "attribute" &&
                     ability.attribute != undefined && ability.attribute == attribute
                 ) {
@@ -1732,17 +1730,16 @@ export default class Entity {
 
     /**
      * Check how many debuffs of the given type are present on this entity.
-     * @param {string} type The type of debuff to check for, or any type if blank.
-     * @returns The total number of debuffs of this type.
+     * @param {string} type The type of debuff to check for, or any type if blank.     * @returns The total number of debuffs of this type.
      */
     getDebuffCount(type = "") {
         let count = 0;
-        for (const [id, _] of Object.entries(this.activeBuffs)) {
-            const skillProp = Utils.getSkillById(id);
-            
-            if (skillProp.debuff) {
-                if (type != "" && skillProp.debuffType != undefined && skillProp.debuffType == type) {
-                    ++count;
+        for (const buff of this.activeBuffs) {
+            if (buff.skillProp.debuff) {
+                if (type != "") {
+                    if (buff.skillProp.debuffType != undefined && buff.skillProp.debuffType == type) {
+                        ++count;
+                    }
                 }
                 else {
                     ++count;
@@ -1823,6 +1820,6 @@ export default class Entity {
             this.equipSets.push(set);
         }
 
-        console.log("Updated currently equipped sets.");
+        //console.log("Updated currently equipped sets.");
     }
 }

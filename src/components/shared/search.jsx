@@ -8,6 +8,7 @@ import Entity from "../../flyff/flyffentity";
 import Context from "../../flyff/flyffcontext";
 import * as Utils from "../../flyff/flyffutils";
 import ItemElem from "../../flyff/flyffitemelem";
+import Skill from '../../flyff/flyffskill';
 
 function Search() {
     const { isSearchOpen, searchProperties, hideSearch } = useSearch();
@@ -263,7 +264,7 @@ function Search() {
                                         e.preventDefault(); // prevent scrolling
                                     }}
                                 >
-                                    <Slot className={"slot-skill"} content={result} />
+                                    <Slot className={"slot-skill"} content={searchProperties.type == "skill" ? (new Skill(result, 1)) : result} showStacks={false} />
                                     <span>{result.name[shortCode] ?? result.name.en}</span>
                                 </div>
                             )

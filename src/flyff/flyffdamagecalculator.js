@@ -1,3 +1,4 @@
+import Skill from "./flyffskill";
 import Context from "./flyffcontext";
 import * as Utils from "./flyffutils";
 
@@ -86,7 +87,7 @@ export function getDamage(handFlag) {
     totalDamage += Math.floor(totalDamage * Context.attacker.getStat(Context.isPVP() ? "pvpdamage" : "pvedamage", true) / 100);
 
     const behindDarkFactor = Context.attacker.getStat("rearinvisibledamage", true);
-    if (behindDarkFactor > 0 && (Context.attacker.hasSkillBuff(7395) || Context.attacker.hasSkillBuff(24399))) {
+    if (behindDarkFactor > 0 && (Context.attacker.hasSkillBuff(7395) != -1 || Context.attacker.hasSkillBuff(24399) != -1)) {
         // TODO: Behind dark damage
         Context.unimplementedWarnings.add("Rear dark illusion damage");
     }
@@ -121,22 +122,22 @@ export function getDamage(handFlag) {
     }
 
     const shockDamageFactor = Context.defender.getStat("damagefromshocked", true);
-    if (shockDamageFactor != 0 && Context.attacker.hasSkillBuff(54749)) {
+    if (shockDamageFactor != 0 && Context.attacker.hasSkillBuff(54749) != -1) {
         totalDamage += Math.floor(totalDamage * shockDamageFactor / 100);
     }
 
     const waterDamageFactor = Context.defender.getStat("damagefromwatered", true);
-    if (waterDamageFactor != 0 && (Context.attacker.hasSkillBuff(26287) || Context.attacker.hasSkillBuff(44237))) {
+    if (waterDamageFactor != 0 && (Context.attacker.hasSkillBuff(26287) != -1 || Context.attacker.hasSkillBuff(44237) != -1)) {
         totalDamage += Math.floor(totalDamage * waterDamageFactor / 100);
     }
 
     const fireDamageFactor = Context.defender.getStat("damagefromburned", true);
-    if (fireDamageFactor != 0 && Context.attacker.hasSkillBuff(57839)) {
+    if (fireDamageFactor != 0 && Context.attacker.hasSkillBuff(57839) != -1) {
         totalDamage += Math.floor(totalDamage * fireDamageFactor / 100);
     }
 
     const windDamageFactor = Context.defender.getStat("damagefromsuffocated", true);
-    if (windDamageFactor != 0 && Context.attacker.hasSkillBuff(41916)) {
+    if (windDamageFactor != 0 && Context.attacker.hasSkillBuff(41916) != -1) {
         totalDamage += Math.floor(totalDamage * windDamageFactor / 100);
     }
     
@@ -270,7 +271,14 @@ function triggerSkills() {
         if (Context.settings.swordcrossEnabled && (Context.attackFlags & (Utils.ATTACK_FLAGS.GENERIC | Utils.ATTACK_FLAGS.MELEESKILL)) != 0) {
             if (Context.attacker.equipment.mainhand.itemProp.triggerSkill != undefined && Context.attacker.equipment.mainhand.itemProp.triggerSkill == 3124) {
                 if (Math.random() * 100 <= Context.attacker.equipment.mainhand.itemProp.triggerSkillProbability) {
-                    Context.defender.activeBuffs[3124] = 1;
+                    const swordcross = new Skill(Utils.getSkillById(3124), 1, 1);
+                    const index = Context.defender.hasSkillBuff(3124);
+                    if (index != -1) {
+                        Context.defender.activeBuffs[index] = swordcross;
+                    }
+                    else {
+                        Context.defender.activeBuffs.push(swordcross);
+                    }
                 }
             }
         }
@@ -452,7 +460,7 @@ function applyDefense(attack) {
             for (const mul of levelProp.damageMultiplier) {
                 if (mul.condition != undefined) {
                     const checkTarget = mul.condition.onTarget ? Context.defender : Context.attacker;
-                    if (!checkTarget.hasSkillBuff(mul.condition.requiredBuff)) {
+                    if (checkTarget.hasSkillBuff(mul.condition.requiredBuff) == -1) {
                         continue;
                     }
                 }
@@ -463,13 +471,13 @@ function applyDefense(attack) {
 
         // Vital stab/silent shot with dark illusion
         if (Context.skill.id == 5162 || Context.skill.id == 8916) {
-            if (Context.attacker.hasSkillBuff(7395)) {
+            if (Context.attacker.hasSkillBuff(7395) != -1) {
                 factor *= 1.4;
             }
         }
         else if (Utils.isSkillOrInherit(Context.skill.id, 38885)) {
             // Storm strike
-            if (Context.defender.hasSkillBuff(38885)) {
+            if (Context.defender.hasSkillBuff(38885) != -1) {
                 factor *= Context.skill.id == 55718 ? 1.8 : 1.4;
             }
         }
@@ -879,8 +887,14 @@ function applyAutoAttackDefense(attack) {
 
     let damage = applyAttackDefense(attack, defense);
     if (damage > 0) {
-        // TODO: Clear reflection
-
+        let clearReflectionCrit = false;
+        const clearReflectionBuffIndex = Context.attacker.hasSkillBuff(58524);
+        if (Context.attacker.isPlayer() && clearReflectionBuffIndex != -1) {
+            const nenBuffIndex = Context.attacker.hasSkillBuff(53306);
+            if (nenBuffIndex != -1 && Context.attacker.activeBuffs[nenBuffIndex].stacks == Context.attacker.activeBuffs[nenBuffIndex].levelProp.maxSkillStacks) {
+                clearReflectionCrit = true;
+            }
+        }
 
         if (isCriticalAttack()) {
             Context.attackFlags |= Utils.ATTACK_FLAGS.CRITICAL;
@@ -898,6 +912,26 @@ function applyAutoAttackDefense(attack) {
                     minCritical = 1.2;
                     maxCritical = 2.0;
                 }
+            }
+
+            if (clearReflectionCrit) {
+                const clearReflectionLevel = Context.attacker.skillLevels[58524];
+                let lerpValue = 0.2;
+                // Don't have this data in the API, hard code it here
+                if (clearReflectionLevel == 5) {
+                    lerpValue = 1;
+                }
+                else if (clearReflectionLevel == 4) {
+                    lerpValue = 0.8;
+                }
+                else if (clearReflectionLevel == 3) {
+                    lerpValue = 0.6;
+                }
+                else if (clearReflectionLevel == 2) {
+                    lerpValue = 0.4;
+                }
+
+                minCritical = Utils.mix(minCritical, maxCritical, lerpValue);
             }
 
             const criticalFactor = minCritical + Math.random() * (maxCritical - minCritical);
@@ -1047,7 +1081,7 @@ function getBaseSkillPower() {
 
     // Thunder Strike or EVA Storm with shocked debuff
     if (Utils.isSkillOrInherit(Context.skill.id, 22731) || Utils.isSkillOrInherit(Context.skill.id, 37809)) {
-        if (Context.defender.hasSkillBuff(54749)) {
+        if (Context.defender.hasSkillBuff(54749) != -1) {
             power.min = power.max;
         }
     }
@@ -1071,7 +1105,7 @@ function getMagicSkillPower() {
 
     // Arcanist infusion
     let elementType = Context.skill.elementType;
-    if (elementType != "none" && Context.attacker.hasSkillBuff(12579)) {
+    if (elementType != "none" && Context.attacker.hasSkillBuff(12579) != -1) {
         const weaponElement = Context.attacker.equipment.mainhand.element;
         if (weaponElement != "none") {
             elementType = weaponElement;

@@ -64,15 +64,20 @@ self.onmessage = async function (event) {
         const maxDepth = 3;
         while (skillProp.changeSkillIfHasBuff != undefined && depth < maxDepth) {
             let hasBuff = false;
+            let buff = null;
 
             for (const buffId of skillProp.changeSkillIfHasBuff.anyOf) {
                 if (skillProp.changeSkillIfHasBuff.checkBuffOnTarget) {
-                    if (Context.defender.hasSkillBuff(buffId)) {
+                    const buffIndex = Context.defender.hasSkillBuff(buffId);
+                    if (buffIndex != -1) {
+                        buff = Context.defender.activeBuffs[buffIndex];
                         hasBuff = true;
                     }
                 }
                 else {
-                    if (Context.attacker.hasSkillBuff(buffId)) {
+                    const buffIndex = Context.defender.hasSkillBuff(buffId);
+                    if (buffIndex != -1) {
+                        buff = Context.defender.activeBuffs[buffIndex];
                         hasBuff = true;
                     }
                 }
@@ -81,8 +86,10 @@ self.onmessage = async function (event) {
                     continue;
                 }
 
-                if (skillProp.changeSkillIfHasBuff.requiredSkillStacks != undefined) {
-                    // TODO:
+                if (skillProp.changeSkillIfHasBuff.requiredSkillStacks != undefined && buff.stacks < skillProp.changeSkillIfHasBuff.requiredSkillStacks) {
+                    hasBuff = false;
+                    buff = null;
+                    continue;
                 }
 
                 skillLevel = Math.max(skillLevel, Context.attacker.skillLevels[skillId]);

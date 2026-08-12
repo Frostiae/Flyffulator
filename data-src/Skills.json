@@ -574,7 +574,7 @@
 			"sp": "Aturdido",
 			"sw": "Stun",
 			"th": "Stun",
-			"tw": "擊暈",
+			"tw": "暈眩",
 			"vi": "Stun"
 		},
 		"description": {
@@ -1808,11 +1808,11 @@
 		"requiresCouple": false,
 		"target": "single",
 		"levels": [
-			{ "maxSkillStacks": 4, "gainedSkillStacks": [ { "skill": 56636, "count": 1 } ], "duration": 3, "durationPVP": 3 },
-			{ "maxSkillStacks": 4, "gainedSkillStacks": [ { "skill": 56636, "count": 1 } ], "duration": 3, "durationPVP": 3 },
-			{ "maxSkillStacks": 4, "gainedSkillStacks": [ { "skill": 56636, "count": 1 } ], "duration": 3, "durationPVP": 3 },
-			{ "maxSkillStacks": 4, "gainedSkillStacks": [ { "skill": 56636, "count": 1 } ], "duration": 3, "durationPVP": 3 },
-			{ "maxSkillStacks": 4, "gainedSkillStacks": [ { "skill": 56636, "count": 1 } ], "duration": 3, "durationPVP": 3 }
+			{ "maxSkillStacks": 5, "gainedSkillStacks": [ { "skill": 56636, "count": 1 } ], "duration": 3, "durationPVP": 3 },
+			{ "maxSkillStacks": 5, "gainedSkillStacks": [ { "skill": 56636, "count": 1 } ], "duration": 3, "durationPVP": 3 },
+			{ "maxSkillStacks": 5, "gainedSkillStacks": [ { "skill": 56636, "count": 1 } ], "duration": 3, "durationPVP": 3 },
+			{ "maxSkillStacks": 5, "gainedSkillStacks": [ { "skill": 56636, "count": 1 } ], "duration": 3, "durationPVP": 3 },
+			{ "maxSkillStacks": 5, "gainedSkillStacks": [ { "skill": 56636, "count": 1 } ], "duration": 3, "durationPVP": 3 }
 		]
 	},
 	"38140": {
@@ -2260,26 +2260,26 @@
 			"vi": "Shocked"
 		},
 		"description": {
-			"en": "You are shocked and receive extra electric damage.",
-			"ar": "You are shocked and receive extra electric damage.",
-			"br": "You are shocked and receive extra electric damage.",
+			"en": "You are shocked and all elemental resistances are reduced by 10%.",
+			"ar": "You are shocked and all elemental resistances are reduced by 10%.",
+			"br": "You are shocked and all elemental resistances are reduced by 10%.",
 			"cns": "你被触电麻痹，并受到额外雷电伤害。",
 			"de": "Du bist geschockt und erleidest zusätzlichen Elektroschaden.",
-			"fi": "You are shocked and receive extra electric damage.",
-			"fil": "You are shocked and receive extra electric damage.",
-			"fr": "Vous êtes choqué et subissez des dégâts électriques supplémentaires.",
-			"id": "You are shocked and receive extra electric damage.",
-			"it": "You are shocked and receive extra electric damage.",
-			"jp": "You are shocked and receive extra electric damage.",
+			"fi": "You are shocked and all elemental resistances are reduced by 10%.",
+			"fil": "You are shocked and all elemental resistances are reduced by 10%.",
+			"fr": "Vous êtes électrocuté et toutes les résistances élémentaires sont réduites de 10 %.",
+			"id": "You are shocked and all elemental resistances are reduced by 10%.",
+			"it": "You are shocked and all elemental resistances are reduced by 10%.",
+			"jp": "You are shocked and all elemental resistances are reduced by 10%.",
 			"kr": "감전 상태로 추가 전기 피해를 받습니다.",
-			"nl": "You are shocked and receive extra electric damage.",
-			"pl": "You are shocked and receive extra electric damage.",
-			"ru": "You are shocked and receive extra electric damage.",
+			"nl": "You are shocked and all elemental resistances are reduced by 10%.",
+			"pl": "You are shocked and all elemental resistances are reduced by 10%.",
+			"ru": "You are shocked and all elemental resistances are reduced by 10%.",
 			"sp": "Estás electrocutado y recibes daño eléctrico adicional.",
-			"sw": "You are shocked and receive extra electric damage.",
-			"th": "You are shocked and receive extra electric damage.",
-			"tw": "你被觸電麻痺，並受到額外雷電傷害。",
-			"vi": "You are shocked and receive extra electric damage."
+			"sw": "You are shocked and all elemental resistances are reduced by 10%.",
+			"th": "You are shocked and all elemental resistances are reduced by 10%.",
+			"tw": "你處於觸電狀態，所有元素抗性降低 10%。",
+			"vi": "You are shocked and all elemental resistances are reduced by 10%."
 		},
 		"icon": "magelelgtbal.png",
 		"level": 1,
@@ -2296,34 +2296,34 @@
 		"target": "single",
 		"levels": [
 			{ "duration": 1, "durationPVP": 1, "abilities": [
-				{ "parameter": "electricitydefense", "add": -10, "rate": true }
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
 			] },
 			{ "duration": 2, "durationPVP": 2, "abilities": [
-				{ "parameter": "electricitydefense", "add": -10, "rate": true }
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
 			] },
 			{ "duration": 3, "durationPVP": 3, "abilities": [
-				{ "parameter": "electricitydefense", "add": -10, "rate": true }
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
 			] },
 			{ "duration": 4, "durationPVP": 4, "abilities": [
-				{ "parameter": "electricitydefense", "add": -10, "rate": true }
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
 			] },
 			{ "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "electricitydefense", "add": -10, "rate": true }
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
 			] },
 			{ "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "electricitydefense", "add": -10, "rate": true }
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
 			] },
 			{ "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "electricitydefense", "add": -10, "rate": true }
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
 			] },
 			{ "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "electricitydefense", "add": -10, "rate": true }
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
 			] },
 			{ "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "electricitydefense", "add": -10, "rate": true }
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
 			] },
 			{ "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "electricitydefense", "add": -10, "rate": true }
+				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
 			] }
 		]
 	},
@@ -2867,7 +2867,7 @@
 			"sp": "Aumenta la probabilidad de obtención y la Penya obtenida en un 5% para ti y tu pareja durante 10 minutos.",
 			"sw": "Increases drop rate and Penya gained by 5% for you and your partner for 10 minutes.",
 			"th": "Increases drop rate and Penya gained by 5% for you and your partner for 10 minutes.",
-			"tw": "你與情侶的道具掉落率與 Penya 獲得量提高 5%，持續 10 分鐘。",
+			"tw": "你與情侶的道具掉落率與金幣獲得量提高 5%，持續 10 分鐘。",
 			"vi": "Increases drop rate and Penya gained by 5% for you and your partner for 10 minutes."
 		},
 		"icon": "couplegoldenluck.png",
@@ -3895,7 +3895,7 @@
 			"ar": "First Player Level 190 Buff",
 			"br": "First Player Level 190 Buff",
 			"cns": "First Player Level 190 Buff",
-			"de": "First Player Level 190 Buff",
+			"de": "Erster Spieler Level 190 Buff",
 			"fi": "First Player Level 190 Buff",
 			"fil": "First Player Level 190 Buff",
 			"fr": "Buff du Premier Joueur Niveau 190",
@@ -4627,7 +4627,7 @@
 			"sp": "¡Dona G-Tokens a tu gremio y aumenta el nivel de esta mejora!",
 			"sw": "Donate G-Tokens to your guild and upgrade this enhancement's level!",
 			"th": "บริจาค G-Token ให้กับกิลด์ของคุณและอัพเกรดระดับให้สูงขึ้น!",
-			"tw": "捐贈 G-Tokens，提升公會強化等級！",
+			"tw": "捐贈 G 代幣，提升公會強化等級！",
 			"vi": "Hãy quyên góp G-Token cho bang hội của bạn và nâng cấp cấp độ của tính năng nâng cao này!"
 		},
 		"icon": "guienhance.png",
@@ -5739,7 +5739,7 @@
 			"de": "Lord's Cheer",
 			"fi": "Lord's Cheer",
 			"fil": "Lord's Cheer",
-			"fr": "Lord's Cheer",
+			"fr": "Encouragement du Souverain",
 			"id": "Lord's Cheer",
 			"it": "Lord's Cheer",
 			"jp": "Lord's Cheer",
@@ -5750,7 +5750,7 @@
 			"sp": "Lord's Cheer",
 			"sw": "Lord's Cheer",
 			"th": "Lord's Cheer",
-			"tw": "Lord's Cheer",
+			"tw": "領主的鼓舞",
 			"vi": "Lord's Cheer"
 		},
 		"description": {
@@ -5758,10 +5758,10 @@
 			"ar": "Increases the experience and drop rate for yourself or one target.",
 			"br": "Increases the experience and drop rate for yourself or one target.",
 			"cns": "Increases the experience and drop rate for yourself or one target.",
-			"de": "Increases the experience and drop rate for yourself or one target.",
+			"de": "Erhöht Erfahrung und Droprate für dich selbst oder ein Ziel.",
 			"fi": "Increases the experience and drop rate for yourself or one target.",
 			"fil": "Increases the experience and drop rate for yourself or one target.",
-			"fr": "Increases the experience and drop rate for yourself or one target.",
+			"fr": "Augmente l'expérience et le taux de drop pour vous-même ou une cible.",
 			"id": "Increases the experience and drop rate for yourself or one target.",
 			"it": "Increases the experience and drop rate for yourself or one target.",
 			"jp": "Increases the experience and drop rate for yourself or one target.",
@@ -5772,7 +5772,7 @@
 			"sp": "Increases the experience and drop rate for yourself or one target.",
 			"sw": "Increases the experience and drop rate for yourself or one target.",
 			"th": "Increases the experience and drop rate for yourself or one target.",
-			"tw": "Increases the experience and drop rate for yourself or one target.",
+			"tw": "提升自己或一名目標的經驗值與物品掉落率。",
 			"vi": "Increases the experience and drop rate for yourself or one target."
 		},
 		"icon": "lord1.png",
@@ -5805,7 +5805,7 @@
 			"de": "Lord's Blessing",
 			"fi": "Lord's Blessing",
 			"fil": "Lord's Blessing",
-			"fr": "Lord's Blessing",
+			"fr": "Bénédiction du Souverain",
 			"id": "Lord's Blessing",
 			"it": "Lord's Blessing",
 			"jp": "Lord's Blessing",
@@ -5816,7 +5816,7 @@
 			"sp": "Lord's Blessing",
 			"sw": "Lord's Blessing",
 			"th": "Lord's Blessing",
-			"tw": "Lord's Blessing",
+			"tw": "領主的祝福",
 			"vi": "Lord's Blessing"
 		},
 		"description": {
@@ -5824,10 +5824,10 @@
 			"ar": "Increases attack and defense for yourself or one target.",
 			"br": "Increases attack and defense for yourself or one target.",
 			"cns": "Increases attack and defense for yourself or one target.",
-			"de": "Increases attack and defense for yourself or one target.",
+			"de": "Erhöht Angriff und Verteidigung für dich selbst oder ein Ziel.",
 			"fi": "Increases attack and defense for yourself or one target.",
 			"fil": "Increases attack and defense for yourself or one target.",
-			"fr": "Increases attack and defense for yourself or one target.",
+			"fr": "Augmente l'attaque et la défense pour vous-même ou une cible.",
 			"id": "Increases attack and defense for yourself or one target.",
 			"it": "Increases attack and defense for yourself or one target.",
 			"jp": "Increases attack and defense for yourself or one target.",
@@ -5838,7 +5838,7 @@
 			"sp": "Increases attack and defense for yourself or one target.",
 			"sw": "Increases attack and defense for yourself or one target.",
 			"th": "Increases attack and defense for yourself or one target.",
-			"tw": "Increases attack and defense for yourself or one target.",
+			"tw": "提升自己或一名目標的攻擊力與防禦力。",
 			"vi": "Increases attack and defense for yourself or one target."
 		},
 		"icon": "lord2.png",
@@ -5871,7 +5871,7 @@
 			"de": "Lord's Love",
 			"fi": "Lord's Love",
 			"fil": "Lord's Love",
-			"fr": "Lord's Love",
+			"fr": "Amour du Souverain",
 			"id": "Lord's Love",
 			"it": "Lord's Love",
 			"jp": "Lord's Love",
@@ -5882,7 +5882,7 @@
 			"sp": "Lord's Love",
 			"sw": "Lord's Love",
 			"th": "Lord's Love",
-			"tw": "Lord's Love",
+			"tw": "領主的關愛",
 			"vi": "Lord's Love"
 		},
 		"description": {
@@ -5890,10 +5890,10 @@
 			"ar": "Increases stats for yourself or one target.",
 			"br": "Increases stats for yourself or one target.",
 			"cns": "Increases stats for yourself or one target.",
-			"de": "Increases stats for yourself or one target.",
+			"de": "Erhöht die Attribute für dich selbst oder ein Ziel.",
 			"fi": "Increases stats for yourself or one target.",
 			"fil": "Increases stats for yourself or one target.",
-			"fr": "Increases stats for yourself or one target.",
+			"fr": "Augmente les statistiques pour vous-même ou une cible.",
 			"id": "Increases stats for yourself or one target.",
 			"it": "Increases stats for yourself or one target.",
 			"jp": "Increases stats for yourself or one target.",
@@ -5904,7 +5904,7 @@
 			"sp": "Increases stats for yourself or one target.",
 			"sw": "Increases stats for yourself or one target.",
 			"th": "Increases stats for yourself or one target.",
-			"tw": "Increases stats for yourself or one target.",
+			"tw": "提升自己或一名目標的所有能力值。",
 			"vi": "Increases stats for yourself or one target."
 		},
 		"icon": "lord3.png",
@@ -5936,7 +5936,7 @@
 			"de": "Lord's Shout",
 			"fi": "Lord's Shout",
 			"fil": "Lord's Shout",
-			"fr": "Lord's Shout",
+			"fr": "Cri du Souverain",
 			"id": "Lord's Shout",
 			"it": "Lord's Shout",
 			"jp": "Lord's Shout",
@@ -5947,7 +5947,7 @@
 			"sp": "Lord's Shout",
 			"sw": "Lord's Shout",
 			"th": "Lord's Shout",
-			"tw": "Lord's Shout",
+			"tw": "領主的吶喊",
 			"vi": "Lord's Shout"
 		},
 		"description": {
@@ -5955,10 +5955,10 @@
 			"ar": "Your shout text is colored in green.",
 			"br": "Your shout text is colored in green.",
 			"cns": "Your shout text is colored in green.",
-			"de": "Your shout text is colored in green.",
+			"de": "Dein Shout-Text wird grün dargestellt.",
 			"fi": "Your shout text is colored in green.",
 			"fil": "Your shout text is colored in green.",
-			"fr": "Your shout text is colored in green.",
+			"fr": "Le texte de votre cri apparaît en vert.",
 			"id": "Your shout text is colored in green.",
 			"it": "Your shout text is colored in green.",
 			"jp": "Your shout text is colored in green.",
@@ -5969,7 +5969,7 @@
 			"sp": "Your shout text is colored in green.",
 			"sw": "Your shout text is colored in green.",
 			"th": "Your shout text is colored in green.",
-			"tw": "Your shout text is colored in green.",
+			"tw": "你的吶喊文字會顯示為綠色。",
 			"vi": "Your shout text is colored in green."
 		},
 		"icon": "lord4.png",
@@ -5999,7 +5999,7 @@
 			"de": "Lord's Call",
 			"fi": "Lord's Call",
 			"fil": "Lord's Call",
-			"fr": "Lord's Call",
+			"fr": "Appel du Souverain",
 			"id": "Lord's Call",
 			"it": "Lord's Call",
 			"jp": "Lord's Call",
@@ -6010,7 +6010,7 @@
 			"sp": "Lord's Call",
 			"sw": "Lord's Call",
 			"th": "Lord's Call",
-			"tw": "Lord's Call",
+			"tw": "領主的召集",
 			"vi": "Lord's Call"
 		},
 		"description": {
@@ -6018,10 +6018,10 @@
 			"ar": "Summon the specified player to yourself.",
 			"br": "Summon the specified player to yourself.",
 			"cns": "Summon the specified player to yourself.",
-			"de": "Summon the specified player to yourself.",
+			"de": "Beschwört den angegebenen Spieler zu dir.",
 			"fi": "Summon the specified player to yourself.",
 			"fil": "Summon the specified player to yourself.",
-			"fr": "Summon the specified player to yourself.",
+			"fr": "Invoque le joueur sélectionné à vos côtés.",
 			"id": "Summon the specified player to yourself.",
 			"it": "Summon the specified player to yourself.",
 			"jp": "Summon the specified player to yourself.",
@@ -6032,7 +6032,7 @@
 			"sp": "Summon the specified player to yourself.",
 			"sw": "Summon the specified player to yourself.",
 			"th": "Summon the specified player to yourself.",
-			"tw": "Summon the specified player to yourself.",
+			"tw": "將指定玩家召喚到自己身邊。",
 			"vi": "Summon the specified player to yourself."
 		},
 		"icon": "lord6.png",
@@ -6062,7 +6062,7 @@
 			"de": "Lord's Teleport",
 			"fi": "Lord's Teleport",
 			"fil": "Lord's Teleport",
-			"fr": "Lord's Teleport",
+			"fr": "Téléportation du Souverain",
 			"id": "Lord's Teleport",
 			"it": "Lord's Teleport",
 			"jp": "Lord's Teleport",
@@ -6073,7 +6073,7 @@
 			"sp": "Lord's Teleport",
 			"sw": "Lord's Teleport",
 			"th": "Lord's Teleport",
-			"tw": "Lord's Teleport",
+			"tw": "領主的傳送",
 			"vi": "Lord's Teleport"
 		},
 		"description": {
@@ -6081,10 +6081,10 @@
 			"ar": "Teleport to the specified player.",
 			"br": "Teleport to the specified player.",
 			"cns": "Teleport to the specified player.",
-			"de": "Teleport to the specified player.",
+			"de": "Teleportiert dich zum angegebenen Spieler.",
 			"fi": "Teleport to the specified player.",
 			"fil": "Teleport to the specified player.",
-			"fr": "Teleport to the specified player.",
+			"fr": "Vous téléporte auprès du joueur sélectionné.",
 			"id": "Teleport to the specified player.",
 			"it": "Teleport to the specified player.",
 			"jp": "Teleport to the specified player.",
@@ -6095,7 +6095,7 @@
 			"sp": "Teleport to the specified player.",
 			"sw": "Teleport to the specified player.",
 			"th": "Teleport to the specified player.",
-			"tw": "Teleport to the specified player.",
+			"tw": "傳送到指定玩家身邊。",
 			"vi": "Teleport to the specified player."
 		},
 		"icon": "lord7.png",
@@ -6125,7 +6125,7 @@
 			"de": "Lord's Party",
 			"fi": "Lord's Party",
 			"fil": "Lord's Party",
-			"fr": "Lord's Party",
+			"fr": "Groupe du Souverain",
 			"id": "Lord's Party",
 			"it": "Lord's Party",
 			"jp": "Lord's Party",
@@ -6136,7 +6136,7 @@
 			"sp": "Lord's Party",
 			"sw": "Lord's Party",
 			"th": "Lord's Party",
-			"tw": "Lord's Party",
+			"tw": "領主的劇團",
 			"vi": "Lord's Party"
 		},
 		"description": {
@@ -6144,10 +6144,10 @@
 			"ar": "Any party skills used by you have increased duration. This skill is permanently enabled.",
 			"br": "Any party skills used by you have increased duration. This skill is permanently enabled.",
 			"cns": "Any party skills used by you have increased duration. This skill is permanently enabled.",
-			"de": "Any party skills used by you have increased duration. This skill is permanently enabled.",
+			"de": "Alle von dir eingesetzten Party-Skills halten länger an. Dieser Skill ist dauerhaft aktiv.",
 			"fi": "Any party skills used by you have increased duration. This skill is permanently enabled.",
 			"fil": "Any party skills used by you have increased duration. This skill is permanently enabled.",
-			"fr": "Any party skills used by you have increased duration. This skill is permanently enabled.",
+			"fr": "La durée des compétences de groupe que vous utilisez est augmentée. Cette compétence est activée en permanence.",
 			"id": "Any party skills used by you have increased duration. This skill is permanently enabled.",
 			"it": "Any party skills used by you have increased duration. This skill is permanently enabled.",
 			"jp": "Any party skills used by you have increased duration. This skill is permanently enabled.",
@@ -6158,7 +6158,7 @@
 			"sp": "Any party skills used by you have increased duration. This skill is permanently enabled.",
 			"sw": "Any party skills used by you have increased duration. This skill is permanently enabled.",
 			"th": "Any party skills used by you have increased duration. This skill is permanently enabled.",
-			"tw": "Any party skills used by you have increased duration. This skill is permanently enabled.",
+			"tw": "你施放的所有劇團技能持續時間延長。此技能會永久啟用。",
 			"vi": "Any party skills used by you have increased duration. This skill is permanently enabled."
 		},
 		"icon": "lord8.png",
@@ -8866,7 +8866,7 @@
 			"sp": "Los enemigos reciben daño en el tiempo en un área a tu alrededor.",
 			"sw": "Summons a lingering effect that deals damage over time to enemies within its area.",
 			"th": "สร้างเขตแดนศักดิ์สิทธิ์บนพื้น มอนสเตอร์ที่อยู่ในเขต จะสูญเสียพลังไปเรื่อยๆ",
-			"tw": "設置一個持續效果，使區域內的敵人持續受到傷害。",
+			"tw": "召喚一個持續存在的效果，對範圍內的敵人造成持續傷害。",
 			"vi": "Kẻ địch nhận sát thương theo thời gian trong khu vực xung quanh bạn"
 		},
 		"icon": "rinsupanzelr.png",
@@ -10877,7 +10877,7 @@
 		"requiresCouple": false,
 		"target": "single",
 		"levels": [
-			{ "duration": 10, "durationPVP": 10, "abilities": [
+			{ "abilities": [
 				{ "parameter": "maxhp", "add": 5, "rate": true }
 			] }
 		]
@@ -10942,7 +10942,7 @@
 		"requiresCouple": false,
 		"target": "single",
 		"levels": [
-			{ "duration": 10, "durationPVP": 10, "abilities": [
+			{ "abilities": [
 				{ "parameter": "maxhp", "add": 10, "rate": true }
 			] }
 		]
@@ -11007,7 +11007,7 @@
 		"requiresCouple": false,
 		"target": "single",
 		"levels": [
-			{ "duration": 10, "durationPVP": 10, "abilities": [
+			{ "abilities": [
 				{ "parameter": "def", "add": 2, "rate": true }
 			] }
 		]
@@ -11072,7 +11072,7 @@
 		"requiresCouple": false,
 		"target": "single",
 		"levels": [
-			{ "duration": 10, "durationPVP": 10, "abilities": [
+			{ "abilities": [
 				{ "parameter": "def", "add": 5, "rate": true }
 			] }
 		]
@@ -11137,7 +11137,7 @@
 		"requiresCouple": false,
 		"target": "single",
 		"levels": [
-			{ "duration": 10, "durationPVP": 10, "abilities": [
+			{ "abilities": [
 				{ "parameter": "allelementsmastery", "add": 5, "rate": true }
 			] }
 		]
@@ -11202,7 +11202,7 @@
 		"requiresCouple": false,
 		"target": "single",
 		"levels": [
-			{ "duration": 10, "durationPVP": 10, "abilities": [
+			{ "abilities": [
 				{ "parameter": "allelementsmastery", "add": 10, "rate": true }
 			] }
 		]
@@ -11267,7 +11267,7 @@
 		"requiresCouple": false,
 		"target": "single",
 		"levels": [
-			{ "duration": 10, "durationPVP": 10, "abilities": [
+			{ "abilities": [
 				{ "parameter": "speed", "add": 5, "rate": true }
 			] }
 		]
@@ -11332,7 +11332,7 @@
 		"requiresCouple": false,
 		"target": "single",
 		"levels": [
-			{ "duration": 10, "durationPVP": 10, "abilities": [
+			{ "abilities": [
 				{ "parameter": "speed", "add": 10, "rate": true }
 			] }
 		]
@@ -11397,7 +11397,7 @@
 		"requiresCouple": false,
 		"target": "single",
 		"levels": [
-			{ "duration": 10, "durationPVP": 10, "abilities": [
+			{ "abilities": [
 				{ "parameter": "attack", "add": 5, "rate": true }
 			] }
 		]
@@ -11462,7 +11462,7 @@
 		"requiresCouple": false,
 		"target": "single",
 		"levels": [
-			{ "duration": 10, "durationPVP": 10, "abilities": [
+			{ "abilities": [
 				{ "parameter": "attack", "add": 10, "rate": true }
 			] }
 		]
@@ -11527,7 +11527,7 @@
 		"requiresCouple": false,
 		"target": "single",
 		"levels": [
-			{ "duration": 10, "durationPVP": 10, "abilities": [
+			{ "abilities": [
 				{ "parameter": "bossmonsterdamage", "add": 5, "rate": true }
 			] }
 		]
@@ -11592,7 +11592,7 @@
 		"requiresCouple": false,
 		"target": "single",
 		"levels": [
-			{ "duration": 10, "durationPVP": 10, "abilities": [
+			{ "abilities": [
 				{ "parameter": "bossmonsterdamage", "add": 10, "rate": true }
 			] }
 		]
@@ -11657,7 +11657,7 @@
 		"requiresCouple": false,
 		"target": "single",
 		"levels": [
-			{ "duration": 10, "durationPVP": 10, "abilities": [
+			{ "abilities": [
 				{ "parameter": "allstats", "add": 5, "rate": false }
 			] }
 		]
@@ -11722,7 +11722,7 @@
 		"requiresCouple": false,
 		"target": "single",
 		"levels": [
-			{ "duration": 10, "durationPVP": 10, "abilities": [
+			{ "abilities": [
 				{ "parameter": "allstats", "add": 10, "rate": false }
 			] }
 		]
@@ -11787,7 +11787,7 @@
 		"requiresCouple": false,
 		"target": "single",
 		"levels": [
-			{ "duration": 10, "durationPVP": 10, "abilities": [
+			{ "abilities": [
 				{ "parameter": "bossincomingdamage", "add": -5, "rate": true }
 			] }
 		]
@@ -11852,7 +11852,7 @@
 		"requiresCouple": false,
 		"target": "single",
 		"levels": [
-			{ "duration": 10, "durationPVP": 10, "abilities": [
+			{ "abilities": [
 				{ "parameter": "bossincomingdamage", "add": -10, "rate": true }
 			] }
 		]
@@ -12897,6 +12897,98 @@
 			] }
 		]
 	},
+	"49538": {
+		"id": 49538,
+		"name": {
+			"en": "Wave Defense Buff",
+			"ar": "Wave Defense Buff",
+			"br": "Wave Defense Buff",
+			"cns": "Wave Defense Buff",
+			"de": "Wave Defense Buff",
+			"fi": "Wave Defense Buff",
+			"fil": "Wave Defense Buff",
+			"fr": "Wave Defense Buff",
+			"id": "Wave Defense Buff",
+			"it": "Wave Defense Buff",
+			"jp": "Wave Defense Buff",
+			"kr": "웨이브 디펜스 버프",
+			"nl": "Wave Defense Buff",
+			"pl": "Wave Defense Buff",
+			"ru": "Wave Defense Buff",
+			"sp": "Wave Defense Buff",
+			"sw": "Wave Defense Buff",
+			"th": "Wave Defense Buff",
+			"tw": "Wave Defense Buff",
+			"vi": "Wave Defense Buff"
+		},
+		"description": {
+			"en": "Reinforced by your fellow defenders. Increases Attack, Speed, Defense, and Max HP based on the number of defenders present.",
+			"ar": "Reinforced by your fellow defenders. Increases Attack, Speed, Defense, and Max HP based on the number of defenders present.",
+			"br": "Reinforced by your fellow defenders. Increases Attack, Speed, Defense, and Max HP based on the number of defenders present.",
+			"cns": "Reinforced by your fellow defenders. Increases Attack, Speed, Defense, and Max HP based on the number of defenders present.",
+			"de": "Reinforced by your fellow defenders. Increases Attack, Speed, Defense, and Max HP based on the number of defenders present.",
+			"fi": "Reinforced by your fellow defenders. Increases Attack, Speed, Defense, and Max HP based on the number of defenders present.",
+			"fil": "Reinforced by your fellow defenders. Increases Attack, Speed, Defense, and Max HP based on the number of defenders present.",
+			"fr": "Reinforced by your fellow defenders. Increases Attack, Speed, Defense, and Max HP based on the number of defenders present.",
+			"id": "Reinforced by your fellow defenders. Increases Attack, Speed, Defense, and Max HP based on the number of defenders present.",
+			"it": "Reinforced by your fellow defenders. Increases Attack, Speed, Defense, and Max HP based on the number of defenders present.",
+			"jp": "Reinforced by your fellow defenders. Increases Attack, Speed, Defense, and Max HP based on the number of defenders present.",
+			"kr": "함께 싸우는 수호자들에게서 힘을 얻습니다. 현재 참여 중인 수호자 수에 따라 공격력, 속도, 방어력, 최대 HP가 증가합니다.",
+			"nl": "Reinforced by your fellow defenders. Increases Attack, Speed, Defense, and Max HP based on the number of defenders present.",
+			"pl": "Reinforced by your fellow defenders. Increases Attack, Speed, Defense, and Max HP based on the number of defenders present.",
+			"ru": "Reinforced by your fellow defenders. Increases Attack, Speed, Defense, and Max HP based on the number of defenders present.",
+			"sp": "Reinforced by your fellow defenders. Increases Attack, Speed, Defense, and Max HP based on the number of defenders present.",
+			"sw": "Reinforced by your fellow defenders. Increases Attack, Speed, Defense, and Max HP based on the number of defenders present.",
+			"th": "Reinforced by your fellow defenders. Increases Attack, Speed, Defense, and Max HP based on the number of defenders present.",
+			"tw": "Reinforced by your fellow defenders. Increases Attack, Speed, Defense, and Max HP based on the number of defenders present.",
+			"vi": "Reinforced by your fellow defenders. Increases Attack, Speed, Defense, and Max HP based on the number of defenders present."
+		},
+		"icon": "wavedefense.png",
+		"level": 1,
+		"element": "none",
+		"maxSkillStacks": 10,
+		"magic": false,
+		"elementType": "none",
+		"requirements": [],
+		"combo": "general",
+		"debuff": false,
+		"flying": true,
+		"passive": false,
+		"requiresCouple": false,
+		"target": "single",
+		"levels": [
+			{ "duration": 180, "durationPVP": 180, "abilities": [
+				{ "parameter": "attack", "add": 1, "rate": true },
+				{ "parameter": "speed", "add": 1, "rate": true },
+				{ "parameter": "def", "add": 1, "rate": true },
+				{ "parameter": "maxhp", "add": 1, "rate": true }
+			] },
+			{ "duration": 180, "durationPVP": 180, "abilities": [
+				{ "parameter": "attack", "add": 2, "rate": true },
+				{ "parameter": "speed", "add": 2, "rate": true },
+				{ "parameter": "def", "add": 2, "rate": true },
+				{ "parameter": "maxhp", "add": 2, "rate": true }
+			] },
+			{ "duration": 180, "durationPVP": 180, "abilities": [
+				{ "parameter": "attack", "add": 3, "rate": true },
+				{ "parameter": "speed", "add": 3, "rate": true },
+				{ "parameter": "def", "add": 3, "rate": true },
+				{ "parameter": "maxhp", "add": 3, "rate": true }
+			] },
+			{ "duration": 180, "durationPVP": 180, "abilities": [
+				{ "parameter": "attack", "add": 4, "rate": true },
+				{ "parameter": "speed", "add": 4, "rate": true },
+				{ "parameter": "def", "add": 4, "rate": true },
+				{ "parameter": "maxhp", "add": 4, "rate": true }
+			] },
+			{ "duration": 180, "durationPVP": 180, "abilities": [
+				{ "parameter": "attack", "add": 5, "rate": true },
+				{ "parameter": "speed", "add": 5, "rate": true },
+				{ "parameter": "def", "add": 5, "rate": true },
+				{ "parameter": "maxhp", "add": 5, "rate": true }
+			] }
+		]
+	},
 	"44009": {
 		"id": 44009,
 		"name": {
@@ -12988,7 +13080,7 @@
 			"de": "Overlap Damage",
 			"fi": "Overlap Damage",
 			"fil": "Overlap Damage",
-			"fr": "Overlap Damage",
+			"fr": "Dégâts cumulés",
 			"id": "Overlap Damage",
 			"it": "Overlap Damage",
 			"jp": "Overlap Damage",
@@ -12999,7 +13091,7 @@
 			"sp": "Overlap Damage",
 			"sw": "Overlap Damage",
 			"th": "Overlap Damage",
-			"tw": "Overlap Damage",
+			"tw": "疊加傷害",
 			"vi": "Overlap Damage"
 		},
 		"description": {
@@ -13007,10 +13099,10 @@
 			"ar": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
 			"br": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
 			"cns": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
-			"de": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
+			"de": "Der Brandeffekt verstärkt sich mit jedem Treffer und verursacht bei voller Stapelzahl zusätzlichen Schaden.",
 			"fi": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
 			"fil": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
-			"fr": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
+			"fr": "L'effet de brûlure se cumule à chaque coup et inflige des dégâts supplémentaires lorsque les charges sont au maximum.",
 			"id": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
 			"it": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
 			"jp": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
@@ -13021,7 +13113,7 @@
 			"sp": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
 			"sw": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
 			"th": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
-			"tw": "Overlap burning effect increases with each hit and deals extra damage at full stacks.",
+			"tw": "每次命中都會疊加灼燒效果，疊滿時造成額外傷害。",
 			"vi": "Overlap burning effect increases with each hit and deals extra damage at full stacks."
 		},
 		"icon": "bilbloodfist.png",
@@ -13050,7 +13142,7 @@
 			"de": "Pull Target",
 			"fi": "Pull Target",
 			"fil": "Pull Target",
-			"fr": "Pull Target",
+			"fr": "Attire la cible",
 			"id": "Pull Target",
 			"it": "Pull Target",
 			"jp": "Pull Target",
@@ -13061,7 +13153,7 @@
 			"sp": "Pull Target",
 			"sw": "Pull Target",
 			"th": "Pull Target",
-			"tw": "Pull Target",
+			"tw": "拉近目標",
 			"vi": "Pull Target"
 		},
 		"description": {
@@ -13069,10 +13161,10 @@
 			"ar": "Pulled toward the caster, unable to move.",
 			"br": "Pulled toward the caster, unable to move.",
 			"cns": "Pulled toward the caster, unable to move.",
-			"de": "Pulled toward the caster, unable to move.",
+			"de": "Wird zum Anwender gezogen und kann sich nicht bewegen.",
 			"fi": "Pulled toward the caster, unable to move.",
 			"fil": "Pulled toward the caster, unable to move.",
-			"fr": "Pulled toward the caster, unable to move.",
+			"fr": "Attiré vers le lanceur, la cible est incapable de se déplacer.",
 			"id": "Pulled toward the caster, unable to move.",
 			"it": "Pulled toward the caster, unable to move.",
 			"jp": "Pulled toward the caster, unable to move.",
@@ -13083,7 +13175,7 @@
 			"sp": "Pulled toward the caster, unable to move.",
 			"sw": "Pulled toward the caster, unable to move.",
 			"th": "Pulled toward the caster, unable to move.",
-			"tw": "Pulled toward the caster, unable to move.",
+			"tw": "被拉向施法者，無法移動。",
 			"vi": "Pulled toward the caster, unable to move."
 		},
 		"icon": "acryoypullin.png",
@@ -13115,7 +13207,7 @@
 			"de": "Knock Back",
 			"fi": "Knock Back",
 			"fil": "Knock Back",
-			"fr": "Knock Back",
+			"fr": "Repoussement",
 			"id": "Knock Back",
 			"it": "Knock Back",
 			"jp": "Knock Back",
@@ -13126,7 +13218,7 @@
 			"sp": "Knock Back",
 			"sw": "Knock Back",
 			"th": "Knock Back",
-			"tw": "Knock Back",
+			"tw": "擊退",
 			"vi": "Knock Back"
 		},
 		"description": {
@@ -13134,10 +13226,10 @@
 			"ar": "Struck by a powerful blow and knocked back.",
 			"br": "Struck by a powerful blow and knocked back.",
 			"cns": "Struck by a powerful blow and knocked back.",
-			"de": "Struck by a powerful blow and knocked back.",
+			"de": "Wird von einem wuchtigen Schlag getroffen und zurückgeschleudert.",
 			"fi": "Struck by a powerful blow and knocked back.",
 			"fil": "Struck by a powerful blow and knocked back.",
-			"fr": "Struck by a powerful blow and knocked back.",
+			"fr": "Frappé par un puissant coup et repoussé.",
 			"id": "Struck by a powerful blow and knocked back.",
 			"it": "Struck by a powerful blow and knocked back.",
 			"jp": "Struck by a powerful blow and knocked back.",
@@ -13148,7 +13240,7 @@
 			"sp": "Struck by a powerful blow and knocked back.",
 			"sw": "Struck by a powerful blow and knocked back.",
 			"th": "Struck by a powerful blow and knocked back.",
-			"tw": "Struck by a powerful blow and knocked back.",
+			"tw": "遭受強力打擊並被擊退。",
 			"vi": "Struck by a powerful blow and knocked back."
 		},
 		"icon": "eleearearsqk.png",
@@ -13181,7 +13273,7 @@
 			"de": "Burning Impact",
 			"fi": "Burning Impact",
 			"fil": "Burning Impact",
-			"fr": "Burning Impact",
+			"fr": "Impact brûlant",
 			"id": "Burning Impact",
 			"it": "Burning Impact",
 			"jp": "Burning Impact",
@@ -13192,7 +13284,7 @@
 			"sp": "Burning Impact",
 			"sw": "Burning Impact",
 			"th": "Burning Impact",
-			"tw": "Burning Impact",
+			"tw": "燃燒衝擊",
 			"vi": "Burning Impact"
 		},
 		"description": {
@@ -13200,10 +13292,10 @@
 			"ar": "Ignited by the fiery impact, taking burn damage.",
 			"br": "Ignited by the fiery impact, taking burn damage.",
 			"cns": "Ignited by the fiery impact, taking burn damage.",
-			"de": "Ignited by the fiery impact, taking burn damage.",
+			"de": "Durch den feurigen Einschlag entzündet und erleidet Brandschaden.",
 			"fi": "Ignited by the fiery impact, taking burn damage.",
 			"fil": "Ignited by the fiery impact, taking burn damage.",
-			"fr": "Ignited by the fiery impact, taking burn damage.",
+			"fr": "Enflammé par l'impact ardent et subissant des dégâts de brûlure.",
 			"id": "Ignited by the fiery impact, taking burn damage.",
 			"it": "Ignited by the fiery impact, taking burn damage.",
 			"jp": "Ignited by the fiery impact, taking burn damage.",
@@ -13214,7 +13306,7 @@
 			"sp": "Ignited by the fiery impact, taking burn damage.",
 			"sw": "Ignited by the fiery impact, taking burn damage.",
 			"th": "Ignited by the fiery impact, taking burn damage.",
-			"tw": "Ignited by the fiery impact, taking burn damage.",
+			"tw": "被熾熱衝擊點燃，受到灼燒傷害。",
 			"vi": "Ignited by the fiery impact, taking burn damage."
 		},
 		"icon": "elefirbunfil.png",
@@ -13245,7 +13337,7 @@
 			"de": "Toxic Impact",
 			"fi": "Toxic Impact",
 			"fil": "Toxic Impact",
-			"fr": "Toxic Impact",
+			"fr": "Impact toxique",
 			"id": "Toxic Impact",
 			"it": "Toxic Impact",
 			"jp": "Toxic Impact",
@@ -13256,7 +13348,7 @@
 			"sp": "Toxic Impact",
 			"sw": "Toxic Impact",
 			"th": "Toxic Impact",
-			"tw": "Toxic Impact",
+			"tw": "劇毒衝擊",
 			"vi": "Toxic Impact"
 		},
 		"description": {
@@ -13264,10 +13356,10 @@
 			"ar": "Poisoned by the toxic impact, taking periodic damage.",
 			"br": "Poisoned by the toxic impact, taking periodic damage.",
 			"cns": "Poisoned by the toxic impact, taking periodic damage.",
-			"de": "Poisoned by the toxic impact, taking periodic damage.",
+			"de": "Durch den giftigen Einschlag vergiftet und erleidet regelmäßig Schaden.",
 			"fi": "Poisoned by the toxic impact, taking periodic damage.",
 			"fil": "Poisoned by the toxic impact, taking periodic damage.",
-			"fr": "Poisoned by the toxic impact, taking periodic damage.",
+			"fr": "Empoisonné par l'impact toxique et subissant des dégâts périodiques.",
 			"id": "Poisoned by the toxic impact, taking periodic damage.",
 			"it": "Poisoned by the toxic impact, taking periodic damage.",
 			"jp": "Poisoned by the toxic impact, taking periodic damage.",
@@ -13278,7 +13370,7 @@
 			"sp": "Poisoned by the toxic impact, taking periodic damage.",
 			"sw": "Poisoned by the toxic impact, taking periodic damage.",
 			"th": "Poisoned by the toxic impact, taking periodic damage.",
-			"tw": "Poisoned by the toxic impact, taking periodic damage.",
+			"tw": "被劇毒衝擊感染，中毒並持續受到傷害。",
 			"vi": "Poisoned by the toxic impact, taking periodic damage."
 		},
 		"icon": "jstintpoison.png",
@@ -13310,7 +13402,7 @@
 			"de": "Frost Impact",
 			"fi": "Frost Impact",
 			"fil": "Frost Impact",
-			"fr": "Frost Impact",
+			"fr": "Impact glacial",
 			"id": "Frost Impact",
 			"it": "Frost Impact",
 			"jp": "Frost Impact",
@@ -13321,7 +13413,7 @@
 			"sp": "Frost Impact",
 			"sw": "Frost Impact",
 			"th": "Frost Impact",
-			"tw": "Frost Impact",
+			"tw": "冰霜衝擊",
 			"vi": "Frost Impact"
 		},
 		"description": {
@@ -13329,10 +13421,10 @@
 			"ar": "Slowed by the chilling impact, reducing movement and attack speed.",
 			"br": "Slowed by the chilling impact, reducing movement and attack speed.",
 			"cns": "Slowed by the chilling impact, reducing movement and attack speed.",
-			"de": "Slowed by the chilling impact, reducing movement and attack speed.",
+			"de": "Durch den eisigen Einschlag verlangsamt, was Bewegungs- und Angriffsgeschwindigkeit reduziert.",
 			"fi": "Slowed by the chilling impact, reducing movement and attack speed.",
 			"fil": "Slowed by the chilling impact, reducing movement and attack speed.",
-			"fr": "Slowed by the chilling impact, reducing movement and attack speed.",
+			"fr": "Ralenti par l'impact glacial, réduisant la vitesse de déplacement et la vitesse d'attaque.",
 			"id": "Slowed by the chilling impact, reducing movement and attack speed.",
 			"it": "Slowed by the chilling impact, reducing movement and attack speed.",
 			"jp": "Slowed by the chilling impact, reducing movement and attack speed.",
@@ -13343,7 +13435,7 @@
 			"sp": "Slowed by the chilling impact, reducing movement and attack speed.",
 			"sw": "Slowed by the chilling impact, reducing movement and attack speed.",
 			"th": "Slowed by the chilling impact, reducing movement and attack speed.",
-			"tw": "Slowed by the chilling impact, reducing movement and attack speed.",
+			"tw": "受到寒冰衝擊而緩速，移動速度與攻擊速度降低。",
 			"vi": "Slowed by the chilling impact, reducing movement and attack speed."
 		},
 		"icon": "elewaticeshk.png",
@@ -13376,7 +13468,7 @@
 			"de": "Shock Impact",
 			"fi": "Shock Impact",
 			"fil": "Shock Impact",
-			"fr": "Shock Impact",
+			"fr": "Impact électrique",
 			"id": "Shock Impact",
 			"it": "Shock Impact",
 			"jp": "Shock Impact",
@@ -13387,7 +13479,7 @@
 			"sp": "Shock Impact",
 			"sw": "Shock Impact",
 			"th": "Shock Impact",
-			"tw": "Shock Impact",
+			"tw": "震盪衝擊",
 			"vi": "Shock Impact"
 		},
 		"description": {
@@ -13395,10 +13487,10 @@
 			"ar": "Struck by a powerful impact, taking additional fixed damage.",
 			"br": "Struck by a powerful impact, taking additional fixed damage.",
 			"cns": "Struck by a powerful impact, taking additional fixed damage.",
-			"de": "Struck by a powerful impact, taking additional fixed damage.",
+			"de": "Von einem wuchtigen Einschlag getroffen und erleidet zusätzlichen festen Schaden.",
 			"fi": "Struck by a powerful impact, taking additional fixed damage.",
 			"fil": "Struck by a powerful impact, taking additional fixed damage.",
-			"fr": "Struck by a powerful impact, taking additional fixed damage.",
+			"fr": "Frappé par un puissant impact et subissant des dégâts fixes supplémentaires.",
 			"id": "Struck by a powerful impact, taking additional fixed damage.",
 			"it": "Struck by a powerful impact, taking additional fixed damage.",
 			"jp": "Struck by a powerful impact, taking additional fixed damage.",
@@ -13409,7 +13501,7 @@
 			"sp": "Struck by a powerful impact, taking additional fixed damage.",
 			"sw": "Struck by a powerful impact, taking additional fixed damage.",
 			"th": "Struck by a powerful impact, taking additional fixed damage.",
-			"tw": "Struck by a powerful impact, taking additional fixed damage.",
+			"tw": "受到強烈衝擊，承受額外固定傷害。",
 			"vi": "Struck by a powerful impact, taking additional fixed damage."
 		},
 		"icon": "jstintbleedi.png",
@@ -13440,7 +13532,7 @@
 			"de": "Bleeding",
 			"fi": "Bleeding",
 			"fil": "Bleeding",
-			"fr": "Bleeding",
+			"fr": "Saignement",
 			"id": "Bleeding",
 			"it": "Bleeding",
 			"jp": "Bleeding",
@@ -13451,7 +13543,7 @@
 			"sp": "Bleeding",
 			"sw": "Bleeding",
 			"th": "Bleeding",
-			"tw": "Bleeding",
+			"tw": "流血",
 			"vi": "Bleeding"
 		},
 		"description": {
@@ -13459,10 +13551,10 @@
 			"ar": "Taking continuous damage from bleeding wounds.",
 			"br": "Taking continuous damage from bleeding wounds.",
 			"cns": "Taking continuous damage from bleeding wounds.",
-			"de": "Taking continuous damage from bleeding wounds.",
+			"de": "Erleidet fortlaufend Schaden durch blutende Wunden.",
 			"fi": "Taking continuous damage from bleeding wounds.",
 			"fil": "Taking continuous damage from bleeding wounds.",
-			"fr": "Taking continuous damage from bleeding wounds.",
+			"fr": "Subit des dégâts continus à cause de blessures qui saignent.",
 			"id": "Taking continuous damage from bleeding wounds.",
 			"it": "Taking continuous damage from bleeding wounds.",
 			"jp": "Taking continuous damage from bleeding wounds.",
@@ -13473,7 +13565,7 @@
 			"sp": "Taking continuous damage from bleeding wounds.",
 			"sw": "Taking continuous damage from bleeding wounds.",
 			"th": "Taking continuous damage from bleeding wounds.",
-			"tw": "Taking continuous damage from bleeding wounds.",
+			"tw": "傷口持續流血並受到傷害。",
 			"vi": "Taking continuous damage from bleeding wounds."
 		},
 		"icon": "bilbloodfist.png",
@@ -13504,7 +13596,7 @@
 			"de": "Rampage",
 			"fi": "Rampage",
 			"fil": "Rampage",
-			"fr": "Rampage",
+			"fr": "Rage",
 			"id": "Rampage",
 			"it": "Rampage",
 			"jp": "Rampage",
@@ -13515,7 +13607,7 @@
 			"sp": "Rampage",
 			"sw": "Rampage",
 			"th": "Rampage",
-			"tw": "Rampage",
+			"tw": "狂暴",
 			"vi": "Rampage"
 		},
 		"description": {
@@ -13523,10 +13615,10 @@
 			"ar": "Enters a rampage state, increasing speed and attack power.",
 			"br": "Enters a rampage state, increasing speed and attack power.",
 			"cns": "Enters a rampage state, increasing speed and attack power.",
-			"de": "Enters a rampage state, increasing speed and attack power.",
+			"de": "Verfällt in Raserei, wodurch Geschwindigkeit und Angriffskraft erhöht werden.",
 			"fi": "Enters a rampage state, increasing speed and attack power.",
 			"fil": "Enters a rampage state, increasing speed and attack power.",
-			"fr": "Enters a rampage state, increasing speed and attack power.",
+			"fr": "Entre dans un état de rage, augmentant sa vitesse et sa puissance d'attaque.",
 			"id": "Enters a rampage state, increasing speed and attack power.",
 			"it": "Enters a rampage state, increasing speed and attack power.",
 			"jp": "Enters a rampage state, increasing speed and attack power.",
@@ -13537,7 +13629,7 @@
 			"sp": "Enters a rampage state, increasing speed and attack power.",
 			"sw": "Enters a rampage state, increasing speed and attack power.",
 			"th": "Enters a rampage state, increasing speed and attack power.",
-			"tw": "Enters a rampage state, increasing speed and attack power.",
+			"tw": "進入狂暴狀態，提升速度與攻擊力。",
 			"vi": "Enters a rampage state, increasing speed and attack power."
 		},
 		"icon": "bldsupberser.png",
@@ -13569,7 +13661,7 @@
 			"de": "Overlap Defense Break",
 			"fi": "Overlap Defense Break",
 			"fil": "Overlap Defense Break",
-			"fr": "Overlap Defense Break",
+			"fr": "Brèche de défense cumulée",
 			"id": "Overlap Defense Break",
 			"it": "Overlap Defense Break",
 			"jp": "Overlap Defense Break",
@@ -13580,7 +13672,7 @@
 			"sp": "Overlap Defense Break",
 			"sw": "Overlap Defense Break",
 			"th": "Overlap Defense Break",
-			"tw": "Overlap Defense Break",
+			"tw": "疊加破防",
 			"vi": "Overlap Defense Break"
 		},
 		"description": {
@@ -13588,10 +13680,10 @@
 			"ar": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
 			"br": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
 			"cns": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
-			"de": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
+			"de": "Der Elektroeffekt verstärkt sich mit jedem Treffer und senkt bei voller Stapelzahl die Verteidigung.",
 			"fi": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
 			"fil": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
-			"fr": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
+			"fr": "L'effet électrique se cumule à chaque coup et réduit la défense lorsque les charges sont au maximum.",
 			"id": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
 			"it": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
 			"jp": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
@@ -13602,7 +13694,7 @@
 			"sp": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
 			"sw": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
 			"th": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
-			"tw": "Overlap electric effect increases with each hit and lowers defense at full stacks.",
+			"tw": "每次命中都會疊加電擊效果，疊滿時降低防禦力。",
 			"vi": "Overlap electric effect increases with each hit and lowers defense at full stacks."
 		},
 		"icon": "mershiepanbar.png",
@@ -13631,7 +13723,7 @@
 			"de": "Defense Break",
 			"fi": "Defense Break",
 			"fil": "Defense Break",
-			"fr": "Defense Break",
+			"fr": "Brèche de défense",
 			"id": "Defense Break",
 			"it": "Defense Break",
 			"jp": "Defense Break",
@@ -13642,7 +13734,7 @@
 			"sp": "Defense Break",
 			"sw": "Defense Break",
 			"th": "Defense Break",
-			"tw": "Defense Break",
+			"tw": "破防",
 			"vi": "Defense Break"
 		},
 		"description": {
@@ -13650,10 +13742,10 @@
 			"ar": "Reduces target's defense and magic resistance.",
 			"br": "Reduces target's defense and magic resistance.",
 			"cns": "Reduces target's defense and magic resistance.",
-			"de": "Reduces target's defense and magic resistance.",
+			"de": "Reduziert Verteidigung und Magieresistenz des Ziels.",
 			"fi": "Reduces target's defense and magic resistance.",
 			"fil": "Reduces target's defense and magic resistance.",
-			"fr": "Reduces target's defense and magic resistance.",
+			"fr": "Réduit la défense et la résistance magique de la cible.",
 			"id": "Reduces target's defense and magic resistance.",
 			"it": "Reduces target's defense and magic resistance.",
 			"jp": "Reduces target's defense and magic resistance.",
@@ -13664,7 +13756,7 @@
 			"sp": "Reduces target's defense and magic resistance.",
 			"sw": "Reduces target's defense and magic resistance.",
 			"th": "Reduces target's defense and magic resistance.",
-			"tw": "Reduces target's defense and magic resistance.",
+			"tw": "降低目標的防禦力與魔法抗性。",
 			"vi": "Reduces target's defense and magic resistance."
 		},
 		"icon": "mershiepanbar.png",
@@ -13696,7 +13788,7 @@
 			"de": "All Immunity",
 			"fi": "All Immunity",
 			"fil": "All Immunity",
-			"fr": "All Immunity",
+			"fr": "Immunité totale",
 			"id": "All Immunity",
 			"it": "All Immunity",
 			"jp": "All Immunity",
@@ -13707,7 +13799,7 @@
 			"sp": "All Immunity",
 			"sw": "All Immunity",
 			"th": "All Immunity",
-			"tw": "All Immunity",
+			"tw": "完全免疫",
 			"vi": "All Immunity"
 		},
 		"description": {
@@ -13715,10 +13807,10 @@
 			"ar": "Protects the monster from all debuffs.",
 			"br": "Protects the monster from all debuffs.",
 			"cns": "Protects the monster from all debuffs.",
-			"de": "Protects the monster from all debuffs.",
+			"de": "Schützt das Monster vor allen Debuffs.",
 			"fi": "Protects the monster from all debuffs.",
 			"fil": "Protects the monster from all debuffs.",
-			"fr": "Protects the monster from all debuffs.",
+			"fr": "Protège le monstre contre tous les effets négatifs.",
 			"id": "Protects the monster from all debuffs.",
 			"it": "Protects the monster from all debuffs.",
 			"jp": "Protects the monster from all debuffs.",
@@ -13729,7 +13821,7 @@
 			"sp": "Protects the monster from all debuffs.",
 			"sw": "Protects the monster from all debuffs.",
 			"th": "Protects the monster from all debuffs.",
-			"tw": "Protects the monster from all debuffs.",
+			"tw": "使怪物免疫所有減益效果。",
 			"vi": "Protects the monster from all debuffs."
 		},
 		"icon": "stunimmunity.png",
@@ -13760,7 +13852,7 @@
 			"de": "Slow",
 			"fi": "Slow",
 			"fil": "Slow",
-			"fr": "Slow",
+			"fr": "Ralentissement",
 			"id": "Slow",
 			"it": "Slow",
 			"jp": "Slow",
@@ -13771,7 +13863,7 @@
 			"sp": "Slow",
 			"sw": "Slow",
 			"th": "Slow",
-			"tw": "Slow",
+			"tw": "緩速",
 			"vi": "Slow"
 		},
 		"description": {
@@ -13779,10 +13871,10 @@
 			"ar": "Reduces the target's movement speed for a short time.",
 			"br": "Reduces the target's movement speed for a short time.",
 			"cns": "Reduces the target's movement speed for a short time.",
-			"de": "Reduces the target's movement speed for a short time.",
+			"de": "Reduziert die Bewegungsgeschwindigkeit des Ziels für kurze Zeit.",
 			"fi": "Reduces the target's movement speed for a short time.",
 			"fil": "Reduces the target's movement speed for a short time.",
-			"fr": "Reduces the target's movement speed for a short time.",
+			"fr": "Réduit temporairement la vitesse de déplacement de la cible.",
 			"id": "Reduces the target's movement speed for a short time.",
 			"it": "Reduces the target's movement speed for a short time.",
 			"jp": "Reduces the target's movement speed for a short time.",
@@ -13793,7 +13885,7 @@
 			"sp": "Reduces the target's movement speed for a short time.",
 			"sw": "Reduces the target's movement speed for a short time.",
 			"th": "Reduces the target's movement speed for a short time.",
-			"tw": "Reduces the target's movement speed for a short time.",
+			"tw": "短時間內降低目標的移動速度。",
 			"vi": "Reduces the target's movement speed for a short time."
 		},
 		"icon": "elemulavalan.png",
@@ -13833,7 +13925,7 @@
 			"de": "Stun",
 			"fi": "Stun",
 			"fil": "Stun",
-			"fr": "Stun",
+			"fr": "Étourdissement",
 			"id": "Stun",
 			"it": "Stun",
 			"jp": "Stun",
@@ -13844,7 +13936,7 @@
 			"sp": "Stun",
 			"sw": "Stun",
 			"th": "Stun",
-			"tw": "Stun",
+			"tw": "暈眩",
 			"vi": "Stun"
 		},
 		"description": {
@@ -13852,10 +13944,10 @@
 			"ar": "You are stunned and cannot move.",
 			"br": "You are stunned and cannot move.",
 			"cns": "You are stunned and cannot move.",
-			"de": "You are stunned and cannot move.",
+			"de": "Du bist betäubt und kannst dich nicht bewegen.",
 			"fi": "You are stunned and cannot move.",
 			"fil": "You are stunned and cannot move.",
-			"fr": "You are stunned and cannot move.",
+			"fr": "Vous êtes étourdi et ne pouvez plus bouger.",
 			"id": "You are stunned and cannot move.",
 			"it": "You are stunned and cannot move.",
 			"jp": "You are stunned and cannot move.",
@@ -13866,7 +13958,7 @@
 			"sp": "You are stunned and cannot move.",
 			"sw": "You are stunned and cannot move.",
 			"th": "You are stunned and cannot move.",
-			"tw": "You are stunned and cannot move.",
+			"tw": "你被暈眩了，動彈不得。",
 			"vi": "You are stunned and cannot move."
 		},
 		"icon": "magspekestone.png",
@@ -13903,7 +13995,7 @@
 			"de": "Groggy Weakness",
 			"fi": "Groggy Weakness",
 			"fil": "Groggy Weakness",
-			"fr": "Groggy Weakness",
+			"fr": "Faiblesse pendant l'étourdissement",
 			"id": "Groggy Weakness",
 			"it": "Groggy Weakness",
 			"jp": "Groggy Weakness",
@@ -13914,7 +14006,7 @@
 			"sp": "Groggy Weakness",
 			"sw": "Groggy Weakness",
 			"th": "Groggy Weakness",
-			"tw": "Groggy Weakness",
+			"tw": "失衡弱點",
 			"vi": "Groggy Weakness"
 		},
 		"description": {
@@ -13922,10 +14014,10 @@
 			"ar": "While groggy, the target receives increased damage from all attacks.",
 			"br": "While groggy, the target receives increased damage from all attacks.",
 			"cns": "While groggy, the target receives increased damage from all attacks.",
-			"de": "While groggy, the target receives increased damage from all attacks.",
+			"de": "Im Groggy-Zustand erleidet das Ziel erhöhten Schaden durch alle Angriffe.",
 			"fi": "While groggy, the target receives increased damage from all attacks.",
 			"fil": "While groggy, the target receives increased damage from all attacks.",
-			"fr": "While groggy, the target receives increased damage from all attacks.",
+			"fr": "Pendant qu'elle est étourdie, la cible subit davantage de dégâts de toutes les attaques.",
 			"id": "While groggy, the target receives increased damage from all attacks.",
 			"it": "While groggy, the target receives increased damage from all attacks.",
 			"jp": "While groggy, the target receives increased damage from all attacks.",
@@ -13936,7 +14028,7 @@
 			"sp": "While groggy, the target receives increased damage from all attacks.",
 			"sw": "While groggy, the target receives increased damage from all attacks.",
 			"th": "While groggy, the target receives increased damage from all attacks.",
-			"tw": "While groggy, the target receives increased damage from all attacks.",
+			"tw": "失衡期間，目標受到所有攻擊的傷害提高。",
 			"vi": "While groggy, the target receives increased damage from all attacks."
 		},
 		"icon": "mershiepanbar.png",
@@ -13968,7 +14060,7 @@
 			"de": "Slow On Water",
 			"fi": "Slow On Water",
 			"fil": "Slow On Water",
-			"fr": "Slow On Water",
+			"fr": "Ralentissement dans l'eau",
 			"id": "Slow On Water",
 			"it": "Slow On Water",
 			"jp": "Slow On Water",
@@ -13979,7 +14071,7 @@
 			"sp": "Slow On Water",
 			"sw": "Slow On Water",
 			"th": "Slow On Water",
-			"tw": "Slow On Water",
+			"tw": "水中緩速",
 			"vi": "Slow On Water"
 		},
 		"description": {
@@ -13987,10 +14079,10 @@
 			"ar": "Reduces movement speed while standing in water.",
 			"br": "Reduces movement speed while standing in water.",
 			"cns": "Reduces movement speed while standing in water.",
-			"de": "Reduces movement speed while standing in water.",
+			"de": "Reduziert die Bewegungsgeschwindigkeit im Wasser.",
 			"fi": "Reduces movement speed while standing in water.",
 			"fil": "Reduces movement speed while standing in water.",
-			"fr": "Reduces movement speed while standing in water.",
+			"fr": "Réduit la vitesse de déplacement lorsque la cible se trouve dans l'eau.",
 			"id": "Reduces movement speed while standing in water.",
 			"it": "Reduces movement speed while standing in water.",
 			"jp": "Reduces movement speed while standing in water.",
@@ -14001,7 +14093,7 @@
 			"sp": "Reduces movement speed while standing in water.",
 			"sw": "Reduces movement speed while standing in water.",
 			"th": "Reduces movement speed while standing in water.",
-			"tw": "Reduces movement speed while standing in water.",
+			"tw": "站在水中時降低移動速度。",
 			"vi": "Reduces movement speed while standing in water."
 		},
 		"icon": "elemulavalan.png",
@@ -14032,7 +14124,7 @@
 			"de": "Overlap Water Heal",
 			"fi": "Overlap Water Heal",
 			"fil": "Overlap Water Heal",
-			"fr": "Overlap Water Heal",
+			"fr": "Soin aquatique cumulé",
 			"id": "Overlap Water Heal",
 			"it": "Overlap Water Heal",
 			"jp": "Overlap Water Heal",
@@ -14043,7 +14135,7 @@
 			"sp": "Overlap Water Heal",
 			"sw": "Overlap Water Heal",
 			"th": "Overlap Water Heal",
-			"tw": "Overlap Water Heal",
+			"tw": "疊加水療",
 			"vi": "Overlap Water Heal"
 		},
 		"description": {
@@ -14051,10 +14143,10 @@
 			"ar": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
 			"br": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
 			"cns": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
-			"de": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
+			"de": "Stellt mit der Zeit HP wieder her, solange sich das Ziel im Wasser befindet. Die Heilung steigt mit jedem Stapel des Effekts.",
 			"fi": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
 			"fil": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
-			"fr": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
+			"fr": "Restaure progressivement les PV lorsque la cible se trouve dans l'eau. Les soins augmentent avec chaque charge de l'effet.",
 			"id": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
 			"it": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
 			"jp": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
@@ -14065,7 +14157,7 @@
 			"sp": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
 			"sw": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
 			"th": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
-			"tw": "Restores HP over time while the target is in water. Healing increases with each stack of the effect.",
+			"tw": "目標在水中時持續恢復生命值，效果層數越高，恢復量越多。",
 			"vi": "Restores HP over time while the target is in water. Healing increases with each stack of the effect."
 		},
 		"icon": "rinheahealra.png",
@@ -14094,7 +14186,7 @@
 			"de": "Gathering Energy",
 			"fi": "Gathering Energy",
 			"fil": "Gathering Energy",
-			"fr": "Gathering Energy",
+			"fr": "Accumulation d'énergie",
 			"id": "Gathering Energy",
 			"it": "Gathering Energy",
 			"jp": "Gathering Energy",
@@ -14105,7 +14197,7 @@
 			"sp": "Gathering Energy",
 			"sw": "Gathering Energy",
 			"th": "Gathering Energy",
-			"tw": "Gathering Energy",
+			"tw": "凝聚能量",
 			"vi": "Gathering Energy"
 		},
 		"description": {
@@ -14113,10 +14205,10 @@
 			"ar": "Concentrates energy to greatly increase HP recovery for a short duration.",
 			"br": "Concentrates energy to greatly increase HP recovery for a short duration.",
 			"cns": "Concentrates energy to greatly increase HP recovery for a short duration.",
-			"de": "Concentrates energy to greatly increase HP recovery for a short duration.",
+			"de": "Bündelt Energie, um die HP-Regeneration für kurze Zeit stark zu erhöhen.",
 			"fi": "Concentrates energy to greatly increase HP recovery for a short duration.",
 			"fil": "Concentrates energy to greatly increase HP recovery for a short duration.",
-			"fr": "Concentrates energy to greatly increase HP recovery for a short duration.",
+			"fr": "Concentre son énergie pour augmenter considérablement la récupération des PV pendant une courte durée.",
 			"id": "Concentrates energy to greatly increase HP recovery for a short duration.",
 			"it": "Concentrates energy to greatly increase HP recovery for a short duration.",
 			"jp": "Concentrates energy to greatly increase HP recovery for a short duration.",
@@ -14127,7 +14219,7 @@
 			"sp": "Concentrates energy to greatly increase HP recovery for a short duration.",
 			"sw": "Concentrates energy to greatly increase HP recovery for a short duration.",
 			"th": "Concentrates energy to greatly increase HP recovery for a short duration.",
-			"tw": "Concentrates energy to greatly increase HP recovery for a short duration.",
+			"tw": "凝聚能量，短時間內大幅提升生命值恢復量。",
 			"vi": "Concentrates energy to greatly increase HP recovery for a short duration."
 		},
 		"icon": "eleeleelemst.png",
@@ -14158,7 +14250,7 @@
 			"de": "Overlap Slow",
 			"fi": "Overlap Slow",
 			"fil": "Overlap Slow",
-			"fr": "Overlap Slow",
+			"fr": "Ralentissement cumulé",
 			"id": "Overlap Slow",
 			"it": "Overlap Slow",
 			"jp": "Overlap Slow",
@@ -14169,7 +14261,7 @@
 			"sp": "Overlap Slow",
 			"sw": "Overlap Slow",
 			"th": "Overlap Slow",
-			"tw": "Overlap Slow",
+			"tw": "疊加緩速",
 			"vi": "Overlap Slow"
 		},
 		"description": {
@@ -14177,10 +14269,10 @@
 			"ar": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
 			"br": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
 			"cns": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
-			"de": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
+			"de": "Reduziert die Bewegungsgeschwindigkeit; der Verlangsamungseffekt wird mit steigender Stapelzahl stärker.",
 			"fi": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
 			"fil": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
-			"fr": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
+			"fr": "Réduit la vitesse de déplacement, l'effet de ralentissement devenant plus puissant à mesure que les charges augmentent.",
 			"id": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
 			"it": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
 			"jp": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
@@ -14191,7 +14283,7 @@
 			"sp": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
 			"sw": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
 			"th": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
-			"tw": "Reduces movement speed, with the slow effect becoming stronger as stacks increase.",
+			"tw": "降低移動速度，效果層數越高，緩速效果越強。",
 			"vi": "Reduces movement speed, with the slow effect becoming stronger as stacks increase."
 		},
 		"icon": "elemulavalan.png",
@@ -14220,7 +14312,7 @@
 			"de": "Overlap Freeze",
 			"fi": "Overlap Freeze",
 			"fil": "Overlap Freeze",
-			"fr": "Overlap Freeze",
+			"fr": "Gel cumulé",
 			"id": "Overlap Freeze",
 			"it": "Overlap Freeze",
 			"jp": "Overlap Freeze",
@@ -14231,7 +14323,7 @@
 			"sp": "Overlap Freeze",
 			"sw": "Overlap Freeze",
 			"th": "Overlap Freeze",
-			"tw": "Overlap Freeze",
+			"tw": "疊加冰凍",
 			"vi": "Overlap Freeze"
 		},
 		"description": {
@@ -14239,10 +14331,10 @@
 			"ar": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
 			"br": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
 			"cns": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
-			"de": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
+			"de": "Wendet einen stapelbaren Kälteeffekt an, der das Ziel bei voller Stapelzahl einfriert.",
 			"fi": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
 			"fil": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
-			"fr": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
+			"fr": "Applique un effet de froid cumulable qui finit par geler la cible lorsque les charges sont au maximum.",
 			"id": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
 			"it": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
 			"jp": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
@@ -14253,7 +14345,7 @@
 			"sp": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
 			"sw": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
 			"th": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
-			"tw": "Applies a stacking chill effect that eventually freezes the target at full stacks.",
+			"tw": "疊加寒氣效果，疊滿時凍結目標。",
 			"vi": "Applies a stacking chill effect that eventually freezes the target at full stacks."
 		},
 		"icon": "elemulavalan.png",
@@ -14282,7 +14374,7 @@
 			"de": "Freeze",
 			"fi": "Freeze",
 			"fil": "Freeze",
-			"fr": "Freeze",
+			"fr": "Gel",
 			"id": "Freeze",
 			"it": "Freeze",
 			"jp": "Freeze",
@@ -14293,7 +14385,7 @@
 			"sp": "Freeze",
 			"sw": "Freeze",
 			"th": "Freeze",
-			"tw": "Freeze",
+			"tw": "冰凍",
 			"vi": "Freeze"
 		},
 		"description": {
@@ -14301,10 +14393,10 @@
 			"ar": "Freezes the target, preventing movement and actions for a short duration.",
 			"br": "Freezes the target, preventing movement and actions for a short duration.",
 			"cns": "Freezes the target, preventing movement and actions for a short duration.",
-			"de": "Freezes the target, preventing movement and actions for a short duration.",
+			"de": "Friert das Ziel ein und verhindert für kurze Zeit Bewegungen und Aktionen.",
 			"fi": "Freezes the target, preventing movement and actions for a short duration.",
 			"fil": "Freezes the target, preventing movement and actions for a short duration.",
-			"fr": "Freezes the target, preventing movement and actions for a short duration.",
+			"fr": "Gèle la cible, l'empêchant de se déplacer et d'agir pendant une courte durée.",
 			"id": "Freezes the target, preventing movement and actions for a short duration.",
 			"it": "Freezes the target, preventing movement and actions for a short duration.",
 			"jp": "Freezes the target, preventing movement and actions for a short duration.",
@@ -14315,7 +14407,7 @@
 			"sp": "Freezes the target, preventing movement and actions for a short duration.",
 			"sw": "Freezes the target, preventing movement and actions for a short duration.",
 			"th": "Freezes the target, preventing movement and actions for a short duration.",
-			"tw": "Freezes the target, preventing movement and actions for a short duration.",
+			"tw": "短時間內凍結目標，使其無法移動或行動。",
 			"vi": "Freezes the target, preventing movement and actions for a short duration."
 		},
 		"icon": "elemulavalan.png",
@@ -14346,7 +14438,7 @@
 			"de": "Max HP Reduction",
 			"fi": "Max HP Reduction",
 			"fil": "Max HP Reduction",
-			"fr": "Max HP Reduction",
+			"fr": "Réduction des PV max.",
 			"id": "Max HP Reduction",
 			"it": "Max HP Reduction",
 			"jp": "Max HP Reduction",
@@ -14357,7 +14449,7 @@
 			"sp": "Max HP Reduction",
 			"sw": "Max HP Reduction",
 			"th": "Max HP Reduction",
-			"tw": "Max HP Reduction",
+			"tw": "最大生命值降低",
 			"vi": "Max HP Reduction"
 		},
 		"description": {
@@ -14365,10 +14457,10 @@
 			"ar": "Reduces the target's maximum HP for a short duration.",
 			"br": "Reduces the target's maximum HP for a short duration.",
 			"cns": "Reduces the target's maximum HP for a short duration.",
-			"de": "Reduces the target's maximum HP for a short duration.",
+			"de": "Reduziert die maximalen HP des Ziels für kurze Zeit.",
 			"fi": "Reduces the target's maximum HP for a short duration.",
 			"fil": "Reduces the target's maximum HP for a short duration.",
-			"fr": "Reduces the target's maximum HP for a short duration.",
+			"fr": "Réduit temporairement les PV maximum de la cible.",
 			"id": "Reduces the target's maximum HP for a short duration.",
 			"it": "Reduces the target's maximum HP for a short duration.",
 			"jp": "Reduces the target's maximum HP for a short duration.",
@@ -14379,7 +14471,7 @@
 			"sp": "Reduces the target's maximum HP for a short duration.",
 			"sw": "Reduces the target's maximum HP for a short duration.",
 			"th": "Reduces the target's maximum HP for a short duration.",
-			"tw": "Reduces the target's maximum HP for a short duration.",
+			"tw": "短時間內降低目標的最大生命值。",
 			"vi": "Reduces the target's maximum HP for a short duration."
 		},
 		"icon": "elemulavalan.png",
@@ -14419,7 +14511,7 @@
 			"de": "Grabbed by Tentacle",
 			"fi": "Grabbed by Tentacle",
 			"fil": "Grabbed by Tentacle",
-			"fr": "Grabbed by Tentacle",
+			"fr": "Attrapé par un tentacule",
 			"id": "Grabbed by Tentacle",
 			"it": "Grabbed by Tentacle",
 			"jp": "Grabbed by Tentacle",
@@ -14430,7 +14522,7 @@
 			"sp": "Grabbed by Tentacle",
 			"sw": "Grabbed by Tentacle",
 			"th": "Grabbed by Tentacle",
-			"tw": "Grabbed by Tentacle",
+			"tw": "觸手纏繞",
 			"vi": "Grabbed by Tentacle"
 		},
 		"description": {
@@ -14438,10 +14530,10 @@
 			"ar": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
 			"br": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
 			"cns": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
-			"de": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
+			"de": "Das Ziel wird von einem Tentakel festgehalten, kann sich nicht bewegen und erleidet fortlaufend Schaden.",
 			"fi": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
 			"fil": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
-			"fr": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
+			"fr": "La cible est immobilisée par un tentacule et subit des dégâts continus.",
 			"id": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
 			"it": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
 			"jp": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
@@ -14452,7 +14544,7 @@
 			"sp": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
 			"sw": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
 			"th": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
-			"tw": "The target is restrained by a tentacle, unable to move and taking continuous damage.",
+			"tw": "目標被觸手束縛，無法移動並持續受到傷害。",
 			"vi": "The target is restrained by a tentacle, unable to move and taking continuous damage."
 		},
 		"icon": "webbed.png",
@@ -14484,7 +14576,7 @@
 			"de": "Stun",
 			"fi": "Stun",
 			"fil": "Stun",
-			"fr": "Stun",
+			"fr": "Étourdissement",
 			"id": "Stun",
 			"it": "Stun",
 			"jp": "Stun",
@@ -14495,7 +14587,7 @@
 			"sp": "Stun",
 			"sw": "Stun",
 			"th": "Stun",
-			"tw": "Stun",
+			"tw": "暈眩",
 			"vi": "Stun"
 		},
 		"description": {
@@ -14503,10 +14595,10 @@
 			"ar": "You are stunned and cannot move.",
 			"br": "You are stunned and cannot move.",
 			"cns": "You are stunned and cannot move.",
-			"de": "You are stunned and cannot move.",
+			"de": "Du bist betäubt und kannst dich nicht bewegen.",
 			"fi": "You are stunned and cannot move.",
 			"fil": "You are stunned and cannot move.",
-			"fr": "You are stunned and cannot move.",
+			"fr": "Vous êtes étourdi et ne pouvez plus bouger.",
 			"id": "You are stunned and cannot move.",
 			"it": "You are stunned and cannot move.",
 			"jp": "You are stunned and cannot move.",
@@ -14517,7 +14609,7 @@
 			"sp": "You are stunned and cannot move.",
 			"sw": "You are stunned and cannot move.",
 			"th": "You are stunned and cannot move.",
-			"tw": "You are stunned and cannot move.",
+			"tw": "你被暈眩了，動彈不得。",
 			"vi": "You are stunned and cannot move."
 		},
 		"icon": "magspekestone.png",
@@ -14548,7 +14640,7 @@
 			"de": "Sand Shield",
 			"fi": "Sand Shield",
 			"fil": "Sand Shield",
-			"fr": "Sand Shield",
+			"fr": "Bouclier de sable",
 			"id": "Sand Shield",
 			"it": "Sand Shield",
 			"jp": "Sand Shield",
@@ -14559,7 +14651,7 @@
 			"sp": "Sand Shield",
 			"sw": "Sand Shield",
 			"th": "Sand Shield",
-			"tw": "Sand Shield",
+			"tw": "沙之護盾",
 			"vi": "Sand Shield"
 		},
 		"description": {
@@ -14567,10 +14659,10 @@
 			"ar": "Incoming damage is reduced to 1 for 5 seconds.",
 			"br": "Incoming damage is reduced to 1 for 5 seconds.",
 			"cns": "Incoming damage is reduced to 1 for 5 seconds.",
-			"de": "Incoming damage is reduced to 1 for 5 seconds.",
+			"de": "Eingehender Schaden wird 5 Sekunden lang auf 1 reduziert.",
 			"fi": "Incoming damage is reduced to 1 for 5 seconds.",
 			"fil": "Incoming damage is reduced to 1 for 5 seconds.",
-			"fr": "Incoming damage is reduced to 1 for 5 seconds.",
+			"fr": "Les dégâts reçus sont réduits à 1 pendant 5 secondes.",
 			"id": "Incoming damage is reduced to 1 for 5 seconds.",
 			"it": "Incoming damage is reduced to 1 for 5 seconds.",
 			"jp": "Incoming damage is reduced to 1 for 5 seconds.",
@@ -14581,7 +14673,7 @@
 			"sp": "Incoming damage is reduced to 1 for 5 seconds.",
 			"sw": "Incoming damage is reduced to 1 for 5 seconds.",
 			"th": "Incoming damage is reduced to 1 for 5 seconds.",
-			"tw": "Incoming damage is reduced to 1 for 5 seconds.",
+			"tw": "受到的傷害降低為 1，持續 5 秒。",
 			"vi": "Incoming damage is reduced to 1 for 5 seconds."
 		},
 		"icon": "mershiepanbar.png",
@@ -16218,7 +16310,7 @@
 			"ar": "Range Increase",
 			"br": "Range Increase",
 			"cns": "距离增加",
-			"de": "Range Increase",
+			"de": "Erhöhte Reichweite",
 			"fi": "Range Increase",
 			"fil": "Range Increase",
 			"fr": "Augmentation de la portée",
@@ -29644,7 +29736,7 @@
 			"sp": "Los enemigos reciben daño en el tiempo en un área a tu alrededor.",
 			"sw": "Summons a lingering effect that deals damage over time to enemies within its area.",
 			"th": "สร้างเขตแดนศักดิ์สิทธิ์บนพื้น มอนสเตอร์ที่อยู่ในเขต จะสูญเสียพลังไปเรื่อยๆ",
-			"tw": "設置一個持續效果，使區域內的敵人持續受到傷害。",
+			"tw": "召喚一個持續存在的效果，對範圍內的敵人造成持續傷害。",
 			"vi": "Kẻ địch nhận sát thương theo thời gian trong khu vực xung quanh bạn"
 		},
 		"icon": "rinsupanzelr.png",
@@ -32388,7 +32480,7 @@
 			"ar": "Increases the target's damage.",
 			"br": "Increases the target's damage.",
 			"cns": "提升目标的伤害。",
-			"de": "Increases the target's damage.",
+			"de": "Erhöht den Schaden vom Ziel.",
 			"fi": "Increases the target's damage.",
 			"fil": "Increases the target's damage.",
 			"fr": "Augmente les dégâts de la cible.",
@@ -36433,7 +36525,7 @@
 			"ar": "Incinerate (Increased Elemental)",
 			"br": "Incinerate (Increased Elemental)",
 			"cns": "焚毁 (元素伤害提升)",
-			"de": "Incinerate (Increased Elemental)",
+			"de": "Incinerate (Erhöhter Elementarschaden)",
 			"fi": "Incinerate (Increased Elemental)",
 			"fil": "Incinerate (Increased Elemental)",
 			"fr": "Incinérer (Élémentaire augmenté)",
@@ -36527,7 +36619,7 @@
 			"ar": "Incinerate (Additional Burn Damage)",
 			"br": "Incinerate (Additional Burn Damage)",
 			"cns": "焚毁 (额外灼烧伤害)",
-			"de": "Incinerate (Additional Burn Damage)",
+			"de": "Incinerate (Zusätzlicher Brandschaden)",
 			"fi": "Incinerate (Additional Burn Damage)",
 			"fil": "Incinerate (Additional Burn Damage)",
 			"fr": "Incinérer (Dégâts de brûlure supplémentaires)",
@@ -36621,7 +36713,7 @@
 			"ar": "Incinerate (Reduced Cooldown)",
 			"br": "Incinerate (Reduced Cooldown)",
 			"cns": "焚毁 (减少冷却)",
-			"de": "Incinerate (Reduced Cooldown)",
+			"de": "Incinerate (Reduzierte Abklingzeit)",
 			"fi": "Incinerate (Reduced Cooldown)",
 			"fil": "Incinerate (Reduced Cooldown)",
 			"fr": "Incinérer (Réduction du temps de recharge)",
@@ -36895,7 +36987,7 @@
 			"ar": "Ice Shard (Increased Elemental)",
 			"br": "Ice Shard (Increased Elemental)",
 			"cns": "冰锥 (元素伤害提升)",
-			"de": "Ice Shard (Increased Elemental)",
+			"de": "Ice Shard (Erhöhter Elementarschaden)",
 			"fi": "Ice Shard (Increased Elemental)",
 			"fil": "Ice Shard (Increased Elemental)",
 			"fr": "Éclat de glace (Élémentaire augmenté)",
@@ -36989,7 +37081,7 @@
 			"ar": "Ice Shard (Increased Duration)",
 			"br": "Ice Shard (Increased Duration)",
 			"cns": "冰锥 (增加持续时间)",
-			"de": "Ice Shard (Increased Duration)",
+			"de": "Ice Shard (Erhöhte Dauer)",
 			"fi": "Ice Shard (Increased Duration)",
 			"fil": "Ice Shard (Increased Duration)",
 			"fr": "Éclat de glace (Durée augmentée)",
@@ -37083,7 +37175,7 @@
 			"ar": "Ice Shard (Reduced Cooldown)",
 			"br": "Ice Shard (Reduced Cooldown)",
 			"cns": "冰锥 (减少冷却)",
-			"de": "Ice Shard (Reduced Cooldown)",
+			"de": "Ice Shard (Reduzierte Abklingzeit)",
 			"fi": "Ice Shard (Reduced Cooldown)",
 			"fil": "Ice Shard (Reduced Cooldown)",
 			"fr": "Éclat de glace (Réduction du temps de recharge)",
@@ -37387,7 +37479,7 @@
 			"ar": "Gale (Increased Elemental)",
 			"br": "Gale (Increased Elemental)",
 			"cns": "狂风 (元素伤害提升)",
-			"de": "Gale (Increased Elemental)",
+			"de": "Gale (Erhöhter Elementarschaden)",
 			"fi": "Gale (Increased Elemental)",
 			"fil": "Gale (Increased Elemental)",
 			"fr": "Tourbillon (Élémentaire augmenté)",
@@ -37667,7 +37759,7 @@
 			"ar": "Gale (Increased Duration)",
 			"br": "Gale (Increased Duration)",
 			"cns": "狂风 (增加持续时间)",
-			"de": "Gale (Increased Duration)",
+			"de": "Gale (Erhöhte Dauer)",
 			"fi": "Gale (Increased Duration)",
 			"fil": "Gale (Increased Duration)",
 			"fr": "Tourbillon (Durée augmentée)",
@@ -37778,26 +37870,26 @@
 			"vi": "EVA Storm"
 		},
 		"description": {
-			"en": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
-			"ar": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
-			"br": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
+			"en": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
+			"ar": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
+			"br": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
 			"cns": "在指定区域召唤风暴云，周期性用闪电攻击附近敌人。闪电必定施加触电（Shock）效果；对已触电的目标造成最大伤害。",
 			"de": "Werde von Gewitterwolken umgeben, die periodisch einen nahen Gegner mit Blitz treffen. Blitzschläge schocken Ziele immer. Schläge, die geschockte Ziele treffen, verursachen immer maximalen Schaden.",
-			"fi": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
-			"fil": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
-			"fr": "Entourez-vous de nuages d’orage, frappant périodiquement un ennemi proche avec la foudre. Les frappes électrisent toujours les cibles. Les cibles électrisées subissent toujours les dégâts maximaux.",
-			"id": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
-			"it": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
-			"jp": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
+			"fi": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
+			"fil": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
+			"fr": "Projette des nuages ​​orageux sur une zone ciblée, frappant périodiquement les ennemis proches avec la foudre. Les éclairs infligent toujours Choc, réduisant toutes les résistances élémentaires de 10 %. Les attaques contre les cibles électrocutées infligent des dégâts maximums.",
+			"id": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
+			"it": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
+			"jp": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
 			"kr": "주위에 폭풍 구름을 둘러 주기적으로 주변의 적에게 번개를 떨어뜨립니다. 번개는 항상 적을 감전시킵니다. 이미 감전된 적에게는 항상 최대 피해가 발생합니다.",
-			"nl": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
-			"pl": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
-			"ru": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
+			"nl": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
+			"pl": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
+			"ru": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
 			"sp": "Invoca nubes de tormenta sobre un área, golpeando periódicamente a los enemigos cercanos con rayos. Los rayos siempre aplican electrocutado. Golpear a objetivos electrocutados inflige daño máximo.",
-			"sw": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
-			"th": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
-			"tw": "在指定區域召喚風暴雲，週期性用閃電攻擊附近敵人。閃電必定施加觸電效果；對已觸電的目標造成最大傷害。",
-			"vi": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage."
+			"sw": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
+			"th": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
+			"tw": "在指定區域召喚風暴雲，週期性用閃電攻擊附近敵人。閃電必定施加觸電效果，使目標的所有元素抗性降低 10%；對已觸電的目標造成最大傷害。",
+			"vi": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage."
 		},
 		"icon": "evastorm.png",
 		"class": 36983,
@@ -37808,7 +37900,6 @@
 		"treePosition": { "x": 0, "y": 78 },
 		"magic": true,
 		"elementType": "electricity",
-		"debuffType": "weaken",
 		"requirements": [
 			{ "skill": 7080, "level": 6 }
 		],
@@ -37821,37 +37912,27 @@
 		"target": "area",
 		"skillPoints": 10,
 		"levels": [
-			{ "minAttack": 1, "maxAttack": 199, "dotTick": 2, "maxTargets": 10, "maxTargetsPVP": 1, "consumedMP": 112, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
-			], "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 199, "dotTick": 2, "maxTargets": 10, "maxTargetsPVP": 1, "consumedMP": 112, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 201, "dotTick": 2, "maxTargets": 12, "maxTargetsPVP": 2, "consumedMP": 114, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
-			], "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 201, "dotTick": 2, "maxTargets": 12, "maxTargetsPVP": 2, "consumedMP": 114, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.02, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 203, "dotTick": 2, "maxTargets": 14, "maxTargetsPVP": 3, "consumedMP": 116, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
-			], "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 203, "dotTick": 2, "maxTargets": 14, "maxTargetsPVP": 3, "consumedMP": 116, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.04, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 205, "dotTick": 2, "maxTargets": 16, "maxTargetsPVP": 4, "consumedMP": 118, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
-			], "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 205, "dotTick": 2, "maxTargets": 16, "maxTargetsPVP": 4, "consumedMP": 118, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.06, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 207, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 120, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
-			], "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 207, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 120, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.08, "pvp": true, "pve": true }
@@ -37883,26 +37964,26 @@
 			"vi": "EVA Storm"
 		},
 		"description": {
-			"en": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
-			"ar": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
-			"br": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
+			"en": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
+			"ar": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
+			"br": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
 			"cns": "在指定区域召唤风暴云，周期性用闪电攻击附近敌人。闪电必定施加触电（Shock）效果；对已触电的目标造成最大伤害。",
 			"de": "Werde von Gewitterwolken umgeben, die periodisch einen nahen Gegner mit Blitz treffen. Blitzschläge schocken Ziele immer. Schläge, die geschockte Ziele treffen, verursachen immer maximalen Schaden.",
-			"fi": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
-			"fil": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
-			"fr": "Entourez-vous de nuages d’orage, frappant périodiquement un ennemi proche avec la foudre. Les frappes électrisent toujours les cibles. Les cibles électrisées subissent toujours les dégâts maximaux.",
-			"id": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
-			"it": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
-			"jp": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
+			"fi": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
+			"fil": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
+			"fr": "Projette des nuages ​​orageux sur une zone ciblée, frappant périodiquement les ennemis proches avec la foudre. Les éclairs infligent toujours Choc, réduisant toutes les résistances élémentaires de 10 %. Les attaques contre les cibles électrocutées infligent des dégâts maximums.",
+			"id": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
+			"it": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
+			"jp": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
 			"kr": "주위에 폭풍 구름을 둘러 주기적으로 주변의 적에게 번개를 떨어뜨립니다. 번개는 항상 적을 감전시킵니다. 이미 감전된 적에게는 항상 최대 피해가 발생합니다.",
-			"nl": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
-			"pl": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
-			"ru": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
+			"nl": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
+			"pl": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
+			"ru": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
 			"sp": "Invoca nubes de tormenta sobre un área, golpeando periódicamente a los enemigos cercanos con rayos. Los rayos siempre aplican electrocutado. Golpear a objetivos electrocutados inflige daño máximo.",
-			"sw": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
-			"th": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage.",
-			"tw": "在指定區域召喚風暴雲，週期性用閃電攻擊附近敵人。閃電必定施加觸電效果；對已觸電的目標造成最大傷害。",
-			"vi": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock. Strikes against Shocked targets deal maximum damage."
+			"sw": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
+			"th": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage.",
+			"tw": "在指定區域召喚風暴雲，週期性用閃電攻擊附近敵人。閃電必定施加觸電效果，使目標的所有元素抗性降低 10%；對已觸電的目標造成最大傷害。",
+			"vi": "Casts storm clouds over a targeted area, periodically striking nearby enemies with lightning. Lightning strikes always inflict Shock, reducing all elemental resistances by 10%. Strikes against Shocked targets deal maximum damage."
 		},
 		"icon": "evastorm.png",
 		"level": 166,
@@ -37985,7 +38066,6 @@
 		"treePosition": { "x": 0, "y": 0 },
 		"magic": true,
 		"elementType": "electricity",
-		"debuffType": "weaken",
 		"requirements": [
 			{ "skill": 37809, "level": 5 }
 		],
@@ -37998,37 +38078,27 @@
 		"target": "area",
 		"skillPoints": 10,
 		"levels": [
-			{ "minAttack": 1, "maxAttack": 129, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 6, "consumedMP": 112, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
-			], "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 129, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 6, "consumedMP": 112, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 131, "dotTick": 2, "maxTargets": 35, "maxTargetsPVP": 7, "consumedMP": 114, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
-			], "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 131, "dotTick": 2, "maxTargets": 35, "maxTargetsPVP": 7, "consumedMP": 114, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.02, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 133, "dotTick": 2, "maxTargets": 40, "maxTargetsPVP": 8, "consumedMP": 116, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
-			], "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 133, "dotTick": 2, "maxTargets": 40, "maxTargetsPVP": 8, "consumedMP": 116, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.04, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 135, "dotTick": 2, "maxTargets": 45, "maxTargetsPVP": 9, "consumedMP": 118, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
-			], "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 135, "dotTick": 2, "maxTargets": 45, "maxTargetsPVP": 9, "consumedMP": 118, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.06, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 137, "dotTick": 2, "maxTargets": 50, "maxTargetsPVP": 10, "consumedMP": 120, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
-			], "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 137, "dotTick": 2, "maxTargets": 50, "maxTargetsPVP": 10, "consumedMP": 120, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.08, "pvp": true, "pve": true }
@@ -38090,7 +38160,6 @@
 		"treePosition": { "x": 0, "y": 0 },
 		"magic": true,
 		"elementType": "electricity",
-		"debuffType": "weaken",
 		"requirements": [
 			{ "skill": 37809, "level": 5 }
 		],
@@ -38103,37 +38172,27 @@
 		"target": "area",
 		"skillPoints": 10,
 		"levels": [
-			{ "minAttack": 1, "maxAttack": 199, "dotTick": 1, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 112, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
-			], "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 199, "dotTick": 1, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 112, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 201, "dotTick": 1, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 114, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
-			], "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 201, "dotTick": 1, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 114, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.02, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 203, "dotTick": 1, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 116, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
-			], "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 203, "dotTick": 1, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 116, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.04, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 205, "dotTick": 1, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 118, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
-			], "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 205, "dotTick": 1, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 118, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.06, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 207, "dotTick": 1, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 120, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
-			], "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 207, "dotTick": 1, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 120, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.08, "pvp": true, "pve": true }
@@ -38148,7 +38207,7 @@
 			"ar": "EVA Storm (Increased Duration)",
 			"br": "EVA Storm (Increased Duration)",
 			"cns": "暴风领域 (增加持续时间)",
-			"de": "EVA Storm (Increased Duration)",
+			"de": "EVA Storm (Erhöhte Dauer)",
 			"fi": "EVA Storm (Increased Duration)",
 			"fil": "EVA Storm (Increased Duration)",
 			"fr": "Tempête EVA (Durée augmentée)",
@@ -38195,7 +38254,6 @@
 		"treePosition": { "x": 0, "y": 0 },
 		"magic": true,
 		"elementType": "electricity",
-		"debuffType": "weaken",
 		"requirements": [
 			{ "skill": 37809, "level": 5 }
 		],
@@ -38208,37 +38266,27 @@
 		"target": "area",
 		"skillPoints": 10,
 		"levels": [
-			{ "minAttack": 1, "maxAttack": 199, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 112, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
-			], "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 199, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 112, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 201, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 114, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
-			], "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 201, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 114, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.02, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 203, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 116, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
-			], "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 203, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 116, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.04, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 205, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 118, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
-			], "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 205, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 118, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.06, "pvp": true, "pve": true }
 			] },
-			{ "minAttack": 1, "maxAttack": 207, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 120, "cooldown": 30, "casting": 1, "duration": 5, "durationPVP": 5, "abilities": [
-				{ "parameter": "allelementsdefense", "add": -10, "rate": false }
-			], "spellRange": 8, "synergies": [
+			{ "minAttack": 1, "maxAttack": 207, "dotTick": 2, "maxTargets": 20, "maxTargetsPVP": 5, "consumedMP": 120, "cooldown": 30, "casting": 1, "spellRange": 8, "synergies": [
 				{ "parameter": "attack", "skill": 5171, "minLevel": 6, "add": false, "scale": 1, "pvp": true, "pve": true }
 			], "scalingParameters": [
 				{ "add": true, "parameter": "attack", "stat": "int", "scale": 7.08, "pvp": true, "pve": true }
@@ -39689,7 +39737,7 @@
 			"ar": "Heavy Shot (Increased Knockback)",
 			"br": "Heavy Shot (Increased Knockback)",
 			"cns": "重箭 (强化击退)",
-			"de": "Heavy Shot (Increased Knockback)",
+			"de": "Heavy Shot (Erhöhter Knockback)",
 			"fi": "Heavy Shot (Increased Knockback)",
 			"fil": "Heavy Shot (Increased Knockback)",
 			"fr": "Tir puissant (Repoussement accru)",
@@ -39877,7 +39925,7 @@
 			"ar": "Heavy Shot (Reduced Cooldown)",
 			"br": "Heavy Shot (Reduced Cooldown)",
 			"cns": "重箭 (减少冷却)",
-			"de": "Heavy Shot (Reduced Cooldown)",
+			"de": "Heavy Shot (Reduzierte Abklingzeit)",
 			"fi": "Heavy Shot (Reduced Cooldown)",
 			"fil": "Heavy Shot (Reduced Cooldown)",
 			"fr": "Tir puissant (Réduction du temps de recharge)",
@@ -40169,7 +40217,7 @@
 			"ar": "Condor Dive (Reduced Cooldown)",
 			"br": "Condor Dive (Reduced Cooldown)",
 			"cns": "猎鹰扑击 (减少冷却)",
-			"de": "Condor Dive (Reduced Cooldown)",
+			"de": "Condor Dive (Reduzierte Abklingzeit)",
 			"fi": "Condor Dive (Reduced Cooldown)",
 			"fil": "Condor Dive (Reduced Cooldown)",
 			"fr": "Plongée du Condor (Réduction du temps de recharge)",
@@ -41623,7 +41671,7 @@
 			"ar": "Nen Overflow (Increased Duration)",
 			"br": "Nen Overflow (Increased Duration)",
 			"cns": "念气溢流 (增加持续时间)",
-			"de": "Nen Overflow (Increased Duration)",
+			"de": "Nen Overflow (Erhöhte Dauer)",
 			"fi": "Nen Overflow (Increased Duration)",
 			"fil": "Nen Overflow (Increased Duration)",
 			"fr": "Débordement de Nen (Durée augmentée)",
@@ -42191,7 +42239,7 @@
 			"ar": "Power Palm (Increased Effect)",
 			"br": "Power Palm (Increased Effect)",
 			"cns": "劲掌 (效果提升)",
-			"de": "Power Palm (Increased Effect)",
+			"de": "Power Palm (Stärkerer Effekt)",
 			"fi": "Power Palm (Increased Effect)",
 			"fil": "Power Palm (Increased Effect)",
 			"fr": "Paume de puissance (Effet augmenté)",
@@ -42290,7 +42338,7 @@
 			"ar": "Increased Effect (Increased Effect)",
 			"br": "Increased Effect (Increased Effect)",
 			"cns": "效果提升 (效果提升)",
-			"de": "Increased Effect (Increased Effect)",
+			"de": "Stärkerer Effekt (Stärkerer Effekt)",
 			"fi": "Increased Effect (Increased Effect)",
 			"fil": "Increased Effect (Increased Effect)",
 			"fr": "Effet augmenté (Effet augmenté)",
@@ -42871,7 +42919,7 @@
 			"ar": "Nen Sphere (Range Increase)",
 			"br": "Nen Sphere (Range Increase)",
 			"cns": "念气弹 (距离增加)",
-			"de": "Nen Sphere (Range Increase)",
+			"de": "Nen Sphere (Erhöhte Reichweite)",
 			"fi": "Nen Sphere (Range Increase)",
 			"fil": "Nen Sphere (Range Increase)",
 			"fr": "Sphère de Nen (Augmentation de la portée)",
@@ -43397,7 +43445,7 @@
 			"ar": "Touch of Rhisis (Increased Effect)",
 			"br": "Touch of Rhisis (Increased Effect)",
 			"cns": "莱斯神之触 (效果提升)",
-			"de": "Touch of Rhisis (Increased Effect)",
+			"de": "Touch of Rhisis (Stärkerer Effekt)",
 			"fi": "Touch of Rhisis (Increased Effect)",
 			"fil": "Touch of Rhisis (Increased Effect)",
 			"fr": "Touche de Rhisis (Effet augmenté)",
@@ -44120,7 +44168,7 @@
 			"ar": "Harlequin's Greeting (Range Increase)",
 			"br": "Harlequin's Greeting (Range Increase)",
 			"cns": "谑影戏礼 (距离增加)",
-			"de": "Harlequin's Greeting (Range Increase)",
+			"de": "Harlequin's Greeting (Erhöhte Reichweite)",
 			"fi": "Harlequin's Greeting (Range Increase)",
 			"fil": "Harlequin's Greeting (Range Increase)",
 			"fr": "Salutation du Harlequin (Augmentation de la portée)",
@@ -44588,7 +44636,7 @@
 			"ar": "Alter Ego (Reduced Cooldown)",
 			"br": "Alter Ego (Reduced Cooldown)",
 			"cns": "双重自我 (减少冷却)",
-			"de": "Alter Ego (Reduced Cooldown)",
+			"de": "Alter Ego (Reduzierte Abklingzeit)",
 			"fi": "Alter Ego (Reduced Cooldown)",
 			"fil": "Alter Ego (Reduced Cooldown)",
 			"fr": "Alter Ego (Réduction du temps de recharge)",
@@ -44947,7 +44995,7 @@
 			"ar": "Toxic Fury (Reduced Cooldown)",
 			"br": "Toxic Fury (Reduced Cooldown)",
 			"cns": "剧毒狂怒 (减少冷却)",
-			"de": "Toxic Fury (Reduced Cooldown)",
+			"de": "Toxic Fury (Reduzierte Abklingzeit)",
 			"fi": "Toxic Fury (Reduced Cooldown)",
 			"fil": "Toxic Fury (Reduced Cooldown)",
 			"fr": "Fureur toxique (Réduction du temps de recharge)",
@@ -47703,7 +47751,7 @@
 			"ar": "Lillith's Gaze (Reduced Cooldown)",
 			"br": "Lillith's Gaze (Reduced Cooldown)",
 			"cns": "莉莉丝的凝视 (减少冷却)",
-			"de": "Lillith's Gaze (Reduced Cooldown)",
+			"de": "Lillith's Gaze (Reduzierte Abklingzeit)",
 			"fi": "Lillith's Gaze (Reduced Cooldown)",
 			"fil": "Lillith's Gaze (Reduced Cooldown)",
 			"fr": "Regard de Lillith (Réduction du temps de recharge)",
@@ -47818,7 +47866,7 @@
 			"ar": "Lillith's Gaze (Reduced Cooldown)",
 			"br": "Lillith's Gaze (Reduced Cooldown)",
 			"cns": "莉莉丝的凝视 (减少冷却)",
-			"de": "Lillith's Gaze (Reduced Cooldown)",
+			"de": "Lillith's Gaze (Reduzierte Abklingzeit)",
 			"fi": "Lillith's Gaze (Reduced Cooldown)",
 			"fil": "Lillith's Gaze (Reduced Cooldown)",
 			"fr": "Regard de Lillith (Réduction du temps de recharge)",
@@ -48140,7 +48188,7 @@
 			"ar": "Cimetiere's Scream (Range Increase)",
 			"br": "Cimetiere's Scream (Range Increase)",
 			"cns": "西梅泰尔的尖啸 (距离增加)",
-			"de": "Cimetiere's Scream (Range Increase)",
+			"de": "Cimetiere's Scream (Erhöhte Reichweite)",
 			"fi": "Cimetiere's Scream (Range Increase)",
 			"fil": "Cimetiere's Scream (Range Increase)",
 			"fr": "Crie du Cimetiere (Augmentation de la portée)",
@@ -48250,7 +48298,7 @@
 			"ar": "Cimetiere's Scream (Range Increase)",
 			"br": "Cimetiere's Scream (Range Increase)",
 			"cns": "西梅泰尔的尖啸 (距离增加)",
-			"de": "Cimetiere's Scream (Range Increase)",
+			"de": "Cimetiere's Scream (Erhöhte Reichweite)",
 			"fi": "Cimetiere's Scream (Range Increase)",
 			"fil": "Cimetiere's Scream (Range Increase)",
 			"fr": "Crie du Cimetiere (Augmentation de la portée)",
@@ -48572,7 +48620,7 @@
 			"ar": "Cimetiere's Scream (Reduced Cooldown)",
 			"br": "Cimetiere's Scream (Reduced Cooldown)",
 			"cns": "西梅泰尔的尖啸 (减少冷却)",
-			"de": "Cimetiere's Scream (Reduced Cooldown)",
+			"de": "Cimetiere's Scream (Reduzierte Abklingzeit)",
 			"fi": "Cimetiere's Scream (Reduced Cooldown)",
 			"fil": "Cimetiere's Scream (Reduced Cooldown)",
 			"fr": "Crie du Cimetiere (Réduction du temps de recharge)",
@@ -48682,7 +48730,7 @@
 			"ar": "Cimetiere's Scream (Reduced Cooldown)",
 			"br": "Cimetiere's Scream (Reduced Cooldown)",
 			"cns": "西梅泰尔的尖啸 (减少冷却)",
-			"de": "Cimetiere's Scream (Reduced Cooldown)",
+			"de": "Cimetiere's Scream (Reduzierte Abklingzeit)",
 			"fi": "Cimetiere's Scream (Reduced Cooldown)",
 			"fil": "Cimetiere's Scream (Reduced Cooldown)",
 			"fr": "Crie du Cimetiere (Réduction du temps de recharge)",
@@ -49446,7 +49494,7 @@
 			"ar": "Soul of Rhisis (Range Increase)",
 			"br": "Soul of Rhisis (Range Increase)",
 			"cns": "莱斯神之魂 (距离增加)",
-			"de": "Soul of Rhisis (Range Increase)",
+			"de": "Soul of Rhisis (Erhöhte Reichweite)",
 			"fi": "Soul of Rhisis (Range Increase)",
 			"fil": "Soul of Rhisis (Range Increase)",
 			"fr": "Âme de Rhisis (Augmentation de la portée)",
@@ -49850,7 +49898,7 @@
 			"ar": "Kyrie Eleison (Range Increase)",
 			"br": "Kyrie Eleison (Range Increase)",
 			"cns": "怜恤祷言 (距离增加)",
-			"de": "Kyrie Eleison (Range Increase)",
+			"de": "Kyrie Eleison (Erhöhte Reichweite)",
 			"fi": "Kyrie Eleison (Range Increase)",
 			"fil": "Kyrie Eleison (Range Increase)",
 			"fr": "Prière de miséricorde (Augmentation de la portée)",
@@ -50133,7 +50181,7 @@
 			"ar": "Divinecross (Increased Multiplier)",
 			"br": "Divinecross (Increased Multiplier)",
 			"cns": "神圣十字 (系数提升)",
-			"de": "Divinecross (Increased Multiplier)",
+			"de": "Divinecross (Erhöhter Multiplikator)",
 			"fi": "Divinecross (Increased Multiplier)",
 			"fil": "Divinecross (Increased Multiplier)",
 			"fr": "Croix Divine (Multiplicateur Accru)",
@@ -50206,7 +50254,7 @@
 			"ar": "Divinecross (Reduced PvP Cooldown)",
 			"br": "Divinecross (Reduced PvP Cooldown)",
 			"cns": "神圣十字 (PvP冷却降低)",
-			"de": "Divinecross (Reduced PvP Cooldown)",
+			"de": "Divinecross (Reduzierte PvP Abklingzeit)",
 			"fi": "Divinecross (Reduced PvP Cooldown)",
 			"fil": "Divinecross (Reduced PvP Cooldown)",
 			"fr": "Croix Divine (Temps de Recharge PvP Réduit)",
@@ -50279,7 +50327,7 @@
 			"ar": "Divinecross (Increased Duration)",
 			"br": "Divinecross (Increased Duration)",
 			"cns": "神圣十字 (增加持续时间)",
-			"de": "Divinecross (Increased Duration)",
+			"de": "Divinecross (Erhöhte Dauer)",
 			"fi": "Divinecross (Increased Duration)",
 			"fil": "Divinecross (Increased Duration)",
 			"fr": "Croix Divine (Durée augmentée)",
@@ -51532,7 +51580,7 @@
 			"ar": "Stigma I (Increased Range)",
 			"br": "Stigma I (Increased Range)",
 			"cns": "烙印 I (距离提升)",
-			"de": "Stigma I (Increased Range)",
+			"de": "Stigma I (Erhöhte Reichweite)",
 			"fi": "Stigma I (Increased Range)",
 			"fil": "Stigma I (Increased Range)",
 			"fr": "Stigmate I (Portée augmentée)",
@@ -51626,7 +51674,7 @@
 			"ar": "Stigma I (Increased Range)",
 			"br": "Stigma I (Increased Range)",
 			"cns": "烙印 I (距离提升)",
-			"de": "Stigma I (Increased Range)",
+			"de": "Stigma I (Erhöhte Reichweite)",
 			"fi": "Stigma I (Increased Range)",
 			"fil": "Stigma I (Increased Range)",
 			"fr": "Stigmate I (Portée augmentée)",
@@ -51713,7 +51761,7 @@
 			"ar": "Stigma I (Increased Stigma)",
 			"br": "Stigma I (Increased Stigma)",
 			"cns": "烙印 I (烙印层数提升)",
-			"de": "Stigma I (Increased Stigma)",
+			"de": "Stigma I (Erhöhtes Stigma)",
 			"fi": "Stigma I (Increased Stigma)",
 			"fil": "Stigma I (Increased Stigma)",
 			"fr": "Stigmate I (Stigmate Accru)",
@@ -51807,7 +51855,7 @@
 			"ar": "Stigma I (Increased Stigma)",
 			"br": "Stigma I (Increased Stigma)",
 			"cns": "烙印 I (烙印层数提升)",
-			"de": "Stigma I (Increased Stigma)",
+			"de": "Stigma I (Erhöhtes Stigma)",
 			"fi": "Stigma I (Increased Stigma)",
 			"fil": "Stigma I (Increased Stigma)",
 			"fr": "Stigmate I (Stigmate Accru)",
@@ -52343,7 +52391,7 @@
 			"ar": "Shield Crush (Increased Range)",
 			"br": "Shield Crush (Increased Range)",
 			"cns": "破盾重击 (距离提升)",
-			"de": "Shield Crush (Increased Range)",
+			"de": "Shield Crush (Erhöhte Reichweite)",
 			"fi": "Shield Crush (Increased Range)",
 			"fil": "Shield Crush (Increased Range)",
 			"fr": "Écrasement de bouclier (Portée augmentée)",
@@ -52988,7 +53036,7 @@
 			"ar": "Maelstrom Strike (Increased Range)",
 			"br": "Maelstrom Strike (Increased Range)",
 			"cns": "漩涡打击 (距离提升)",
-			"de": "Maelstrom Strike (Increased Range)",
+			"de": "Maelstrom Strike (Erhöhte Reichweite)",
 			"fi": "Maelstrom Strike (Increased Range)",
 			"fil": "Maelstrom Strike (Increased Range)",
 			"fr": "Frappe du Maelström (Portée augmentée)",
@@ -53510,7 +53558,7 @@
 			"ar": "Increased HP Recovery",
 			"br": "Increased HP Recovery",
 			"cns": "HP恢复提升",
-			"de": "Increased HP Recovery",
+			"de": "Erhöhte HP Wiederherstellung",
 			"fi": "Increased HP Recovery",
 			"fil": "Increased HP Recovery",
 			"fr": "Augmentation de la récupération de PV",
@@ -53669,7 +53717,7 @@
 			"ar": "Enhanced HP Recovery",
 			"br": "Enhanced HP Recovery",
 			"cns": "强化生命恢复",
-			"de": "Enhanced HP Recovery",
+			"de": "Verbesserte HP Wiederherstellung",
 			"fi": "Enhanced HP Recovery",
 			"fil": "Enhanced HP Recovery",
 			"fr": "Récupération de PV améliorée",
@@ -53967,7 +54015,7 @@
 			"ar": "Infusion (Increased Duration)",
 			"br": "Infusion (Increased Duration)",
 			"cns": "元素注入 (增加持续时间)",
-			"de": "Infusion (Increased Duration)",
+			"de": "Infusion (Erhöhte Dauer)",
 			"fi": "Infusion (Increased Duration)",
 			"fil": "Infusion (Increased Duration)",
 			"fr": "Infusion (Durée augmentée)",
@@ -54367,7 +54415,7 @@
 			"ar": "Ignite (Increased Elemental)",
 			"br": "Ignite (Increased Elemental)",
 			"cns": "点燃 (元素伤害提升)",
-			"de": "Ignite (Increased Elemental)",
+			"de": "Ignite (Erhöhter Elementarschaden)",
 			"fi": "Ignite (Increased Elemental)",
 			"fil": "Ignite (Increased Elemental)",
 			"fr": "Enflammer (Élémentaire augmenté)",
@@ -54462,7 +54510,7 @@
 			"ar": "Increased Elemental (Ignite)",
 			"br": "Increased Elemental (Ignite)",
 			"cns": "元素伤害提升 (点燃)",
-			"de": "Increased Elemental (Ignite)",
+			"de": "Erhöhter Elementarschaden (Ignite)",
 			"fi": "Increased Elemental (Ignite)",
 			"fil": "Increased Elemental (Ignite)",
 			"fr": "Élémentaire augmenté (Enflammer)",
@@ -54755,7 +54803,7 @@
 			"ar": "Ignite (Reduced Cooldown)",
 			"br": "Ignite (Reduced Cooldown)",
 			"cns": "点燃 (减少冷却)",
-			"de": "Ignite (Reduced Cooldown)",
+			"de": "Ignite (Reduzierte Abklingzeit)",
 			"fi": "Ignite (Reduced Cooldown)",
 			"fil": "Ignite (Reduced Cooldown)",
 			"fr": "Enflammer (Réduction du temps de recharge)",
@@ -54850,7 +54898,7 @@
 			"ar": "Reduced Cooldown (Ignite)",
 			"br": "Reduced Cooldown (Ignite)",
 			"cns": "减少冷却 (点燃)",
-			"de": "Reduced Cooldown (Ignite)",
+			"de": "Reduzierte Abklingzeit (Ignite)",
 			"fi": "Reduced Cooldown (Ignite)",
 			"fil": "Reduced Cooldown (Ignite)",
 			"fr": "Réduction du temps de recharge (Enflammer)",
@@ -55057,7 +55105,7 @@
 			"ar": "Tidal Omen (Increased Elemental)",
 			"br": "Tidal Omen (Increased Elemental)",
 			"cns": "潮汐先兆 (元素伤害提升)",
-			"de": "Tidal Omen (Increased Elemental)",
+			"de": "Tidal Omen (Erhöhter Elementarschaden)",
 			"fi": "Tidal Omen (Increased Elemental)",
 			"fil": "Tidal Omen (Increased Elemental)",
 			"fr": "Présage tidal (Élémentaire augmenté)",
@@ -55165,7 +55213,7 @@
 			"ar": "Tidal Omen (Increased Recovery)",
 			"br": "Tidal Omen (Increased Recovery)",
 			"cns": "潮汐先兆 (恢复能力提升)",
-			"de": "Tidal Omen (Increased Recovery)",
+			"de": "Tidal Omen (Erhöhte Wiederherstellung)",
 			"fi": "Tidal Omen (Increased Recovery)",
 			"fil": "Tidal Omen (Increased Recovery)",
 			"fr": "Présage tidal (Récupération augmentée)",
@@ -55273,7 +55321,7 @@
 			"ar": "Tidal Omen (Increased Damage)",
 			"br": "Tidal Omen (Increased Damage)",
 			"cns": "潮汐先兆 (伤害增加)",
-			"de": "Tidal Omen (Increased Damage)",
+			"de": "Tidal Omen (Erhöhter Schaden)",
 			"fi": "Tidal Omen (Increased Damage)",
 			"fil": "Tidal Omen (Increased Damage)",
 			"fr": "Présage tidal (Dégâts augmentés)",
@@ -55398,26 +55446,26 @@
 			"vi": "Thunder Strike"
 		},
 		"description": {
-			"en": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit. If the ball hits a shocked target, it will always do maximum damage.",
-			"ar": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit. If the ball hits a shocked target, it will always do maximum damage.",
-			"br": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit. If the ball hits a shocked target, it will always do maximum damage.",
+			"en": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit, reducing all elemental resistances by 10%. If the ball hits a shocked target, it will always do maximum damage.",
+			"ar": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit, reducing all elemental resistances by 10%. If the ball hits a shocked target, it will always do maximum damage.",
+			"br": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit, reducing all elemental resistances by 10%. If the ball hits a shocked target, it will always do maximum damage.",
 			"cns": "向目标发射一颗闪电球，可在附近敌人之间弹射。有概率对命中的敌人造成触电（Shock）。若命中已触电目标，则必定造成最大伤害。",
 			"de": "Rufe eine Blitzkugel auf dein Ziel, die sich zu nahen Gegnern verkettet. Hat eine Chance, getroffene Gegner zu schocken. Wenn die Kugel ein geschocktes Ziel trifft, verursacht sie immer maximalen Schaden.",
-			"fi": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit. If the ball hits a shocked target, it will always do maximum damage.",
-			"fil": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit. If the ball hits a shocked target, it will always do maximum damage.",
-			"fr": "Projette une boule de foudre sur votre cible, qui enchaîne sur les ennemis proches. Chance d’électrocuter les ennemis touchés. Si elle touche une cible électrocutée, les dégâts sont toujours maximaux.",
-			"id": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit. If the ball hits a shocked target, it will always do maximum damage.",
-			"it": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit. If the ball hits a shocked target, it will always do maximum damage.",
-			"jp": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit. If the ball hits a shocked target, it will always do maximum damage.",
+			"fi": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit, reducing all elemental resistances by 10%. If the ball hits a shocked target, it will always do maximum damage.",
+			"fil": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit, reducing all elemental resistances by 10%. If the ball hits a shocked target, it will always do maximum damage.",
+			"fr": "Invoquez une boule de foudre sur votre cible ; elle se propagera ensuite aux ennemis proches. Elle a une chance d'infliger l'état Électrocution aux ennemis touchés, réduisant toutes leurs résistances élémentaires de 10 %. Si la boule frappe une cible déjà électrocutée, elle infligera systématiquement des dégâts maximaux.",
+			"id": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit, reducing all elemental resistances by 10%. If the ball hits a shocked target, it will always do maximum damage.",
+			"it": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit, reducing all elemental resistances by 10%. If the ball hits a shocked target, it will always do maximum damage.",
+			"jp": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit, reducing all elemental resistances by 10%. If the ball hits a shocked target, it will always do maximum damage.",
 			"kr": "대상에게 전기 구체를 발사하며, 이 구체는 주변 적을 연쇄로 공격합니다. 적중 시 일정 확률로 적을 감전시킵니다. 구체가 감전된 적을 적중하면 항상 최대 피해가 발생합니다.",
-			"nl": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit. If the ball hits a shocked target, it will always do maximum damage.",
-			"pl": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit. If the ball hits a shocked target, it will always do maximum damage.",
-			"ru": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit. If the ball hits a shocked target, it will always do maximum damage.",
+			"nl": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit, reducing all elemental resistances by 10%. If the ball hits a shocked target, it will always do maximum damage.",
+			"pl": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit, reducing all elemental resistances by 10%. If the ball hits a shocked target, it will always do maximum damage.",
+			"ru": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit, reducing all elemental resistances by 10%. If the ball hits a shocked target, it will always do maximum damage.",
 			"sp": "Invoca una esfera de rayo hacia tu objetivo que encadena a enemigos cercanos. Tiene probabilidad de electrocutar. Si golpea a un objetivo electrocutado, siempre inflige daño máximo.",
-			"sw": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit. If the ball hits a shocked target, it will always do maximum damage.",
-			"th": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit. If the ball hits a shocked target, it will always do maximum damage.",
-			"tw": "向目標發射一顆閃電球，可在附近敵人之間彈射。有機率對命中的敵人造成觸電。若命中已觸電目標，則必定造成最大傷害。",
-			"vi": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit. If the ball hits a shocked target, it will always do maximum damage."
+			"sw": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit, reducing all elemental resistances by 10%. If the ball hits a shocked target, it will always do maximum damage.",
+			"th": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit, reducing all elemental resistances by 10%. If the ball hits a shocked target, it will always do maximum damage.",
+			"tw": "向目標發射一顆閃電球，可在附近敵人之間彈射。有機率對命中的敵人造成觸電，使其所有元素抗性降低 10%。若命中已觸電目標，則必定造成最大傷害。",
+			"vi": "Call upon a ball of lightning towards your target, which will chain to nearby enemies. Has a chance to Shock enemies hit, reducing all elemental resistances by 10%. If the ball hits a shocked target, it will always do maximum damage."
 		},
 		"icon": "thunderstrike.png",
 		"class": 36983,
@@ -55475,7 +55523,7 @@
 			"ar": "Thunder Strike (Increased Elemental)",
 			"br": "Choque do Trovão (Increased Elemental)",
 			"cns": "雷霆之怒 (元素伤害提升)",
-			"de": "Thunder Strike (Increased Elemental)",
+			"de": "Thunder Strike (Erhöhter Elementarschaden)",
 			"fi": "Thunder Strike (Increased Elemental)",
 			"fil": "Thunder Strike (Increased Elemental)",
 			"fr": "Frappe de foudre (Élémentaire augmenté)",
@@ -55569,7 +55617,7 @@
 			"ar": "Thunder Strike (Increased Shock Chance)",
 			"br": "Choque do Trovão (Increased Shock Chance)",
 			"cns": "雷霆之怒 (触电概率提升)",
-			"de": "Thunder Strike (Increased Shock Chance)",
+			"de": "Thunder Strike (Erhöhte Schock Chance)",
 			"fi": "Thunder Strike (Increased Shock Chance)",
 			"fil": "Thunder Strike (Increased Shock Chance)",
 			"fr": "Frappe de foudre (Chance de choc augmentée)",
@@ -55663,7 +55711,7 @@
 			"ar": "Thunder Strike (Reduced Cooldown)",
 			"br": "Choque do Trovão (Reduced Cooldown)",
 			"cns": "雷霆之怒 (减少冷却)",
-			"de": "Thunder Strike (Reduced Cooldown)",
+			"de": "Thunder Strike (Reduzierte Abklingzeit)",
 			"fi": "Thunder Strike (Reduced Cooldown)",
 			"fil": "Thunder Strike (Reduced Cooldown)",
 			"fr": "Frappe de foudre (Réduction du temps de recharge)",
@@ -55965,7 +56013,7 @@
 			"ar": "Stone Pillar (Increased Explosion Range)",
 			"br": "Stone Pillar (Increased Explosion Range)",
 			"cns": "岩突柱 (爆炸范围提升)",
-			"de": "Stone Pillar (Increased Explosion Range)",
+			"de": "Stone Pillar (Erhöhte Explosions Reichweite)",
 			"fi": "Stone Pillar (Increased Explosion Range)",
 			"fil": "Stone Pillar (Increased Explosion Range)",
 			"fr": "Pilier de pierre (Portée d’explosion augmentée)",
@@ -56069,7 +56117,7 @@
 			"ar": "Stone Pillar (Reduced Cooldown)",
 			"br": "Stone Pillar (Reduced Cooldown)",
 			"cns": "岩突柱 (减少冷却)",
-			"de": "Stone Pillar (Reduced Cooldown)",
+			"de": "Stone Pillar (Reduzierte Abklingzeit)",
 			"fi": "Stone Pillar (Reduced Cooldown)",
 			"fil": "Stone Pillar (Reduced Cooldown)",
 			"fr": "Pilier de pierre (Réduction du temps de recharge)",
@@ -56369,7 +56417,7 @@
 			"ar": "Gust (Increased Elemental)",
 			"br": "Gust (Increased Elemental)",
 			"cns": "阵风 (元素伤害提升)",
-			"de": "Gust (Increased Elemental)",
+			"de": "Gust (Erhöhter Elementarschaden)",
 			"fi": "Gust (Increased Elemental)",
 			"fil": "Gust (Increased Elemental)",
 			"fr": "Rafale (Élémentaire augmenté)",
@@ -56463,7 +56511,7 @@
 			"ar": "Gust (Increased Range)",
 			"br": "Gust (Increased Range)",
 			"cns": "阵风 (距离提升)",
-			"de": "Gust (Increased Range)",
+			"de": "Gust (Erhöhte Reichweite)",
 			"fi": "Gust (Increased Range)",
 			"fil": "Gust (Increased Range)",
 			"fr": "Rafale (Portée augmentée)",
@@ -56557,7 +56605,7 @@
 			"ar": "Gust (Increased Duration)",
 			"br": "Gust (Increased Duration)",
 			"cns": "阵风 (增加持续时间)",
-			"de": "Gust (Increased Duration)",
+			"de": "Gust (Erhöhte Dauer)",
 			"fi": "Gust (Increased Duration)",
 			"fil": "Gust (Increased Duration)",
 			"fr": "Rafale (Durée augmentée)",
@@ -56960,7 +57008,7 @@
 			"ar": "Barrage (Reduced Cooldown)",
 			"br": "Barrage (Reduced Cooldown)",
 			"cns": "弹幕 (减少冷却)",
-			"de": "Barrage (Reduced Cooldown)",
+			"de": "Barrage (Reduzierte Abklingzeit)",
 			"fi": "Barrage (Reduced Cooldown)",
 			"fil": "Barrage (Reduced Cooldown)",
 			"fr": "Barrage (Réduction du temps de recharge)",
@@ -57376,7 +57424,7 @@
 			"ar": "Repelling Shot (Reduced Cooldown)",
 			"br": "Repelling Shot (Reduced Cooldown)",
 			"cns": "跃退箭 (减少冷却)",
-			"de": "Repelling Shot (Reduced Cooldown)",
+			"de": "Repelling Shot (Reduzierte Abklingzeit)",
 			"fi": "Repelling Shot (Reduced Cooldown)",
 			"fil": "Repelling Shot (Reduced Cooldown)",
 			"fr": "Tir repoussant (Réduction du temps de recharge)",
@@ -59287,7 +59335,7 @@
 			"ar": "Force Grip (Reduced Cooldown)",
 			"br": "Force Grip (Reduced Cooldown)",
 			"cns": "强力擒拿 (减少冷却)",
-			"de": "Force Grip (Reduced Cooldown)",
+			"de": "Force Grip (Reduzierte Abklingzeit)",
 			"fi": "Force Grip (Reduced Cooldown)",
 			"fil": "Force Grip (Reduced Cooldown)",
 			"fr": "Force de préhension (Réduction du temps de recharge)",
@@ -59392,7 +59440,7 @@
 			"ar": "Reduced Cooldown",
 			"br": "Reduced Cooldown",
 			"cns": "减少冷却",
-			"de": "Reduced Cooldown",
+			"de": "Reduzierte Abklingzeit",
 			"fi": "Reduced Cooldown",
 			"fil": "Reduced Cooldown",
 			"fr": "Réduction du temps de recharge",
@@ -59484,7 +59532,7 @@
 			"ar": "Reduced Cooldown (Reduced Cooldown)",
 			"br": "Reduced Cooldown (Reduced Cooldown)",
 			"cns": "减少冷却 (减少冷却)",
-			"de": "Reduced Cooldown (Reduced Cooldown)",
+			"de": "Reduzierte Abklingzeit (Reduzierte Abklingzeit)",
 			"fi": "Reduced Cooldown (Reduced Cooldown)",
 			"fil": "Reduced Cooldown (Reduced Cooldown)",
 			"fr": "Réduction du temps de recharge (Réduction du temps de recharge)",
@@ -59583,7 +59631,7 @@
 			"ar": "Reduced Cooldown",
 			"br": "Reduced Cooldown",
 			"cns": "减少冷却",
-			"de": "Reduced Cooldown",
+			"de": "Reduzierte Abklingzeit",
 			"fi": "Reduced Cooldown",
 			"fil": "Reduced Cooldown",
 			"fr": "Réduction du temps de recharge",
@@ -60327,7 +60375,7 @@
 			"ar": "Aura Bomb (Reduced Cooldown)",
 			"br": "Aura Bomb (Reduced Cooldown)",
 			"cns": "念气爆弹 (减少冷却)",
-			"de": "Aura Bomb (Reduced Cooldown)",
+			"de": "Aura Bomb (Reduzierte Abklingzeit)",
 			"fi": "Aura Bomb (Reduced Cooldown)",
 			"fil": "Aura Bomb (Reduced Cooldown)",
 			"fr": "Bombe d’aura (Réduction du temps de recharge)",
@@ -60431,7 +60479,7 @@
 			"ar": "Aura Bomb (Reduced Cooldown)",
 			"br": "Aura Bomb (Reduced Cooldown)",
 			"cns": "念气爆弹 (减少冷却)",
-			"de": "Aura Bomb (Reduced Cooldown)",
+			"de": "Aura Bomb (Reduzierte Abklingzeit)",
 			"fi": "Aura Bomb (Reduced Cooldown)",
 			"fil": "Aura Bomb (Reduced Cooldown)",
 			"fr": "Bombe d’aura (Réduction du temps de recharge)",
@@ -60766,7 +60814,7 @@
 			"ar": "Ire of Iblis (Increased Effect)",
 			"br": "Ire of Iblis (Increased Effect)",
 			"cns": "伊普利之怒 (效果提升)",
-			"de": "Ire of Iblis (Increased Effect)",
+			"de": "Ire of Iblis (Stärkerer Effekt)",
 			"fi": "Ire of Iblis (Increased Effect)",
 			"fil": "Ire of Iblis (Increased Effect)",
 			"fr": "Colère d’Iblis (Effet augmenté)",
@@ -62009,7 +62057,7 @@
 			"ar": "Toxic Assault (Increased Chance)",
 			"br": "Toxic Assault (Increased Chance)",
 			"cns": "剧毒强袭 (概率提升)",
-			"de": "Toxic Assault (Increased Chance)",
+			"de": "Toxic Assault (Erhöhte Chance)",
 			"fi": "Toxic Assault (Increased Chance)",
 			"fil": "Toxic Assault (Increased Chance)",
 			"fr": "Assaut toxique (Chance augmentée)",
@@ -62119,7 +62167,7 @@
 			"ar": "Toxic Assault (Reduced Cooldown)",
 			"br": "Toxic Assault (Reduced Cooldown)",
 			"cns": "剧毒强袭 (减少冷却)",
-			"de": "Toxic Assault (Reduced Cooldown)",
+			"de": "Toxic Assault (Reduzierte Abklingzeit)",
 			"fi": "Toxic Assault (Reduced Cooldown)",
 			"fil": "Toxic Assault (Reduced Cooldown)",
 			"fr": "Assaut toxique (Réduction du temps de recharge)",
@@ -62229,7 +62277,7 @@
 			"ar": "Toxic Assault (Increased Toxins)",
 			"br": "Toxic Assault (Increased Toxins)",
 			"cns": "剧毒强袭 (毒素伤害增强)",
-			"de": "Toxic Assault (Increased Toxins)",
+			"de": "Toxic Assault (Verbesserte Gifte)",
 			"fi": "Toxic Assault (Increased Toxins)",
 			"fil": "Toxic Assault (Increased Toxins)",
 			"fr": "Assaut toxique (Toxines augmentées)",
@@ -62518,7 +62566,7 @@
 			"ar": "Malefic Detonation (Increased Effect)",
 			"br": "Malefic Detonation (Increased Effect)",
 			"cns": "灾厄迸发 (效果提升)",
-			"de": "Malefic Detonation (Increased Effect)",
+			"de": "Malefic Detonation (Stärkerer Effekt)",
 			"fi": "Malefic Detonation (Increased Effect)",
 			"fil": "Malefic Detonation (Increased Effect)",
 			"fr": "Détonation maléfique (Effet augmenté)",
@@ -62714,7 +62762,7 @@
 			"ar": "Malefic Detonation (Increased Duration)",
 			"br": "Malefic Detonation (Increased Duration)",
 			"cns": "灾厄迸发 (增加持续时间)",
-			"de": "Malefic Detonation (Increased Duration)",
+			"de": "Malefic Detonation (Erhöhte Dauer)",
 			"fi": "Malefic Detonation (Increased Duration)",
 			"fil": "Malefic Detonation (Increased Duration)",
 			"fr": "Détonation maléfique (Durée augmentée)",
@@ -62911,7 +62959,7 @@
 			"ar": "Damnation Surge (Increased Effect)",
 			"br": "Damnation Surge (Increased Effect)",
 			"cns": "咒术奔涌 (效果提升)",
-			"de": "Damnation Surge (Increased Effect)",
+			"de": "Damnation Surge (Stärkerer Effekt)",
 			"fi": "Damnation Surge (Increased Effect)",
 			"fil": "Damnation Surge (Increased Effect)",
 			"fr": "Vague de damnation (Effet augmenté)",
@@ -63107,7 +63155,7 @@
 			"ar": "Damnation Surge (Increased Duration)",
 			"br": "Damnation Surge (Increased Duration)",
 			"cns": "咒术奔涌 (增加持续时间)",
-			"de": "Damnation Surge (Increased Duration)",
+			"de": "Damnation Surge (Erhöhte Dauer)",
 			"fi": "Damnation Surge (Increased Duration)",
 			"fil": "Damnation Surge (Increased Duration)",
 			"fr": "Vague de damnation (Durée augmentée)",
@@ -63577,7 +63625,7 @@
 			"ar": "Celestial Barrier (Range Increase)",
 			"br": "Celestial Barrier (Range Increase)",
 			"cns": "天界屏障 (距离增加)",
-			"de": "Celestial Barrier (Range Increase)",
+			"de": "Celestial Barrier (Erhöhte Reichweite)",
 			"fi": "Celestial Barrier (Range Increase)",
 			"fil": "Celestial Barrier (Range Increase)",
 			"fr": "Barrière céleste (Augmentation de la portée)",
@@ -63975,7 +64023,7 @@
 			"ar": "Flow of Salvation (Increased Healing)",
 			"br": "Flow of Salvation (Increased Healing)",
 			"cns": "神佑流转 (治疗量强化)",
-			"de": "Flow of Salvation (Increased Healing)",
+			"de": "Flow of Salvation (Erhöhte Heilung)",
 			"fi": "Flow of Salvation (Increased Healing)",
 			"fil": "Flow of Salvation (Increased Healing)",
 			"fr": "Flot de Rédemption (Soins augmentés)",
@@ -64074,7 +64122,7 @@
 			"ar": "Increased Healing (Increased Healing)",
 			"br": "Increased Healing (Increased Healing)",
 			"cns": "治疗量强化 (治疗量强化)",
-			"de": "Increased Healing (Increased Healing)",
+			"de": "Erhöhte Heilung (Erhöhte Heilung)",
 			"fi": "Increased Healing (Increased Healing)",
 			"fil": "Increased Healing (Increased Healing)",
 			"fr": "Soins augmentés (Soins augmentés)",
@@ -64180,7 +64228,7 @@
 			"ar": "Flow of Salvation (Increased Damage)",
 			"br": "Flow of Salvation (Increased Damage)",
 			"cns": "神佑流转 (伤害增加)",
-			"de": "Flow of Salvation (Increased Damage)",
+			"de": "Flow of Salvation (Erhöhter Schaden)",
 			"fi": "Flow of Salvation (Increased Damage)",
 			"fil": "Flow of Salvation (Increased Damage)",
 			"fr": "Flot de Rédemption (Dégâts augmentés)",
@@ -64385,7 +64433,7 @@
 			"ar": "Flow of Salvation (Reduced Cooldown)",
 			"br": "Flow of Salvation (Reduced Cooldown)",
 			"cns": "神佑流转 (减少冷却)",
-			"de": "Flow of Salvation (Reduced Cooldown)",
+			"de": "Flow of Salvation (Reduzierte Abklingzeit)",
 			"fi": "Flow of Salvation (Reduced Cooldown)",
 			"fil": "Flow of Salvation (Reduced Cooldown)",
 			"fr": "Flot de Rédemption (Réduction du temps de recharge)",
@@ -64484,7 +64532,7 @@
 			"ar": "Reduced Cooldown (Reduced Cooldown)",
 			"br": "Reduced Cooldown (Reduced Cooldown)",
 			"cns": "减少冷却 (减少冷却)",
-			"de": "Reduced Cooldown (Reduced Cooldown)",
+			"de": "Reduzierte Abklingzeit (Reduzierte Abklingzeit)",
 			"fi": "Reduced Cooldown (Reduced Cooldown)",
 			"fil": "Reduced Cooldown (Reduced Cooldown)",
 			"fr": "Réduction du temps de recharge (Réduction du temps de recharge)",
@@ -64802,7 +64850,7 @@
 			"ar": "Gloria Patri (Range Increase)",
 			"br": "Gloria Patri (Range Increase)",
 			"cns": "荣耀颂祷 (距离增加)",
-			"de": "Gloria Patri (Range Increase)",
+			"de": "Gloria Patri (Erhöhte Reichweite)",
 			"fi": "Gloria Patri (Range Increase)",
 			"fil": "Gloria Patri (Range Increase)",
 			"fr": "Gloria Patri (Augmentation de la portée)",
@@ -65219,7 +65267,7 @@
 			"ar": "Cross of Blood (Increased Range)",
 			"br": "Cross of Blood (Increased Range)",
 			"cns": "血十字 (距离提升)",
-			"de": "Cross of Blood (Increased Range)",
+			"de": "Cross of Blood (Erhöhte Reichweite)",
 			"fi": "Cross of Blood (Increased Range)",
 			"fil": "Cross of Blood (Increased Range)",
 			"fr": "Croix de sang (Portée augmentée)",
@@ -65323,7 +65371,7 @@
 			"ar": "Cross of Blood (Increased Range)",
 			"br": "Cross of Blood (Increased Range)",
 			"cns": "血十字 (距离提升)",
-			"de": "Cross of Blood (Increased Range)",
+			"de": "Cross of Blood (Erhöhte Reichweite)",
 			"fi": "Cross of Blood (Increased Range)",
 			"fil": "Cross of Blood (Increased Range)",
 			"fr": "Croix de sang (Portée augmentée)",
@@ -66409,7 +66457,7 @@
 			"ar": "Stigma II (Increased Range)",
 			"br": "Stigma II (Increased Range)",
 			"cns": "烙印 II (距离提升)",
-			"de": "Stigma II (Increased Range)",
+			"de": "Stigma II (Erhöhte Reichweite)",
 			"fi": "Stigma II (Increased Range)",
 			"fil": "Stigma II (Increased Range)",
 			"fr": "Stigmate II (Portée augmentée)",
@@ -66503,7 +66551,7 @@
 			"ar": "Stigma II (Increased Range)",
 			"br": "Stigma II (Increased Range)",
 			"cns": "烙印 II (距离提升)",
-			"de": "Stigma II (Increased Range)",
+			"de": "Stigma II (Erhöhte Reichweite)",
 			"fi": "Stigma II (Increased Range)",
 			"fil": "Stigma II (Increased Range)",
 			"fr": "Stigmate II (Portée augmentée)",
@@ -66600,7 +66648,7 @@
 			"ar": "Stigma II (Increased Lifesteal)",
 			"br": "Stigma II (Increased Lifesteal)",
 			"cns": "烙印 II (生命偷取提升)",
-			"de": "Stigma II (Increased Lifesteal)",
+			"de": "Stigma II (Erhöhter Lebensraub)",
 			"fi": "Stigma II (Increased Lifesteal)",
 			"fil": "Stigma II (Increased Lifesteal)",
 			"fr": "Stigmate II (Vol de Vie Amélioré)",
@@ -66694,7 +66742,7 @@
 			"ar": "Stigma II (Increased Lifesteal)",
 			"br": "Stigma II (Increased Lifesteal)",
 			"cns": "烙印 II (生命偷取提升)",
-			"de": "Stigma II (Increased Lifesteal)",
+			"de": "Stigma II (Erhöhter Lebensraub)",
 			"fi": "Stigma II (Increased Lifesteal)",
 			"fil": "Stigma II (Increased Lifesteal)",
 			"fr": "Stigmate II (Vol de Vie Amélioré)",
@@ -66791,7 +66839,7 @@
 			"ar": "Stigma II (Reduced Cooldown)",
 			"br": "Stigma II (Reduced Cooldown)",
 			"cns": "烙印 II (减少冷却)",
-			"de": "Stigma II (Reduced Cooldown)",
+			"de": "Stigma II (Reduzierte Abklingzeit)",
 			"fi": "Stigma II (Reduced Cooldown)",
 			"fil": "Stigma II (Reduced Cooldown)",
 			"fr": "Stigmate II (Réduction du temps de recharge)",
@@ -66885,7 +66933,7 @@
 			"ar": "Stigma II (Increased Lifesteal)",
 			"br": "Stigma II (Increased Lifesteal)",
 			"cns": "烙印 II (生命偷取提升)",
-			"de": "Stigma II (Increased Lifesteal)",
+			"de": "Stigma II (Erhöhter Lebensraub)",
 			"fi": "Stigma II (Increased Lifesteal)",
 			"fil": "Stigma II (Increased Lifesteal)",
 			"fr": "Stigmate II (Vol de Vie Amélioré)",
@@ -67938,7 +67986,7 @@
 			"ar": "Increased HP Regeneration",
 			"br": "Increased HP Regeneration",
 			"cns": "生命再生提升",
-			"de": "Increased HP Regeneration",
+			"de": "Erhöhte HP-Regeneration",
 			"fi": "Increased HP Regeneration",
 			"fil": "Increased HP Regeneration",
 			"fr": "Régénération de PV augmentée",
@@ -68273,48 +68321,48 @@
 	"31027": {
 		"id": 31027,
 		"name": {
-			"en": "Four Strikes",
-			"ar": "Four Strikes",
-			"br": "Four Strikes",
+			"en": "Five Strikes",
+			"ar": "Five Strikes",
+			"br": "Five Strikes",
 			"cns": "连击四式",
-			"de": "Four Strikes",
-			"fi": "Four Strikes",
-			"fil": "Four Strikes",
-			"fr": "Quatre frappes",
-			"id": "Four Strikes",
-			"it": "Four Strikes",
-			"jp": "Four Strikes",
+			"de": "Five Strikes",
+			"fi": "Five Strikes",
+			"fil": "Five Strikes",
+			"fr": "Cinq frappes",
+			"id": "Five Strikes",
+			"it": "Five Strikes",
+			"jp": "Five Strikes",
 			"kr": "사중 연타",
-			"nl": "Four Strikes",
-			"pl": "Four Strikes",
-			"ru": "Four Strikes",
+			"nl": "Five Strikes",
+			"pl": "Five Strikes",
+			"ru": "Five Strikes",
 			"sp": "Cuatro golpes",
-			"sw": "Four Strikes",
-			"th": "Four Strikes",
-			"tw": "四式連破",
-			"vi": "Four Strikes"
+			"sw": "Five Strikes",
+			"th": "Five Strikes",
+			"tw": "五式連破",
+			"vi": "Five Strikes"
 		},
 		"description": {
-			"en": "Your auto attacks apply stacks, which pop at 4 stacks to deal extra damage.",
-			"ar": "Your auto attacks apply stacks, which pop at 4 stacks to deal extra damage.",
-			"br": "Your auto attacks apply stacks, which pop at 4 stacks to deal extra damage.",
+			"en": "Your auto attacks apply stacks, which pop at 5 stacks to deal extra damage.",
+			"ar": "Your auto attacks apply stacks, which pop at 5 stacks to deal extra damage.",
+			"br": "Your auto attacks apply stacks, which pop at 5 stacks to deal extra damage.",
 			"cns": "你的普通攻击会叠加层数，达到4层时自动引爆，造成额外伤害。",
 			"de": "Deine automatischen Angriffe erzeugen Stapel, die bei 4 Stapeln platzen und zusätzlichen Schaden verursachen.",
-			"fi": "Your auto attacks apply stacks, which pop at 4 stacks to deal extra damage.",
-			"fil": "Your auto attacks apply stacks, which pop at 4 stacks to deal extra damage.",
-			"fr": "Tes attaques automatiques appliquent des accumulations, qui explosent à 4 accumulations pour infliger des dégâts supplémentaires.",
-			"id": "Your auto attacks apply stacks, which pop at 4 stacks to deal extra damage.",
-			"it": "Your auto attacks apply stacks, which pop at 4 stacks to deal extra damage.",
-			"jp": "Your auto attacks apply stacks, which pop at 4 stacks to deal extra damage.",
+			"fi": "Your auto attacks apply stacks, which pop at 5 stacks to deal extra damage.",
+			"fil": "Your auto attacks apply stacks, which pop at 5 stacks to deal extra damage.",
+			"fr": "Tes attaques automatiques appliquent des accumulations, qui explosent à 5 accumulations pour infliger des dégâts supplémentaires.",
+			"id": "Your auto attacks apply stacks, which pop at 5 stacks to deal extra damage.",
+			"it": "Your auto attacks apply stacks, which pop at 5 stacks to deal extra damage.",
+			"jp": "Your auto attacks apply stacks, which pop at 5 stacks to deal extra damage.",
 			"kr": "자동 공격 시 중첩이 쌓이며, 6중첩 시 상대에게 추가 피해를 줍니다.",
-			"nl": "Your auto attacks apply stacks, which pop at 4 stacks to deal extra damage.",
-			"pl": "Your auto attacks apply stacks, which pop at 4 stacks to deal extra damage.",
-			"ru": "Your auto attacks apply stacks, which pop at 4 stacks to deal extra damage.",
+			"nl": "Your auto attacks apply stacks, which pop at 5 stacks to deal extra damage.",
+			"pl": "Your auto attacks apply stacks, which pop at 5 stacks to deal extra damage.",
+			"ru": "Your auto attacks apply stacks, which pop at 5 stacks to deal extra damage.",
 			"sp": "Tus ataques automáticos aplican acumulaciones, que explotan al llegar a 4 para infligir daño adicional.",
-			"sw": "Your auto attacks apply stacks, which pop at 4 stacks to deal extra damage.",
-			"th": "Your auto attacks apply stacks, which pop at 4 stacks to deal extra damage.",
-			"tw": "你的普通攻擊會疊加層數，達到 4 層時自動引爆，造成額外傷害。",
-			"vi": "Your auto attacks apply stacks, which pop at 4 stacks to deal extra damage."
+			"sw": "Your auto attacks apply stacks, which pop at 5 stacks to deal extra damage.",
+			"th": "Your auto attacks apply stacks, which pop at 5 stacks to deal extra damage.",
+			"tw": "你的普通攻擊會疊加層數，達到 5 層時自動引爆，造成額外傷害。",
+			"vi": "Your auto attacks apply stacks, which pop at 5 stacks to deal extra damage."
 		},
 		"icon": "additional6thhitcriticalchance.png",
 		"class": 29955,
@@ -68333,19 +68381,19 @@
 		"skillPoints": 10,
 		"levels": [
 			{ "duration": 3600, "durationPVP": 3600, "abilities": [
-				{ "parameter": "skillchance", "skill": 56636, "skillLevel": 1, "pvp": true, "pve": true, "add": 48, "rate": true }
+				{ "parameter": "skillchance", "skill": 56636, "skillLevel": 1, "pvp": true, "pve": true, "add": 60, "rate": true }
 			] },
 			{ "duration": 3600, "durationPVP": 3600, "abilities": [
-				{ "parameter": "skillchance", "skill": 56636, "skillLevel": 2, "pvp": true, "pve": true, "add": 56, "rate": true }
+				{ "parameter": "skillchance", "skill": 56636, "skillLevel": 2, "pvp": true, "pve": true, "add": 70, "rate": true }
 			] },
 			{ "duration": 3600, "durationPVP": 3600, "abilities": [
-				{ "parameter": "skillchance", "skill": 56636, "skillLevel": 3, "pvp": true, "pve": true, "add": 64, "rate": true }
+				{ "parameter": "skillchance", "skill": 56636, "skillLevel": 3, "pvp": true, "pve": true, "add": 80, "rate": true }
 			] },
 			{ "duration": 3600, "durationPVP": 3600, "abilities": [
-				{ "parameter": "skillchance", "skill": 56636, "skillLevel": 4, "pvp": true, "pve": true, "add": 72, "rate": true }
+				{ "parameter": "skillchance", "skill": 56636, "skillLevel": 4, "pvp": true, "pve": true, "add": 90, "rate": true }
 			] },
 			{ "duration": 3600, "durationPVP": 3600, "abilities": [
-				{ "parameter": "skillchance", "skill": 56636, "skillLevel": 5, "pvp": true, "pve": true, "add": 80, "rate": true }
+				{ "parameter": "skillchance", "skill": 56636, "skillLevel": 5, "pvp": true, "pve": true, "add": 100, "rate": true }
 			] }
 		]
 	},
@@ -68460,7 +68508,7 @@
 			"ar": "Hellfire (Increased Elemental)",
 			"br": "Hellfire (Increased Elemental)",
 			"cns": "地狱火 (元素伤害提升)",
-			"de": "Hellfire (Increased Elemental)",
+			"de": "Hellfire (Erhöhter Elementarschaden)",
 			"fi": "Hellfire (Increased Elemental)",
 			"fil": "Hellfire (Increased Elemental)",
 			"fr": "Feu de l’enfer (Élémentaire augmenté)",
@@ -68563,7 +68611,7 @@
 			"ar": "Hellfire (Increased Range)",
 			"br": "Hellfire (Increased Range)",
 			"cns": "地狱火 (距离提升)",
-			"de": "Hellfire (Increased Range)",
+			"de": "Hellfire (Erhöhte Reichweite)",
 			"fi": "Hellfire (Increased Range)",
 			"fil": "Hellfire (Increased Range)",
 			"fr": "Feu de l’enfer (Portée augmentée)",
@@ -68666,7 +68714,7 @@
 			"ar": "Hellfire (Increased Duration)",
 			"br": "Hellfire (Increased Duration)",
 			"cns": "地狱火 (增加持续时间)",
-			"de": "Hellfire (Increased Duration)",
+			"de": "Hellfire (Erhöhte Dauer)",
 			"fi": "Hellfire (Increased Duration)",
 			"fil": "Hellfire (Increased Duration)",
 			"fr": "Feu de l’enfer (Durée augmentée)",
@@ -68873,7 +68921,7 @@
 			"ar": "Swampy Area (Increased Elemental)",
 			"br": "Swampy Area (Increased Elemental)",
 			"cns": "沼泽区域 (元素伤害提升)",
-			"de": "Swampy Area (Increased Elemental)",
+			"de": "Swampy Area (Erhöhter Elementarschaden)",
 			"fi": "Swampy Area (Increased Elemental)",
 			"fil": "Swampy Area (Increased Elemental)",
 			"fr": "Zone marécageuse (Élémentaire augmenté)",
@@ -69081,7 +69129,7 @@
 			"ar": "Swampy Area (Reduced Cooldown)",
 			"br": "Swampy Area (Reduced Cooldown)",
 			"cns": "沼泽区域 (减少冷却)",
-			"de": "Swampy Area (Reduced Cooldown)",
+			"de": "Swampy Area (Reduzierte Abklingzeit)",
 			"fi": "Swampy Area (Reduced Cooldown)",
 			"fil": "Swampy Area (Reduced Cooldown)",
 			"fr": "Zone marécageuse (Réduction du temps de recharge)",
@@ -69659,7 +69707,7 @@
 			"ar": "Trap: Debuff (Reduced Cooldown)",
 			"br": "Trap: Debuff (Reduced Cooldown)",
 			"cns": "陷阱：减益 (减少冷却)",
-			"de": "Trap: Debuff (Reduced Cooldown)",
+			"de": "Trap: Debuff (Reduzierte Abklingzeit)",
 			"fi": "Trap: Debuff (Reduced Cooldown)",
 			"fil": "Trap: Debuff (Reduced Cooldown)",
 			"fr": "Piège : Débuff (Réduction du temps de recharge)",
@@ -69950,7 +69998,7 @@
 			"ar": "Trap: DoT (Increased Range)",
 			"br": "Trap: DoT (Increased Range)",
 			"cns": "陷阱: 持续伤害 (距离提升)",
-			"de": "Trap: DoT (Increased Range)",
+			"de": "Trap: DoT (Erhöhte Reichweite)",
 			"fi": "Trap: DoT (Increased Range)",
 			"fil": "Trap: DoT (Increased Range)",
 			"fr": "Piège : Dégâts sur durée (Portée augmentée)",
@@ -70044,7 +70092,7 @@
 			"ar": "Trap: DoT (Reduced Cooldown)",
 			"br": "Trap: DoT (Reduced Cooldown)",
 			"cns": "陷阱: 持续伤害 (减少冷却)",
-			"de": "Trap: DoT (Reduced Cooldown)",
+			"de": "Trap: DoT (Reduzierte Abklingzeit)",
 			"fi": "Trap: DoT (Reduced Cooldown)",
 			"fil": "Trap: DoT (Reduced Cooldown)",
 			"fr": "Piège : Dégâts sur durée (Réduction du temps de recharge)",
@@ -70333,7 +70381,7 @@
 			"ar": "Trap: AoE (Increased Range)",
 			"br": "Trap: AoE (Increased Range)",
 			"cns": "陷阱: 范围 (距离提升)",
-			"de": "Trap: AoE (Increased Range)",
+			"de": "Trap: AoE (Erhöhte Reichweite)",
 			"fi": "Trap: AoE (Increased Range)",
 			"fil": "Trap: AoE (Increased Range)",
 			"fr": "Piège : Zone (Portée augmentée)",
@@ -70430,7 +70478,7 @@
 			"ar": "Trap: AoE (Reduced Cooldown)",
 			"br": "Trap: AoE (Reduced Cooldown)",
 			"cns": "陷阱: 范围 (减少冷却)",
-			"de": "Trap: AoE (Reduced Cooldown)",
+			"de": "Trap: AoE (Reduzierte Abklingzeit)",
 			"fi": "Trap: AoE (Reduced Cooldown)",
 			"fil": "Trap: AoE (Reduced Cooldown)",
 			"fr": "Piège : Zone (Réduction du temps de recharge)",
@@ -70728,7 +70776,7 @@
 			"ar": "Trap: Binding (Increased Range)",
 			"br": "Trap: Binding (Increased Range)",
 			"cns": "陷阱: 致盲 (距离提升)",
-			"de": "Trap: Binding (Increased Range)",
+			"de": "Trap: Binding (Erhöhte Reichweite)",
 			"fi": "Trap: Binding (Increased Range)",
 			"fil": "Trap: Binding (Increased Range)",
 			"fr": "Piège : Immobilisation (Portée augmentée)",
@@ -70826,7 +70874,7 @@
 			"ar": "Trap: Binding (Reduced Cooldown)",
 			"br": "Trap: Binding (Reduced Cooldown)",
 			"cns": "陷阱: 致盲 (减少冷却)",
-			"de": "Trap: Binding (Reduced Cooldown)",
+			"de": "Trap: Binding (Reduzierte Abklingzeit)",
 			"fi": "Trap: Binding (Reduced Cooldown)",
 			"fil": "Trap: Binding (Reduced Cooldown)",
 			"fr": "Piège : Immobilisation (Réduction du temps de recharge)",
@@ -71100,7 +71148,7 @@
 			"ar": "Trap: Blast (Increased Range)",
 			"br": "Trap: Blast (Increased Range)",
 			"cns": "陷阱: 爆裂 (距离提升)",
-			"de": "Trap: Blast (Increased Range)",
+			"de": "Trap: Blast (Erhöhte Reichweite)",
 			"fi": "Trap: Blast (Increased Range)",
 			"fil": "Trap: Blast (Increased Range)",
 			"fr": "Piège : Explosion (Portée augmentée)",
@@ -71188,7 +71236,7 @@
 			"ar": "Trap: Blast (Reduced Cooldown)",
 			"br": "Trap: Blast (Reduced Cooldown)",
 			"cns": "陷阱: 爆裂 (减少冷却)",
-			"de": "Trap: Blast (Reduced Cooldown)",
+			"de": "Trap: Blast (Reduzierte Abklingzeit)",
 			"fi": "Trap: Blast (Reduced Cooldown)",
 			"fil": "Trap: Blast (Reduced Cooldown)",
 			"fr": "Piège : Explosion (Réduction du temps de recharge)",
@@ -71684,7 +71732,7 @@
 			"ar": "Staggering Strike (Increased Knockdown Chance)",
 			"br": "Staggering Strike (Increased Knockdown Chance)",
 			"cns": "震慑打击 (击倒几率提升)",
-			"de": "Staggering Strike (Increased Knockdown Chance)",
+			"de": "Staggering Strike (Erhöhte Knockdown Chance)",
 			"fi": "Staggering Strike (Increased Knockdown Chance)",
 			"fil": "Staggering Strike (Increased Knockdown Chance)",
 			"fr": "Frappe déstabilisante (Chance de renversement augmentée)",
@@ -71778,7 +71826,7 @@
 			"ar": "Increased Knockdown Chance (Increased Knockdown Chance)",
 			"br": "Increased Knockdown Chance (Increased Knockdown Chance)",
 			"cns": "击倒几率提升 (击倒几率提升)",
-			"de": "Increased Knockdown Chance (Increased Knockdown Chance)",
+			"de": "Erhöhte Knockdown Chance (Erhöhte Knockdown Chance)",
 			"fi": "Increased Knockdown Chance (Increased Knockdown Chance)",
 			"fil": "Increased Knockdown Chance (Increased Knockdown Chance)",
 			"fr": "Chance de renversement augmentée (Chance de renversement augmentée)",
@@ -72060,7 +72108,7 @@
 			"ar": "Staggering Strike (Reduced Cooldown)",
 			"br": "Staggering Strike (Reduced Cooldown)",
 			"cns": "震慑打击 (减少冷却)",
-			"de": "Staggering Strike (Reduced Cooldown)",
+			"de": "Staggering Strike (Reduzierte Abklingzeit)",
 			"fi": "Staggering Strike (Reduced Cooldown)",
 			"fil": "Staggering Strike (Reduced Cooldown)",
 			"fr": "Frappe déstabilisante (Réduction du temps de recharge)",
@@ -72154,7 +72202,7 @@
 			"ar": "Reduced Cooldown (Reduced Cooldown)",
 			"br": "Reduced Cooldown (Reduced Cooldown)",
 			"cns": "减少冷却 (减少冷却)",
-			"de": "Reduced Cooldown (Reduced Cooldown)",
+			"de": "Reduzierte Abklingzeit (Reduzierte Abklingzeit)",
 			"fi": "Reduced Cooldown (Reduced Cooldown)",
 			"fil": "Reduced Cooldown (Reduced Cooldown)",
 			"fr": "Réduction du temps de recharge (Réduction du temps de recharge)",
@@ -72354,7 +72402,7 @@
 			"ar": "Bubble's Blessing (Increased Effect)",
 			"br": "Bubble's Blessing (Increased Effect)",
 			"cns": "波卜尔的祝福 (效果提升)",
-			"de": "Bubble's Blessing (Increased Effect)",
+			"de": "Bubble's Blessing (Stärkerer Effekt)",
 			"fi": "Bubble's Blessing (Increased Effect)",
 			"fil": "Bubble's Blessing (Increased Effect)",
 			"fr": "Bénédiction de Bubble (Effet augmenté)",
@@ -73294,7 +73342,7 @@
 			"ar": "Critical Stab (Reduced Cooldown)",
 			"br": "Critical Stab (Reduced Cooldown)",
 			"cns": "致命刺杀 (减少冷却)",
-			"de": "Critical Stab (Reduced Cooldown)",
+			"de": "Critical Stab (Reduzierte Abklingzeit)",
 			"fi": "Critical Stab (Reduced Cooldown)",
 			"fil": "Critical Stab (Reduced Cooldown)",
 			"fr": "Coup critique (Réduction du temps de recharge)",
@@ -73490,7 +73538,7 @@
 			"ar": "Critical Stab (Increased Damage)",
 			"br": "Critical Stab (Increased Damage)",
 			"cns": "致命刺杀 (伤害增加)",
-			"de": "Critical Stab (Increased Damage)",
+			"de": "Critical Stab (Erhöhter Schaden)",
 			"fi": "Critical Stab (Increased Damage)",
 			"fil": "Critical Stab (Increased Damage)",
 			"fr": "Coup critique (Dégâts augmentés)",
@@ -73784,7 +73832,7 @@
 			"ar": "Yo-Yo Storm (Reduced Cooldown)",
 			"br": "Yo-Yo Storm (Reduced Cooldown)",
 			"cns": "轮舞飓风 (减少冷却)",
-			"de": "Yo-Yo Storm (Reduced Cooldown)",
+			"de": "Yo-Yo Storm (Reduzierte Abklingzeit)",
 			"fi": "Yo-Yo Storm (Reduced Cooldown)",
 			"fil": "Yo-Yo Storm (Reduced Cooldown)",
 			"fr": "Tempête des Yo-Yo (Réduction du temps de recharge)",
@@ -74180,7 +74228,7 @@
 			"ar": "Toxic Cloud (Reduced Cooldown)",
 			"br": "Toxic Cloud (Reduced Cooldown)",
 			"cns": "毒雾 (减少冷却)",
-			"de": "Toxic Cloud (Reduced Cooldown)",
+			"de": "Toxic Cloud (Reduzierte Abklingzeit)",
 			"fi": "Toxic Cloud (Reduced Cooldown)",
 			"fil": "Toxic Cloud (Reduced Cooldown)",
 			"fr": "Fiole toxique (Réduction du temps de recharge)",
@@ -74634,7 +74682,7 @@
 			"ar": "Aether Rend (Reduced Cooldown)",
 			"br": "Aether Rend (Reduced Cooldown)",
 			"cns": "以太撕裂 (减少冷却)",
-			"de": "Aether Rend (Reduced Cooldown)",
+			"de": "Aether Rend (Reduzierte Abklingzeit)",
 			"fi": "Aether Rend (Reduced Cooldown)",
 			"fil": "Aether Rend (Reduced Cooldown)",
 			"fr": "Déchirure d'Éther (Réduction du temps de recharge)",
@@ -74830,7 +74878,7 @@
 			"ar": "Aether Rend (Increased Damage)",
 			"br": "Aether Rend (Increased Damage)",
 			"cns": "以太撕裂 (伤害增加)",
-			"de": "Aether Rend (Increased Damage)",
+			"de": "Aether Rend (Erhöhter Schaden)",
 			"fi": "Aether Rend (Increased Damage)",
 			"fil": "Aether Rend (Increased Damage)",
 			"fr": "Déchirure d'Éther (Dégâts augmentés)",
@@ -75739,7 +75787,7 @@
 			"ar": "Sacrifice (Increased Duration)",
 			"br": "Sacrifice (Increased Duration)",
 			"cns": "牺牲之盾 (增加持续时间)",
-			"de": "Sacrifice (Increased Duration)",
+			"de": "Sacrifice (Erhöhte Dauer)",
 			"fi": "Sacrifice (Increased Duration)",
 			"fil": "Sacrifice (Increased Duration)",
 			"fr": "Sacrifice (Durée augmentée)",
@@ -76156,7 +76204,7 @@
 			"ar": "Hammer of Judgement (Increased Range)",
 			"br": "Hammer of Judgement (Increased Range)",
 			"cns": "审判之锤 (距离提升)",
-			"de": "Hammer of Judgement (Increased Range)",
+			"de": "Hammer of Judgement (Erhöhte Reichweite)",
 			"fi": "Hammer of Judgement (Increased Range)",
 			"fil": "Hammer of Judgement (Increased Range)",
 			"fr": "Marteau du Jugement (Portée augmentée)",
@@ -76667,7 +76715,7 @@
 			"ar": "Bloody Thorn (Increased Range)",
 			"br": "Bloody Thorn (Increased Range)",
 			"cns": "血棘 (距离提升)",
-			"de": "Bloody Thorn (Increased Range)",
+			"de": "Bloody Thorn (Erhöhte Reichweite)",
 			"fi": "Bloody Thorn (Increased Range)",
 			"fil": "Bloody Thorn (Increased Range)",
 			"fr": "Épine sanglante (Portée augmentée)",
@@ -76771,7 +76819,7 @@
 			"ar": "Bloody Thorn (Increased Range)",
 			"br": "Bloody Thorn (Increased Range)",
 			"cns": "血棘 (距离提升)",
-			"de": "Bloody Thorn (Increased Range)",
+			"de": "Bloody Thorn (Erhöhte Reichweite)",
 			"fi": "Bloody Thorn (Increased Range)",
 			"fil": "Bloody Thorn (Increased Range)",
 			"fr": "Épine sanglante (Portée augmentée)",
@@ -77517,7 +77565,7 @@
 			"ar": "Tempest Barrage (Range Increase)",
 			"br": "Tempest Barrage (Range Increase)",
 			"cns": "风暴连袭 (距离增加)",
-			"de": "Tempest Barrage (Range Increase)",
+			"de": "Tempest Barrage (Erhöhte Reichweite)",
 			"fi": "Tempest Barrage (Range Increase)",
 			"fil": "Tempest Barrage (Range Increase)",
 			"fr": "Salve de tempête (Augmentation de la portée)",
@@ -77792,7 +77840,7 @@
 			"ar": "Stigma III (Increased Range)",
 			"br": "Stigma III (Increased Range)",
 			"cns": "烙印 III (距离提升)",
-			"de": "Stigma III (Increased Range)",
+			"de": "Stigma III (Erhöhte Reichweite)",
 			"fi": "Stigma III (Increased Range)",
 			"fil": "Stigma III (Increased Range)",
 			"fr": "Stigmate III (Portée augmentée)",
@@ -77984,7 +78032,7 @@
 			"ar": "Stigma III (Increased Stigma)",
 			"br": "Stigma III (Increased Stigma)",
 			"cns": "烙印 III (烙印层数提升)",
-			"de": "Stigma III (Increased Stigma)",
+			"de": "Stigma III (Erhöhtes Stigma)",
 			"fi": "Stigma III (Increased Stigma)",
 			"fil": "Stigma III (Increased Stigma)",
 			"fr": "Stigmate III (Stigmate Accru)",
@@ -78078,7 +78126,7 @@
 			"ar": "Stigma III (Increased Stigma)",
 			"br": "Stigma III (Increased Stigma)",
 			"cns": "烙印 III (烙印层数提升)",
-			"de": "Stigma III (Increased Stigma)",
+			"de": "Stigma III (Erhöhtes Stigma)",
 			"fi": "Stigma III (Increased Stigma)",
 			"fil": "Stigma III (Increased Stigma)",
 			"fr": "Stigmate III (Stigmate Accru)",
@@ -78176,7 +78224,7 @@
 			"ar": "Stigma III (Reduced Cooldown)",
 			"br": "Stigma III (Reduced Cooldown)",
 			"cns": "烙印 III (减少冷却)",
-			"de": "Stigma III (Reduced Cooldown)",
+			"de": "Stigma III (Reduzierte Abklingzeit)",
 			"fi": "Stigma III (Reduced Cooldown)",
 			"fil": "Stigma III (Reduced Cooldown)",
 			"fr": "Stigmate III (Réduction du temps de recharge)",
@@ -78270,7 +78318,7 @@
 			"ar": "Stigma III (Reduced Cooldown)",
 			"br": "Stigma III (Reduced Cooldown)",
 			"cns": "烙印 III (减少冷却)",
-			"de": "Stigma III (Reduced Cooldown)",
+			"de": "Stigma III (Reduzierte Abklingzeit)",
 			"fi": "Stigma III (Reduced Cooldown)",
 			"fil": "Stigma III (Reduced Cooldown)",
 			"fr": "Stigmate III (Réduction du temps de recharge)",
