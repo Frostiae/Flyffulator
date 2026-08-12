@@ -2,6 +2,7 @@ import Context from "./flyffcontext";
 import * as Utils from "./flyffutils";
 import ItemElem from "./flyffitemelem";
 import { API } from '../data';
+import Skill from "./flyffskill";
 
 /**
  * A Flyff character or monster.
@@ -79,6 +80,7 @@ export default class Entity {
             activeCoupleHousingNpcs,
             activeGuildHousingNpcs,
             activeItems,
+            activeBuffs,
             activeAchievements,
             job,
             equipment,
@@ -94,6 +96,7 @@ export default class Entity {
             activeCoupleHousingNpcs: activeCoupleHousingNpcs.map(npc => npc.id),
             activeGuildHousingNpcs: activeGuildHousingNpcs.map(npc => npc.id),
             activeItems: activeItems.map(itemElem => itemElem.itemProp.id),
+            activeBuffs: activeBuffs.map(buff => buff.skillProp.id),
             activeAchievements: activeAchievements.map(achievement => achievement.id)
         };
 
@@ -189,6 +192,25 @@ export default class Entity {
         }
 
         return shrinked;
+    }
+
+    deserializeBuffList(buffList) {
+        const buffs = [];
+
+        if (!buffList) {
+            return buffs;
+        }
+
+        if (typeof buffList == "object" && !(buffList instanceof Array)) {
+            for (const [skillId, level] of Object.entries(buffList)) {
+                buffs.push(new Skill(Utils.getSkillById(skillId), level, 1));
+            }
+        }
+        else {
+            //buffs = buffList;
+        }
+
+        return buffs;
     }
 
     /**
@@ -297,7 +319,7 @@ export default class Entity {
             throw new Error('Not an object.');
         }
 
-        const { job, equipment, activeItems, activePersonalHousingNpcs, activeCoupleHousingNpcs, activeGuildHousingNpcs, activeAchievements, ...rest } = obj;
+        const { job, equipment, activeItems, activeBuffs, activePersonalHousingNpcs, activeCoupleHousingNpcs, activeGuildHousingNpcs, activeAchievements, ...rest } = obj;
 
         // Quick hack to reset the properties of `this` to their default values
         Object.assign(this, new Entity(this.monsterProp), rest);
@@ -328,6 +350,7 @@ export default class Entity {
         }
 
         this.activeItems = this.deserializeItemList(activeItems);
+        this.activeBuffs = this.deserializeBuffList(activeBuffs);
         this.activePersonalHousingNpcs = this.deserializeNpcList(activePersonalHousingNpcs);
         this.activeCoupleHousingNpcs = this.deserializeNpcList(activeCoupleHousingNpcs);
         this.activeGuildHousingNpcs = this.deserializeNpcList(activeGuildHousingNpcs);

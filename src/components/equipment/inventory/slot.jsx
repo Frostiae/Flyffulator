@@ -68,7 +68,7 @@ function Slot({ backgroundIcon, content, className, onRemove, showStacks = true 
             (content.itemProp != undefined) ? 
             <img src={`https://api.flyff.com/image/item/${content.itemProp.icon}`} draggable={false} id="slot-content" />
             :
-            <img src={`https://api.flyff.com/image/skill/colored/${content.skillProp.icon}`} draggable={false} id="slot-content" />
+            <img src={`https://api.flyff.com/image/skill/colored/${content.skillProp?.icon ?? content.icon}`} draggable={false} id="slot-content" />
           }
 
           {
