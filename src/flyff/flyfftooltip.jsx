@@ -331,7 +331,7 @@ function setupItem(itemElem, i18n) {
         let levelsBelowRequirement = itemProp.level - Context.player.level;
         if (levelsBelowRequirement >= 1 && levelsBelowRequirement <= 5) {
             out.push(<span style={{ color: "#ff0000" }}> (-5)</span>);
-        } 
+        }
         else if (levelsBelowRequirement >= 6 && levelsBelowRequirement <= 10) {
             out.push(<span style={{ color: "#ff0000" }}> (-10)</span>);
         }
@@ -603,7 +603,7 @@ function setupSkill(skill, i18n) {
         }
     }
 
-    out.push(<hr/>);
+    out.push(<hr />);
 
     let hasRequirements = false;
     for (const requirement of skillProp.requirements) {
@@ -622,7 +622,7 @@ function setupSkill(skill, i18n) {
     }
 
     if (hasRequirements) {
-        out.push(<hr/>);
+        out.push(<hr />);
     }
 
     //
@@ -653,8 +653,18 @@ function setupSkill(skill, i18n) {
                 if (scale.stat != undefined) {
                     stat = Utils.getStatNameByIdOrDefault(scale.stat, i18n);
                 }
-                else {
-                    // TODO: Part scaling
+                else if (scale.part != undefined) {
+                    switch (scale.part) {
+                        case "lefthandweapon":
+                            stat = "Left Hand Weapon Attack";
+                            break;
+                        case "righthandweapon":
+                            stat = "Right Hand Weapon Attack";
+                            break;
+                        case "shield":
+                            stat = "Shield Defense";
+                            break;
+                    }
                 }
                 out.push(<span style={statsStyle}><br />Attack Scaling: {stat} x {scale.scale}</span>);
             }
@@ -678,23 +688,55 @@ function setupSkill(skill, i18n) {
                 if (scale.stat != undefined) {
                     stat = Utils.getStatNameByIdOrDefault(scale.stat, i18n);
                 }
-                else {
-                    // TODO: Part scaling
+                else if (scale.part != undefined) {
+                    switch (scale.part) {
+                        case "lefthandweapon":
+                            stat = "Left Hand Weapon Attack";
+                            break;
+                        case "righthandweapon":
+                            stat = "Right Hand Weapon Attack";
+                            break;
+                        case "shield":
+                            stat = "Shield Defense";
+                            break;
+                    }
                 }
                 out.push(<span style={statsStyle}><br />Heal Scaling: {stat} x {scale.scale}</span>);
             }
         }
     }
 
+    if (levelProp.chargingTime != undefined) {
+        const secs = levelProp.chargingTime % 60;
+        const mins = Math.floor(levelProp.chargingTime / 60);
+        out.push(<span style={statsStyle}><br />Charging Time: {String(mins).padStart(2, "0")}:{String(secs).padStart(2, "0")}</span>);
+    }
 
+    if (levelProp.scalingParameters != undefined) {
+        for (const scale of levelProp.scalingParameters) {
+            if (scale.parameter == "chargingTime") {
+                let stat = "";
+                if (scale.stat != undefined) {
+                    stat = Utils.getStatNameByIdOrDefault(scale.stat, i18n);
+                }
+                else if (scale.part != undefined) {
+                    switch (scale.part) {
+                        case "lefthandweapon":
+                            stat = "Left Hand Weapon Attack";
+                            break;
+                        case "righthandweapon":
+                            stat = "Right Hand Weapon Attack";
+                            break;
+                        case "shield":
+                            stat = "Shield Defense";
+                            break;
+                    }
+                }
+                out.push(<span style={statsStyle}><br />Dec. Charging Time Scaling: {stat} x {scale.scale}</span>);
+            }
+        }
+    }
 
-
-
-
-
-    
-
-    // Time
     if (levelProp.duration != undefined) {
         const secs = levelProp.duration % 60;
         const mins = Math.floor(levelProp.duration / 60);
@@ -708,8 +750,18 @@ function setupSkill(skill, i18n) {
                 if (scale.stat != undefined) {
                     stat = Utils.getStatNameByIdOrDefault(scale.stat, i18n);
                 }
-                else {
-                    // TODO: Part scaling
+                else if (scale.part != undefined) {
+                    switch (scale.part) {
+                        case "lefthandweapon":
+                            stat = "Left Hand Weapon Attack";
+                            break;
+                        case "righthandweapon":
+                            stat = "Right Hand Weapon Attack";
+                            break;
+                        case "shield":
+                            stat = "Shield Defense";
+                            break;
+                    }
                 }
                 out.push(<span style={statsStyle}><br />Time Scaling: {stat} x {scale.scale}</span>);
             }
@@ -730,7 +782,7 @@ function setupSkill(skill, i18n) {
     if (levelProp.cooldown != undefined) {
         const secs = Math.ceil(levelProp.cooldown) % 60;
         const mins = Math.floor(Math.ceil(levelProp.cooldown) / 60);
-        out.push(<span style={statsStyle}><br />Cooldown: {String(mins).padStart(2, "0")}:{String(secs).padStart(2, "0")}</span>);
+        out.push(<span style={statsStyle}><br />Cooldown: {String(mins).padStart(2, "0")}:{String(secs).padStart(2, "0")} {skillProp.cooldownOnEnd != undefined && skillProp.cooldownOnEnd ? "(After Expiry)" : ""}</span>);
     }
 
     // Range
@@ -754,6 +806,26 @@ function setupSkill(skill, i18n) {
         }
     }
 
+    if (levelProp.flyBackProbability != undefined) {
+        out.push(<span style={statsStyle}><br />Knockdown Probability: {levelProp.flyBackProbability}%</span>);
+    }
+
+    if (levelProp.gainedSkillStacks != undefined) {
+        for (const gain of levelProp.gainedSkillStacks) {
+            const gainedSkill = Utils.getSkillById(gain.skill);
+            if (gain.countPVP != undefined && gain.countPVP != gain.count) {
+                out.push(<span style={statsStyle}><br />{gainedSkill.name[shortLanguageCode]} Stacks Gained: {gain.count} / {gain.countPVP} (PvP)</span>);
+            }
+            else {
+                out.push(<span style={statsStyle}><br />{gainedSkill.name[shortLanguageCode]} Stacks Gained: {gain.count}</span>);
+            }
+
+            if (gain.probability != undefined) {
+                out.push(<span style={statsStyle}> ({gain.probability}%)</span>);
+            }
+        }
+    }
+
     // TODO: wallLives missing from elementor skill
     if (levelProp.wallLives != undefined) {
         out.push(<span style={statsStyle}><br />Number of Lives: {levelProp.wallLives}</span>);
@@ -769,6 +841,15 @@ function setupSkill(skill, i18n) {
         out.push(<span style={statsStyle}><br />DoT Tick: {levelProp.dotTick} Seconds</span>);
     }
 
+    if (levelProp.maxTargets != undefined || levelProp.maxTargetsPVP != undefined) {
+        if (levelProp.maxTargetsPVP != undefined && levelProp.maxTargets != undefined && levelProp.maxTargets != levelProp.maxTargetsPVP) {
+            out.push(<span style={statsStyle}><br />Max Targets: {levelProp.maxTargets} / {levelProp.maxTargetsPVP} (PvP)</span>);
+        }
+        else if (levelProp.maxTargets != undefined) {
+            out.push(<span style={statsStyle}><br />Max Targets: {levelProp.maxTargets}</span>);
+        }
+    }
+
     // Combo
     if (skillProp.combo != "general") {
         out.push(<span style={statsStyle}><br />Combo: {skillProp.combo}</span>);
@@ -780,8 +861,8 @@ function setupSkill(skill, i18n) {
 
     // Stats
     if (levelProp.abilities != undefined) {
+        const abilityStyle = { color: "#6161ff" };
         for (const ability of levelProp.abilities) {
-            const abilityStyle = { color: "#6161ff" };
 
             // "attribute" abilities apply a status effect (bleeding, stun, slow,
             // ...) rather than a numeric stat, so show the effect name instead of
@@ -794,6 +875,15 @@ function setupSkill(skill, i18n) {
                 continue;
             }
 
+            if (ability.parameter == "skillchance") {
+                const skillChanceProp = Utils.getSkillById(ability.skill);
+                if (skillChanceProp) {
+                    out.push(<span style={abilityStyle}><br />{skillChanceProp.name[shortLanguageCode]} Chance+{ability.add}{ability.rate ? "%" : ""}</span>);
+                }
+
+                continue;
+            }
+
             let add = ability.add;
             let extra = 0;
 
@@ -801,7 +891,7 @@ function setupSkill(skill, i18n) {
                 for (const scale of levelProp.scalingParameters) {
                     if (scale.parameter == ability.parameter && scale.maximum != undefined) {
                         let bufferStat = 0;
-                        
+
                         if (scale.stat != undefined) {
                             switch (scale.stat) {
                                 case "int":
@@ -827,7 +917,7 @@ function setupSkill(skill, i18n) {
                         else {
                             // TODO: Part scaling
                         }
-    
+
                         if (scale.add) {
                             extra = Math.floor(Math.min(scale.scale * bufferStat, scale.maximum));
                         }
@@ -856,8 +946,18 @@ function setupSkill(skill, i18n) {
                         if (scale.stat != undefined) {
                             stat = Utils.getStatNameByIdOrDefault(scale.stat, i18n);
                         }
-                        else {
-                            // TODO: Part scaling
+                        else if (scale.part != undefined) {
+                            switch (scale.part) {
+                                case "lefthandweapon":
+                                    stat = "Left Hand Weapon Attack";
+                                    break;
+                                case "righthandweapon":
+                                    stat = "Right Hand Weapon Attack";
+                                    break;
+                                case "shield":
+                                    stat = "Shield Defense";
+                                    break;
+                            }
                         }
 
                         out.push(<span style={{ color: "#ffaa00" }}><br />
@@ -869,7 +969,51 @@ function setupSkill(skill, i18n) {
         }
     }
 
+    out.push(<hr />);
+
     out.push(`\n${skillProp.description[shortLanguageCode] ?? skillProp.description.en}`);
+
+    out.push(<hr />);
+
+    for (const synergy of levelProp.synergies ?? []) {
+        const synergyStyle = { color: "#4bc71a" };
+        const synergyNameStyle = { color: "#4bc71a", fontWeight: 700 };
+        const synergyProp = Utils.getSkillById(synergy.skill);
+
+        out.push(<span style={synergyNameStyle}><br />{synergyProp.name[shortLanguageCode]} (Lv. {synergy.minLevel}+)</span>);
+
+        let value = synergy.scale;
+        if (!synergy.add) {
+            value = 1 + synergy.scale / 100;
+        }
+
+        let paramName = Utils.getStatNameByIdOrDefault(synergy.parameter, i18n);
+        if (synergy.parameter == "duration") {
+            paramName = "Time";
+            value *= 10;
+        }
+
+
+        if (synergy.add) {
+            out.push(<span style={synergyStyle}><br />{paramName} Scaling per Lv.:+{value}%</span>);
+        }
+        else {
+            out.push(<span style={synergyStyle}><br />{paramName} Scaling per Lv.: × {value}</span>);
+        }
+    }
+
+    // Locked by skills not included in API
+
+    for (const masterId of skillProp.masterVariations ?? []) {
+        const currentLevel = Context.player.skillLevels[masterId] ?? 0;
+        if (currentLevel > 0) {
+            out.push(<hr />);
+            //d386ff
+            const currentMasterProp = Utils.getSkillById(masterId);
+            out.push(<span style={{ color: "#d386ff", fontWeight: 700 }}><br />{currentMasterProp.name[shortLanguageCode]} Lv. {currentLevel}</span>);
+            out.push(<span><br />{currentMasterProp.description[shortLanguageCode]}</span>);
+        }
+    }
 
     return (<div>{out.map((v, i) => <span key={i}>{v}</span>)}</div>);
 }

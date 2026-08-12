@@ -15,6 +15,11 @@ export default class Skill {
       this.levelProp = skillProp.levels[level - 1];
       this.level = level;
     }
+
+    if (!this.levelProp) {
+      console.error(`No levelprop found for skill ${skillProp.name.en} with level ${level}`);
+    }
+
     this.stacks = stacks;
   }
 

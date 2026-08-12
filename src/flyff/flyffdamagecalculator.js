@@ -51,6 +51,11 @@ export function getHealing(skillProp) {
  * @see {@link Context}
  */
 export function getDamage(handFlag) {
+    // TODO: Master of sword and master of axe item kind scaling. Not included in API yet
+    if (Context.player.hasSkillBuff(52563) != -1 || Context.player.hasSkillBuff(41788) != -1) {
+        Context.unimplementedWarnings.add("Item category scaling");
+    }
+
     elementDefenseFactor = 0;
     lifestealPercent = 0;
     Context.afterDamageProps = {};
@@ -238,6 +243,31 @@ function triggerSkills() {
             Context.afterDamageProps.triggeredSkill = 11389;
         }
         */
+
+        // Auto attack stacks
+        if ((Context.attackFlags & Utils.ATTACK_FLAGS.GENERIC) != 0) {
+            const stackAutoFMChance = Context.attacker.getStat("skillchance", true, 38140);
+            if (Math.random() * 100 <= stackAutoFMChance) {
+                const stackBuffIndex = Context.attacker.hasSkillBuff(38140);
+                if (stackBuffIndex != -1) {
+                    Context.attacker.activeBuffs[stackBuffIndex].addStacks(1);
+                }
+                else {
+                    Context.attacker.activeBuffs.push(new Skill(Utils.getSkillById(38140), 1, 1));
+                }
+            }
+
+            const stackAutoChance = Context.attacker.getStat("skillchance", true, 56636);
+            if (Math.random() * 100 <= stackAutoChance) {
+                const stackBuffIndex = Context.attacker.hasSkillBuff(56636);
+                if (stackBuffIndex != -1) {
+                    Context.attacker.activeBuffs[stackBuffIndex].addStacks(1);
+                }
+                else {
+                    Context.attacker.activeBuffs.push(new Skill(Utils.getSkillById(56636), 1, 1));
+                }
+            }
+        }
     }
 
     if ((Context.attackFlags & Utils.ATTACK_FLAGS.MAGICSKILL) != 0 && Context.attacker.isPlayer()) {
@@ -529,6 +559,18 @@ function applyDefense(attack) {
     }
     else if (Context.attacker.isPlayer()) {
         // TODO: Auto attack stacking stuff
+        let stackId = 56636; // Auto attack stacks
+        let autoStacksBuffIndex = Context.attacker.hasSkillBuff(stackId);
+        if (autoStacksBuffIndex == -1) {
+            stackId = 38140;
+            autoStacksBuffIndex = Context.attacker.hasSkillBuff(stackId);
+        }
+
+        if (autoStacksBuffIndex != -1) {
+            const autoStacksBuff = Context.attacker.activeBuffs[autoStacksBuffIndex];
+            // TODO: No way to get the level of this skill right now, and the actual multiplier of damage isn't in the API
+            Context.unimplementedWarnings.add("Auto-attack stacks damage multipliers");
+        }
     }
 
     if (Context.attacker.isMonster()) {
