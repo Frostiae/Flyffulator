@@ -896,6 +896,25 @@ function setupSkill(skill, i18n) {
                 extra += (skill.stacks - 1) * add;
             }
 
+            if (levelProp.synergies != undefined) {
+                for (const synergy of levelProp.synergies) {
+                    if (synergy.parameter == ability.parameter) {
+                        const synergyLevel = Context.player.getSkillLevel(synergy.skill);
+                        const bonusLevels = synergyLevel - synergy.minLevel;
+                        if (bonusLevels <= 0) {
+                            continue;
+                        }
+
+                        if (synergy.add) {
+                            extra = Math.floor(extra + synergy.scale * bonusLevels);
+                        }
+                        else {
+                            //extra = Math.floor(extra + (add * synergy.scale * bonusLevels));
+                        }
+                    }
+                }
+            }
+
             if (levelProp.scalingParameters != undefined) {
                 for (const scale of levelProp.scalingParameters) {
                     if (scale.parameter == ability.parameter && scale.maximum != undefined) {
@@ -928,10 +947,10 @@ function setupSkill(skill, i18n) {
                         }
 
                         if (scale.add) {
-                            extra = Math.floor(Math.min(scale.scale * bufferStat, scale.maximum));
+                            extra = Math.floor(extra + Math.min(scale.scale * bufferStat, scale.maximum));
                         }
                         else {
-                            extra = Math.floor(add * Math.min(scale.scale * bufferStat, scale.maximum));
+                            extra = Math.floor(extra + (add * Math.min(scale.scale * bufferStat, scale.maximum)));
                         }
                     }
                 }

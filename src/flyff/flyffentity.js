@@ -1363,6 +1363,25 @@ export default class Entity {
 
                         let add = ability.add;
 
+                        for (const synergy of levelProp.synergies ?? []) {
+                            if (synergy.parameter != ability.parameter) {
+                                continue;
+                            }
+
+                            const synergyLevel = this.getSkillLevel(synergy.skill);
+                            const bonusLevels = synergyLevel - synergy.minLevel;
+                            if (bonusLevels <= 0) {
+                                continue;
+                            }
+
+                            if (synergy.add) {
+                                add += Math.floor(synergy.scale * bonusLevels);
+                            }
+                            else {
+                                add *= Math.floor(1 + (synergy.scale * bonusLevels / 100)); // Never used I think?
+                            }
+                        }
+
                         for (const scale of levelProp.scalingParameters ?? []) {
                             if (scale.parameter != ability.parameter) {
                                 continue;
