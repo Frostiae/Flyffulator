@@ -66,7 +66,7 @@ const COLLECTIONS = [
 const WHOLE_ENDPOINTS = [
     { name: "statawake", endpoint: "statawake", file: "StatAwakes.json" },
     { name: "skillawake", endpoint: "skillawake", file: "SkillAwakes.json" },
-    { name: "upgradebonus", endpoint: "upgradelevelbonus", file: "UpgradeBonus.json", transform: mergeUpgradeBonusElementFields },
+    { name: "upgradebonus", endpoint: "upgradelevelbonus", file: "UpgradeBonus.json" },
     { name: "pets", endpoint: "raisedpet", file: "Pets.json", transform: keyByPetItemId },
 ];
 
@@ -193,29 +193,6 @@ async function writeAsset(filePath, data) {
     }
 
     await writeFile(filePath, JSON.stringify(data, null, indent) + (trailingNewline ? "\n" : ""), "utf8");
-}
-
-/**
- * The /upgradelevelbonus endpoint doesn't return the element attack/defense
- * fields the damage calculator reads from getUpgradeBonus(), so carry them over
- * from the existing file (matched by upgradeLevel), leaving the field order the
- * file already uses.
- */
-function mergeUpgradeBonusElementFields(apiData, existing) {
-    const byLevel = new Map((Array.isArray(existing) ? existing : []).map((entry) => [entry.upgradeLevel, entry]));
-
-    return apiData.map((entry) => {
-        const previous = byLevel.get(entry.upgradeLevel) ?? {};
-        const { setAbilities, ...base } = entry;
-
-        return {
-            ...base,
-            elementAttack: previous.elementAttack,
-            elementAttackStrong: previous.elementAttackStrong,
-            elementDefense: previous.elementDefense,
-            setAbilities,
-        };
-    });
 }
 
 /**

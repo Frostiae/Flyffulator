@@ -34,4 +34,8 @@ export default class Skill {
 
     this.stacks = Math.max(1, Math.min(this.stacks + num, this.levelProp.maxSkillStacks ?? 1));
   }
+
+  toJSON() {
+    return { id: this.skillProp.id, level: this.level, stacks: this.stacks };
+  }
 }

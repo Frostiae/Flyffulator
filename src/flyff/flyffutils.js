@@ -474,3 +474,78 @@ export function getGuid() {
         (c ^ (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))).toString(16)
     );
 }
+
+export function toB64url(bytes) {
+    return btoa(String.fromCharCode(...bytes)).replaceAll('+', '-').replaceAll('/', '_').replace(/=+$/, '');
+}
+
+export function fromB64url(str) {
+    return Uint8Array.from(atob(str.replaceAll('-', '+').replaceAll('_', '/')), c => c.charCodeAt(0));
+}
+
+export class BufferWriter {
+    constructor() {
+        this.view = new DataView(new ArrayBuffer(64));
+        this.o = 0;
+    }
+
+    #ensure(n) {
+        if (this.o + n <= this.view.byteLength) return;
+        let cap = this.view.byteLength;
+        while (cap < this.o + n) cap *= 2;
+        const bigger = new Uint8Array(cap);
+        bigger.set(new Uint8Array(this.view.buffer, 0, this.o));
+        this.view = new DataView(bigger.buffer);
+    }
+
+    u8(v) { this.#ensure(1); this.view.setUint8(this.o, v); this.o += 1; return this; }
+    u16(v) { this.#ensure(2); this.view.setUint16(this.o, v); this.o += 2; return this; }
+    u32(v) { this.#ensure(4); this.view.setUint32(this.o, v); this.o += 4; return this; }
+    f32(v) { this.#ensure(4); this.view.setFloat32(this.o, v); this.o += 4; return this; }
+
+    arr(items, fn) {
+        this.u8(items.length);
+        for (const it of items) {
+            fn(this, it);
+        }
+
+        return this;
+    }
+
+    str(s) {
+        const bytes = new TextEncoder().encode(s);
+        this.u16(bytes.length);
+        this.#ensure(bytes.length);
+        new Uint8Array(this.view.buffer).set(bytes, this.o);
+        this.o += bytes.length;
+        return this;
+    }
+
+    bytes() { return new Uint8Array(this.view.buffer, 0, this.o); }
+}
+
+export class BufferReader {
+    constructor(bytes) { this.view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength); this.o = 0; }
+
+    u8() { const v = this.view.getUint8(this.o); this.o += 1; return v; }
+    u16() { const v = this.view.getUint16(this.o); this.o += 2; return v; }
+    u32() { const v = this.view.getUint32(this.o); this.o += 4; return v; }
+    f32() { const v = this.view.getFloat32(this.o); this.o += 4; return v; }
+
+    arr(fn) {
+        const n = this.u8();
+        const out = [];
+        for (let i = 0; i < n; ++i) {
+            out.push(fn(this));
+        }
+
+        return out;
+    }
+
+    str() {
+        const len = this.u16();
+        const slice = new Uint8Array(this.view.buffer, this.view.byteOffset + this.o, len);
+        this.o += len;
+        return new TextDecoder().decode(slice);
+    }
+}

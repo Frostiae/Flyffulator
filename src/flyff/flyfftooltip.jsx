@@ -476,16 +476,17 @@ function setupItem(itemElem, i18n) {
     const ultimateJewelBonuses = {};
     for (const jewel of itemElem.ultimateJewels) {
         for (const ability of jewel.itemProp.abilities) {
-            if (ability.parameter in ultimateJewelBonuses) {
-                ultimateJewelBonuses[ability.parameter].add += ability.add;
+            const paramKey = ability.parameter + ability.rate;
+            if (paramKey in ultimateJewelBonuses) {
+                ultimateJewelBonuses[paramKey].add += ability.add;
             } else {
-                ultimateJewelBonuses[ability.parameter] = { ...ability };
+                ultimateJewelBonuses[paramKey] = { ...ability };
             }
         }
     }
 
     for (const [parameter, effect] of Object.entries(ultimateJewelBonuses)) {
-        out.push(<span style={{ color: "#00c8ff" }}><br />{Utils.getStatNameByIdOrDefault(parameter, i18n)}+{effect.add}{effect.rate && "%"}</span>);
+        out.push(<span style={{ color: "#00c8ff" }}><br />{Utils.getStatNameByIdOrDefault(effect.parameter, i18n)}+{effect.add}{effect.rate && "%"}</span>);
     }
 
     return (<div>{out.map((v, i) => <span key={i}>{v}</span>)}</div>);
@@ -778,11 +779,15 @@ function setupSkill(skill, i18n) {
     }
 
     // Cooldown
-    // TODO: PvP cooldown seems to be missing from the API, check Holycross for example
     if (levelProp.cooldown != undefined) {
         const secs = Math.ceil(levelProp.cooldown) % 60;
         const mins = Math.floor(Math.ceil(levelProp.cooldown) / 60);
         out.push(<span style={statsStyle}><br />Cooldown: {String(mins).padStart(2, "0")}:{String(secs).padStart(2, "0")} {skillProp.cooldownOnEnd != undefined && skillProp.cooldownOnEnd ? "(After Expiry)" : ""}</span>);
+    }
+    if (levelProp.cooldownPVP != undefined) {
+        const secs = Math.ceil(levelProp.cooldownPVP) % 60;
+        const mins = Math.floor(Math.ceil(levelProp.cooldownPVP) / 60);
+        out.push(<span style={statsStyle}><br />Cooldown: {String(mins).padStart(2, "0")}:{String(secs).padStart(2, "0")} (PvP) {skillProp.cooldownOnEnd != undefined && skillProp.cooldownOnEnd ? "(After Expiry)" : ""}</span>);
     }
 
     // Range
@@ -867,7 +872,7 @@ function setupSkill(skill, i18n) {
             // "attribute" abilities apply a status effect (bleeding, stun, slow,
             // ...) rather than a numeric stat, so show the effect name instead of
             // a value (they carry no add/set, which otherwise renders as NaN).
-            if (ability.parameter == "attribute") {
+            if (ability.parameter == "attribute" || ability.attribute != undefined) {
                 const effect = ability.attribute
                     ? ability.attribute.charAt(0).toUpperCase() + ability.attribute.slice(1)
                     : ability.parameter;
@@ -886,6 +891,10 @@ function setupSkill(skill, i18n) {
 
             let add = ability.add;
             let extra = 0;
+
+            if (levelProp.stackAbilities != undefined && levelProp.stackAbilities) {
+                extra += (skill.stacks - 1) * add;
+            }
 
             if (levelProp.scalingParameters != undefined) {
                 for (const scale of levelProp.scalingParameters) {
@@ -928,13 +937,15 @@ function setupSkill(skill, i18n) {
                 }
             }
 
-            const value = ability.set != undefined ? ability.set : add + extra;
+            extra = Math.round(extra * 100) / 100;
+            let value = ability.set != undefined ? ability.set : add + extra;
+            value = Math.round(value * 100) / 100;
             // Negative values already carry their own minus sign, so only prefix
             // "+" for non-negative additive values ("=" for absolute/set values).
             const prefix = ability.set != undefined ? "=" : (value < 0 ? "" : "+");
             out.push(<span style={abilityStyle}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}{prefix}{value}{ability.rate && "%"}</span>);
-            if (extra > 0) {
-                out.push(<span style={{ color: "#ffaa00" }}> ({add}+{extra})</span>)
+            if (extra != 0) {
+                out.push(<span style={{ color: "#ffaa00" }}> ({add}{extra > 0 ? "+" : ""}{extra})</span>)
             }
         }
 
@@ -1002,13 +1013,18 @@ function setupSkill(skill, i18n) {
         }
     }
 
-    // Locked by skills not included in API
+    if (skillProp.lockedBy != undefined) {
+        out.push(<hr />);
+        out.push(<span><br />Locks:</span>);
+        for (const locker of skillProp.lockedBy ?? []) {
+            out.push(<span><i><br />   {Utils.getSkillById(locker).name[shortLanguageCode]}</i></span>);
+        }
+    }
 
     for (const masterId of skillProp.masterVariations ?? []) {
         const currentLevel = Context.player.skillLevels[masterId] ?? 0;
         if (currentLevel > 0) {
             out.push(<hr />);
-            //d386ff
             const currentMasterProp = Utils.getSkillById(masterId);
             out.push(<span style={{ color: "#d386ff", fontWeight: 700 }}><br />{currentMasterProp.name[shortLanguageCode]} Lv. {currentLevel}</span>);
             out.push(<span><br />{currentMasterProp.description[shortLanguageCode]}</span>);

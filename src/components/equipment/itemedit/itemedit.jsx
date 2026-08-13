@@ -451,7 +451,7 @@ function ItemEdit({ itemElem }) {
                             value={itemElem.randomStats[0]?.value ?? 0}
                             isRange={itemElem.randomStats[0]?.rate ?? true}
                             prefix={"+"}
-                            step={STAT_STEPS[itemElem.randomStats[1]?.parameter] ?? 1}
+                            step={STAT_STEPS[itemElem.randomStats[0]?.parameter] ?? 1}
                             disabled={itemElem.randomStats[0] == null}
                             allowedValues={itemElem.randomStats[0] ? getAllowedBlessingValues(itemElem.randomStats[0].parameter) : [0, 1]}
                         />

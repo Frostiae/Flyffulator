@@ -1,8 +1,8 @@
 import Context from "./flyffcontext";
 import * as Utils from "./flyffutils";
 import ItemElem from "./flyffitemelem";
-import { API } from '../data';
 import Skill from "./flyffskill";
+import { API } from '../data';
 
 /**
  * A Flyff character or monster.
@@ -64,13 +64,62 @@ export default class Entity {
     }
 
     /**
-     * Serialize this player into a JSON string.
+     * Serialize this player into a binary string.
      */
     serialize(buildName) {
         return JSON.stringify({
             ...this.toJSON(),
             ...(buildName && { buildName }),
         });
+
+        /*
+        const VERSION = 1;
+
+        const w = new Utils.BufferWriter();
+
+        w.u8(VERSION)
+            .u8(this.job.id)
+            .u8(this.level)
+            .u16(this.str)
+            .u16(this.sta)
+            .u16(this.dex)
+            .u16(this.int)
+            .u16(this.bufferStr)
+            .u16(this.bufferSta)
+            .u16(this.bufferDex)
+            .u16(this.bufferInt)
+            .u8(this.activePartyMembers);
+
+        w.u8(Object.entries(this.equipment).length);
+        for (const [slot, itemElem] of Object.entries(this.equipment)) {
+            if (itemElem) {
+                w.u8(1);
+            }
+            else {
+                w.u8(0);
+                continue;
+            }
+
+            w.u32(itemElem.itemProp.id)
+                .u8(itemElem.upgradeLevel)
+                .u8(itemElem.elementUpgradeLevel)
+                .u8(itemElem.hasElementStone);
+
+            if (itemElem.element != "none") {
+                w.u8(1)
+                    .str(itemElem.element);
+            }
+            else {
+                w.u8(0);
+            }
+
+            w.arr(itemElem.piercings, (w, piercing) => w.u32(piercing));
+        }
+
+        console.log(w.o);
+
+        return Utils.toB64url(w.bytes());
+        */
     }
 
     toJSON() {
@@ -80,7 +129,6 @@ export default class Entity {
             activeCoupleHousingNpcs,
             activeGuildHousingNpcs,
             activeItems,
-            activeBuffs,
             activeAchievements,
             job,
             equipment,
@@ -96,7 +144,6 @@ export default class Entity {
             activeCoupleHousingNpcs: activeCoupleHousingNpcs.map(npc => npc.id),
             activeGuildHousingNpcs: activeGuildHousingNpcs.map(npc => npc.id),
             activeItems: activeItems.map(itemElem => itemElem.itemProp.id),
-            activeBuffs: activeBuffs.map(buff => buff.skillProp.id),
             activeAchievements: activeAchievements.map(achievement => achievement.id)
         };
 
@@ -206,8 +253,14 @@ export default class Entity {
                 buffs.push(new Skill(Utils.getSkillById(skillId), level, 1));
             }
         }
-        else {
-            //buffs = buffList;
+        else if (buffList instanceof Array) {
+            for (const buff of buffList) {
+                if (!buff || buff.id == undefined) {
+                    continue;
+                }
+
+                buffs.push(new Skill(Utils.getSkillById(buff.id), buff.level, buff.stacks));
+            }
         }
 
         return buffs;
@@ -495,7 +548,7 @@ export default class Entity {
             case "Arcanist":
                 total += 1190;
                 break;
-            
+
             default:
                 break;
         }
@@ -1055,6 +1108,31 @@ export default class Entity {
     }
 
     /**
+     * Get the first instance of the triggered skill's level from the current buffs.
+     * @param {number} skillChanceId The skill ID that is being triggered
+     * @returns The skill level to trigger the given skill at
+     */
+    getSkillChanceSkillLevel(skillChanceId) {
+        if (this.isMonster()) {
+            return 1;
+        }
+
+        for (const buff of this.activeBuffs) {
+            if (!buff.levelProp || buff.levelProp.abilities == undefined) {
+                continue;
+            }
+
+            for (const ability of buff.levelProp.abilities) {
+                if (ability.parameter == "skillchance" && (ability.skill ?? 0) == skillChanceId) {
+                    return ability.skillLevel ?? 1;
+                }
+            }
+        }
+
+        return 1;
+    }
+
+    /**
      * Get the total amount of a stat applied to this player through their equipment, buffs, and active items.
      * @param {string} stat The stat to check for.
      * @param {boolean} rate If the state is a percentage or not.
@@ -1278,18 +1356,18 @@ export default class Entity {
                         if (!targetStats.includes(ability.parameter) || ability.rate != rate) {
                             continue;
                         }
-    
+
                         if (stat == "skillchance" && (ability.skill == undefined || ability.skill != skillChanceId)) {
                             continue;
                         }
-    
+
                         let add = ability.add;
-    
+
                         for (const scale of levelProp.scalingParameters ?? []) {
                             if (scale.parameter != ability.parameter) {
                                 continue;
                             }
-    
+
                             if (scale.stat != undefined) {
                                 let scaleStat = 0;
                                 if (scale.stat == "int") {
@@ -1311,7 +1389,7 @@ export default class Entity {
                                     // arbitrary stat
                                     scaleStat = Math.min(this.getStat(scale.stat, true) * scale.scale, scale.maximum);
                                 }
-    
+
                                 if (scale.add) {
                                     add += Math.floor(scaleStat);
                                 }
@@ -1325,7 +1403,7 @@ export default class Entity {
                                 Context.unimplementedWarnings.add("Stat equipment part scaling");
                             }
                         }
-    
+
                         total += add;
                     }
                 }
@@ -1409,7 +1487,7 @@ export default class Entity {
 
         // Element resistance effects from armor elements
         if (isElementResistance && rate) {
-            const armorToCheck = [ this.equipment.suit ];
+            const armorToCheck = [this.equipment.suit];
 
             /* Can't actually element upgrade shields
             if (this.equipment.offhand != null && this.equipment.offhand.itemProp.subcategory == "shield") {
@@ -1624,10 +1702,9 @@ export default class Entity {
         return out;
     }
 
-    getStatScale(parameter, skillProp, level) {
-        const levelProp = skillProp.levels[level];
-        if (levelProp == undefined) {
-            console.error("Skill level not found", skillProp, level);
+    getStatScale(parameter, levelProp, level, realScaleLevel) {
+        if (!levelProp) {
+            console.error("Skill level not found", level);
             return 0;
         }
 
@@ -1686,10 +1763,10 @@ export default class Entity {
                 statValue = scale.maximum;
             }
 
-            const realScale = (scale.scale * 50 - level + 1) / 5;
+            const realScale = Math.floor((scale.scale * 50 - realScaleLevel) / 5);
 
             if (scale.add) {
-                total += Math.floor(((realScale / 10) * statValue) + ((level - 1) * (statValue / 50)));
+                total += Math.floor(((realScale / 10) * statValue) + (level * (statValue / 50)));
             }
             else {
                 // TODO: need the base stat here to multiply?
@@ -1711,7 +1788,7 @@ export default class Entity {
             if (buff.skillProp.id == skillId) {
                 return i;
             }
-    
+
             if (buff.skillProp.inheritSkill != undefined && buff.skillProp.inheritSkill == skillId) {
                 return i;
             }

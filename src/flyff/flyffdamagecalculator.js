@@ -35,11 +35,24 @@ export function getHealing(skillProp) {
         return 0;
     }
 
-    const referStat = Context.attacker.getStatScale("hp", skillProp, skillLevel - 1);
+    // This level isn't 0-indexed, small bug ingame
+    let statScaleSkillLevel = 1;
+    if (skillProp.inheritSkill != undefined) {
+        const inheritedSkill = Utils.getSkillById(skillProp.inheritSkill);
+        for (const masterVariationId of inheritedSkill.masterVariations ?? []) {
+            if (masterVariationId == skillProp.id) {
+                statScaleSkillLevel = inheritedSkill.levels.length;
+                break;
+            }
+        }
+    }
+
+    const referStat = Context.attacker.getStatScale("hp", levelProp, statScaleSkillLevel, skillLevel - 1);
+    // TODO: Synergy
     add += referStat;
 
     add += add * Context.attacker.getStat("healing", true) / 100;
-    add += add * Context.attacker.getStat("incominghealing", true) / 100;
+    add += add * Context.defender.getStat("incominghealing", true) / 100;
 
     return Math.floor(add);
 }
@@ -253,7 +266,8 @@ function triggerSkills() {
                     Context.attacker.activeBuffs[stackBuffIndex].addStacks(1);
                 }
                 else {
-                    Context.attacker.activeBuffs.push(new Skill(Utils.getSkillById(38140), 1, 1));
+                    const triggerLevel = Context.attacker.getSkillChanceSkillLevel(38140);
+                    Context.attacker.activeBuffs.push(new Skill(Utils.getSkillById(38140), triggerLevel, 1));
                 }
             }
 
@@ -264,7 +278,8 @@ function triggerSkills() {
                     Context.attacker.activeBuffs[stackBuffIndex].addStacks(1);
                 }
                 else {
-                    Context.attacker.activeBuffs.push(new Skill(Utils.getSkillById(56636), 1, 1));
+                    const triggerLevel = Context.attacker.getSkillChanceSkillLevel(56636);
+                    Context.attacker.activeBuffs.push(new Skill(Utils.getSkillById(56636), triggerLevel, 1));
                 }
             }
         }
@@ -538,8 +553,7 @@ function applyDefense(attack) {
                 }
                 break;
             case 7156: // Hit of Penya
-                // TODO: Multiplier from skill level. this is assuming max level
-                factor *= 3;
+                factor *= levelProp.arbitraryData[0] / 100;
                 break;
             case 5041: // Asal
                 factor *= 1.0 + Context.attacker.getStat("asaldamage", true) / 100;
@@ -558,7 +572,6 @@ function applyDefense(attack) {
         }
     }
     else if (Context.attacker.isPlayer()) {
-        // TODO: Auto attack stacking stuff
         let stackId = 56636; // Auto attack stacks
         let autoStacksBuffIndex = Context.attacker.hasSkillBuff(stackId);
         if (autoStacksBuffIndex == -1) {
@@ -568,8 +581,10 @@ function applyDefense(attack) {
 
         if (autoStacksBuffIndex != -1) {
             const autoStacksBuff = Context.attacker.activeBuffs[autoStacksBuffIndex];
-            // TODO: No way to get the level of this skill right now, and the actual multiplier of damage isn't in the API
-            Context.unimplementedWarnings.add("Auto-attack stacks damage multipliers");
+            if (autoStacksBuff.stacks >= autoStacksBuff.levelProp.maxSkillStacks) {
+                factor *= autoStacksBuff.levelProp.arbitraryData[0] / 100;
+                autoStacksBuff.stacks = 0;
+            }
         }
     }
 
@@ -624,13 +639,8 @@ function applyDefense(attack) {
     const riposteProb = Context.defender.getStat("ripostereflexchance", true);
     if (riposteProb > 0 && Math.random() * 100 < riposteProb) {
         damage *= 0.1;
-        Context.attackFlags = Utils.ATTACK_FLAGS.BLOCKING; // Yes it just sets it
+        Context.attackFlags = Utils.ATTACK_FLAGS.BLOCKING; // Yes it just overwrites it
         // Attacker also takes damage here
-    }
-
-    // TODO: HoP penya stuff
-    if (Context.isSkillAttack() && Context.skill.id == 7156) {
-        Context.unimplementedWarnings.add("Hit of Penya damage from penya");
     }
 
     return damage;
@@ -957,22 +967,8 @@ function applyAutoAttackDefense(attack) {
             }
 
             if (clearReflectionCrit) {
-                const clearReflectionLevel = Context.attacker.skillLevels[58524];
-                let lerpValue = 0.2;
-                // Don't have this data in the API, hard code it here
-                if (clearReflectionLevel == 5) {
-                    lerpValue = 1;
-                }
-                else if (clearReflectionLevel == 4) {
-                    lerpValue = 0.8;
-                }
-                else if (clearReflectionLevel == 3) {
-                    lerpValue = 0.6;
-                }
-                else if (clearReflectionLevel == 2) {
-                    lerpValue = 0.4;
-                }
-
+                const clearReflectionBuff = Context.attacker.activeBuffs[clearReflectionBuffIndex];
+                const lerpValue = clearReflectionBuff.levelProp.arbitraryData[0] / 100;
                 minCritical = Utils.mix(minCritical, maxCritical, lerpValue);
             }
 
@@ -1099,7 +1095,7 @@ function getBaseSkillPower() {
         if (inheritedSkillProp != null) {
             for (const variationId of inheritedSkillProp.masterVariations ?? []) {
                 if (variationId == Context.skill.id) {
-                    statScaleSkillLevel = inheritedSkillProp.levels.length - 1; // - 1 is wrong?
+                    statScaleSkillLevel = inheritedSkillProp.levels.length - 1;
                     formulaLevel = statScaleSkillLevel;
                     break;
                 }
@@ -1107,7 +1103,7 @@ function getBaseSkillPower() {
         }
     }
 
-    const referStat = Context.attacker.getStatScale("attack", Context.skill, statScaleSkillLevel);
+    const referStat = Context.attacker.getStatScale("attack", levelProp, statScaleSkillLevel, statScaleSkillLevel);
 
     let power = {
         min: (((weaponAttack.min + (levelProp.minAttack + weapon.itemProp.additionalSkillDamage) * 5 + referStat - 20) * (16 + formulaLevel) / 13)),
