@@ -568,7 +568,7 @@ function applyDefense(attack) {
 
         // Skill awakes
         if (weapon != null && weapon.skillAwake != null && weapon.skillAwake.skill != undefined
-            && weapon.skillAwake.skill == Context.skill.id) {
+            && Utils.isSkillOrInherit(Context.skill.id, weapon.skillAwake.skill)) {
             factor *= 1 + weapon.skillAwake.add / 100;
         }
     }
