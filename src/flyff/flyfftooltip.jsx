@@ -867,6 +867,7 @@ function setupSkill(skill, i18n) {
     // Stats
     if (levelProp.abilities != undefined) {
         const abilityStyle = { color: "#6161ff" };
+        let scaledAbilities = [];
         for (const ability of levelProp.abilities) {
 
             // "attribute" abilities apply a status effect (bleeding, stun, slow,
@@ -917,7 +918,8 @@ function setupSkill(skill, i18n) {
 
             if (levelProp.scalingParameters != undefined) {
                 for (const scale of levelProp.scalingParameters) {
-                    if (scale.parameter == ability.parameter && scale.maximum != undefined) {
+                    if (scale.parameter == ability.parameter && !scaledAbilities.includes(ability.parameter)) {
+                        scaledAbilities.push(ability.parameter);
                         let bufferStat = 0;
 
                         if (scale.stat != undefined) {
@@ -946,11 +948,16 @@ function setupSkill(skill, i18n) {
                             // TODO: Part scaling
                         }
 
+                        let scaleValue = scale.scale * bufferStat;
+                        if (scale.maximum != undefined) {
+                            scaleValue = Math.min(scale.maximum, scaleValue);
+                        }
+
                         if (scale.add) {
-                            extra = Math.floor(extra + Math.min(scale.scale * bufferStat, scale.maximum));
+                            extra = Math.floor(extra + scaleValue);
                         }
                         else {
-                            extra = Math.floor(extra + (add * Math.min(scale.scale * bufferStat, scale.maximum)));
+                            extra = Math.floor(extra + (add * (scaleValue / 10)));
                         }
                     }
                 }
@@ -969,9 +976,10 @@ function setupSkill(skill, i18n) {
         }
 
         if (levelProp.scalingParameters != undefined) {
+            let scaledAbilities = [];
             for (const ability of levelProp.abilities) {
                 for (const scale of levelProp.scalingParameters) {
-                    if (scale.parameter == ability.parameter && scale.maximum != undefined) {
+                    if (scale.parameter == ability.parameter && !scaledAbilities.includes(ability.parameter)) {
                         let stat = "";
                         if (scale.stat != undefined) {
                             stat = Utils.getStatNameByIdOrDefault(scale.stat, i18n);
@@ -991,8 +999,10 @@ function setupSkill(skill, i18n) {
                         }
 
                         out.push(<span style={{ color: "#ffaa00" }}><br />
-                            {Utils.getStatNameByIdOrDefault(scale.parameter, i18n)} Scaling: +{scale.scale * 25}{ability.rate && "%"} per 25 {stat} (max {scale.maximum}{ability.rate && "%"})
+                            {Utils.getStatNameByIdOrDefault(scale.parameter, i18n)} Scaling: +{scale.scale * 25}{ability.rate && "%"} per 25 {stat} {scale.maximum != undefined ? `(max ${scale.maximum}${ability.rate && "%"})` : ""}
                         </span>);
+
+                        scaledAbilities.push(ability.parameter);
                     }
                 }
             }

@@ -1350,6 +1350,7 @@ export default class Entity {
             const levelProp = buff.levelProp;
 
             if (levelProp.abilities != undefined) {
+                let scaledAbilities = [];
                 const loops = (levelProp.stackAbilities ?? false) ? buff.stacks : 1;
                 for (let i = 0; i < loops; ++i) {
                     for (const ability of levelProp.abilities) {
@@ -1387,33 +1388,39 @@ export default class Entity {
                                 continue;
                             }
 
+                            if (scaledAbilities.includes(ability.parameter)) {
+                                continue;
+                            }
+                            
+                            scaledAbilities.push(ability.parameter);
+
                             if (scale.stat != undefined) {
                                 let scaleStat = 0;
                                 if (scale.stat == "int") {
-                                    scaleStat = Math.min(this.bufferInt * scale.scale, scale.maximum);
+                                    scaleStat = Math.min(this.bufferInt * scale.scale, scale.maximum ?? Number.MAX_VALUE);
                                 }
                                 else if (scale.stat == "str") {
-                                    scaleStat = Math.min(this.bufferStr * scale.scale, scale.maximum);
+                                    scaleStat = Math.min(this.bufferStr * scale.scale, scale.maximum ?? Number.MAX_VALUE);
                                 }
                                 else if (scale.stat == "sta") {
-                                    scaleStat = Math.min(this.bufferSta * scale.scale, scale.maximum);
+                                    scaleStat = Math.min(this.bufferSta * scale.scale, scale.maximum ?? Number.MAX_VALUE);
                                 }
                                 else if (scale.stat == "dex") {
-                                    scaleStat = Math.min(this.bufferDex * scale.scale, scale.maximum);
+                                    scaleStat = Math.min(this.bufferDex * scale.scale, scale.maximum ?? Number.MAX_VALUE);
                                 }
                                 else if (scale.stat == "hp") {
-                                    scaleStat = Math.min(this.getHP(), scale.maximum);
+                                    scaleStat = Math.min(this.getHP(), scale.maximum ?? Number.MAX_VALUE);
                                 }
                                 else {
                                     // arbitrary stat
-                                    scaleStat = Math.min(this.getStat(scale.stat, true) * scale.scale, scale.maximum);
+                                    scaleStat = Math.min(this.getStat(scale.stat, true) * scale.scale, scale.maximum ?? Number.MAX_VALUE);
                                 }
 
                                 if (scale.add) {
                                     add += Math.floor(scaleStat);
                                 }
                                 else {
-                                    add += Math.floor(add * scaleStat);
+                                    add += Math.floor(add * scaleStat / 10);
                                 }
                             }
                             else if (scale.part != undefined) {
