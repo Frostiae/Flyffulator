@@ -304,6 +304,38 @@ function SkillTree() {
         setRefresh(!refresh);
     }
 
+    // Apply the equipped pet's grace buff at the level matching its current
+    // tier (F..S), taken from the pet definition's tier data.
+    function applyPetGrace() {
+        const pet = Context.player.equipment.pet;
+        if (pet == null) {
+            return;
+        }
+
+        const petData = Utils.getPetDefinitionByItemId(pet.itemProp.id);
+        const tierIndex = Object.values(pet.petStats).filter(el => el).length - 1;
+        const tierData = petData?.tiers?.[tierIndex];
+        if (tierData?.graceSkill == undefined) {
+            return;
+        }
+
+        const skillProp = Utils.getSkillById(tierData.graceSkill);
+        if (skillProp == null) {
+            return;
+        }
+
+        const buff = new Skill(skillProp, tierData.graceSkillLevel, 1);
+        const index = Context.player.hasSkillBuff(tierData.graceSkill);
+        if (index != -1) {
+            Context.player.activeBuffs[index] = buff;
+        }
+        else {
+            Context.player.activeBuffs.push(buff);
+        }
+
+        setRefresh(!refresh);
+    }
+
     function addPartyBuffs() {
         Context.player.activePartyBuffs = [
             // 18, // Gift Box
@@ -508,6 +540,7 @@ function SkillTree() {
                         <NumberInput min={15} max={1000} value={Context.player.bufferInt} label={"Caster INT"} onChange={(v) => { Context.player.bufferInt = v; }} />
                     </div>
                     <button className="flyff-button apply-passives-button" onClick={() => addLearnedPassives()}>Apply Learned Passives</button>
+                    <button className="flyff-button apply-passives-button" onClick={() => applyPetGrace()}>Apply Pet Grace</button>
                     <hr />
                     <div className="buffs-container">
                         {
