@@ -540,7 +540,7 @@ function SkillTree() {
                         <NumberInput min={15} max={1000} value={Context.player.bufferInt} label={"Caster INT"} onChange={(v) => { Context.player.bufferInt = v; }} />
                     </div>
                     <button className="flyff-button apply-passives-button" onClick={() => addLearnedPassives()}>Apply Learned Passives</button>
-                    <button className="flyff-button apply-passives-button" onClick={() => applyPetGrace()}>Apply Pet Grace</button>
+                    <button disabled={Context.player.equipment.pet == null} className="flyff-button apply-passives-button" onClick={() => applyPetGrace()}>Apply Pet Grace</button>
                     <hr />
                     <div className="buffs-container">
                         {
