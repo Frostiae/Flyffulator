@@ -177,7 +177,7 @@ export function getDamage(handFlag) {
 
     const posionDamageFactor = Context.defender.getStat("damagefrompoisoned", true);
     if (posionDamageFactor != 0 && Context.attacker.hasAttribute("poison")) {
-        totalDamage += Math.floor(totamDamage * posionDamageFactor / 100);
+        totalDamage += Math.floor(totalDamage * posionDamageFactor / 100);
     }
 
     const poisonDefenseFactor = Context.attacker.getStat("damagevspoisoned", true);
