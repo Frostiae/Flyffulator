@@ -1717,11 +1717,16 @@ export default class Entity {
                 continue;
             }
 
+            const bonusLevels = skillLevel - synergy.minLevel;
+            if (bonusLevels <= 0) {
+                continue;
+            }
+
             if (synergy.add) {
-                out += (skillLevel - synergy.minLevel) * synergy.scale / 100;
+                out += bonusLevels * synergy.scale / 100;
             }
             else {
-                out *= 1.0 + ((skillLevel - synergy.minLevel) * synergy.scale / 100);
+                out *= 1.0 + (bonusLevels * synergy.scale / 100);
             }
         }
 
