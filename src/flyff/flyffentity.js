@@ -986,7 +986,7 @@ export default class Entity {
                 stat = "waterdefense";
                 resistance = this.isMonster() ? this.monsterProp.resistWater * 100 : 0;
                 break;
-            case "elctricity":
+            case "electricity":
                 stat = "electricitydefense";
                 resistance = this.isMonster() ? this.monsterProp.resistElectricity * 100 : 0;
                 break;
