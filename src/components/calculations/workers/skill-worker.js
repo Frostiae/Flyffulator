@@ -75,9 +75,9 @@ self.onmessage = async function (event) {
                     }
                 }
                 else {
-                    const buffIndex = Context.defender.hasSkillBuff(buffId);
+                    const buffIndex = Context.attacker.hasSkillBuff(buffId);
                     if (buffIndex != -1) {
-                        buff = Context.defender.activeBuffs[buffIndex];
+                        buff = Context.attacker.activeBuffs[buffIndex];
                         hasBuff = true;
                     }
                 }
