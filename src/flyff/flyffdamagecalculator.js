@@ -131,7 +131,10 @@ export function getDamage(handFlag) {
     
     const lowHPDmgReduct = Context.defender.getStat("lowhpdamagereduction", true);
     if (lowHPDmgReduct != 0) {
-        totalDamage -= Math.floor(totalDamage * Utils.mix(0.0, (lowHPDmgReduct / 100), 100.0 - Context.settings.targetHealthPercent));
+        const healthPercent = Context.defender == Context.player
+            ? Context.settings.playerHealthPercent
+            : Context.settings.targetHealthPercent;
+        totalDamage -= Math.floor(totalDamage * Utils.mix(0.0, (lowHPDmgReduct / 100), (100.0 - healthPercent) / 100));
     }
 
     const hymnDamageReduct = Context.defender.getStat("hymndamagereduction", true);
