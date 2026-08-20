@@ -1,3 +1,4 @@
+import Skill from "./flyffskill";
 import Context from "./flyffcontext";
 import * as Utils from "./flyffutils";
 
@@ -34,11 +35,24 @@ export function getHealing(skillProp) {
         return 0;
     }
 
-    const referStat = Context.attacker.getStatScale("hp", skillProp, skillLevel - 1);
+    // This level isn't 0-indexed, small bug ingame
+    let statScaleSkillLevel = 1;
+    if (skillProp.inheritSkill != undefined) {
+        const inheritedSkill = Utils.getSkillById(skillProp.inheritSkill);
+        for (const masterVariationId of inheritedSkill.masterVariations ?? []) {
+            if (masterVariationId == skillProp.id) {
+                statScaleSkillLevel = inheritedSkill.levels.length;
+                break;
+            }
+        }
+    }
+
+    const referStat = Context.attacker.getStatScale("hp", levelProp, statScaleSkillLevel, skillLevel - 1);
+    // TODO: Synergy
     add += referStat;
 
     add += add * Context.attacker.getStat("healing", true) / 100;
-    add += add * Context.attacker.getStat("incominghealing", true) / 100;
+    add += add * Context.defender.getStat("incominghealing", true) / 100;
 
     return Math.floor(add);
 }
@@ -50,6 +64,11 @@ export function getHealing(skillProp) {
  * @see {@link Context}
  */
 export function getDamage(handFlag) {
+    // TODO: Master of sword and master of axe item kind scaling. Not included in API yet
+    if (Context.player.hasSkillBuff(52563) != -1 || Context.player.hasSkillBuff(41788) != -1) {
+        Context.unimplementedWarnings.add("Item category scaling");
+    }
+
     elementDefenseFactor = 0;
     lifestealPercent = 0;
     Context.afterDamageProps = {};
@@ -86,7 +105,7 @@ export function getDamage(handFlag) {
     totalDamage += Math.floor(totalDamage * Context.attacker.getStat(Context.isPVP() ? "pvpdamage" : "pvedamage", true) / 100);
 
     const behindDarkFactor = Context.attacker.getStat("rearinvisibledamage", true);
-    if (behindDarkFactor > 0 && (Context.attacker.hasSkillBuff(7395) || Context.attacker.hasSkillBuff(24399))) {
+    if (behindDarkFactor > 0 && (Context.attacker.hasSkillBuff(7395) != -1 || Context.attacker.hasSkillBuff(24399) != -1)) {
         // TODO: Behind dark damage
         Context.unimplementedWarnings.add("Rear dark illusion damage");
     }
@@ -112,7 +131,10 @@ export function getDamage(handFlag) {
     
     const lowHPDmgReduct = Context.defender.getStat("lowhpdamagereduction", true);
     if (lowHPDmgReduct != 0) {
-        totalDamage -= Math.floor(totalDamage * Utils.mix(0.0, (lowHPDmgReduct / 100), 100.0 - Context.settings.targetHealthPercent));
+        const healthPercent = Context.defender == Context.player
+            ? Context.settings.playerHealthPercent
+            : Context.settings.targetHealthPercent;
+        totalDamage -= Math.floor(totalDamage * Utils.mix(0.0, (lowHPDmgReduct / 100), (100.0 - healthPercent) / 100));
     }
 
     const hymnDamageReduct = Context.defender.getStat("hymndamagereduction", true);
@@ -121,22 +143,22 @@ export function getDamage(handFlag) {
     }
 
     const shockDamageFactor = Context.defender.getStat("damagefromshocked", true);
-    if (shockDamageFactor != 0 && Context.attacker.hasSkillBuff(54749)) {
+    if (shockDamageFactor != 0 && Context.attacker.hasSkillBuff(54749) != -1) {
         totalDamage += Math.floor(totalDamage * shockDamageFactor / 100);
     }
 
     const waterDamageFactor = Context.defender.getStat("damagefromwatered", true);
-    if (waterDamageFactor != 0 && (Context.attacker.hasSkillBuff(26287) || Context.attacker.hasSkillBuff(44237))) {
+    if (waterDamageFactor != 0 && (Context.attacker.hasSkillBuff(26287) != -1 || Context.attacker.hasSkillBuff(44237) != -1)) {
         totalDamage += Math.floor(totalDamage * waterDamageFactor / 100);
     }
 
     const fireDamageFactor = Context.defender.getStat("damagefromburned", true);
-    if (fireDamageFactor != 0 && Context.attacker.hasSkillBuff(57839)) {
+    if (fireDamageFactor != 0 && Context.attacker.hasSkillBuff(57839) != -1) {
         totalDamage += Math.floor(totalDamage * fireDamageFactor / 100);
     }
 
     const windDamageFactor = Context.defender.getStat("damagefromsuffocated", true);
-    if (windDamageFactor != 0 && Context.attacker.hasSkillBuff(41916)) {
+    if (windDamageFactor != 0 && Context.attacker.hasSkillBuff(41916) != -1) {
         totalDamage += Math.floor(totalDamage * windDamageFactor / 100);
     }
     
@@ -158,7 +180,7 @@ export function getDamage(handFlag) {
 
     const posionDamageFactor = Context.defender.getStat("damagefrompoisoned", true);
     if (posionDamageFactor != 0 && Context.attacker.hasAttribute("poison")) {
-        totalDamage += Math.floor(totamDamage * posionDamageFactor / 100);
+        totalDamage += Math.floor(totalDamage * posionDamageFactor / 100);
     }
 
     const poisonDefenseFactor = Context.attacker.getStat("damagevspoisoned", true);
@@ -237,6 +259,33 @@ function triggerSkills() {
             Context.afterDamageProps.triggeredSkill = 11389;
         }
         */
+
+        // Auto attack stacks
+        if ((Context.attackFlags & Utils.ATTACK_FLAGS.GENERIC) != 0) {
+            const stackAutoFMChance = Context.attacker.getStat("skillchance", true, 38140);
+            if (Math.random() * 100 <= stackAutoFMChance) {
+                const stackBuffIndex = Context.attacker.hasSkillBuff(38140);
+                if (stackBuffIndex != -1) {
+                    Context.attacker.activeBuffs[stackBuffIndex].addStacks(1);
+                }
+                else {
+                    const triggerLevel = Context.attacker.getSkillChanceSkillLevel(38140);
+                    Context.attacker.activeBuffs.push(new Skill(Utils.getSkillById(38140), triggerLevel, 1));
+                }
+            }
+
+            const stackAutoChance = Context.attacker.getStat("skillchance", true, 56636);
+            if (Math.random() * 100 <= stackAutoChance) {
+                const stackBuffIndex = Context.attacker.hasSkillBuff(56636);
+                if (stackBuffIndex != -1) {
+                    Context.attacker.activeBuffs[stackBuffIndex].addStacks(1);
+                }
+                else {
+                    const triggerLevel = Context.attacker.getSkillChanceSkillLevel(56636);
+                    Context.attacker.activeBuffs.push(new Skill(Utils.getSkillById(56636), triggerLevel, 1));
+                }
+            }
+        }
     }
 
     if ((Context.attackFlags & Utils.ATTACK_FLAGS.MAGICSKILL) != 0 && Context.attacker.isPlayer()) {
@@ -270,7 +319,14 @@ function triggerSkills() {
         if (Context.settings.swordcrossEnabled && (Context.attackFlags & (Utils.ATTACK_FLAGS.GENERIC | Utils.ATTACK_FLAGS.MELEESKILL)) != 0) {
             if (Context.attacker.equipment.mainhand.itemProp.triggerSkill != undefined && Context.attacker.equipment.mainhand.itemProp.triggerSkill == 3124) {
                 if (Math.random() * 100 <= Context.attacker.equipment.mainhand.itemProp.triggerSkillProbability) {
-                    Context.defender.activeBuffs[3124] = 1;
+                    const swordcross = new Skill(Utils.getSkillById(3124), 1, 1);
+                    const index = Context.defender.hasSkillBuff(3124);
+                    if (index != -1) {
+                        Context.defender.activeBuffs[index] = swordcross;
+                    }
+                    else {
+                        Context.defender.activeBuffs.push(swordcross);
+                    }
                 }
             }
         }
@@ -424,7 +480,8 @@ function applyDefense(attack) {
         const skillLevel = Context.attacker.getSkillLevel(5041);
         const add = [20, 30, 40, 50, 60, 70, 80, 90, 100, 150][skillLevel - 1];
         const mp = Context.attacker.getMP();
-        const totalBonus = Math.floor(((Context.attacker.getBaseStat("str") / 10) * skillLevel) * (5 + mp / 10) + add);
+        const str = Context.attacker.getBaseStat("str");
+        const totalBonus = Math.floor((Math.floor(str / 10) * skillLevel) * (5 + Math.floor(mp / 10)) + add);
         damage = damage > 0 ? (damage + totalBonus) : totalBonus;
     }
 
@@ -452,7 +509,7 @@ function applyDefense(attack) {
             for (const mul of levelProp.damageMultiplier) {
                 if (mul.condition != undefined) {
                     const checkTarget = mul.condition.onTarget ? Context.defender : Context.attacker;
-                    if (!checkTarget.hasSkillBuff(mul.condition.requiredBuff)) {
+                    if (checkTarget.hasSkillBuff(mul.condition.requiredBuff) == -1) {
                         continue;
                     }
                 }
@@ -463,13 +520,13 @@ function applyDefense(attack) {
 
         // Vital stab/silent shot with dark illusion
         if (Context.skill.id == 5162 || Context.skill.id == 8916) {
-            if (Context.attacker.hasSkillBuff(7395)) {
+            if (Context.attacker.hasSkillBuff(7395) != -1) {
                 factor *= 1.4;
             }
         }
         else if (Utils.isSkillOrInherit(Context.skill.id, 38885)) {
             // Storm strike
-            if (Context.defender.hasSkillBuff(38885)) {
+            if (Context.defender.hasSkillBuff(38885) != -1) {
                 factor *= Context.skill.id == 55718 ? 1.8 : 1.4;
             }
         }
@@ -500,8 +557,7 @@ function applyDefense(attack) {
                 }
                 break;
             case 7156: // Hit of Penya
-                // TODO: Multiplier from skill level. this is assuming max level
-                factor *= 3;
+                factor *= levelProp.arbitraryData[0] / 100;
                 break;
             case 5041: // Asal
                 factor *= 1.0 + Context.attacker.getStat("asaldamage", true) / 100;
@@ -515,12 +571,25 @@ function applyDefense(attack) {
 
         // Skill awakes
         if (weapon != null && weapon.skillAwake != null && weapon.skillAwake.skill != undefined
-            && weapon.skillAwake.skill == Context.skill.id) {
+            && Utils.isSkillOrInherit(Context.skill.id, weapon.skillAwake.skill)) {
             factor *= 1 + weapon.skillAwake.add / 100;
         }
     }
     else if (Context.attacker.isPlayer()) {
-        // TODO: Auto attack stacking stuff
+        let stackId = 56636; // Auto attack stacks
+        let autoStacksBuffIndex = Context.attacker.hasSkillBuff(stackId);
+        if (autoStacksBuffIndex == -1) {
+            stackId = 38140;
+            autoStacksBuffIndex = Context.attacker.hasSkillBuff(stackId);
+        }
+
+        if (autoStacksBuffIndex != -1) {
+            const autoStacksBuff = Context.attacker.activeBuffs[autoStacksBuffIndex];
+            if (autoStacksBuff.stacks >= autoStacksBuff.levelProp.maxSkillStacks) {
+                factor *= autoStacksBuff.levelProp.arbitraryData[0] / 100;
+                autoStacksBuff.stacks = 0;
+            }
+        }
     }
 
     if (Context.attacker.isMonster()) {
@@ -574,13 +643,8 @@ function applyDefense(attack) {
     const riposteProb = Context.defender.getStat("ripostereflexchance", true);
     if (riposteProb > 0 && Math.random() * 100 < riposteProb) {
         damage *= 0.1;
-        Context.attackFlags = Utils.ATTACK_FLAGS.BLOCKING; // Yes it just sets it
+        Context.attackFlags = Utils.ATTACK_FLAGS.BLOCKING; // Yes it just overwrites it
         // Attacker also takes damage here
-    }
-
-    // TODO: HoP penya stuff
-    if (Context.isSkillAttack() && Context.skill.id == 7156) {
-        Context.unimplementedWarnings.add("Hit of Penya damage from penya");
     }
 
     return damage;
@@ -829,7 +893,8 @@ function applyMagicSkillDefense(attack) {
         const skillLevel = Context.attacker.getSkillLevel(5041);
         const add = [20, 30, 40, 50, 60, 70, 80, 90, 100, 150][skillLevel - 1];
         const mp = Context.attacker.getMP();
-        const totalBonus = Math.floor(((Context.attacker.getBaseStat("str") / 10) * skillLevel) * (5 + mp / 10) + add);
+        const str = Context.attacker.getBaseStat("str");
+        const totalBonus = Math.floor((Math.floor(str / 10) * skillLevel) * (5 + Math.floor(mp / 10)) + add);
         attack = attack > 0 ? (attack + totalBonus) : totalBonus;
     }
 
@@ -879,8 +944,14 @@ function applyAutoAttackDefense(attack) {
 
     let damage = applyAttackDefense(attack, defense);
     if (damage > 0) {
-        // TODO: Clear reflection
-
+        let clearReflectionCrit = false;
+        const clearReflectionBuffIndex = Context.attacker.hasSkillBuff(58524);
+        if (Context.attacker.isPlayer() && clearReflectionBuffIndex != -1) {
+            const nenBuffIndex = Context.attacker.hasSkillBuff(53306);
+            if (nenBuffIndex != -1 && Context.attacker.activeBuffs[nenBuffIndex].stacks == Context.attacker.activeBuffs[nenBuffIndex].levelProp.maxSkillStacks) {
+                clearReflectionCrit = true;
+            }
+        }
 
         if (isCriticalAttack()) {
             Context.attackFlags |= Utils.ATTACK_FLAGS.CRITICAL;
@@ -898,6 +969,12 @@ function applyAutoAttackDefense(attack) {
                     minCritical = 1.2;
                     maxCritical = 2.0;
                 }
+            }
+
+            if (clearReflectionCrit) {
+                const clearReflectionBuff = Context.attacker.activeBuffs[clearReflectionBuffIndex];
+                const lerpValue = clearReflectionBuff.levelProp.arbitraryData[0] / 100;
+                minCritical = Utils.mix(minCritical, maxCritical, lerpValue);
             }
 
             const criticalFactor = minCritical + Math.random() * (maxCritical - minCritical);
@@ -1023,7 +1100,7 @@ function getBaseSkillPower() {
         if (inheritedSkillProp != null) {
             for (const variationId of inheritedSkillProp.masterVariations ?? []) {
                 if (variationId == Context.skill.id) {
-                    statScaleSkillLevel = inheritedSkillProp.levels.length - 1; // - 1 is wrong?
+                    statScaleSkillLevel = inheritedSkillProp.levels.length - 1;
                     formulaLevel = statScaleSkillLevel;
                     break;
                 }
@@ -1031,7 +1108,7 @@ function getBaseSkillPower() {
         }
     }
 
-    const referStat = Context.attacker.getStatScale("attack", Context.skill, statScaleSkillLevel);
+    const referStat = Context.attacker.getStatScale("attack", levelProp, statScaleSkillLevel, statScaleSkillLevel);
 
     let power = {
         min: (((weaponAttack.min + (levelProp.minAttack + weapon.itemProp.additionalSkillDamage) * 5 + referStat - 20) * (16 + formulaLevel) / 13)),
@@ -1047,7 +1124,7 @@ function getBaseSkillPower() {
 
     // Thunder Strike or EVA Storm with shocked debuff
     if (Utils.isSkillOrInherit(Context.skill.id, 22731) || Utils.isSkillOrInherit(Context.skill.id, 37809)) {
-        if (Context.defender.hasSkillBuff(54749)) {
+        if (Context.defender.hasSkillBuff(54749) != -1) {
             power.min = power.max;
         }
     }
@@ -1064,14 +1141,14 @@ function getMagicSkillPower() {
     }
 
     let attack = getBaseSkillPower();
-    attack += attack * Context.attacker.getStat("magicattack", true) / 100.0;
+    attack += Math.floor(attack * Context.attacker.getStat("magicattack", true) / 100.0);
 
     // Elements
     let bonus = 0;
 
     // Arcanist infusion
     let elementType = Context.skill.elementType;
-    if (elementType != "none" && Context.attacker.hasSkillBuff(12579)) {
+    if (elementType != "none" && Context.attacker.hasSkillBuff(12579) != -1) {
         const weaponElement = Context.attacker.equipment.mainhand.element;
         if (weaponElement != "none") {
             elementType = weaponElement;

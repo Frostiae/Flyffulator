@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { useTooltip } from '../../tooltipcontext';
 import { createTooltip } from '../../flyff/flyfftooltip';
 import { useTranslation } from "react-i18next";
+import Skill from '../../flyff/flyffskill';
 
 function SkillTreeIcon({ skill, disabled, level, selected, inline = false, onSelect }) {
     const { showTooltip, hideTooltip } = useTooltip();
@@ -22,7 +23,7 @@ function SkillTreeIcon({ skill, disabled, level, selected, inline = false, onSel
         if (enabled) {
             const settings = {
                 rect: slotRef.current.getBoundingClientRect(),
-                text: createTooltip(skill, i18n)
+                text: createTooltip(new Skill(skill, level > 0 ? level : 1), i18n)
             };
             showTooltip(settings);
         }

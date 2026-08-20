@@ -1,6 +1,7 @@
+import Skill from "./flyffskill";
+import Context from "../flyff/flyffcontext";
 import * as Utils from "../flyff/flyffutils";
 import ItemElem from "../flyff/flyffitemelem";
-import Context from "../flyff/flyffcontext";
 
 /**
  * Create a tooltip for the given item or skill
@@ -13,6 +14,9 @@ export function createTooltip(content, i18n) {
         return setupItem(content, i18n);
     }
     else if (content.passive != undefined) {
+        return setupSkill(new Skill(content, 1), i18n);
+    }
+    else if (content instanceof Skill) {
         return setupSkill(content, i18n);
     }
     else if (content.consumedPoints != undefined) {
@@ -327,7 +331,7 @@ function setupItem(itemElem, i18n) {
         let levelsBelowRequirement = itemProp.level - Context.player.level;
         if (levelsBelowRequirement >= 1 && levelsBelowRequirement <= 5) {
             out.push(<span style={{ color: "#ff0000" }}> (-5)</span>);
-        } 
+        }
         else if (levelsBelowRequirement >= 6 && levelsBelowRequirement <= 10) {
             out.push(<span style={{ color: "#ff0000" }}> (-10)</span>);
         }
@@ -472,16 +476,17 @@ function setupItem(itemElem, i18n) {
     const ultimateJewelBonuses = {};
     for (const jewel of itemElem.ultimateJewels) {
         for (const ability of jewel.itemProp.abilities) {
-            if (ability.parameter in ultimateJewelBonuses) {
-                ultimateJewelBonuses[ability.parameter].add += ability.add;
+            const paramKey = ability.parameter + ability.rate;
+            if (paramKey in ultimateJewelBonuses) {
+                ultimateJewelBonuses[paramKey].add += ability.add;
             } else {
-                ultimateJewelBonuses[ability.parameter] = { ...ability };
+                ultimateJewelBonuses[paramKey] = { ...ability };
             }
         }
     }
 
     for (const [parameter, effect] of Object.entries(ultimateJewelBonuses)) {
-        out.push(<span style={{ color: "#00c8ff" }}><br />{Utils.getStatNameByIdOrDefault(parameter, i18n)}+{effect.add}{effect.rate && "%"}</span>);
+        out.push(<span style={{ color: "#00c8ff" }}><br />{Utils.getStatNameByIdOrDefault(effect.parameter, i18n)}+{effect.add}{effect.rate && "%"}</span>);
     }
 
     return (<div>{out.map((v, i) => <span key={i}>{v}</span>)}</div>);
@@ -489,27 +494,28 @@ function setupItem(itemElem, i18n) {
 
 /**
  * Get the tooltip text for the given skill
- * @param {object} skill The skill property
+ * @param {Skill} skill The skill instance
  * @param {I18n} i18n Localization
  */
 function setupSkill(skill, i18n) {
     const out = [];
+    const skillProp = skill.skillProp;
     var shortLanguageCode = "en";
     if (i18n.resolvedLanguage) {
         shortLanguageCode = i18n.resolvedLanguage.split('-')[0];
     }
 
-    const skillLevel = Context.player.skillLevels[skill.id] ?? skill.levels.length;
-    let levelProp = skillLevel != undefined ? skill.levels[skillLevel - 1] : skill.levels[0];
+    const skillLevel = skill.level;
+    let levelProp = skill.levelProp;
 
-    out.push(<span style={{ color: "#2fbe6d", fontWeight: 600 }}>{skill.name[shortLanguageCode] ?? skill.name.en}</span>);
+    out.push(<span style={{ color: "#2fbe6d", fontWeight: 600 }}>{skillProp.name[shortLanguageCode] ?? skillProp.name.en}</span>);
     if (skillLevel != undefined) {
         out.push(`  Lv. ${skillLevel}`);
     }
 
     let weaponIcon;
-    if (skill.weapon != undefined) {
-        switch (skill.weapon) {
+    if (skillProp.weapon != undefined) {
+        switch (skillProp.weapon) {
             case "knuckle":
                 weaponIcon = "weaknuspeck.png";
                 break;
@@ -540,16 +546,18 @@ function setupSkill(skill, i18n) {
         }
     }
 
+    // TODO: No way to identify trap skills on API yet
+
     if (weaponIcon) {
         out.push(<img src={`https://api.flyff.com/image/item/${weaponIcon}`} style={{ height: "18px", float: "right" }} className="skill-weapon-image"></img>);
     }
 
-    if (skill.debuffType != undefined) {
-        out.push(`\n(${skill.debuffType})`);
+    if (skillProp.debuffType != undefined) {
+        out.push(`\n(${skillProp.debuffType})`);
     }
 
-    let masterSkillPropOrBase = skill;
-    for (const masterVariation of skill.masterVariations ?? []) {
+    let masterSkillPropOrBase = skillProp;
+    for (const masterVariation of skillProp.masterVariations ?? []) {
         const masterLevel = Context.player.skillLevels[masterVariation] ?? 0;
         if (masterLevel > 0) {
             masterSkillPropOrBase = Utils.getSkillById(masterVariation);
@@ -596,36 +604,34 @@ function setupSkill(skill, i18n) {
         }
     }
 
+    out.push(<hr />);
 
-
-
-
-
-
-
-
-    if (skill.element != "none") {
-        out.push(`\nElement: ${skill.element}`);
-    }
-
-
-    for (const requirement of skill.requirements) {
+    let hasRequirements = false;
+    for (const requirement of skillProp.requirements) {
         const req = Utils.getSkillById(requirement.skill);
         const playerLevel = Context.player.skillLevels[requirement.skill];
 
         if (playerLevel == undefined || playerLevel < requirement.level) {
             out.push(<span style={{ color: "#ff0000" }}><br />{req.name[shortLanguageCode] ?? req.name.en} skill level {requirement.level} is needed.</span>);
-        }
-        else {
-            out.push(`\n${req.name[shortLanguageCode] ?? req.name.en} skill level ${requirement.level} is needed.`);
+            hasRequirements = true;
         }
     }
 
-    if (Context.player.level < skill.level) {
-        out.push(<span style={{ color: "#ff0000" }}><br />Character Level: {skill.level}</span>);
+    if (Context.player.level < skillProp.level) {
+        out.push(<span style={{ color: "#ff0000" }}><br />Character Level: {skillProp.level}</span>);
+        hasRequirements = true;
     }
-    else {
-        out.push(`\nCharacter Level: ${skill.level}`);
+
+    if (hasRequirements) {
+        out.push(<hr />);
+    }
+
+    //
+    // Properties Section
+    //
+
+    if (skillProp.element != "none") {
+        out.push(`\nElement: ${skillProp.element}`);
     }
 
     const statsStyle = { fontWeight: 800 };
@@ -633,6 +639,10 @@ function setupSkill(skill, i18n) {
     // Attack
     if (levelProp.maxAttack != undefined && levelProp.maxAttack > 0) {
         out.push(<span style={statsStyle}><br />Base Damage: {levelProp.minAttack} ~ {levelProp.maxAttack}</span>);
+    }
+
+    if (levelProp.damageMultiplier != undefined) {
+        out.push(<span style={statsStyle}><br />Damage Multiplier: {levelProp.damageMultiplier[0].multiplier}</span>);
     }
 
     // TODO: Scales for pvp vs pve?
@@ -644,8 +654,18 @@ function setupSkill(skill, i18n) {
                 if (scale.stat != undefined) {
                     stat = Utils.getStatNameByIdOrDefault(scale.stat, i18n);
                 }
-                else {
-                    // TODO: Part scaling
+                else if (scale.part != undefined) {
+                    switch (scale.part) {
+                        case "lefthandweapon":
+                            stat = "Left Hand Weapon Attack";
+                            break;
+                        case "righthandweapon":
+                            stat = "Right Hand Weapon Attack";
+                            break;
+                        case "shield":
+                            stat = "Shield Defense";
+                            break;
+                    }
                 }
                 out.push(<span style={statsStyle}><br />Attack Scaling: {stat} x {scale.scale}</span>);
             }
@@ -669,15 +689,55 @@ function setupSkill(skill, i18n) {
                 if (scale.stat != undefined) {
                     stat = Utils.getStatNameByIdOrDefault(scale.stat, i18n);
                 }
-                else {
-                    // TODO: Part scaling
+                else if (scale.part != undefined) {
+                    switch (scale.part) {
+                        case "lefthandweapon":
+                            stat = "Left Hand Weapon Attack";
+                            break;
+                        case "righthandweapon":
+                            stat = "Right Hand Weapon Attack";
+                            break;
+                        case "shield":
+                            stat = "Shield Defense";
+                            break;
+                    }
                 }
                 out.push(<span style={statsStyle}><br />Heal Scaling: {stat} x {scale.scale}</span>);
             }
         }
     }
 
-    // Time
+    if (levelProp.chargingTime != undefined) {
+        const secs = levelProp.chargingTime % 60;
+        const mins = Math.floor(levelProp.chargingTime / 60);
+        out.push(<span style={statsStyle}><br />Charging Time: {String(mins).padStart(2, "0")}:{String(secs).padStart(2, "0")}</span>);
+    }
+
+    if (levelProp.scalingParameters != undefined) {
+        for (const scale of levelProp.scalingParameters) {
+            if (scale.parameter == "chargingTime") {
+                let stat = "";
+                if (scale.stat != undefined) {
+                    stat = Utils.getStatNameByIdOrDefault(scale.stat, i18n);
+                }
+                else if (scale.part != undefined) {
+                    switch (scale.part) {
+                        case "lefthandweapon":
+                            stat = "Left Hand Weapon Attack";
+                            break;
+                        case "righthandweapon":
+                            stat = "Right Hand Weapon Attack";
+                            break;
+                        case "shield":
+                            stat = "Shield Defense";
+                            break;
+                    }
+                }
+                out.push(<span style={statsStyle}><br />Dec. Charging Time Scaling: {stat} x {scale.scale}</span>);
+            }
+        }
+    }
+
     if (levelProp.duration != undefined) {
         const secs = levelProp.duration % 60;
         const mins = Math.floor(levelProp.duration / 60);
@@ -691,8 +751,18 @@ function setupSkill(skill, i18n) {
                 if (scale.stat != undefined) {
                     stat = Utils.getStatNameByIdOrDefault(scale.stat, i18n);
                 }
-                else {
-                    // TODO: Part scaling
+                else if (scale.part != undefined) {
+                    switch (scale.part) {
+                        case "lefthandweapon":
+                            stat = "Left Hand Weapon Attack";
+                            break;
+                        case "righthandweapon":
+                            stat = "Right Hand Weapon Attack";
+                            break;
+                        case "shield":
+                            stat = "Shield Defense";
+                            break;
+                    }
                 }
                 out.push(<span style={statsStyle}><br />Time Scaling: {stat} x {scale.scale}</span>);
             }
@@ -709,21 +779,25 @@ function setupSkill(skill, i18n) {
     }
 
     // Cooldown
-    // TODO: PvP cooldown seems to be missing from the API, check Holycross for example
     if (levelProp.cooldown != undefined) {
         const secs = Math.ceil(levelProp.cooldown) % 60;
         const mins = Math.floor(Math.ceil(levelProp.cooldown) / 60);
-        out.push(<span style={statsStyle}><br />Cooldown: {String(mins).padStart(2, "0")}:{String(secs).padStart(2, "0")}</span>);
+        out.push(<span style={statsStyle}><br />Cooldown: {String(mins).padStart(2, "0")}:{String(secs).padStart(2, "0")} {skillProp.cooldownOnEnd != undefined && skillProp.cooldownOnEnd ? "(After Expiry)" : ""}</span>);
+    }
+    if (levelProp.cooldownPVP != undefined) {
+        const secs = Math.ceil(levelProp.cooldownPVP) % 60;
+        const mins = Math.floor(Math.ceil(levelProp.cooldownPVP) / 60);
+        out.push(<span style={statsStyle}><br />Cooldown: {String(mins).padStart(2, "0")}:{String(secs).padStart(2, "0")} (PvP) {skillProp.cooldownOnEnd != undefined && skillProp.cooldownOnEnd ? "(After Expiry)" : ""}</span>);
     }
 
     // Range
     if (levelProp.spellRange != undefined) {
         out.push(<span style={statsStyle}><br />Spell Range: {levelProp.spellRange}</span>);
 
-        if (skill.target == "party") {
+        if (skillProp.target == "party") {
             out.push(<span style={statsStyle}> (Party)</span>);
         }
-        else if (skill.target == "area") {
+        else if (skillProp.target == "area") {
             out.push(<span style={statsStyle}> (Around)</span>);
         }
     }
@@ -734,6 +808,26 @@ function setupSkill(skill, i18n) {
 
         if (levelProp.probabilityPVP != undefined && levelProp.probabilityPVP != levelProp.probability) {
             out.push(<span style={statsStyle}> / {levelProp.probabilityPVP}% (PVP & Giants)</span>);
+        }
+    }
+
+    if (levelProp.flyBackProbability != undefined) {
+        out.push(<span style={statsStyle}><br />Knockdown Probability: {levelProp.flyBackProbability}%</span>);
+    }
+
+    if (levelProp.gainedSkillStacks != undefined) {
+        for (const gain of levelProp.gainedSkillStacks) {
+            const gainedSkill = Utils.getSkillById(gain.skill);
+            if (gain.countPVP != undefined && gain.countPVP != gain.count) {
+                out.push(<span style={statsStyle}><br />{gainedSkill.name[shortLanguageCode]} Stacks Gained: {gain.count} / {gain.countPVP} (PvP)</span>);
+            }
+            else {
+                out.push(<span style={statsStyle}><br />{gainedSkill.name[shortLanguageCode]} Stacks Gained: {gain.count}</span>);
+            }
+
+            if (gain.probability != undefined) {
+                out.push(<span style={statsStyle}> ({gain.probability}%)</span>);
+            }
         }
     }
 
@@ -752,24 +846,34 @@ function setupSkill(skill, i18n) {
         out.push(<span style={statsStyle}><br />DoT Tick: {levelProp.dotTick} Seconds</span>);
     }
 
-    // Combo
-    if (skill.combo != "general") {
-        out.push(<span style={statsStyle}><br />Combo: {skill.combo}</span>);
+    if (levelProp.maxTargets != undefined || levelProp.maxTargetsPVP != undefined) {
+        if (levelProp.maxTargetsPVP != undefined && levelProp.maxTargets != undefined && levelProp.maxTargets != levelProp.maxTargetsPVP) {
+            out.push(<span style={statsStyle}><br />Max Targets: {levelProp.maxTargets} / {levelProp.maxTargetsPVP} (PvP)</span>);
+        }
+        else if (levelProp.maxTargets != undefined) {
+            out.push(<span style={statsStyle}><br />Max Targets: {levelProp.maxTargets}</span>);
+        }
     }
 
-    if (!skill.flying) {
+    // Combo
+    if (skillProp.combo != "general") {
+        out.push(<span style={statsStyle}><br />Combo: {skillProp.combo}</span>);
+    }
+
+    if (!skillProp.flying) {
         out.push(<span style={statsStyle}><br />Flying: No</span>);
     }
 
     // Stats
     if (levelProp.abilities != undefined) {
+        const abilityStyle = { color: "#6161ff" };
+        let scaledAbilities = [];
         for (const ability of levelProp.abilities) {
-            const abilityStyle = { color: "#6161ff" };
 
             // "attribute" abilities apply a status effect (bleeding, stun, slow,
             // ...) rather than a numeric stat, so show the effect name instead of
             // a value (they carry no add/set, which otherwise renders as NaN).
-            if (ability.parameter == "attribute") {
+            if (ability.parameter == "attribute" || ability.attribute != undefined) {
                 const effect = ability.attribute
                     ? ability.attribute.charAt(0).toUpperCase() + ability.attribute.slice(1)
                     : ability.parameter;
@@ -777,14 +881,47 @@ function setupSkill(skill, i18n) {
                 continue;
             }
 
+            if (ability.parameter == "skillchance") {
+                const skillChanceProp = Utils.getSkillById(ability.skill);
+                if (skillChanceProp) {
+                    out.push(<span style={abilityStyle}><br />{skillChanceProp.name[shortLanguageCode]} Chance+{ability.add}{ability.rate ? "%" : ""}</span>);
+                }
+
+                continue;
+            }
+
             let add = ability.add;
             let extra = 0;
 
+            if (levelProp.stackAbilities != undefined && levelProp.stackAbilities) {
+                extra += (skill.stacks - 1) * add;
+            }
+
+            if (levelProp.synergies != undefined) {
+                for (const synergy of levelProp.synergies) {
+                    if (synergy.parameter == ability.parameter) {
+                        const synergyLevel = Context.player.getSkillLevel(synergy.skill);
+                        const bonusLevels = synergyLevel - synergy.minLevel;
+                        if (bonusLevels <= 0) {
+                            continue;
+                        }
+
+                        if (synergy.add) {
+                            extra = Math.floor(extra + synergy.scale * bonusLevels);
+                        }
+                        else {
+                            //extra = Math.floor(extra + (add * synergy.scale * bonusLevels));
+                        }
+                    }
+                }
+            }
+
             if (levelProp.scalingParameters != undefined) {
                 for (const scale of levelProp.scalingParameters) {
-                    if (scale.parameter == ability.parameter && scale.maximum != undefined) {
+                    if (scale.parameter == ability.parameter && !scaledAbilities.includes(ability.parameter)) {
+                        scaledAbilities.push(ability.parameter);
                         let bufferStat = 0;
-                        
+
                         if (scale.stat != undefined) {
                             switch (scale.stat) {
                                 case "int":
@@ -810,49 +947,118 @@ function setupSkill(skill, i18n) {
                         else {
                             // TODO: Part scaling
                         }
-    
+
+                        let scaleValue = scale.scale * bufferStat;
+                        if (scale.maximum != undefined) {
+                            scaleValue = Math.min(scale.maximum, scaleValue);
+                        }
+
                         if (scale.add) {
-                            extra = Math.floor(Math.min(scale.scale * bufferStat, scale.maximum));
+                            extra = Math.floor(extra + scaleValue);
                         }
                         else {
-                            extra = Math.floor(add * Math.min(scale.scale * bufferStat, scale.maximum));
+                            extra = Math.floor(extra + (add * (scaleValue / 10)));
                         }
                     }
                 }
             }
 
-            const value = ability.set != undefined ? ability.set : add + extra;
+            extra = Math.round(extra * 100) / 100;
+            let value = ability.set != undefined ? ability.set : add + extra;
+            value = Math.round(value * 100) / 100;
             // Negative values already carry their own minus sign, so only prefix
             // "+" for non-negative additive values ("=" for absolute/set values).
             const prefix = ability.set != undefined ? "=" : (value < 0 ? "" : "+");
             out.push(<span style={abilityStyle}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}{prefix}{value}{ability.rate && "%"}</span>);
-            if (extra > 0) {
-                out.push(<span style={{ color: "#ffaa00" }}> ({add}+{extra})</span>)
+            if (extra != 0) {
+                out.push(<span style={{ color: "#ffaa00" }}> ({add}{extra > 0 ? "+" : ""}{extra})</span>)
             }
         }
 
         if (levelProp.scalingParameters != undefined) {
+            let scaledAbilities = [];
             for (const ability of levelProp.abilities) {
                 for (const scale of levelProp.scalingParameters) {
-                    if (scale.parameter == ability.parameter && scale.maximum != undefined) {
+                    if (scale.parameter == ability.parameter && !scaledAbilities.includes(ability.parameter)) {
                         let stat = "";
                         if (scale.stat != undefined) {
                             stat = Utils.getStatNameByIdOrDefault(scale.stat, i18n);
                         }
-                        else {
-                            // TODO: Part scaling
+                        else if (scale.part != undefined) {
+                            switch (scale.part) {
+                                case "lefthandweapon":
+                                    stat = "Left Hand Weapon Attack";
+                                    break;
+                                case "righthandweapon":
+                                    stat = "Right Hand Weapon Attack";
+                                    break;
+                                case "shield":
+                                    stat = "Shield Defense";
+                                    break;
+                            }
                         }
 
                         out.push(<span style={{ color: "#ffaa00" }}><br />
-                            {Utils.getStatNameByIdOrDefault(scale.parameter, i18n)} Scaling: +{scale.scale * 25}{ability.rate && "%"} per 25 {stat} (max {scale.maximum}{ability.rate && "%"})
+                            {Utils.getStatNameByIdOrDefault(scale.parameter, i18n)} Scaling: +{scale.scale * 25}{ability.rate && "%"} per 25 {stat} {scale.maximum != undefined ? `(max ${scale.maximum}${ability.rate && "%"})` : ""}
                         </span>);
+
+                        scaledAbilities.push(ability.parameter);
                     }
                 }
             }
         }
     }
 
-    out.push(`\n${skill.description[shortLanguageCode] ?? skill.description.en}`);
+    out.push(<hr />);
+
+    out.push(`\n${skillProp.description[shortLanguageCode] ?? skillProp.description.en}`);
+
+    out.push(<hr />);
+
+    for (const synergy of levelProp.synergies ?? []) {
+        const synergyStyle = { color: "#4bc71a" };
+        const synergyNameStyle = { color: "#4bc71a", fontWeight: 700 };
+        const synergyProp = Utils.getSkillById(synergy.skill);
+
+        out.push(<span style={synergyNameStyle}><br />{synergyProp.name[shortLanguageCode]} (Lv. {synergy.minLevel}+)</span>);
+
+        let value = synergy.scale;
+        if (!synergy.add) {
+            value = 1 + synergy.scale / 100;
+        }
+
+        let paramName = Utils.getStatNameByIdOrDefault(synergy.parameter, i18n);
+        if (synergy.parameter == "duration") {
+            paramName = "Time";
+            value *= 10;
+        }
+
+
+        if (synergy.add) {
+            out.push(<span style={synergyStyle}><br />{paramName} Scaling per Lv.:+{value}%</span>);
+        }
+        else {
+            out.push(<span style={synergyStyle}><br />{paramName} Scaling per Lv.: × {value}</span>);
+        }
+    }
+
+    if (skillProp.lockedBy != undefined) {
+        out.push(<hr />);
+        out.push(<span><br />Locks:</span>);
+        for (const locker of skillProp.lockedBy ?? []) {
+            out.push(<span><i><br />   {Utils.getSkillById(locker).name[shortLanguageCode]}</i></span>);
+        }
+    }
+
+    for (const masterId of skillProp.masterVariations ?? []) {
+        const currentLevel = Context.player.skillLevels[masterId] ?? 0;
+        if (currentLevel > 0) {
+            out.push(<hr />);
+            const currentMasterProp = Utils.getSkillById(masterId);
+            out.push(<span style={{ color: "#d386ff", fontWeight: 700 }}><br />{currentMasterProp.name[shortLanguageCode]} Lv. {currentLevel}</span>);
+            out.push(<span><br />{currentMasterProp.description[shortLanguageCode]}</span>);
+        }
+    }
 
     return (<div>{out.map((v, i) => <span key={i}>{v}</span>)}</div>);
 }

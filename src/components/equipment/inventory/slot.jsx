@@ -1,15 +1,17 @@
-import { useRef, forwardRef, useImperativeHandle } from 'react';
+import { useRef, forwardRef, useImperativeHandle, useState } from 'react';
 import { useTooltip } from '../../../tooltipcontext';
 import { createTooltip } from '../../../flyff/flyfftooltip';
 import * as Utils from '../../../flyff/flyffutils';
 import { useTranslation } from "react-i18next";
 
 import '../../../styles/equipment.scss';
+import Skill from '../../../flyff/flyffskill';
 
-function Slot({ backgroundIcon, content, className, onRemove }, ref) {
+function Slot({ backgroundIcon, content, className, onRemove, showStacks = true }, ref) {
   const { showTooltip, hideTooltip } = useTooltip();
   const slotRef = useRef(null);
   const { i18n } = useTranslation();
+  const [ skillStacks, setSkillStacks ] = useState(content instanceof Skill ? content.stacks : 0);
 
   function toggleTooltip(enabled) {
     if (content == null) {
@@ -38,6 +40,17 @@ function Slot({ backgroundIcon, content, className, onRemove }, ref) {
     toggleTooltip(false);
   }
 
+  function addNum(num) {
+    if (content == null) {
+      return;
+    }
+
+    if (content instanceof Skill) {
+      content.addStacks(num);
+      setSkillStacks(content.stacks);
+    }
+  }
+
   return (
     <div className={`slot ${className}`}
       onMouseEnter={() => toggleTooltip(true)}
@@ -52,17 +65,26 @@ function Slot({ backgroundIcon, content, className, onRemove }, ref) {
         content != null &&
         <>
           {
-            (content.itemProp != undefined && content.passive == undefined) ? 
+            (content.itemProp != undefined) ? 
             <img src={`https://api.flyff.com/image/item/${content.itemProp.icon}`} draggable={false} id="slot-content" />
             :
-            <img src={`https://api.flyff.com/image/skill/colored/${content.icon}`} draggable={false} id="slot-content" />
+            <img src={`https://api.flyff.com/image/skill/colored/${content.skillProp?.icon ?? content.icon}`} draggable={false} id="slot-content" />
           }
 
           {
-            (content.passive == undefined && content.itemProp && content.itemProp.rarity != "common") &&
+            (content.skillProp == undefined && content.itemProp && content.itemProp.rarity != "common") &&
             <div id="slot-rarity-corner" style={{
               background: `linear-gradient(45deg, #ffffff00 0%, #ffffff00 50%, ${Utils.getItemNameColor(content.itemProp)} 51%, ${Utils.getItemNameColor(content.itemProp)} 100%)`
             }}></div>
+          }
+
+          {
+            (showStacks && content.skillProp != undefined && content.levelProp != undefined && content.levelProp.maxSkillStacks != undefined) &&
+            <>
+              <span className="skill-stacks-num">{skillStacks}</span>
+              <button disabled={skillStacks == content.levelProp.maxSkillStacks} onClick={() => addNum(1)} className="flyff-button small" style={{position: "absolute", top: -3, right: -3, width: "15px", height: "15px", display: "flex", alignItems: "center"}}>+</button>
+              <button disabled={skillStacks == 1} onClick={() => addNum(-1)} className="flyff-button small" style={{position: "absolute", bottom: -3, right: -3, width: "15px", height: "15px", display: "flex", alignItems: "center", justifyContent: "center"}}>-</button>
+            </>
           }
 
           {
