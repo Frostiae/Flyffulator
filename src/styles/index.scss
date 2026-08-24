@@ -472,6 +472,7 @@ button.flyff-button {
   top: 0;
   left: 0;
   backdrop-filter: blur(3px);
+  overflow-y: auto;
 
   #search-box {
     background-color: v.$fg-color;
@@ -485,10 +486,36 @@ button.flyff-button {
     margin-top: 10rem;
     border-radius: 4px;
 
+    // The 25% width above is sized for desktop; on a phone-width viewport
+    // that leaves only a sliver for the input and results, so widen it and
+    // pull the whole box closer to the top so it fits above the keyboard.
+    @media (max-width: 768px) {
+      width: 92%;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .window-content {
+      @media (max-width: 768px) {
+        padding: 12px;
+      }
+    }
+
+    #search-field {
+      @media (max-width: 768px) {
+        padding: 10px;
+        font-size: 16px; // prevents iOS Safari from auto-zooming on focus
+      }
+    }
+
     #search-results {
       max-height: 500px;
       overflow-y: auto;
       margin-top: 1rem;
+
+      @media (max-width: 768px) {
+        max-height: 50vh;
+      }
 
       #search-result {
         display: flex;

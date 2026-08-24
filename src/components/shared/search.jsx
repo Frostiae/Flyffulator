@@ -1,6 +1,7 @@
 import { API } from '../../data';
 import { useState } from "react";
 import { useSearch } from "../../searchcontext";
+import { useTooltip } from "../../tooltipcontext";
 import { useTranslation } from "react-i18next";
 
 import Slot from '../equipment/inventory/slot';
@@ -12,6 +13,7 @@ import Skill from '../../flyff/flyffskill';
 
 function Search() {
     const { isSearchOpen, searchProperties, hideSearch } = useSearch();
+    const { hideTooltip } = useTooltip();
     const [results, setResults] = useState([]);
     const { i18n } = useTranslation();
 
@@ -175,6 +177,11 @@ function Search() {
     }
 
     function close() {
+        // Search results unmount immediately on selection, so a tooltip shown
+        // for a result row (from a touch device's synthetic hover, which never
+        // gets a matching mouseleave) would otherwise be stranded on screen
+        // with nothing left to dismiss it.
+        hideTooltip();
         setResults([]);
         hideSearch();
     }
