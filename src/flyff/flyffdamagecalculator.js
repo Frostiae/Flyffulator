@@ -6,6 +6,11 @@ let leftHanded = false; // If this attack is using the left hand weapon.
 let elementDefenseFactor = 0; // Element defense factor
 let lifestealPercent = 0;
 
+// skillchance abilities that gear can grant (e.g. Lusaka's Crystal Sword/Axe
+// grant Poison/Bleeding chance) but whose proc damage-over-time isn't
+// simulated. Rather than silently omitting their damage, warn about them.
+const UNIMPLEMENTED_SKILLCHANCE_SKILLS = [6824, 9304, 23893]; // Poison, Bleeding, Death's Rush
+
 /**
  * Get the amount of healing done by the current attacker to **themself** using the given skill.
  * @param {object} skillProp The skill property to calculate healing for.
@@ -301,10 +306,15 @@ function triggerSkills() {
 
     if ((Context.attackFlags & (Utils.ATTACK_FLAGS.GENERIC | Utils.ATTACK_FLAGS.MELEESKILL)) != 0 && Context.attacker.isPlayer()) {
         // Stun chance
-        // poison, bleed
         // spiritual overcharge
         // pranksters escape
         // healing grace
+
+        for (const skillId of UNIMPLEMENTED_SKILLCHANCE_SKILLS) {
+            if (Context.attacker.getStat("skillchance", true, skillId) > 0) {
+                Context.unimplementedWarnings.add(`${Utils.getSkillById(skillId).name.en} Chance damage over time`);
+            }
+        }
 
         if (Context.settings.lifestealEnabled && Math.random() * 100 <= Context.attacker.getStat("skillchance", true, 7513)) {
             // Lifesteal
