@@ -126,6 +126,26 @@ export function getStatNameByIdOrDefault(id, i18n) {
     return stat[shortLanguageCode] ?? stat.en;
 }
 
+/**
+ * Name for an ability's stat line. "skillchance" abilities apply to a
+ * specific skill via ability.skill (Waterbomb, Death's Rush, ...), so their
+ * label has to come from that skill's name rather than the generic stat name
+ * table, which only holds one static label shared by every skillchance ability.
+ * @param {object} ability The ability
+ * @param {object} i18n Localization
+ * @param {string} shortLanguageCode The resolved short language code (e.g. "en")
+ */
+export function getAbilityStatName(ability, i18n, shortLanguageCode) {
+    if (ability.parameter == "skillchance" && ability.skill != undefined) {
+        const skillProp = getSkillById(ability.skill);
+        if (skillProp) {
+            return `${skillProp.name[shortLanguageCode]} Chance`;
+        }
+    }
+
+    return getStatNameByIdOrDefault(ability.parameter, i18n);
+}
+
 export function getMonsterRange(startLevel, endLevel) {
     return Object.values(API.Monsters).filter((m) => m.level >= startLevel && m.level <= endLevel);
 }

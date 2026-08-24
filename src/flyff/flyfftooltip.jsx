@@ -213,7 +213,7 @@ function setupItem(itemElem, i18n) {
 
         if (itemElem.statRanges.length == 0) {
             for (const ability of itemProp.abilities) {
-                out.push(<span style={abilityStyle}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}+{ability.add}</span>);
+                out.push(<span style={abilityStyle}><br />{Utils.getAbilityStatName(ability, i18n, shortLanguageCode)}+{ability.add}</span>);
                 if (ability.rate) {
                     out.push(<span style={abilityStyle}>%</span>);
                 }
@@ -221,7 +221,7 @@ function setupItem(itemElem, i18n) {
         }
         else {
             for (const ability of itemElem.statRanges) {
-                out.push(<span style={abilityStyle}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}+{ability.value}</span>);
+                out.push(<span style={abilityStyle}><br />{Utils.getAbilityStatName(ability, i18n, shortLanguageCode)}+{ability.value}</span>);
                 if (ability.rate) {
                     out.push(<span style={abilityStyle}>%</span>);
                 }
@@ -256,7 +256,7 @@ function setupItem(itemElem, i18n) {
     if (itemProp.category == "jewelry" && itemProp.upgradeLevels != undefined) {
         const abilityStyle = { color: "#ffeaa1" };
         for (const ability of itemProp.upgradeLevels[itemElem.upgradeLevel].abilities) {
-            out.push(<span style={abilityStyle}><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}+{ability.add}</span>);
+            out.push(<span style={abilityStyle}><br />{Utils.getAbilityStatName(ability, i18n, shortLanguageCode)}+{ability.add}</span>);
             if (ability.rate) {
                 out.push(<span style={abilityStyle}>%</span>);
             }
@@ -272,7 +272,7 @@ function setupItem(itemElem, i18n) {
         if (upgradeLevel > 0) {
             const bonus = Utils.getUpgradeBonus(upgradeLevel);
             for (const ability of bonus.setAbilities) {
-                out.push(<span><br />{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}+{ability.add}</span>);
+                out.push(<span><br />{Utils.getAbilityStatName(ability, i18n, shortLanguageCode)}+{ability.add}</span>);
                 if (ability.rate) {
                     out.push(<span>%</span>);
                 }
@@ -416,21 +416,18 @@ function setupItem(itemElem, i18n) {
                     continue;
                 }
 
-                const bonusKey = `${Utils.getStatNameByIdOrDefault(bonus.ability.parameter, i18n)}.${bonus.ability.rate ? 'Y' : 'N'}`;
+                const bonusKey = `${bonus.ability.parameter}.${bonus.ability.skill ?? ''}.${bonus.ability.rate ? 'Y' : 'N'}`;
 
                 if (bonuses[bonusKey] == undefined) {
-                    bonuses[bonusKey] = bonus.ability.add;
+                    bonuses[bonusKey] = { name: Utils.getAbilityStatName(bonus.ability, i18n, shortLanguageCode), rate: bonus.ability.rate, sum: bonus.ability.add };
                 }
                 else {
-                    bonuses[bonusKey] += bonus.ability.add;
+                    bonuses[bonusKey].sum += bonus.ability.add;
                 }
             }
 
-            for (const [key, bonus] of Object.entries(bonuses)) {
-                const [parameter, rateString] = key.split('.');
-                const rate = rateString === 'Y';
-
-                out.push(<span style={bonusStyle}><br />Set Effect: {Utils.getStatNameByIdOrDefault(parameter, i18n)} +{bonus}</span>);
+            for (const { name, rate, sum } of Object.values(bonuses)) {
+                out.push(<span style={bonusStyle}><br />Set Effect: {name} +{sum}</span>);
                 if (rate) {
                     out.push(<span style={bonusStyle}>%</span>);
                 }
