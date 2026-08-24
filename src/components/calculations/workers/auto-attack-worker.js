@@ -44,7 +44,7 @@ self.onmessage = async function (event) {
 
         let handedParam = 0x1;
 
-        if ((Context.player.job.id == 2246 || Context.player.job.id == 35369) && Context.player.equipment.offhand != null) {
+        if (Utils.canDualWieldWeapons(Context.player.job.id) && Context.player.equipment.offhand != null) {
             // Left hand and main hand damage behaviour. Yes, bitwise
             // OR is actually what happens in the game, even if it
             // might not make sense...
