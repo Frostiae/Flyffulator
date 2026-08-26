@@ -46,6 +46,7 @@
     "tooltip_sex_female": "Geschlecht: Weiblich",
     "tooltip_one_handed": "Einhandwaffe",
     "tooltip_two_handed": "Zweihandwaffe",
+    "equipment_swap_weapon_hands": "Waffen tauschen",
     "search_placeholder": "Suche nach einem {{type}}...",
     "search_title": "Suchen",
     "search_item": "Item",

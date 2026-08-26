@@ -58,6 +58,17 @@ function Inventory({ onSelectItem }) {
     Context.player.updateEquipSets();
   }
 
+  function swapWeaponHands() {
+    const mainhand = Context.player.equipment.mainhand;
+    const offhand = Context.player.equipment.offhand;
+    Context.player.equipment.mainhand = offhand ?? Utils.DEFAULT_WEAPON;
+    Context.player.equipment.offhand = mainhand.itemProp.subcategory == "hand" ? null : mainhand;
+    onSelectItem(null);
+    setRefresh(!refresh);
+  }
+
+  const canDualWield = Utils.canDualWieldWeapons(Context.player.job.id);
+
   return (
     <div className="inventory">
       <div id="inventory-side">
@@ -66,10 +77,16 @@ function Inventory({ onSelectItem }) {
             content={Context.player.equipment.mainhand.itemProp.subcategory == "hand" ? null : Context.player.equipment.mainhand}
           />
         </div>
-        <div onClick={Context.player.equipment.mainhand.itemProp.twoHanded ? null : () => selectSlot((Context.player.job.id == 2246 || Context.player.job.id == 35369) ? null : "shield", (Context.player.job.id == 2246 || Context.player.job.id == 35369) ? "weapon" : null, offhandSlot, (result) => { Context.player.equipment.offhand = result })}>
+        <div onClick={Context.player.equipment.mainhand.itemProp.twoHanded ? null : () => selectSlot(canDualWield ? null : "shield", canDualWield ? "weapon" : null, offhandSlot, (result) => { Context.player.equipment.offhand = result })}>
           <Slot backgroundIcon='/offhand.png' className={`slot-equipment slot-editable ${Context.player.equipment.mainhand.itemProp.twoHanded ? "slot-disabled" : ""}`} ref={offhandSlot} onRemove={Context.player.equipment.mainhand.itemProp.twoHanded ? null : () => removeItem("offhand")}
             content={Context.player.equipment.mainhand.itemProp.twoHanded ? Context.player.equipment.mainhand : Context.player.equipment.offhand} />
         </div>
+        {
+          canDualWield &&
+          <button className="flyff-button small" disabled={Context.player.equipment.mainhand.itemProp.twoHanded} onClick={swapWeaponHands} title={t("equipment_swap_weapon_hands")}>
+            <img src="/swap-weapons.svg" alt="swap" style={{ width: 14, filter: "brightness(0)" }} />
+          </button>
+        }
         <div onClick={() => selectSlot("cloak", null, cloakSlot, (result) => { Context.player.equipment.cloak = result })}>
           <Slot removable={true} backgroundIcon='/cloak.png' className={"slot-equipment slot-editable"} ref={cloakSlot} onRemove={() => removeItem("cloak")}
             content={Context.player.equipment.cloak} />

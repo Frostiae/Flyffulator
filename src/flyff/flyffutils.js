@@ -131,6 +131,17 @@ export function getMonsterRange(startLevel, endLevel) {
 }
 
 /**
+ * Whether the given job can equip two one-handed weapons (main hand + off
+ * hand) instead of a shield. Currently only Blade (2246) and its awakened
+ * form Slayer.
+ * @param {Number} jobId The job ID to check.
+ * @returns Whether the job can dual wield weapons.
+ */
+export function canDualWieldWeapons(jobId) {
+    return isAnteriorJob(jobId, 2246);
+}
+
+/**
  * @param {Number} baseJobId The ID of the job to compare to.
  * @param {Number} otherJobId The ID of the job to check.
  * @returns Whether or not the base job is or has been through the given job.
