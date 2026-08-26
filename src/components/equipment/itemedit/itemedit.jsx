@@ -362,7 +362,7 @@ function ItemEdit({ itemElem }) {
                     {
                         itemElem.statRanges.map((ability, index) =>
                             <div className="stat-edit-row" key={index}>
-                                <span className="stat-edit-label">{Utils.getStatNameByIdOrDefault(ability.parameter, i18n)}</span>
+                                <span className="stat-edit-label">{Utils.getAbilityStatName(ability, i18n, shortCode)}</span>
                                 <RangeInput
                                     min={Math.min(ability.add, ability.addMax)}
                                     max={Math.max(ability.addMax, ability.add)}

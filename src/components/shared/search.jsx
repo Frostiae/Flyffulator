@@ -1,6 +1,7 @@
 import { API } from '../../data';
 import { useState } from "react";
 import { useSearch } from "../../searchcontext";
+import { useTooltip } from "../../tooltipcontext";
 import { useTranslation } from "react-i18next";
 
 import Slot from '../equipment/inventory/slot';
@@ -10,8 +11,18 @@ import * as Utils from "../../flyff/flyffutils";
 import ItemElem from "../../flyff/flyffitemelem";
 import Skill from '../../flyff/flyffskill';
 
+// Item names come from several source languages and mix straight (') and
+// typographic (' ' etc.) apostrophes inconsistently, so normalize both the
+// query and the compared name to the same apostrophe before matching.
+const APOSTROPHES = /['‘’ʼ´`]/g;
+
+function normalizeApostrophes(str) {
+    return str.replace(APOSTROPHES, "'");
+}
+
 function Search() {
     const { isSearchOpen, searchProperties, hideSearch } = useSearch();
+    const { hideTooltip } = useTooltip();
     const [results, setResults] = useState([]);
     const { i18n } = useTranslation();
 
@@ -28,7 +39,7 @@ function Search() {
         let res = [];
 
         if (query.length >= 3) {
-            query = query.toLowerCase();
+            query = normalizeApostrophes(query.toLowerCase());
 
             if (searchProperties.type == "item") {
                 for (const [, item] of Object.entries(API.Items)) {
@@ -88,7 +99,7 @@ function Search() {
 
                     // Check if the item supports that locale
                     var selectedLanguageItemName = item.name[shortCode] ?? item.name.en;
-                    if (selectedLanguageItemName.toLowerCase().includes(query)) {
+                    if (normalizeApostrophes(selectedLanguageItemName.toLowerCase()).includes(query)) {
                         res.push(new ItemElem(item));
                         continue;
                     }
@@ -105,7 +116,7 @@ function Search() {
             }
             else if (searchProperties.type == "monster") {
                 for (const [, monster] of Object.entries(API.Monsters)) {
-                    if (monster.name.en.toLowerCase().includes(query)) {
+                    if (normalizeApostrophes(monster.name.en.toLowerCase()).includes(query)) {
                         res.push(new Entity(monster));
                     }
                 }
@@ -114,7 +125,7 @@ function Search() {
             }
             else if (searchProperties.type == "skill") {
                 for (const [, skill] of Object.entries(API.Skills)) {
-                    if (skill.name.en.toLowerCase().includes(query)) {
+                    if (normalizeApostrophes(skill.name.en.toLowerCase()).includes(query)) {
                         res.push(skill);
                     }
                 }
@@ -126,7 +137,7 @@ function Search() {
                     }
 
                     var selectedLanguageNpcName = housingNpc.name[shortCode] ?? housingNpc.name.en;
-                    if (selectedLanguageNpcName.toLowerCase().includes(query)) {
+                    if (normalizeApostrophes(selectedLanguageNpcName.toLowerCase()).includes(query)) {
                         // Npcs dont have an icon. Assign a more or less fitting icon here
                         housingNpc.icon = "asschecatsre.png"
                         res.push(housingNpc);
@@ -151,7 +162,7 @@ function Search() {
                     }
 
                     var selectedLanguageGuildNpcName = housingNpc.name[shortCode] ?? housingNpc.name.en;
-                    if (selectedLanguageGuildNpcName.toLowerCase().includes(query)) {
+                    if (normalizeApostrophes(selectedLanguageGuildNpcName.toLowerCase()).includes(query)) {
                         // Npcs dont have an icon. Assign a more or less fitting icon here
                         housingNpc.icon = "asschecatsre.png"
                         res.push(housingNpc);
@@ -175,6 +186,11 @@ function Search() {
     }
 
     function close() {
+        // Search results unmount immediately on selection, so a tooltip shown
+        // for a result row (from a touch device's synthetic hover, which never
+        // gets a matching mouseleave) would otherwise be stranded on screen
+        // with nothing left to dismiss it.
+        hideTooltip();
         setResults([]);
         hideSearch();
     }
