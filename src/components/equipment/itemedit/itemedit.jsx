@@ -65,7 +65,7 @@ function ItemEdit({ itemElem }) {
 
     // Fashion blessings
 
-    const possibleBlessings = { "0": "None" };
+    const possibleBlessings = { "0": i18n.t("none_option") };
     for (const [parameter,] of Object.entries(API.Blessings)) {
         possibleBlessings[parameter] = Utils.getStatNameByIdOrDefault(parameter, i18n);
     }
@@ -82,7 +82,7 @@ function ItemEdit({ itemElem }) {
     // Skill awakes
 
     const possibleSkillAwakeValues = {};
-    const possibleSkillAwakeOptions = { "0": "None" };
+    const possibleSkillAwakeOptions = { "0": i18n.t("none_option") };
     const skillAwakeCategories = [itemElem.itemProp.subcategory];
     if (itemElem.itemProp.subcategory == "sword" || itemElem.itemProp.subcategory == "axe") {
         skillAwakeCategories.push("swordoraxe");
@@ -237,12 +237,12 @@ function ItemEdit({ itemElem }) {
     // Element
 
     const possibleElementValues = {
-        "none": "None",
-        "fire": "Fire",
-        "water": "Water",
-        "electricity": "Electric",
-        "earth": "Earth",
-        "wind": "Wind"
+        "none": i18n.t("none_option"),
+        "fire": i18n.t("element_fire"),
+        "water": i18n.t("element_water"),
+        "electricity": i18n.t("element_electric"),
+        "earth": i18n.t("element_earth"),
+        "wind": i18n.t("element_wind")
     };
 
     function setElement(option) {
@@ -328,7 +328,7 @@ function ItemEdit({ itemElem }) {
             {
                 itemElem.isStatAwakeAble() &&
                 <div className="column">
-                    <h3>Stat Awake</h3>
+                    <h3>{i18n.t("itemedit_stat_awake")}</h3>
                     <div className="stat-edit-row">
                         <Dropdown options={Utils.getPossibleStatAwakeParams(itemElem.statAwake[1]?.parameter, itemElem.itemProp.level, i18n)} onSelectionChanged={(v) => setStatAwakeParameter(v, 0)} valueKey={itemElem.statAwake[0]?.parameter ?? "none"} />
                         <RangeInput
@@ -475,7 +475,7 @@ function ItemEdit({ itemElem }) {
             {
                 itemElem.isElementUpgradeAble() &&
                 <div className="column">
-                    <h3>Element</h3>
+                    <h3>{i18n.t("itemedit_element")}</h3>
                     <div className="stat-edit-row">
                         <Dropdown options={possibleElementValues} onSelectionChanged={setElement} valueKey={itemElem.element} />
                         <NumberInput disabled={itemElem.element == "none"} hasButtons min={0} max={10} value={itemElem.elementUpgradeLevel} onChange={setElementUpgradeLevel} label={"+"} />
@@ -487,14 +487,14 @@ function ItemEdit({ itemElem }) {
                 (itemElem.element != "none" && itemElem.elementUpgradeLevel > 0) &&
                 <div>
                     <input type="checkbox" id="element-stone" checked={itemElem.hasElementStone} onChange={() => toggleElementStone()} />
-                    <label htmlFor="element-stone">Element stone</label>
+                    <label htmlFor="element-stone">{i18n.t("itemedit_element_stone")}</label>
                 </div>
             }
 
             {
                 itemElem.getMaximumPiercingSlots() > 0 &&
                 <div className="column">
-                    <h3>Piercing Slots {`(${itemElem.piercings.length}/${itemElem.getMaximumPiercingSlots()})`}</h3>
+                    <h3>{i18n.t("itemedit_piercing_slots", { count: `${itemElem.piercings.length}/${itemElem.getMaximumPiercingSlots()}` })}</h3>
                     <div id="edit-piercing">
                         {
                             Array.from({ length: itemElem.getMaximumPiercingSlots() }, (_, i) => (
@@ -517,7 +517,7 @@ function ItemEdit({ itemElem }) {
             {
                 itemElem.getMaximumUltimateJewelSlots() > 0 &&
                 <div className="column">
-                    <h3>Jewels {`(${itemElem.ultimateJewels.length}/${itemElem.getMaximumUltimateJewelSlots()})`}</h3>
+                    <h3>{i18n.t("itemedit_jewels", { count: `${itemElem.ultimateJewels.length}/${itemElem.getMaximumUltimateJewelSlots()}` })}</h3>
                     <div id="edit-piercing">
                         {
                             Array.from({ length: itemElem.getMaximumUltimateJewelSlots() }, (_, i) => (
@@ -533,7 +533,7 @@ function ItemEdit({ itemElem }) {
             {
                 itemElem.isSkillAwakeAble() &&
                 <div className="column">
-                    <h3>Skill Awake</h3>
+                    <h3>{i18n.t("itemedit_skill_awake")}</h3>
                     <div className="stat-edit-row">
                         <Dropdown options={possibleSkillAwakeOptions} onSelectionChanged={setSkillAwakeOption} valueKey={itemElem.skillAwake == null ? 0 : itemElem.skillAwake.id} />
                         <RangeInput

@@ -404,7 +404,7 @@ function SkillTree() {
         <div className="skill-tree">
             {/* Left column: the in-game style Skills window. */}
             <div className="skills-window">
-                <div className="skills-window-titlebar">Skills</div>
+                <div className="skills-window-titlebar">{t("skilltree_skills_title")}</div>
 
                 {/* Class progression tabs (portrait cards). */}
                 <div className="class-tabs">
@@ -427,7 +427,7 @@ function SkillTree() {
                 {/* Active skills tree (centered) + selected-skill detail panel. */}
                 <div className="active-skills-row">
                     <div className="skills-panel active-skills-panel">
-                        <div className="skills-panel-header">Active Skills</div>
+                        <div className="skills-panel-header">{t("skilltree_active_skills")}</div>
                         <div className="skill-tree-canvas">
                             <img src={`/tree/${activeClass.tree}`} draggable={false} />
                             {
@@ -446,7 +446,7 @@ function SkillTree() {
                     </div>
 
                     <div className="skills-panel skill-detail-panel">
-                        <div className="skills-panel-header">Skill</div>
+                        <div className="skills-panel-header">{t("skilltree_skill_header")}</div>
                         {
                             selectedSkill ? (
                                 <div className="skill-detail">
@@ -457,10 +457,10 @@ function SkillTree() {
                                         <button className="flyff-button square" onClick={() => levelDown(selectedSkill)}>−</button>
                                         <button className="flyff-button square" onClick={() => levelUp(selectedSkill)}>+</button>
                                     </div>
-                                    <button className="flyff-button skill-detail-max" onClick={() => maxSkill(selectedSkill)}>max</button>
+                                    <button className="flyff-button skill-detail-max" onClick={() => maxSkill(selectedSkill)}>{t("skilltree_skill_max")}</button>
                                 </div>
                             ) : (
-                                <div className="skill-detail-empty">Click a skill to level it.</div>
+                                <div className="skill-detail-empty">{t("skilltree_click_to_level")}</div>
                             )
                         }
                     </div>
@@ -470,7 +470,7 @@ function SkillTree() {
                 {isThirdJob && (
                     <div className="skills-bottom-panels">
                         <div className="skills-panel">
-                            <div className="skills-panel-header">Master Variations</div>
+                            <div className="skills-panel-header">{t("skilltree_master_variations")}</div>
                             <div className="skills-panel-body master-variations-body">
                                 {
                                     shownVariations.map(variation =>
@@ -488,7 +488,7 @@ function SkillTree() {
                             </div>
                         </div>
                         <div className="skills-panel">
-                            <div className="skills-panel-header">Passive Skills</div>
+                            <div className="skills-panel-header">{t("skilltree_passive_skills")}</div>
                             <div className="skills-panel-body skill-tree-passives">
                                 {
                                     passiveSkills.map(skill =>
@@ -511,15 +511,15 @@ function SkillTree() {
                 {/* Skill points + point cost footer. */}
                 <div className="skills-window-footer">
                     <div className="skills-footer-field">
-                        <span className="skills-footer-label">Skill Points</span>
+                        <span className="skills-footer-label">{t("skilltree_skill_points")}</span>
                         <span style={{ color: Context.player.getRemainingSkillPoints() < 0 ? "red" : "inherit" }}>{Context.player.getRemainingSkillPoints()}/{Context.player.getTotalSkillPoints()}</span>
-                        <HoverInfo text={"How many skill points you have remaining.\n\nWhile you cannot go below 0 skill points in-game, this page allows you to allocate more points than you have."} />
+                        <HoverInfo text={t("skilltree_skill_points_info")} />
                     </div>
                     <div className="skills-footer-field">
-                        <span className="skills-footer-label">Point Cost</span>
+                        <span className="skills-footer-label">{t("skilltree_point_cost")}</span>
                         <span>{pointCost}</span>
                     </div>
-                    <button className="flyff-button" onClick={() => maxTree(activeClassId)}>Max tree</button>
+                    <button className="flyff-button" onClick={() => maxTree(activeClassId)}>{t("skilltree_max_tree")}</button>
                 </div>
             </div>
 
@@ -534,13 +534,13 @@ function SkillTree() {
                         </div>
                     </div>
                     <div className="column">
-                        <NumberInput min={15} max={1000} value={Context.player.bufferStr} label={"Caster STR"} onChange={(v) => { Context.player.bufferStr = v; }} />
-                        <NumberInput min={15} max={1000} value={Context.player.bufferSta} label={"Caster STA"} onChange={(v) => { Context.player.bufferSta = v; }} />
-                        <NumberInput min={15} max={1000} value={Context.player.bufferDex} label={"Caster DEX"} onChange={(v) => { Context.player.bufferDex = v; }} />
-                        <NumberInput min={15} max={1000} value={Context.player.bufferInt} label={"Caster INT"} onChange={(v) => { Context.player.bufferInt = v; }} />
+                        <NumberInput min={15} max={1000} value={Context.player.bufferStr} label={t("skilltree_caster_stat", { stat: "STR" })} onChange={(v) => { Context.player.bufferStr = v; }} />
+                        <NumberInput min={15} max={1000} value={Context.player.bufferSta} label={t("skilltree_caster_stat", { stat: "STA" })} onChange={(v) => { Context.player.bufferSta = v; }} />
+                        <NumberInput min={15} max={1000} value={Context.player.bufferDex} label={t("skilltree_caster_stat", { stat: "DEX" })} onChange={(v) => { Context.player.bufferDex = v; }} />
+                        <NumberInput min={15} max={1000} value={Context.player.bufferInt} label={t("skilltree_caster_stat", { stat: "INT" })} onChange={(v) => { Context.player.bufferInt = v; }} />
                     </div>
-                    <button className="flyff-button apply-passives-button" onClick={() => addLearnedPassives()}>Apply Learned Passives</button>
-                    <button disabled={Context.player.equipment.pet == null} className="flyff-button apply-passives-button" onClick={() => applyPetGrace()}>Apply Pet Grace</button>
+                    <button className="flyff-button apply-passives-button" onClick={() => addLearnedPassives()}>{t("skilltree_apply_learned_passives")}</button>
+                    <button disabled={Context.player.equipment.pet == null} className="flyff-button apply-passives-button" onClick={() => applyPetGrace()}>{t("skilltree_apply_pet_grace")}</button>
                     <hr />
                     <div className="buffs-container">
                         {
@@ -631,7 +631,7 @@ function SkillTree() {
 
                 <div className="buffs achievements-section">
                     <div className="buffs-header">
-                        <h3>Achievement (FWC Only)</h3>
+                        <h3>{t("skilltree_achievement_fwc_only")}</h3>
                     </div>
                     <hr />
                     <div className="achievements-picker" onMouseLeave={() => setHoveredAchievement(null)}>
@@ -640,7 +640,7 @@ function SkillTree() {
                             onClick={() => selectAchievement(null)}
                             onMouseEnter={() => setHoveredAchievement(null)}
                         >
-                            <span>None</span>
+                            <span>{t("none_option")}</span>
                         </div>
                         {
                             Utils.getAchievements().map(achievement =>
