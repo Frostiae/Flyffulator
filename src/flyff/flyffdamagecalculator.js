@@ -852,7 +852,7 @@ function applyElementDefense(attack) {
     }
 
     // Infusion
-    if (skillElement != "none" && weaponElement != "none" && Context.attacker.hasSkillBuff(12579)) {
+    if (skillElement != "none" && weaponElement != "none" && Context.attacker.hasSkillBuff(12579) != -1) {
         skillElement = weaponElement;
     }
 
