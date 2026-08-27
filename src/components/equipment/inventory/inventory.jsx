@@ -84,7 +84,7 @@ function Inventory({ onSelectItem }) {
         {
           canDualWield &&
           <button className="flyff-button small" disabled={Context.player.equipment.mainhand.itemProp.twoHanded} onClick={swapWeaponHands} title={t("equipment_swap_weapon_hands")}>
-            <img src="/swap-weapons.svg" alt="swap" style={{ width: 14, filter: "brightness(0)" }} />
+            <img src="/swap-weapons.svg" alt="swap" style={{ width: 14, alignmentBaseline: "central", filter: "brightness(0)" }} />
           </button>
         }
         <div onClick={() => selectSlot("cloak", null, cloakSlot, (result) => { Context.player.equipment.cloak = result })}>
