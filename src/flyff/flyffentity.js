@@ -41,6 +41,7 @@ export default class Entity {
     activeAchievements = []; // FWC achievements whose stat bonuses are applied.
     equipSets = []; // Current armor sets equipped. Cached because the lookup is really slow.
     level = 1;
+    sex = null;
     str = 15;
     sta = 15;
     dex = 15;
@@ -190,6 +191,10 @@ export default class Entity {
 
         if (shrinked.level === 1) {
             delete shrinked.level;
+        }
+
+        if (shrinked.sex === null) {
+            delete shrinked.sex;
         }
 
         if (shrinked.str === 15) {
@@ -649,6 +654,10 @@ export default class Entity {
         }
 
         if (itemProp.class != undefined && !Utils.isAnteriorJob(this.job.id, itemProp.class)) {
+            return false;
+        }
+
+        if (this.sex != null && itemProp.sex != undefined && itemProp.sex != this.sex) {
             return false;
         }
 

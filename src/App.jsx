@@ -29,6 +29,12 @@ function App() {
     jobOptions[k] = v.name.en;
   }
 
+  const sexOptions = {
+    ignore: t("sex_ignore"),
+    male: t("sex_male"),
+    female: t("sex_female"),
+  };
+
   function changeJob(newJobId) {
     if (newJobId == Context.player.job.id) {
       return;
@@ -44,6 +50,16 @@ function App() {
     Context.player.resetEquipment();
     Context.player.skillLevels = {};
 
+    setState(!state); // Just to re-render...
+  }
+
+  function changeSex(newSex) {
+    const sex = newSex === "ignore" ? null : newSex;
+    if (sex == Context.player.sex) {
+      return;
+    }
+
+    Context.player.sex = sex;
     setState(!state); // Just to re-render...
   }
 
@@ -218,6 +234,10 @@ function App() {
               <div className="stat-block">
                 <NumberInput min={Context.player.job.minLevel} max={Context.player.job.maxLevel} label={"Level"} onChange={(v) => setPlayerStat("level", v)} value={Context.player.level} />
                 <i>{Context.player.getRemainingStatPoints()}/{Context.player.getTotalStatPoints()} {t("stat_points_available")}</i>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                  {t("sex_label")}
+                  <Dropdown options={sexOptions} onSelectionChanged={changeSex} valueKey={Context.player.sex ?? "ignore"} />
+                </div>
               </div>
               <div className="stat-block">
                 <div className="stat-row">
