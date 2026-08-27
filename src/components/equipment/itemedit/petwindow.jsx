@@ -81,12 +81,12 @@ function PetWindow({ raisedPetDefinition, petLevels, editable = false, onEditLev
 
                     <div id="stats-container">
                         <div className="stat-group">
-                            <span className='stat-title'>Tier</span>
-                            <span className='stat-value'>{Utils.getPetTierByLevels(petLevels)} Tier</span>
+                            <span className='stat-title'>{i18n.t("pet_tier_label")}</span>
+                            <span className='stat-value'>{i18n.t("pet_tier_value", { tier: Utils.getPetTierByLevels(petLevels) })}</span>
                         </div>
 
                         <div className="stat-group">
-                            <span className='stat-title'>Stat</span>
+                            <span className='stat-title'>{i18n.t("pet_stat_label")}</span>
                             <span className='stat-value'>{`${Utils.getStatNameByIdOrDefault(raisedPetDefinition.parameter, i18n)} +${Utils.getPetStatSum(raisedPetDefinition, petLevels)}${raisedPetDefinition.rate ? '%' : ''}`}</span>
                         </div>
                     </div>

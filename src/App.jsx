@@ -79,11 +79,11 @@ function App() {
     const json = Context.player.serialize(buildName);
     try {
       await navigator.clipboard.writeText(json);
-      alert("The build's JSON was copied to your clipboard.");
+      alert(t("build_share_copied"));
     }
     catch (e) {
       console.error(e); // Some extensions block clipboard access randomly
-      alert("Something prevented access to your clipboard. Please try again.")
+      alert(t("build_share_copy_failed"))
     }
   }
 
@@ -179,7 +179,7 @@ function App() {
   }
 
   function removeBuild(key) {
-    if (confirm("Are you sure you want to remove this build?")) {
+    if (confirm(t("build_remove_confirm"))) {
       localStorage.removeItem(key);
       if (loadedBuild == key) {
         for (let i = 0; i < localStorage.length; i++) {
@@ -221,18 +221,18 @@ function App() {
               </div>
               <div className="stat-block">
                 <div className="stat-row">
-                  <NumberInput min={15} max={15 + Context.player.level * 2 - 2} label={"STR"} onChange={(v) => setPlayerStat("str", v)} value={Context.player.str} />
+                  <NumberInput min={15} max={15 + Context.player.level * 2 - 2} label={Utils.getStatNameByIdOrDefault("str", t)} onChange={(v) => setPlayerStat("str", v)} value={Context.player.str} />
                 </div>
                 <div className="stat-row">
-                  <NumberInput min={15} max={15 + Context.player.level * 2 - 2} label={"STA"} onChange={(v) => setPlayerStat("sta", v)} value={Context.player.sta} />
+                  <NumberInput min={15} max={15 + Context.player.level * 2 - 2} label={Utils.getStatNameByIdOrDefault("sta", t)} onChange={(v) => setPlayerStat("sta", v)} value={Context.player.sta} />
                 </div>
               </div>
               <div className="stat-block">
                 <div className="stat-row">
-                  <NumberInput min={15} max={15 + Context.player.level * 2 - 2} label={"DEX"} onChange={(v) => setPlayerStat("dex", v)} value={Context.player.dex} />
+                  <NumberInput min={15} max={15 + Context.player.level * 2 - 2} label={Utils.getStatNameByIdOrDefault("dex", t)} onChange={(v) => setPlayerStat("dex", v)} value={Context.player.dex} />
                 </div>
                 <div className="stat-row">
-                  <NumberInput min={15} max={15 + Context.player.level * 2 - 2} label={"INT"} onChange={(v) => setPlayerStat("int", v)} value={Context.player.int} />
+                  <NumberInput min={15} max={15 + Context.player.level * 2 - 2} label={Utils.getStatNameByIdOrDefault("int", t)} onChange={(v) => setPlayerStat("int", v)} value={Context.player.int} />
                 </div>
               </div>
             </div>
