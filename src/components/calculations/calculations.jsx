@@ -280,26 +280,26 @@ function Calculations() {
 
                 <hr />
 
-                <BasicStat title={"Speed"} value={Context.player.getMovementSpeed()}
+                <BasicStat title={Utils.getStatNameByIdOrDefault("speed", i18n)} value={Context.player.getMovementSpeed()}
                     information={"This is your current movement speed factor."}
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L365"}
                     percentage
                 />
 
-                <BasicStat title={"Jump Height"} value={(Context.player.getStat("jumpheight", false) + 200) / 2}
+                <BasicStat title={Utils.getStatNameByIdOrDefault("jumpheight", i18n)} value={(Context.player.getStat("jumpheight", false) + 200) / 2}
                     information={"This is your current jumping height factor."}
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935"}
                     percentage
                 />
 
-                <BasicStat title={"Casting Speed"} value={100 + Context.player.getStat("decreasedcastingtime", true)}
+                <BasicStat title={Utils.getStatNameByIdOrDefault("decreasedcastingtime", i18n)} value={100 + Context.player.getStat("decreasedcastingtime", true)}
                     information={"This is your current casting speed bonus. Casting speed affects how long it takes you to cast magic skills."}
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935"}
                     percentage
                 />
 
                 <BasicStat
-                    title='Healing'
+                    title={Utils.getStatNameByIdOrDefault("healing", i18n)}
                     value={Context.player.getStat("healing", true)}
                     information='This value increases the amount of healing done by your healing skills.'
                     sourceLink='https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935'
@@ -309,57 +309,57 @@ function Calculations() {
 
                 <hr />
 
-                <BasicStat title={"Attack"} value={Context.player.getAttack()}
+                <BasicStat title={Utils.getStatNameByIdOrDefault("attack", i18n)} value={Context.player.getAttack()}
                     information={"This is your attack. This is an approximated value of your general damage, as your true damage heavily relies on the current context."}
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L423"}
                 />
 
-                <BasicStat title={"Skill Damage"} value={Context.player.getStat("skilldamage", true)}
+                <BasicStat title={Utils.getStatNameByIdOrDefault("skilldamage", i18n)} value={Context.player.getStat("skilldamage", true)}
                     information={"This value is a bonus multiplier for your skill damage."}
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935"}
                     percentage
                     optional
                 />
 
-                <BasicStat title={"PvE Damage"} value={Context.player.getStat("pvedamage", true)}
+                <BasicStat title={Utils.getStatNameByIdOrDefault("pvedamage", i18n)} value={Context.player.getStat("pvedamage", true)}
                     information={"This value is a bonus multiplier for your damage against monsters."}
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935"}
                     percentage
                     optional
                 />
 
-                <BasicStat title={"PvP Damage"} value={Context.player.getStat("pvpdamage", true)}
+                <BasicStat title={Utils.getStatNameByIdOrDefault("pvpdamage", i18n)} value={Context.player.getStat("pvpdamage", true)}
                     information={"This value is a bonus multiplier for your damage against other players."}
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935"}
                     percentage
                     optional
                 />
 
-                <BasicStat title={"Attack Speed"} value={Math.floor(Context.player.getAttackSpeed() * 100) / 2}
+                <BasicStat title={Utils.getStatNameByIdOrDefault("attackspeed", i18n)} value={Math.floor(Context.player.getAttackSpeed() * 100) / 2}
                     information={"This value affects how fast you can unleash subsequent auto attacks."}
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L378"}
                     percentage
                 />
 
-                <BasicStat title={"Hit Rate"} value={Context.player.getContextHitRate(Context.defender).probAdjusted}
+                <BasicStat title={Utils.getStatNameByIdOrDefault("hitrate", i18n)} value={Context.player.getContextHitRate(Context.defender).probAdjusted}
                     information={"How often your auto attacks will land (not miss or be parried) on your target.\n\nThis value differs from the one you see in-game, but is the true hit rate against your current target."}
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L550"}
                     percentage
                 />
 
-                <BasicStat title={"Critical Chance"} value={Context.player.getCriticalChance()}
+                <BasicStat title={Utils.getStatNameByIdOrDefault("criticalchance", i18n)} value={Context.player.getCriticalChance()}
                     information={"How often your auto attacks will result in a critical hit."}
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L949"}
                     percentage
                 />
 
-                <BasicStat title={"Critical Damage"} value={Context.player.getStat("criticaldamage", true)}
+                <BasicStat title={Utils.getStatNameByIdOrDefault("criticaldamage", i18n)} value={Context.player.getStat("criticaldamage", true)}
                     information={"This value is a bonus multiplier on your critical hits' damage."}
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935"}
                     percentage
                 />
 
-                <BasicStat title={"Block Penetration"} value={Context.player.getStat("blockpenetration", true)}
+                <BasicStat title={Utils.getStatNameByIdOrDefault("blockpenetration", i18n)} value={Context.player.getStat("blockpenetration", true)}
                     information={"This value lowers your target's chance to block your auto attacks.\n\nThis is a factor, meaning that 50% block penetration will lower your target's block chance by 50%, leaving them with half of what they would have otherwise."}
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935"}
                     percentage
@@ -368,7 +368,7 @@ function Calculations() {
 
                 <hr />
 
-                <BasicStat title={"Defense"} value={generateDefense()}
+                <BasicStat title={Utils.getStatNameByIdOrDefault("def", i18n)} value={generateDefense()}
                     information={"This value lowers how much damage you take from auto attacks.\n\nWhile this value is significantly lower than the value you would see in-game, it is the real value used during damage calculations."}
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/tabs/calculations.jsx#L147"}
                 />
@@ -379,7 +379,7 @@ function Calculations() {
                 />
 
                 <BasicStat
-                    title='Magic Resistance'
+                    title={Utils.getStatNameByIdOrDefault("magicdefense", i18n)}
                     value={Context.player.getStat('magicdefense', true)}
                     information='This value reduces magic damage received by this percentage.'
                     sourceLink='https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935'
@@ -387,14 +387,14 @@ function Calculations() {
                     optional
                 />
 
-                <BasicStat title={"Critical Resist"} value={Context.player.getStat("criticalresist", true)}
+                <BasicStat title={Utils.getStatNameByIdOrDefault("criticalresist", i18n)} value={Context.player.getStat("criticalresist", true)}
                     information={"This value lowers your target's chance to land critical hits against you.\n\nThis is a factor, meaning that 50% critical resist will leave your target with 50% of their original critical chance."}
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935"}
                     percentage
                 />
 
                 <BasicStat
-                    title='Incoming Damage'
+                    title={Utils.getStatNameByIdOrDefault("incomingdamage", i18n)}
                     value={Context.player.getStat("incomingdamage", true)}
                     information='This value multiplies the amount of damage you take. Negative values reduce the amount of damage you take.'
                     sourceLink='https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935'
@@ -403,7 +403,7 @@ function Calculations() {
                 />
 
                 <BasicStat
-                    title='PvE Damage Reduction'
+                    title={Utils.getStatNameByIdOrDefault("pvedamagereduction", i18n)}
                     value={Context.player.getStat('pvedamagereduction', true)}
                     information='This value reduces the amount of damage you take from monsters.'
                     sourceLink='https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935'
@@ -412,7 +412,7 @@ function Calculations() {
                 />
 
                 <BasicStat
-                    title='PvP Damage Reduction'
+                    title={Utils.getStatNameByIdOrDefault("pvpdamagereduction", i18n)}
                     value={Context.player.getStat('pvpdamagereduction', true)}
                     information='This value reduces the amount of damage you take from other players.'
                     sourceLink='https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L935'
@@ -420,18 +420,18 @@ function Calculations() {
                     optional
                 />
 
-                <BasicStat title={"Parry"} value={Context.player.getParry()}
+                <BasicStat title={Utils.getStatNameByIdOrDefault("parry", i18n)} value={Context.player.getParry()}
                     information={"This is your parry."}
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L535"}
                 />
 
-                <BasicStat title={"Melee Block"} value={Utils.clamp(Context.player.getBlockChance(false, Context.defender), 6.25, 92.5)}
+                <BasicStat title={Utils.getStatNameByIdOrDefault("meleeblock", i18n)} value={Utils.clamp(Context.player.getBlockChance(false, Context.defender), 6.25, 92.5)}
                     information={"How often you block melee attacks from the current target.\n\nThis value may be different than the one you see in the character window as it takes everything into account, such as minimums, maximums and the opponent's stats. This is your true block rate."}
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L965"}
                     percentage
                 />
 
-                <BasicStat title={"Ranged Block"} value={Utils.clamp(Context.player.getBlockChance(true, Context.defender), 6.25, 92.5)}
+                <BasicStat title={Utils.getStatNameByIdOrDefault("rangedblock", i18n)} value={Utils.clamp(Context.player.getBlockChance(true, Context.defender), 6.25, 92.5)}
                     information={"How often you block ranged attacks from the current target.\n\nThis value may be different than the one you see in the character window as it takes everything into account, such as minimums, maximums and the opponent's stats. This is your true block rate."}
                     sourceLink={"https://github.com/Frostiae/Flyffulator/blob/main/src/flyff/flyffentity.js#L965"}
                     percentage
@@ -488,12 +488,12 @@ function Calculations() {
                                 <BasicStat title={"HP"} value={targetType == 0 ? "∞" : Context.defender.monsterProp.hp} />
                             </div>
                             <div className="column">
-                                <BasicStat title={"STR"} value={Context.defender.str} />
-                                <BasicStat title={"STA"} value={Context.defender.sta} />
+                                <BasicStat title={Utils.getStatNameByIdOrDefault("str", i18n)} value={Context.defender.str} />
+                                <BasicStat title={Utils.getStatNameByIdOrDefault("sta", i18n)} value={Context.defender.sta} />
                             </div>
                             <div className="column">
-                                <BasicStat title={"DEX"} value={Context.defender.dex} />
-                                <BasicStat title={"INT"} value={Context.defender.int} />
+                                <BasicStat title={Utils.getStatNameByIdOrDefault("dex", i18n)} value={Context.defender.dex} />
+                                <BasicStat title={Utils.getStatNameByIdOrDefault("int", i18n)} value={Context.defender.int} />
                             </div>
                         </div>
                     }
@@ -508,12 +508,12 @@ function Calculations() {
                                 <BasicStat title={"HP"} value={Context.defender.getHP()} />
                             </div>
                             <div className="column">
-                                <BasicStat title={"STR"} value={Context.defender.getBaseStat("str")} />
-                                <BasicStat title={"STA"} value={Context.defender.getBaseStat("sta")} />
+                                <BasicStat title={Utils.getStatNameByIdOrDefault("str", i18n)} value={Context.defender.getBaseStat("str")} />
+                                <BasicStat title={Utils.getStatNameByIdOrDefault("sta", i18n)} value={Context.defender.getBaseStat("sta")} />
                             </div>
                             <div className="column">
-                                <BasicStat title={"DEX"} value={Context.defender.getBaseStat("dex")} />
-                                <BasicStat title={"INT"} value={Context.defender.getBaseStat("int")} />
+                                <BasicStat title={Utils.getStatNameByIdOrDefault("dex", i18n)} value={Context.defender.getBaseStat("dex")} />
+                                <BasicStat title={Utils.getStatNameByIdOrDefault("int", i18n)} value={Context.defender.getBaseStat("int")} />
                             </div>
                         </div>
                     }

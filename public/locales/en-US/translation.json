@@ -76,5 +76,46 @@
     "bigger_sample": "Take bigger sample",
     "aa_sample_size": "Auto attack sample size",
     "skill_sample_size": "Skill sample size",
-    "monster_sample_size": "Monster attack sample size"
+    "monster_sample_size": "Monster attack sample size",
+
+    "build_share_copied": "The build's JSON was copied to your clipboard.",
+    "build_share_copy_failed": "Something prevented access to your clipboard. Please try again.",
+    "build_remove_confirm": "Are you sure you want to remove this build?",
+
+    "import_json_placeholder": "Insert JSON string...",
+    "build_name_label": "Build name",
+    "import_error": "Whoops... that build didn't quite work.",
+
+    "none_option": "None",
+    "element_fire": "Fire",
+    "element_water": "Water",
+    "element_electric": "Electric",
+    "element_earth": "Earth",
+    "element_wind": "Wind",
+    "itemedit_stat_awake": "Stat Awake",
+    "itemedit_element": "Element",
+    "itemedit_element_stone": "Element stone",
+    "itemedit_piercing_slots": "Piercing Slots ({{count}})",
+    "itemedit_jewels": "Jewels ({{count}})",
+    "itemedit_skill_awake": "Skill Awake",
+
+    "pet_tier_label": "Tier",
+    "pet_tier_value": "{{tier}} Tier",
+    "pet_stat_label": "Stat",
+
+    "skilltree_skills_title": "Skills",
+    "skilltree_active_skills": "Active Skills",
+    "skilltree_skill_header": "Skill",
+    "skilltree_skill_max": "max",
+    "skilltree_click_to_level": "Click a skill to level it.",
+    "skilltree_master_variations": "Master Variations",
+    "skilltree_passive_skills": "Passive Skills",
+    "skilltree_skill_points": "Skill Points",
+    "skilltree_skill_points_info": "How many skill points you have remaining.\n\nWhile you cannot go below 0 skill points in-game, this page allows you to allocate more points than you have.",
+    "skilltree_point_cost": "Point Cost",
+    "skilltree_max_tree": "Max tree",
+    "skilltree_caster_stat": "Caster {{stat}}",
+    "skilltree_apply_learned_passives": "Apply Learned Passives",
+    "skilltree_apply_pet_grace": "Apply Pet Grace",
+    "skilltree_achievement_fwc_only": "Achievement (FWC Only)"
 }

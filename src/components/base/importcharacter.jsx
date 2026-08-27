@@ -73,11 +73,11 @@ function ImportCharacter({ open, onImport, close }) {
             <div id="search-box" onClick={(e) => e.stopPropagation()}>
                 <div className="window-title">{t("import")}</div>
                 <div className="window-content">
-                    <input autoFocus type="text" name="json" id="search-field" placeholder={`Insert JSON string...`} onChange={e => { setImportJSON(e.target.value); setError(false); }} value={importJSON} />
+                    <input autoFocus type="text" name="json" id="search-field" placeholder={t("import_json_placeholder")} onChange={e => { setImportJSON(e.target.value); setError(false); }} value={importJSON} />
                     {buildInfo && (
                         <div id="import-name-row">
-                            <label htmlFor="import-name-field">Build name</label>
-                            <input type="text" id="import-name-field" placeholder="Build name" value={nameOverride} onChange={e => setNameOverride(e.target.value)} />
+                            <label htmlFor="import-name-field">{t("build_name_label")}</label>
+                            <input type="text" id="import-name-field" placeholder={t("build_name_label")} value={nameOverride} onChange={e => setNameOverride(e.target.value)} />
                         </div>
                     )}
                     <div style={{ display: 'flex' }}>
@@ -91,7 +91,7 @@ function ImportCharacter({ open, onImport, close }) {
                     )}
                     {hasError && (
                         <div id="import-error">
-                            Whoops... that build didn't quite work.
+                            {t("import_error")}
                         </div>
                     )}
                 </div>
