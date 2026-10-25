@@ -11,7 +11,8 @@ export const supportedLngs = {
   "de-DE": "Deutsch",
   "zh-TW": "繁體中文",
   "zh-CN": "简体中文",
-  "pt-BR": "Português (BR)"
+  "pt-BR": "Português (BR)",
+  "fr-FR": "Français"
 }
 
 i18n
